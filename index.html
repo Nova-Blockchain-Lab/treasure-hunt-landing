@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Treasure Hunt — Turn Your Event Into an On-Chain Adventure</title>
-<meta name="description" content="Treasure Hunt is a fully Web3-native game that transforms conferences, campuses and large-scale gatherings into live, verifiable on-chain experiences.">
+<title>Treasure Hunt — Turn Your Event Into an Adventure Attendees Talk About</title>
+<meta name="description" content="Interactive event engagement game that drives foot traffic, rewards participation, and gives organizers real-time analytics. Deployed at ETHDenver 2026.">
 <link rel="icon" href="assets/NOVA_Blockchain_Lab-2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -660,7 +660,90 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 50%;
 }
 
-/* ========== SECTION: WHAT IT IS ========== */
+/* ========== SECTION: DEMO SHOWCASE ========== */
+.section-demo {
+  padding: 120px 0;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(255, 87, 177, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(34, 209, 238, 0.04) 0%, transparent 50%),
+    var(--bg-primary);
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.demo-header .section-label {
+  justify-content: center;
+}
+
+.demo-header h2 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  margin-bottom: 24px;
+}
+
+.demo-phones {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.phone-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.phone-item:nth-child(even) {
+  transform: translateY(30px);
+}
+
+.phone-frame {
+  width: 220px;
+  background: #0a0a0a;
+  border-radius: 32px;
+  padding: 8px;
+  border: 1px solid rgba(255, 87, 177, 0.2);
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
+.phone-frame:hover {
+  box-shadow: var(--glow-pink);
+  border-color: rgba(255, 87, 177, 0.5);
+}
+
+.phone-screen {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.phone-caption {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 200px;
+  line-height: 1.5;
+}
+
+.demo-cta {
+  text-align: center;
+}
+
+.demo-cta .btn-primary {
+  display: inline-flex;
+}
+
+/* ========== SECTION: WHAT IT DOES ========== */
 .section {
   padding: 120px 0;
   position: relative;
@@ -849,131 +932,79 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.02em;
 }
 
-/* ========== SECTION: BUILT ON-CHAIN ========== */
-.section-onchain {
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(98, 69, 235, 0.1) 0%, transparent 50%),
-    var(--bg-primary);
+/* ========== POSITIONING STRIP ========== */
+.not-is-strip {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+  position: relative;
   overflow: hidden;
 }
 
-.onchain-split {
+.not-is-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 87, 177, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 80% 50%, rgba(34, 209, 238, 0.06) 0%, transparent 40%);
+}
+
+.not-is-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+  gap: 48px;
+  position: relative;
+  z-index: 2;
 }
 
-.onchain-left h2 {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  margin-bottom: 20px;
+.not-column h3, .is-column h3 {
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+  letter-spacing: 0.06em;
 }
 
-.onchain-left .accent-line {
-  display: block;
-  color: var(--neon-cyan);
+.not-column h3 {
+  color: var(--text-muted);
 }
 
-.onchain-taglines {
-  margin: 32px 0;
+.is-column h3 {
+  color: var(--neon-pink);
+}
+
+.not-item, .is-item {
+  padding: 12px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.onchain-tagline {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.onchain-tagline span {
-  color: var(--neon-pink);
-}
-
-.onchain-anti {
-  margin-top: 40px;
-  padding: 28px;
-  border: 1px solid rgba(255, 87, 177, 0.2);
-  border-radius: 12px;
-  background: rgba(255, 87, 177, 0.03);
-}
-
-.onchain-anti p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.onchain-anti p:last-child {
-  margin-bottom: 0;
-}
-
-.onchain-anti strong {
-  color: var(--neon-pink);
-  font-weight: 600;
-}
-
-.onchain-anti .punch {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--text-primary);
-  letter-spacing: 0.04em;
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 87, 177, 0.15);
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  align-items: flex-start;
   gap: 12px;
 }
 
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px 20px;
-  border-radius: 10px;
-  background: rgba(37, 26, 106, 0.3);
-  border: 1px solid rgba(98, 69, 235, 0.1);
-  transition: all 0.3s;
+.not-item {
+  color: var(--text-muted);
 }
 
-.feature-item:hover {
-  background: rgba(37, 26, 106, 0.5);
-  border-color: rgba(98, 69, 235, 0.25);
-}
-
-.feature-check {
+.not-item::before {
+  content: '\2715';
+  color: rgba(255, 87, 177, 0.4);
+  font-size: 0.8rem;
+  margin-top: 3px;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  background: rgba(34, 209, 238, 0.12);
-  color: var(--neon-cyan);
-  font-size: 0.7rem;
-  margin-top: 2px;
 }
 
-.feature-text {
-  font-size: 0.88rem;
+.is-item {
   color: var(--text-secondary);
-  line-height: 1.5;
 }
 
-.feature-text strong {
-  color: var(--text-primary);
-  font-weight: 600;
+.is-item::before {
+  content: '\2713';
+  color: var(--neon-cyan);
+  font-size: 0.85rem;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 
-/* ========== SECTION: WHERE IT BELONGS ========== */
+/* ========== SECTION: WHERE IT WORKS ========== */
 .section-where {
   background:
     radial-gradient(ellipse at 70% 50%, rgba(255, 87, 177, 0.05) 0%, transparent 50%),
@@ -1032,7 +1063,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.7;
 }
 
-/* ========== SECTION: ORIGIN ========== */
+/* ========== SECTION: PROVEN AT SCALE ========== */
 .section-origin {
   background:
     radial-gradient(ellipse at 30% 30%, rgba(34, 209, 238, 0.05) 0%, transparent 50%),
@@ -1162,6 +1193,54 @@ img { max-width: 100%; height: auto; display: block; }
   opacity: 1;
 }
 
+/* Under the hood detail */
+.under-hood {
+  margin-top: 48px;
+  padding: 28px;
+  border: 1px solid rgba(98, 69, 235, 0.2);
+  border-radius: 12px;
+  background: rgba(98, 69, 235, 0.04);
+  text-align: left;
+}
+
+.under-hood-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--neon-purple);
+  margin-bottom: 16px;
+}
+
+.under-hood-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.under-hood-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.under-hood-item .check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: rgba(98, 69, 235, 0.12);
+  color: var(--neon-purple);
+  font-size: 0.65rem;
+  margin-top: 2px;
+}
+
 /* ========== SECTION: CTA ========== */
 .section-cta {
   padding: 100px 0 120px;
@@ -1277,87 +1356,25 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--neon-pink);
 }
 
-/* ========== POSITIONING STRIP ========== */
-.not-is-strip {
-  padding: 80px 0;
-  background: var(--bg-secondary);
-  position: relative;
-  overflow: hidden;
-}
-
-.not-is-strip::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(255, 87, 177, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 80% 50%, rgba(34, 209, 238, 0.06) 0%, transparent 40%);
-}
-
-.not-is-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  position: relative;
-  z-index: 2;
-}
-
-.not-column h3, .is-column h3 {
-  font-size: 1.8rem;
-  margin-bottom: 28px;
-  letter-spacing: 0.06em;
-}
-
-.not-column h3 {
-  color: var(--text-muted);
-}
-
-.is-column h3 {
-  color: var(--neon-pink);
-}
-
-.not-item, .is-item {
-  padding: 12px 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.not-item {
-  color: var(--text-muted);
-}
-
-.not-item::before {
-  content: '\2715';
-  color: rgba(255, 87, 177, 0.4);
-  font-size: 0.8rem;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.is-item {
-  color: var(--text-secondary);
-}
-
-.is-item::before {
-  content: '\2713';
-  color: var(--neon-cyan);
-  font-size: 0.85rem;
-  margin-top: 2px;
-  flex-shrink: 0;
-}
-
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
-  .onchain-split {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
   .use-cases-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .demo-phones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .phone-item:nth-child(even) {
+    transform: translateY(0);
+  }
+
+  .under-hood-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1474,6 +1491,39 @@ img { max-width: 100%; height: auto; display: block; }
   .blob-1, .blob-2, .blob-3 {
     opacity: 0.4;
   }
+
+  /* Demo section: horizontal scroll carousel on mobile */
+  .section-demo {
+    padding: 80px 0;
+  }
+
+  .demo-phones {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 20px 20px;
+    margin: 0 -20px;
+    justify-content: flex-start;
+  }
+
+  .demo-phones::-webkit-scrollbar {
+    display: none;
+  }
+
+  .phone-item {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .phone-item:nth-child(even) {
+    transform: translateY(0);
+  }
+
+  .phone-frame {
+    width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1492,6 +1542,10 @@ img { max-width: 100%; height: auto; display: block; }
 
   .use-case {
     padding: 28px 24px;
+  }
+
+  .phone-frame {
+    width: 180px;
   }
 }
 
@@ -1527,11 +1581,11 @@ img { max-width: 100%; height: auto; display: block; }
       <span class="nav-logo-text">TREASURE HUNT</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#what">What It Is</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#what">Features</a></li>
       <li><a href="#how">How It Works</a></li>
-      <li><a href="#onchain">On-Chain</a></li>
       <li><a href="#where">Use Cases</a></li>
-      <li><a href="#origin">Origin</a></li>
+      <li><a href="#origin">Proof</a></li>
       <li><a href="#cta" class="nav-cta">Get Started</a></li>
     </ul>
     <div class="nav-burger" id="navBurger" aria-label="Toggle menu">
@@ -1544,11 +1598,11 @@ img { max-width: 100%; height: auto; display: block; }
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#what" onclick="closeMobileMenu()">What It Is</a>
+  <a href="#demo" onclick="closeMobileMenu()">Demo</a>
+  <a href="#what" onclick="closeMobileMenu()">Features</a>
   <a href="#how" onclick="closeMobileMenu()">How It Works</a>
-  <a href="#onchain" onclick="closeMobileMenu()">On-Chain</a>
   <a href="#where" onclick="closeMobileMenu()">Use Cases</a>
-  <a href="#origin" onclick="closeMobileMenu()">Origin</a>
+  <a href="#origin" onclick="closeMobileMenu()">Proof</a>
   <a href="#cta" onclick="closeMobileMenu()">Get Started</a>
 </div>
 
@@ -1564,46 +1618,41 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="container hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Live On-Chain Infrastructure
+      Trusted by ETHDenver 2026
     </div>
 
     <h1>
       Turn Your Event<br>
-      <span class="line-accent">Into an On-Chain Adventure</span>
+      <span class="line-accent">Into an Adventure Attendees Actually Talk About</span>
     </h1>
 
     <p class="hero-sub">
-      <strong>Real wallets. Real tokens. Real blockchain infrastructure</strong> &mdash; embedded directly into your physical venue.
+      <strong>Treasure Hunt</strong> transforms any venue into an interactive game that drives foot traffic, rewards participation, and keeps attendees engaged from open to close.
     </p>
 
     <p class="hero-paragraph">
-      Treasure Hunt is a fully Web3-native game built by NOVA Blockchain Lab that transforms conferences, campuses and large-scale gatherings into live, verifiable on-chain experiences. Originally launched at Blockchain Confluence in Lisbon and deployed internationally at ETHDenver, it replaces passive attendance with measurable blockchain interaction &mdash; turning movement, exploration and engagement into tokenized participation.
+      Hide rewards across your venue. Attendees explore, scan, collect, and compete. You control where they go and how they're rewarded.
     </p>
 
     <div class="hero-actions">
       <a href="#cta" class="btn-primary">Deploy at Your Event</a>
-      <a href="#how" class="btn-secondary">See How It Works</a>
+      <a href="https://hunt.ethdenver.com/" target="_blank" rel="noopener" class="btn-secondary">Try the Live Demo &rarr;</a>
     </div>
 
     <div class="hero-proof">
       <div class="hero-proof-item">
         <span class="hero-proof-value">462K+</span>
-        <span class="hero-proof-label">Tokens Minted</span>
+        <span class="hero-proof-label">Rewards Claimed</span>
       </div>
       <div class="hero-proof-divider"></div>
       <div class="hero-proof-item">
         <span class="hero-proof-value">207</span>
-        <span class="hero-proof-label">Unique Hunters</span>
-      </div>
-      <div class="hero-proof-divider"></div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-value">992</span>
-        <span class="hero-proof-label">Treasures Found</span>
+        <span class="hero-proof-label">Active Players</span>
       </div>
       <div class="hero-proof-divider"></div>
       <div class="hero-proof-item">
         <span class="hero-proof-value">59</span>
-        <span class="hero-proof-label">On-Chain Treasures</span>
+        <span class="hero-proof-label">Venue Checkpoints</span>
       </div>
     </div>
   </div>
@@ -1612,71 +1661,184 @@ img { max-width: 100%; height: auto; display: block; }
 <!-- ==================== MARQUEE ==================== -->
 <div class="marquee-strip">
   <div class="marquee-track">
-    <span class="marquee-item"><span class="marquee-dot"></span>Wallet-Native</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>On-Chain Verified</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>NFC + QR Bridge</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Tokenized Rewards</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Live Leaderboard</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Layer 3 Infrastructure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Drive Foot Traffic</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Reward Attendance</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Sponsor Visibility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Custom Merch Store</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Real-Time Leaderboards</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>NFC + QR Checkpoints</span>
     <span class="marquee-item"><span class="marquee-dot"></span>ETHDenver 2026</span>
     <span class="marquee-item"><span class="marquee-dot"></span>NOVA Blockchain Lab</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Wallet-Native</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>On-Chain Verified</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>NFC + QR Bridge</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Tokenized Rewards</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Live Leaderboard</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Layer 3 Infrastructure</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Drive Foot Traffic</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Reward Attendance</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Sponsor Visibility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Custom Merch Store</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Real-Time Leaderboards</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>NFC + QR Checkpoints</span>
     <span class="marquee-item"><span class="marquee-dot"></span>ETHDenver 2026</span>
     <span class="marquee-item"><span class="marquee-dot"></span>NOVA Blockchain Lab</span>
   </div>
 </div>
 
-<!-- ==================== WHAT IT IS ==================== -->
+<!-- ==================== SEE IT IN ACTION ==================== -->
+<section class="section-demo" id="demo">
+  <div class="container">
+    <div class="demo-header reveal">
+      <div class="section-label">Live at ETHDenver 2026</div>
+      <h2>
+        See What <span class="gradient-text">207 Players</span> Experienced at ETHDenver
+      </h2>
+    </div>
+
+    <div class="demo-phones">
+      <div class="phone-item reveal" style="transition-delay: 0.1s">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="assets/ethdenver-home.png" alt="Treasure Hunt home screen at ETHDenver" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Home base: scan, explore, compete</p>
+      </div>
+
+      <div class="phone-item reveal" style="transition-delay: 0.2s">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="assets/ethdenver-map.png" alt="Interactive venue map with checkpoint tracking" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Interactive venue map with live checkpoint tracking</p>
+      </div>
+
+      <div class="phone-item reveal" style="transition-delay: 0.3s">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="assets/ethdenver-leaderboard.png" alt="Live leaderboard at ETHDenver" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Live leaderboard keeps players competing all day</p>
+      </div>
+
+      <div class="phone-item reveal" style="transition-delay: 0.4s">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="assets/ethdenver-merch.png" alt="Built-in merch store" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Built-in merch store where rewards become real items</p>
+      </div>
+    </div>
+
+    <div class="demo-cta reveal" style="transition-delay: 0.5s">
+      <a href="https://hunt.ethdenver.com/" target="_blank" rel="noopener" class="btn-primary">Try the Live Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHAT IT DOES ==================== -->
 <section class="section section-what" id="what">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-label">01 / What It Is</div>
+      <div class="section-label">01 / Features</div>
       <h2 class="section-title">
-        Not Another<br>
-        <span class="gradient-text">Gamification App</span>
+        What Treasure Hunt<br>
+        <span class="gradient-text">Does for Your Event</span>
       </h2>
       <p class="section-desc">
-        Treasure Hunt is an on-chain, gamified experience that turns conferences, festivals, campuses and corporate environments into interactive blockchain-powered adventures. Participants connect their crypto wallet and explore the venue searching for NFC tags or QR codes. Each discovery unlocks token rewards, challenges, and leaderboard progression &mdash; all transparently recorded on-chain.
+        Treasure Hunt turns any venue into an interactive game. Attendees explore your space, scan checkpoints, earn rewards, and compete on live leaderboards &mdash; all from their phone browser, no app download required.
       </p>
     </div>
 
     <div class="what-grid">
       <div class="glass-card what-card reveal" style="transition-delay: 0.1s">
         <div class="what-card-icon cyan">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <h3>Wallet-Native Interaction</h3>
-        <p>Every participant connects their own Web3 wallet. Self-custody compatible. Real blockchain transactions from the first tap.</p>
+        <h3>Guide Foot Traffic</h3>
+        <p>You decide where checkpoints go. Every checkpoint is a reason to walk across the venue &mdash; driving traffic to sponsors, booths, and underexplored areas.</p>
       </div>
 
       <div class="glass-card what-card reveal" style="transition-delay: 0.2s">
         <div class="what-card-icon pink">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
         </div>
-        <h3>Tokenized Rewards</h3>
-        <p>Real token minting and transfers. Not fake points in a database. Verifiable on-chain reward distribution that participants actually own.</p>
+        <h3>Reward Real Participation</h3>
+        <p>Attendees earn rewards for engaging &mdash; not just showing up. Real digital tokens they can spend in the in-app merch store on hats, socks, and exclusive items.</p>
       </div>
 
       <div class="glass-card what-card reveal" style="transition-delay: 0.3s">
         <div class="what-card-icon purple">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
         </div>
-        <h3>Physical-to-Digital Bridge</h3>
-        <p>NFC tags and QR codes placed throughout the venue connect physical space to blockchain. Tap a tag, trigger a transaction.</p>
+        <h3>Plug Into Any Venue</h3>
+        <p>Drop NFC tags or QR codes anywhere. No app download required. Works on any phone browser &mdash; attendees are playing in under 30 seconds.</p>
       </div>
 
       <div class="glass-card what-card reveal" style="transition-delay: 0.4s">
         <div class="what-card-icon yellow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
         </div>
-        <h3>Transparent Competition</h3>
-        <p>Live leaderboard with tamper-proof logic. Rankings computed on-chain. Every position earned, every score verifiable.</p>
+        <h3>Track Everything in Real Time</h3>
+        <p>See which checkpoints are visited, which areas are underexplored, and who your most engaged attendees are. Live analytics for organizers.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="section section-how" id="how">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">02 / How It Works</div>
+      <h2 class="section-title">
+        Five Steps.<br>
+        <span class="gradient-text">Zero Friction.</span>
+      </h2>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step reveal" style="transition-delay: 0.1s">
+        <div class="step-marker">01</div>
+        <div class="step-content">
+          <h3>Open the Game</h3>
+          <p>Visit the URL on your phone. No app download, no account creation. You're playing in 30 seconds.</p>
+        </div>
+      </div>
+
+      <div class="step reveal" style="transition-delay: 0.2s">
+        <div class="step-marker">02</div>
+        <div class="step-content">
+          <h3>Explore the Venue</h3>
+          <p>Checkpoints are placed strategically across the event. Follow the map, discover hidden spots, and uncover rewards around every corner.</p>
+        </div>
+      </div>
+
+      <div class="step reveal" style="transition-delay: 0.3s">
+        <div class="step-marker">03</div>
+        <div class="step-content">
+          <h3>Scan to Collect</h3>
+          <p>Tap an NFC tag or scan a QR code. Instant reward. One touch, one token &mdash; collected and tracked automatically.</p>
+        </div>
+      </div>
+
+      <div class="step reveal" style="transition-delay: 0.4s">
+        <div class="step-marker">04</div>
+        <div class="step-content">
+          <h3>Compete on the Leaderboard</h3>
+          <p>Live rankings update in real time. Social challenges and collaborative missions keep the energy high all day.</p>
+        </div>
+      </div>
+
+      <div class="step reveal" style="transition-delay: 0.5s">
+        <div class="step-marker">05</div>
+        <div class="step-content">
+          <h3>Spend at the Merch Store</h3>
+          <p>Tokens unlock real prizes &mdash; socks, hats, exclusive items. The built-in merch store turns digital rewards into something attendees take home.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps-footer reveal" style="transition-delay: 0.6s">
+      <p>You control the checkpoints, the rewards, and the prizes. We handle the technology.</p>
     </div>
   </div>
 </section>
@@ -1687,198 +1849,33 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="not-is-grid">
       <div class="not-column reveal-left">
         <h3>Treasure Hunt Is Not</h3>
-        <div class="not-item">A Web2 gamification app with a crypto sticker</div>
-        <div class="not-item">A QR code marketing gimmick</div>
-        <div class="not-item">A fake "blockchain-inspired" engagement tool</div>
-        <div class="not-item">Hidden backend scoring pretending to be decentralized</div>
+        <div class="not-item">Another app people download and forget</div>
+        <div class="not-item">A QR code that leads to a survey nobody fills out</div>
+        <div class="not-item">A leaderboard with no real stakes</div>
+        <div class="not-item">A passive attendee tracking tool</div>
       </div>
       <div class="is-column reveal-right">
         <h3>Treasure Hunt Is</h3>
-        <div class="is-item">A live on-chain participation engine</div>
-        <div class="is-item">A physical-to-digital bridge for events</div>
-        <div class="is-item">A wallet onboarding machine</div>
-        <div class="is-item">A tokenized engagement protocol</div>
+        <div class="is-item">An experience attendees compete over for hours</div>
+        <div class="is-item">A physical exploration game with real rewards</div>
+        <div class="is-item">A foot traffic system disguised as fun</div>
+        <div class="is-item">A measurable engagement engine with live analytics</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ==================== HOW IT WORKS ==================== -->
-<section class="section section-how" id="how">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">02 / How It Works</div>
-      <h2 class="section-title">
-        Five Steps.<br>
-        <span class="gradient-text">Fully On-Chain.</span>
-      </h2>
-    </div>
-
-    <div class="steps-timeline">
-      <div class="step reveal" style="transition-delay: 0.1s">
-        <div class="step-marker">01</div>
-        <div class="step-content">
-          <h3>Connect Your Wallet</h3>
-          <p>Participants log in using their Web3 wallet. No accounts. No passwords. Just sign a message and you're in.</p>
-        </div>
-      </div>
-
-      <div class="step reveal" style="transition-delay: 0.2s">
-        <div class="step-marker">02</div>
-        <div class="step-content">
-          <h3>Explore the Venue</h3>
-          <p>Physical checkpoints with NFC tags or QR codes are placed strategically across the event. Every corner becomes an opportunity.</p>
-        </div>
-      </div>
-
-      <div class="step reveal" style="transition-delay: 0.3s">
-        <div class="step-marker">03</div>
-        <div class="step-content">
-          <h3>Tap or Scan to Claim</h3>
-          <p>When a checkpoint is found, users tap or scan to trigger an on-chain interaction and receive tokens. One touch. One transaction. Verified.</p>
-        </div>
-      </div>
-
-      <div class="step reveal" style="transition-delay: 0.4s">
-        <div class="step-marker">04</div>
-        <div class="step-content">
-          <h3>Earn &amp; Compete</h3>
-          <p>Tokens accumulate. A live leaderboard tracks rankings in real time. Social challenges and collaborative missions increase engagement.</p>
-        </div>
-      </div>
-
-      <div class="step reveal" style="transition-delay: 0.5s">
-        <div class="step-marker">05</div>
-        <div class="step-content">
-          <h3>Redeem Rewards</h3>
-          <p>Tokens can be exchanged for prizes, exclusive access, NFTs, or other digital and physical incentives. Your tokens, your choice.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="steps-footer reveal" style="transition-delay: 0.6s">
-      <p>Every action generates a blockchain transaction &mdash; creating a verifiable, transparent and gamified participation record.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== BUILT ON-CHAIN ==================== -->
-<section class="section section-onchain" id="onchain">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">03 / Built Fully On-Chain</div>
-    </div>
-
-    <div class="onchain-split">
-      <div class="onchain-left reveal-left">
-        <h2>
-          Runs on Layer 3<br>
-          <span class="accent-line">Nova Cidade</span>
-        </h2>
-
-        <p class="section-desc" style="margin-bottom: 0">
-          Treasure Hunt runs on Layer 3 Nova Cidade, delivering real blockchain infrastructure &mdash; not simulated gamification.
-        </p>
-
-        <div class="onchain-taglines">
-          <div class="onchain-tagline"><span>Every</span> interaction is wallet-native and verifiable.</div>
-          <div class="onchain-tagline"><span>Every</span> reward is tokenized.</div>
-          <div class="onchain-tagline"><span>Every</span> action leaves an on-chain trace.</div>
-        </div>
-
-        <div class="onchain-anti">
-          <p><strong>No fake points.</strong></p>
-          <p><strong>No hidden backend scoring.</strong></p>
-          <p><strong>No Web2 layer pretending to be Web3.</strong></p>
-          <div class="punch">Treasure Hunt doesn't simulate Web3 &mdash; it runs on it.</div>
-        </div>
-      </div>
-
-      <div class="onchain-right reveal-right">
-        <div class="features-grid">
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Wallet integration</strong> &mdash; self-custody compatible</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Real token minting</strong> and transfers</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>On-chain reward claims</strong></div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Transparent, tamper-proof</strong> leaderboard logic</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Verifiable reward</strong> distribution</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>NFC &amp; QR bridge</strong> connecting physical space to blockchain</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Dynamic ranking</strong> system</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Social and collaborative</strong> challenges</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Organizer analytics</strong> dashboard</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>Customizable tokenomics</strong></div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-check">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <div class="feature-text"><strong>White-label deployment</strong> options</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== WHERE IT BELONGS ==================== -->
+<!-- ==================== WHERE IT WORKS ==================== -->
 <section class="section section-where" id="where">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-label">04 / Where It Belongs</div>
+      <div class="section-label">03 / Use Cases</div>
       <h2 class="section-title">
-        From Hackathons<br>
-        <span class="gradient-text">to Festival Grounds</span>
+        Where It<br>
+        <span class="gradient-text">Works</span>
       </h2>
       <p class="section-desc">
-        Any venue with a crowd becomes an on-chain playground. Treasure Hunt adapts to your scale, your audience, and your goals.
+        Any venue with a crowd becomes an interactive playground. Treasure Hunt adapts to your scale, your audience, and your goals.
       </p>
     </div>
 
@@ -1887,32 +1884,32 @@ img { max-width: 100%; height: auto; display: block; }
         <span class="use-case-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="1.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
         </span>
-        <h3>Conferences &amp; Web3 Events</h3>
-        <p>Increase booth traffic, sponsor visibility, and real blockchain adoption. Turn passive attendees into active on-chain participants.</p>
+        <h3>Conferences &amp; Summits</h3>
+        <p>Drive booth traffic and keep attendees engaged between sessions. Turn passive badge-scanners into active participants exploring every corner.</p>
       </div>
 
       <div class="glass-card use-case reveal" style="transition-delay: 0.2s">
         <span class="use-case-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="1.5"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
         </span>
-        <h3>Corporate Innovation</h3>
-        <p>Gamify employee engagement and digital literacy initiatives. Introduce teams to blockchain through direct, hands-on experience.</p>
+        <h3>Corporate Events</h3>
+        <p>Gamify team building, product launches, and internal summits. Give employees a reason to explore the space and interact with every activation.</p>
       </div>
 
       <div class="glass-card use-case reveal" style="transition-delay: 0.3s">
         <span class="use-case-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </span>
-        <h3>Universities &amp; Academia</h3>
-        <p>Promote blockchain education through hands-on experience. Students don't just learn about Web3 &mdash; they use it.</p>
+        <h3>Universities &amp; Campuses</h3>
+        <p>Orientation weeks, open days, and campus events come alive. Students explore, compete, and discover spaces they'd never find on their own.</p>
       </div>
 
       <div class="glass-card use-case reveal" style="transition-delay: 0.4s">
         <span class="use-case-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="1.5"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
         </span>
-        <h3>Festivals &amp; Gatherings</h3>
-        <p>Create interactive exploration experiences with digital rewards. Transform any large venue into a tokenized treasure map.</p>
+        <h3>Festivals &amp; Expos</h3>
+        <p>Create an exploration layer across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences throughout the grounds.</p>
       </div>
 
       <div class="glass-card use-case reveal" style="transition-delay: 0.5s">
@@ -1920,7 +1917,7 @@ img { max-width: 100%; height: auto; display: block; }
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="m16 10-4 4-4-4"/></svg>
         </span>
         <h3>Brand Activations</h3>
-        <p>Connect physical marketing campaigns to tokenized engagement. Measurable, on-chain proof of real customer interaction.</p>
+        <p>Connect physical marketing campaigns to measurable engagement. Know exactly which touchpoints drove interaction and for how long.</p>
       </div>
 
       <div class="glass-card use-case reveal" style="transition-delay: 0.6s">
@@ -1928,25 +1925,25 @@ img { max-width: 100%; height: auto; display: block; }
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="1.5"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
         </span>
         <h3>Hackathons</h3>
-        <p>Incentivize builder engagement with verifiable on-chain rewards. Track participation, sponsor visibility, and collaboration.</p>
+        <p>Keep builders energized between coding sessions. Reward participation across workshops, sponsor booths, and social areas with real prizes.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== ORIGIN STORY ==================== -->
+<!-- ==================== PROVEN AT SCALE ==================== -->
 <section class="section section-origin" id="origin">
   <div class="container">
     <div class="origin-content reveal">
-      <div class="section-label" style="justify-content: center;">05 / Origin</div>
+      <div class="section-label" style="justify-content: center;">04 / Proven at Scale</div>
       <h2 class="section-title">
-        Built in Portugal.<br>
-        <span class="gradient-text">Deployed Globally.</span>
+        Proven at<br>
+        <span class="gradient-text">ETHDenver 2026.</span>
       </h2>
-      <p class="origin-subtitle">From Academic Lab to International Stage</p>
+      <p class="origin-subtitle">462K+ Rewards &bull; 207 Players &bull; 59 Checkpoints</p>
 
       <p class="origin-text">
-        Treasure Hunt was created by NOVA Blockchain Lab for Blockchain Confluence 2025 in Lisbon. A research-grade project born inside one of Portugal's leading universities, built to prove that on-chain engagement at physical events isn't just possible &mdash; it's superior.
+        Treasure Hunt was created by NOVA Blockchain Lab for Blockchain Confluence 2025 in Lisbon &mdash; a research-grade project born inside one of Portugal's leading universities, built to prove that interactive event engagement can be seamless, measurable, and genuinely fun.
       </p>
 
       <div class="origin-rhythm">
@@ -1956,7 +1953,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <p class="origin-text">
-        In 2026, Treasure Hunt became the official Web3 game at ETHDenver &mdash; placing Portuguese-built blockchain infrastructure on one of the most visible stages in the global Ethereum ecosystem.
+        In 2026, Treasure Hunt became the official engagement game at ETHDenver &mdash; one of the world's largest Ethereum events. 207 players competed across 59 venue checkpoints, claiming over 462,000 rewards and spending them in the built-in merch store.
       </p>
 
       <div class="origin-journey">
@@ -1980,6 +1977,36 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="assets/nova-blockchain-lab-logo.png" alt="NOVA Blockchain Lab">
         <img src="assets/ETHDEN_logo_full_white.png" alt="ETHDenver">
       </div>
+
+      <div class="under-hood">
+        <div class="under-hood-title">Under the Hood</div>
+        <div class="under-hood-grid">
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Real token minting and transfers
+          </div>
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Runs on Layer 3 blockchain
+          </div>
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Organizer analytics dashboard
+          </div>
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            White-label deployment
+          </div>
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Customizable rewards and prizes
+          </div>
+          <div class="under-hood-item">
+            <span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Wallet-native, self-custody compatible
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1989,19 +2016,18 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="cta-bg"></div>
   <div class="container cta-content reveal">
     <h2>
-      Ready to Bring<br>
-      <span class="gradient-text">Treasure Hunt</span><br>
-      to Your Event?
+      Ready to Make Your Next Event<br>
+      <span class="gradient-text">Unforgettable?</span>
     </h2>
     <p class="cta-sub">
-      Turn your venue into a blockchain-powered adventure.
+      Treasure Hunt deploys in days. Tell us about your event.
     </p>
     <p class="cta-tagline">
-      Activate wallets. Reward engagement. Create measurable impact.
+      You bring the venue. We bring the game.
     </p>
     <div class="cta-buttons">
-      <a href="mailto:nova.blockchain.lab@novaims.unl.pt" class="btn-primary">Contact NOVA Blockchain Lab</a>
-      <a href="#hero" class="btn-secondary">Back to Top</a>
+      <a href="mailto:nova.blockchain.lab@novaims.unl.pt" class="btn-primary">Book a Demo</a>
+      <a href="https://hunt.ethdenver.com/" target="_blank" rel="noopener" class="btn-secondary">Try the Live Demo &rarr;</a>
     </div>
     <p class="cta-email" style="margin-top: 24px;">
       <a href="mailto:nova.blockchain.lab@novaims.unl.pt">nova.blockchain.lab@novaims.unl.pt</a>
@@ -2017,7 +2043,8 @@ img { max-width: 100%; height: auto; display: block; }
       <span class="footer-text">NOVA Blockchain Lab &mdash; Treasure Hunt</span>
     </div>
     <div class="footer-links">
-      <a href="#what">What It Is</a>
+      <a href="#demo">Demo</a>
+      <a href="#what">Features</a>
       <a href="#how">How It Works</a>
       <a href="#where">Use Cases</a>
       <a href="#cta">Contact</a>
@@ -2073,7 +2100,7 @@ function closeMobileMenu() {
   document.body.style.overflow = '';
 }
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links (except external links)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -2097,12 +2124,11 @@ function animateCounters() {
 
     let current = 0;
     const increment = target / 60;
-    const isDecimal = target < 100;
 
     function updateCounter() {
       current += increment;
       if (current >= target) {
-        counter.textContent = (isDecimal ? Math.round(target) : Math.round(target)) + suffix;
+        counter.textContent = Math.round(target) + suffix;
         return;
       }
       counter.textContent = Math.round(current) + suffix;
