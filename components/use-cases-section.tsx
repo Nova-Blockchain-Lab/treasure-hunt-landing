@@ -147,9 +147,9 @@ export function UseCasesSection() {
             style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
           >
             {useCases.map((useCase, i) => (
-              <RevealOnScroll key={i} delay={80 * (i + 1)}>
+              <RevealOnScroll key={i} delay={80 * (i + 1)} className="self-stretch">
                 <div
-                  className="group relative w-[280px] sm:w-[300px] md:w-[320px] shrink-0 snap-start rounded-2xl border border-neon-pink/15 backdrop-blur-[12px] p-7 md:p-9 text-center overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:border-neon-pink/30 before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-linear-to-r before:from-transparent before:via-neon-pink before:to-transparent before:opacity-0 before:transition-opacity before:duration-400 hover:before:opacity-100 [@media(hover:none)_and_(pointer:coarse)]:backdrop-blur-none"
+                  className="group relative w-[280px] sm:w-[300px] md:w-[320px] h-full shrink-0 snap-start rounded-2xl border border-neon-pink/15 backdrop-blur-[12px] p-7 md:p-9 text-center overflow-hidden transition-all duration-400 hover:-translate-y-1.5 hover:border-neon-pink/30 before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-linear-to-r before:from-transparent before:via-neon-pink before:to-transparent before:opacity-0 before:transition-opacity before:duration-400 hover:before:opacity-100 [@media(hover:none)_and_(pointer:coarse)]:backdrop-blur-none"
                   style={{
                     background: "linear-gradient(to bottom right, rgba(37,26,106,0.6), rgba(21,14,65,0.8))",
                   }}

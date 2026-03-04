@@ -119,8 +119,8 @@ export function DemoSection() {
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
-          <div className="text-center mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-neon-cyan mb-4 flex items-center justify-center gap-3">
+          <div className="mb-16">
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-neon-cyan mb-4 flex items-center gap-3">
               <span className="w-8 h-px bg-neon-cyan" />
               Live at ETHDenver 2026
             </div>
@@ -137,7 +137,7 @@ export function DemoSection() {
         {/* Phone carousel - fixed: scroll indicators for mobile */}
         <div
           ref={scrollRef}
-          className="flex md:grid md:grid-cols-4 md:justify-items-center gap-4 md:gap-8 mb-12 overflow-x-auto md:overflow-visible scroll-snap-x snap-mandatory -mx-5 px-5 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-none"
+          className="flex md:grid md:grid-cols-4 md:justify-items-center gap-4 md:gap-8 mb-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-5 px-5 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-none"
           style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
         >
           {phones.map((phone, i) => (
