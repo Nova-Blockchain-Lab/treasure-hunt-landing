@@ -65,8 +65,8 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-2 max-w-[820px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
         <Image
-          src="/Design_sem_nome.png"
-          alt="Treasure Hunt - ETHDenver Edition"
+          src="/treasure-hunt-logo.png"
+          alt="Treasure Hunt"
           width={520}
           height={200}
           className="block max-w-[220px] sm:max-w-[340px] md:max-w-[520px] mx-auto mb-6 animate-[fade-slide-up_0.6s_ease-out_0.1s_both] h-auto"

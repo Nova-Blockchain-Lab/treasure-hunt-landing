@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   title: 'Treasure Hunt -- Turn Your Event Into an Adventure Attendees Talk About',
   description:
     'Interactive event engagement game that drives foot traffic, rewards participation, and gives organizers real-time analytics. Deployed at ETHDenver 2026.',
+  icons: {
+    icon: '/treasure-hunt-logo.png',
+    apple: '/treasure-hunt-logo.png',
+  },
 }
 
 export const viewport: Viewport = {
