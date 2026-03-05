@@ -1,25 +1,18 @@
 "use client"
 
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useCallback, useMemo } from "react"
 import Image from "next/image"
-
-const navLinks = [
-  { href: "#demo", label: "Demo" },
-  { href: "#what", label: "Features" },
-  { href: "#how", label: "How It Works" },
-  { href: "#where", label: "Use Cases" },
-  { href: "#packages", label: "Packages" },
-]
+import { navLinks } from "@/data/nav-links"
+import { useScrollPosition } from "@/hooks/use-scroll-position"
+import { useActiveSection } from "@/hooks/use-active-section"
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const { scrollY, scrollProgress } = useScrollPosition()
+  const scrolled = scrollY > 60
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  const sectionIds = useMemo(() => navLinks.map((l) => l.href.replace("#", "")), [])
+  const activeId = useActiveSection(sectionIds)
 
   const closeMenu = useCallback(() => {
     setMenuOpen(false)
@@ -34,7 +27,6 @@ export function Navbar() {
     })
   }, [])
 
-  // Close on Escape key - focus trap improvement
   useEffect(() => {
     if (!menuOpen) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -56,10 +48,16 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-100 px-5 md:px-6 transition-all duration-400 ${
           scrolled
-            ? "bg-[rgba(3,1,24,0.92)] backdrop-blur-[20px] border-b border-neon-pink/10"
+            ? "bg-[rgba(6,8,15,0.85)] backdrop-blur-xl border-b border-[rgba(240,246,252,0.06)]"
             : ""
         }`}
       >
+        {/* Scroll progress bar */}
+        <div
+          className="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-[#F0605D] to-[#FF9A76] transition-[width] duration-150"
+          style={{ width: `${scrollProgress * 100}%` }}
+        />
+
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[72px]">
           <a href="#" className="flex items-center gap-3" onClick={(e) => scrollToSection(e, "#hero")}>
             <Image
@@ -73,31 +71,38 @@ export function Navbar() {
             />
           </a>
 
-          {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-6 list-none">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className="font-sans text-[0.85rem] font-medium text-text-secondary tracking-wide relative transition-colors duration-300 hover:text-text-primary after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-neon-pink after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeId === link.href.replace("#", "")
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className={`font-sans text-[0.85rem] font-medium tracking-wide relative transition-colors duration-300 hover:text-[#E6EDF3] ${
+                      isActive ? "text-[#E6EDF3]" : "text-[#8B949E]"
+                    }`}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute bottom-[-4px] left-0 h-px bg-[#F0605D] transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0"
+                      }`}
+                    />
+                  </a>
+                </li>
+              )
+            })}
             <li>
               <a
-                href="#cta"
-                onClick={(e) => scrollToSection(e, "#cta")}
-                className="font-display text-[0.95rem] tracking-widest text-neon-pink border border-neon-pink/40 px-5 py-2 rounded-md transition-all duration-300 hover:bg-neon-pink/10 hover:border-neon-pink hover:shadow-[var(--glow-pink)]"
+                href="mailto:nova.blockchain.lab@novaims.unl.pt"
+                className="font-display text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-5 py-2 rounded-md transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
               >
-                Get Started
+                Book a Demo
               </a>
             </li>
           </ul>
 
-          {/* Burger */}
           <button
             className="flex md:hidden flex-col gap-[5px] p-2 z-110 cursor-pointer bg-transparent border-none"
             onClick={toggleMenu}
@@ -105,17 +110,17 @@ export function Navbar() {
             aria-expanded={menuOpen}
           >
             <span
-              className={`block w-6 h-0.5 bg-text-primary transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-[#E6EDF3] transition-all duration-300 ${
                 menuOpen ? "rotate-45 translate-x-[5px] translate-y-[5px]" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-text-primary transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-[#E6EDF3] transition-all duration-300 ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-text-primary transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-[#E6EDF3] transition-all duration-300 ${
                 menuOpen ? "-rotate-45 translate-x-[5px] -translate-y-[5px]" : ""
               }`}
             />
@@ -123,33 +128,32 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu with focus trap fix */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 bg-[rgba(3,1,24,0.98)] backdrop-blur-[30px] z-105 flex flex-col items-center justify-center gap-8"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Navigation menu"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="font-display text-3xl tracking-widest text-text-secondary transition-colors duration-300 hover:text-neon-pink"
-            >
-              {link.label}
-            </a>
-          ))}
+      {/* Mobile slide-in panel */}
+      <div
+        className={`fixed inset-0 bg-[rgba(6,8,15,0.98)] backdrop-blur-xl z-105 flex flex-col items-center justify-center gap-8 transition-all duration-400 ${
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
+        {navLinks.map((link) => (
           <a
-            href="#cta"
-            onClick={(e) => scrollToSection(e, "#cta")}
-            className="font-display text-3xl tracking-widest text-neon-pink transition-colors duration-300"
+            key={link.href}
+            href={link.href}
+            onClick={(e) => scrollToSection(e, link.href)}
+            className="font-display text-3xl tracking-widest text-[#8B949E] transition-colors duration-300 hover:text-[#E6EDF3]"
           >
-            Get Started
+            {link.label}
           </a>
-        </div>
-      )}
+        ))}
+        <a
+          href="mailto:nova.blockchain.lab@novaims.unl.pt"
+          className="font-display text-3xl tracking-widest text-[#F0605D] transition-colors duration-300"
+        >
+          Book a Demo
+        </a>
+      </div>
     </>
   )
 }
