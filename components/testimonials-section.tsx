@@ -12,8 +12,8 @@ const testimonials = [
   },
   {
     quote:
-      "We saw attendees exploring areas of the venue they'd never visited before. Sponsor booths reported 3x more foot traffic during the treasure hunt.",
-    author: "Sponsor Partner",
+      "My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They'd scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.",
+    author: "Custom Sneaker Vendor",
     role: "ETHDenver 2026",
   },
   {
