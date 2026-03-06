@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.treasurehunt.pt',
   },
   openGraph: {
     type: 'website',
@@ -67,21 +67,12 @@ export const metadata: Metadata = {
     title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
     description:
       'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Treasure Hunt — Interactive Event Engagement Game',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
     description:
       'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-    images: ['/og-image.png'],
   },
   icons: {
     icon: '/treasure-hunt-logo.png',

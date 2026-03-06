@@ -83,6 +83,7 @@ export function DemoSection() {
                       width={220}
                       height={440}
                       className="w-full h-auto"
+                      sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, 220px"
                       loading="lazy"
                     />
                   </div>

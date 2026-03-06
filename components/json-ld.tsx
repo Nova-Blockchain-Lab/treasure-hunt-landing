@@ -6,6 +6,16 @@ const organization = {
   url: BASE_URL,
   logo: `${BASE_URL}/nova-blockchain-lab-logo.png`,
   email: 'nova.blockchain.lab@novaims.unl.pt',
+  foundingDate: '2023',
+  sameAs: [
+    'https://hunt.ethdenver.com/',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'nova.blockchain.lab@novaims.unl.pt',
+    contactType: 'sales',
+    availableLanguage: 'English',
+  },
 }
 
 const softwareApplication = {
@@ -111,9 +121,93 @@ const webPage = {
   provider: organization,
 }
 
+const breadcrumbList = {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: BASE_URL,
+    },
+  ],
+}
+
+const event = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at ETHDenver 2026',
+  description:
+    'Interactive scavenger hunt game deployed at ETHDenver 2026, driving attendee engagement with QR & NFC checkpoints, live leaderboards, and a merch store.',
+  startDate: '2026-02-27',
+  endDate: '2026-03-01',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'National Western Complex',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Denver',
+      addressRegion: 'CO',
+      addressCountry: 'US',
+    },
+  },
+  organizer: organization,
+  url: 'https://hunt.ethdenver.com/',
+}
+
+const reviews = [
+  {
+    '@type': 'Review',
+    reviewBody:
+      'Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done!',
+    author: {
+      '@type': 'Person',
+      name: 'Nick',
+      jobTitle: 'Head of the Makerspace, ETHDenver',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+    },
+    itemReviewed: softwareApplication,
+  },
+  {
+    '@type': 'Review',
+    reviewBody:
+      'My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They\'d scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.',
+    author: {
+      '@type': 'Person',
+      name: 'Custom Sneaker Vendor',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+    },
+    itemReviewed: softwareApplication,
+  },
+  {
+    '@type': 'Review',
+    reviewBody:
+      'No app download, no complicated setup. Players were scanning checkpoints within 30 seconds of signing in. The merch store was a huge hit.',
+    author: {
+      '@type': 'Organization',
+      name: 'NOVA Blockchain Lab',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+    },
+    itemReviewed: softwareApplication,
+  },
+]
+
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, faqPage, webPage],
+  '@graph': [organization, softwareApplication, faqPage, webPage, breadcrumbList, event, ...reviews],
 }
 
 export function JsonLd() {

@@ -36,7 +36,8 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-2 max-w-[820px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
+      <div className="relative z-2 max-w-[1100px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
+        <h1 className="sr-only">Treasure Hunt | Interactive Event Engagement Game for Conferences</h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,29 +45,17 @@ export function HeroSection() {
         >
           <Image
             src="/treasure-hunt-logo.png"
-            alt="Treasure Hunt"
-            width={700}
-            height={270}
-            className="block max-w-[300px] sm:max-w-[460px] md:max-w-[700px] mx-auto mb-12 h-auto"
+            alt="Treasure Hunt - Interactive Event Engagement Game"
+            width={1000}
+            height={385}
+            className="block max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-12 h-auto"
             style={{ width: "auto", height: "auto" }}
+            sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 1000px"
             priority
           />
         </motion.div>
 
-        <motion.h1
-          className="font-display text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.92] mb-7 text-balance"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          Turn Your Event
-          <br />
-          <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-            Into an Adventure Attendees Actually Talk About
-          </span>
-        </motion.h1>
-
-        <motion.p
+<motion.p
           className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-10 max-w-[640px]"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
