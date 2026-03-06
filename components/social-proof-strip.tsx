@@ -19,7 +19,7 @@ export function SocialProofStrip() {
           </a>
           <a href="https://blockchainconfluence.pt/" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/Blockchain Confluence  Logo.png"
+              src="/blockchain-confluence-logo.png"
               alt="Blockchain Confluence"
               width={320}
               height={96}
