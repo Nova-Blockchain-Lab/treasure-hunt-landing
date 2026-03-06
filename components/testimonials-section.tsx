@@ -6,9 +6,9 @@ import { SpotlightCard } from "./spotlight-card"
 const testimonials = [
   {
     quote:
-      "Treasure Hunt completely transformed our ETHDenver experience. 207 players engaged across 59 checkpoints over 4 days \u2014 the energy was incredible.",
-    author: "ETHDenver Organizer",
-    role: "Event Operations",
+      "Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done! 👏",
+    author: "Nick",
+    role: "Head of the Makerspace, ETHDenver",
   },
   {
     quote:

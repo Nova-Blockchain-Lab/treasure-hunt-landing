@@ -16,8 +16,8 @@ export function SocialProofStrip() {
             className="h-8 md:h-10 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
           />
           <Image
-            src="/NOVA_Blockchain_Lab-2.png"
-            alt="NOVA Blockchain Lab"
+            src="/Blockchain Confluence  Logo.png"
+            alt="Blockchain Confluence"
             width={160}
             height={40}
             className="h-8 md:h-10 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
