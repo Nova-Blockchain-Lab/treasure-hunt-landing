@@ -49,9 +49,16 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Row 3: Copyright bar */}
-      <div className="border-t border-[rgba(240,246,252,0.04)] py-6">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-6 text-center">
+      {/* Built by */}
+      <div className="border-t border-[rgba(240,246,252,0.04)] py-8">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-6 flex flex-col items-center gap-4">
+          <Image
+            src="/nova-blockchain-lab-logo.png"
+            alt="NOVA Blockchain Lab"
+            width={480}
+            height={120}
+            className="h-28 md:h-36 w-auto opacity-40"
+          />
           <span className="text-[0.75rem] text-[#484F58]">
             {"\u00A9"} {new Date().getFullYear()} Confluence. All rights reserved.
           </span>
