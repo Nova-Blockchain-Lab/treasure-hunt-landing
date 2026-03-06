@@ -69,44 +69,6 @@ const softwareApplication = {
   provider: organization,
 }
 
-const faqPage = {
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do attendees need to download an app to play Treasure Hunt?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. Treasure Hunt is a fully web-based platform. Attendees simply scan a QR code or tap an NFC tag with their phone to start playing — no app download required.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does Treasure Hunt work at events?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Organizers place QR code or NFC checkpoints around the venue at sponsor booths, stages, and key areas. Attendees scan checkpoints to earn points, climb a live leaderboard, and redeem rewards at a built-in merch store.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What types of events can use Treasure Hunt?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Treasure Hunt works for conferences, hackathons, trade shows, festivals, corporate events, and campus orientations — any event where you want to drive foot traffic and increase engagement.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Has Treasure Hunt been deployed at real events?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Treasure Hunt was deployed at ETHDenver 2026, one of the largest blockchain conferences in the world, where it successfully drove attendee engagement and sponsor foot traffic.',
-      },
-    },
-  ],
-}
-
 const webPage = {
   '@type': 'WebPage',
   name: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
@@ -207,7 +169,7 @@ const reviews = [
 
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, faqPage, webPage, breadcrumbList, event, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, ...reviews],
 }
 
 export function JsonLd() {

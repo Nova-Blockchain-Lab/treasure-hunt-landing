@@ -7,7 +7,6 @@ import { FeaturesSection } from "@/components/features-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { UseCasesSection } from "@/components/use-cases-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import { FAQSection } from "@/components/faq-section"
 import { PackagesSection } from "@/components/packages-section"
 import { CTASection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
@@ -52,7 +51,6 @@ export default function Page() {
       <UseCasesSection />
       <SectionDivider />
       <TestimonialsSection />
-      <FAQSection />
       <PackagesSection />
       <CTASection />
       <SiteFooter />
