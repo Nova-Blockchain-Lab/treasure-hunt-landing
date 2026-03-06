@@ -1,6 +1,15 @@
 import { RevealOnScroll } from "./reveal-on-scroll"
 
-export function CTASection() {
+interface CTADict {
+  heading: string
+  headingHighlight: string
+  description: string
+  trustSignal: string
+  bookDemo: string
+  seeItLive: string
+}
+
+export function CTASection({ dict }: { dict: CTADict }) {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden bg-[#06080F]" id="cta">
       <div
@@ -16,34 +25,34 @@ export function CTASection() {
       <RevealOnScroll>
         <div className="relative z-2 max-w-[720px] mx-auto text-center px-5 md:px-6">
           <h2 className="font-display text-[clamp(2.2rem,6vw,4.5rem)] leading-[0.92] mb-6 text-balance">
-            Ready to Make Your Next Event
+            {dict.heading}
             <br />
             <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-              Unforgettable?
+              {dict.headingHighlight}
             </span>
           </h2>
 
-          <p className="text-xl text-[#8B949E] mb-4">Treasure Hunt deploys in days. Tell us about your event.</p>
+          <p className="text-xl text-[#8B949E] mb-4">{dict.description}</p>
 
           {/* Trust signal */}
           <p className="font-mono text-sm text-[#484F58] tracking-wide mb-12">
-            Deployed at ETHDenver 2026 {"\u2014"} 207 players, 59 checkpoints, 4 days
+            {dict.trustSignal}
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <a
               href="mailto:nova.blockchain.lab@novaims.unl.pt"
-              className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-lg tracking-widest uppercase px-10 py-4 rounded-lg transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
             >
-              Book a Demo
+              {dict.bookDemo}
             </a>
             <a
               href="https://hunt.ethdenver.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#58A6FF] font-display text-lg tracking-widest uppercase px-10 py-3.5 border-2 border-[rgba(88,166,255,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(88,166,255,0.08)] hover:border-[#58A6FF] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97]"
             >
-              {"See It Live \u2192"}
+              {dict.seeItLive}
             </a>
           </div>
 

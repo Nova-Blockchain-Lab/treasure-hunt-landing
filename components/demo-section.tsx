@@ -1,12 +1,23 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { RevealOnScroll } from "./reveal-on-scroll"
 import { TextShimmer } from "./text-shimmer"
 import { NumberTicker } from "./number-ticker"
 import { phones } from "@/data/demo-phones"
-import { stats } from "@/data/demo-stats"
+
+interface DemoDict {
+  eyebrow: string
+  heading: string
+  headingHighlight: string
+  headingSuffix: string
+  seeItLive: string
+  seeReport: string
+  phones: string[]
+  stats: { value: string; label: string }[]
+}
 
 function parseStatValue(value: string) {
   const hasK = value.includes("K")
@@ -17,7 +28,7 @@ function parseStatValue(value: string) {
   return { target, suffix }
 }
 
-export function DemoSection() {
+export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -36,6 +47,8 @@ export function DemoSection() {
     return () => el.removeEventListener("scroll", onScroll)
   }, [])
 
+  const reportHref = lang === "en" ? "/ethdenver-report" : `/${lang}/ethdenver-report`
+
   return (
     <section
       className="py-24 md:py-32 relative bg-[#0A0E14]"
@@ -47,15 +60,15 @@ export function DemoSection() {
             <div className="font-mono text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
               <span className="w-8 h-px bg-[#58A6FF]" />
               <TextShimmer duration={3} spread={1.5} className="font-mono text-xs tracking-[0.2em] uppercase [--base-color:#58A6FF] [--base-gradient-color:#E6EDF3]">
-                Live at ETHDenver 2026
+                {dict.eyebrow}
               </TextShimmer>
             </div>
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-balance">
-              See What{" "}
+              {dict.heading}{" "}
               <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-                207 Players
+                {dict.headingHighlight}
               </span>{" "}
-              Experienced at ETHDenver
+              {dict.headingSuffix}
             </h2>
           </div>
         </RevealOnScroll>
@@ -89,7 +102,7 @@ export function DemoSection() {
                   </div>
                 </div>
                 <p className="text-[0.82rem] text-[#8B949E] text-center max-w-[200px] leading-normal">
-                  {phone.caption}
+                  {dict.phones[i] ?? phone.caption}
                 </p>
               </div>
             </RevealOnScroll>
@@ -118,8 +131,8 @@ export function DemoSection() {
 
         {/* Stats with NumberTicker */}
         <RevealOnScroll delay={500}>
-          <div className="grid grid-cols-2 md:flex md:justify-center md:items-center gap-5 md:gap-12 mx-auto max-w-md md:max-w-none my-14 md:my-10">
-            {stats.map((stat, i) => {
+          <div className="grid grid-cols-2 md:flex md:justify-center md:items-center gap-4 md:gap-12 mx-auto max-w-md md:max-w-none my-14 md:my-10">
+            {dict.stats.map((stat, i) => {
               const { target, suffix } = parseStatValue(stat.value)
               return (
                 <div key={i} className="flex flex-col items-center text-center">
@@ -137,13 +150,21 @@ export function DemoSection() {
         </RevealOnScroll>
 
         <RevealOnScroll delay={600}>
-          <div className="text-center">
+          <div className="text-center flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="mailto:nova.blockchain.lab@novaims.unl.pt"
-              className="inline-flex items-center gap-2.5 bg-[#F0605D] text-white font-display text-lg tracking-widest uppercase px-10 py-4 rounded-lg transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+              href="https://hunt.ethdenver.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
             >
-              Book a Demo
+              {dict.seeItLive}
             </a>
+            <Link
+              href={reportHref}
+              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
+            >
+              {dict.seeReport}
+            </Link>
           </div>
         </RevealOnScroll>
       </div>

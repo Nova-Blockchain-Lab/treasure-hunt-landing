@@ -2,16 +2,37 @@
 
 import { useEffect, useState, useCallback, useMemo } from "react"
 import Image from "next/image"
-import { navLinks } from "@/data/nav-links"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { useActiveSection } from "@/hooks/use-active-section"
 
-export function Navbar() {
+const NAV_HREFS = ["#demo", "#what", "#how", "#where", "#packages"] as const
+
+interface NavDict {
+  demo: string
+  features: string
+  howItWorks: string
+  useCases: string
+  packages: string
+  bookDemo: string
+}
+
+export function Navbar({ dict }: { dict: NavDict }) {
   const { scrollY, scrollProgress } = useScrollPosition()
   const scrolled = scrollY > 60
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const sectionIds = useMemo(() => navLinks.map((l) => l.href.replace("#", "")), [])
+  const links = useMemo(
+    () => [
+      { href: "#demo", label: dict.demo },
+      { href: "#what", label: dict.features },
+      { href: "#how", label: dict.howItWorks },
+      { href: "#where", label: dict.useCases },
+      { href: "#packages", label: dict.packages },
+    ],
+    [dict]
+  )
+
+  const sectionIds = useMemo(() => NAV_HREFS.map((h) => h.replace("#", "")), [])
   const activeId = useActiveSection(sectionIds)
 
   const closeMenu = useCallback(() => {
@@ -58,22 +79,22 @@ export function Navbar() {
           style={{ width: `${scrollProgress * 100}%` }}
         />
 
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[72px]">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
           <a href="#" className="flex items-center gap-3" onClick={(e) => scrollToSection(e, "#hero")}>
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
               width={240}
               height={32}
-              className="h-8 w-auto"
-              style={{ width: "auto", height: "64px" }}
+              className="h-8 sm:h-16 w-auto"
+              style={{ width: "auto" }}
               sizes="240px"
               priority
             />
           </a>
 
           <ul className="hidden md:flex items-center gap-6 list-none">
-            {navLinks.map((link) => {
+            {links.map((link) => {
               const isActive = activeId === link.href.replace("#", "")
               return (
                 <li key={link.href}>
@@ -99,7 +120,7 @@ export function Navbar() {
                 href="mailto:nova.blockchain.lab@novaims.unl.pt"
                 className="font-display text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-5 py-2 rounded-md transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
               >
-                Book a Demo
+                {dict.bookDemo}
               </a>
             </li>
           </ul>
@@ -138,7 +159,7 @@ export function Navbar() {
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        {navLinks.map((link) => (
+        {links.map((link) => (
           <a
             key={link.href}
             href={link.href}
@@ -152,7 +173,7 @@ export function Navbar() {
           href="mailto:nova.blockchain.lab@novaims.unl.pt"
           className="font-display text-3xl tracking-widest text-[#F0605D] transition-colors duration-300"
         >
-          Book a Demo
+          {dict.bookDemo}
         </a>
       </div>
     </>

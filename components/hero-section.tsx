@@ -3,9 +3,17 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-export function HeroSection() {
+interface HeroDict {
+  srTitle: string
+  tagline: string
+  taglineSuffix: string
+  bookDemo: string
+  seeItLive: string
+}
+
+export function HeroSection({ dict }: { dict: HeroDict }) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-[72px]" id="hero">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-[56px] sm:pt-[72px]" id="hero">
       {/* Animated gradient background */}
       <motion.div
         className="absolute inset-0"
@@ -37,7 +45,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-2 max-w-[1100px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
-        <h1 className="sr-only">Treasure Hunt | Interactive Event Engagement Game for Conferences</h1>
+        <h1 className="sr-only">{dict.srTitle}</h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,42 +56,41 @@ export function HeroSection() {
             alt="Treasure Hunt - Interactive Event Engagement Game"
             width={1000}
             height={385}
-            className="block max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-12 h-auto"
-            style={{ width: "auto", height: "auto" }}
+            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-12 h-auto"
+            style={{ height: "auto" }}
             sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 1000px"
             priority
           />
         </motion.div>
 
-<motion.p
-          className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-10 max-w-[640px]"
+        <motion.p
+          className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-10 max-w-[640px] text-center sm:text-left mx-auto sm:mx-0"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <strong className="font-semibold">Real rewards. Real engagement. Real results</strong> {"\u2014"} a gamified
-          experience built directly into your physical venue.
+          <strong className="font-semibold">{dict.tagline}</strong>{dict.taglineSuffix}
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row items-center sm:items-start gap-4"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <a
             href="mailto:nova.blockchain.lab@novaims.unl.pt"
-            className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-lg tracking-widest uppercase px-8 sm:px-10 py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97] text-center"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97] text-center"
           >
-            Book a Demo
+            {dict.bookDemo}
           </a>
           <a
             href="https://hunt.ethdenver.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#58A6FF] font-display text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 border-2 border-[rgba(88,166,255,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(88,166,255,0.08)] hover:border-[#58A6FF] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap text-base sm:text-lg"
+            className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
           >
-            {"See It Live at ETHDenver \u2192"}
+            {dict.seeItLive}
           </a>
         </motion.div>
       </div>

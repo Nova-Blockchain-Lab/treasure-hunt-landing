@@ -4,5 +4,6 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: '*', allow: '/' }],
     sitemap: 'https://www.treasurehunt.pt/sitemap.xml',
+    host: 'https://www.treasurehunt.pt',
   }
 }

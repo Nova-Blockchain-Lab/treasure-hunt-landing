@@ -1,8 +1,11 @@
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import { Bebas_Neue, Tomorrow, Roboto_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { JsonLd } from '@/components/json-ld'
 import './globals.css'
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.treasurehunt.pt'),
+}
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -25,78 +28,16 @@ const robotoMono = Roboto_Mono({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.treasurehunt.pt'),
-  title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
-  description:
-    'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-  keywords: [
-    'event engagement game',
-    'interactive event platform',
-    'gamified event experience',
-    'conference engagement tool',
-    'NFC event game',
-    'QR code scavenger hunt',
-    'event gamification',
-    'sponsor foot traffic',
-    'live leaderboard events',
-    'event analytics platform',
-  ],
-  authors: [{ name: 'NOVA Blockchain Lab', url: 'https://www.treasurehunt.pt' }],
-  creator: 'NOVA Blockchain Lab',
-  publisher: 'NOVA Blockchain Lab',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://www.treasurehunt.pt',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: '/',
-    siteName: 'Treasure Hunt',
-    title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
-    description:
-      'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
-    description:
-      'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-  },
-  icons: {
-    icon: '/treasure-hunt-logo.png',
-    apple: '/treasure-hunt-logo.png',
-  },
-}
-
-export const viewport: Viewport = {
-  themeColor: '#06080F',
-  width: 'device-width',
-  initialScale: 1,
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${tomorrow.variable} ${robotoMono.variable}`}>
+    <html className={`${bebasNeue.variable} ${tomorrow.variable} ${robotoMono.variable}`}>
       <body className="font-sans antialiased overflow-x-hidden">
         {children}
         <Analytics />
-        <JsonLd />
       </body>
     </html>
   )
