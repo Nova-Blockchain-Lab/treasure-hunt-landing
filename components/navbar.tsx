@@ -61,12 +61,12 @@ export function Navbar() {
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[72px]">
           <a href="#" className="flex items-center gap-3" onClick={(e) => scrollToSection(e, "#hero")}>
             <Image
-              src="/treasure-hunt-logo.png"
+              src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
-              width={140}
+              width={240}
               height={32}
               className="h-8 w-auto"
-              style={{ width: "auto", height: "32px" }}
+              style={{ width: "auto", height: "64px" }}
               priority
             />
           </a>

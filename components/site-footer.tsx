@@ -29,7 +29,7 @@ export function SiteFooter() {
             <Image
               src="/treasure-hunt-logo.png"
               alt="Treasure Hunt"
-              width={140}
+              width={240}
               height={36}
               className="h-8 w-auto mb-4"
             />
