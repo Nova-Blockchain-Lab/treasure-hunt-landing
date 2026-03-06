@@ -45,9 +45,9 @@ export function HeroSection() {
           <Image
             src="/treasure-hunt-logo.png"
             alt="Treasure Hunt"
-            width={520}
-            height={200}
-            className="block max-w-[220px] sm:max-w-[340px] md:max-w-[520px] mx-auto mb-12 h-auto"
+            width={700}
+            height={270}
+            className="block max-w-[300px] sm:max-w-[460px] md:max-w-[700px] mx-auto mb-12 h-auto"
             style={{ width: "auto", height: "auto" }}
             priority
           />
