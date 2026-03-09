@@ -116,6 +116,25 @@ const event = {
   },
   organizer: organization,
   url: 'https://hunt.ethdenver.com/',
+  image: [
+    `${BASE_URL}/ethdenver-home.png`,
+    `${BASE_URL}/ethdenver-leaderboard.png`,
+    `${BASE_URL}/ethdenver-map.png`,
+  ],
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: BASE_URL,
+  },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://hunt.ethdenver.com/',
+    validFrom: '2026-01-01',
+  },
 }
 
 const reviews = [
