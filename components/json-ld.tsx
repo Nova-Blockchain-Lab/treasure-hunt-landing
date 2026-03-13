@@ -2,6 +2,7 @@ const BASE_URL = 'https://www.treasurehunt.pt'
 
 const organization = {
   '@type': 'Organization',
+  '@id': `${BASE_URL}/#organization`,
   name: 'NOVA Blockchain Lab',
   url: 'https://novablockchainlab.novaims.unl.pt/',
   logo: `${BASE_URL}/NOVA_Blockchain_Lab-2.png`,
@@ -11,6 +12,8 @@ const organization = {
     BASE_URL,
     'https://hunt.ethdenver.com/',
     'https://novaims.unl.pt/pt/here-now/eventos/nova-ims-career-fair-future-maker-2026/',
+    'https://www.linkedin.com/company/nova-blockchain-lab',
+    'https://github.com/nova-blockchain-lab',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -22,6 +25,7 @@ const organization = {
 
 const softwareApplication = {
   '@type': 'SoftwareApplication',
+  '@id': `${BASE_URL}/#software`,
   name: 'Treasure Hunt',
   applicationCategory: 'EventApplication',
   operatingSystem: 'Web',
@@ -42,9 +46,9 @@ const softwareApplication = {
     {
       '@type': 'Offer',
       name: 'Pro',
-      description: 'The full experience \u2014 200\u20131,000 attendees',
-      priceCurrency: 'USD',
-      price: '0',
+      description: 'The full experience — 200–1,000 attendees',
+      priceCurrency: 'EUR',
+      price: '990',
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
     },
@@ -68,21 +72,31 @@ const softwareApplication = {
     'Hidden NFC challenges',
     'Dynamic difficulty scaling',
   ],
-  provider: organization,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '2',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  provider: { '@id': `${BASE_URL}/#organization` },
 }
 
 const webPage = {
   '@type': 'WebPage',
+  '@id': `${BASE_URL}/#webpage`,
   name: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
   url: BASE_URL,
   description:
     'Turn your event into an adventure attendees talk about. Interactive engagement game with QR & NFC checkpoints, live leaderboards, and real-time analytics.',
   isPartOf: {
     '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
     name: 'Treasure Hunt',
     url: BASE_URL,
+    publisher: { '@id': `${BASE_URL}/#organization` },
   },
-  provider: organization,
+  provider: { '@id': `${BASE_URL}/#organization` },
 }
 
 const breadcrumbList = {
@@ -105,7 +119,7 @@ const event = {
   startDate: '2026-02-18',
   endDate: '2026-02-21',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  eventStatus: 'https://schema.org/EventScheduled',
+  eventStatus: 'https://schema.org/EventFinished',
   location: {
     '@type': 'Place',
     name: 'National Western Complex',
@@ -116,7 +130,7 @@ const event = {
       addressCountry: 'US',
     },
   },
-  organizer: organization,
+  organizer: { '@id': `${BASE_URL}/#organization` },
   url: 'https://hunt.ethdenver.com/',
   image: [
     `${BASE_URL}/ethdenver-home.png`,
@@ -189,8 +203,9 @@ const reviews = [
       '@type': 'Rating',
       ratingValue: '5',
       bestRating: '5',
+      worstRating: '1',
     },
-    itemReviewed: softwareApplication,
+    itemReviewed: { '@id': `${BASE_URL}/#software` },
   },
   {
     '@type': 'Review',
@@ -204,29 +219,107 @@ const reviews = [
       '@type': 'Rating',
       ratingValue: '5',
       bestRating: '5',
+      worstRating: '1',
     },
-    itemReviewed: softwareApplication,
-  },
-  {
-    '@type': 'Review',
-    reviewBody:
-      'No app download, no complicated setup. Players were scanning checkpoints within 30 seconds of signing in. The merch store was a huge hit.',
-    author: {
-      '@type': 'Organization',
-      name: 'NOVA Blockchain Lab',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    itemReviewed: softwareApplication,
+    itemReviewed: { '@id': `${BASE_URL}/#software` },
   },
 ]
 
+const faqPage = {
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to set up?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'As fast as 48 hours. We handle the tech — you tell us where the checkpoints go and what rewards to offer.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do attendees need to download an app?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. It runs entirely in the phone browser. One tap to sign in, playing in under 30 seconds.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if our venue doesn\'t have NFC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'QR codes work everywhere. You can mix NFC and QR across your venue, or go QR-only.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can we customize the branding?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Pro and Enterprise packages include custom checkpoint design, reward names, and white-label branding.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What data do organizers get?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A real-time dashboard with checkpoint visits, engagement heatmaps, leaderboard standings, and a full post-event analytics report to share with sponsors.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a minimum event size?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Starter works from 50 attendees. For 1,000+, Enterprise includes dedicated support and custom features.',
+      },
+    },
+  ],
+}
+
+const howTo = {
+  '@type': 'HowTo',
+  name: 'How Treasure Hunt Works at Your Event',
+  description: 'Five steps to turn your venue into an interactive game — zero friction for attendees.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Open and Play Instantly',
+      text: 'Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\'re playing in 30 seconds.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Explore the Venue',
+      text: 'Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Scan to Earn',
+      text: 'One tap on an NFC tag or scan of a QR code. Instant reward, automatically tracked. Every interaction becomes a data point for you.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Compete and Collaborate',
+      text: 'Live leaderboards fuel friendly competition. Social challenges and team missions keep energy high throughout the event.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Spend Real Rewards',
+      text: 'Points unlock real merchandise — hats, socks, exclusive items. Attendees leave with something tangible from your event.',
+    },
+  ],
+}
+
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, ...reviews, faqPage, howTo],
 }
 
 export function JsonLd() {

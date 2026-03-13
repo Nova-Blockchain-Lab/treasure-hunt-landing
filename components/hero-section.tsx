@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { trackEvent } from "@/lib/analytics"
 
 interface HeroDict {
   srTitle: string
@@ -14,7 +15,25 @@ interface HeroDict {
   seeItLive: string
 }
 
-export function HeroSection({ dict }: { dict: HeroDict }) {
+interface HeroProps {
+  dict: HeroDict
+  onOpenContact?: () => void
+  onPrimaryAction?: () => void
+  onSecondaryAction?: () => void
+  secondaryIsButton?: boolean
+  trustBadgeClassName?: string
+}
+
+export function HeroSection({
+  dict,
+  onOpenContact,
+  onPrimaryAction,
+  onSecondaryAction,
+  secondaryIsButton,
+  trustBadgeClassName,
+}: HeroProps) {
+  const handlePrimary = onPrimaryAction || onOpenContact
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-[56px] sm:pt-[72px]" id="hero">
       {/* Animated gradient background */}
@@ -58,12 +77,26 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
             alt="Treasure Hunt - Interactive Event Engagement Game"
             width={1000}
             height={385}
-            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-14 h-auto"
+            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-8 h-auto"
             style={{ height: "auto" }}
             sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 1000px"
             priority
           />
         </motion.div>
+
+        {/* Visible headline */}
+        <motion.h1
+          className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-center sm:text-left text-balance"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          {dict.headline}
+          <br />
+          <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
+            {dict.headlineHighlight}
+          </span>
+        </motion.h1>
 
         <motion.p
           className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-4 max-w-[640px] text-center sm:text-left mx-auto sm:mx-0"
@@ -74,8 +107,9 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
           <strong className="font-semibold">{dict.tagline}</strong>{dict.taglineSuffix}
         </motion.p>
 
+        {/* Trust badge */}
         <motion.p
-          className="font-mono text-sm tracking-wide mb-10 text-center sm:text-left text-[#8B949E]"
+          className={`font-mono text-sm tracking-wide mb-10 text-center sm:text-left ${trustBadgeClassName || "text-[#484F58]"}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -89,20 +123,30 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a
-            href="mailto:nova.blockchain.lab@novaims.unl.pt"
+          <button
+            onClick={handlePrimary}
             className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97] text-center"
           >
             {dict.bookDemo}
-          </a>
-          <a
-            href="https://hunt.ethdenver.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
-          >
-            {dict.seeItLive}
-          </a>
+          </button>
+          {secondaryIsButton ? (
+            <button
+              onClick={onSecondaryAction}
+              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
+            >
+              {dict.seeItLive}
+            </button>
+          ) : (
+            <a
+              href="https://hunt.ethdenver.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent({ name: "external_link_clicked", params: { url: "https://hunt.ethdenver.com/", link_text: dict.seeItLive, location: "hero" } })}
+              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
+            >
+              {dict.seeItLive}
+            </a>
+          )}
         </motion.div>
       </div>
 

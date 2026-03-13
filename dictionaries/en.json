@@ -12,10 +12,10 @@
     "headline": "Turn Your Venue",
     "headlineHighlight": "Into a Game",
     "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
-    "taglineSuffix": " \u2014 straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed at ETHDenver, Future Maker & Confluence \u2014 3,500+ treasure finds \u00b7 174 checkpoints \u00b7 3 events",
+    "taglineSuffix": " — straight from the phone browser, no app download required.",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & Confluence — 3,500+ treasure finds · 174 checkpoints · 3 events",
     "bookDemo": "Plan Your Event",
-    "seeItLive": "See Our Results \u2192"
+    "seeItLive": "See Our Results →"
   },
   "marquee": [
     "No App Download",
@@ -33,14 +33,14 @@
     "heading": "See What",
     "headingHighlight": "Participants",
     "headingSuffix": "Experienced Across 3 Events",
-    "seeItLive": "See It Live \u2192",
-    "seeReport": "See Report \u2192",
-    "seeFmReport": "See Report \u2192",
+    "seeItLive": "See It Live →",
+    "seeReport": "See Report →",
+    "seeFmReport": "See Report →",
     "phones": [
-      "Home base: scan, explore, compete",
-      "Interactive venue map with live checkpoint tracking",
-      "Live leaderboard keeps players competing all day",
-      "Built-in merch store where rewards become real items"
+      "Your attendees' home base — scan, explore, compete",
+      "See exactly where foot traffic flows with the live venue map",
+      "Leaderboards keep attendees moving and competing all day",
+      "Points become real merch — the reward attendees actually want"
     ],
     "stats": [
       { "value": "3,500+", "label": "Treasure Finds" },
@@ -66,25 +66,33 @@
   },
   "features": {
     "eyebrow": "01 / Features",
-    "heading": "What Treasure Hunt",
-    "headingHighlight": "Does for Your Event",
-    "description": "Treasure Hunt turns any venue into an interactive game. Attendees explore your space, scan checkpoints, earn rewards, and compete on live leaderboards \u2014 all from their phone browser, no app download required.",
+    "heading": "Every Checkpoint",
+    "headingHighlight": "Drives Measurable Results",
+    "description": "Treasure Hunt turns your venue into an interactive game. Attendees explore, scan, earn, and compete — all from the phone browser, no app required.",
     "items": [
       {
         "title": "Guide Foot Traffic",
-        "description": "You decide where checkpoints go. Every checkpoint is a reason to walk across the venue \u2014 driving traffic to sponsors, booths, and underexplored areas."
+        "description": "Place checkpoints at sponsor booths, undervisited areas, or anywhere you want attendees to go. Each one is a reason to walk across the venue."
       },
       {
         "title": "Reward Real Participation",
-        "description": "Attendees earn rewards for engaging \u2014 not just showing up. Points they can spend in the built-in merch store on hats, socks, and exclusive items."
+        "description": "Attendees earn points for engaging — not just showing up. Points convert to real merch in the built-in store: hats, socks, and exclusive items."
       },
       {
-        "title": "Plug Into Any Venue",
-        "description": "Drop NFC tags or QR codes anywhere. Works on any phone browser with a simple sign-in \u2014 attendees are playing in under 30 seconds, no app download required."
+        "title": "Zero Friction Setup",
+        "description": "Drop NFC tags or QR codes anywhere. Attendees open the URL, tap to sign in, and start playing in 30 seconds. No app download."
+      },
+      {
+        "title": "The Game Grows With Your Crowd",
+        "description": "Attendees and sponsors can hide their own NFC checkpoints. The more people play, the bigger the game gets — engagement compounds on itself."
+      },
+      {
+        "title": "Amplify Your Social Reach",
+        "description": "Reward attendees for following your social channels and sharing their progress. Turn in-person engagement into online visibility."
       },
       {
         "title": "Track Everything in Real Time",
-        "description": "See which checkpoints are visited, which areas are underexplored, and who your most engaged attendees are. Live analytics for organizers."
+        "description": "See which areas are hot, which are cold, and who your most engaged attendees are. Give sponsors proof their booth got traffic."
       }
     ]
   },
@@ -94,21 +102,21 @@
     "headingHighlight": "Zero Friction.",
     "callout": "You place the checkpoints. You set the rewards. We handle everything else.",
     "infraEyebrow": "What Powers It All",
-    "infraHeading": "Why It Feels",
-    "infraHighlight": "Like Magic",
-    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity \u2014 they just play.",
+    "infraHeading": "Why It",
+    "infraHighlight": "Just Works",
+    "infraDescription": "Behind every scan and reward is infrastructure built for speed and transparency. Your attendees never see the complexity — they just play.",
     "steps": [
-      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in 30 seconds." },
+      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They're playing in 30 seconds." },
       { "title": "Explore the Venue", "description": "Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space." },
       { "title": "Scan to Earn", "description": "One tap on an NFC tag or scan of a QR code. Instant reward, automatically tracked. Every interaction becomes a data point for you." },
       { "title": "Compete and Collaborate", "description": "Live leaderboards fuel friendly competition. Social challenges and team missions keep energy high throughout the event." },
-      { "title": "Spend Real Rewards", "description": "Points unlock real merchandise \u2014 hats, socks, exclusive items. Attendees leave with something tangible from your event." }
+      { "title": "Spend Real Rewards", "description": "Points unlock real merchandise — hats, socks, exclusive items. Attendees leave with something tangible from your event." }
     ],
     "infraItems": [
-      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 network built for speed. Every action \u2014 scans, rewards, purchases \u2014 is recorded transparently and verifiably." },
+      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 network built for speed. Every action — scans, rewards, purchases — is recorded transparently and verifiably." },
       { "title": "Zero Cost to Participants", "description": "A built-in paymaster covers all transaction fees. Attendees collect rewards, spend at the merch store, and climb leaderboards without ever paying a cent." },
-      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app \u2014 we handle the smart account deployment and key management behind the scenes." },
-      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase \u2014 recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
+      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app — we handle the smart account deployment and key management behind the scenes." },
+      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase — recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
     ]
   },
   "useCases": {
@@ -119,15 +127,15 @@
     "items": [
       { "title": "Conferences & Summits", "description": "Turn passive attendees into active explorers. Drive traffic to sponsor booths, fill dead zones between sessions, and give organizers hard data on what worked." },
       { "title": "Corporate Events", "description": "Gamify product launches, team offsites, and internal summits. Give every attendee a reason to explore the space and interact with every activation." },
-      { "title": "Universities & Campuses", "description": "Orientation weeks, open days, and campus tours that students actually enjoy. They explore, compete, and discover spaces they\u2019d skip otherwise." },
-      { "title": "Festivals & Expos", "description": "Layer exploration across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences \u2014 and track it all in real time." },
+      { "title": "Universities & Campuses", "description": "Orientation weeks, open days, and campus tours that students actually enjoy. They explore, compete, and discover spaces they'd skip otherwise." },
+      { "title": "Festivals & Expos", "description": "Layer exploration across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences — and track it all in real time." },
       { "title": "Brand Activations", "description": "Connect physical marketing to measurable results. Know exactly which touchpoints drove interaction, how long people stayed, and what they engaged with." },
       { "title": "Hackathons", "description": "Keep builders moving between coding sessions. Reward participation at workshops, sponsor booths, and social areas with merch they actually want." }
     ]
   },
   "testimonials": {
     "eyebrow": "04 / Social Proof",
-    "heading": "Don\u2019t Take Our Word",
+    "heading": "Don't Take Our Word",
     "headingHighlight": "for It",
     "items": [
       {
@@ -153,10 +161,13 @@
     "headingHighlight": "Built for Any Event Size",
     "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "" },
-      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100\u20131,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular" },
+      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Start Free", "badge": "" },
+      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100–1,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular" },
       { "name": "Enterprise", "subtitle": "Dedicated team. White-label. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "" }
     ],
+    "trustSignal": "Proven at ETHDenver 2026 — 207 players, 59 checkpoints, 462K+ rewards",
+    "guarantee": "Full refund if requested before your event starts.",
+    "perAttendee": "As low as €2.49/attendee",
     "categories": [
       {
         "title": "Checkpoints",
@@ -196,21 +207,51 @@
   "cta": {
     "heading": "Ready to Turn Foot Traffic",
     "headingHighlight": "Into Measurable Results?",
-    "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
-    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence \u2014 3,500+ treasure finds, 174 checkpoints, 3 events",
+    "description": "Treasure Hunt deploys in days. Tell us about your event and we'll show you what's possible.",
+    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence — 3,500+ treasure finds, 174 checkpoints, 3 events",
     "bookDemo": "Plan Your Event",
-    "seeItLive": "See Our Results \u2192"
+    "seeItLive": "See Our Results →"
   },
   "stickyCta": {
     "text": "Turn your next event into a game attendees talk about.",
     "bookDemo": "Plan Your Event"
   },
   "footer": {
-    "description": "Interactive event engagement platform that drives foot traffic, rewards participation, and gives organizers real-time analytics.",
+    "description": "The event engagement platform that drives foot traffic, rewards real participation, and gives organizers the data to prove it.",
     "navigation": "Navigation",
     "contact": "Contact",
     "contactLabel": "Contact",
     "copyright": "Nova Blockchain Lab. All rights reserved."
+  },
+  "faq": {
+    "eyebrow": "06 / FAQ",
+    "heading": "Common",
+    "headingHighlight": "Questions",
+    "items": [
+      { "question": "How long does it take to set up?", "answer": "As fast as 48 hours. We handle the tech — you tell us where the checkpoints go and what rewards to offer." },
+      { "question": "Do attendees need to download an app?", "answer": "No. It runs entirely in the phone browser. One tap to sign in, playing in under 30 seconds." },
+      { "question": "What if our venue doesn't have NFC?", "answer": "QR codes work everywhere. You can mix NFC and QR across your venue, or go QR-only." },
+      { "question": "Can we customize the branding?", "answer": "Yes. Pro and Enterprise packages include custom checkpoint design, reward names, and white-label branding." },
+      { "question": "What data do organizers get?", "answer": "A real-time dashboard with checkpoint visits, engagement heatmaps, leaderboard standings, and a full post-event analytics report to share with sponsors." },
+      { "question": "Is there a minimum event size?", "answer": "Starter is free for events up to 100 attendees. Pro covers up to 1,000, and Enterprise handles everything above that with dedicated support." },
+      { "question": "How does pricing work?", "answer": "Treasure Hunt is priced per event, based on your expected attendee count. Starter is free for small events. Pro starts at €990/event for up to 300 attendees, scaling to €1,990 for up to 1,000. Enterprise starts at €4,990/event for 1,000+ attendees." },
+      { "question": "Is there a money-back guarantee?", "answer": "Yes. If you're not satisfied with the platform before your event starts, we'll refund your payment in full." },
+      { "question": "Do you offer discounts for multiple events?", "answer": "Yes. Organizations running 3 or more events per year receive a 20% discount. Contact us for multi-event pricing." },
+      { "question": "What if my event grows beyond my tier?", "answer": "No problem. You can upgrade your plan at any time before or during the event. You only pay the difference." }
+    ]
+  },
+  "contactForm": {
+    "title": "Plan Your Event",
+    "subtitle": "Tell us about your event and we'll get back to you within 24 hours.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "eventSize": "Expected Attendees",
+    "eventSizeOptions": ["50\u2013200", "200\u20131,000", "1,000\u20135,000", "5,000+"],
+    "message": "Tell us about your event",
+    "submit": "Send Request",
+    "sending": "Sending...",
+    "success": "Thanks! We'll be in touch within 24 hours.",
+    "error": "Something went wrong. Please email us directly."
   },
   "report": {
     "title": "TREASURE HUNT RECAP",

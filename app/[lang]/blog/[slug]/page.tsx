@@ -27,6 +27,7 @@ export async function generateMetadata({
       languages: {
         en: `https://www.treasurehunt.pt/blog/${slug}`,
         pt: `https://www.treasurehunt.pt/pt/blog/${slug}`,
+        'x-default': `https://www.treasurehunt.pt/blog/${slug}`,
       },
     },
     openGraph: {
@@ -44,9 +45,12 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ lang: string; slug: string }>
 }) {
-  const { slug } = await params
+  const { slug, lang } = await params
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) notFound()
+
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  const relatedPosts = blogPosts.filter((p) => p.slug !== slug)
 
   return (
     <div className="min-h-screen bg-[#06080F] text-white">
@@ -71,25 +75,79 @@ export default async function BlogPostPage({
           <BlogContent content={post.content} />
         </div>
 
-        {/* JSON-LD */}
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <aside className="mt-16 pt-10 border-t border-[#21262D]">
+            <h2 className="font-display text-xl text-[#E6EDF3] mb-6">Related Posts</h2>
+            <div className="space-y-6">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`${prefix}/blog/${related.slug}`}
+                  className="block group"
+                >
+                  <time className="text-xs font-mono text-[#484F58] tracking-wide">
+                    {related.date}
+                  </time>
+                  <h3 className="font-display text-lg text-[#E6EDF3] group-hover:text-[#F0605D] transition-colors mt-1">
+                    {related.title}
+                  </h3>
+                  <p className="text-sm text-[#8B949E] mt-1 line-clamp-2">
+                    {related.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        {/* JSON-LD: BlogPosting + BreadcrumbList */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
-              headline: post.title,
-              description: post.description,
-              datePublished: post.date,
-              author: {
-                '@type': 'Organization',
-                name: 'NOVA Blockchain Lab',
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'NOVA Blockchain Lab',
-                url: 'https://www.treasurehunt.pt',
-              },
+              '@graph': [
+                {
+                  '@type': 'BlogPosting',
+                  headline: post.title,
+                  description: post.description,
+                  datePublished: post.date,
+                  author: {
+                    '@type': 'Organization',
+                    name: 'NOVA Blockchain Lab',
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'NOVA Blockchain Lab',
+                    url: 'https://www.treasurehunt.pt',
+                  },
+                  mainEntityOfPage: `https://www.treasurehunt.pt/blog/${slug}`,
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  itemListElement: [
+                    {
+                      '@type': 'ListItem',
+                      position: 1,
+                      name: 'Home',
+                      item: 'https://www.treasurehunt.pt',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 2,
+                      name: 'Blog',
+                      item: 'https://www.treasurehunt.pt/blog',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 3,
+                      name: post.title,
+                      item: `https://www.treasurehunt.pt/blog/${slug}`,
+                    },
+                  ],
+                },
+              ],
             }),
           }}
         />
