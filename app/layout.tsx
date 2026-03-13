@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Tomorrow, Roboto_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ConsentProvider } from '@/lib/consent-context'
+import { GA4Script } from '@/components/ga4-script'
+import { CookieConsentBanner } from '@/components/cookie-consent-banner'
+import { PostHogProvider } from '@/components/posthog-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -36,8 +40,14 @@ export default function RootLayout({
   return (
     <html className={`${bebasNeue.variable} ${tomorrow.variable} ${robotoMono.variable}`}>
       <body className="font-sans antialiased overflow-x-hidden">
-        {children}
-        <Analytics />
+        <PostHogProvider>
+          <ConsentProvider>
+            {children}
+            <GA4Script />
+            <CookieConsentBanner />
+          </ConsentProvider>
+          <Analytics />
+        </PostHogProvider>
       </body>
     </html>
   )

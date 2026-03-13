@@ -1,11 +1,11 @@
 "use client"
 
-import { MapPin, Sparkles, Smartphone, TrendingUp } from "lucide-react"
+import { MapPin, Sparkles, Smartphone, Users, Share2, TrendingUp } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { SpotlightCard } from "./spotlight-card"
 import { RevealOnScroll } from "./reveal-on-scroll"
 
-const icons: LucideIcon[] = [MapPin, Sparkles, Smartphone, TrendingUp]
+const icons: LucideIcon[] = [MapPin, Sparkles, Smartphone, Users, Share2, TrendingUp]
 
 interface FeaturesDict {
   eyebrow: string

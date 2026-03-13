@@ -1,8 +1,11 @@
 "use client"
 
-import { Check, X, ArrowRight } from "lucide-react"
+import { useEffect } from "react"
+import { Check, X, ArrowRight, Shield, BadgeCheck } from "lucide-react"
 import { RevealOnScroll } from "./reveal-on-scroll"
 import { SpotlightCard } from "./spotlight-card"
+import { trackEvent } from "@/lib/analytics"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 // Feature values matrix: [Starter, Pro, Enterprise]
 const featureValues: Record<string, (string | boolean)[][]> = {
@@ -18,21 +21,21 @@ const featureValues: Record<string, (string | boolean)[][]> = {
     [false, true, true],
     [false, true, true],
     [false, true, true],
-    [true, true, true],
-    [true, true, true],
+    [false, true, true],
+    [false, true, true],
   ],
-  Support: [
+  "Support & Scale": [
+    [false, true, true],
     [false, true, true],
     [false, false, true],
-    [false, true, true],
+    [false, false, true],
+    [false, false, true],
+    [false, false, true],
+    [false, false, true],
   ],
 }
 
-const mailtos = [
-  "mailto:nova.blockchain.lab@novaims.unl.pt?subject=Starter%20Package%20Inquiry",
-  "mailto:nova.blockchain.lab@novaims.unl.pt?subject=Pro%20Package%20Inquiry",
-  "mailto:nova.blockchain.lab@novaims.unl.pt?subject=Enterprise%20Package%20Inquiry",
-]
+const priceHints = ["Free", "From €990/event", "From €4,990/event"]
 
 interface PackagesDict {
   eyebrow: string
@@ -41,9 +44,12 @@ interface PackagesDict {
   description: string
   tiers: { name: string; subtitle: string; bestFor: string; cta: string; badge: string }[]
   categories: { title: string; features: string[] }[]
+  trustSignal?: string
+  guarantee?: string
+  perAttendee?: string
 }
 
-function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDict }) {
+function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; dict: PackagesDict; onOpenContact?: (location: string, buttonText: string, packageTier?: string) => void }) {
   const t = dict.tiers[tierIndex]
   const featured = tierIndex === 1
 
@@ -66,6 +72,10 @@ function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDic
             </span>
           )}
         </div>
+        <p className="font-display text-xl text-[#E6EDF3] mb-1">{priceHints[tierIndex]}</p>
+        {featured && dict.perAttendee && (
+          <p className="text-[0.7rem] text-[#3FB950] font-mono tracking-wide mb-1">{dict.perAttendee}</p>
+        )}
         <p className="text-[0.85rem] text-[#8B949E] mb-1">{t.subtitle}</p>
         <p className="text-[0.75rem] text-[#484F58] font-mono tracking-wide">{t.bestFor}</p>
       </div>
@@ -76,7 +86,7 @@ function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDic
       {/* Feature rows */}
       <div className="px-5 sm:px-7 flex-1">
         {dict.categories.map((cat, ci) => {
-          const catKey = ci === 0 ? "Checkpoints" : ci === 1 ? "Engagement" : "Support"
+          const catKey = ci === 0 ? "Checkpoints" : ci === 1 ? "Engagement" : "Support & Scale"
           const values = featureValues[catKey]
           return (
             <div key={ci} className={ci > 0 ? "mt-5" : ""}>
@@ -117,9 +127,9 @@ function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDic
 
       {/* CTA */}
       <div className="p-5 sm:p-7 pt-6 mt-auto">
-        <a
-          href={mailtos[tierIndex]}
-          className={`flex items-center justify-center gap-2 font-display text-[0.9rem] tracking-widest uppercase py-3.5 rounded-lg transition-all duration-300 cursor-pointer ${
+        <button
+          onClick={() => onOpenContact?.("packages", t.cta, t.name)}
+          className={`w-full flex items-center justify-center gap-2 font-display text-[0.9rem] tracking-widest uppercase py-3.5 rounded-lg transition-all duration-300 cursor-pointer ${
             featured
               ? "bg-[#F0605D] text-white hover:shadow-[0_0_24px_rgba(240,96,93,0.35)]"
               : "border border-[rgba(240,246,252,0.1)] text-[#E6EDF3] hover:border-[rgba(240,96,93,0.3)] hover:text-[#F0605D]"
@@ -127,19 +137,28 @@ function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDic
         >
           {t.cta}
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </button>
       </div>
     </SpotlightCard>
   )
 }
 
-export function PackagesSection({ dict }: { dict: PackagesDict }) {
+export function PackagesSection({ dict, onOpenContact }: { dict: PackagesDict; onOpenContact?: (location: string, buttonText: string, packageTier?: string) => void }) {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.2, once: true })
+
+  useEffect(() => {
+    if (!isVisible) return
+    for (let i = 0; i < dict.tiers.length; i++) {
+      trackEvent({ name: "package_viewed", params: { tier_name: dict.tiers[i].name, price: priceHints[i] } })
+    }
+  }, [isVisible, dict.tiers])
+
   return (
-    <section className="py-24 md:py-32 relative bg-[#06080F]" id="packages">
+    <section ref={ref} className="py-24 md:py-32 relative bg-[#06080F]" id="packages">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
-          <div className="text-center mb-12 md:mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center justify-center gap-3">
+          <div className="mb-12 md:mb-16">
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center gap-3">
               <span className="w-8 h-px bg-[#58A6FF]" />
               {dict.eyebrow}
             </div>
@@ -150,7 +169,7 @@ export function PackagesSection({ dict }: { dict: PackagesDict }) {
                 {dict.headingHighlight}
               </span>
             </h2>
-            <p className="text-[#8B949E] text-lg max-w-[520px] mx-auto">
+            <p className="text-[#8B949E] text-lg max-w-[520px]">
               {dict.description}
             </p>
           </div>
@@ -159,10 +178,30 @@ export function PackagesSection({ dict }: { dict: PackagesDict }) {
         <RevealOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {dict.tiers.map((_, i) => (
-              <PackageCard key={i} tierIndex={i} dict={dict} />
+              <PackageCard key={i} tierIndex={i} dict={dict} onOpenContact={onOpenContact} />
             ))}
           </div>
         </RevealOnScroll>
+
+        {/* Trust signals & guarantee */}
+        {(dict.trustSignal || dict.guarantee) && (
+          <RevealOnScroll>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
+              {dict.trustSignal && (
+                <div className="flex items-center gap-2 text-[0.8rem] text-[#8B949E]">
+                  <BadgeCheck className="w-4 h-4 text-[#58A6FF] shrink-0" />
+                  {dict.trustSignal}
+                </div>
+              )}
+              {dict.guarantee && (
+                <div className="flex items-center gap-2 text-[0.8rem] text-[#8B949E]">
+                  <Shield className="w-4 h-4 text-[#3FB950] shrink-0" />
+                  {dict.guarantee}
+                </div>
+              )}
+            </div>
+          </RevealOnScroll>
+        )}
       </div>
     </section>
   )

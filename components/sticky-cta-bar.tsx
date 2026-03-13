@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { X } from "lucide-react"
+import { trackEvent } from "@/lib/analytics"
 
 const DISMISS_KEY = "sticky-cta-dismissed"
 const DISMISS_DURATION = 24 * 60 * 60 * 1000 // 24h
@@ -12,9 +13,10 @@ interface StickyCTADict {
   bookDemo: string
 }
 
-export function StickyCTABar({ dict }: { dict: StickyCTADict }) {
+export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onOpenContact?: () => void }) {
   const { scrollY } = useScrollPosition()
   const [dismissed, setDismissed] = useState(true) // start hidden to avoid flash
+  const hasTrackedShow = useRef(false)
 
   useEffect(() => {
     const stored = localStorage.getItem(DISMISS_KEY)
@@ -28,7 +30,15 @@ export function StickyCTABar({ dict }: { dict: StickyCTADict }) {
   const heroOutOfView = scrollY > 600
   const visible = heroOutOfView && !dismissed
 
+  useEffect(() => {
+    if (visible && !hasTrackedShow.current) {
+      hasTrackedShow.current = true
+      trackEvent({ name: "sticky_bar_shown", params: {} })
+    }
+  }, [visible])
+
   const dismiss = () => {
+    trackEvent({ name: "sticky_bar_dismissed", params: {} })
     setDismissed(true)
     localStorage.setItem(DISMISS_KEY, String(Date.now()))
   }
@@ -46,12 +56,12 @@ export function StickyCTABar({ dict }: { dict: StickyCTADict }) {
         </span>
 
         <div className="flex items-center gap-3 w-full md:w-auto">
-          <a
-            href="mailto:nova.blockchain.lab@novaims.unl.pt"
-            className="flex-1 md:flex-none inline-flex items-center justify-center bg-[#F0605D] text-white font-display text-sm tracking-widest uppercase px-6 py-2.5 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)]"
+          <button
+            onClick={onOpenContact}
+            className="flex-1 md:flex-none inline-flex items-center justify-center bg-[#F0605D] text-white font-display text-sm tracking-widest uppercase px-6 py-2.5 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)]"
           >
             {dict.bookDemo}
-          </a>
+          </button>
           <button
             onClick={dismiss}
             className="p-2 text-[#484F58] hover:text-[#8B949E] transition-colors duration-200"

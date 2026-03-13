@@ -1,0 +1,8 @@
+# Treasure Hunt Landing Page
+
+## Marketing Skills
+When marketing-related tasks are requested (CRO, copywriting, SEO, A/B testing, analytics, etc.), load and follow the relevant skill instructions from:
+
+`c:\Users\Franc\Marketing\marketingskills\skills\`
+
+Available skills: ab-test-setup, ad-creative, ai-seo, analytics-tracking, churn-prevention, cold-email, competitor-alternatives, content-strategy, copy-editing, copywriting, email-sequence, form-cro, free-tool-strategy, launch-strategy, marketing-ideas, marketing-psychology, onboarding-cro, page-cro, paid-ads, paywall-upgrade-cro, popup-cro, pricing-strategy, product-marketing-context, programmatic-seo, referral-program, revops, sales-enablement, schema-markup, seo-audit, signup-flow-cro, site-architecture, social-content

@@ -16,7 +16,7 @@ interface NavDict {
   bookDemo: string
 }
 
-export function Navbar({ dict }: { dict: NavDict }) {
+export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?: () => void }) {
   const { scrollY, scrollProgress } = useScrollPosition()
   const scrolled = scrollY > 60
   const [menuOpen, setMenuOpen] = useState(false)
@@ -116,12 +116,12 @@ export function Navbar({ dict }: { dict: NavDict }) {
               )
             })}
             <li>
-              <a
-                href="mailto:nova.blockchain.lab@novaims.unl.pt"
-                className="font-display text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-5 py-2 rounded-md transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
+              <button
+                onClick={onOpenContact}
+                className="font-display text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-5 py-2 rounded-md cursor-pointer transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
               >
                 {dict.bookDemo}
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -169,12 +169,12 @@ export function Navbar({ dict }: { dict: NavDict }) {
             {link.label}
           </a>
         ))}
-        <a
-          href="mailto:nova.blockchain.lab@novaims.unl.pt"
-          className="font-display text-3xl tracking-widest text-[#F0605D] transition-colors duration-300"
+        <button
+          onClick={() => { closeMenu(); onOpenContact?.() }}
+          className="font-display text-3xl tracking-widest text-[#F0605D] transition-colors duration-300 cursor-pointer bg-transparent border-none"
         >
           {dict.bookDemo}
-        </a>
+        </button>
       </div>
     </>
   )
