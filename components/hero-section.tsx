@@ -58,7 +58,7 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
             alt="Treasure Hunt - Interactive Event Engagement Game"
             width={1000}
             height={385}
-            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-8 h-auto"
+            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-14 h-auto"
             style={{ height: "auto" }}
             sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 1000px"
             priority
