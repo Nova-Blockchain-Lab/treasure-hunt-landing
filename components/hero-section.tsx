@@ -65,19 +65,6 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
           />
         </motion.div>
 
-        <motion.h1
-          className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-center sm:text-left text-balance"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-        >
-          {dict.headline}
-          <br />
-          <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-            {dict.headlineHighlight}
-          </span>
-        </motion.h1>
-
         <motion.p
           className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-4 max-w-[640px] text-center sm:text-left mx-auto sm:mx-0"
           initial={{ opacity: 0, y: 24 }}
