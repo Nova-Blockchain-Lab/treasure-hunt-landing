@@ -18,13 +18,17 @@ const featureValues: Record<string, (string | boolean)[][]> = {
     [false, true, true],
     [false, true, true],
     [false, true, true],
-    [true, true, true],
-    [true, true, true],
+    [false, true, true],
+    [false, true, true],
   ],
-  Support: [
+  "Support & Scale": [
+    [false, true, true],
     [false, true, true],
     [false, false, true],
-    [false, true, true],
+    [false, false, true],
+    [false, false, true],
+    [false, false, true],
+    [false, false, true],
   ],
 }
 
@@ -76,7 +80,7 @@ function PackageCard({ tierIndex, dict }: { tierIndex: number; dict: PackagesDic
       {/* Feature rows */}
       <div className="px-5 sm:px-7 flex-1">
         {dict.categories.map((cat, ci) => {
-          const catKey = ci === 0 ? "Checkpoints" : ci === 1 ? "Engagement" : "Support"
+          const catKey = ci === 0 ? "Checkpoints" : ci === 1 ? "Engagement" : "Support & Scale"
           const values = featureValues[catKey]
           return (
             <div key={ci} className={ci > 0 ? "mt-5" : ""}>

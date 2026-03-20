@@ -5,8 +5,11 @@ import { motion } from "framer-motion"
 
 interface HeroDict {
   srTitle: string
+  headline: string
+  headlineHighlight: string
   tagline: string
   taglineSuffix: string
+  trustBadge: string
   bookDemo: string
   seeItLive: string
 }
@@ -45,7 +48,6 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
 
       {/* Content */}
       <div className="relative z-2 max-w-[1100px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
-        <h1 className="sr-only">{dict.srTitle}</h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,20 +58,42 @@ export function HeroSection({ dict }: { dict: HeroDict }) {
             alt="Treasure Hunt - Interactive Event Engagement Game"
             width={1000}
             height={385}
-            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-12 h-auto"
+            className="block w-full max-w-[420px] sm:max-w-[640px] md:max-w-[1000px] mx-auto mb-8 h-auto"
             style={{ height: "auto" }}
             sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 1000px"
             priority
           />
         </motion.div>
 
-        <motion.p
-          className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-10 max-w-[640px] text-center sm:text-left mx-auto sm:mx-0"
+        <motion.h1
+          className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-center sm:text-left text-balance"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          {dict.headline}
+          <br />
+          <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
+            {dict.headlineHighlight}
+          </span>
+        </motion.h1>
+
+        <motion.p
+          className="text-[clamp(1rem,2vw,1.25rem)] font-normal text-[#E6EDF3] mb-4 max-w-[640px] text-center sm:text-left mx-auto sm:mx-0"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
           <strong className="font-semibold">{dict.tagline}</strong>{dict.taglineSuffix}
+        </motion.p>
+
+        <motion.p
+          className="font-mono text-sm tracking-wide mb-10 text-center sm:text-left text-[#8B949E]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
+          {dict.trustBadge}
         </motion.p>
 
         <motion.div

@@ -8,6 +8,13 @@ import { TextShimmer } from "./text-shimmer"
 import { NumberTicker } from "./number-ticker"
 import { phones } from "@/data/demo-phones"
 
+interface EventCardDict {
+  title: string
+  location: string
+  stat1: string
+  stat2: string
+}
+
 interface DemoDict {
   eyebrow: string
   heading: string
@@ -15,17 +22,22 @@ interface DemoDict {
   headingSuffix: string
   seeItLive: string
   seeReport: string
+  seeFmReport: string
   phones: string[]
   stats: { value: string; label: string }[]
+  ethdenverCard: EventCardDict
+  futureMakerCard: EventCardDict
 }
 
 function parseStatValue(value: string) {
   const hasK = value.includes("K")
+  const hasM = value.includes("M")
   const hasPlus = value.includes("+")
-  const numStr = value.replace(/[K+,]/g, "")
+  const numStr = value.replace(/[KM+,]/g, "")
   const target = parseFloat(numStr)
-  const suffix = (hasK ? "K" : "") + (hasPlus ? "+" : "")
-  return { target, suffix }
+  const suffix = (hasK ? "K" : hasM ? "M" : "") + (hasPlus ? "+" : "")
+  const decimalPlaces = numStr.includes(".") ? (numStr.split(".")[1]?.length || 0) : 0
+  return { target, suffix, decimalPlaces }
 }
 
 export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
@@ -47,7 +59,8 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
     return () => el.removeEventListener("scroll", onScroll)
   }, [])
 
-  const reportHref = lang === "en" ? "/ethdenver-report" : `/${lang}/ethdenver-report`
+  const ethReportHref = lang === "en" ? "/ethdenver-report" : `/${lang}/ethdenver-report`
+  const fmReportHref = lang === "en" ? "/futuremaker-report" : `/${lang}/futuremaker-report`
 
   return (
     <section
@@ -133,11 +146,11 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
         <RevealOnScroll delay={500}>
           <div className="grid grid-cols-2 md:flex md:justify-center md:items-center gap-4 md:gap-12 mx-auto max-w-md md:max-w-none my-14 md:my-10">
             {dict.stats.map((stat, i) => {
-              const { target, suffix } = parseStatValue(stat.value)
+              const { target, suffix, decimalPlaces } = parseStatValue(stat.value)
               return (
                 <div key={i} className="flex flex-col items-center text-center">
                   <span className="font-display text-[1.6rem] md:text-[2.2rem] text-[#E3B341] tracking-wide">
-                    <NumberTicker value={target} className="text-[#E3B341] font-display text-[1.6rem] md:text-[2.2rem]" />
+                    <NumberTicker value={target} decimalPlaces={decimalPlaces} className="text-[#E3B341] font-display text-[1.6rem] md:text-[2.2rem]" />
                     {suffix}
                   </span>
                   <span className="font-mono text-[0.65rem] text-[#484F58] tracking-widest uppercase">
@@ -149,22 +162,49 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
           </div>
         </RevealOnScroll>
 
+        {/* Event Cards */}
         <RevealOnScroll delay={600}>
-          <div className="text-center flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://hunt.ethdenver.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
-            >
-              {dict.seeItLive}
-            </a>
-            <Link
-              href={reportHref}
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
-            >
-              {dict.seeReport}
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            {/* ETHDenver Card - Primary with glow */}
+            <div className="md:col-span-7 rounded-xl border border-[rgba(240,96,93,0.3)] bg-[#131921] p-6 shadow-[0_0_20px_rgba(240,96,93,0.08)] transition-all duration-300 hover:border-[rgba(240,96,93,0.5)] hover:shadow-[0_0_30px_rgba(240,96,93,0.12)]">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-[#F0605D] text-lg">&#9733;</span>
+                <h3 className="font-display text-lg tracking-wide text-white">{dict.ethdenverCard.title}</h3>
+              </div>
+              <p className="text-sm text-[#8B949E] mb-3">{dict.ethdenverCard.location}</p>
+              <p className="text-sm text-[#E6EDF3] mb-1">{dict.ethdenverCard.stat1}</p>
+              <p className="text-sm text-[#E6EDF3] mb-5">{dict.ethdenverCard.stat2}</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://hunt.ethdenver.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer"
+                >
+                  {dict.seeItLive}
+                </a>
+                <Link
+                  href={ethReportHref}
+                  className="inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
+                >
+                  {dict.seeReport}
+                </Link>
+              </div>
+            </div>
+
+            {/* Future Maker Card */}
+            <div className="md:col-span-5 rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-6 transition-all duration-300 hover:border-[rgba(240,246,252,0.15)] hover:bg-[#1A2233]">
+              <h3 className="font-display text-lg tracking-wide text-white mb-3">{dict.futureMakerCard.title}</h3>
+              <p className="text-sm text-[#8B949E] mb-3">{dict.futureMakerCard.location}</p>
+              <p className="text-sm text-[#E6EDF3] mb-1">{dict.futureMakerCard.stat1}</p>
+              <p className="text-sm text-[#E6EDF3] mb-5">{dict.futureMakerCard.stat2}</p>
+              <Link
+                href={fmReportHref}
+                className="inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
+              >
+                {dict.seeFmReport}
+              </Link>
+            </div>
           </div>
         </RevealOnScroll>
       </div>

@@ -42,7 +42,7 @@ export function SiteFooter({ dict, navDict }: { dict: FooterDict; navDict: NavDi
                 sizes="500px"
               />
               <Image
-                src="/nova-blockchain-lab-logo.png"
+                src="/NOVA_Blockchain_Lab-2.png"
                 alt="NOVA Blockchain Lab"
                 width={500}
                 height={75}

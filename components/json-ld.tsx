@@ -4,11 +4,12 @@ const organization = {
   '@type': 'Organization',
   name: 'NOVA Blockchain Lab',
   url: BASE_URL,
-  logo: `${BASE_URL}/nova-blockchain-lab-logo.png`,
+  logo: `${BASE_URL}/NOVA_Blockchain_Lab-2.png`,
   email: 'nova.blockchain.lab@novaims.unl.pt',
   foundingDate: '2023',
   sameAs: [
     'https://hunt.ethdenver.com/',
+    'https://novaims.unl.pt/pt/here-now/eventos/nova-ims-career-fair-future-maker-2026/',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -31,7 +32,7 @@ const softwareApplication = {
     {
       '@type': 'Offer',
       name: 'Starter',
-      description: 'Launch in a day — 50–200 attendees',
+      description: 'Launch in a day \u2014 50\u2013200 attendees',
       priceCurrency: 'USD',
       price: '0',
       priceValidUntil: '2027-12-31',
@@ -40,7 +41,7 @@ const softwareApplication = {
     {
       '@type': 'Offer',
       name: 'Pro',
-      description: 'The full experience — 200–1,000 attendees',
+      description: 'The full experience \u2014 200\u20131,000 attendees',
       priceCurrency: 'USD',
       price: '0',
       priceValidUntil: '2027-12-31',
@@ -49,7 +50,7 @@ const softwareApplication = {
     {
       '@type': 'Offer',
       name: 'Enterprise',
-      description: 'Built around you — 1,000+ attendees',
+      description: 'Built around you \u2014 1,000+ attendees',
       priceCurrency: 'USD',
       price: '0',
       priceValidUntil: '2027-12-31',
@@ -137,6 +138,42 @@ const event = {
   },
 }
 
+const futureMakerEvent = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at Future Maker 2026',
+  description:
+    'Interactive scavenger hunt game deployed at NOVA IMS Future Maker Career Fair 2026, with 265 hunters and 115 NFC checkpoints.',
+  startDate: '2026-03-16',
+  endDate: '2026-03-19',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'NOVA IMS',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Lisbon',
+      addressCountry: 'PT',
+    },
+  },
+  organizer: organization,
+  url: `${BASE_URL}/futuremaker-report`,
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: BASE_URL,
+  },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: 'https://novaims.unl.pt/pt/here-now/eventos/nova-ims-career-fair-future-maker-2026/',
+    validFrom: '2026-01-01',
+  },
+}
+
 const reviews = [
   {
     '@type': 'Review',
@@ -188,7 +225,7 @@ const reviews = [
 
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, ...reviews],
 }
 
 export function JsonLd() {

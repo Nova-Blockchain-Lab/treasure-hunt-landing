@@ -1,6 +1,6 @@
 export const stats = [
-  { value: "207", label: "Active Players" },
-  { value: "59", label: "Venue Checkpoints" },
-  { value: "462K+", label: "Rewards Claimed" },
-  { value: "4", label: "Days of Play" },
+  { value: "472", label: "Active Players" },
+  { value: "174", label: "Venue Checkpoints" },
+  { value: "1.4M+", label: "Rewards Minted" },
+  { value: "3", label: "Events Deployed" },
 ]

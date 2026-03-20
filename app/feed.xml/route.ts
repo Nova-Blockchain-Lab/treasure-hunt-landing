@@ -21,6 +21,14 @@ export function GET() {
       link: `${BASE_URL}/ethdenver-report`,
       pubDate: new Date('2026-03-06').toUTCString(),
     },
+    // Future Maker report
+    {
+      title: 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+      description:
+        '265 hunters, 2,591 treasures found, 1,024,700 FM minted. Full analytics from the Treasure Hunt at Future Maker, NOVA IMS.',
+      link: `${BASE_URL}/futuremaker-report`,
+      pubDate: new Date('2026-03-20').toUTCString(),
+    },
     // Blog posts
     ...blogPosts.map((post) => ({
       title: post.title,

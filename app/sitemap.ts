@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { path: '', priority: 1 },
     { path: '/ethdenver-report', priority: 0.9 },
+    { path: '/futuremaker-report', priority: 0.8 },
     { path: '/blog', priority: 0.6 },
   ]
 

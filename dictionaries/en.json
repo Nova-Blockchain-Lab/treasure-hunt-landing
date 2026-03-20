@@ -5,33 +5,37 @@
     "howItWorks": "How It Works",
     "useCases": "Use Cases",
     "packages": "Packages",
-    "bookDemo": "Book a Demo"
+    "bookDemo": "Plan Your Event"
   },
   "hero": {
     "srTitle": "Treasure Hunt | Interactive Event Engagement Game for Conferences",
-    "tagline": "Real rewards. Real engagement. Real results",
-    "taglineSuffix": " \u2014 a gamified experience built directly into your physical venue.",
-    "bookDemo": "Book a Demo",
-    "seeItLive": "See It Live at ETHDenver \u2192"
+    "headline": "Turn Your Venue",
+    "headlineHighlight": "Into a Game",
+    "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
+    "taglineSuffix": " \u2014 straight from the phone browser, no app download required.",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & Confluence \u2014 472+ players \u00b7 174 checkpoints \u00b7 3 events",
+    "bookDemo": "Plan Your Event",
+    "seeItLive": "See Our Results \u2192"
   },
   "marquee": [
-    "Drive Foot Traffic",
-    "Reward Attendance",
-    "Sponsor Visibility",
-    "Custom Merch Store",
-    "Real-Time Leaderboards",
+    "No App Download",
     "NFC + QR Checkpoints",
-    "Unicorn.eth Sign-In",
-    "ETHDenver 2026",
-    "NOVA Blockchain Lab"
+    "Real-Time Leaderboards",
+    "Built-In Merch Store",
+    "Drive Foot Traffic",
+    "Player-Created Challenges",
+    "Social Rewards",
+    "Sponsor Checkpoint Placement",
+    "Live Analytics Dashboard"
   ],
   "demo": {
-    "eyebrow": "Live at ETHDenver 2026",
+    "eyebrow": "Proven at 3 Events",
     "heading": "See What",
-    "headingHighlight": "207 Players",
-    "headingSuffix": "Experienced at ETHDenver",
-    "seeItLive": "See It Live at ETHDenver \u2192",
-    "seeReport": "See Full ETHDenver Report \u2192",
+    "headingHighlight": "472 Players",
+    "headingSuffix": "Experienced Across 3 Events",
+    "seeItLive": "See It Live \u2192",
+    "seeReport": "See Report \u2192",
+    "seeFmReport": "See Report \u2192",
     "phones": [
       "Home base: scan, explore, compete",
       "Interactive venue map with live checkpoint tracking",
@@ -39,11 +43,23 @@
       "Built-in merch store where rewards become real items"
     ],
     "stats": [
-      { "value": "207", "label": "Active Players" },
-      { "value": "59", "label": "Venue Checkpoints" },
-      { "value": "462K+", "label": "Rewards Claimed" },
-      { "value": "4", "label": "Days of Play" }
-    ]
+      { "value": "472", "label": "Active Players" },
+      { "value": "174", "label": "Venue Checkpoints" },
+      { "value": "1.4M+", "label": "Rewards Minted" },
+      { "value": "3", "label": "Events Deployed" }
+    ],
+    "ethdenverCard": {
+      "title": "ETHDenver 2026",
+      "location": "Denver, CO \u00b7 Feb 27 \u2013 Mar 1",
+      "stat1": "207 players \u00b7 59 checkpoints",
+      "stat2": "462K BUFFI \u00b7 4 days"
+    },
+    "futureMakerCard": {
+      "title": "Future Maker 2026",
+      "location": "NOVA IMS, Lisbon \u00b7 Mar 16\u201319",
+      "stat1": "265 players \u00b7 115 checkpoints",
+      "stat2": "1M FM \u00b7 3 days"
+    }
   },
   "socialProof": {
     "deployedAt": "Deployed At"
@@ -76,43 +92,43 @@
     "eyebrow": "02 / How It Works",
     "heading": "Five Steps.",
     "headingHighlight": "Zero Friction.",
-    "callout": "You control the checkpoints, the rewards, and the prizes. We handle the technology.",
+    "callout": "You place the checkpoints. You set the rewards. We handle everything else.",
     "infraEyebrow": "What Powers It All",
-    "infraHeading": "Why It Feels",
-    "infraHighlight": "Like Magic",
-    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity \u2014 they just play.",
+    "infraHeading": "Why It",
+    "infraHighlight": "Just Works",
+    "infraDescription": "Behind every scan and reward is infrastructure built for speed and transparency. Your attendees never see the complexity \u2014 they just play.",
     "steps": [
-      { "title": "Open the Game", "description": "Visit the URL on your phone. Sign in with one tap. No app download, no complex setup. You're playing in 30 seconds." },
-      { "title": "Explore the Venue", "description": "Checkpoints are placed strategically across the event. Follow the map, discover hidden spots, and uncover rewards around every corner." },
-      { "title": "Scan to Collect", "description": "Tap an NFC tag or scan a QR code. Instant reward. One touch, one point \u2014 collected and tracked automatically." },
-      { "title": "Compete on the Leaderboard", "description": "Live rankings update in real time. Social challenges and collaborative missions keep the energy high all day." },
-      { "title": "Spend at the Merch Store", "description": "Rewards unlock real prizes \u2014 socks, hats, exclusive items. The built-in merch store turns points into something attendees take home." }
+      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in 30 seconds." },
+      { "title": "Explore the Venue", "description": "Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space." },
+      { "title": "Scan to Earn", "description": "One tap on an NFC tag or scan of a QR code. Instant reward, automatically tracked. Every interaction becomes a data point for you." },
+      { "title": "Compete and Collaborate", "description": "Live leaderboards fuel friendly competition. Social challenges and team missions keep energy high throughout the event." },
+      { "title": "Spend Real Rewards", "description": "Points unlock real merchandise \u2014 hats, socks, exclusive items. Attendees leave with something tangible from your event." }
     ],
     "infraItems": [
-      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 network built for speed. Every action \u2014 scans, rewards, purchases \u2014 is recorded transparently and verifiably." },
-      { "title": "Zero Cost to Participants", "description": "A built-in paymaster covers all transaction fees. Attendees collect rewards, spend at the merch store, and climb leaderboards without ever paying a cent." },
-      { "title": "One-Tap Sign-In via unicorn.eth", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees tap once and they're in. The unicorn.eth integration handles everything behind the scenes." },
-      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase \u2014 recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
+      { "title": "Built for Speed", "description": "Every scan, reward, and purchase processes instantly on dedicated infrastructure. No loading screens, no lag." },
+      { "title": "Zero Cost to Attendees", "description": "Attendees collect rewards, shop the merch store, and climb leaderboards without paying anything. All transaction costs are covered." },
+      { "title": "One-Tap Sign-In", "description": "No passwords, no account creation, no friction. Attendees tap once and they\u2019re in." },
+      { "title": "Fully Transparent & Auditable", "description": "Every reward, checkpoint scan, and purchase is recorded and verifiable. Give sponsors engagement data they can trust." }
     ]
   },
   "useCases": {
     "eyebrow": "03 / Use Cases",
-    "heading": "Where It",
-    "headingHighlight": "Works",
-    "description": "Any venue with a crowd becomes an interactive playground. Treasure Hunt adapts to your scale, your audience, and your goals.",
+    "heading": "Built for",
+    "headingHighlight": "Any Venue With a Crowd",
+    "description": "From 50-person meetups to 10,000-seat arenas. Treasure Hunt scales to your event and your goals.",
     "items": [
-      { "title": "Conferences & Summits", "description": "Drive booth traffic and keep attendees engaged between sessions. Turn passive badge-scanners into active participants exploring every corner." },
-      { "title": "Corporate Events", "description": "Gamify team building, product launches, and internal summits. Give employees a reason to explore the space and interact with every activation." },
-      { "title": "Universities & Campuses", "description": "Orientation weeks, open days, and campus events come alive. Students explore, compete, and discover spaces they'd never find on their own." },
-      { "title": "Festivals & Expos", "description": "Create an exploration layer across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences throughout the grounds." },
-      { "title": "Brand Activations", "description": "Connect physical marketing campaigns to measurable engagement. Know exactly which touchpoints drove interaction and for how long." },
-      { "title": "Hackathons", "description": "Keep builders energized between coding sessions. Reward participation across workshops, sponsor booths, and social areas with real prizes." }
+      { "title": "Conferences & Summits", "description": "Turn passive attendees into active explorers. Drive traffic to sponsor booths, fill dead zones between sessions, and give organizers hard data on what worked." },
+      { "title": "Corporate Events", "description": "Gamify product launches, team offsites, and internal summits. Give every attendee a reason to explore the space and interact with every activation." },
+      { "title": "Universities & Campuses", "description": "Orientation weeks, open days, and campus tours that students actually enjoy. They explore, compete, and discover spaces they\u2019d skip otherwise." },
+      { "title": "Festivals & Expos", "description": "Layer exploration across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences \u2014 and track it all in real time." },
+      { "title": "Brand Activations", "description": "Connect physical marketing to measurable results. Know exactly which touchpoints drove interaction, how long people stayed, and what they engaged with." },
+      { "title": "Hackathons", "description": "Keep builders moving between coding sessions. Reward participation at workshops, sponsor booths, and social areas with merch they actually want." }
     ]
   },
   "testimonials": {
-    "eyebrow": "04 / What They Say",
-    "heading": "Trusted by",
-    "headingHighlight": "Event Organizers",
+    "eyebrow": "04 / Social Proof",
+    "heading": "Don\u2019t Take Our Word",
+    "headingHighlight": "for It",
     "items": [
       {
         "quote": "Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done!",
@@ -120,7 +136,7 @@
         "role": "Head of the Makerspace, ETHDenver"
       },
       {
-        "quote": "My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They'd scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.",
+        "quote": "My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They\u2019d scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.",
         "author": "Custom Sneaker Vendor",
         "role": "ETHDenver 2026"
       },
@@ -133,13 +149,13 @@
   },
   "packages": {
     "eyebrow": "05 / Packages",
-    "heading": "Find the Right Fit",
-    "headingHighlight": "for Your Event",
-    "description": "Every package includes the core Treasure Hunt platform. Pick the tier that matches your scale.",
+    "heading": "One Platform,",
+    "headingHighlight": "Built for Any Event Size",
+    "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Launch in a day", "bestFor": "50\u2013200 attendees", "cta": "Get Started", "badge": "" },
-      { "name": "Pro", "subtitle": "The full experience", "bestFor": "200\u20131,000 attendees", "cta": "Get Started", "badge": "Most Popular" },
-      { "name": "Enterprise", "subtitle": "Built around you", "bestFor": "1,000+ attendees", "cta": "Talk to Us", "badge": "" }
+      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "" },
+      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100\u20131,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular" },
+      { "name": "Enterprise", "subtitle": "Dedicated team. White-label. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "" }
     ],
     "categories": [
       {
@@ -164,26 +180,30 @@
         ]
       },
       {
-        "title": "Support",
+        "title": "Support & Scale",
         "features": [
-          "On-site support staff",
+          "Post-event analytics report",
           "Custom feature development",
-          "Post-event analytics report"
+          "On-site support staff",
+          "White-label branding",
+          "Multi-event dashboard",
+          "Sponsor ROI report",
+          "API access"
         ]
       }
     ]
   },
   "cta": {
-    "heading": "Ready to Make Your Next Event",
-    "headingHighlight": "Unforgettable?",
-    "description": "Treasure Hunt deploys in days. Tell us about your event.",
-    "trustSignal": "Deployed at ETHDenver 2026 \u2014 207 players, 59 checkpoints, 4 days",
-    "bookDemo": "Book a Demo",
-    "seeItLive": "See It Live \u2192"
+    "heading": "Ready to Turn Foot Traffic",
+    "headingHighlight": "Into Measurable Results?",
+    "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
+    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence \u2014 472+ players, 174 checkpoints, 3 events",
+    "bookDemo": "Plan Your Event",
+    "seeItLive": "See Our Results \u2192"
   },
   "stickyCta": {
-    "text": "Ready to deploy Treasure Hunt at your event?",
-    "bookDemo": "Book a Demo"
+    "text": "Turn your next event into a game attendees talk about.",
+    "bookDemo": "Plan Your Event"
   },
   "footer": {
     "description": "Interactive event engagement platform that drives foot traffic, rewards participation, and gives organizers real-time analytics.",
@@ -246,5 +266,58 @@
     "buffiLabel": "BUFFI",
     "buffiMintedLabel": "BUFFI Minted",
     "venue": "Venue"
+  },
+  "fmReport": {
+    "title": "FUTURE MAKER HUNT RECAP",
+    "subtitle": "March 16\u201319, 2026 \u00b7 NOVA IMS, Lisbon",
+    "totalTreasures": "Total Treasures",
+    "fmMinted": "FM Minted",
+    "uniqueHunters": "Unique Hunters",
+    "treasuresFound": "Treasures Found",
+    "totalTransactions": "Total Transactions",
+    "merchPurchased": "Merch Purchased",
+    "dailyActivity": "DAILY ACTIVITY",
+    "activityBreakdown": "ACTIVITY BREAKDOWN",
+    "totalActions": "Total Actions",
+    "found": "Found",
+    "social": "Social",
+    "qr": "QR",
+    "merch": "Merch",
+    "tokenDistribution": "TOKEN DISTRIBUTION",
+    "top10Holders": "Top 10 Hunters by total FM earned (MVP leaderboard)",
+    "hourlyActivity": "HOURLY ACTIVITY (UTC/WET)",
+    "hourlyDescription": "Transaction distribution by hour across all event days",
+    "mintingTimeline": "MINTING TIMELINE",
+    "mintingDescription": "FM tokens minted per day",
+    "treasurePopularity": "TREASURE POPULARITY",
+    "treasurePopularityDesc": "All 115 treasures ranked by find count",
+    "treasure": "Treasure",
+    "finds": "Finds",
+    "hiddenBy": "Hidden By",
+    "recycledNote": "These entries represent NFC tags that were deleted and reassigned mid-event. Due to the high number of requests to hide tags, we recycled previously claimed tags to ensure fairness for participants who had not hidden one yet. Their on-chain find data is preserved above.",
+    "merchStore": "MERCH STORE",
+    "merchStoreDesc": "Items purchased with FM tokens (burned on purchase)",
+    "item": "Item",
+    "price": "Price",
+    "sold": "Sold",
+    "fmBurned": "FM Burned",
+    "topHunters": "TOP HUNTERS",
+    "hunter": "Hunter",
+    "fmEarned": "FM Earned",
+    "funFacts": "FUN FACTS",
+    "firstClaim": "First Claim",
+    "lastClaim": "Last Claim",
+    "mostActiveHunter": "Most Active Hunter",
+    "biggestSingleReward": "Biggest Single Reward",
+    "avgFmPerHunter": "Avg FM per Hunter",
+    "mostPopularTreasure": "Most Popular Treasure",
+    "mostPopularMerch": "Most Popular Merch",
+    "fmBurnedOnMerch": "FM Burned on Merch",
+    "peakHour": "Peak Hour",
+    "viewContract": "View Contract on Explorer",
+    "builtOn": "Built on Nova Cidade Chain \u00b7 NOVA Blockchain Lab",
+    "transactions": "Transactions",
+    "fmLabel": "FM",
+    "fmMintedLabel": "FM Minted"
   }
 }

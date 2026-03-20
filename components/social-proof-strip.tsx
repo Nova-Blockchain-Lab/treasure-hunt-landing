@@ -17,6 +17,15 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
               className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
             />
           </a>
+          <a href="https://novaims.unl.pt/pt/here-now/eventos/nova-ims-career-fair-future-maker-2026/" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/fm-logo.png"
+              alt="Future Maker - NOVA IMS Career Fair"
+              width={220}
+              height={56}
+              className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+            />
+          </a>
           <a href="https://blockchainconfluence.pt/" target="_blank" rel="noopener noreferrer">
             <Image
               src="/blockchain-confluence-logo.png"

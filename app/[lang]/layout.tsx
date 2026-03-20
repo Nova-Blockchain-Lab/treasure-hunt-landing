@@ -18,7 +18,7 @@ export async function generateMetadata({
     metadataBase: new URL('https://www.treasurehunt.pt'),
     title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
     description:
-      'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
+      'Turn your event into an adventure. Gamified QR & NFC scavenger hunt deployed at ETHDenver and Future Maker. Drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
     keywords: [
       'event engagement game',
       'interactive event platform',
@@ -30,6 +30,9 @@ export async function generateMetadata({
       'sponsor foot traffic',
       'live leaderboard events',
       'event analytics platform',
+      'university event gamification',
+      'career fair engagement',
+      'Future Maker NOVA IMS',
     ],
     authors: [{ name: 'NOVA Blockchain Lab', url: 'https://www.treasurehunt.pt' }],
     creator: 'NOVA Blockchain Lab',
@@ -59,13 +62,13 @@ export async function generateMetadata({
       siteName: 'Treasure Hunt',
       title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
       description:
-        'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
+        'Turn your event into an adventure. Gamified QR & NFC scavenger hunt deployed at ETHDenver and Future Maker. Drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
     },
     twitter: {
       card: 'summary_large_image',
       title: 'Treasure Hunt | Interactive Event Engagement Game for Conferences',
       description:
-        'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
+        'Turn your event into an adventure. Gamified QR & NFC scavenger hunt deployed at ETHDenver and Future Maker. Drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
     },
     icons: {
       icon: '/treasure-hunt-logo.png',
