@@ -3,11 +3,12 @@ const BASE_URL = 'https://www.treasurehunt.pt'
 const organization = {
   '@type': 'Organization',
   name: 'NOVA Blockchain Lab',
-  url: BASE_URL,
+  url: 'https://novablockchainlab.novaims.unl.pt/',
   logo: `${BASE_URL}/NOVA_Blockchain_Lab-2.png`,
   email: 'nova.blockchain.lab@novaims.unl.pt',
   foundingDate: '2023',
   sameAs: [
+    BASE_URL,
     'https://hunt.ethdenver.com/',
     'https://novaims.unl.pt/pt/here-now/eventos/nova-ims-career-fair-future-maker-2026/',
   ],
@@ -101,8 +102,8 @@ const event = {
   name: 'Treasure Hunt at ETHDenver 2026',
   description:
     'Interactive scavenger hunt game deployed at ETHDenver 2026, driving attendee engagement with QR & NFC checkpoints, live leaderboards, and a merch store.',
-  startDate: '2026-02-27',
-  endDate: '2026-03-01',
+  startDate: '2026-02-18',
+  endDate: '2026-02-21',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
   location: {
@@ -125,7 +126,7 @@ const event = {
   performer: {
     '@type': 'Organization',
     name: 'NOVA Blockchain Lab',
-    url: BASE_URL,
+    url: 'https://novablockchainlab.novaims.unl.pt/',
   },
   offers: {
     '@type': 'Offer',
@@ -161,7 +162,7 @@ const futureMakerEvent = {
   performer: {
     '@type': 'Organization',
     name: 'NOVA Blockchain Lab',
-    url: BASE_URL,
+    url: 'https://novablockchainlab.novaims.unl.pt/',
   },
   offers: {
     '@type': 'Offer',

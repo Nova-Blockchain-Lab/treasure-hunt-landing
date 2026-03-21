@@ -41,14 +41,16 @@ export function SiteFooter({ dict, navDict }: { dict: FooterDict; navDict: NavDi
                 className="h-12 sm:h-20 w-auto -ml-2 sm:-ml-10"
                 sizes="500px"
               />
-              <Image
-                src="/NOVA_Blockchain_Lab-2.png"
-                alt="NOVA Blockchain Lab"
-                width={500}
-                height={75}
-                className="h-12 sm:h-20 w-auto opacity-60"
-                sizes="500px"
-              />
+              <a href="https://novablockchainlab.novaims.unl.pt/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/NOVA_Blockchain_Lab-2.png"
+                  alt="NOVA Blockchain Lab"
+                  width={500}
+                  height={75}
+                  className="h-12 sm:h-20 w-auto opacity-60 transition-opacity duration-300 hover:opacity-90"
+                  sizes="500px"
+                />
+              </a>
             </div>
             <p className="text-sm text-[#484F58] leading-relaxed max-w-[280px]">
               {dict.description}
