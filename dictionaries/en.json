@@ -94,9 +94,9 @@
     "headingHighlight": "Zero Friction.",
     "callout": "You place the checkpoints. You set the rewards. We handle everything else.",
     "infraEyebrow": "What Powers It All",
-    "infraHeading": "Why It",
-    "infraHighlight": "Just Works",
-    "infraDescription": "Behind every scan and reward is infrastructure built for speed and transparency. Your attendees never see the complexity \u2014 they just play.",
+    "infraHeading": "Why It Feels",
+    "infraHighlight": "Like Magic",
+    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity \u2014 they just play.",
     "steps": [
       { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in 30 seconds." },
       { "title": "Explore the Venue", "description": "Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space." },
@@ -105,10 +105,10 @@
       { "title": "Spend Real Rewards", "description": "Points unlock real merchandise \u2014 hats, socks, exclusive items. Attendees leave with something tangible from your event." }
     ],
     "infraItems": [
-      { "title": "Built for Speed", "description": "Every scan, reward, and purchase processes instantly on dedicated infrastructure. No loading screens, no lag." },
-      { "title": "Zero Cost to Attendees", "description": "Attendees collect rewards, shop the merch store, and climb leaderboards without paying anything. All transaction costs are covered." },
-      { "title": "One-Tap Sign-In", "description": "No passwords, no account creation, no friction. Attendees tap once and they\u2019re in." },
-      { "title": "Fully Transparent & Auditable", "description": "Every reward, checkpoint scan, and purchase is recorded and verifiable. Give sponsors engagement data they can trust." }
+      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 network built for speed. Every action \u2014 scans, rewards, purchases \u2014 is recorded transparently and verifiably." },
+      { "title": "Zero Cost to Participants", "description": "A built-in paymaster covers all transaction fees. Attendees collect rewards, spend at the merch store, and climb leaderboards without ever paying a cent." },
+      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app \u2014 we handle the smart account deployment and key management behind the scenes." },
+      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase \u2014 recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
     ]
   },
   "useCases": {

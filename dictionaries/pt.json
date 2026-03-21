@@ -94,9 +94,9 @@
     "headingHighlight": "Zero Friccao.",
     "callout": "Voce coloca os checkpoints. Voce define as recompensas. Nos tratamos de tudo o resto.",
     "infraEyebrow": "O Que Alimenta Tudo",
-    "infraHeading": "Porque",
-    "infraHighlight": "Simplesmente Funciona",
-    "infraDescription": "Por tras de cada scan e recompensa esta infraestrutura construida para velocidade e transparencia. Os seus participantes nunca veem a complexidade \u2014 simplesmente jogam.",
+    "infraHeading": "Porque Parece",
+    "infraHighlight": "Magia",
+    "infraDescription": "Por tras de cada scan, cada recompensa e cada atualizacao do leaderboard esta infraestrutura real construida para velocidade, transparencia e zero friccao. Os seus participantes nunca veem a complexidade \u2014 simplesmente jogam.",
     "steps": [
       { "title": "Abrir e Jogar Instantaneamente", "description": "Os participantes visitam um URL no telemovel e fazem login com um toque. Sem download de app, sem criar conta. Estao a jogar em 30 segundos." },
       { "title": "Explorar o Local", "description": "Os checkpoints sao colocados onde voce quer trafego. Os participantes seguem o mapa, descobrem locais escondidos e desbloqueiam recompensas pelo espaco." },
@@ -105,10 +105,10 @@
       { "title": "Gastar Recompensas Reais", "description": "Os pontos desbloqueiam merch real \u2014 chapeus, meias, itens exclusivos. Os participantes levam algo tangivel do seu evento." }
     ],
     "infraItems": [
-      { "title": "Construido para Velocidade", "description": "Cada scan, recompensa e compra e processada instantaneamente em infraestrutura dedicada. Sem ecras de loading, sem lag." },
-      { "title": "Custo Zero para Participantes", "description": "Os participantes colecionam recompensas, compram na loja de merch e sobem nos leaderboards sem pagar nada. Todos os custos de transacao sao cobertos." },
-      { "title": "Login com Um Toque", "description": "Sem passwords, sem criar conta, sem friccao. Os participantes tocam uma vez e estao dentro." },
-      { "title": "Totalmente Transparente e Auditavel", "description": "Cada recompensa, checkpoint scaneado e compra e registada e verificavel. Forneca aos sponsors dados de engagement em que podem confiar." }
+      { "title": "Funciona na Nova Cidade L3", "description": "Uma rede Layer 3 dedicada construida para velocidade. Cada acao \u2014 scans, recompensas, compras \u2014 e registada de forma transparente e verificavel." },
+      { "title": "Custo Zero para Participantes", "description": "Um paymaster integrado cobre todas as taxas de transacao. Os participantes colecionam recompensas, compram na loja de merch e sobem no leaderboard sem pagar nada." },
+      { "title": "Login com Um Toque", "description": "Sem seed phrases, sem configuracao de wallet, sem conhecimento tecnico necessario. Os participantes fazem login como em qualquer outra app \u2014 nos tratamos do deployment da smart account e da gestao de chaves nos bastidores." },
+      { "title": "Totalmente Transparente e Auditavel", "description": "Cada recompensa mintada, cada checkpoint scaneado, cada compra de merch \u2014 registada e verificavel. Forneca aos sponsors e stakeholders dados de engagement em que podem confiar." }
     ]
   },
   "useCases": {
