@@ -13,7 +13,7 @@
     "headlineHighlight": "Into a Game",
     "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
     "taglineSuffix": " \u2014 straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed at ETHDenver, Future Maker & Confluence \u2014 472+ players \u00b7 174 checkpoints \u00b7 3 events",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & Confluence \u2014 3,500+ treasure finds \u00b7 174 checkpoints \u00b7 3 events",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -31,8 +31,8 @@
   "demo": {
     "eyebrow": "Proven at 3 Events",
     "heading": "See What",
-    "headingHighlight": "472 Players",
-    "headingSuffix": "Experienced Across 3 Events",
+    "headingHighlight": "3,500+ Interactions",
+    "headingSuffix": "Across 3 Events",
     "seeItLive": "See It Live \u2192",
     "seeReport": "See Report \u2192",
     "seeFmReport": "See Report \u2192",
@@ -43,7 +43,7 @@
       "Built-in merch store where rewards become real items"
     ],
     "stats": [
-      { "value": "472", "label": "Active Players" },
+      { "value": "3,500+", "label": "Treasure Finds" },
       { "value": "174", "label": "Venue Checkpoints" },
       { "value": "1.4M+", "label": "Rewards Minted" },
       { "value": "3", "label": "Events Deployed" }
@@ -51,13 +51,13 @@
     "ethdenverCard": {
       "title": "ETHDenver 2026",
       "location": "Denver, CO \u00b7 Feb 18\u201321",
-      "stat1": "207 players \u00b7 59 checkpoints",
+      "stat1": "992 treasures \u00b7 59 checkpoints",
       "stat2": "462K BUFFI \u00b7 4 days"
     },
     "futureMakerCard": {
       "title": "Future Maker 2026",
       "location": "NOVA IMS, Lisbon \u00b7 Mar 16\u201319",
-      "stat1": "265 players \u00b7 115 checkpoints",
+      "stat1": "2,591 treasures \u00b7 115 checkpoints",
       "stat2": "1M FM \u00b7 3 days"
     }
   },
@@ -197,7 +197,7 @@
     "heading": "Ready to Turn Foot Traffic",
     "headingHighlight": "Into Measurable Results?",
     "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
-    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence \u2014 472+ players, 174 checkpoints, 3 events",
+    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence \u2014 3,500+ treasure finds, 174 checkpoints, 3 events",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },

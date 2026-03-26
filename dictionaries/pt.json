@@ -13,7 +13,7 @@
     "headlineHighlight": "Num Jogo",
     "tagline": "Os participantes exploram, scaneiam checkpoints, ganham recompensas reais e direcionam trafego para onde precisa",
     "taglineSuffix": " \u2014 direto no browser do telemovel, sem download de app.",
-    "trustBadge": "Implementado no ETHDenver, Future Maker & Confluence \u2014 472+ jogadores \u00b7 174 checkpoints \u00b7 3 eventos",
+    "trustBadge": "Implementado no ETHDenver, Future Maker & Confluence \u2014 3.500+ tesouros encontrados \u00b7 174 checkpoints \u00b7 3 eventos",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
@@ -31,8 +31,8 @@
   "demo": {
     "eyebrow": "Provado em 3 Eventos",
     "heading": "Veja o Que",
-    "headingHighlight": "472 Jogadores",
-    "headingSuffix": "Experienciaram em 3 Eventos",
+    "headingHighlight": "3.500+ Interacoes",
+    "headingSuffix": "em 3 Eventos",
     "seeItLive": "Ver ao Vivo \u2192",
     "seeReport": "Ver Relatorio \u2192",
     "seeFmReport": "Ver Relatorio \u2192",
@@ -43,7 +43,7 @@
       "Loja de merch integrada onde recompensas viram itens reais"
     ],
     "stats": [
-      { "value": "472", "label": "Jogadores Ativos" },
+      { "value": "3.500+", "label": "Tesouros Encontrados" },
       { "value": "174", "label": "Checkpoints" },
       { "value": "1.4M+", "label": "Recompensas" },
       { "value": "3", "label": "Eventos" }
@@ -51,13 +51,13 @@
     "ethdenverCard": {
       "title": "ETHDenver 2026",
       "location": "Denver, CO \u00b7 18\u201321 Fev",
-      "stat1": "207 jogadores \u00b7 59 checkpoints",
+      "stat1": "992 tesouros \u00b7 59 checkpoints",
       "stat2": "462K BUFFI \u00b7 4 dias"
     },
     "futureMakerCard": {
       "title": "Future Maker 2026",
       "location": "NOVA IMS, Lisboa \u00b7 16\u201319 Mar",
-      "stat1": "265 jogadores \u00b7 115 checkpoints",
+      "stat1": "2.591 tesouros \u00b7 115 checkpoints",
       "stat2": "1M FM \u00b7 3 dias"
     }
   },
@@ -197,7 +197,7 @@
     "heading": "Pronto para Transformar Trafego",
     "headingHighlight": "em Resultados Mensuraveis?",
     "description": "O Treasure Hunt e implementado em dias. Conte-nos sobre o seu evento e mostramos o que e possivel.",
-    "trustSignal": "Comprovado no ETHDenver, Future Maker & Confluence \u2014 472+ jogadores, 174 checkpoints, 3 eventos",
+    "trustSignal": "Comprovado no ETHDenver, Future Maker & Confluence \u2014 3.500+ tesouros encontrados, 174 checkpoints, 3 eventos",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
