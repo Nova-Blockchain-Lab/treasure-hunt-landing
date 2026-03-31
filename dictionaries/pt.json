@@ -153,9 +153,9 @@
     "headingHighlight": "Para Qualquer Dimensao de Evento",
     "description": "Comece gratis para eventos pequenos. Escale para milhares de participantes com ferramentas completas de engagement, analytics de sponsors e suporte no local.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Prove o conceito no seu proximo meetup", "bestFor": "Ate 100 participantes", "cta": "Comecar", "badge": "" },
-      { "name": "Pro", "subtitle": "Tudo para impressionar sponsors e participantes", "bestFor": "100\u20131.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular" },
-      { "name": "Enterprise", "subtitle": "Equipa dedicada. White-label. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "" }
+      { "name": "Starter", "subtitle": "Prove o conceito no seu proximo meetup", "bestFor": "Ate 100 participantes", "cta": "Comecar", "badge": "", "priceHint": "Fale connosco" },
+      { "name": "Pro", "subtitle": "Tudo para impressionar sponsors e participantes", "bestFor": "100\u20131.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular", "priceHint": "Fale connosco" },
+      { "name": "Enterprise", "subtitle": "Equipa dedicada. White-label. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "Fale connosco" }
     ],
     "categories": [
       {

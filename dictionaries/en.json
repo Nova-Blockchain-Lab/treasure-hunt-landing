@@ -153,9 +153,9 @@
     "headingHighlight": "Built for Any Event Size",
     "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "" },
-      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100\u20131,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular" },
-      { "name": "Enterprise", "subtitle": "Dedicated team. White-label. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "" }
+      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "", "priceHint": "Contact us" },
+      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100\u20131,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular", "priceHint": "Contact us" },
+      { "name": "Enterprise", "subtitle": "Dedicated team. White-label. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "", "priceHint": "Contact us" }
     ],
     "categories": [
       {

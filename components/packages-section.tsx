@@ -35,14 +35,13 @@ const featureValues: Record<string, (string | boolean)[][]> = {
   ],
 }
 
-const priceHints = ["Free", "From €990/event", "From €4,990/event"]
 
 interface PackagesDict {
   eyebrow: string
   heading: string
   headingHighlight: string
   description: string
-  tiers: { name: string; subtitle: string; bestFor: string; cta: string; badge: string }[]
+  tiers: { name: string; subtitle: string; bestFor: string; cta: string; badge: string; priceHint: string }[]
   categories: { title: string; features: string[] }[]
   trustSignal?: string
   guarantee?: string
@@ -72,7 +71,7 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
             </span>
           )}
         </div>
-        <p className="font-display text-xl text-[#E6EDF3] mb-1">{priceHints[tierIndex]}</p>
+        <p className="font-display text-xl text-[#E6EDF3] mb-1">{t.priceHint}</p>
         {featured && dict.perAttendee && (
           <p className="text-[0.7rem] text-[#3FB950] font-mono tracking-wide mb-1">{dict.perAttendee}</p>
         )}
@@ -149,7 +148,7 @@ export function PackagesSection({ dict, onOpenContact }: { dict: PackagesDict; o
   useEffect(() => {
     if (!isVisible) return
     for (let i = 0; i < dict.tiers.length; i++) {
-      trackEvent({ name: "package_viewed", params: { tier_name: dict.tiers[i].name, price: priceHints[i] } })
+      trackEvent({ name: "package_viewed", params: { tier_name: dict.tiers[i].name, price: dict.tiers[i].priceHint } })
     }
   }, [isVisible, dict.tiers])
 
