@@ -43,7 +43,7 @@ export function HowItWorksSection({ dict }: { dict: HowItWorksDict }) {
         {/* Timeline */}
         <div className="relative flex flex-col">
           <div
-            className="absolute left-[23px] md:left-[28px] top-0 bottom-0 w-0.5"
+            className="absolute left-[23px] md:left-[28px] top-[48px] bottom-[48px] md:top-[61px] md:bottom-[61px] w-0.5"
             style={{
               background:
                 "linear-gradient(180deg, rgba(240,96,93,0.3), rgba(240,96,93,0.15) 50%, transparent)",

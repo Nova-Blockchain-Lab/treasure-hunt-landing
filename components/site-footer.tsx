@@ -10,6 +10,9 @@ interface FooterDict {
   blog: string
   ethdenverReport: string
   futuremakerReport: string
+  smartCitiesReport: string
+  cadavalReport: string
+  springBootcampReport: string
   copyright: string
 }
 
@@ -43,6 +46,9 @@ export function SiteFooter({
     { href: `${prefix}/blog`, label: dict.blog },
     { href: `${prefix}/ethdenver-report`, label: dict.ethdenverReport },
     { href: `${prefix}/futuremaker-report`, label: dict.futuremakerReport },
+    { href: `${prefix}/smartcities-report`, label: dict.smartCitiesReport },
+    { href: `${prefix}/cadaval-report`, label: dict.cadavalReport },
+    { href: `${prefix}/springbootcamp-report`, label: dict.springBootcampReport },
   ]
 
   return (
