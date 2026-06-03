@@ -65,8 +65,8 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
   const reportHref = (slug: string) => (lang === "en" ? `/${slug}` : `/${lang}/${slug}`)
 
   const secondaryEvents = [
-    { card: dict.futureMakerCard, href: reportHref("futuremaker-report") },
     { card: dict.smartCitiesCard, href: reportHref("smartcities-report") },
+    { card: dict.futureMakerCard, href: reportHref("futuremaker-report") },
     { card: dict.cadavalCard, href: reportHref("cadaval-report") },
     { card: dict.springBootcampCard, href: reportHref("springbootcamp-report") },
   ]
