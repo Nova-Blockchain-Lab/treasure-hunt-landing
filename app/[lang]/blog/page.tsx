@@ -3,8 +3,22 @@ import Link from 'next/link'
 import { blogPosts } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog | Treasure Hunt',
+  title: 'Event Gamification Blog | Treasure Hunt',
   description: 'Insights on event gamification, conference engagement, and interactive event technology from the Treasure Hunt team.',
+  alternates: {
+    canonical: 'https://www.treasurehunt.pt/blog',
+    languages: {
+      en: 'https://www.treasurehunt.pt/blog',
+      pt: 'https://www.treasurehunt.pt/pt/blog',
+      'x-default': 'https://www.treasurehunt.pt/blog',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Event Gamification Blog | Treasure Hunt',
+    description: 'Insights on event gamification, conference engagement, and interactive event technology.',
+    url: 'https://www.treasurehunt.pt/blog',
+  },
 }
 
 export default async function BlogListingPage({
@@ -18,7 +32,7 @@ export default async function BlogListingPage({
   return (
     <div className="min-h-screen bg-[#06080F] text-white">
       <div className="max-w-[800px] mx-auto px-5 py-16">
-        <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] mb-4">Blog</h1>
+        <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] mb-4">Event Gamification Blog</h1>
         <p className="text-[#8B949E] text-lg mb-12">
           Insights on event gamification, conference engagement, and interactive event technology.
         </p>

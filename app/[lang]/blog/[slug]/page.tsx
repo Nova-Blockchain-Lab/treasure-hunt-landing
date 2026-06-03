@@ -36,6 +36,14 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: post.date,
       url: `https://www.treasurehunt.pt${prefix}/blog/${slug}`,
+      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      authors: ['NOVA Blockchain Lab'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: ['https://www.treasurehunt.pt/opengraph-image'],
     },
   }
 }
@@ -113,16 +121,27 @@ export default async function BlogPostPage({
                   headline: post.title,
                   description: post.description,
                   datePublished: post.date,
+                  dateModified: post.date,
+                  image: ['https://www.treasurehunt.pt/opengraph-image'],
+                  mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': `https://www.treasurehunt.pt/blog/${post.slug}`,
+                  },
+                  url: `https://www.treasurehunt.pt/blog/${post.slug}`,
                   author: {
                     '@type': 'Organization',
                     name: 'NOVA Blockchain Lab',
+                    url: 'https://novablockchainlab.novaims.unl.pt/',
                   },
                   publisher: {
                     '@type': 'Organization',
                     name: 'NOVA Blockchain Lab',
                     url: 'https://www.treasurehunt.pt',
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: 'https://www.treasurehunt.pt/NOVA_Blockchain_Lab-2.png',
+                    },
                   },
-                  mainEntityOfPage: `https://www.treasurehunt.pt/blog/${slug}`,
                 },
                 {
                   '@type': 'BreadcrumbList',

@@ -12,12 +12,21 @@ export const metadata: Metadata = {
     languages: {
       en: 'https://www.treasurehunt.pt/futuremaker-report',
       pt: 'https://www.treasurehunt.pt/pt/futuremaker-report',
+      'x-default': 'https://www.treasurehunt.pt/futuremaker-report',
     },
   },
   openGraph: {
     type: 'article',
     title: 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
     description: '265 hunters, 2,591 treasures found, 1,024,700 FM minted.',
+    url: 'https://www.treasurehunt.pt/futuremaker-report',
+    images: ['https://www.treasurehunt.pt/fm-logo.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+    description: '265 hunters, 2,591 treasures found, 1,024,700 FM minted.',
+    images: ['https://www.treasurehunt.pt/fm-logo.png'],
   },
 }
 

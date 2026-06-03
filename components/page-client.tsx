@@ -10,6 +10,7 @@ import { MarqueeStrip } from "@/components/marquee-strip"
 import { SocialProofStrip } from "@/components/social-proof-strip"
 import { FeaturesSection } from "@/components/features-section"
 import { DemoSection } from "@/components/demo-section"
+import { MediaSection } from "@/components/media-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { UseCasesSection } from "@/components/use-cases-section"
@@ -124,6 +125,8 @@ export function PageClient({ dict, lang, variant = "control" }: { dict: any; lan
       <SectionDividerReverse />
       <DemoSection dict={dict.demo} lang={lang} />
       <SectionDivider />
+      <MediaSection dict={dict.media} />
+      <SectionDividerReverse />
       <HowItWorksSection dict={dict.howItWorks} />
       <SectionDividerReverse />
       <TestimonialsSection dict={dict.testimonials} />
@@ -140,7 +143,7 @@ export function PageClient({ dict, lang, variant = "control" }: { dict: any; lan
         onSecondaryAction={isVariant ? ctaSecondaryAction : undefined}
         secondaryIsButton={isVariant}
       />
-      <SiteFooter dict={dict.footer} navDict={dict.nav} />
+      <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
       <StickyCTABar dict={dict.stickyCta} onOpenContact={() => openContactFrom("sticky_bar", dict.stickyCta.bookDemo)} />
       <ContactModal
         dict={dict.contactForm}

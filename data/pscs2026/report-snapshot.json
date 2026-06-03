@@ -1,0 +1,10801 @@
+{
+  "kpis": {
+    "totalPlayers": 351,
+    "pctClaimedReward": 91.2,
+    "totalFinds": 8123,
+    "tokensDistributed": 159000,
+    "merchPurchases": 717,
+    "threeDayReturner": 2.2,
+    "totalQrClaims": 12,
+    "totalSocialClaims": 58,
+    "totalPollVotes": 13,
+    "tokenHolders": 238,
+    "tokenSymbol": "FIL",
+    "tokenName": "Smart Cities Summit",
+    "returnerCounts": {
+      "1": 278,
+      "2": 35,
+      "3": 7
+    }
+  },
+  "zones": [
+    {
+      "id": "stages",
+      "name": "STAGES",
+      "color": "#FF9A76",
+      "tags": 6,
+      "finds": 275,
+      "uniqueFinders": 178,
+      "top": "Joana Welcome!",
+      "topFinds": 94
+    },
+    {
+      "id": "sector3a",
+      "name": "SECTOR 3A",
+      "color": "#F0605D",
+      "tags": 16,
+      "finds": 1373,
+      "uniqueFinders": 214,
+      "top": "Ordem dos Engenheiros",
+      "topFinds": 152
+    },
+    {
+      "id": "sector3b",
+      "name": "SECTOR 3B",
+      "color": "#58A6FF",
+      "tags": 34,
+      "finds": 3162,
+      "uniqueFinders": 291,
+      "top": "Treasure Hunt boot (Nova Cidade stand)",
+      "topFinds": 245
+    },
+    {
+      "id": "sector3c",
+      "name": "SECTOR 3C",
+      "color": "#56D364",
+      "tags": 30,
+      "finds": 2160,
+      "uniqueFinders": 215,
+      "top": "Rico",
+      "topFinds": 125
+    },
+    {
+      "id": "sector3d",
+      "name": "SECTOR 3D",
+      "color": "#BC8CFF",
+      "tags": 10,
+      "finds": 625,
+      "uniqueFinders": 161,
+      "top": "Geoclima",
+      "topFinds": 123
+    },
+    {
+      "id": "ze",
+      "name": "ZE BAND",
+      "color": "#FF9A76",
+      "tags": 7,
+      "finds": 528,
+      "uniqueFinders": 174,
+      "top": "apemeta",
+      "topFinds": 148
+    }
+  ],
+  "exhibitorList": [
+    {
+      "rank": 1,
+      "name": "Treasure Hunt boot (Nova Cidade stand)",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 245,
+      "uniqueFinders": 245,
+      "pct": 69.8,
+      "ttf": 11068,
+      "spill": 73,
+      "zone": "sector3b",
+      "x": 37.89,
+      "y": 15.42
+    },
+    {
+      "rank": 2,
+      "name": "Nova Cidade",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 164,
+      "uniqueFinders": 164,
+      "pct": 46.7,
+      "ttf": 11823,
+      "spill": 76,
+      "zone": "sector3b",
+      "x": 42.98,
+      "y": 18.73
+    },
+    {
+      "rank": 3,
+      "name": "Ordem dos Engenheiros",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 152,
+      "uniqueFinders": 152,
+      "pct": 43.3,
+      "ttf": 8667,
+      "spill": 93,
+      "zone": "sector3a",
+      "x": 22.29,
+      "y": 22.14
+    },
+    {
+      "rank": 4,
+      "name": "apemeta",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 148,
+      "uniqueFinders": 148,
+      "pct": 42.2,
+      "ttf": 8739,
+      "spill": 93,
+      "zone": "ze",
+      "x": 21.86,
+      "y": 78.64
+    },
+    {
+      "rank": 5,
+      "name": "Fia",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 145,
+      "uniqueFinders": 145,
+      "pct": 41.3,
+      "ttf": 12725,
+      "spill": 83,
+      "zone": "sector3b",
+      "x": 38.31,
+      "y": 11.58
+    },
+    {
+      "rank": 6,
+      "name": "Munic\u00edpio do Fundao",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 145,
+      "uniqueFinders": 145,
+      "pct": 41.3,
+      "ttf": 11042,
+      "spill": 91,
+      "zone": "sector3b",
+      "x": 25.58,
+      "y": 34.33
+    },
+    {
+      "rank": 7,
+      "name": "IWT",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 140,
+      "uniqueFinders": 140,
+      "pct": 39.9,
+      "ttf": 15613,
+      "spill": 90,
+      "zone": "sector3a",
+      "x": 21.5,
+      "y": 55.09
+    },
+    {
+      "rank": 8,
+      "name": "Apsei",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 136,
+      "uniqueFinders": 136,
+      "pct": 38.7,
+      "ttf": 10205,
+      "spill": 94,
+      "zone": "sector3a",
+      "x": 19.59,
+      "y": 33.96
+    },
+    {
+      "rank": 9,
+      "name": "Inovc+",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 135,
+      "uniqueFinders": 135,
+      "pct": 38.5,
+      "ttf": 11076,
+      "spill": 87,
+      "zone": "sector3b",
+      "x": 28.76,
+      "y": 29.32
+    },
+    {
+      "rank": 10,
+      "name": "CIM Oeste",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 134,
+      "uniqueFinders": 134,
+      "pct": 38.2,
+      "ttf": 10777,
+      "spill": 88,
+      "zone": "sector3b",
+      "x": 27.83,
+      "y": 16.06
+    },
+    {
+      "rank": 11,
+      "name": "CylinderMargin",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 131,
+      "uniqueFinders": 131,
+      "pct": 37.3,
+      "ttf": 9434,
+      "spill": 92,
+      "zone": "sector3a",
+      "x": 19.5,
+      "y": 31.11
+    },
+    {
+      "rank": 12,
+      "name": "Rico",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 125,
+      "uniqueFinders": 125,
+      "pct": 35.6,
+      "ttf": 13554,
+      "spill": 92,
+      "zone": "sector3c",
+      "x": 68.64,
+      "y": 72.98
+    },
+    {
+      "rank": 13,
+      "name": "Unipartner",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 123,
+      "uniqueFinders": 123,
+      "pct": 35.0,
+      "ttf": 93819,
+      "spill": 85,
+      "zone": "sector3c",
+      "x": 67.31,
+      "y": 49.35
+    },
+    {
+      "rank": 14,
+      "name": "Geoclima",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 123,
+      "uniqueFinders": 123,
+      "pct": 35.0,
+      "ttf": 13710,
+      "spill": 96,
+      "zone": "sector3d",
+      "x": 75.52,
+      "y": 59.16
+    },
+    {
+      "rank": 15,
+      "name": "TieSports",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 122,
+      "uniqueFinders": 122,
+      "pct": 34.8,
+      "ttf": 13213,
+      "spill": 90,
+      "zone": "sector3c",
+      "x": 62.64,
+      "y": 69.72
+    },
+    {
+      "rank": 16,
+      "name": "DGEG",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 119,
+      "uniqueFinders": 119,
+      "pct": 33.9,
+      "ttf": 34448,
+      "spill": 97,
+      "zone": "sector3b",
+      "x": 27.13,
+      "y": 73.68
+    },
+    {
+      "rank": 17,
+      "name": "360 Waste",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 117,
+      "uniqueFinders": 117,
+      "pct": 33.3,
+      "ttf": 13594,
+      "spill": 88,
+      "zone": "sector3c",
+      "x": 55.55,
+      "y": 71.5
+    },
+    {
+      "rank": 18,
+      "name": "Seat and relax!",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 116,
+      "uniqueFinders": 116,
+      "pct": 33.0,
+      "ttf": 13705,
+      "spill": 80,
+      "zone": "sector3b",
+      "x": 48.4,
+      "y": 56.48
+    },
+    {
+      "rank": 19,
+      "name": "Sistemas PAYT",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 115,
+      "uniqueFinders": 115,
+      "pct": 32.8,
+      "ttf": 12780,
+      "spill": 78,
+      "zone": "sector3b",
+      "x": 30.86,
+      "y": 50.9
+    },
+    {
+      "rank": 20,
+      "name": "Transportes metropolitanos do Porto",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 114,
+      "uniqueFinders": 114,
+      "pct": 32.5,
+      "ttf": 10849,
+      "spill": 75,
+      "zone": "sector3c",
+      "x": 65.85,
+      "y": 41.37
+    },
+    {
+      "rank": 21,
+      "name": "Get 2C",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 111,
+      "uniqueFinders": 111,
+      "pct": 31.6,
+      "ttf": 15934,
+      "spill": 93,
+      "zone": "sector3a",
+      "x": 22.25,
+      "y": 60.05
+    },
+    {
+      "rank": 22,
+      "name": "67",
+      "booth": "",
+      "owner": "AndreewEFN",
+      "ownerAddress": "0xab5d80d7121f8640da041b7a9dfdf72f41c3846c",
+      "finds": 109,
+      "uniqueFinders": 109,
+      "pct": 31.1,
+      "ttf": 15089,
+      "spill": 83,
+      "zone": "sector3b",
+      "x": 34.74,
+      "y": 10.15
+    },
+    {
+      "rank": 23,
+      "name": "Ind\u00fastria e Ambiente",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 108,
+      "uniqueFinders": 108,
+      "pct": 30.8,
+      "ttf": 97217,
+      "spill": 95,
+      "zone": "sector3a",
+      "x": 21.57,
+      "y": 72.86
+    },
+    {
+      "rank": 24,
+      "name": "Eureciclo.pt",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 107,
+      "uniqueFinders": 107,
+      "pct": 30.5,
+      "ttf": 96581,
+      "spill": 87,
+      "zone": "sector3a",
+      "x": 22.67,
+      "y": 49.43
+    },
+    {
+      "rank": 25,
+      "name": "Novoverde",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 106,
+      "uniqueFinders": 106,
+      "pct": 30.2,
+      "ttf": 97680,
+      "spill": 89,
+      "zone": "sector3b",
+      "x": 41.37,
+      "y": 77.76
+    },
+    {
+      "rank": 26,
+      "name": "Ambergo",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 105,
+      "uniqueFinders": 105,
+      "pct": 29.9,
+      "ttf": 101872,
+      "spill": 90,
+      "zone": "sector3b",
+      "x": 29.56,
+      "y": 74.21
+    },
+    {
+      "rank": 27,
+      "name": "Geosat",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 103,
+      "uniqueFinders": 103,
+      "pct": 29.3,
+      "ttf": 97807,
+      "spill": 89,
+      "zone": "sector3c",
+      "x": 63.04,
+      "y": 73.49
+    },
+    {
+      "rank": 28,
+      "name": "Porto de Lisboa",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 99,
+      "uniqueFinders": 99,
+      "pct": 28.2,
+      "ttf": 32236,
+      "spill": 95,
+      "zone": "sector3a",
+      "x": 20.48,
+      "y": 12.94
+    },
+    {
+      "rank": 29,
+      "name": "Incycles bike group",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 99,
+      "uniqueFinders": 99,
+      "pct": 28.2,
+      "ttf": 98663,
+      "spill": 87,
+      "zone": "sector3c",
+      "x": 73.25,
+      "y": 35.83
+    },
+    {
+      "rank": 30,
+      "name": "MYGON",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 98,
+      "uniqueFinders": 98,
+      "pct": 27.9,
+      "ttf": 26958,
+      "spill": 95,
+      "zone": "sector3d",
+      "x": 77.37,
+      "y": 76.78
+    },
+    {
+      "rank": 31,
+      "name": "Invest Madeira",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 97,
+      "uniqueFinders": 97,
+      "pct": 27.6,
+      "ttf": 11956,
+      "spill": 87,
+      "zone": "sector3b",
+      "x": 26.59,
+      "y": 23.69
+    },
+    {
+      "rank": 32,
+      "name": "ENERMETER",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 97,
+      "uniqueFinders": 97,
+      "pct": 27.6,
+      "ttf": 101047,
+      "spill": 88,
+      "zone": "sector3b",
+      "x": 35.44,
+      "y": 77.7
+    },
+    {
+      "rank": 33,
+      "name": "Main Stage",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 97,
+      "uniqueFinders": 97,
+      "pct": 27.6,
+      "ttf": 35037,
+      "spill": 96,
+      "zone": "ze",
+      "x": 64.1,
+      "y": 84.78
+    },
+    {
+      "rank": 34,
+      "name": "Via verde",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 96,
+      "uniqueFinders": 96,
+      "pct": 27.4,
+      "ttf": 31025,
+      "spill": 91,
+      "zone": "sector3c",
+      "x": 71.76,
+      "y": 73.28
+    },
+    {
+      "rank": 35,
+      "name": "Amadora",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 96,
+      "uniqueFinders": 96,
+      "pct": 27.4,
+      "ttf": 98713,
+      "spill": 72,
+      "zone": "sector3b",
+      "x": 37.37,
+      "y": 24.1
+    },
+    {
+      "rank": 36,
+      "name": "ReISSWOLF",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 95,
+      "uniqueFinders": 95,
+      "pct": 27.1,
+      "ttf": 11106,
+      "spill": 88,
+      "zone": "sector3c",
+      "x": 70.59,
+      "y": 64.69
+    },
+    {
+      "rank": 37,
+      "name": "Joana Welcome!",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 94,
+      "uniqueFinders": 94,
+      "pct": 26.8,
+      "ttf": 22280,
+      "spill": 87,
+      "zone": "stages",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "rank": 38,
+      "name": "AminhaTerra",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 90,
+      "uniqueFinders": 90,
+      "pct": 25.6,
+      "ttf": 103147,
+      "spill": 98,
+      "zone": "sector3d",
+      "x": 76.72,
+      "y": 72.7
+    },
+    {
+      "rank": 39,
+      "name": "Wireless logi",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 88,
+      "uniqueFinders": 88,
+      "pct": 25.1,
+      "ttf": 106478,
+      "spill": 97,
+      "zone": "sector3d",
+      "x": 76.51,
+      "y": 70.33
+    },
+    {
+      "rank": 40,
+      "name": "Mafra",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 88,
+      "uniqueFinders": 88,
+      "pct": 25.1,
+      "ttf": 12651,
+      "spill": 74,
+      "zone": "sector3b",
+      "x": 36.27,
+      "y": 41.2
+    },
+    {
+      "rank": 41,
+      "name": "Valorpneu",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 87,
+      "uniqueFinders": 87,
+      "pct": 24.8,
+      "ttf": 102967,
+      "spill": 77,
+      "zone": "sector3b",
+      "x": 39.99,
+      "y": 49.13
+    },
+    {
+      "rank": 42,
+      "name": "RESOPARK",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 87,
+      "uniqueFinders": 87,
+      "pct": 24.8,
+      "ttf": 10769,
+      "spill": 75,
+      "zone": "sector3c",
+      "x": 72.33,
+      "y": 29.4
+    },
+    {
+      "rank": 43,
+      "name": "Microcubo",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 87,
+      "uniqueFinders": 87,
+      "pct": 24.8,
+      "ttf": 101280,
+      "spill": 92,
+      "zone": "ze",
+      "x": 29.48,
+      "y": 79.42
+    },
+    {
+      "rank": 44,
+      "name": "Sopinal",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 87,
+      "uniqueFinders": 87,
+      "pct": 24.8,
+      "ttf": 96799,
+      "spill": 92,
+      "zone": "sector3b",
+      "x": 28.84,
+      "y": 58.74
+    },
+    {
+      "rank": 45,
+      "name": "City as a platform",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 86,
+      "uniqueFinders": 86,
+      "pct": 24.5,
+      "ttf": 99948,
+      "spill": 99,
+      "zone": "sector3c",
+      "x": 53.31,
+      "y": 77.39
+    },
+    {
+      "rank": 46,
+      "name": "Smart Energy Lab",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 85,
+      "uniqueFinders": 85,
+      "pct": 24.2,
+      "ttf": 100488,
+      "spill": 79,
+      "zone": "sector3c",
+      "x": 62.15,
+      "y": 51.84
+    },
+    {
+      "rank": 47,
+      "name": "Tag Andr\u00e9",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 84,
+      "uniqueFinders": 84,
+      "pct": 23.9,
+      "ttf": 26660,
+      "spill": 88,
+      "zone": "stages",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "rank": 48,
+      "name": "Solte\u00e1fego",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 83,
+      "uniqueFinders": 83,
+      "pct": 23.6,
+      "ttf": 12086,
+      "spill": 81,
+      "zone": "sector3c",
+      "x": 55.54,
+      "y": 33.69
+    },
+    {
+      "rank": 49,
+      "name": "Bling Energy",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 82,
+      "uniqueFinders": 82,
+      "pct": 23.4,
+      "ttf": 99162,
+      "spill": 94,
+      "zone": "ze",
+      "x": 26.26,
+      "y": 78.7
+    },
+    {
+      "rank": 50,
+      "name": "TECNOVERITAS",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 81,
+      "uniqueFinders": 81,
+      "pct": 23.1,
+      "ttf": 25367,
+      "spill": 77,
+      "zone": "sector3b",
+      "x": 36.72,
+      "y": 43.91
+    },
+    {
+      "rank": 51,
+      "name": "blueOASIS",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 81,
+      "uniqueFinders": 81,
+      "pct": 23.1,
+      "ttf": 12695,
+      "spill": 74,
+      "zone": "sector3b",
+      "x": 40.47,
+      "y": 41.27
+    },
+    {
+      "rank": 52,
+      "name": "Lisboa Inteligente",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 77,
+      "uniqueFinders": 77,
+      "pct": 21.9,
+      "ttf": 96341,
+      "spill": 83,
+      "zone": "sector3a",
+      "x": 22.21,
+      "y": 42.13
+    },
+    {
+      "rank": 53,
+      "name": "Tens bu\u00e9 aura chavalo",
+      "booth": "",
+      "owner": "AfonsoNunes",
+      "ownerAddress": "0xb7705ab7210797374979f169af0644d6cab4dd1b",
+      "finds": 77,
+      "uniqueFinders": 77,
+      "pct": 21.9,
+      "ttf": 15194,
+      "spill": 96,
+      "zone": "sector3a",
+      "x": 21.47,
+      "y": 11.17
+    },
+    {
+      "rank": 54,
+      "name": "Lipor",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 75,
+      "uniqueFinders": 75,
+      "pct": 21.4,
+      "ttf": 97016,
+      "spill": 88,
+      "zone": "sector3b",
+      "x": 27.7,
+      "y": 72.02
+    },
+    {
+      "rank": 55,
+      "name": "RESOPRE",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 75,
+      "uniqueFinders": 75,
+      "pct": 21.4,
+      "ttf": 96987,
+      "spill": 97,
+      "zone": "sector3a",
+      "x": 23.04,
+      "y": 69.09
+    },
+    {
+      "rank": 56,
+      "name": "ENTI",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 74,
+      "uniqueFinders": 74,
+      "pct": 21.1,
+      "ttf": 12247,
+      "spill": 89,
+      "zone": "sector3b",
+      "x": 42.63,
+      "y": 24.47
+    },
+    {
+      "rank": 57,
+      "name": "Seixal",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 73,
+      "uniqueFinders": 73,
+      "pct": 20.8,
+      "ttf": 98286,
+      "spill": 84,
+      "zone": "sector3b",
+      "x": 38.68,
+      "y": 32.15
+    },
+    {
+      "rank": 58,
+      "name": "Lusomatrix",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 72,
+      "uniqueFinders": 72,
+      "pct": 20.5,
+      "ttf": 102015,
+      "spill": 92,
+      "zone": "sector3c",
+      "x": 68.57,
+      "y": 67.17
+    },
+    {
+      "rank": 59,
+      "name": "Uau Semsimbra",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 69,
+      "uniqueFinders": 69,
+      "pct": 19.7,
+      "ttf": 14880,
+      "spill": 87,
+      "zone": "sector3a",
+      "x": 19.65,
+      "y": 27.92
+    },
+    {
+      "rank": 60,
+      "name": "FilmBase",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 69,
+      "uniqueFinders": 69,
+      "pct": 19.7,
+      "ttf": 183884,
+      "spill": 83,
+      "zone": "sector3c",
+      "x": 63.57,
+      "y": 10.52
+    },
+    {
+      "rank": 61,
+      "name": "BEE 2 Solutions",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 68,
+      "uniqueFinders": 68,
+      "pct": 19.4,
+      "ttf": 12686,
+      "spill": 85,
+      "zone": "sector3b",
+      "x": 41.3,
+      "y": 71.2
+    },
+    {
+      "rank": 62,
+      "name": "Prio",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 67,
+      "uniqueFinders": 67,
+      "pct": 19.1,
+      "ttf": 12927,
+      "spill": 73,
+      "zone": "sector3b",
+      "x": 40.74,
+      "y": 66.34
+    },
+    {
+      "rank": 63,
+      "name": "Eit mobility",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 66,
+      "uniqueFinders": 66,
+      "pct": 18.8,
+      "ttf": 93443,
+      "spill": 85,
+      "zone": "sector3c",
+      "x": 57.68,
+      "y": 43.17
+    },
+    {
+      "rank": 64,
+      "name": "Lasso",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 63,
+      "uniqueFinders": 63,
+      "pct": 17.9,
+      "ttf": 101426,
+      "spill": 81,
+      "zone": "sector3b",
+      "x": 30.51,
+      "y": 61.73
+    },
+    {
+      "rank": 65,
+      "name": "Thunder Eye",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 61,
+      "uniqueFinders": 61,
+      "pct": 17.4,
+      "ttf": 11910,
+      "spill": 95,
+      "zone": "sector3d",
+      "x": 76.31,
+      "y": 53.42
+    },
+    {
+      "rank": 66,
+      "name": "Munic\u00edpia",
+      "booth": "",
+      "owner": "NunoVieira",
+      "ownerAddress": "0x3bb9c5b348da6d6c49d50422adf55724241075e8",
+      "finds": 61,
+      "uniqueFinders": 61,
+      "pct": 17.4,
+      "ttf": 118579,
+      "spill": 79,
+      "zone": "sector3c",
+      "x": 67.8,
+      "y": 55.21
+    },
+    {
+      "rank": 67,
+      "name": "Floema",
+      "booth": "",
+      "owner": "Avataris12",
+      "ownerAddress": "0x90af37c474af52f07eb8889efe40ef8bbb50e27c",
+      "finds": 60,
+      "uniqueFinders": 60,
+      "pct": 17.1,
+      "ttf": 16398,
+      "spill": 85,
+      "zone": "sector3b",
+      "x": 29.9,
+      "y": 55.26
+    },
+    {
+      "rank": 68,
+      "name": "Figueira Smart City",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 60,
+      "uniqueFinders": 60,
+      "pct": 17.1,
+      "ttf": 12354,
+      "spill": 72,
+      "zone": "sector3b",
+      "x": 32.02,
+      "y": 34.96
+    },
+    {
+      "rank": 69,
+      "name": "Ambiconcept",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 59,
+      "uniqueFinders": 59,
+      "pct": 16.8,
+      "ttf": 14101,
+      "spill": 86,
+      "zone": "sector3b",
+      "x": 42.56,
+      "y": 57.03
+    },
+    {
+      "rank": 70,
+      "name": "Navegante",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 58,
+      "uniqueFinders": 58,
+      "pct": 16.5,
+      "ttf": 12542,
+      "spill": 83,
+      "zone": "sector3c",
+      "x": 65.77,
+      "y": 28.14
+    },
+    {
+      "rank": 71,
+      "name": "Meo",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 57,
+      "uniqueFinders": 57,
+      "pct": 16.2,
+      "ttf": 102225,
+      "spill": 91,
+      "zone": "sector3c",
+      "x": 54.68,
+      "y": 66.37
+    },
+    {
+      "rank": 72,
+      "name": "Qevo Queue Evolution",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 57,
+      "uniqueFinders": 57,
+      "pct": 16.2,
+      "ttf": 19094,
+      "spill": 91,
+      "zone": "sector3c",
+      "x": 71.62,
+      "y": 67.27
+    },
+    {
+      "rank": 73,
+      "name": "Sinal Safe",
+      "booth": "",
+      "owner": "Tiago",
+      "ownerAddress": "0xf1d1fe102939ffa5151017adbf8087d103b3fd01",
+      "finds": 57,
+      "uniqueFinders": 57,
+      "pct": 16.2,
+      "ttf": 16658,
+      "spill": 77,
+      "zone": "sector3c",
+      "x": 72.85,
+      "y": 41.11
+    },
+    {
+      "rank": 74,
+      "name": "Autoridade nacional seguran\u00e7a rodovi\u00e1ria",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 55,
+      "uniqueFinders": 55,
+      "pct": 15.7,
+      "ttf": 99853,
+      "spill": 76,
+      "zone": "sector3c",
+      "x": 65.08,
+      "y": 17.2
+    },
+    {
+      "rank": 75,
+      "name": "Emerg\u00eancia",
+      "booth": "",
+      "owner": "Leo18alves",
+      "ownerAddress": "0xa1e1a40de5b045eb4200f78e94313584899de97e",
+      "finds": 55,
+      "uniqueFinders": 55,
+      "pct": 15.7,
+      "ttf": 118766,
+      "spill": 95,
+      "zone": "ze",
+      "x": 49.12,
+      "y": 80.57
+    },
+    {
+      "rank": 76,
+      "name": "Tag em movimento 1000 points",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 54,
+      "uniqueFinders": 54,
+      "pct": 15.4,
+      "ttf": 30404,
+      "spill": 83,
+      "zone": "stages",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "rank": 77,
+      "name": "oi",
+      "booth": "",
+      "owner": "Marta",
+      "ownerAddress": "0xb721390efc87e8efd7fe37a80ea773fcad50bf7e",
+      "finds": 54,
+      "uniqueFinders": 54,
+      "pct": 15.4,
+      "ttf": 108813,
+      "spill": 94,
+      "zone": "sector3d",
+      "x": 77.17,
+      "y": 43.41
+    },
+    {
+      "rank": 78,
+      "name": "Smart",
+      "booth": "",
+      "owner": "Manuel",
+      "ownerAddress": "0x2969b2a595b933b020f7c47b3774205e4315d037",
+      "finds": 50,
+      "uniqueFinders": 50,
+      "pct": 14.2,
+      "ttf": 16970,
+      "spill": 78,
+      "zone": "sector3d",
+      "x": 88.31,
+      "y": 44.84
+    },
+    {
+      "rank": 79,
+      "name": "Bus",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 50,
+      "uniqueFinders": 50,
+      "pct": 14.2,
+      "ttf": 185933,
+      "spill": 86,
+      "zone": "sector3c",
+      "x": 52.43,
+      "y": 8.72
+    },
+    {
+      "rank": 80,
+      "name": "Certoma",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 48,
+      "uniqueFinders": 48,
+      "pct": 13.7,
+      "ttf": 15171,
+      "spill": 83,
+      "zone": "sector3b",
+      "x": 34.92,
+      "y": 68.2
+    },
+    {
+      "rank": 81,
+      "name": "\u00d3leo alimentar usado",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 47,
+      "uniqueFinders": 47,
+      "pct": 13.4,
+      "ttf": 115642,
+      "spill": 85,
+      "zone": "sector3b",
+      "x": 27.7,
+      "y": 64.82
+    },
+    {
+      "rank": 82,
+      "name": "Instituto telecomunica\u00e7\u00f5es",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 47,
+      "uniqueFinders": 47,
+      "pct": 13.4,
+      "ttf": 186266,
+      "spill": 85,
+      "zone": "sector3c",
+      "x": 74.32,
+      "y": 15.08
+    },
+    {
+      "rank": 83,
+      "name": "VETUREQ",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 46,
+      "uniqueFinders": 46,
+      "pct": 13.1,
+      "ttf": 104250,
+      "spill": 83,
+      "zone": "sector3b",
+      "x": 27.9,
+      "y": 67.6
+    },
+    {
+      "rank": 84,
+      "name": "Door tag!",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 43,
+      "uniqueFinders": 43,
+      "pct": 12.3,
+      "ttf": 185535,
+      "spill": 98,
+      "zone": "sector3d",
+      "x": 77.13,
+      "y": 21.53
+    },
+    {
+      "rank": 85,
+      "name": "Cyberoperations",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 42,
+      "uniqueFinders": 42,
+      "pct": 12.0,
+      "ttf": 112044,
+      "spill": 88,
+      "zone": "sector3b",
+      "x": 34.0,
+      "y": 23.59
+    },
+    {
+      "rank": 86,
+      "name": "Tesla",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 42,
+      "uniqueFinders": 42,
+      "pct": 12.0,
+      "ttf": 186226,
+      "spill": 86,
+      "zone": "sector3c",
+      "x": 73.28,
+      "y": 26.36
+    },
+    {
+      "rank": 87,
+      "name": "PJM",
+      "booth": "",
+      "owner": "Pedro Matos",
+      "ownerAddress": "0x39bb06f27d2054e25ce3b7f44e450e0487ffa5de",
+      "finds": 41,
+      "uniqueFinders": 41,
+      "pct": 11.7,
+      "ttf": 118766,
+      "spill": 90,
+      "zone": "ze",
+      "x": 46.66,
+      "y": 82.46
+    },
+    {
+      "rank": 88,
+      "name": "Hanwha",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 40,
+      "uniqueFinders": 40,
+      "pct": 11.4,
+      "ttf": 13961,
+      "spill": 92,
+      "zone": "sector3c",
+      "x": 68.48,
+      "y": 52.86
+    },
+    {
+      "rank": 89,
+      "name": "Meet the Dev",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 38,
+      "uniqueFinders": 38,
+      "pct": 10.8,
+      "ttf": 24833,
+      "spill": 82,
+      "zone": "stages",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "rank": 90,
+      "name": "Wavecom",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 35,
+      "uniqueFinders": 35,
+      "pct": 10.0,
+      "ttf": 101083,
+      "spill": 91,
+      "zone": "sector3c",
+      "x": 62.49,
+      "y": 64.66
+    },
+    {
+      "rank": 91,
+      "name": "6 7",
+      "booth": "",
+      "owner": "Diego Gomes",
+      "ownerAddress": "0x0841131d4a82ba59d2be152fcb5d2a1f70fc091c",
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 8.8,
+      "ttf": 190301,
+      "spill": 71,
+      "zone": "sector3c",
+      "x": 61.27,
+      "y": 11.32
+    },
+    {
+      "rank": 92,
+      "name": "Find me",
+      "booth": "",
+      "owner": "MartimSilva",
+      "ownerAddress": "0x9b8634aedfa80b8c3bb5b08d99b5d81f34aeea45",
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 8.0,
+      "ttf": 118485,
+      "spill": 86,
+      "zone": "sector3b",
+      "x": 28.47,
+      "y": 21.39
+    },
+    {
+      "rank": 93,
+      "name": "7.margarida :)",
+      "booth": "",
+      "owner": "Guida",
+      "ownerAddress": "0x7b2613058a7357c79ecd4b2cf4df943b22e52908",
+      "finds": 26,
+      "uniqueFinders": 26,
+      "pct": 7.4,
+      "ttf": 189770,
+      "spill": 73,
+      "zone": "sector3a",
+      "x": 17.86,
+      "y": 28.9
+    },
+    {
+      "rank": 94,
+      "name": "Hello!",
+      "booth": "",
+      "owner": "biasousa",
+      "ownerAddress": "0xf2046e241bcf7d7dc82b45d7f952b541f784fa4a",
+      "finds": 25,
+      "uniqueFinders": 25,
+      "pct": 7.1,
+      "ttf": 190000,
+      "spill": 88,
+      "zone": "sector3a",
+      "x": 20.5,
+      "y": 23.68
+    },
+    {
+      "rank": 95,
+      "name": "Esgotado",
+      "booth": "",
+      "owner": "Adilton",
+      "ownerAddress": "0xdf88b087b7f689d84859435acd4442be556e4b68",
+      "finds": 21,
+      "uniqueFinders": 21,
+      "pct": 6.0,
+      "ttf": 190355,
+      "spill": 62,
+      "zone": "sector3a",
+      "x": 17.82,
+      "y": 22.95
+    },
+    {
+      "rank": 96,
+      "name": "Sei l\u00e1 tag",
+      "booth": "",
+      "owner": "DanielaPimenta",
+      "ownerAddress": "0xef3ac8024522ed0433008a4f2064cab9fa8cd6ec",
+      "finds": 21,
+      "uniqueFinders": 21,
+      "pct": 6.0,
+      "ttf": 190096,
+      "spill": 76,
+      "zone": "sector3c",
+      "x": 73.2,
+      "y": 11.34
+    },
+    {
+      "rank": 97,
+      "name": "Hello bros",
+      "booth": "",
+      "owner": "Madalena",
+      "ownerAddress": "0xc3866e74d29e2d7b53ebedd6467a20696891ba03",
+      "finds": 19,
+      "uniqueFinders": 19,
+      "pct": 5.4,
+      "ttf": 189957,
+      "spill": 74,
+      "zone": "sector3a",
+      "x": 18.31,
+      "y": 22.32
+    },
+    {
+      "rank": 98,
+      "name": "Painel Solar Bling",
+      "booth": "",
+      "owner": "ritabling",
+      "ownerAddress": "0x876cb61843bd198898044c039090c71c0a797711",
+      "finds": 18,
+      "uniqueFinders": 18,
+      "pct": 5.1,
+      "ttf": 198573,
+      "spill": 89,
+      "zone": "ze",
+      "x": 100.0,
+      "y": 46.22
+    },
+    {
+      "rank": 99,
+      "name": "Out of bound",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 11,
+      "uniqueFinders": 11,
+      "pct": 3.1,
+      "ttf": 198245,
+      "spill": 100,
+      "zone": "sector3d",
+      "x": 83.12,
+      "y": 36.44
+    },
+    {
+      "rank": 100,
+      "name": "O mais complicado",
+      "booth": "",
+      "owner": "MartimSilva- 2round",
+      "ownerAddress": "0x050a880e560902af04c0009bcbeae2ecec315883",
+      "finds": 7,
+      "uniqueFinders": 7,
+      "pct": 2.0,
+      "ttf": 199078,
+      "spill": 86,
+      "zone": "sector3c",
+      "x": 59.04,
+      "y": 51.89
+    },
+    {
+      "rank": 101,
+      "name": "Upside down",
+      "booth": "",
+      "owner": "jodamz",
+      "ownerAddress": "0x15b9147bed85b52b75c702e534fbbe1663d09d53",
+      "finds": 7,
+      "uniqueFinders": 7,
+      "pct": 2.0,
+      "ttf": 198521,
+      "spill": 71,
+      "zone": "sector3d",
+      "x": 95.15,
+      "y": 56.49
+    },
+    {
+      "rank": 102,
+      "name": "Outside",
+      "booth": "",
+      "owner": null,
+      "ownerAddress": null,
+      "finds": 4,
+      "uniqueFinders": 4,
+      "pct": 1.1,
+      "ttf": 198171,
+      "spill": 100,
+      "zone": "stages",
+      "x": 91.74,
+      "y": 5.5
+    },
+    {
+      "rank": 103,
+      "name": "Tag #113",
+      "booth": "",
+      "owner": "Jasmim",
+      "ownerAddress": "0x4691a91bafbbc36c1021a79b5e175d0952da7b08",
+      "finds": 1,
+      "uniqueFinders": 1,
+      "pct": 0.3,
+      "ttf": 190089,
+      "spill": 0,
+      "zone": "stages",
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "findsHistogram": [
+    {
+      "label": "0\u201350",
+      "count": 24
+    },
+    {
+      "label": "50\u2013100",
+      "count": 52
+    },
+    {
+      "label": "100\u2013200",
+      "count": 26
+    },
+    {
+      "label": "200\u2013350",
+      "count": 1
+    },
+    {
+      "label": "350\u2013500",
+      "count": 0
+    },
+    {
+      "label": "500\u2013700",
+      "count": 0
+    },
+    {
+      "label": "700\u20131000",
+      "count": 0
+    }
+  ],
+  "stages": [
+    {
+      "id": "stage2",
+      "name": "Main Stage",
+      "talks": [
+        {
+          "title": "Sess\u00e3o de Abertura",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 9.5,
+          "primary": 0,
+          "grace": 1,
+          "unique": 1,
+          "qrCodeId": "pscs26-260512-main-sessao-de-abertura"
+        },
+        {
+          "title": "Confer\u00eancia das Autarquias, Empresas e Cidad\u00e3os",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 9.75,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-main-conferencia-das-autarquias-empre"
+        },
+        {
+          "title": "Pr\u00e9mios Ant\u00f3nio Almeida Henriques",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 11.75,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-main-premios-antonio-almeida-henrique"
+        },
+        {
+          "title": "Governa\u00e7\u00e3o Inteligente e Territ\u00f3rios Humanizados (Oeste e Vale do Tejo)",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-main-governacao-inteligente-e-territo"
+        },
+        {
+          "title": "Intelig\u00eancia Territorial ao Servi\u00e7o da Resili\u00eancia",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 10.0,
+          "primary": 0,
+          "grace": 1,
+          "unique": 1,
+          "qrCodeId": "pscs26-260513-main-inteligencia-territorial-ao-serv"
+        },
+        {
+          "title": "Construindo o futuro da intelig\u00eancia urbana com g\u00e9meos digitais",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260513-main-construindo-o-futuro-da-intelige"
+        },
+        {
+          "title": "Portugal no Caminho da Utiliza\u00e7\u00e3o de Dados com Soberania",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 15.75,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260513-main-portugal-no-caminho-da-utilizaca"
+        },
+        {
+          "title": "Dos Dados \u00e0 A\u00e7\u00e3o: IA e Decis\u00e3o em Territ\u00f3rios Inteligentes e Humanizados",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 10.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-main-dos-dados-a-acao-ia-e-decisao-em"
+        },
+        {
+          "title": "Expresso da Meia-Noite",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-main-expresso-da-meia-noite"
+        }
+      ]
+    },
+    {
+      "id": "stage3",
+      "name": "Industry Stage",
+      "talks": [
+        {
+          "title": "BMW Talk \u2014 European Automotive Regulation",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 10.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-industry-bmw-talk-european-automotive-reg"
+        },
+        {
+          "title": "A IA na gest\u00e3o e planeamento urbano",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 11.5,
+          "primary": 0,
+          "grace": 1,
+          "unique": 1,
+          "qrCodeId": "pscs26-260512-industry-a-ia-na-gestao-e-planeamento-urb"
+        },
+        {
+          "title": "Urban Shark Tank",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 13.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-industry-urban-shark-tank"
+        },
+        {
+          "title": "Gest\u00e3o e Saneamento Urban\u00edstico Online com IA",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-industry-gestao-e-saneamento-urbanistico-"
+        },
+        {
+          "title": "Transforma\u00e7\u00e3o Digital & Dados para a Cidade",
+          "speaker": "",
+          "day": "2026-05-12",
+          "start": 15.25,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260512-industry-transformacao-digital-dados-para"
+        },
+        {
+          "title": "Mobilidade Inteligente & Gest\u00e3o do Espa\u00e7o P\u00fablico",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 10.0,
+          "primary": 0,
+          "grace": 3,
+          "unique": 3,
+          "qrCodeId": "pscs26-260513-industry-mobilidade-inteligente-gestao-do"
+        },
+        {
+          "title": "Smart Port Lx \u2014 Porto Inteligente, Cidade Sustent\u00e1vel",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 13.0,
+          "primary": 0,
+          "grace": 2,
+          "unique": 2,
+          "qrCodeId": "pscs26-260513-industry-smart-port-lx-porto-inteligente-"
+        },
+        {
+          "title": "Sustentabilidade, \u00c1gua, Energia & Economia Circular",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 2,
+          "unique": 2,
+          "qrCodeId": "pscs26-260513-industry-sustentabilidade-agua-energia-ec"
+        },
+        {
+          "title": "From fragmented data to actionable insights \u2014 building mobility observatories",
+          "speaker": "",
+          "day": "2026-05-13",
+          "start": 15.5,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260513-industry-from-fragmented-data-to-actionab"
+        },
+        {
+          "title": "Intelig\u00eancia Artificial nos Edif\u00edcios",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 9.25,
+          "primary": 0,
+          "grace": 2,
+          "unique": 2,
+          "qrCodeId": "pscs26-260514-industry-inteligencia-artificial-nos-edif"
+        },
+        {
+          "title": "Territ\u00f3rios Inteligentes e Seguros: IA, Redes Resilientes e Ciberseguran\u00e7a",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 10.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-industry-territorios-inteligentes-e-segur"
+        },
+        {
+          "title": "Governar com Intelig\u00eancia Artificial \u2014 novo paradigma para cidades",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 11.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-industry-governar-com-inteligencia-artifi"
+        },
+        {
+          "title": "Produtos Perigosos em Cidades Inteligentes",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 13.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-industry-produtos-perigosos-em-cidades-in"
+        },
+        {
+          "title": "Governan\u00e7a, Transpar\u00eancia & Inova\u00e7\u00e3o P\u00fablica",
+          "speaker": "",
+          "day": "2026-05-14",
+          "start": 14.0,
+          "primary": 0,
+          "grace": 0,
+          "unique": 0,
+          "qrCodeId": "pscs26-260514-industry-governanca-transparencia-inovaca"
+        }
+      ]
+    },
+    {
+      "id": "forum",
+      "name": "Partnership Forum",
+      "talks": [],
+      "cancelled": true,
+      "cancelledReason": "Organizer opted out of QR instrumentation for this stage."
+    }
+  ],
+  "timeline": [
+    {
+      "h": 0,
+      "day": 0,
+      "localHour": 0,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 1,
+      "day": 0,
+      "localHour": 1,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 2,
+      "day": 0,
+      "localHour": 2,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 3,
+      "day": 0,
+      "localHour": 3,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 4,
+      "day": 0,
+      "localHour": 4,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 5,
+      "day": 0,
+      "localHour": 5,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 6,
+      "day": 0,
+      "localHour": 6,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 7,
+      "day": 0,
+      "localHour": 7,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 8,
+      "day": 0,
+      "localHour": 8,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 9,
+      "day": 0,
+      "localHour": 9,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 10,
+      "day": 0,
+      "localHour": 10,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 11,
+      "day": 0,
+      "localHour": 11,
+      "main": 1,
+      "industry": 0,
+      "forum": 0,
+      "finds": 9,
+      "merch": 0,
+      "total": 1
+    },
+    {
+      "h": 12,
+      "day": 0,
+      "localHour": 12,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 407,
+      "merch": 1,
+      "total": 0
+    },
+    {
+      "h": 13,
+      "day": 0,
+      "localHour": 13,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 231,
+      "merch": 25,
+      "total": 0
+    },
+    {
+      "h": 14,
+      "day": 0,
+      "localHour": 14,
+      "main": 0,
+      "industry": 1,
+      "forum": 0,
+      "finds": 31,
+      "merch": 8,
+      "total": 1
+    },
+    {
+      "h": 15,
+      "day": 0,
+      "localHour": 15,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 77,
+      "merch": 2,
+      "total": 0
+    },
+    {
+      "h": 16,
+      "day": 0,
+      "localHour": 16,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 387,
+      "merch": 12,
+      "total": 0
+    },
+    {
+      "h": 17,
+      "day": 0,
+      "localHour": 17,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 112,
+      "merch": 38,
+      "total": 0
+    },
+    {
+      "h": 18,
+      "day": 0,
+      "localHour": 18,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 112,
+      "merch": 19,
+      "total": 0
+    },
+    {
+      "h": 19,
+      "day": 0,
+      "localHour": 19,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 18,
+      "merch": 3,
+      "total": 0
+    },
+    {
+      "h": 20,
+      "day": 0,
+      "localHour": 20,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 21,
+      "day": 0,
+      "localHour": 21,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 22,
+      "day": 0,
+      "localHour": 22,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 23,
+      "day": 0,
+      "localHour": 23,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 24,
+      "day": 1,
+      "localHour": 0,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 25,
+      "day": 1,
+      "localHour": 1,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 26,
+      "day": 1,
+      "localHour": 2,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 27,
+      "day": 1,
+      "localHour": 3,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 28,
+      "day": 1,
+      "localHour": 4,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 29,
+      "day": 1,
+      "localHour": 5,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 30,
+      "day": 1,
+      "localHour": 6,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 31,
+      "day": 1,
+      "localHour": 7,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 32,
+      "day": 1,
+      "localHour": 8,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 33,
+      "day": 1,
+      "localHour": 9,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 34,
+      "day": 1,
+      "localHour": 10,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 3,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 35,
+      "day": 1,
+      "localHour": 11,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 59,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 36,
+      "day": 1,
+      "localHour": 12,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 162,
+      "merch": 2,
+      "total": 0
+    },
+    {
+      "h": 37,
+      "day": 1,
+      "localHour": 13,
+      "main": 1,
+      "industry": 3,
+      "forum": 0,
+      "finds": 214,
+      "merch": 7,
+      "total": 4
+    },
+    {
+      "h": 38,
+      "day": 1,
+      "localHour": 14,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 183,
+      "merch": 12,
+      "total": 0
+    },
+    {
+      "h": 39,
+      "day": 1,
+      "localHour": 15,
+      "main": 0,
+      "industry": 2,
+      "forum": 0,
+      "finds": 308,
+      "merch": 22,
+      "total": 2
+    },
+    {
+      "h": 40,
+      "day": 1,
+      "localHour": 16,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 573,
+      "merch": 29,
+      "total": 0
+    },
+    {
+      "h": 41,
+      "day": 1,
+      "localHour": 17,
+      "main": 0,
+      "industry": 2,
+      "forum": 0,
+      "finds": 499,
+      "merch": 52,
+      "total": 2
+    },
+    {
+      "h": 42,
+      "day": 1,
+      "localHour": 18,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 106,
+      "merch": 39,
+      "total": 0
+    },
+    {
+      "h": 43,
+      "day": 1,
+      "localHour": 19,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 3,
+      "merch": 1,
+      "total": 0
+    },
+    {
+      "h": 44,
+      "day": 1,
+      "localHour": 20,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 45,
+      "day": 1,
+      "localHour": 21,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 1,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 46,
+      "day": 1,
+      "localHour": 22,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 47,
+      "day": 1,
+      "localHour": 23,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 48,
+      "day": 2,
+      "localHour": 0,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 49,
+      "day": 2,
+      "localHour": 1,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 50,
+      "day": 2,
+      "localHour": 2,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 51,
+      "day": 2,
+      "localHour": 3,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 52,
+      "day": 2,
+      "localHour": 4,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 53,
+      "day": 2,
+      "localHour": 5,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 54,
+      "day": 2,
+      "localHour": 6,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 55,
+      "day": 2,
+      "localHour": 7,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 56,
+      "day": 2,
+      "localHour": 8,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 57,
+      "day": 2,
+      "localHour": 9,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 58,
+      "day": 2,
+      "localHour": 10,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 1,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 59,
+      "day": 2,
+      "localHour": 11,
+      "main": 0,
+      "industry": 2,
+      "forum": 0,
+      "finds": 599,
+      "merch": 8,
+      "total": 2
+    },
+    {
+      "h": 60,
+      "day": 2,
+      "localHour": 12,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 1600,
+      "merch": 72,
+      "total": 0
+    },
+    {
+      "h": 61,
+      "day": 2,
+      "localHour": 13,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 713,
+      "merch": 103,
+      "total": 0
+    },
+    {
+      "h": 62,
+      "day": 2,
+      "localHour": 14,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 254,
+      "merch": 62,
+      "total": 0
+    },
+    {
+      "h": 63,
+      "day": 2,
+      "localHour": 15,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 430,
+      "merch": 37,
+      "total": 0
+    },
+    {
+      "h": 64,
+      "day": 2,
+      "localHour": 16,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 740,
+      "merch": 69,
+      "total": 0
+    },
+    {
+      "h": 65,
+      "day": 2,
+      "localHour": 17,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 190,
+      "merch": 51,
+      "total": 0
+    },
+    {
+      "h": 66,
+      "day": 2,
+      "localHour": 18,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 101,
+      "merch": 22,
+      "total": 0
+    },
+    {
+      "h": 67,
+      "day": 2,
+      "localHour": 19,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 20,
+      "total": 0
+    },
+    {
+      "h": 68,
+      "day": 2,
+      "localHour": 20,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 69,
+      "day": 2,
+      "localHour": 21,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 70,
+      "day": 2,
+      "localHour": 22,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    },
+    {
+      "h": 71,
+      "day": 2,
+      "localHour": 23,
+      "main": 0,
+      "industry": 0,
+      "forum": 0,
+      "finds": 0,
+      "merch": 0,
+      "total": 0
+    }
+  ],
+  "skus": [
+    {
+      "sku": "M-030",
+      "name": "Lisboa Inteligente Wireless Charger",
+      "category": "Charger",
+      "minutesToSellout": 1519,
+      "units": 65,
+      "stock": 65,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 2.57,
+      "price": 1500,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778671940,
+          "n": 1
+        },
+        {
+          "t": 1778674979,
+          "n": 2
+        },
+        {
+          "t": 1778678018,
+          "n": 2
+        },
+        {
+          "t": 1778681057,
+          "n": 2
+        },
+        {
+          "t": 1778684096,
+          "n": 2
+        },
+        {
+          "t": 1778687135,
+          "n": 9
+        },
+        {
+          "t": 1778690174,
+          "n": 22
+        },
+        {
+          "t": 1778693213,
+          "n": 22
+        },
+        {
+          "t": 1778696252,
+          "n": 22
+        },
+        {
+          "t": 1778699291,
+          "n": 22
+        },
+        {
+          "t": 1778702330,
+          "n": 22
+        },
+        {
+          "t": 1778705369,
+          "n": 22
+        },
+        {
+          "t": 1778708408,
+          "n": 22
+        },
+        {
+          "t": 1778711447,
+          "n": 22
+        },
+        {
+          "t": 1778714486,
+          "n": 22
+        },
+        {
+          "t": 1778717525,
+          "n": 22
+        },
+        {
+          "t": 1778720564,
+          "n": 22
+        },
+        {
+          "t": 1778723603,
+          "n": 22
+        },
+        {
+          "t": 1778726642,
+          "n": 22
+        },
+        {
+          "t": 1778729681,
+          "n": 22
+        },
+        {
+          "t": 1778732720,
+          "n": 22
+        },
+        {
+          "t": 1778735759,
+          "n": 22
+        },
+        {
+          "t": 1778738798,
+          "n": 22
+        },
+        {
+          "t": 1778741837,
+          "n": 22
+        },
+        {
+          "t": 1778744876,
+          "n": 22
+        },
+        {
+          "t": 1778747915,
+          "n": 22
+        },
+        {
+          "t": 1778750954,
+          "n": 23
+        },
+        {
+          "t": 1778753993,
+          "n": 29
+        },
+        {
+          "t": 1778757032,
+          "n": 36
+        },
+        {
+          "t": 1778760071,
+          "n": 57
+        },
+        {
+          "t": 1778763110,
+          "n": 64
+        },
+        {
+          "t": 1778766149,
+          "n": 65
+        }
+      ],
+      "tokensExchanged": 71900
+    },
+    {
+      "sku": "M-007",
+      "name": "Data Visionaries Keychain",
+      "category": "Keychain",
+      "minutesToSellout": 3106,
+      "units": 59,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 1.14,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778584811,
+          "n": 1
+        },
+        {
+          "t": 1778591024,
+          "n": 3
+        },
+        {
+          "t": 1778597237,
+          "n": 3
+        },
+        {
+          "t": 1778603450,
+          "n": 12
+        },
+        {
+          "t": 1778609663,
+          "n": 13
+        },
+        {
+          "t": 1778615876,
+          "n": 13
+        },
+        {
+          "t": 1778622089,
+          "n": 13
+        },
+        {
+          "t": 1778628302,
+          "n": 13
+        },
+        {
+          "t": 1778634515,
+          "n": 13
+        },
+        {
+          "t": 1778640728,
+          "n": 13
+        },
+        {
+          "t": 1778646941,
+          "n": 13
+        },
+        {
+          "t": 1778653154,
+          "n": 13
+        },
+        {
+          "t": 1778659367,
+          "n": 13
+        },
+        {
+          "t": 1778665580,
+          "n": 13
+        },
+        {
+          "t": 1778671793,
+          "n": 13
+        },
+        {
+          "t": 1778678006,
+          "n": 13
+        },
+        {
+          "t": 1778684219,
+          "n": 15
+        },
+        {
+          "t": 1778690432,
+          "n": 15
+        },
+        {
+          "t": 1778696645,
+          "n": 15
+        },
+        {
+          "t": 1778702858,
+          "n": 15
+        },
+        {
+          "t": 1778709071,
+          "n": 15
+        },
+        {
+          "t": 1778715284,
+          "n": 15
+        },
+        {
+          "t": 1778721497,
+          "n": 15
+        },
+        {
+          "t": 1778727710,
+          "n": 15
+        },
+        {
+          "t": 1778733923,
+          "n": 15
+        },
+        {
+          "t": 1778740136,
+          "n": 15
+        },
+        {
+          "t": 1778746349,
+          "n": 15
+        },
+        {
+          "t": 1778752562,
+          "n": 15
+        },
+        {
+          "t": 1778758775,
+          "n": 30
+        },
+        {
+          "t": 1778764988,
+          "n": 40
+        },
+        {
+          "t": 1778771201,
+          "n": 58
+        },
+        {
+          "t": 1778777414,
+          "n": 59
+        }
+      ],
+      "tokensExchanged": 24700
+    },
+    {
+      "sku": "M-014",
+      "name": "Navegante Card Holder",
+      "category": "Small accessories",
+      "minutesToSellout": 3329,
+      "units": 49,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.88,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778580986,
+          "n": 1
+        },
+        {
+          "t": 1778587645,
+          "n": 2
+        },
+        {
+          "t": 1778594304,
+          "n": 3
+        },
+        {
+          "t": 1778600963,
+          "n": 5
+        },
+        {
+          "t": 1778607622,
+          "n": 8
+        },
+        {
+          "t": 1778614281,
+          "n": 8
+        },
+        {
+          "t": 1778620940,
+          "n": 8
+        },
+        {
+          "t": 1778627599,
+          "n": 8
+        },
+        {
+          "t": 1778634258,
+          "n": 8
+        },
+        {
+          "t": 1778640917,
+          "n": 8
+        },
+        {
+          "t": 1778647576,
+          "n": 8
+        },
+        {
+          "t": 1778654235,
+          "n": 8
+        },
+        {
+          "t": 1778660894,
+          "n": 8
+        },
+        {
+          "t": 1778667553,
+          "n": 8
+        },
+        {
+          "t": 1778674212,
+          "n": 8
+        },
+        {
+          "t": 1778680871,
+          "n": 9
+        },
+        {
+          "t": 1778687530,
+          "n": 14
+        },
+        {
+          "t": 1778694189,
+          "n": 18
+        },
+        {
+          "t": 1778700848,
+          "n": 18
+        },
+        {
+          "t": 1778707507,
+          "n": 18
+        },
+        {
+          "t": 1778714166,
+          "n": 18
+        },
+        {
+          "t": 1778720825,
+          "n": 18
+        },
+        {
+          "t": 1778727484,
+          "n": 18
+        },
+        {
+          "t": 1778734143,
+          "n": 18
+        },
+        {
+          "t": 1778740802,
+          "n": 18
+        },
+        {
+          "t": 1778747461,
+          "n": 18
+        },
+        {
+          "t": 1778754120,
+          "n": 18
+        },
+        {
+          "t": 1778760779,
+          "n": 26
+        },
+        {
+          "t": 1778767438,
+          "n": 34
+        },
+        {
+          "t": 1778774097,
+          "n": 45
+        },
+        {
+          "t": 1778780756,
+          "n": 47
+        },
+        {
+          "t": 1778787415,
+          "n": 49
+        }
+      ],
+      "tokensExchanged": 14100
+    },
+    {
+      "sku": "M-019",
+      "name": "Nova Cidade Reusable Cup",
+      "category": "Drink",
+      "minutesToSellout": 3186,
+      "units": 39,
+      "stock": 50,
+      "stockEfficiency": 0.78,
+      "unitsPerHour": 0.73,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778589530,
+          "n": 1
+        },
+        {
+          "t": 1778595903,
+          "n": 1
+        },
+        {
+          "t": 1778602276,
+          "n": 5
+        },
+        {
+          "t": 1778608649,
+          "n": 7
+        },
+        {
+          "t": 1778615022,
+          "n": 7
+        },
+        {
+          "t": 1778621395,
+          "n": 7
+        },
+        {
+          "t": 1778627768,
+          "n": 7
+        },
+        {
+          "t": 1778634141,
+          "n": 7
+        },
+        {
+          "t": 1778640514,
+          "n": 7
+        },
+        {
+          "t": 1778646887,
+          "n": 7
+        },
+        {
+          "t": 1778653260,
+          "n": 7
+        },
+        {
+          "t": 1778659633,
+          "n": 7
+        },
+        {
+          "t": 1778666006,
+          "n": 7
+        },
+        {
+          "t": 1778672379,
+          "n": 7
+        },
+        {
+          "t": 1778678752,
+          "n": 7
+        },
+        {
+          "t": 1778685125,
+          "n": 8
+        },
+        {
+          "t": 1778691498,
+          "n": 10
+        },
+        {
+          "t": 1778697871,
+          "n": 10
+        },
+        {
+          "t": 1778704244,
+          "n": 10
+        },
+        {
+          "t": 1778710617,
+          "n": 10
+        },
+        {
+          "t": 1778716990,
+          "n": 10
+        },
+        {
+          "t": 1778723363,
+          "n": 10
+        },
+        {
+          "t": 1778729736,
+          "n": 10
+        },
+        {
+          "t": 1778736109,
+          "n": 10
+        },
+        {
+          "t": 1778742482,
+          "n": 10
+        },
+        {
+          "t": 1778748855,
+          "n": 10
+        },
+        {
+          "t": 1778755228,
+          "n": 13
+        },
+        {
+          "t": 1778761601,
+          "n": 20
+        },
+        {
+          "t": 1778767974,
+          "n": 24
+        },
+        {
+          "t": 1778774347,
+          "n": 34
+        },
+        {
+          "t": 1778780720,
+          "n": 38
+        },
+        {
+          "t": 1778787093,
+          "n": 39
+        }
+      ],
+      "tokensExchanged": 11700
+    },
+    {
+      "sku": "M-017",
+      "name": "Apemeta Pen drive",
+      "category": "Drive",
+      "minutesToSellout": 2996,
+      "units": 37,
+      "stock": 50,
+      "stockEfficiency": 0.74,
+      "unitsPerHour": 0.74,
+      "price": 1500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778585619,
+          "n": 1
+        },
+        {
+          "t": 1778591611,
+          "n": 4
+        },
+        {
+          "t": 1778597603,
+          "n": 6
+        },
+        {
+          "t": 1778603595,
+          "n": 10
+        },
+        {
+          "t": 1778609587,
+          "n": 10
+        },
+        {
+          "t": 1778615579,
+          "n": 10
+        },
+        {
+          "t": 1778621571,
+          "n": 10
+        },
+        {
+          "t": 1778627563,
+          "n": 10
+        },
+        {
+          "t": 1778633555,
+          "n": 10
+        },
+        {
+          "t": 1778639547,
+          "n": 10
+        },
+        {
+          "t": 1778645539,
+          "n": 10
+        },
+        {
+          "t": 1778651531,
+          "n": 10
+        },
+        {
+          "t": 1778657523,
+          "n": 10
+        },
+        {
+          "t": 1778663515,
+          "n": 10
+        },
+        {
+          "t": 1778669507,
+          "n": 10
+        },
+        {
+          "t": 1778675499,
+          "n": 12
+        },
+        {
+          "t": 1778681491,
+          "n": 13
+        },
+        {
+          "t": 1778687483,
+          "n": 17
+        },
+        {
+          "t": 1778693475,
+          "n": 17
+        },
+        {
+          "t": 1778699467,
+          "n": 17
+        },
+        {
+          "t": 1778705459,
+          "n": 17
+        },
+        {
+          "t": 1778711451,
+          "n": 17
+        },
+        {
+          "t": 1778717443,
+          "n": 17
+        },
+        {
+          "t": 1778723435,
+          "n": 17
+        },
+        {
+          "t": 1778729427,
+          "n": 17
+        },
+        {
+          "t": 1778735419,
+          "n": 17
+        },
+        {
+          "t": 1778741411,
+          "n": 17
+        },
+        {
+          "t": 1778747403,
+          "n": 17
+        },
+        {
+          "t": 1778753395,
+          "n": 18
+        },
+        {
+          "t": 1778759387,
+          "n": 30
+        },
+        {
+          "t": 1778765379,
+          "n": 36
+        },
+        {
+          "t": 1778771371,
+          "n": 37
+        }
+      ],
+      "tokensExchanged": 61500
+    },
+    {
+      "sku": "M-029",
+      "name": "Lisboa Inteligente Bottle",
+      "category": "Drink",
+      "minutesToSellout": 1390,
+      "units": 36,
+      "stock": 40,
+      "stockEfficiency": 0.9,
+      "unitsPerHour": 1.55,
+      "price": 2500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778685353,
+          "n": 1
+        },
+        {
+          "t": 1778688133,
+          "n": 3
+        },
+        {
+          "t": 1778690913,
+          "n": 5
+        },
+        {
+          "t": 1778693693,
+          "n": 5
+        },
+        {
+          "t": 1778696473,
+          "n": 5
+        },
+        {
+          "t": 1778699253,
+          "n": 5
+        },
+        {
+          "t": 1778702033,
+          "n": 5
+        },
+        {
+          "t": 1778704813,
+          "n": 5
+        },
+        {
+          "t": 1778707593,
+          "n": 5
+        },
+        {
+          "t": 1778710373,
+          "n": 5
+        },
+        {
+          "t": 1778713153,
+          "n": 5
+        },
+        {
+          "t": 1778715933,
+          "n": 5
+        },
+        {
+          "t": 1778718713,
+          "n": 5
+        },
+        {
+          "t": 1778721493,
+          "n": 5
+        },
+        {
+          "t": 1778724273,
+          "n": 5
+        },
+        {
+          "t": 1778727053,
+          "n": 5
+        },
+        {
+          "t": 1778729833,
+          "n": 5
+        },
+        {
+          "t": 1778732613,
+          "n": 5
+        },
+        {
+          "t": 1778735393,
+          "n": 5
+        },
+        {
+          "t": 1778738173,
+          "n": 5
+        },
+        {
+          "t": 1778740953,
+          "n": 5
+        },
+        {
+          "t": 1778743733,
+          "n": 5
+        },
+        {
+          "t": 1778746513,
+          "n": 5
+        },
+        {
+          "t": 1778749293,
+          "n": 5
+        },
+        {
+          "t": 1778752073,
+          "n": 5
+        },
+        {
+          "t": 1778754853,
+          "n": 9
+        },
+        {
+          "t": 1778757633,
+          "n": 10
+        },
+        {
+          "t": 1778760413,
+          "n": 16
+        },
+        {
+          "t": 1778763193,
+          "n": 26
+        },
+        {
+          "t": 1778765973,
+          "n": 27
+        },
+        {
+          "t": 1778768753,
+          "n": 35
+        },
+        {
+          "t": 1778771533,
+          "n": 36
+        }
+      ],
+      "tokensExchanged": 90000
+    },
+    {
+      "sku": "M-024",
+      "name": "Via Verde Charger",
+      "category": "Charger",
+      "minutesToSellout": 2595,
+      "units": 35,
+      "stock": 35,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.81,
+      "price": 2000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778601989,
+          "n": 1
+        },
+        {
+          "t": 1778607179,
+          "n": 2
+        },
+        {
+          "t": 1778612369,
+          "n": 2
+        },
+        {
+          "t": 1778617559,
+          "n": 2
+        },
+        {
+          "t": 1778622749,
+          "n": 2
+        },
+        {
+          "t": 1778627939,
+          "n": 2
+        },
+        {
+          "t": 1778633129,
+          "n": 2
+        },
+        {
+          "t": 1778638319,
+          "n": 2
+        },
+        {
+          "t": 1778643509,
+          "n": 2
+        },
+        {
+          "t": 1778648699,
+          "n": 2
+        },
+        {
+          "t": 1778653889,
+          "n": 2
+        },
+        {
+          "t": 1778659079,
+          "n": 2
+        },
+        {
+          "t": 1778664269,
+          "n": 2
+        },
+        {
+          "t": 1778669459,
+          "n": 2
+        },
+        {
+          "t": 1778674649,
+          "n": 3
+        },
+        {
+          "t": 1778679839,
+          "n": 4
+        },
+        {
+          "t": 1778685029,
+          "n": 11
+        },
+        {
+          "t": 1778690219,
+          "n": 22
+        },
+        {
+          "t": 1778695409,
+          "n": 24
+        },
+        {
+          "t": 1778700599,
+          "n": 24
+        },
+        {
+          "t": 1778705789,
+          "n": 24
+        },
+        {
+          "t": 1778710979,
+          "n": 24
+        },
+        {
+          "t": 1778716169,
+          "n": 24
+        },
+        {
+          "t": 1778721359,
+          "n": 24
+        },
+        {
+          "t": 1778726549,
+          "n": 24
+        },
+        {
+          "t": 1778731739,
+          "n": 24
+        },
+        {
+          "t": 1778736929,
+          "n": 24
+        },
+        {
+          "t": 1778742119,
+          "n": 24
+        },
+        {
+          "t": 1778747309,
+          "n": 24
+        },
+        {
+          "t": 1778752499,
+          "n": 25
+        },
+        {
+          "t": 1778757689,
+          "n": 34
+        },
+        {
+          "t": 1778762879,
+          "n": 35
+        }
+      ],
+      "tokensExchanged": 70000
+    },
+    {
+      "sku": "M-016",
+      "name": "Nova Cidade Notebook",
+      "category": "Notebook",
+      "minutesToSellout": 3157,
+      "units": 33,
+      "stock": 33,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.63,
+      "price": 1000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778584248,
+          "n": 1
+        },
+        {
+          "t": 1778590563,
+          "n": 4
+        },
+        {
+          "t": 1778596878,
+          "n": 6
+        },
+        {
+          "t": 1778603193,
+          "n": 11
+        },
+        {
+          "t": 1778609508,
+          "n": 11
+        },
+        {
+          "t": 1778615823,
+          "n": 11
+        },
+        {
+          "t": 1778622138,
+          "n": 11
+        },
+        {
+          "t": 1778628453,
+          "n": 11
+        },
+        {
+          "t": 1778634768,
+          "n": 11
+        },
+        {
+          "t": 1778641083,
+          "n": 11
+        },
+        {
+          "t": 1778647398,
+          "n": 11
+        },
+        {
+          "t": 1778653713,
+          "n": 11
+        },
+        {
+          "t": 1778660028,
+          "n": 11
+        },
+        {
+          "t": 1778666343,
+          "n": 11
+        },
+        {
+          "t": 1778672658,
+          "n": 11
+        },
+        {
+          "t": 1778678973,
+          "n": 13
+        },
+        {
+          "t": 1778685288,
+          "n": 13
+        },
+        {
+          "t": 1778691603,
+          "n": 13
+        },
+        {
+          "t": 1778697918,
+          "n": 13
+        },
+        {
+          "t": 1778704233,
+          "n": 13
+        },
+        {
+          "t": 1778710548,
+          "n": 13
+        },
+        {
+          "t": 1778716863,
+          "n": 13
+        },
+        {
+          "t": 1778723178,
+          "n": 13
+        },
+        {
+          "t": 1778729493,
+          "n": 13
+        },
+        {
+          "t": 1778735808,
+          "n": 13
+        },
+        {
+          "t": 1778742123,
+          "n": 13
+        },
+        {
+          "t": 1778748438,
+          "n": 13
+        },
+        {
+          "t": 1778754753,
+          "n": 13
+        },
+        {
+          "t": 1778761068,
+          "n": 16
+        },
+        {
+          "t": 1778767383,
+          "n": 21
+        },
+        {
+          "t": 1778773698,
+          "n": 32
+        },
+        {
+          "t": 1778780013,
+          "n": 33
+        }
+      ],
+      "tokensExchanged": 35200
+    },
+    {
+      "sku": "M-013",
+      "name": "Nova Blockchain Socks",
+      "category": "Nova Blockchain",
+      "minutesToSellout": 3123,
+      "units": 29,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.56,
+      "price": 2000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778584131,
+          "n": 1
+        },
+        {
+          "t": 1778590377,
+          "n": 2
+        },
+        {
+          "t": 1778596623,
+          "n": 2
+        },
+        {
+          "t": 1778602869,
+          "n": 6
+        },
+        {
+          "t": 1778609115,
+          "n": 8
+        },
+        {
+          "t": 1778615361,
+          "n": 8
+        },
+        {
+          "t": 1778621607,
+          "n": 8
+        },
+        {
+          "t": 1778627853,
+          "n": 8
+        },
+        {
+          "t": 1778634099,
+          "n": 8
+        },
+        {
+          "t": 1778640345,
+          "n": 8
+        },
+        {
+          "t": 1778646591,
+          "n": 8
+        },
+        {
+          "t": 1778652837,
+          "n": 8
+        },
+        {
+          "t": 1778659083,
+          "n": 8
+        },
+        {
+          "t": 1778665329,
+          "n": 8
+        },
+        {
+          "t": 1778671575,
+          "n": 9
+        },
+        {
+          "t": 1778677821,
+          "n": 9
+        },
+        {
+          "t": 1778684067,
+          "n": 9
+        },
+        {
+          "t": 1778690313,
+          "n": 10
+        },
+        {
+          "t": 1778696559,
+          "n": 10
+        },
+        {
+          "t": 1778702805,
+          "n": 10
+        },
+        {
+          "t": 1778709051,
+          "n": 10
+        },
+        {
+          "t": 1778715297,
+          "n": 10
+        },
+        {
+          "t": 1778721543,
+          "n": 10
+        },
+        {
+          "t": 1778727789,
+          "n": 10
+        },
+        {
+          "t": 1778734035,
+          "n": 10
+        },
+        {
+          "t": 1778740281,
+          "n": 10
+        },
+        {
+          "t": 1778746527,
+          "n": 10
+        },
+        {
+          "t": 1778752773,
+          "n": 10
+        },
+        {
+          "t": 1778759019,
+          "n": 16
+        },
+        {
+          "t": 1778765265,
+          "n": 21
+        },
+        {
+          "t": 1778771511,
+          "n": 28
+        },
+        {
+          "t": 1778777757,
+          "n": 29
+        }
+      ],
+      "tokensExchanged": 53500
+    },
+    {
+      "sku": "M-012",
+      "name": "Nova Blockchain Hat",
+      "category": "Nova Blockchain",
+      "minutesToSellout": 3026,
+      "units": 25,
+      "stock": 40,
+      "stockEfficiency": 0.625,
+      "unitsPerHour": 0.5,
+      "price": 2500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778594718,
+          "n": 1
+        },
+        {
+          "t": 1778600770,
+          "n": 1
+        },
+        {
+          "t": 1778606822,
+          "n": 1
+        },
+        {
+          "t": 1778612874,
+          "n": 1
+        },
+        {
+          "t": 1778618926,
+          "n": 1
+        },
+        {
+          "t": 1778624978,
+          "n": 1
+        },
+        {
+          "t": 1778631030,
+          "n": 1
+        },
+        {
+          "t": 1778637082,
+          "n": 1
+        },
+        {
+          "t": 1778643134,
+          "n": 1
+        },
+        {
+          "t": 1778649186,
+          "n": 1
+        },
+        {
+          "t": 1778655238,
+          "n": 1
+        },
+        {
+          "t": 1778661290,
+          "n": 1
+        },
+        {
+          "t": 1778667342,
+          "n": 1
+        },
+        {
+          "t": 1778673394,
+          "n": 1
+        },
+        {
+          "t": 1778679446,
+          "n": 1
+        },
+        {
+          "t": 1778685498,
+          "n": 1
+        },
+        {
+          "t": 1778691550,
+          "n": 3
+        },
+        {
+          "t": 1778697602,
+          "n": 3
+        },
+        {
+          "t": 1778703654,
+          "n": 3
+        },
+        {
+          "t": 1778709706,
+          "n": 3
+        },
+        {
+          "t": 1778715758,
+          "n": 3
+        },
+        {
+          "t": 1778721810,
+          "n": 3
+        },
+        {
+          "t": 1778727862,
+          "n": 3
+        },
+        {
+          "t": 1778733914,
+          "n": 3
+        },
+        {
+          "t": 1778739966,
+          "n": 3
+        },
+        {
+          "t": 1778746018,
+          "n": 3
+        },
+        {
+          "t": 1778752070,
+          "n": 3
+        },
+        {
+          "t": 1778758122,
+          "n": 5
+        },
+        {
+          "t": 1778764174,
+          "n": 7
+        },
+        {
+          "t": 1778770226,
+          "n": 13
+        },
+        {
+          "t": 1778776278,
+          "n": 24
+        },
+        {
+          "t": 1778782330,
+          "n": 25
+        }
+      ],
+      "tokensExchanged": 62500
+    },
+    {
+      "sku": "M-020",
+      "name": "Refill Fresquinha",
+      "category": "Drink",
+      "minutesToSellout": 3478,
+      "units": 23,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.4,
+      "price": 200,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778589043,
+          "n": 1
+        },
+        {
+          "t": 1778596000,
+          "n": 1
+        },
+        {
+          "t": 1778602957,
+          "n": 1
+        },
+        {
+          "t": 1778609914,
+          "n": 1
+        },
+        {
+          "t": 1778616871,
+          "n": 1
+        },
+        {
+          "t": 1778623828,
+          "n": 1
+        },
+        {
+          "t": 1778630785,
+          "n": 1
+        },
+        {
+          "t": 1778637742,
+          "n": 1
+        },
+        {
+          "t": 1778644699,
+          "n": 1
+        },
+        {
+          "t": 1778651656,
+          "n": 1
+        },
+        {
+          "t": 1778658613,
+          "n": 1
+        },
+        {
+          "t": 1778665570,
+          "n": 1
+        },
+        {
+          "t": 1778672527,
+          "n": 1
+        },
+        {
+          "t": 1778679484,
+          "n": 1
+        },
+        {
+          "t": 1778686441,
+          "n": 1
+        },
+        {
+          "t": 1778693398,
+          "n": 2
+        },
+        {
+          "t": 1778700355,
+          "n": 2
+        },
+        {
+          "t": 1778707312,
+          "n": 2
+        },
+        {
+          "t": 1778714269,
+          "n": 2
+        },
+        {
+          "t": 1778721226,
+          "n": 2
+        },
+        {
+          "t": 1778728183,
+          "n": 2
+        },
+        {
+          "t": 1778735140,
+          "n": 2
+        },
+        {
+          "t": 1778742097,
+          "n": 2
+        },
+        {
+          "t": 1778749054,
+          "n": 2
+        },
+        {
+          "t": 1778756011,
+          "n": 3
+        },
+        {
+          "t": 1778762968,
+          "n": 4
+        },
+        {
+          "t": 1778769925,
+          "n": 8
+        },
+        {
+          "t": 1778776882,
+          "n": 15
+        },
+        {
+          "t": 1778783839,
+          "n": 22
+        },
+        {
+          "t": 1778790796,
+          "n": 22
+        },
+        {
+          "t": 1778797753,
+          "n": 22
+        },
+        {
+          "t": 1778804710,
+          "n": 23
+        }
+      ],
+      "tokensExchanged": 4600
+    },
+    {
+      "sku": "M-021",
+      "name": "Refill Somersby",
+      "category": "Drink",
+      "minutesToSellout": 3035,
+      "units": 19,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.38,
+      "price": 200,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778589108,
+          "n": 1
+        },
+        {
+          "t": 1778595178,
+          "n": 1
+        },
+        {
+          "t": 1778601248,
+          "n": 1
+        },
+        {
+          "t": 1778607318,
+          "n": 4
+        },
+        {
+          "t": 1778613388,
+          "n": 4
+        },
+        {
+          "t": 1778619458,
+          "n": 4
+        },
+        {
+          "t": 1778625528,
+          "n": 4
+        },
+        {
+          "t": 1778631598,
+          "n": 4
+        },
+        {
+          "t": 1778637668,
+          "n": 4
+        },
+        {
+          "t": 1778643738,
+          "n": 4
+        },
+        {
+          "t": 1778649808,
+          "n": 4
+        },
+        {
+          "t": 1778655878,
+          "n": 4
+        },
+        {
+          "t": 1778661948,
+          "n": 4
+        },
+        {
+          "t": 1778668018,
+          "n": 4
+        },
+        {
+          "t": 1778674088,
+          "n": 4
+        },
+        {
+          "t": 1778680158,
+          "n": 4
+        },
+        {
+          "t": 1778686228,
+          "n": 5
+        },
+        {
+          "t": 1778692298,
+          "n": 7
+        },
+        {
+          "t": 1778698368,
+          "n": 7
+        },
+        {
+          "t": 1778704438,
+          "n": 7
+        },
+        {
+          "t": 1778710508,
+          "n": 7
+        },
+        {
+          "t": 1778716578,
+          "n": 7
+        },
+        {
+          "t": 1778722648,
+          "n": 7
+        },
+        {
+          "t": 1778728718,
+          "n": 7
+        },
+        {
+          "t": 1778734788,
+          "n": 7
+        },
+        {
+          "t": 1778740858,
+          "n": 7
+        },
+        {
+          "t": 1778746928,
+          "n": 7
+        },
+        {
+          "t": 1778752998,
+          "n": 7
+        },
+        {
+          "t": 1778759068,
+          "n": 12
+        },
+        {
+          "t": 1778765138,
+          "n": 13
+        },
+        {
+          "t": 1778771208,
+          "n": 18
+        },
+        {
+          "t": 1778777278,
+          "n": 19
+        }
+      ],
+      "tokensExchanged": 3800
+    },
+    {
+      "sku": "M-003",
+      "name": "Mafra City Council Mug",
+      "category": "Drink",
+      "minutesToSellout": 2869,
+      "units": 19,
+      "stock": 19,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.4,
+      "price": 2500,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778584554,
+          "n": 1
+        },
+        {
+          "t": 1778590292,
+          "n": 6
+        },
+        {
+          "t": 1778596030,
+          "n": 7
+        },
+        {
+          "t": 1778601768,
+          "n": 14
+        },
+        {
+          "t": 1778607506,
+          "n": 14
+        },
+        {
+          "t": 1778613244,
+          "n": 14
+        },
+        {
+          "t": 1778618982,
+          "n": 14
+        },
+        {
+          "t": 1778624720,
+          "n": 14
+        },
+        {
+          "t": 1778630458,
+          "n": 14
+        },
+        {
+          "t": 1778636196,
+          "n": 14
+        },
+        {
+          "t": 1778641934,
+          "n": 14
+        },
+        {
+          "t": 1778647672,
+          "n": 14
+        },
+        {
+          "t": 1778653410,
+          "n": 14
+        },
+        {
+          "t": 1778659148,
+          "n": 14
+        },
+        {
+          "t": 1778664886,
+          "n": 14
+        },
+        {
+          "t": 1778670624,
+          "n": 14
+        },
+        {
+          "t": 1778676362,
+          "n": 14
+        },
+        {
+          "t": 1778682100,
+          "n": 14
+        },
+        {
+          "t": 1778687838,
+          "n": 15
+        },
+        {
+          "t": 1778693576,
+          "n": 16
+        },
+        {
+          "t": 1778699314,
+          "n": 16
+        },
+        {
+          "t": 1778705052,
+          "n": 16
+        },
+        {
+          "t": 1778710790,
+          "n": 16
+        },
+        {
+          "t": 1778716528,
+          "n": 16
+        },
+        {
+          "t": 1778722266,
+          "n": 16
+        },
+        {
+          "t": 1778728004,
+          "n": 16
+        },
+        {
+          "t": 1778733742,
+          "n": 16
+        },
+        {
+          "t": 1778739480,
+          "n": 16
+        },
+        {
+          "t": 1778745218,
+          "n": 16
+        },
+        {
+          "t": 1778750956,
+          "n": 16
+        },
+        {
+          "t": 1778756694,
+          "n": 18
+        },
+        {
+          "t": 1778762432,
+          "n": 19
+        }
+      ],
+      "tokensExchanged": 36500
+    },
+    {
+      "sku": "M-004",
+      "name": "Mafra City Council Bag",
+      "category": "Bag",
+      "minutesToSellout": 3194,
+      "units": 15,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.28,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778584814,
+          "n": 1
+        },
+        {
+          "t": 1778591203,
+          "n": 2
+        },
+        {
+          "t": 1778597592,
+          "n": 2
+        },
+        {
+          "t": 1778603981,
+          "n": 3
+        },
+        {
+          "t": 1778610370,
+          "n": 3
+        },
+        {
+          "t": 1778616759,
+          "n": 3
+        },
+        {
+          "t": 1778623148,
+          "n": 3
+        },
+        {
+          "t": 1778629537,
+          "n": 3
+        },
+        {
+          "t": 1778635926,
+          "n": 3
+        },
+        {
+          "t": 1778642315,
+          "n": 3
+        },
+        {
+          "t": 1778648704,
+          "n": 3
+        },
+        {
+          "t": 1778655093,
+          "n": 3
+        },
+        {
+          "t": 1778661482,
+          "n": 3
+        },
+        {
+          "t": 1778667871,
+          "n": 3
+        },
+        {
+          "t": 1778674260,
+          "n": 3
+        },
+        {
+          "t": 1778680649,
+          "n": 3
+        },
+        {
+          "t": 1778687038,
+          "n": 3
+        },
+        {
+          "t": 1778693427,
+          "n": 6
+        },
+        {
+          "t": 1778699816,
+          "n": 6
+        },
+        {
+          "t": 1778706205,
+          "n": 6
+        },
+        {
+          "t": 1778712594,
+          "n": 6
+        },
+        {
+          "t": 1778718983,
+          "n": 6
+        },
+        {
+          "t": 1778725372,
+          "n": 6
+        },
+        {
+          "t": 1778731761,
+          "n": 6
+        },
+        {
+          "t": 1778738150,
+          "n": 6
+        },
+        {
+          "t": 1778744539,
+          "n": 6
+        },
+        {
+          "t": 1778750928,
+          "n": 7
+        },
+        {
+          "t": 1778757317,
+          "n": 9
+        },
+        {
+          "t": 1778763706,
+          "n": 13
+        },
+        {
+          "t": 1778770095,
+          "n": 13
+        },
+        {
+          "t": 1778776484,
+          "n": 14
+        },
+        {
+          "t": 1778782873,
+          "n": 15
+        }
+      ],
+      "tokensExchanged": 6000
+    },
+    {
+      "sku": "M-023",
+      "name": "Via Verde Pen",
+      "category": "Pen",
+      "minutesToSellout": 1608,
+      "units": 15,
+      "stock": 50,
+      "stockEfficiency": 0.3,
+      "unitsPerHour": 0.56,
+      "price": 500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778679968,
+          "n": 1
+        },
+        {
+          "t": 1778683184,
+          "n": 2
+        },
+        {
+          "t": 1778686400,
+          "n": 2
+        },
+        {
+          "t": 1778689616,
+          "n": 3
+        },
+        {
+          "t": 1778692832,
+          "n": 4
+        },
+        {
+          "t": 1778696048,
+          "n": 4
+        },
+        {
+          "t": 1778699264,
+          "n": 4
+        },
+        {
+          "t": 1778702480,
+          "n": 4
+        },
+        {
+          "t": 1778705696,
+          "n": 4
+        },
+        {
+          "t": 1778708912,
+          "n": 4
+        },
+        {
+          "t": 1778712128,
+          "n": 4
+        },
+        {
+          "t": 1778715344,
+          "n": 4
+        },
+        {
+          "t": 1778718560,
+          "n": 4
+        },
+        {
+          "t": 1778721776,
+          "n": 4
+        },
+        {
+          "t": 1778724992,
+          "n": 4
+        },
+        {
+          "t": 1778728208,
+          "n": 4
+        },
+        {
+          "t": 1778731424,
+          "n": 4
+        },
+        {
+          "t": 1778734640,
+          "n": 4
+        },
+        {
+          "t": 1778737856,
+          "n": 4
+        },
+        {
+          "t": 1778741072,
+          "n": 4
+        },
+        {
+          "t": 1778744288,
+          "n": 4
+        },
+        {
+          "t": 1778747504,
+          "n": 4
+        },
+        {
+          "t": 1778750720,
+          "n": 4
+        },
+        {
+          "t": 1778753936,
+          "n": 4
+        },
+        {
+          "t": 1778757152,
+          "n": 5
+        },
+        {
+          "t": 1778760368,
+          "n": 5
+        },
+        {
+          "t": 1778763584,
+          "n": 7
+        },
+        {
+          "t": 1778766800,
+          "n": 7
+        },
+        {
+          "t": 1778770016,
+          "n": 12
+        },
+        {
+          "t": 1778773232,
+          "n": 14
+        },
+        {
+          "t": 1778776448,
+          "n": 14
+        },
+        {
+          "t": 1778779664,
+          "n": 15
+        }
+      ],
+      "tokensExchanged": 6000
+    },
+    {
+      "sku": "M-010",
+      "name": "Reisswolf Camera Privacy Cover",
+      "category": "Small accessories",
+      "minutesToSellout": 3269,
+      "units": 14,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.26,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778584602,
+          "n": 1
+        },
+        {
+          "t": 1778591141,
+          "n": 2
+        },
+        {
+          "t": 1778597680,
+          "n": 3
+        },
+        {
+          "t": 1778604219,
+          "n": 3
+        },
+        {
+          "t": 1778610758,
+          "n": 3
+        },
+        {
+          "t": 1778617297,
+          "n": 3
+        },
+        {
+          "t": 1778623836,
+          "n": 3
+        },
+        {
+          "t": 1778630375,
+          "n": 3
+        },
+        {
+          "t": 1778636914,
+          "n": 3
+        },
+        {
+          "t": 1778643453,
+          "n": 3
+        },
+        {
+          "t": 1778649992,
+          "n": 3
+        },
+        {
+          "t": 1778656531,
+          "n": 3
+        },
+        {
+          "t": 1778663070,
+          "n": 3
+        },
+        {
+          "t": 1778669609,
+          "n": 3
+        },
+        {
+          "t": 1778676148,
+          "n": 3
+        },
+        {
+          "t": 1778682687,
+          "n": 3
+        },
+        {
+          "t": 1778689226,
+          "n": 3
+        },
+        {
+          "t": 1778695765,
+          "n": 4
+        },
+        {
+          "t": 1778702304,
+          "n": 4
+        },
+        {
+          "t": 1778708843,
+          "n": 4
+        },
+        {
+          "t": 1778715382,
+          "n": 4
+        },
+        {
+          "t": 1778721921,
+          "n": 4
+        },
+        {
+          "t": 1778728460,
+          "n": 4
+        },
+        {
+          "t": 1778734999,
+          "n": 4
+        },
+        {
+          "t": 1778741538,
+          "n": 4
+        },
+        {
+          "t": 1778748077,
+          "n": 4
+        },
+        {
+          "t": 1778754616,
+          "n": 4
+        },
+        {
+          "t": 1778761155,
+          "n": 6
+        },
+        {
+          "t": 1778767694,
+          "n": 8
+        },
+        {
+          "t": 1778774233,
+          "n": 11
+        },
+        {
+          "t": 1778780772,
+          "n": 12
+        },
+        {
+          "t": 1778787311,
+          "n": 14
+        }
+      ],
+      "tokensExchanged": 4700
+    },
+    {
+      "sku": "M-011",
+      "name": "Transportes Metropolitano Bag",
+      "category": "Bag",
+      "minutesToSellout": 1711,
+      "units": 13,
+      "stock": 50,
+      "stockEfficiency": 0.26,
+      "unitsPerHour": 0.46,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778673250,
+          "n": 1
+        },
+        {
+          "t": 1778676673,
+          "n": 2
+        },
+        {
+          "t": 1778680096,
+          "n": 2
+        },
+        {
+          "t": 1778683519,
+          "n": 4
+        },
+        {
+          "t": 1778686942,
+          "n": 6
+        },
+        {
+          "t": 1778690365,
+          "n": 6
+        },
+        {
+          "t": 1778693788,
+          "n": 7
+        },
+        {
+          "t": 1778697211,
+          "n": 7
+        },
+        {
+          "t": 1778700634,
+          "n": 7
+        },
+        {
+          "t": 1778704057,
+          "n": 7
+        },
+        {
+          "t": 1778707480,
+          "n": 7
+        },
+        {
+          "t": 1778710903,
+          "n": 7
+        },
+        {
+          "t": 1778714326,
+          "n": 7
+        },
+        {
+          "t": 1778717749,
+          "n": 7
+        },
+        {
+          "t": 1778721172,
+          "n": 7
+        },
+        {
+          "t": 1778724595,
+          "n": 7
+        },
+        {
+          "t": 1778728018,
+          "n": 7
+        },
+        {
+          "t": 1778731441,
+          "n": 7
+        },
+        {
+          "t": 1778734864,
+          "n": 7
+        },
+        {
+          "t": 1778738287,
+          "n": 7
+        },
+        {
+          "t": 1778741710,
+          "n": 7
+        },
+        {
+          "t": 1778745133,
+          "n": 7
+        },
+        {
+          "t": 1778748556,
+          "n": 7
+        },
+        {
+          "t": 1778751979,
+          "n": 7
+        },
+        {
+          "t": 1778755402,
+          "n": 7
+        },
+        {
+          "t": 1778758825,
+          "n": 8
+        },
+        {
+          "t": 1778762248,
+          "n": 9
+        },
+        {
+          "t": 1778765671,
+          "n": 9
+        },
+        {
+          "t": 1778769094,
+          "n": 9
+        },
+        {
+          "t": 1778772517,
+          "n": 10
+        },
+        {
+          "t": 1778775940,
+          "n": 12
+        },
+        {
+          "t": 1778779363,
+          "n": 13
+        }
+      ],
+      "tokensExchanged": 2300
+    },
+    {
+      "sku": "M-009",
+      "name": "RESOPARK Pen",
+      "category": "Pen",
+      "minutesToSellout": 3021,
+      "units": 13,
+      "stock": 13,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.26,
+      "price": 500,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778585932,
+          "n": 1
+        },
+        {
+          "t": 1778591974,
+          "n": 1
+        },
+        {
+          "t": 1778598016,
+          "n": 2
+        },
+        {
+          "t": 1778604058,
+          "n": 6
+        },
+        {
+          "t": 1778610100,
+          "n": 7
+        },
+        {
+          "t": 1778616142,
+          "n": 7
+        },
+        {
+          "t": 1778622184,
+          "n": 7
+        },
+        {
+          "t": 1778628226,
+          "n": 7
+        },
+        {
+          "t": 1778634268,
+          "n": 7
+        },
+        {
+          "t": 1778640310,
+          "n": 7
+        },
+        {
+          "t": 1778646352,
+          "n": 7
+        },
+        {
+          "t": 1778652394,
+          "n": 7
+        },
+        {
+          "t": 1778658436,
+          "n": 7
+        },
+        {
+          "t": 1778664478,
+          "n": 7
+        },
+        {
+          "t": 1778670520,
+          "n": 7
+        },
+        {
+          "t": 1778676562,
+          "n": 7
+        },
+        {
+          "t": 1778682604,
+          "n": 8
+        },
+        {
+          "t": 1778688646,
+          "n": 10
+        },
+        {
+          "t": 1778694688,
+          "n": 10
+        },
+        {
+          "t": 1778700730,
+          "n": 10
+        },
+        {
+          "t": 1778706772,
+          "n": 10
+        },
+        {
+          "t": 1778712814,
+          "n": 10
+        },
+        {
+          "t": 1778718856,
+          "n": 10
+        },
+        {
+          "t": 1778724898,
+          "n": 10
+        },
+        {
+          "t": 1778730940,
+          "n": 10
+        },
+        {
+          "t": 1778736982,
+          "n": 10
+        },
+        {
+          "t": 1778743024,
+          "n": 10
+        },
+        {
+          "t": 1778749066,
+          "n": 10
+        },
+        {
+          "t": 1778755108,
+          "n": 11
+        },
+        {
+          "t": 1778761150,
+          "n": 11
+        },
+        {
+          "t": 1778767192,
+          "n": 12
+        },
+        {
+          "t": 1778773234,
+          "n": 13
+        }
+      ],
+      "tokensExchanged": 6000
+    },
+    {
+      "sku": "M-025",
+      "name": "Meo Umbrella",
+      "category": "Wearable",
+      "minutesToSellout": 314,
+      "units": 12,
+      "stock": 12,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 2.29,
+      "price": 2500,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778667244,
+          "n": 1
+        },
+        {
+          "t": 1778667873,
+          "n": 1
+        },
+        {
+          "t": 1778668502,
+          "n": 1
+        },
+        {
+          "t": 1778669131,
+          "n": 1
+        },
+        {
+          "t": 1778669760,
+          "n": 1
+        },
+        {
+          "t": 1778670389,
+          "n": 1
+        },
+        {
+          "t": 1778671018,
+          "n": 1
+        },
+        {
+          "t": 1778671647,
+          "n": 1
+        },
+        {
+          "t": 1778672276,
+          "n": 1
+        },
+        {
+          "t": 1778672905,
+          "n": 1
+        },
+        {
+          "t": 1778673534,
+          "n": 1
+        },
+        {
+          "t": 1778674163,
+          "n": 1
+        },
+        {
+          "t": 1778674792,
+          "n": 1
+        },
+        {
+          "t": 1778675421,
+          "n": 1
+        },
+        {
+          "t": 1778676050,
+          "n": 1
+        },
+        {
+          "t": 1778676679,
+          "n": 2
+        },
+        {
+          "t": 1778677308,
+          "n": 2
+        },
+        {
+          "t": 1778677937,
+          "n": 2
+        },
+        {
+          "t": 1778678566,
+          "n": 2
+        },
+        {
+          "t": 1778679195,
+          "n": 3
+        },
+        {
+          "t": 1778679824,
+          "n": 3
+        },
+        {
+          "t": 1778680453,
+          "n": 3
+        },
+        {
+          "t": 1778681082,
+          "n": 4
+        },
+        {
+          "t": 1778681711,
+          "n": 4
+        },
+        {
+          "t": 1778682340,
+          "n": 4
+        },
+        {
+          "t": 1778682969,
+          "n": 4
+        },
+        {
+          "t": 1778683598,
+          "n": 4
+        },
+        {
+          "t": 1778684227,
+          "n": 5
+        },
+        {
+          "t": 1778684856,
+          "n": 6
+        },
+        {
+          "t": 1778685485,
+          "n": 9
+        },
+        {
+          "t": 1778686114,
+          "n": 11
+        },
+        {
+          "t": 1778686743,
+          "n": 12
+        }
+      ],
+      "tokensExchanged": 25500
+    },
+    {
+      "sku": "M-044",
+      "name": "Apemeta bag",
+      "category": "Other",
+      "minutesToSellout": 465,
+      "units": 11,
+      "stock": 50,
+      "stockEfficiency": 0.22,
+      "unitsPerHour": 1.42,
+      "price": 100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778752857,
+          "n": 1
+        },
+        {
+          "t": 1778753788,
+          "n": 1
+        },
+        {
+          "t": 1778754719,
+          "n": 1
+        },
+        {
+          "t": 1778755650,
+          "n": 3
+        },
+        {
+          "t": 1778756581,
+          "n": 3
+        },
+        {
+          "t": 1778757512,
+          "n": 3
+        },
+        {
+          "t": 1778758443,
+          "n": 3
+        },
+        {
+          "t": 1778759374,
+          "n": 3
+        },
+        {
+          "t": 1778760305,
+          "n": 3
+        },
+        {
+          "t": 1778761236,
+          "n": 4
+        },
+        {
+          "t": 1778762167,
+          "n": 4
+        },
+        {
+          "t": 1778763098,
+          "n": 4
+        },
+        {
+          "t": 1778764029,
+          "n": 4
+        },
+        {
+          "t": 1778764960,
+          "n": 4
+        },
+        {
+          "t": 1778765891,
+          "n": 4
+        },
+        {
+          "t": 1778766822,
+          "n": 4
+        },
+        {
+          "t": 1778767753,
+          "n": 4
+        },
+        {
+          "t": 1778768684,
+          "n": 4
+        },
+        {
+          "t": 1778769615,
+          "n": 4
+        },
+        {
+          "t": 1778770546,
+          "n": 4
+        },
+        {
+          "t": 1778771477,
+          "n": 4
+        },
+        {
+          "t": 1778772408,
+          "n": 4
+        },
+        {
+          "t": 1778773339,
+          "n": 4
+        },
+        {
+          "t": 1778774270,
+          "n": 4
+        },
+        {
+          "t": 1778775201,
+          "n": 4
+        },
+        {
+          "t": 1778776132,
+          "n": 5
+        },
+        {
+          "t": 1778777063,
+          "n": 8
+        },
+        {
+          "t": 1778777994,
+          "n": 8
+        },
+        {
+          "t": 1778778925,
+          "n": 8
+        },
+        {
+          "t": 1778779856,
+          "n": 8
+        },
+        {
+          "t": 1778780787,
+          "n": 10
+        },
+        {
+          "t": 1778781718,
+          "n": 11
+        }
+      ],
+      "tokensExchanged": 2100
+    },
+    {
+      "sku": "M-006",
+      "name": "Nova Cidade Keychain",
+      "category": "Keychain",
+      "minutesToSellout": 3185,
+      "units": 11,
+      "stock": 11,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.21,
+      "price": 300,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778585286,
+          "n": 1
+        },
+        {
+          "t": 1778591656,
+          "n": 1
+        },
+        {
+          "t": 1778598026,
+          "n": 1
+        },
+        {
+          "t": 1778604396,
+          "n": 2
+        },
+        {
+          "t": 1778610766,
+          "n": 2
+        },
+        {
+          "t": 1778617136,
+          "n": 2
+        },
+        {
+          "t": 1778623506,
+          "n": 2
+        },
+        {
+          "t": 1778629876,
+          "n": 2
+        },
+        {
+          "t": 1778636246,
+          "n": 2
+        },
+        {
+          "t": 1778642616,
+          "n": 2
+        },
+        {
+          "t": 1778648986,
+          "n": 2
+        },
+        {
+          "t": 1778655356,
+          "n": 2
+        },
+        {
+          "t": 1778661726,
+          "n": 2
+        },
+        {
+          "t": 1778668096,
+          "n": 2
+        },
+        {
+          "t": 1778674466,
+          "n": 2
+        },
+        {
+          "t": 1778680836,
+          "n": 3
+        },
+        {
+          "t": 1778687206,
+          "n": 3
+        },
+        {
+          "t": 1778693576,
+          "n": 6
+        },
+        {
+          "t": 1778699946,
+          "n": 6
+        },
+        {
+          "t": 1778706316,
+          "n": 6
+        },
+        {
+          "t": 1778712686,
+          "n": 6
+        },
+        {
+          "t": 1778719056,
+          "n": 6
+        },
+        {
+          "t": 1778725426,
+          "n": 6
+        },
+        {
+          "t": 1778731796,
+          "n": 6
+        },
+        {
+          "t": 1778738166,
+          "n": 6
+        },
+        {
+          "t": 1778744536,
+          "n": 6
+        },
+        {
+          "t": 1778750906,
+          "n": 6
+        },
+        {
+          "t": 1778757276,
+          "n": 7
+        },
+        {
+          "t": 1778763646,
+          "n": 8
+        },
+        {
+          "t": 1778770016,
+          "n": 9
+        },
+        {
+          "t": 1778776386,
+          "n": 10
+        },
+        {
+          "t": 1778782756,
+          "n": 11
+        }
+      ],
+      "tokensExchanged": 3900
+    },
+    {
+      "sku": "M-015",
+      "name": "Fund\u00e3o Pins",
+      "category": "Small accessories",
+      "minutesToSellout": 2948,
+      "units": 10,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.2,
+      "price": 100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778585214,
+          "n": 1
+        },
+        {
+          "t": 1778591110,
+          "n": 2
+        },
+        {
+          "t": 1778597006,
+          "n": 2
+        },
+        {
+          "t": 1778602902,
+          "n": 3
+        },
+        {
+          "t": 1778608798,
+          "n": 3
+        },
+        {
+          "t": 1778614694,
+          "n": 3
+        },
+        {
+          "t": 1778620590,
+          "n": 3
+        },
+        {
+          "t": 1778626486,
+          "n": 3
+        },
+        {
+          "t": 1778632382,
+          "n": 3
+        },
+        {
+          "t": 1778638278,
+          "n": 3
+        },
+        {
+          "t": 1778644174,
+          "n": 3
+        },
+        {
+          "t": 1778650070,
+          "n": 3
+        },
+        {
+          "t": 1778655966,
+          "n": 3
+        },
+        {
+          "t": 1778661862,
+          "n": 3
+        },
+        {
+          "t": 1778667758,
+          "n": 3
+        },
+        {
+          "t": 1778673654,
+          "n": 3
+        },
+        {
+          "t": 1778679550,
+          "n": 4
+        },
+        {
+          "t": 1778685446,
+          "n": 4
+        },
+        {
+          "t": 1778691342,
+          "n": 4
+        },
+        {
+          "t": 1778697238,
+          "n": 4
+        },
+        {
+          "t": 1778703134,
+          "n": 4
+        },
+        {
+          "t": 1778709030,
+          "n": 4
+        },
+        {
+          "t": 1778714926,
+          "n": 4
+        },
+        {
+          "t": 1778720822,
+          "n": 4
+        },
+        {
+          "t": 1778726718,
+          "n": 4
+        },
+        {
+          "t": 1778732614,
+          "n": 4
+        },
+        {
+          "t": 1778738510,
+          "n": 4
+        },
+        {
+          "t": 1778744406,
+          "n": 4
+        },
+        {
+          "t": 1778750302,
+          "n": 4
+        },
+        {
+          "t": 1778756198,
+          "n": 5
+        },
+        {
+          "t": 1778762094,
+          "n": 9
+        },
+        {
+          "t": 1778767990,
+          "n": 10
+        }
+      ],
+      "tokensExchanged": 1700
+    },
+    {
+      "sku": "M-039",
+      "name": "Enermeter Pen",
+      "category": "Pen",
+      "minutesToSellout": 1340,
+      "units": 10,
+      "stock": 50,
+      "stockEfficiency": 0.2,
+      "unitsPerHour": 0.45,
+      "price": 500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778679942,
+          "n": 1
+        },
+        {
+          "t": 1778682622,
+          "n": 2
+        },
+        {
+          "t": 1778685302,
+          "n": 2
+        },
+        {
+          "t": 1778687982,
+          "n": 4
+        },
+        {
+          "t": 1778690662,
+          "n": 5
+        },
+        {
+          "t": 1778693342,
+          "n": 5
+        },
+        {
+          "t": 1778696022,
+          "n": 5
+        },
+        {
+          "t": 1778698702,
+          "n": 5
+        },
+        {
+          "t": 1778701382,
+          "n": 5
+        },
+        {
+          "t": 1778704062,
+          "n": 5
+        },
+        {
+          "t": 1778706742,
+          "n": 5
+        },
+        {
+          "t": 1778709422,
+          "n": 5
+        },
+        {
+          "t": 1778712102,
+          "n": 5
+        },
+        {
+          "t": 1778714782,
+          "n": 5
+        },
+        {
+          "t": 1778717462,
+          "n": 5
+        },
+        {
+          "t": 1778720142,
+          "n": 5
+        },
+        {
+          "t": 1778722822,
+          "n": 5
+        },
+        {
+          "t": 1778725502,
+          "n": 5
+        },
+        {
+          "t": 1778728182,
+          "n": 5
+        },
+        {
+          "t": 1778730862,
+          "n": 5
+        },
+        {
+          "t": 1778733542,
+          "n": 5
+        },
+        {
+          "t": 1778736222,
+          "n": 5
+        },
+        {
+          "t": 1778738902,
+          "n": 5
+        },
+        {
+          "t": 1778741582,
+          "n": 5
+        },
+        {
+          "t": 1778744262,
+          "n": 5
+        },
+        {
+          "t": 1778746942,
+          "n": 5
+        },
+        {
+          "t": 1778749622,
+          "n": 5
+        },
+        {
+          "t": 1778752302,
+          "n": 6
+        },
+        {
+          "t": 1778754982,
+          "n": 8
+        },
+        {
+          "t": 1778757662,
+          "n": 8
+        },
+        {
+          "t": 1778760342,
+          "n": 9
+        },
+        {
+          "t": 1778763022,
+          "n": 10
+        }
+      ],
+      "tokensExchanged": 2600
+    },
+    {
+      "sku": "M-027",
+      "name": "Apemeta lanyard",
+      "category": "Wearable",
+      "minutesToSellout": 319,
+      "units": 9,
+      "stock": 50,
+      "stockEfficiency": 0.18,
+      "unitsPerHour": 1.69,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778754347,
+          "n": 1
+        },
+        {
+          "t": 1778754986,
+          "n": 1
+        },
+        {
+          "t": 1778755625,
+          "n": 1
+        },
+        {
+          "t": 1778756264,
+          "n": 1
+        },
+        {
+          "t": 1778756903,
+          "n": 1
+        },
+        {
+          "t": 1778757542,
+          "n": 1
+        },
+        {
+          "t": 1778758181,
+          "n": 1
+        },
+        {
+          "t": 1778758820,
+          "n": 1
+        },
+        {
+          "t": 1778759459,
+          "n": 1
+        },
+        {
+          "t": 1778760098,
+          "n": 1
+        },
+        {
+          "t": 1778760737,
+          "n": 1
+        },
+        {
+          "t": 1778761376,
+          "n": 1
+        },
+        {
+          "t": 1778762015,
+          "n": 1
+        },
+        {
+          "t": 1778762654,
+          "n": 1
+        },
+        {
+          "t": 1778763293,
+          "n": 1
+        },
+        {
+          "t": 1778763932,
+          "n": 1
+        },
+        {
+          "t": 1778764571,
+          "n": 1
+        },
+        {
+          "t": 1778765210,
+          "n": 1
+        },
+        {
+          "t": 1778765849,
+          "n": 1
+        },
+        {
+          "t": 1778766488,
+          "n": 1
+        },
+        {
+          "t": 1778767127,
+          "n": 1
+        },
+        {
+          "t": 1778767766,
+          "n": 1
+        },
+        {
+          "t": 1778768405,
+          "n": 1
+        },
+        {
+          "t": 1778769044,
+          "n": 1
+        },
+        {
+          "t": 1778769683,
+          "n": 1
+        },
+        {
+          "t": 1778770322,
+          "n": 3
+        },
+        {
+          "t": 1778770961,
+          "n": 4
+        },
+        {
+          "t": 1778771600,
+          "n": 5
+        },
+        {
+          "t": 1778772239,
+          "n": 6
+        },
+        {
+          "t": 1778772878,
+          "n": 6
+        },
+        {
+          "t": 1778773517,
+          "n": 8
+        },
+        {
+          "t": 1778774156,
+          "n": 9
+        }
+      ],
+      "tokensExchanged": 2700
+    },
+    {
+      "sku": "M-033",
+      "name": "Bling Cap",
+      "category": "Wearable",
+      "minutesToSellout": 1583,
+      "units": 8,
+      "stock": 8,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.3,
+      "price": 2500,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778674791,
+          "n": 1
+        },
+        {
+          "t": 1778677958,
+          "n": 1
+        },
+        {
+          "t": 1778681125,
+          "n": 3
+        },
+        {
+          "t": 1778684292,
+          "n": 4
+        },
+        {
+          "t": 1778687459,
+          "n": 4
+        },
+        {
+          "t": 1778690626,
+          "n": 4
+        },
+        {
+          "t": 1778693793,
+          "n": 4
+        },
+        {
+          "t": 1778696960,
+          "n": 4
+        },
+        {
+          "t": 1778700127,
+          "n": 4
+        },
+        {
+          "t": 1778703294,
+          "n": 4
+        },
+        {
+          "t": 1778706461,
+          "n": 4
+        },
+        {
+          "t": 1778709628,
+          "n": 4
+        },
+        {
+          "t": 1778712795,
+          "n": 4
+        },
+        {
+          "t": 1778715962,
+          "n": 4
+        },
+        {
+          "t": 1778719129,
+          "n": 4
+        },
+        {
+          "t": 1778722296,
+          "n": 4
+        },
+        {
+          "t": 1778725463,
+          "n": 4
+        },
+        {
+          "t": 1778728630,
+          "n": 4
+        },
+        {
+          "t": 1778731797,
+          "n": 4
+        },
+        {
+          "t": 1778734964,
+          "n": 4
+        },
+        {
+          "t": 1778738131,
+          "n": 4
+        },
+        {
+          "t": 1778741298,
+          "n": 4
+        },
+        {
+          "t": 1778744465,
+          "n": 4
+        },
+        {
+          "t": 1778747632,
+          "n": 4
+        },
+        {
+          "t": 1778750799,
+          "n": 4
+        },
+        {
+          "t": 1778753966,
+          "n": 4
+        },
+        {
+          "t": 1778757133,
+          "n": 5
+        },
+        {
+          "t": 1778760300,
+          "n": 7
+        },
+        {
+          "t": 1778763467,
+          "n": 7
+        },
+        {
+          "t": 1778766634,
+          "n": 7
+        },
+        {
+          "t": 1778769801,
+          "n": 7
+        },
+        {
+          "t": 1778772968,
+          "n": 8
+        }
+      ],
+      "tokensExchanged": 18000
+    },
+    {
+      "sku": "M-032",
+      "name": "ANSR Notebook",
+      "category": "Notebook",
+      "minutesToSellout": 1139,
+      "units": 8,
+      "stock": 8,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.42,
+      "price": 1000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778689701,
+          "n": 1
+        },
+        {
+          "t": 1778691980,
+          "n": 1
+        },
+        {
+          "t": 1778694259,
+          "n": 1
+        },
+        {
+          "t": 1778696538,
+          "n": 1
+        },
+        {
+          "t": 1778698817,
+          "n": 1
+        },
+        {
+          "t": 1778701096,
+          "n": 1
+        },
+        {
+          "t": 1778703375,
+          "n": 1
+        },
+        {
+          "t": 1778705654,
+          "n": 1
+        },
+        {
+          "t": 1778707933,
+          "n": 1
+        },
+        {
+          "t": 1778710212,
+          "n": 1
+        },
+        {
+          "t": 1778712491,
+          "n": 1
+        },
+        {
+          "t": 1778714770,
+          "n": 1
+        },
+        {
+          "t": 1778717049,
+          "n": 1
+        },
+        {
+          "t": 1778719328,
+          "n": 1
+        },
+        {
+          "t": 1778721607,
+          "n": 1
+        },
+        {
+          "t": 1778723886,
+          "n": 1
+        },
+        {
+          "t": 1778726165,
+          "n": 1
+        },
+        {
+          "t": 1778728444,
+          "n": 1
+        },
+        {
+          "t": 1778730723,
+          "n": 1
+        },
+        {
+          "t": 1778733002,
+          "n": 1
+        },
+        {
+          "t": 1778735281,
+          "n": 1
+        },
+        {
+          "t": 1778737560,
+          "n": 1
+        },
+        {
+          "t": 1778739839,
+          "n": 1
+        },
+        {
+          "t": 1778742118,
+          "n": 1
+        },
+        {
+          "t": 1778744397,
+          "n": 1
+        },
+        {
+          "t": 1778746676,
+          "n": 1
+        },
+        {
+          "t": 1778748955,
+          "n": 1
+        },
+        {
+          "t": 1778751234,
+          "n": 1
+        },
+        {
+          "t": 1778753513,
+          "n": 2
+        },
+        {
+          "t": 1778755792,
+          "n": 4
+        },
+        {
+          "t": 1778758071,
+          "n": 7
+        },
+        {
+          "t": 1778760350,
+          "n": 8
+        }
+      ],
+      "tokensExchanged": 8000
+    },
+    {
+      "sku": "M-008",
+      "name": "RESOPARK Lanyard",
+      "category": "Wearable",
+      "minutesToSellout": 3259,
+      "units": 7,
+      "stock": 5,
+      "stockEfficiency": 1.4,
+      "unitsPerHour": 0.13,
+      "price": 100,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778585210,
+          "n": 1
+        },
+        {
+          "t": 1778591729,
+          "n": 1
+        },
+        {
+          "t": 1778598248,
+          "n": 1
+        },
+        {
+          "t": 1778604767,
+          "n": 2
+        },
+        {
+          "t": 1778611286,
+          "n": 2
+        },
+        {
+          "t": 1778617805,
+          "n": 2
+        },
+        {
+          "t": 1778624324,
+          "n": 2
+        },
+        {
+          "t": 1778630843,
+          "n": 2
+        },
+        {
+          "t": 1778637362,
+          "n": 2
+        },
+        {
+          "t": 1778643881,
+          "n": 2
+        },
+        {
+          "t": 1778650400,
+          "n": 2
+        },
+        {
+          "t": 1778656919,
+          "n": 2
+        },
+        {
+          "t": 1778663438,
+          "n": 2
+        },
+        {
+          "t": 1778669957,
+          "n": 2
+        },
+        {
+          "t": 1778676476,
+          "n": 2
+        },
+        {
+          "t": 1778682995,
+          "n": 2
+        },
+        {
+          "t": 1778689514,
+          "n": 2
+        },
+        {
+          "t": 1778696033,
+          "n": 2
+        },
+        {
+          "t": 1778702552,
+          "n": 2
+        },
+        {
+          "t": 1778709071,
+          "n": 2
+        },
+        {
+          "t": 1778715590,
+          "n": 2
+        },
+        {
+          "t": 1778722109,
+          "n": 2
+        },
+        {
+          "t": 1778728628,
+          "n": 2
+        },
+        {
+          "t": 1778735147,
+          "n": 2
+        },
+        {
+          "t": 1778741666,
+          "n": 2
+        },
+        {
+          "t": 1778748185,
+          "n": 2
+        },
+        {
+          "t": 1778754704,
+          "n": 2
+        },
+        {
+          "t": 1778761223,
+          "n": 2
+        },
+        {
+          "t": 1778767742,
+          "n": 3
+        },
+        {
+          "t": 1778774261,
+          "n": 4
+        },
+        {
+          "t": 1778780780,
+          "n": 5
+        },
+        {
+          "t": 1778787299,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 1800
+    },
+    {
+      "sku": "M-028",
+      "name": "Sopinal Bag",
+      "category": "Bag",
+      "minutesToSellout": 1662,
+      "units": 7,
+      "stock": 12,
+      "stockEfficiency": 0.583,
+      "unitsPerHour": 0.25,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778681013,
+          "n": 1
+        },
+        {
+          "t": 1778684338,
+          "n": 1
+        },
+        {
+          "t": 1778687663,
+          "n": 1
+        },
+        {
+          "t": 1778690988,
+          "n": 1
+        },
+        {
+          "t": 1778694313,
+          "n": 2
+        },
+        {
+          "t": 1778697638,
+          "n": 2
+        },
+        {
+          "t": 1778700963,
+          "n": 2
+        },
+        {
+          "t": 1778704288,
+          "n": 2
+        },
+        {
+          "t": 1778707613,
+          "n": 2
+        },
+        {
+          "t": 1778710938,
+          "n": 2
+        },
+        {
+          "t": 1778714263,
+          "n": 2
+        },
+        {
+          "t": 1778717588,
+          "n": 2
+        },
+        {
+          "t": 1778720913,
+          "n": 2
+        },
+        {
+          "t": 1778724238,
+          "n": 2
+        },
+        {
+          "t": 1778727563,
+          "n": 2
+        },
+        {
+          "t": 1778730888,
+          "n": 2
+        },
+        {
+          "t": 1778734213,
+          "n": 2
+        },
+        {
+          "t": 1778737538,
+          "n": 2
+        },
+        {
+          "t": 1778740863,
+          "n": 2
+        },
+        {
+          "t": 1778744188,
+          "n": 2
+        },
+        {
+          "t": 1778747513,
+          "n": 2
+        },
+        {
+          "t": 1778750838,
+          "n": 2
+        },
+        {
+          "t": 1778754163,
+          "n": 2
+        },
+        {
+          "t": 1778757488,
+          "n": 5
+        },
+        {
+          "t": 1778760813,
+          "n": 5
+        },
+        {
+          "t": 1778764138,
+          "n": 5
+        },
+        {
+          "t": 1778767463,
+          "n": 5
+        },
+        {
+          "t": 1778770788,
+          "n": 5
+        },
+        {
+          "t": 1778774113,
+          "n": 5
+        },
+        {
+          "t": 1778777438,
+          "n": 5
+        },
+        {
+          "t": 1778780763,
+          "n": 5
+        },
+        {
+          "t": 1778784088,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 1100
+    },
+    {
+      "sku": "M-042",
+      "name": "Tickets for Fia",
+      "category": "Tickets",
+      "minutesToSellout": 1448,
+      "units": 7,
+      "stock": 30,
+      "stockEfficiency": 0.233,
+      "unitsPerHour": 0.29,
+      "price": 2000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778688891,
+          "n": 1
+        },
+        {
+          "t": 1778691787,
+          "n": 2
+        },
+        {
+          "t": 1778694683,
+          "n": 2
+        },
+        {
+          "t": 1778697579,
+          "n": 2
+        },
+        {
+          "t": 1778700475,
+          "n": 2
+        },
+        {
+          "t": 1778703371,
+          "n": 2
+        },
+        {
+          "t": 1778706267,
+          "n": 2
+        },
+        {
+          "t": 1778709163,
+          "n": 2
+        },
+        {
+          "t": 1778712059,
+          "n": 2
+        },
+        {
+          "t": 1778714955,
+          "n": 2
+        },
+        {
+          "t": 1778717851,
+          "n": 2
+        },
+        {
+          "t": 1778720747,
+          "n": 2
+        },
+        {
+          "t": 1778723643,
+          "n": 2
+        },
+        {
+          "t": 1778726539,
+          "n": 2
+        },
+        {
+          "t": 1778729435,
+          "n": 2
+        },
+        {
+          "t": 1778732331,
+          "n": 2
+        },
+        {
+          "t": 1778735227,
+          "n": 2
+        },
+        {
+          "t": 1778738123,
+          "n": 2
+        },
+        {
+          "t": 1778741019,
+          "n": 2
+        },
+        {
+          "t": 1778743915,
+          "n": 2
+        },
+        {
+          "t": 1778746811,
+          "n": 2
+        },
+        {
+          "t": 1778749707,
+          "n": 2
+        },
+        {
+          "t": 1778752603,
+          "n": 2
+        },
+        {
+          "t": 1778755499,
+          "n": 2
+        },
+        {
+          "t": 1778758395,
+          "n": 2
+        },
+        {
+          "t": 1778761291,
+          "n": 2
+        },
+        {
+          "t": 1778764187,
+          "n": 2
+        },
+        {
+          "t": 1778767083,
+          "n": 2
+        },
+        {
+          "t": 1778769979,
+          "n": 3
+        },
+        {
+          "t": 1778772875,
+          "n": 6
+        },
+        {
+          "t": 1778775771,
+          "n": 6
+        },
+        {
+          "t": 1778778667,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 14000
+    },
+    {
+      "sku": "M-036",
+      "name": "Lisboa Clara Pen",
+      "category": "Pen",
+      "minutesToSellout": 1437,
+      "units": 7,
+      "stock": 9,
+      "stockEfficiency": 0.778,
+      "unitsPerHour": 0.29,
+      "price": 100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778675818,
+          "n": 1
+        },
+        {
+          "t": 1778678693,
+          "n": 4
+        },
+        {
+          "t": 1778681568,
+          "n": 5
+        },
+        {
+          "t": 1778684443,
+          "n": 5
+        },
+        {
+          "t": 1778687318,
+          "n": 5
+        },
+        {
+          "t": 1778690193,
+          "n": 5
+        },
+        {
+          "t": 1778693068,
+          "n": 5
+        },
+        {
+          "t": 1778695943,
+          "n": 5
+        },
+        {
+          "t": 1778698818,
+          "n": 5
+        },
+        {
+          "t": 1778701693,
+          "n": 5
+        },
+        {
+          "t": 1778704568,
+          "n": 5
+        },
+        {
+          "t": 1778707443,
+          "n": 5
+        },
+        {
+          "t": 1778710318,
+          "n": 5
+        },
+        {
+          "t": 1778713193,
+          "n": 5
+        },
+        {
+          "t": 1778716068,
+          "n": 5
+        },
+        {
+          "t": 1778718943,
+          "n": 5
+        },
+        {
+          "t": 1778721818,
+          "n": 5
+        },
+        {
+          "t": 1778724693,
+          "n": 5
+        },
+        {
+          "t": 1778727568,
+          "n": 5
+        },
+        {
+          "t": 1778730443,
+          "n": 5
+        },
+        {
+          "t": 1778733318,
+          "n": 5
+        },
+        {
+          "t": 1778736193,
+          "n": 5
+        },
+        {
+          "t": 1778739068,
+          "n": 5
+        },
+        {
+          "t": 1778741943,
+          "n": 5
+        },
+        {
+          "t": 1778744818,
+          "n": 5
+        },
+        {
+          "t": 1778747693,
+          "n": 5
+        },
+        {
+          "t": 1778750568,
+          "n": 5
+        },
+        {
+          "t": 1778753443,
+          "n": 5
+        },
+        {
+          "t": 1778756318,
+          "n": 5
+        },
+        {
+          "t": 1778759193,
+          "n": 5
+        },
+        {
+          "t": 1778762068,
+          "n": 6
+        },
+        {
+          "t": 1778764943,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 1400
+    },
+    {
+      "sku": "M-026",
+      "name": "Elementar water bottle",
+      "category": "Drink",
+      "minutesToSellout": 1242,
+      "units": 7,
+      "stock": 8,
+      "stockEfficiency": 0.875,
+      "unitsPerHour": 0.34,
+      "price": 2000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778680711,
+          "n": 1
+        },
+        {
+          "t": 1778683196,
+          "n": 1
+        },
+        {
+          "t": 1778685681,
+          "n": 1
+        },
+        {
+          "t": 1778688166,
+          "n": 1
+        },
+        {
+          "t": 1778690651,
+          "n": 2
+        },
+        {
+          "t": 1778693136,
+          "n": 2
+        },
+        {
+          "t": 1778695621,
+          "n": 2
+        },
+        {
+          "t": 1778698106,
+          "n": 2
+        },
+        {
+          "t": 1778700591,
+          "n": 2
+        },
+        {
+          "t": 1778703076,
+          "n": 2
+        },
+        {
+          "t": 1778705561,
+          "n": 2
+        },
+        {
+          "t": 1778708046,
+          "n": 2
+        },
+        {
+          "t": 1778710531,
+          "n": 2
+        },
+        {
+          "t": 1778713016,
+          "n": 2
+        },
+        {
+          "t": 1778715501,
+          "n": 2
+        },
+        {
+          "t": 1778717986,
+          "n": 2
+        },
+        {
+          "t": 1778720471,
+          "n": 2
+        },
+        {
+          "t": 1778722956,
+          "n": 2
+        },
+        {
+          "t": 1778725441,
+          "n": 2
+        },
+        {
+          "t": 1778727926,
+          "n": 2
+        },
+        {
+          "t": 1778730411,
+          "n": 2
+        },
+        {
+          "t": 1778732896,
+          "n": 2
+        },
+        {
+          "t": 1778735381,
+          "n": 2
+        },
+        {
+          "t": 1778737866,
+          "n": 2
+        },
+        {
+          "t": 1778740351,
+          "n": 2
+        },
+        {
+          "t": 1778742836,
+          "n": 2
+        },
+        {
+          "t": 1778745321,
+          "n": 2
+        },
+        {
+          "t": 1778747806,
+          "n": 2
+        },
+        {
+          "t": 1778750291,
+          "n": 2
+        },
+        {
+          "t": 1778752776,
+          "n": 2
+        },
+        {
+          "t": 1778755261,
+          "n": 6
+        },
+        {
+          "t": 1778757746,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 14000
+    },
+    {
+      "sku": "M-034",
+      "name": "Bling Bag",
+      "category": "Bag",
+      "minutesToSellout": 136,
+      "units": 7,
+      "stock": 50,
+      "stockEfficiency": 0.14,
+      "unitsPerHour": 3.09,
+      "price": 100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778679525,
+          "n": 1
+        },
+        {
+          "t": 1778679797,
+          "n": 2
+        },
+        {
+          "t": 1778680069,
+          "n": 2
+        },
+        {
+          "t": 1778680341,
+          "n": 2
+        },
+        {
+          "t": 1778680613,
+          "n": 2
+        },
+        {
+          "t": 1778680885,
+          "n": 3
+        },
+        {
+          "t": 1778681157,
+          "n": 3
+        },
+        {
+          "t": 1778681429,
+          "n": 3
+        },
+        {
+          "t": 1778681701,
+          "n": 3
+        },
+        {
+          "t": 1778681973,
+          "n": 3
+        },
+        {
+          "t": 1778682245,
+          "n": 3
+        },
+        {
+          "t": 1778682517,
+          "n": 3
+        },
+        {
+          "t": 1778682789,
+          "n": 3
+        },
+        {
+          "t": 1778683061,
+          "n": 3
+        },
+        {
+          "t": 1778683333,
+          "n": 3
+        },
+        {
+          "t": 1778683605,
+          "n": 3
+        },
+        {
+          "t": 1778683877,
+          "n": 3
+        },
+        {
+          "t": 1778684149,
+          "n": 4
+        },
+        {
+          "t": 1778684421,
+          "n": 5
+        },
+        {
+          "t": 1778684693,
+          "n": 5
+        },
+        {
+          "t": 1778684965,
+          "n": 5
+        },
+        {
+          "t": 1778685237,
+          "n": 5
+        },
+        {
+          "t": 1778685509,
+          "n": 5
+        },
+        {
+          "t": 1778685781,
+          "n": 5
+        },
+        {
+          "t": 1778686053,
+          "n": 5
+        },
+        {
+          "t": 1778686325,
+          "n": 6
+        },
+        {
+          "t": 1778686597,
+          "n": 6
+        },
+        {
+          "t": 1778686869,
+          "n": 6
+        },
+        {
+          "t": 1778687141,
+          "n": 6
+        },
+        {
+          "t": 1778687413,
+          "n": 6
+        },
+        {
+          "t": 1778687685,
+          "n": 6
+        },
+        {
+          "t": 1778687957,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 700
+    },
+    {
+      "sku": "M-002",
+      "name": "Geoclima Bag",
+      "category": "Bag",
+      "minutesToSellout": 1478,
+      "units": 7,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.28,
+      "price": 100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778598179,
+          "n": 1
+        },
+        {
+          "t": 1778601136,
+          "n": 4
+        },
+        {
+          "t": 1778604093,
+          "n": 4
+        },
+        {
+          "t": 1778607050,
+          "n": 4
+        },
+        {
+          "t": 1778610007,
+          "n": 4
+        },
+        {
+          "t": 1778612964,
+          "n": 4
+        },
+        {
+          "t": 1778615921,
+          "n": 4
+        },
+        {
+          "t": 1778618878,
+          "n": 4
+        },
+        {
+          "t": 1778621835,
+          "n": 4
+        },
+        {
+          "t": 1778624792,
+          "n": 4
+        },
+        {
+          "t": 1778627749,
+          "n": 4
+        },
+        {
+          "t": 1778630706,
+          "n": 4
+        },
+        {
+          "t": 1778633663,
+          "n": 4
+        },
+        {
+          "t": 1778636620,
+          "n": 4
+        },
+        {
+          "t": 1778639577,
+          "n": 4
+        },
+        {
+          "t": 1778642534,
+          "n": 4
+        },
+        {
+          "t": 1778645491,
+          "n": 4
+        },
+        {
+          "t": 1778648448,
+          "n": 4
+        },
+        {
+          "t": 1778651405,
+          "n": 4
+        },
+        {
+          "t": 1778654362,
+          "n": 4
+        },
+        {
+          "t": 1778657319,
+          "n": 4
+        },
+        {
+          "t": 1778660276,
+          "n": 4
+        },
+        {
+          "t": 1778663233,
+          "n": 4
+        },
+        {
+          "t": 1778666190,
+          "n": 4
+        },
+        {
+          "t": 1778669147,
+          "n": 4
+        },
+        {
+          "t": 1778672104,
+          "n": 4
+        },
+        {
+          "t": 1778675061,
+          "n": 5
+        },
+        {
+          "t": 1778678018,
+          "n": 5
+        },
+        {
+          "t": 1778680975,
+          "n": 5
+        },
+        {
+          "t": 1778683932,
+          "n": 5
+        },
+        {
+          "t": 1778686889,
+          "n": 6
+        },
+        {
+          "t": 1778689846,
+          "n": 7
+        }
+      ],
+      "tokensExchanged": 2700
+    },
+    {
+      "sku": "M-038",
+      "name": "DMAEVCE Notebook",
+      "category": "Notebook",
+      "minutesToSellout": 1403,
+      "units": 6,
+      "stock": 7,
+      "stockEfficiency": 0.857,
+      "unitsPerHour": 0.26,
+      "price": 1000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778675723,
+          "n": 1
+        },
+        {
+          "t": 1778678529,
+          "n": 1
+        },
+        {
+          "t": 1778681335,
+          "n": 1
+        },
+        {
+          "t": 1778684141,
+          "n": 1
+        },
+        {
+          "t": 1778686947,
+          "n": 1
+        },
+        {
+          "t": 1778689753,
+          "n": 2
+        },
+        {
+          "t": 1778692559,
+          "n": 2
+        },
+        {
+          "t": 1778695365,
+          "n": 2
+        },
+        {
+          "t": 1778698171,
+          "n": 2
+        },
+        {
+          "t": 1778700977,
+          "n": 2
+        },
+        {
+          "t": 1778703783,
+          "n": 2
+        },
+        {
+          "t": 1778706589,
+          "n": 2
+        },
+        {
+          "t": 1778709395,
+          "n": 2
+        },
+        {
+          "t": 1778712201,
+          "n": 2
+        },
+        {
+          "t": 1778715007,
+          "n": 2
+        },
+        {
+          "t": 1778717813,
+          "n": 2
+        },
+        {
+          "t": 1778720619,
+          "n": 2
+        },
+        {
+          "t": 1778723425,
+          "n": 2
+        },
+        {
+          "t": 1778726231,
+          "n": 2
+        },
+        {
+          "t": 1778729037,
+          "n": 2
+        },
+        {
+          "t": 1778731843,
+          "n": 2
+        },
+        {
+          "t": 1778734649,
+          "n": 2
+        },
+        {
+          "t": 1778737455,
+          "n": 2
+        },
+        {
+          "t": 1778740261,
+          "n": 2
+        },
+        {
+          "t": 1778743067,
+          "n": 2
+        },
+        {
+          "t": 1778745873,
+          "n": 2
+        },
+        {
+          "t": 1778748679,
+          "n": 2
+        },
+        {
+          "t": 1778751485,
+          "n": 2
+        },
+        {
+          "t": 1778754291,
+          "n": 2
+        },
+        {
+          "t": 1778757097,
+          "n": 2
+        },
+        {
+          "t": 1778759903,
+          "n": 5
+        },
+        {
+          "t": 1778762709,
+          "n": 6
+        }
+      ],
+      "tokensExchanged": 6000
+    },
+    {
+      "sku": "M-037",
+      "name": "Wireless Logic airpods",
+      "category": "Other",
+      "minutesToSellout": 115,
+      "units": 6,
+      "stock": 6,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 3.13,
+      "price": 3000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778677307,
+          "n": 1
+        },
+        {
+          "t": 1778677537,
+          "n": 1
+        },
+        {
+          "t": 1778677767,
+          "n": 1
+        },
+        {
+          "t": 1778677997,
+          "n": 1
+        },
+        {
+          "t": 1778678227,
+          "n": 1
+        },
+        {
+          "t": 1778678457,
+          "n": 1
+        },
+        {
+          "t": 1778678687,
+          "n": 1
+        },
+        {
+          "t": 1778678917,
+          "n": 1
+        },
+        {
+          "t": 1778679147,
+          "n": 1
+        },
+        {
+          "t": 1778679377,
+          "n": 1
+        },
+        {
+          "t": 1778679607,
+          "n": 1
+        },
+        {
+          "t": 1778679837,
+          "n": 1
+        },
+        {
+          "t": 1778680067,
+          "n": 3
+        },
+        {
+          "t": 1778680297,
+          "n": 3
+        },
+        {
+          "t": 1778680527,
+          "n": 3
+        },
+        {
+          "t": 1778680757,
+          "n": 3
+        },
+        {
+          "t": 1778680987,
+          "n": 3
+        },
+        {
+          "t": 1778681217,
+          "n": 3
+        },
+        {
+          "t": 1778681447,
+          "n": 3
+        },
+        {
+          "t": 1778681677,
+          "n": 3
+        },
+        {
+          "t": 1778681907,
+          "n": 3
+        },
+        {
+          "t": 1778682137,
+          "n": 3
+        },
+        {
+          "t": 1778682367,
+          "n": 3
+        },
+        {
+          "t": 1778682597,
+          "n": 3
+        },
+        {
+          "t": 1778682827,
+          "n": 3
+        },
+        {
+          "t": 1778683057,
+          "n": 3
+        },
+        {
+          "t": 1778683287,
+          "n": 3
+        },
+        {
+          "t": 1778683517,
+          "n": 4
+        },
+        {
+          "t": 1778683747,
+          "n": 5
+        },
+        {
+          "t": 1778683977,
+          "n": 5
+        },
+        {
+          "t": 1778684207,
+          "n": 5
+        },
+        {
+          "t": 1778684437,
+          "n": 6
+        }
+      ],
+      "tokensExchanged": 13000
+    },
+    {
+      "sku": "M-018",
+      "name": "Inovc+ Bag",
+      "category": "Bag",
+      "minutesToSellout": 1483,
+      "units": 6,
+      "stock": 6,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.24,
+      "price": 100,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778593942,
+          "n": 1
+        },
+        {
+          "t": 1778596908,
+          "n": 2
+        },
+        {
+          "t": 1778599874,
+          "n": 4
+        },
+        {
+          "t": 1778602840,
+          "n": 4
+        },
+        {
+          "t": 1778605806,
+          "n": 4
+        },
+        {
+          "t": 1778608772,
+          "n": 4
+        },
+        {
+          "t": 1778611738,
+          "n": 4
+        },
+        {
+          "t": 1778614704,
+          "n": 4
+        },
+        {
+          "t": 1778617670,
+          "n": 4
+        },
+        {
+          "t": 1778620636,
+          "n": 4
+        },
+        {
+          "t": 1778623602,
+          "n": 4
+        },
+        {
+          "t": 1778626568,
+          "n": 4
+        },
+        {
+          "t": 1778629534,
+          "n": 4
+        },
+        {
+          "t": 1778632500,
+          "n": 4
+        },
+        {
+          "t": 1778635466,
+          "n": 4
+        },
+        {
+          "t": 1778638432,
+          "n": 4
+        },
+        {
+          "t": 1778641398,
+          "n": 4
+        },
+        {
+          "t": 1778644364,
+          "n": 4
+        },
+        {
+          "t": 1778647330,
+          "n": 4
+        },
+        {
+          "t": 1778650296,
+          "n": 4
+        },
+        {
+          "t": 1778653262,
+          "n": 4
+        },
+        {
+          "t": 1778656228,
+          "n": 4
+        },
+        {
+          "t": 1778659194,
+          "n": 4
+        },
+        {
+          "t": 1778662160,
+          "n": 4
+        },
+        {
+          "t": 1778665126,
+          "n": 4
+        },
+        {
+          "t": 1778668092,
+          "n": 4
+        },
+        {
+          "t": 1778671058,
+          "n": 4
+        },
+        {
+          "t": 1778674024,
+          "n": 4
+        },
+        {
+          "t": 1778676990,
+          "n": 4
+        },
+        {
+          "t": 1778679956,
+          "n": 4
+        },
+        {
+          "t": 1778682922,
+          "n": 5
+        },
+        {
+          "t": 1778685888,
+          "n": 6
+        }
+      ],
+      "tokensExchanged": 2200
+    },
+    {
+      "sku": "M-043",
+      "name": "Funnel with Soap",
+      "category": "Other",
+      "minutesToSellout": 62,
+      "units": 5,
+      "stock": 7,
+      "stockEfficiency": 0.714,
+      "unitsPerHour": 4.84,
+      "price": 1000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778756291,
+          "n": 1
+        },
+        {
+          "t": 1778756416,
+          "n": 1
+        },
+        {
+          "t": 1778756541,
+          "n": 1
+        },
+        {
+          "t": 1778756666,
+          "n": 1
+        },
+        {
+          "t": 1778756791,
+          "n": 1
+        },
+        {
+          "t": 1778756916,
+          "n": 1
+        },
+        {
+          "t": 1778757041,
+          "n": 1
+        },
+        {
+          "t": 1778757166,
+          "n": 1
+        },
+        {
+          "t": 1778757291,
+          "n": 1
+        },
+        {
+          "t": 1778757416,
+          "n": 1
+        },
+        {
+          "t": 1778757541,
+          "n": 1
+        },
+        {
+          "t": 1778757666,
+          "n": 2
+        },
+        {
+          "t": 1778757791,
+          "n": 2
+        },
+        {
+          "t": 1778757916,
+          "n": 3
+        },
+        {
+          "t": 1778758041,
+          "n": 3
+        },
+        {
+          "t": 1778758166,
+          "n": 3
+        },
+        {
+          "t": 1778758291,
+          "n": 3
+        },
+        {
+          "t": 1778758416,
+          "n": 4
+        },
+        {
+          "t": 1778758541,
+          "n": 4
+        },
+        {
+          "t": 1778758666,
+          "n": 4
+        },
+        {
+          "t": 1778758791,
+          "n": 4
+        },
+        {
+          "t": 1778758916,
+          "n": 4
+        },
+        {
+          "t": 1778759041,
+          "n": 4
+        },
+        {
+          "t": 1778759166,
+          "n": 4
+        },
+        {
+          "t": 1778759291,
+          "n": 4
+        },
+        {
+          "t": 1778759416,
+          "n": 4
+        },
+        {
+          "t": 1778759541,
+          "n": 4
+        },
+        {
+          "t": 1778759666,
+          "n": 4
+        },
+        {
+          "t": 1778759791,
+          "n": 4
+        },
+        {
+          "t": 1778759916,
+          "n": 4
+        },
+        {
+          "t": 1778760041,
+          "n": 4
+        },
+        {
+          "t": 1778760166,
+          "n": 5
+        }
+      ],
+      "tokensExchanged": 4600
+    },
+    {
+      "sku": "M-048",
+      "name": "Green keeper Lisboa Verde",
+      "category": "Wearable",
+      "minutesToSellout": 37,
+      "units": 4,
+      "stock": 50,
+      "stockEfficiency": 0.08,
+      "unitsPerHour": 6.49,
+      "price": 3000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778770468,
+          "n": 1
+        },
+        {
+          "t": 1778770542,
+          "n": 1
+        },
+        {
+          "t": 1778770616,
+          "n": 1
+        },
+        {
+          "t": 1778770690,
+          "n": 1
+        },
+        {
+          "t": 1778770764,
+          "n": 1
+        },
+        {
+          "t": 1778770838,
+          "n": 1
+        },
+        {
+          "t": 1778770912,
+          "n": 1
+        },
+        {
+          "t": 1778770986,
+          "n": 1
+        },
+        {
+          "t": 1778771060,
+          "n": 1
+        },
+        {
+          "t": 1778771134,
+          "n": 1
+        },
+        {
+          "t": 1778771208,
+          "n": 1
+        },
+        {
+          "t": 1778771282,
+          "n": 1
+        },
+        {
+          "t": 1778771356,
+          "n": 1
+        },
+        {
+          "t": 1778771430,
+          "n": 2
+        },
+        {
+          "t": 1778771504,
+          "n": 2
+        },
+        {
+          "t": 1778771578,
+          "n": 2
+        },
+        {
+          "t": 1778771652,
+          "n": 2
+        },
+        {
+          "t": 1778771726,
+          "n": 2
+        },
+        {
+          "t": 1778771800,
+          "n": 2
+        },
+        {
+          "t": 1778771874,
+          "n": 2
+        },
+        {
+          "t": 1778771948,
+          "n": 2
+        },
+        {
+          "t": 1778772022,
+          "n": 2
+        },
+        {
+          "t": 1778772096,
+          "n": 2
+        },
+        {
+          "t": 1778772170,
+          "n": 3
+        },
+        {
+          "t": 1778772244,
+          "n": 3
+        },
+        {
+          "t": 1778772318,
+          "n": 3
+        },
+        {
+          "t": 1778772392,
+          "n": 3
+        },
+        {
+          "t": 1778772466,
+          "n": 3
+        },
+        {
+          "t": 1778772540,
+          "n": 3
+        },
+        {
+          "t": 1778772614,
+          "n": 3
+        },
+        {
+          "t": 1778772688,
+          "n": 3
+        },
+        {
+          "t": 1778772762,
+          "n": 4
+        }
+      ],
+      "tokensExchanged": 12000
+    },
+    {
+      "sku": "M-046",
+      "name": "Valorpneu Bag",
+      "category": "Other",
+      "minutesToSellout": 179,
+      "units": 4,
+      "stock": 5,
+      "stockEfficiency": 0.8,
+      "unitsPerHour": 1.34,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778760204,
+          "n": 1
+        },
+        {
+          "t": 1778760562,
+          "n": 1
+        },
+        {
+          "t": 1778760920,
+          "n": 1
+        },
+        {
+          "t": 1778761278,
+          "n": 1
+        },
+        {
+          "t": 1778761636,
+          "n": 1
+        },
+        {
+          "t": 1778761994,
+          "n": 1
+        },
+        {
+          "t": 1778762352,
+          "n": 1
+        },
+        {
+          "t": 1778762710,
+          "n": 1
+        },
+        {
+          "t": 1778763068,
+          "n": 1
+        },
+        {
+          "t": 1778763426,
+          "n": 1
+        },
+        {
+          "t": 1778763784,
+          "n": 1
+        },
+        {
+          "t": 1778764142,
+          "n": 1
+        },
+        {
+          "t": 1778764500,
+          "n": 1
+        },
+        {
+          "t": 1778764858,
+          "n": 1
+        },
+        {
+          "t": 1778765216,
+          "n": 1
+        },
+        {
+          "t": 1778765574,
+          "n": 1
+        },
+        {
+          "t": 1778765932,
+          "n": 1
+        },
+        {
+          "t": 1778766290,
+          "n": 1
+        },
+        {
+          "t": 1778766648,
+          "n": 1
+        },
+        {
+          "t": 1778767006,
+          "n": 1
+        },
+        {
+          "t": 1778767364,
+          "n": 1
+        },
+        {
+          "t": 1778767722,
+          "n": 1
+        },
+        {
+          "t": 1778768080,
+          "n": 1
+        },
+        {
+          "t": 1778768438,
+          "n": 1
+        },
+        {
+          "t": 1778768796,
+          "n": 1
+        },
+        {
+          "t": 1778769154,
+          "n": 1
+        },
+        {
+          "t": 1778769512,
+          "n": 1
+        },
+        {
+          "t": 1778769870,
+          "n": 1
+        },
+        {
+          "t": 1778770228,
+          "n": 1
+        },
+        {
+          "t": 1778770586,
+          "n": 2
+        },
+        {
+          "t": 1778770944,
+          "n": 3
+        },
+        {
+          "t": 1778771302,
+          "n": 4
+        }
+      ],
+      "tokensExchanged": 1200
+    },
+    {
+      "sku": "M-049",
+      "name": "Lisboa energia",
+      "category": "Other",
+      "minutesToSellout": 90,
+      "units": 4,
+      "stock": 4,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 2.67,
+      "price": 800,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778763617,
+          "n": 1
+        },
+        {
+          "t": 1778763798,
+          "n": 1
+        },
+        {
+          "t": 1778763979,
+          "n": 1
+        },
+        {
+          "t": 1778764160,
+          "n": 2
+        },
+        {
+          "t": 1778764341,
+          "n": 2
+        },
+        {
+          "t": 1778764522,
+          "n": 2
+        },
+        {
+          "t": 1778764703,
+          "n": 2
+        },
+        {
+          "t": 1778764884,
+          "n": 2
+        },
+        {
+          "t": 1778765065,
+          "n": 2
+        },
+        {
+          "t": 1778765246,
+          "n": 2
+        },
+        {
+          "t": 1778765427,
+          "n": 2
+        },
+        {
+          "t": 1778765608,
+          "n": 2
+        },
+        {
+          "t": 1778765789,
+          "n": 2
+        },
+        {
+          "t": 1778765970,
+          "n": 2
+        },
+        {
+          "t": 1778766151,
+          "n": 2
+        },
+        {
+          "t": 1778766332,
+          "n": 2
+        },
+        {
+          "t": 1778766513,
+          "n": 2
+        },
+        {
+          "t": 1778766694,
+          "n": 2
+        },
+        {
+          "t": 1778766875,
+          "n": 2
+        },
+        {
+          "t": 1778767056,
+          "n": 2
+        },
+        {
+          "t": 1778767237,
+          "n": 2
+        },
+        {
+          "t": 1778767418,
+          "n": 2
+        },
+        {
+          "t": 1778767599,
+          "n": 3
+        },
+        {
+          "t": 1778767780,
+          "n": 3
+        },
+        {
+          "t": 1778767961,
+          "n": 3
+        },
+        {
+          "t": 1778768142,
+          "n": 3
+        },
+        {
+          "t": 1778768323,
+          "n": 3
+        },
+        {
+          "t": 1778768504,
+          "n": 3
+        },
+        {
+          "t": 1778768685,
+          "n": 3
+        },
+        {
+          "t": 1778768866,
+          "n": 3
+        },
+        {
+          "t": 1778769047,
+          "n": 3
+        },
+        {
+          "t": 1778769228,
+          "n": 4
+        }
+      ],
+      "tokensExchanged": 3200
+    },
+    {
+      "sku": "M-031",
+      "name": "ANSR Stress Cube",
+      "category": "Other",
+      "minutesToSellout": 1263,
+      "units": 4,
+      "stock": null,
+      "stockEfficiency": null,
+      "unitsPerHour": 0.19,
+      "price": 300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778680777,
+          "n": 1
+        },
+        {
+          "t": 1778683304,
+          "n": 1
+        },
+        {
+          "t": 1778685831,
+          "n": 1
+        },
+        {
+          "t": 1778688358,
+          "n": 1
+        },
+        {
+          "t": 1778690885,
+          "n": 1
+        },
+        {
+          "t": 1778693412,
+          "n": 1
+        },
+        {
+          "t": 1778695939,
+          "n": 1
+        },
+        {
+          "t": 1778698466,
+          "n": 1
+        },
+        {
+          "t": 1778700993,
+          "n": 1
+        },
+        {
+          "t": 1778703520,
+          "n": 1
+        },
+        {
+          "t": 1778706047,
+          "n": 1
+        },
+        {
+          "t": 1778708574,
+          "n": 1
+        },
+        {
+          "t": 1778711101,
+          "n": 1
+        },
+        {
+          "t": 1778713628,
+          "n": 1
+        },
+        {
+          "t": 1778716155,
+          "n": 1
+        },
+        {
+          "t": 1778718682,
+          "n": 1
+        },
+        {
+          "t": 1778721209,
+          "n": 1
+        },
+        {
+          "t": 1778723736,
+          "n": 1
+        },
+        {
+          "t": 1778726263,
+          "n": 1
+        },
+        {
+          "t": 1778728790,
+          "n": 1
+        },
+        {
+          "t": 1778731317,
+          "n": 1
+        },
+        {
+          "t": 1778733844,
+          "n": 1
+        },
+        {
+          "t": 1778736371,
+          "n": 1
+        },
+        {
+          "t": 1778738898,
+          "n": 1
+        },
+        {
+          "t": 1778741425,
+          "n": 1
+        },
+        {
+          "t": 1778743952,
+          "n": 1
+        },
+        {
+          "t": 1778746479,
+          "n": 1
+        },
+        {
+          "t": 1778749006,
+          "n": 1
+        },
+        {
+          "t": 1778751533,
+          "n": 1
+        },
+        {
+          "t": 1778754060,
+          "n": 2
+        },
+        {
+          "t": 1778756587,
+          "n": 3
+        },
+        {
+          "t": 1778759114,
+          "n": 4
+        }
+      ],
+      "tokensExchanged": 1200
+    },
+    {
+      "sku": "M-047",
+      "name": "Lisbon climate city",
+      "category": "Notebook",
+      "minutesToSellout": 66,
+      "units": 3,
+      "stock": 10,
+      "stockEfficiency": 0.3,
+      "unitsPerHour": 2.73,
+      "price": 1300,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778761565,
+          "n": 1
+        },
+        {
+          "t": 1778761697,
+          "n": 2
+        },
+        {
+          "t": 1778761829,
+          "n": 2
+        },
+        {
+          "t": 1778761961,
+          "n": 2
+        },
+        {
+          "t": 1778762093,
+          "n": 2
+        },
+        {
+          "t": 1778762225,
+          "n": 2
+        },
+        {
+          "t": 1778762357,
+          "n": 2
+        },
+        {
+          "t": 1778762489,
+          "n": 2
+        },
+        {
+          "t": 1778762621,
+          "n": 2
+        },
+        {
+          "t": 1778762753,
+          "n": 2
+        },
+        {
+          "t": 1778762885,
+          "n": 2
+        },
+        {
+          "t": 1778763017,
+          "n": 2
+        },
+        {
+          "t": 1778763149,
+          "n": 2
+        },
+        {
+          "t": 1778763281,
+          "n": 2
+        },
+        {
+          "t": 1778763413,
+          "n": 2
+        },
+        {
+          "t": 1778763545,
+          "n": 2
+        },
+        {
+          "t": 1778763677,
+          "n": 2
+        },
+        {
+          "t": 1778763809,
+          "n": 2
+        },
+        {
+          "t": 1778763941,
+          "n": 2
+        },
+        {
+          "t": 1778764073,
+          "n": 2
+        },
+        {
+          "t": 1778764205,
+          "n": 2
+        },
+        {
+          "t": 1778764337,
+          "n": 2
+        },
+        {
+          "t": 1778764469,
+          "n": 2
+        },
+        {
+          "t": 1778764601,
+          "n": 2
+        },
+        {
+          "t": 1778764733,
+          "n": 2
+        },
+        {
+          "t": 1778764865,
+          "n": 2
+        },
+        {
+          "t": 1778764997,
+          "n": 2
+        },
+        {
+          "t": 1778765129,
+          "n": 2
+        },
+        {
+          "t": 1778765261,
+          "n": 2
+        },
+        {
+          "t": 1778765393,
+          "n": 2
+        },
+        {
+          "t": 1778765525,
+          "n": 2
+        },
+        {
+          "t": 1778765657,
+          "n": 3
+        }
+      ],
+      "tokensExchanged": 3500
+    },
+    {
+      "sku": "M-022",
+      "name": "TECNOVERITAS Pencil",
+      "category": "Pen",
+      "minutesToSellout": 2732,
+      "units": 3,
+      "stock": 3,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.07,
+      "price": 200,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778592869,
+          "n": 1
+        },
+        {
+          "t": 1778598334,
+          "n": 1
+        },
+        {
+          "t": 1778603799,
+          "n": 1
+        },
+        {
+          "t": 1778609264,
+          "n": 1
+        },
+        {
+          "t": 1778614729,
+          "n": 1
+        },
+        {
+          "t": 1778620194,
+          "n": 1
+        },
+        {
+          "t": 1778625659,
+          "n": 1
+        },
+        {
+          "t": 1778631124,
+          "n": 1
+        },
+        {
+          "t": 1778636589,
+          "n": 1
+        },
+        {
+          "t": 1778642054,
+          "n": 1
+        },
+        {
+          "t": 1778647519,
+          "n": 1
+        },
+        {
+          "t": 1778652984,
+          "n": 1
+        },
+        {
+          "t": 1778658449,
+          "n": 1
+        },
+        {
+          "t": 1778663914,
+          "n": 1
+        },
+        {
+          "t": 1778669379,
+          "n": 1
+        },
+        {
+          "t": 1778674844,
+          "n": 1
+        },
+        {
+          "t": 1778680309,
+          "n": 1
+        },
+        {
+          "t": 1778685774,
+          "n": 1
+        },
+        {
+          "t": 1778691239,
+          "n": 1
+        },
+        {
+          "t": 1778696704,
+          "n": 1
+        },
+        {
+          "t": 1778702169,
+          "n": 1
+        },
+        {
+          "t": 1778707634,
+          "n": 1
+        },
+        {
+          "t": 1778713099,
+          "n": 1
+        },
+        {
+          "t": 1778718564,
+          "n": 1
+        },
+        {
+          "t": 1778724029,
+          "n": 1
+        },
+        {
+          "t": 1778729494,
+          "n": 1
+        },
+        {
+          "t": 1778734959,
+          "n": 1
+        },
+        {
+          "t": 1778740424,
+          "n": 1
+        },
+        {
+          "t": 1778745889,
+          "n": 1
+        },
+        {
+          "t": 1778751354,
+          "n": 1
+        },
+        {
+          "t": 1778756819,
+          "n": 2
+        },
+        {
+          "t": 1778762284,
+          "n": 3
+        }
+      ],
+      "tokensExchanged": 700
+    },
+    {
+      "sku": "M-041",
+      "name": "Wavecom notebook",
+      "category": "Other",
+      "minutesToSellout": 1208,
+      "units": 2,
+      "stock": 50,
+      "stockEfficiency": 0.04,
+      "unitsPerHour": 0.1,
+      "price": 1000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1778677568,
+          "n": 1
+        },
+        {
+          "t": 1778679985,
+          "n": 1
+        },
+        {
+          "t": 1778682402,
+          "n": 1
+        },
+        {
+          "t": 1778684819,
+          "n": 1
+        },
+        {
+          "t": 1778687236,
+          "n": 1
+        },
+        {
+          "t": 1778689653,
+          "n": 1
+        },
+        {
+          "t": 1778692070,
+          "n": 1
+        },
+        {
+          "t": 1778694487,
+          "n": 1
+        },
+        {
+          "t": 1778696904,
+          "n": 1
+        },
+        {
+          "t": 1778699321,
+          "n": 1
+        },
+        {
+          "t": 1778701738,
+          "n": 1
+        },
+        {
+          "t": 1778704155,
+          "n": 1
+        },
+        {
+          "t": 1778706572,
+          "n": 1
+        },
+        {
+          "t": 1778708989,
+          "n": 1
+        },
+        {
+          "t": 1778711406,
+          "n": 1
+        },
+        {
+          "t": 1778713823,
+          "n": 1
+        },
+        {
+          "t": 1778716240,
+          "n": 1
+        },
+        {
+          "t": 1778718657,
+          "n": 1
+        },
+        {
+          "t": 1778721074,
+          "n": 1
+        },
+        {
+          "t": 1778723491,
+          "n": 1
+        },
+        {
+          "t": 1778725908,
+          "n": 1
+        },
+        {
+          "t": 1778728325,
+          "n": 1
+        },
+        {
+          "t": 1778730742,
+          "n": 1
+        },
+        {
+          "t": 1778733159,
+          "n": 1
+        },
+        {
+          "t": 1778735576,
+          "n": 1
+        },
+        {
+          "t": 1778737993,
+          "n": 1
+        },
+        {
+          "t": 1778740410,
+          "n": 1
+        },
+        {
+          "t": 1778742827,
+          "n": 1
+        },
+        {
+          "t": 1778745244,
+          "n": 1
+        },
+        {
+          "t": 1778747661,
+          "n": 1
+        },
+        {
+          "t": 1778750078,
+          "n": 1
+        },
+        {
+          "t": 1778752495,
+          "n": 2
+        }
+      ],
+      "tokensExchanged": 2000
+    },
+    {
+      "sku": "M-035",
+      "name": "Cereal bara",
+      "category": "Other",
+      "minutesToSellout": 1,
+      "units": 2,
+      "stock": 2,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 120.0,
+      "price": 100,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1778674549,
+          "n": 1
+        },
+        {
+          "t": 1778674609,
+          "n": 2
+        }
+      ],
+      "tokensExchanged": 200
+    },
+    {
+      "sku": "M-045",
+      "name": "Bling socks",
+      "category": "Other",
+      "minutesToSellout": 1,
+      "units": 1,
+      "stock": 1,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 60.0,
+      "price": 2500,
+      "soldOut": true,
+      "curve": [],
+      "tokensExchanged": 2500
+    },
+    {
+      "sku": "M-040",
+      "name": "Wavecom pen",
+      "category": "Pen",
+      "minutesToSellout": 1,
+      "units": 1,
+      "stock": 50,
+      "stockEfficiency": 0.02,
+      "unitsPerHour": 60.0,
+      "price": 200,
+      "soldOut": false,
+      "curve": [],
+      "tokensExchanged": 200
+    }
+  ],
+  "lorenz": {
+    "points": [
+      {
+        "p": 0.0,
+        "cum": 0.0
+      },
+      {
+        "p": 0.047619047619047616,
+        "cum": 0.01394700139470014
+      },
+      {
+        "p": 0.09523809523809523,
+        "cum": 0.029288702928870293
+      },
+      {
+        "p": 0.14285714285714285,
+        "cum": 0.043235704323570434
+      },
+      {
+        "p": 0.19047619047619047,
+        "cum": 0.058577405857740586
+      },
+      {
+        "p": 0.23809523809523808,
+        "cum": 0.07252440725244072
+      },
+      {
+        "p": 0.2857142857142857,
+        "cum": 0.08786610878661087
+      },
+      {
+        "p": 0.3333333333333333,
+        "cum": 0.1087866108786611
+      },
+      {
+        "p": 0.38095238095238093,
+        "cum": 0.1394700139470014
+      },
+      {
+        "p": 0.42857142857142855,
+        "cum": 0.16736401673640167
+      },
+      {
+        "p": 0.47619047619047616,
+        "cum": 0.19804741980474197
+      },
+      {
+        "p": 0.5238095238095238,
+        "cum": 0.2315202231520223
+      },
+      {
+        "p": 0.5714285714285714,
+        "cum": 0.2775453277545328
+      },
+      {
+        "p": 0.6190476190476191,
+        "cum": 0.3193863319386332
+      },
+      {
+        "p": 0.6666666666666666,
+        "cum": 0.3793584379358438
+      },
+      {
+        "p": 0.7142857142857143,
+        "cum": 0.4351464435146444
+      },
+      {
+        "p": 0.7619047619047619,
+        "cum": 0.499302649930265
+      },
+      {
+        "p": 0.8095238095238095,
+        "cum": 0.5690376569037657
+      },
+      {
+        "p": 0.8571428571428571,
+        "cum": 0.6499302649930265
+      },
+      {
+        "p": 0.9047619047619048,
+        "cum": 0.7350069735006973
+      },
+      {
+        "p": 0.9523809523809523,
+        "cum": 0.8451882845188284
+      },
+      {
+        "p": 1.0,
+        "cum": 1.0
+      }
+    ],
+    "gini": 0.394
+  },
+  "rankScatter": [
+    {
+      "rank": 85,
+      "purchases": 7
+    },
+    {
+      "rank": 123,
+      "purchases": 14
+    },
+    {
+      "rank": 208,
+      "purchases": 4
+    },
+    {
+      "rank": 66,
+      "purchases": 3
+    },
+    {
+      "rank": 184,
+      "purchases": 3
+    },
+    {
+      "rank": 57,
+      "purchases": 8
+    },
+    {
+      "rank": 14,
+      "purchases": 6
+    },
+    {
+      "rank": 97,
+      "purchases": 5
+    },
+    {
+      "rank": 133,
+      "purchases": 1
+    },
+    {
+      "rank": 43,
+      "purchases": 3
+    },
+    {
+      "rank": 42,
+      "purchases": 6
+    },
+    {
+      "rank": 27,
+      "purchases": 7
+    },
+    {
+      "rank": 35,
+      "purchases": 7
+    },
+    {
+      "rank": 126,
+      "purchases": 2
+    },
+    {
+      "rank": 16,
+      "purchases": 4
+    },
+    {
+      "rank": 220,
+      "purchases": 2
+    },
+    {
+      "rank": 60,
+      "purchases": 2
+    },
+    {
+      "rank": 2,
+      "purchases": 7
+    },
+    {
+      "rank": 210,
+      "purchases": 2
+    },
+    {
+      "rank": 119,
+      "purchases": 1
+    },
+    {
+      "rank": 3,
+      "purchases": 3
+    },
+    {
+      "rank": 4,
+      "purchases": 6
+    },
+    {
+      "rank": 98,
+      "purchases": 4
+    },
+    {
+      "rank": 15,
+      "purchases": 11
+    },
+    {
+      "rank": 41,
+      "purchases": 4
+    },
+    {
+      "rank": 50,
+      "purchases": 2
+    },
+    {
+      "rank": 139,
+      "purchases": 1
+    },
+    {
+      "rank": 122,
+      "purchases": 2
+    },
+    {
+      "rank": 99,
+      "purchases": 2
+    },
+    {
+      "rank": 24,
+      "purchases": 5
+    },
+    {
+      "rank": 44,
+      "purchases": 6
+    },
+    {
+      "rank": 65,
+      "purchases": 3
+    },
+    {
+      "rank": 45,
+      "purchases": 5
+    },
+    {
+      "rank": 21,
+      "purchases": 4
+    },
+    {
+      "rank": 128,
+      "purchases": 4
+    },
+    {
+      "rank": 77,
+      "purchases": 4
+    },
+    {
+      "rank": 206,
+      "purchases": 2
+    },
+    {
+      "rank": 67,
+      "purchases": 8
+    },
+    {
+      "rank": 80,
+      "purchases": 7
+    },
+    {
+      "rank": 205,
+      "purchases": 1
+    },
+    {
+      "rank": 31,
+      "purchases": 6
+    },
+    {
+      "rank": 164,
+      "purchases": 1
+    },
+    {
+      "rank": 6,
+      "purchases": 8
+    },
+    {
+      "rank": 156,
+      "purchases": 1
+    },
+    {
+      "rank": 173,
+      "purchases": 2
+    },
+    {
+      "rank": 100,
+      "purchases": 1
+    },
+    {
+      "rank": 51,
+      "purchases": 3
+    },
+    {
+      "rank": 33,
+      "purchases": 6
+    },
+    {
+      "rank": 47,
+      "purchases": 5
+    },
+    {
+      "rank": 38,
+      "purchases": 4
+    },
+    {
+      "rank": 23,
+      "purchases": 5
+    },
+    {
+      "rank": 81,
+      "purchases": 2
+    },
+    {
+      "rank": 37,
+      "purchases": 3
+    },
+    {
+      "rank": 26,
+      "purchases": 4
+    },
+    {
+      "rank": 150,
+      "purchases": 3
+    },
+    {
+      "rank": 73,
+      "purchases": 4
+    },
+    {
+      "rank": 29,
+      "purchases": 4
+    },
+    {
+      "rank": 88,
+      "purchases": 6
+    },
+    {
+      "rank": 144,
+      "purchases": 2
+    },
+    {
+      "rank": 83,
+      "purchases": 7
+    },
+    {
+      "rank": 170,
+      "purchases": 3
+    },
+    {
+      "rank": 197,
+      "purchases": 1
+    },
+    {
+      "rank": 204,
+      "purchases": 2
+    },
+    {
+      "rank": 101,
+      "purchases": 2
+    },
+    {
+      "rank": 218,
+      "purchases": 1
+    },
+    {
+      "rank": 1,
+      "purchases": 12
+    },
+    {
+      "rank": 134,
+      "purchases": 1
+    },
+    {
+      "rank": 219,
+      "purchases": 1
+    },
+    {
+      "rank": 40,
+      "purchases": 5
+    },
+    {
+      "rank": 124,
+      "purchases": 1
+    },
+    {
+      "rank": 52,
+      "purchases": 1
+    },
+    {
+      "rank": 111,
+      "purchases": 1
+    },
+    {
+      "rank": 260,
+      "purchases": 1
+    },
+    {
+      "rank": 95,
+      "purchases": 2
+    },
+    {
+      "rank": 232,
+      "purchases": 1
+    },
+    {
+      "rank": 7,
+      "purchases": 7
+    },
+    {
+      "rank": 5,
+      "purchases": 5
+    },
+    {
+      "rank": 261,
+      "purchases": 1
+    },
+    {
+      "rank": 19,
+      "purchases": 14
+    },
+    {
+      "rank": 58,
+      "purchases": 1
+    },
+    {
+      "rank": 207,
+      "purchases": 1
+    },
+    {
+      "rank": 32,
+      "purchases": 5
+    },
+    {
+      "rank": 13,
+      "purchases": 6
+    },
+    {
+      "rank": 17,
+      "purchases": 5
+    },
+    {
+      "rank": 12,
+      "purchases": 11
+    },
+    {
+      "rank": 10,
+      "purchases": 7
+    },
+    {
+      "rank": 11,
+      "purchases": 10
+    },
+    {
+      "rank": 9,
+      "purchases": 8
+    },
+    {
+      "rank": 30,
+      "purchases": 3
+    },
+    {
+      "rank": 234,
+      "purchases": 1
+    },
+    {
+      "rank": 145,
+      "purchases": 3
+    },
+    {
+      "rank": 185,
+      "purchases": 1
+    },
+    {
+      "rank": 36,
+      "purchases": 4
+    },
+    {
+      "rank": 8,
+      "purchases": 14
+    },
+    {
+      "rank": 69,
+      "purchases": 4
+    },
+    {
+      "rank": 174,
+      "purchases": 1
+    },
+    {
+      "rank": 61,
+      "purchases": 6
+    },
+    {
+      "rank": 68,
+      "purchases": 4
+    },
+    {
+      "rank": 135,
+      "purchases": 5
+    },
+    {
+      "rank": 211,
+      "purchases": 1
+    },
+    {
+      "rank": 105,
+      "purchases": 5
+    },
+    {
+      "rank": 212,
+      "purchases": 1
+    },
+    {
+      "rank": 78,
+      "purchases": 3
+    },
+    {
+      "rank": 25,
+      "purchases": 9
+    },
+    {
+      "rank": 79,
+      "purchases": 4
+    },
+    {
+      "rank": 74,
+      "purchases": 4
+    },
+    {
+      "rank": 236,
+      "purchases": 2
+    },
+    {
+      "rank": 165,
+      "purchases": 3
+    },
+    {
+      "rank": 151,
+      "purchases": 2
+    },
+    {
+      "rank": 146,
+      "purchases": 1
+    },
+    {
+      "rank": 49,
+      "purchases": 3
+    },
+    {
+      "rank": 46,
+      "purchases": 5
+    },
+    {
+      "rank": 70,
+      "purchases": 4
+    },
+    {
+      "rank": 186,
+      "purchases": 1
+    },
+    {
+      "rank": 34,
+      "purchases": 7
+    },
+    {
+      "rank": 102,
+      "purchases": 1
+    },
+    {
+      "rank": 195,
+      "purchases": 5
+    },
+    {
+      "rank": 157,
+      "purchases": 1
+    },
+    {
+      "rank": 106,
+      "purchases": 2
+    },
+    {
+      "rank": 59,
+      "purchases": 5
+    },
+    {
+      "rank": 187,
+      "purchases": 2
+    },
+    {
+      "rank": 20,
+      "purchases": 4
+    },
+    {
+      "rank": 53,
+      "purchases": 1
+    },
+    {
+      "rank": 103,
+      "purchases": 6
+    },
+    {
+      "rank": 117,
+      "purchases": 2
+    },
+    {
+      "rank": 114,
+      "purchases": 2
+    },
+    {
+      "rank": 18,
+      "purchases": 4
+    },
+    {
+      "rank": 202,
+      "purchases": 1
+    },
+    {
+      "rank": 148,
+      "purchases": 2
+    },
+    {
+      "rank": 127,
+      "purchases": 3
+    },
+    {
+      "rank": 125,
+      "purchases": 2
+    },
+    {
+      "rank": 172,
+      "purchases": 3
+    },
+    {
+      "rank": 48,
+      "purchases": 3
+    },
+    {
+      "rank": 56,
+      "purchases": 4
+    },
+    {
+      "rank": 193,
+      "purchases": 3
+    },
+    {
+      "rank": 84,
+      "purchases": 5
+    },
+    {
+      "rank": 86,
+      "purchases": 5
+    },
+    {
+      "rank": 136,
+      "purchases": 1
+    },
+    {
+      "rank": 115,
+      "purchases": 1
+    },
+    {
+      "rank": 137,
+      "purchases": 2
+    },
+    {
+      "rank": 158,
+      "purchases": 1
+    },
+    {
+      "rank": 141,
+      "purchases": 1
+    },
+    {
+      "rank": 107,
+      "purchases": 2
+    },
+    {
+      "rank": 152,
+      "purchases": 1
+    },
+    {
+      "rank": 129,
+      "purchases": 3
+    },
+    {
+      "rank": 28,
+      "purchases": 3
+    },
+    {
+      "rank": 22,
+      "purchases": 2
+    },
+    {
+      "rank": 194,
+      "purchases": 5
+    },
+    {
+      "rank": 142,
+      "purchases": 2
+    },
+    {
+      "rank": 166,
+      "purchases": 1
+    },
+    {
+      "rank": 153,
+      "purchases": 4
+    },
+    {
+      "rank": 130,
+      "purchases": 5
+    },
+    {
+      "rank": 143,
+      "purchases": 4
+    },
+    {
+      "rank": 160,
+      "purchases": 1
+    },
+    {
+      "rank": 225,
+      "purchases": 1
+    },
+    {
+      "rank": 116,
+      "purchases": 7
+    },
+    {
+      "rank": 154,
+      "purchases": 2
+    },
+    {
+      "rank": 131,
+      "purchases": 3
+    },
+    {
+      "rank": 108,
+      "purchases": 2
+    },
+    {
+      "rank": 82,
+      "purchases": 3
+    },
+    {
+      "rank": 215,
+      "purchases": 2
+    },
+    {
+      "rank": 223,
+      "purchases": 3
+    },
+    {
+      "rank": 120,
+      "purchases": 2
+    },
+    {
+      "rank": 161,
+      "purchases": 1
+    },
+    {
+      "rank": 200,
+      "purchases": 2
+    },
+    {
+      "rank": 178,
+      "purchases": 3
+    },
+    {
+      "rank": 149,
+      "purchases": 1
+    },
+    {
+      "rank": 268,
+      "purchases": 3
+    },
+    {
+      "rank": 180,
+      "purchases": 2
+    },
+    {
+      "rank": 181,
+      "purchases": 2
+    },
+    {
+      "rank": 167,
+      "purchases": 1
+    },
+    {
+      "rank": 188,
+      "purchases": 1
+    },
+    {
+      "rank": 168,
+      "purchases": 1
+    },
+    {
+      "rank": 189,
+      "purchases": 4
+    },
+    {
+      "rank": 163,
+      "purchases": 1
+    },
+    {
+      "rank": 155,
+      "purchases": 1
+    },
+    {
+      "rank": 245,
+      "purchases": 1
+    },
+    {
+      "rank": 244,
+      "purchases": 1
+    },
+    {
+      "rank": 242,
+      "purchases": 1
+    },
+    {
+      "rank": 243,
+      "purchases": 1
+    },
+    {
+      "rank": 247,
+      "purchases": 1
+    },
+    {
+      "rank": 159,
+      "purchases": 1
+    },
+    {
+      "rank": 246,
+      "purchases": 1
+    },
+    {
+      "rank": 132,
+      "purchases": 1
+    },
+    {
+      "rank": 71,
+      "purchases": 5
+    },
+    {
+      "rank": 72,
+      "purchases": 6
+    },
+    {
+      "rank": 64,
+      "purchases": 4
+    },
+    {
+      "rank": 63,
+      "purchases": 4
+    },
+    {
+      "rank": 62,
+      "purchases": 4
+    },
+    {
+      "rank": 75,
+      "purchases": 6
+    },
+    {
+      "rank": 104,
+      "purchases": 4
+    },
+    {
+      "rank": 76,
+      "purchases": 5
+    },
+    {
+      "rank": 250,
+      "purchases": 1
+    },
+    {
+      "rank": 213,
+      "purchases": 1
+    },
+    {
+      "rank": 138,
+      "purchases": 4
+    },
+    {
+      "rank": 190,
+      "purchases": 1
+    },
+    {
+      "rank": 198,
+      "purchases": 1
+    },
+    {
+      "rank": 169,
+      "purchases": 2
+    },
+    {
+      "rank": 191,
+      "purchases": 1
+    },
+    {
+      "rank": 171,
+      "purchases": 1
+    },
+    {
+      "rank": 87,
+      "purchases": 1
+    },
+    {
+      "rank": 227,
+      "purchases": 1
+    },
+    {
+      "rank": 192,
+      "purchases": 3
+    },
+    {
+      "rank": 183,
+      "purchases": 1
+    },
+    {
+      "rank": 182,
+      "purchases": 2
+    },
+    {
+      "rank": 279,
+      "purchases": 1
+    },
+    {
+      "rank": 90,
+      "purchases": 2
+    },
+    {
+      "rank": 89,
+      "purchases": 2
+    },
+    {
+      "rank": 121,
+      "purchases": 1
+    },
+    {
+      "rank": 96,
+      "purchases": 1
+    },
+    {
+      "rank": 91,
+      "purchases": 2
+    },
+    {
+      "rank": 92,
+      "purchases": 4
+    },
+    {
+      "rank": 93,
+      "purchases": 2
+    },
+    {
+      "rank": 94,
+      "purchases": 2
+    },
+    {
+      "rank": 112,
+      "purchases": 2
+    },
+    {
+      "rank": 118,
+      "purchases": 2
+    },
+    {
+      "rank": 113,
+      "purchases": 1
+    },
+    {
+      "rank": 110,
+      "purchases": 2
+    },
+    {
+      "rank": 201,
+      "purchases": 1
+    },
+    {
+      "rank": 109,
+      "purchases": 1
+    }
+  ],
+  "topMerchBuyers": [
+    {
+      "user": "Avataris12",
+      "buys": 14
+    },
+    {
+      "user": "DanielaPimenta",
+      "buys": 14
+    },
+    {
+      "user": "Diego Gomes",
+      "buys": 14
+    },
+    {
+      "user": "Manuel",
+      "buys": 12
+    },
+    {
+      "user": "NanaCarolino",
+      "buys": 11
+    }
+  ],
+  "polls": [
+    {
+      "id": "best-stand-hvqpfr",
+      "votes": 13,
+      "opts": [],
+      "deletedFromDb": true
+    }
+  ],
+  "socials": [
+    {
+      "platform": "linkedin",
+      "claims": 29
+    },
+    {
+      "platform": "instagram",
+      "claims": 29
+    }
+  ],
+  "hourGrid": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.006,
+      0.242,
+      0.152,
+      0.03,
+      0.051,
+      0.239,
+      0.089,
+      0.078,
+      0.012,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.002,
+      0.035,
+      0.097,
+      0.134,
+      0.116,
+      0.197,
+      0.358,
+      0.329,
+      0.086,
+      0.002,
+      0.0,
+      0.001,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.001,
+      0.362,
+      1.0,
+      0.491,
+      0.188,
+      0.284,
+      0.481,
+      0.146,
+      0.074,
+      0.012,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.001
+    ]
+  ],
+  "hourGridAbs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      408,
+      256,
+      50,
+      86,
+      402,
+      150,
+      131,
+      21,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      59,
+      164,
+      225,
+      195,
+      332,
+      602,
+      553,
+      145,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      609,
+      1683,
+      827,
+      316,
+      478,
+      809,
+      245,
+      124,
+      20,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "returners": {
+    "d1": 278,
+    "d2": 35,
+    "d3": 7
+  },
+  "hotspots": {
+    "points": [
+      {
+        "x": 0.3789,
+        "y": 0.1542,
+        "w": 245
+      },
+      {
+        "x": 0.42979999999999996,
+        "y": 0.1873,
+        "w": 164
+      },
+      {
+        "x": 0.2229,
+        "y": 0.2214,
+        "w": 152
+      },
+      {
+        "x": 0.2186,
+        "y": 0.7864,
+        "w": 148
+      },
+      {
+        "x": 0.3831,
+        "y": 0.1158,
+        "w": 145
+      },
+      {
+        "x": 0.25579999999999997,
+        "y": 0.3433,
+        "w": 145
+      },
+      {
+        "x": 0.215,
+        "y": 0.5509000000000001,
+        "w": 140
+      },
+      {
+        "x": 0.1959,
+        "y": 0.3396,
+        "w": 136
+      },
+      {
+        "x": 0.2876,
+        "y": 0.2932,
+        "w": 135
+      },
+      {
+        "x": 0.2783,
+        "y": 0.1606,
+        "w": 134
+      },
+      {
+        "x": 0.195,
+        "y": 0.3111,
+        "w": 131
+      },
+      {
+        "x": 0.6864,
+        "y": 0.7298,
+        "w": 125
+      },
+      {
+        "x": 0.6731,
+        "y": 0.4935,
+        "w": 123
+      },
+      {
+        "x": 0.7552,
+        "y": 0.5916,
+        "w": 123
+      },
+      {
+        "x": 0.6264,
+        "y": 0.6972,
+        "w": 122
+      },
+      {
+        "x": 0.2713,
+        "y": 0.7368000000000001,
+        "w": 119
+      },
+      {
+        "x": 0.5555,
+        "y": 0.715,
+        "w": 117
+      },
+      {
+        "x": 0.484,
+        "y": 0.5648,
+        "w": 116
+      },
+      {
+        "x": 0.3086,
+        "y": 0.509,
+        "w": 115
+      },
+      {
+        "x": 0.6585,
+        "y": 0.41369999999999996,
+        "w": 114
+      },
+      {
+        "x": 0.2225,
+        "y": 0.6004999999999999,
+        "w": 111
+      },
+      {
+        "x": 0.34740000000000004,
+        "y": 0.1015,
+        "w": 109
+      },
+      {
+        "x": 0.2157,
+        "y": 0.7286,
+        "w": 108
+      },
+      {
+        "x": 0.2267,
+        "y": 0.4943,
+        "w": 107
+      },
+      {
+        "x": 0.41369999999999996,
+        "y": 0.7776000000000001,
+        "w": 106
+      },
+      {
+        "x": 0.2956,
+        "y": 0.7421,
+        "w": 105
+      },
+      {
+        "x": 0.6304,
+        "y": 0.7349,
+        "w": 103
+      },
+      {
+        "x": 0.2048,
+        "y": 0.1294,
+        "w": 99
+      },
+      {
+        "x": 0.7325,
+        "y": 0.3583,
+        "w": 99
+      },
+      {
+        "x": 0.7737,
+        "y": 0.7678,
+        "w": 98
+      },
+      {
+        "x": 0.2659,
+        "y": 0.2369,
+        "w": 97
+      },
+      {
+        "x": 0.3544,
+        "y": 0.777,
+        "w": 97
+      },
+      {
+        "x": 0.6409999999999999,
+        "y": 0.8478,
+        "w": 97
+      },
+      {
+        "x": 0.7176,
+        "y": 0.7328,
+        "w": 96
+      },
+      {
+        "x": 0.3737,
+        "y": 0.24100000000000002,
+        "w": 96
+      },
+      {
+        "x": 0.7059000000000001,
+        "y": 0.6469,
+        "w": 95
+      },
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 94
+      },
+      {
+        "x": 0.7672,
+        "y": 0.727,
+        "w": 90
+      },
+      {
+        "x": 0.7651,
+        "y": 0.7033,
+        "w": 88
+      },
+      {
+        "x": 0.3627,
+        "y": 0.41200000000000003,
+        "w": 88
+      },
+      {
+        "x": 0.39990000000000003,
+        "y": 0.4913,
+        "w": 87
+      },
+      {
+        "x": 0.7232999999999999,
+        "y": 0.294,
+        "w": 87
+      },
+      {
+        "x": 0.2948,
+        "y": 0.7942,
+        "w": 87
+      },
+      {
+        "x": 0.2884,
+        "y": 0.5874,
+        "w": 87
+      },
+      {
+        "x": 0.5331,
+        "y": 0.7739,
+        "w": 86
+      },
+      {
+        "x": 0.6214999999999999,
+        "y": 0.5184000000000001,
+        "w": 85
+      },
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 84
+      },
+      {
+        "x": 0.5554,
+        "y": 0.3369,
+        "w": 83
+      },
+      {
+        "x": 0.2626,
+        "y": 0.787,
+        "w": 82
+      },
+      {
+        "x": 0.36719999999999997,
+        "y": 0.4391,
+        "w": 81
+      },
+      {
+        "x": 0.4047,
+        "y": 0.4127,
+        "w": 81
+      },
+      {
+        "x": 0.22210000000000002,
+        "y": 0.4213,
+        "w": 77
+      },
+      {
+        "x": 0.2147,
+        "y": 0.1117,
+        "w": 77
+      },
+      {
+        "x": 0.27699999999999997,
+        "y": 0.7202,
+        "w": 75
+      },
+      {
+        "x": 0.2304,
+        "y": 0.6909000000000001,
+        "w": 75
+      },
+      {
+        "x": 0.4263,
+        "y": 0.2447,
+        "w": 74
+      },
+      {
+        "x": 0.3868,
+        "y": 0.3215,
+        "w": 73
+      },
+      {
+        "x": 0.6857,
+        "y": 0.6717,
+        "w": 72
+      },
+      {
+        "x": 0.19649999999999998,
+        "y": 0.2792,
+        "w": 69
+      },
+      {
+        "x": 0.6357,
+        "y": 0.1052,
+        "w": 69
+      },
+      {
+        "x": 0.413,
+        "y": 0.7120000000000001,
+        "w": 68
+      },
+      {
+        "x": 0.40740000000000004,
+        "y": 0.6634,
+        "w": 67
+      },
+      {
+        "x": 0.5768,
+        "y": 0.43170000000000003,
+        "w": 66
+      },
+      {
+        "x": 0.30510000000000004,
+        "y": 0.6173,
+        "w": 63
+      },
+      {
+        "x": 0.7631,
+        "y": 0.5342,
+        "w": 61
+      },
+      {
+        "x": 0.6779999999999999,
+        "y": 0.5521,
+        "w": 61
+      },
+      {
+        "x": 0.299,
+        "y": 0.5526,
+        "w": 60
+      },
+      {
+        "x": 0.32020000000000004,
+        "y": 0.3496,
+        "w": 60
+      },
+      {
+        "x": 0.42560000000000003,
+        "y": 0.5703,
+        "w": 59
+      },
+      {
+        "x": 0.6577,
+        "y": 0.2814,
+        "w": 58
+      },
+      {
+        "x": 0.5468,
+        "y": 0.6637000000000001,
+        "w": 57
+      },
+      {
+        "x": 0.7162000000000001,
+        "y": 0.6727,
+        "w": 57
+      },
+      {
+        "x": 0.7284999999999999,
+        "y": 0.4111,
+        "w": 57
+      },
+      {
+        "x": 0.6507999999999999,
+        "y": 0.172,
+        "w": 55
+      },
+      {
+        "x": 0.49119999999999997,
+        "y": 0.8057,
+        "w": 55
+      },
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 54
+      },
+      {
+        "x": 0.7717,
+        "y": 0.4341,
+        "w": 54
+      },
+      {
+        "x": 0.8831,
+        "y": 0.4484,
+        "w": 50
+      },
+      {
+        "x": 0.5243,
+        "y": 0.0872,
+        "w": 50
+      },
+      {
+        "x": 0.3492,
+        "y": 0.682,
+        "w": 48
+      },
+      {
+        "x": 0.27699999999999997,
+        "y": 0.6481999999999999,
+        "w": 47
+      },
+      {
+        "x": 0.7432,
+        "y": 0.1508,
+        "w": 47
+      },
+      {
+        "x": 0.27899999999999997,
+        "y": 0.6759999999999999,
+        "w": 46
+      },
+      {
+        "x": 0.7713,
+        "y": 0.21530000000000002,
+        "w": 43
+      },
+      {
+        "x": 0.34,
+        "y": 0.2359,
+        "w": 42
+      },
+      {
+        "x": 0.7328,
+        "y": 0.2636,
+        "w": 42
+      },
+      {
+        "x": 0.46659999999999996,
+        "y": 0.8245999999999999,
+        "w": 41
+      },
+      {
+        "x": 0.6848000000000001,
+        "y": 0.5286,
+        "w": 40
+      },
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 38
+      },
+      {
+        "x": 0.6249,
+        "y": 0.6466,
+        "w": 35
+      },
+      {
+        "x": 0.6127,
+        "y": 0.11320000000000001,
+        "w": 31
+      },
+      {
+        "x": 0.2847,
+        "y": 0.2139,
+        "w": 28
+      },
+      {
+        "x": 0.17859999999999998,
+        "y": 0.289,
+        "w": 26
+      },
+      {
+        "x": 0.205,
+        "y": 0.2368,
+        "w": 25
+      },
+      {
+        "x": 0.1782,
+        "y": 0.22949999999999998,
+        "w": 21
+      },
+      {
+        "x": 0.732,
+        "y": 0.1134,
+        "w": 21
+      },
+      {
+        "x": 0.18309999999999998,
+        "y": 0.2232,
+        "w": 19
+      },
+      {
+        "x": 1.0,
+        "y": 0.4622,
+        "w": 18
+      },
+      {
+        "x": 0.8312,
+        "y": 0.3644,
+        "w": 11
+      },
+      {
+        "x": 0.5904,
+        "y": 0.5189,
+        "w": 7
+      },
+      {
+        "x": 0.9515,
+        "y": 0.5649000000000001,
+        "w": 7
+      },
+      {
+        "x": 0.9174,
+        "y": 0.055,
+        "w": 4
+      },
+      {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1
+      }
+    ],
+    "centers": {
+      "stages": [
+        0.0,
+        0.0,
+        0.376,
+        "STAGES"
+      ],
+      "sector3a": [
+        0.2229,
+        0.2214,
+        0.608,
+        "SECTOR 3A"
+      ],
+      "sector3b": [
+        0.3789,
+        0.1542,
+        0.98,
+        "SECTOR 3B"
+      ],
+      "sector3c": [
+        0.6864,
+        0.7298,
+        0.5,
+        "SECTOR 3C"
+      ],
+      "sector3d": [
+        0.7552,
+        0.5916,
+        0.492,
+        "SECTOR 3D"
+      ],
+      "ze": [
+        0.2186,
+        0.7864,
+        0.592,
+        "ZE BAND"
+      ]
+    }
+  },
+  "boostsActiveDuringEvent": 0,
+  "reportsFiled": 0,
+  "talkInstrumentation": {
+    "totalTalks": 23,
+    "talksWithAnyScan": 7,
+    "note": "Only a subset of stage talks had QR codes displayed on stage by the production crew. Low scan counts reflect operational rollout, not player disengagement."
+  },
+  "chain": {
+    "network": "Nova Cidade Testnet",
+    "contract": "0xd54bac8612a9df4098e78d8aa7c45ce318be6a62",
+    "explorer": "https://testnet.explorer.novaims.unl.pt",
+    "snapshotISO": "2026-05-16T13:05:09Z",
+    "blockHeight": 43611
+  }
+}

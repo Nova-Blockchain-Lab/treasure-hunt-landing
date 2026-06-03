@@ -175,6 +175,87 @@ const futureMakerEvent = {
   },
 }
 
+const smartCitiesEvent = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at Portugal Smart Cities Summit 2026',
+  description:
+    'Interactive scavenger hunt deployed at the Portugal Smart Cities Summit, with 351 players, 8,123 treasure finds, and 103 NFC checkpoints across FIL Pavilhão 3.',
+  startDate: '2026-05-12',
+  endDate: '2026-05-14',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'FIL Pavilhão 3, Parque das Nações',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Lisbon',
+      addressCountry: 'PT',
+    },
+  },
+  organizer: organization,
+  url: `${BASE_URL}/smartcities-report`,
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: 'https://novablockchainlab.novaims.unl.pt/',
+  },
+}
+
+const cadavalEvent = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at Festival da Juventude 2026',
+  description:
+    'Interactive NFC scavenger hunt at the Festival da Juventude in Cadaval, with 126 players, 2,182 treasure finds, and 57 tags across the festival grounds.',
+  startDate: '2026-05-22',
+  endDate: '2026-05-23',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'Festival da Juventude',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Cadaval',
+      addressCountry: 'PT',
+    },
+  },
+  organizer: organization,
+  url: `${BASE_URL}/cadaval-report`,
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: 'https://novablockchainlab.novaims.unl.pt/',
+  },
+}
+
+const springBootcampEvent = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at Spring Bootcamp 2026',
+  description:
+    'Team-based NFC scavenger hunt at NOVA IMS Spring Bootcamp, with 7 teams, 20 hunters, and 42 tags across the campus.',
+  startDate: '2026-04-07',
+  endDate: '2026-04-07',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'NOVA IMS',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Lisbon',
+      addressCountry: 'PT',
+    },
+  },
+  organizer: organization,
+  url: `${BASE_URL}/springbootcamp-report`,
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: 'https://novablockchainlab.novaims.unl.pt/',
+  },
+}
+
 const reviews = [
   {
     '@type': 'Review',
@@ -226,7 +307,7 @@ const reviews = [
 
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, smartCitiesEvent, cadavalEvent, springBootcampEvent, ...reviews],
 }
 
 export function JsonLd() {

@@ -67,6 +67,7 @@ export function HeroSection({
 
       {/* Content */}
       <div className="relative z-2 max-w-[1100px] mx-auto px-5 md:px-6 py-10 md:py-[60px]">
+        <h1 className="sr-only">{dict.srTitle}</h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

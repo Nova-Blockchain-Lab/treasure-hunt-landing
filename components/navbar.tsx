@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { useActiveSection } from "@/hooks/use-active-section"
 
-const NAV_HREFS = ["#demo", "#what", "#how", "#where", "#packages"] as const
+const NAV_HREFS = ["#demo", "#media", "#what", "#how", "#where", "#packages"] as const
 
 interface NavDict {
   demo: string
@@ -13,6 +13,7 @@ interface NavDict {
   howItWorks: string
   useCases: string
   packages: string
+  media: string
   bookDemo: string
 }
 
@@ -24,6 +25,7 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
   const links = useMemo(
     () => [
       { href: "#demo", label: dict.demo },
+      { href: "#media", label: dict.media },
       { href: "#what", label: dict.features },
       { href: "#how", label: dict.howItWorks },
       { href: "#where", label: dict.useCases },

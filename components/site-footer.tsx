@@ -1,10 +1,15 @@
 import Image from "next/image"
+import Link from "next/link"
 
 interface FooterDict {
   description: string
   navigation: string
   contact: string
   contactLabel: string
+  resources: string
+  blog: string
+  ethdenverReport: string
+  futuremakerReport: string
   copyright: string
 }
 
@@ -16,7 +21,17 @@ interface NavDict {
   packages: string
 }
 
-export function SiteFooter({ dict, navDict }: { dict: FooterDict; navDict: NavDict }) {
+export function SiteFooter({
+  dict,
+  navDict,
+  lang = "en",
+}: {
+  dict: FooterDict
+  navDict: NavDict
+  lang?: string
+}) {
+  const prefix = lang === "en" ? "" : `/${lang}`
+
   const navLinks = [
     { href: "#demo", label: navDict.demo },
     { href: "#what", label: navDict.features },
@@ -26,11 +41,17 @@ export function SiteFooter({ dict, navDict }: { dict: FooterDict; navDict: NavDi
     { href: "#cta", label: dict.contactLabel },
   ]
 
+  const resourceLinks = [
+    { href: `${prefix}/blog`, label: dict.blog },
+    { href: `${prefix}/ethdenver-report`, label: dict.ethdenverReport },
+    { href: `${prefix}/futuremaker-report`, label: dict.futuremakerReport },
+  ]
+
   return (
     <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6 py-12">
         {/* Row 1: Nav + Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4 flex-wrap">
               <Image
@@ -68,6 +89,22 @@ export function SiteFooter({ dict, navDict }: { dict: FooterDict; navDict: NavDi
                   >
                     {link.label}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.resources}</div>
+            <ul className="flex flex-col gap-2.5">
+              {resourceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#484F58] transition-colors duration-300 hover:text-[#E6EDF3]"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

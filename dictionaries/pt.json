@@ -5,6 +5,7 @@
     "howItWorks": "Como Funciona",
     "useCases": "Casos de Uso",
     "packages": "Pacotes",
+    "media": "Media",
     "bookDemo": "Planear o Seu Evento"
   },
   "hero": {
@@ -13,7 +14,7 @@
     "headlineHighlight": "Num Jogo",
     "tagline": "Os participantes exploram, scaneiam checkpoints, ganham recompensas reais e direcionam trafego para onde precisa",
     "taglineSuffix": " \u2014 direto no browser do telemovel, sem download de app.",
-    "trustBadge": "Implementado no ETHDenver, Future Maker & Confluence \u2014 3.500+ tesouros encontrados \u00b7 174 checkpoints \u00b7 3 eventos",
+    "trustBadge": "Implementado em 5 eventos \u2014 14.000+ tesouros encontrados \u00b7 375+ checkpoints \u00b7 1.7M+ recompensas",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
@@ -29,10 +30,10 @@
     "Dashboard de Analytics ao Vivo"
   ],
   "demo": {
-    "eyebrow": "Provado em 3 Eventos",
+    "eyebrow": "Provado em 5 Eventos",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
-    "headingSuffix": "Experienciaram em 3 Eventos",
+    "headingSuffix": "Experienciaram em 5 Eventos",
     "seeItLive": "Ver ao Vivo \u2192",
     "seeReport": "Ver Relatorio \u2192",
     "seeFmReport": "Ver Relatorio \u2192",
@@ -43,10 +44,10 @@
       "Loja de merch integrada onde recompensas viram itens reais"
     ],
     "stats": [
-      { "value": "3.500+", "label": "Tesouros Encontrados" },
-      { "value": "174", "label": "Checkpoints" },
-      { "value": "1.4M+", "label": "Recompensas" },
-      { "value": "3", "label": "Eventos" }
+      { "value": "14.000+", "label": "Tesouros Encontrados" },
+      { "value": "375+", "label": "Checkpoints" },
+      { "value": "1.7M+", "label": "Recompensas" },
+      { "value": "5", "label": "Eventos" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -59,10 +60,45 @@
       "location": "NOVA IMS, Lisboa \u00b7 16\u201319 Mar",
       "stat1": "2.591 tesouros \u00b7 115 checkpoints",
       "stat2": "1M FM \u00b7 3 dias"
+    },
+    "smartCitiesCard": {
+      "title": "Smart Cities Summit 2026",
+      "location": "FIL Pavilh\u00e3o 3, Lisboa \u00b7 12\u201314 Mai",
+      "stat1": "8.123 tesouros \u00b7 103 checkpoints",
+      "stat2": "159K FIL \u00b7 3 dias"
+    },
+    "cadavalCard": {
+      "title": "Cadaval Festival 2026",
+      "location": "Cadaval, Portugal \u00b7 22\u201323 Mai",
+      "stat1": "2.182 tesouros \u00b7 57 checkpoints",
+      "stat2": "76.775 FCT \u00b7 2 dias"
+    },
+    "springBootcampCard": {
+      "title": "Spring Bootcamp 2026",
+      "location": "NOVA IMS, Lisboa \u00b7 7 Abr",
+      "stat1": "7 equipas \u00b7 220 tesouros",
+      "stat2": "45.650 SB \u00b7 42 checkpoints"
     }
   },
   "socialProof": {
     "deployedAt": "Implementado Em"
+  },
+  "media": {
+    "eyebrow": "No Terreno",
+    "heading": "Como Funciona,",
+    "headingHighlight": "Nas Palavras Deles",
+    "subheading": "Uma entrevista no Portugal Smart Cities Summit, mais fotos e clips de implementacoes reais.",
+    "watchInterview": "Entrevista",
+    "quote": "O Treasure Hunt e uma gamificacao da propria conferencia. Escondemos tesouros pelo espaco, e os jogadores encontram os pontos e tocam com o telemovel para receber uma recompensa. Mais de metade dos stands aderiram, e gera interacao real entre os participantes e a exposicao.",
+    "quoteName": "Dinis Araújo",
+    "quoteRole": "CTO, NOVA Blockchain Lab",
+    "quoteContext": "Filmado no Portugal Smart Cities Summit, FIL Pavilhão 3",
+    "galleryHeading": "Dos eventos",
+    "photo1Alt": "Participantes com flyers oficiais do Treasure Hunt e codigos QR para reclamar no stand do evento",
+    "photo2Alt": "Membro da equipa Treasure Hunt a demonstrar o jogo a uma plateia no stand da NOVA Cidade",
+    "photo3Alt": "Equipa do evento a celebrar sob as luzes do recinto",
+    "clip1Alt": "Jogador a reagir depois de ganhar",
+    "clip2Alt": "Mao a tocar num tag do Treasure Hunt com o telemovel"
   },
   "features": {
     "eyebrow": "01 / Funcionalidades",
@@ -210,6 +246,10 @@
     "navigation": "Navegacao",
     "contact": "Contacto",
     "contactLabel": "Contacto",
+    "resources": "Recursos",
+    "blog": "Blog",
+    "ethdenverReport": "Relatorio ETHDenver 2026",
+    "futuremakerReport": "Relatorio Future Maker 2026",
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados."
   },
   "faq": {
