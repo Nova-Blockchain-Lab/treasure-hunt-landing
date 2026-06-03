@@ -30,7 +30,7 @@
     "Live Analytics Dashboard"
   ],
   "demo": {
-    "eyebrow": "Proven at 7 Events",
+    "eyebrow": "02 / Demo",
     "heading": "See What",
     "headingHighlight": "Participants",
     "headingSuffix": "Experienced Across 7 Events",
@@ -84,7 +84,7 @@
     "deployedAt": "Deployed At"
   },
   "media": {
-    "eyebrow": "In the Field",
+    "eyebrow": "03 / Media",
     "heading": "How It Plays Out,",
     "headingHighlight": "In Their Words",
     "subheading": "An interview from the floor of the Portugal Smart Cities Summit, plus photos and clips from live deployments.",
@@ -125,7 +125,7 @@
     ]
   },
   "howItWorks": {
-    "eyebrow": "02 / How It Works",
+    "eyebrow": "04 / How It Works",
     "heading": "Five Steps.",
     "headingHighlight": "Zero Friction.",
     "callout": "You place the checkpoints. You set the rewards. We handle everything else.",
@@ -162,7 +162,7 @@
     ]
   },
   "testimonials": {
-    "eyebrow": "03 / Social Proof",
+    "eyebrow": "05 / Social Proof",
     "heading": "Don\u2019t Take Our Word",
     "headingHighlight": "for It",
     "items": [
@@ -184,7 +184,7 @@
     ]
   },
   "packages": {
-    "eyebrow": "04 / Packages",
+    "eyebrow": "06 / Packages",
     "heading": "One Platform,",
     "headingHighlight": "Built for Any Event Size",
     "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
@@ -253,7 +253,7 @@
     "copyright": "Nova Blockchain Lab. All rights reserved."
   },
   "faq": {
-    "eyebrow": "05 / FAQ",
+    "eyebrow": "07 / FAQ",
     "heading": "Common",
     "headingHighlight": "Questions",
     "items": [

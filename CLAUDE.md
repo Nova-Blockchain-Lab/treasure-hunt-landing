@@ -84,7 +84,7 @@ i18n/                       # next-intl routing + locale config
 hooks/                      # use-scroll-position, use-active-section, use-analytics-tracking
 lib/                        # shared utilities — ab-test.ts, analytics.ts, consent-context.tsx; cadaval-report.ts + smartcities-report.ts (snapshot types + readSnapshot for the two ported reports)
 public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters)
-middleware.ts               # next-intl middleware
+proxy.ts                    # next-intl proxy (renamed from middleware.ts per Next 16 convention) + A/B variant cookie
 next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 .env.example                # Required env vars (analytics keys, etc.)
 ```

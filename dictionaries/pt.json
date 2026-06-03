@@ -30,7 +30,7 @@
     "Dashboard de Analytics ao Vivo"
   ],
   "demo": {
-    "eyebrow": "Provado em 7 Eventos",
+    "eyebrow": "02 / Demo",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
     "headingSuffix": "Experienciaram em 7 Eventos",
@@ -84,7 +84,7 @@
     "deployedAt": "Implementado Em"
   },
   "media": {
-    "eyebrow": "No Terreno",
+    "eyebrow": "03 / Media",
     "heading": "Como Funciona,",
     "headingHighlight": "Nas Palavras Deles",
     "subheading": "Uma entrevista no Portugal Smart Cities Summit, mais fotos e clips de implementacoes reais.",
@@ -125,7 +125,7 @@
     ]
   },
   "howItWorks": {
-    "eyebrow": "02 / Como Funciona",
+    "eyebrow": "04 / Como Funciona",
     "heading": "Cinco Passos.",
     "headingHighlight": "Zero Friccao.",
     "callout": "Voce coloca os checkpoints. Voce define as recompensas. Nos tratamos de tudo o resto.",
@@ -162,7 +162,7 @@
     ]
   },
   "testimonials": {
-    "eyebrow": "03 / Prova Social",
+    "eyebrow": "05 / Prova Social",
     "heading": "Nao Acredite Apenas",
     "headingHighlight": "na Nossa Palavra",
     "items": [
@@ -184,7 +184,7 @@
     ]
   },
   "packages": {
-    "eyebrow": "04 / Pacotes",
+    "eyebrow": "06 / Pacotes",
     "heading": "Uma Plataforma,",
     "headingHighlight": "Para Qualquer Dimensao de Evento",
     "description": "Comece gratis para eventos pequenos. Escale para milhares de participantes com ferramentas completas de engagement, analytics de sponsors e suporte no local.",
@@ -253,7 +253,7 @@
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados."
   },
   "faq": {
-    "eyebrow": "05 / FAQ",
+    "eyebrow": "07 / FAQ",
     "heading": "Perguntas",
     "headingHighlight": "Frequentes",
     "items": [

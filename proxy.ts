@@ -1,11 +1,11 @@
 import createIntlMiddleware from 'next-intl/middleware'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 import { routing } from './i18n/routing'
 import { AB_TEST_COOKIE, assignVariant } from './lib/ab-test'
 
 const intlMiddleware = createIntlMiddleware(routing)
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const response = intlMiddleware(request)
 
   // Assign A/B variant cookie if not present
