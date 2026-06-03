@@ -10,11 +10,11 @@
   },
   "hero": {
     "srTitle": "Treasure Hunt | Interactive Event Engagement Game for Conferences",
-    "headline": "Turn Your Venue",
-    "headlineHighlight": "Into a Game",
+    "headline": "Turn Your Event Into a",
+    "headlineHighlight": "Gamified Experience",
     "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
-    "taglineSuffix": " \u2014 straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed across 7 events \u2014 14,000+ treasure finds \u00b7 375+ checkpoints \u00b7 1.7M+ rewards minted",
+    "taglineSuffix": ". Straight from the phone browser, no app download required.",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & more \u00b7 10,000+ treasure finds \u00b7 500+ checkpoints \u00b7 500+ players",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -44,8 +44,8 @@
       "Built-in merch store where rewards become real items"
     ],
     "stats": [
-      { "value": "14,000+", "label": "Treasure Finds" },
-      { "value": "375+", "label": "Venue Checkpoints" },
+      { "value": "10,000+", "label": "Treasure Finds" },
+      { "value": "500+", "label": "Venue Checkpoints" },
       { "value": "1.7M+", "label": "Rewards Minted" },
       { "value": "7", "label": "Events Deployed" }
     ],
@@ -102,21 +102,21 @@
   },
   "features": {
     "eyebrow": "01 / Features",
-    "heading": "What Treasure Hunt",
-    "headingHighlight": "Does for Your Event",
-    "description": "Treasure Hunt turns any venue into an interactive game. Attendees explore your space, scan checkpoints, earn rewards, and compete on live leaderboards \u2014 all from their phone browser, no app download required.",
+    "heading": "Built for Organizers.",
+    "headingHighlight": "Loved by Attendees.",
+    "description": "Treasure Hunt turns any event into a live adventure. Attendees earn points by exploring your space, completing challenges, and discovering hidden checkpoints. Points unlock real rewards at the built-in store.",
     "items": [
       {
         "title": "Guide Foot Traffic",
-        "description": "You decide where checkpoints go. Every checkpoint is a reason to walk across the venue \u2014 driving traffic to sponsors, booths, and underexplored areas."
+        "description": "You decide where checkpoints go. Every checkpoint is a reason to walk across the venue, driving traffic to sponsors, booths, and underexplored areas."
       },
       {
         "title": "Reward Real Participation",
-        "description": "Attendees earn rewards for engaging \u2014 not just showing up. Points they can spend in the built-in merch store on hats, socks, and exclusive items."
+        "description": "Attendees earn rewards for engaging, not just showing up. Points they can spend in the built-in merch store on exclusive items and sponsor rewards."
       },
       {
-        "title": "Plug Into Any Venue",
-        "description": "Drop NFC tags or QR codes anywhere. Works on any phone browser with a simple sign-in \u2014 attendees are playing in under 30 seconds, no app download required."
+        "title": "Zero Friction Setup",
+        "description": "Place NFC tags or QR codes anywhere. Attendees sign in once and are playing in seconds. No app. No downloads. No friction."
       },
       {
         "title": "Track Everything in Real Time",
@@ -132,19 +132,19 @@
     "infraEyebrow": "What Powers It All",
     "infraHeading": "Why It Feels",
     "infraHighlight": "Like Magic",
-    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity \u2014 they just play.",
+    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity. They just play.",
     "steps": [
-      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in 30 seconds." },
+      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in a few seconds." },
       { "title": "Explore the Venue", "description": "Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space." },
       { "title": "Scan to Earn", "description": "One tap on an NFC tag or scan of a QR code. Instant reward, automatically tracked. Every interaction becomes a data point for you." },
       { "title": "Compete and Collaborate", "description": "Live leaderboards fuel friendly competition. Social challenges and team missions keep energy high throughout the event." },
-      { "title": "Spend Real Rewards", "description": "Points unlock real merchandise \u2014 hats, socks, exclusive items. Attendees leave with something tangible from your event." }
+      { "title": "Spend Real Rewards", "description": "Points unlock exclusive rewards and prizes. Attendees leave with something real to remember your event." }
     ],
     "infraItems": [
-      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 network built for speed. Every action \u2014 scans, rewards, purchases \u2014 is recorded transparently and verifiably." },
+      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 blockchain network built for speed. Designed to support thousands of simultaneous players with no delays or failures, even at peak activity." },
       { "title": "Zero Cost to Participants", "description": "A built-in paymaster covers all transaction fees. Attendees collect rewards, spend at the merch store, and climb leaderboards without ever paying a cent." },
-      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app \u2014 we handle the smart account deployment and key management behind the scenes." },
-      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase \u2014 recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
+      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app. We handle the smart account deployment and key management behind the scenes." },
+      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase, all recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
     ]
   },
   "useCases": {
@@ -162,7 +162,7 @@
     ]
   },
   "testimonials": {
-    "eyebrow": "04 / Social Proof",
+    "eyebrow": "03 / Social Proof",
     "heading": "Don\u2019t Take Our Word",
     "headingHighlight": "for It",
     "items": [
@@ -184,56 +184,53 @@
     ]
   },
   "packages": {
-    "eyebrow": "05 / Packages",
+    "eyebrow": "04 / Packages",
     "heading": "One Platform,",
     "headingHighlight": "Built for Any Event Size",
     "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Prove the concept at your next meetup", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "", "priceHint": "Contact us" },
-      { "name": "Pro", "subtitle": "Everything to wow sponsors and attendees", "bestFor": "100\u20131,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular", "priceHint": "Contact us" },
-      { "name": "Enterprise", "subtitle": "Dedicated team. White-label. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "", "priceHint": "Contact us" }
+      { "name": "Starter", "subtitle": "Treasure Hunt branding (no customisation).", "bestFor": "Up to 100 attendees", "cta": "Get Started", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Everything to impress the public and sponsors.", "bestFor": "100 to 1,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Custom features. Analytics. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
         "title": "Checkpoints",
         "features": [
+          "Customised look and feel",
           "QR code checkpoints",
           "NFC tag checkpoints",
-          "Custom checkpoint design",
-          "Custom reward names"
+          "Custom checkpoint design"
         ]
       },
       {
         "title": "Engagement",
         "features": [
-          "Voting polls",
-          "Hidden NFC challenges",
-          "Social follow rewards",
-          "Dynamic difficulty scaling",
-          "Strategic sponsor placement",
           "Merch store",
-          "Live leaderboard"
+          "Real-time leaderboard",
+          "Interactive venue map",
+          "Voting polls",
+          "Custom social follow rewards",
+          "Strategic sponsor placement",
+          "Players can hide checkpoints"
         ]
       },
       {
         "title": "Support & Scale",
         "features": [
-          "Post-event analytics report",
-          "Custom feature development",
           "On-site support staff",
-          "White-label branding",
+          "Custom feature development",
           "Multi-event dashboard",
-          "Sponsor ROI report",
-          "API access"
+          "Post-event analytics report"
         ]
       }
     ]
   },
   "cta": {
-    "heading": "Ready to Turn Foot Traffic",
-    "headingHighlight": "Into Measurable Results?",
+    "heading": "Ready to Make Your Next Event",
+    "headingHighlight": "Unforgettable?",
     "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
-    "trustSignal": "Proven across 7 events \u2014 14,000+ treasure finds, 375+ checkpoints, 1.7M+ rewards minted",
+    "trustSignal": "Battle-tested across multiple events, thousands of players, and hundreds of prizes collected.",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -253,16 +250,16 @@
     "copyright": "Nova Blockchain Lab. All rights reserved."
   },
   "faq": {
-    "eyebrow": "06 / FAQ",
+    "eyebrow": "05 / FAQ",
     "heading": "Common",
     "headingHighlight": "Questions",
     "items": [
-      { "question": "How long does it take to set up?", "answer": "As fast as 48 hours. We handle the tech \u2014 you tell us where the checkpoints go and what rewards to offer." },
-      { "question": "Do attendees need to download an app?", "answer": "No. It runs entirely in the phone browser. One tap to sign in, playing in under 30 seconds." },
-      { "question": "What if our venue doesn\u2019t have NFC?", "answer": "QR codes work everywhere. You can mix NFC and QR across your venue, or go QR-only." },
-      { "question": "Can we customize the branding?", "answer": "Yes. Pro and Enterprise packages include custom checkpoint design, reward names, and white-label branding." },
-      { "question": "What data do organizers get?", "answer": "A real-time dashboard with checkpoint visits, engagement heatmaps, leaderboard standings, and a full post-event analytics report to share with sponsors." },
-      { "question": "Is there a minimum event size?", "answer": "Starter is free for events up to 100 attendees. Pro covers up to 1,000, and Enterprise handles everything above that with dedicated support." }
+      { "question": "How long does it take to set up?", "answer": "As fast as 48 hours. We handle the tech, you tell us where the checkpoints go and what rewards to offer." },
+      { "question": "Do attendees need to download an app?", "answer": "No. It runs entirely in the phone browser. One tap to sign in, playing in a few seconds." },
+      { "question": "Can we customize the branding?", "answer": "Yes. Pro and Enterprise packages include custom checkpoint design and reward names. The Enterprise package includes white-label branding." },
+      { "question": "What does the checkpoint setup look like?", "answer": "The design and setup of both QR codes and NFC tags is included in the respective packages. We handle everything so your team doesn't have to." },
+      { "question": "What data do organizers get?", "answer": "A real-time dashboard with checkpoint visits, engagement heatmaps, and leaderboard standings is available on all plans during the game activation. Enterprise adds a full post-event analytics report to share with sponsors and a multi-event dashboard to track and compare performance across the most significant events, enabling the identification of strengths, weaknesses, and what truly drove engagement." },
+      { "question": "Is there a minimum event size?", "answer": "Starter covers events up to 100 attendees. Pro scales up to 1,000, and Enterprise handles everything above that." }
     ]
   },
   "contactForm": {
@@ -301,12 +298,12 @@
     "hourlyDescription": "Transactions by hour of day across all event days",
     "mintingTimeline": "MINTING TIMELINE",
     "treasurePopularity": "TREASURE POPULARITY",
-    "treasurePopularityDesc": "59 total treasures \u2014 992 finds, 33 hidden by 29 players",
+    "treasurePopularityDesc": "59 total treasures \u00b7 992 finds \u00b7 33 hidden by 29 players",
     "treasure": "Treasure",
     "finds": "Finds",
     "hiddenBy": "Hidden By",
     "merchStore": "MERCH STORE",
-    "merchStoreDesc": "137 purchases by 73 shoppers \u2014 213,820 BUFFI burned",
+    "merchStoreDesc": "137 purchases by 73 shoppers \u00b7 213,820 BUFFI burned",
     "item": "Item",
     "price": "Price",
     "sold": "Sold",

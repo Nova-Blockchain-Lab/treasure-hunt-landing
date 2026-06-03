@@ -8,17 +8,18 @@ import { trackEvent } from "@/lib/analytics"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 // Feature values matrix: [Starter, Pro, Enterprise]
+// A string value means "included, with this note appended in parentheses".
 const featureValues: Record<string, (string | boolean)[][]> = {
   Checkpoints: [
+    [false, true, "White-label"],
     [true, true, true],
-    [false, true, true],
-    [false, true, true],
+    [false, true, "custom"],
     [false, true, true],
   ],
   Engagement: [
     [true, true, true],
-    [false, true, true],
-    [false, true, true],
+    [true, true, true],
+    [true, true, true],
     [false, true, true],
     [false, true, true],
     [false, true, true],
@@ -26,9 +27,6 @@ const featureValues: Record<string, (string | boolean)[][]> = {
   ],
   "Support & Scale": [
     [false, true, true],
-    [false, true, true],
-    [false, false, true],
-    [false, false, true],
     [false, false, true],
     [false, false, true],
     [false, false, true],
@@ -71,10 +69,6 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
             </span>
           )}
         </div>
-        <p className="font-display text-xl text-[#E6EDF3] mb-1">{t.priceHint}</p>
-        {featured && dict.perAttendee && (
-          <p className="text-[0.7rem] text-[#3FB950] font-mono tracking-wide mb-1">{dict.perAttendee}</p>
-        )}
         <p className="text-[0.85rem] text-[#8B949E] mb-1">{t.subtitle}</p>
         <p className="text-[0.75rem] text-[#484F58] font-mono tracking-wide">{t.bestFor}</p>
       </div>
@@ -96,6 +90,7 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
                 {cat.features.map((featureLabel, fi) => {
                   const val = values?.[fi]?.[tierIndex] ?? false
                   const included = val !== false
+                  const note = typeof val === "string" ? val : null
                   return (
                     <div
                       key={fi}
@@ -114,6 +109,7 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
                       )}
                       <span className={`text-[0.8rem] leading-tight ${included ? "text-[#8B949E]" : "text-[#484F58]"}`}>
                         {featureLabel}
+                        {note && <span className="text-[#58A6FF]"> ({note})</span>}
                       </span>
                     </div>
                   )

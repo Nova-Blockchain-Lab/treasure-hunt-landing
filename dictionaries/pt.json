@@ -10,11 +10,11 @@
   },
   "hero": {
     "srTitle": "Treasure Hunt | Jogo Interativo de Engagement para Eventos e Conferencias",
-    "headline": "Transforme o Seu Espaco",
-    "headlineHighlight": "Num Jogo",
+    "headline": "Transforme o Seu Evento Numa",
+    "headlineHighlight": "Experiencia Gamificada",
     "tagline": "Os participantes exploram, scaneiam checkpoints, ganham recompensas reais e direcionam trafego para onde precisa",
-    "taglineSuffix": " \u2014 direto no browser do telemovel, sem download de app.",
-    "trustBadge": "Implementado em 7 eventos \u2014 14.000+ tesouros encontrados \u00b7 375+ checkpoints \u00b7 1.7M+ recompensas",
+    "taglineSuffix": ". Direto no browser do telemovel, sem download de app.",
+    "trustBadge": "Implementado no ETHDenver, Future Maker e mais \u00b7 10.000+ tesouros encontrados \u00b7 500+ checkpoints \u00b7 500+ jogadores",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
@@ -44,8 +44,8 @@
       "Loja de merch integrada onde recompensas viram itens reais"
     ],
     "stats": [
-      { "value": "14.000+", "label": "Tesouros Encontrados" },
-      { "value": "375+", "label": "Checkpoints" },
+      { "value": "10.000+", "label": "Tesouros Encontrados" },
+      { "value": "500+", "label": "Checkpoints" },
       { "value": "1.7M+", "label": "Recompensas" },
       { "value": "7", "label": "Eventos" }
     ],
@@ -102,21 +102,21 @@
   },
   "features": {
     "eyebrow": "01 / Funcionalidades",
-    "heading": "O Que o Treasure Hunt",
-    "headingHighlight": "Faz Pelo Seu Evento",
-    "description": "O Treasure Hunt transforma qualquer espaco num jogo interativo. Os participantes exploram o local, scaneiam checkpoints, ganham recompensas e competem em leaderboards ao vivo \u2014 tudo a partir do browser do telemovel, sem necessidade de download.",
+    "heading": "Feito para Organizadores.",
+    "headingHighlight": "Adorado por Participantes.",
+    "description": "O Treasure Hunt transforma qualquer evento numa aventura ao vivo. Os participantes ganham pontos ao explorar o espaco, completar desafios e descobrir checkpoints escondidos. Os pontos desbloqueiam recompensas reais na loja integrada.",
     "items": [
       {
         "title": "Direcionar Trafego",
-        "description": "Voce decide onde ficam os checkpoints. Cada checkpoint e uma razao para atravessar o local \u2014 direcionando trafego para sponsors, stands e areas menos exploradas."
+        "description": "Voce decide onde ficam os checkpoints. Cada checkpoint e uma razao para atravessar o local, direcionando trafego para sponsors, stands e areas menos exploradas."
       },
       {
         "title": "Recompensar Participacao Real",
-        "description": "Os participantes ganham recompensas por se envolverem \u2014 nao apenas por aparecer. Pontos que podem gastar na loja de merch integrada em chapeus, meias e itens exclusivos."
+        "description": "Os participantes ganham recompensas por se envolverem, nao apenas por aparecer. Pontos que podem gastar na loja de merch integrada em itens exclusivos e recompensas de sponsors."
       },
       {
-        "title": "Adapta-se a Qualquer Espaco",
-        "description": "Coloque tags NFC ou codigos QR em qualquer lugar. Funciona em qualquer browser de telemovel com um login simples \u2014 os participantes estao a jogar em menos de 30 segundos, sem download de app."
+        "title": "Setup Sem Friccao",
+        "description": "Coloque tags NFC ou codigos QR em qualquer lugar. Os participantes fazem login uma vez e estao a jogar em segundos. Sem app. Sem downloads. Sem friccao."
       },
       {
         "title": "Monitorizar Tudo em Tempo Real",
@@ -132,19 +132,19 @@
     "infraEyebrow": "O Que Alimenta Tudo",
     "infraHeading": "Porque Parece",
     "infraHighlight": "Magia",
-    "infraDescription": "Por tras de cada scan, cada recompensa e cada atualizacao do leaderboard esta infraestrutura real construida para velocidade, transparencia e zero friccao. Os seus participantes nunca veem a complexidade \u2014 simplesmente jogam.",
+    "infraDescription": "Por tras de cada scan, cada recompensa e cada atualizacao do leaderboard esta infraestrutura real construida para velocidade, transparencia e zero friccao. Os seus participantes nunca veem a complexidade. Simplesmente jogam.",
     "steps": [
-      { "title": "Abrir e Jogar Instantaneamente", "description": "Os participantes visitam um URL no telemovel e fazem login com um toque. Sem download de app, sem criar conta. Estao a jogar em 30 segundos." },
+      { "title": "Abrir e Jogar Instantaneamente", "description": "Os participantes visitam um URL no telemovel e fazem login com um toque. Sem download de app, sem criar conta. Estao a jogar em poucos segundos." },
       { "title": "Explorar o Local", "description": "Os checkpoints sao colocados onde voce quer trafego. Os participantes seguem o mapa, descobrem locais escondidos e desbloqueiam recompensas pelo espaco." },
       { "title": "Scanear para Ganhar", "description": "Um toque numa tag NFC ou scan de um codigo QR. Recompensa instantanea, registada automaticamente. Cada interacao torna-se um dado para si." },
       { "title": "Competir e Colaborar", "description": "Leaderboards ao vivo alimentam competicao amigavel. Desafios sociais e missoes de equipa mantem a energia alta durante todo o evento." },
-      { "title": "Gastar Recompensas Reais", "description": "Os pontos desbloqueiam merch real \u2014 chapeus, meias, itens exclusivos. Os participantes levam algo tangivel do seu evento." }
+      { "title": "Gastar Recompensas Reais", "description": "Os pontos desbloqueiam recompensas e premios exclusivos. Os participantes levam algo real para recordar o seu evento." }
     ],
     "infraItems": [
-      { "title": "Funciona na Nova Cidade L3", "description": "Uma rede Layer 3 dedicada construida para velocidade. Cada acao \u2014 scans, recompensas, compras \u2014 e registada de forma transparente e verificavel." },
+      { "title": "Funciona na Nova Cidade L3", "description": "Uma rede blockchain Layer 3 dedicada construida para velocidade. Concebida para suportar milhares de jogadores em simultaneo sem atrasos ou falhas, mesmo no pico de atividade." },
       { "title": "Custo Zero para Participantes", "description": "Um paymaster integrado cobre todas as taxas de transacao. Os participantes colecionam recompensas, compram na loja de merch e sobem no leaderboard sem pagar nada." },
-      { "title": "Login com Um Toque", "description": "Sem seed phrases, sem configuracao de wallet, sem conhecimento tecnico necessario. Os participantes fazem login como em qualquer outra app \u2014 nos tratamos do deployment da smart account e da gestao de chaves nos bastidores." },
-      { "title": "Totalmente Transparente e Auditavel", "description": "Cada recompensa mintada, cada checkpoint scaneado, cada compra de merch \u2014 registada e verificavel. Forneca aos sponsors e stakeholders dados de engagement em que podem confiar." }
+      { "title": "Login com Um Toque", "description": "Sem seed phrases, sem configuracao de wallet, sem conhecimento tecnico necessario. Os participantes fazem login como em qualquer outra app. Nos tratamos do deployment da smart account e da gestao de chaves nos bastidores." },
+      { "title": "Totalmente Transparente e Auditavel", "description": "Cada recompensa mintada, cada checkpoint scaneado, cada compra de merch, tudo registado e verificavel. Forneca aos sponsors e stakeholders dados de engagement em que podem confiar." }
     ]
   },
   "useCases": {
@@ -162,7 +162,7 @@
     ]
   },
   "testimonials": {
-    "eyebrow": "04 / Prova Social",
+    "eyebrow": "03 / Prova Social",
     "heading": "Nao Acredite Apenas",
     "headingHighlight": "na Nossa Palavra",
     "items": [
@@ -184,56 +184,53 @@
     ]
   },
   "packages": {
-    "eyebrow": "05 / Pacotes",
+    "eyebrow": "04 / Pacotes",
     "heading": "Uma Plataforma,",
     "headingHighlight": "Para Qualquer Dimensao de Evento",
     "description": "Comece gratis para eventos pequenos. Escale para milhares de participantes com ferramentas completas de engagement, analytics de sponsors e suporte no local.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Prove o conceito no seu proximo meetup", "bestFor": "Ate 100 participantes", "cta": "Comecar", "badge": "", "priceHint": "Fale connosco" },
-      { "name": "Pro", "subtitle": "Tudo para impressionar sponsors e participantes", "bestFor": "100\u20131.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular", "priceHint": "Fale connosco" },
-      { "name": "Enterprise", "subtitle": "Equipa dedicada. White-label. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "Fale connosco" }
+      { "name": "Starter", "subtitle": "Branding Treasure Hunt (sem personalizacao).", "bestFor": "Ate 100 participantes", "cta": "Comecar", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Tudo para impressionar o publico e os sponsors.", "bestFor": "100 a 1.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Funcionalidades personalizadas. Analytics. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
         "title": "Checkpoints",
         "features": [
+          "Aparencia personalizada",
           "Checkpoints com codigo QR",
           "Checkpoints com tag NFC",
-          "Design de checkpoint personalizado",
-          "Nomes de recompensa personalizados"
+          "Design de checkpoint personalizado"
         ]
       },
       {
         "title": "Engagement",
         "features": [
-          "Sondagens de votacao",
-          "Desafios NFC escondidos",
-          "Recompensas por seguir redes sociais",
-          "Escalonamento dinamico de dificuldade",
-          "Posicionamento estrategico de sponsors",
           "Loja de merch",
-          "Leaderboard ao vivo"
+          "Leaderboard em tempo real",
+          "Mapa interativo do local",
+          "Sondagens de votacao",
+          "Recompensas personalizadas por seguir redes sociais",
+          "Posicionamento estrategico de sponsors",
+          "Jogadores podem esconder checkpoints"
         ]
       },
       {
         "title": "Suporte e Escala",
         "features": [
-          "Relatorio de analytics pos-evento",
-          "Desenvolvimento de funcionalidades personalizadas",
           "Equipa de suporte no local",
-          "Branding white-label",
+          "Desenvolvimento de funcionalidades personalizadas",
           "Dashboard multi-evento",
-          "Relatorio ROI de sponsors",
-          "Acesso API"
+          "Relatorio de analytics pos-evento"
         ]
       }
     ]
   },
   "cta": {
-    "heading": "Pronto para Transformar Trafego",
-    "headingHighlight": "em Resultados Mensuraveis?",
+    "heading": "Pronto para Tornar o Seu Proximo Evento",
+    "headingHighlight": "Inesquecivel?",
     "description": "O Treasure Hunt e implementado em dias. Conte-nos sobre o seu evento e mostramos o que e possivel.",
-    "trustSignal": "Comprovado em 7 eventos \u2014 14.000+ tesouros encontrados, 375+ checkpoints, 1.7M+ recompensas",
+    "trustSignal": "Testado em multiplos eventos, milhares de jogadores e centenas de premios conquistados.",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
@@ -253,16 +250,16 @@
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados."
   },
   "faq": {
-    "eyebrow": "06 / FAQ",
+    "eyebrow": "05 / FAQ",
     "heading": "Perguntas",
     "headingHighlight": "Frequentes",
     "items": [
-      { "question": "Quanto tempo leva a configurar?", "answer": "A partir de 48 horas. N\u00f3s tratamos da tecnologia \u2014 voc\u00ea diz-nos onde ficam os checkpoints e que recompensas oferecer." },
-      { "question": "Os participantes precisam de fazer download de uma app?", "answer": "N\u00e3o. Funciona inteiramente no browser do telem\u00f3vel. Um toque para fazer login, a jogar em menos de 30 segundos." },
-      { "question": "E se o local n\u00e3o tiver NFC?", "answer": "Os c\u00f3digos QR funcionam em todo o lado. Pode combinar NFC e QR pelo local, ou usar apenas QR." },
-      { "question": "Podemos personalizar a marca?", "answer": "Sim. Os pacotes Pro e Enterprise incluem design de checkpoint personalizado, nomes de recompensa e branding white-label." },
-      { "question": "Que dados recebem os organizadores?", "answer": "Um dashboard em tempo real com visitas a checkpoints, heatmaps de engagement, classifica\u00e7\u00f5es do leaderboard e um relat\u00f3rio completo de analytics p\u00f3s-evento para partilhar com sponsors." },
-      { "question": "Existe um tamanho m\u00ednimo de evento?", "answer": "O Starter \u00e9 gratuito para eventos at\u00e9 100 participantes. O Pro cobre at\u00e9 1.000, e o Enterprise trata de tudo acima disso com suporte dedicado." }
+      { "question": "Quanto tempo leva a configurar?", "answer": "A partir de 48 horas. Nos tratamos da tecnologia, voce diz-nos onde ficam os checkpoints e que recompensas oferecer." },
+      { "question": "Os participantes precisam de fazer download de uma app?", "answer": "Nao. Funciona inteiramente no browser do telemovel. Um toque para fazer login, a jogar em poucos segundos." },
+      { "question": "Podemos personalizar a marca?", "answer": "Sim. Os pacotes Pro e Enterprise incluem design de checkpoint personalizado e nomes de recompensa. O pacote Enterprise inclui branding white-label." },
+      { "question": "Como e o setup dos checkpoints?", "answer": "O design e setup tanto dos codigos QR como das tags NFC esta incluido nos respetivos pacotes. Tratamos de tudo para que a sua equipa nao tenha de o fazer." },
+      { "question": "Que dados recebem os organizadores?", "answer": "Um dashboard em tempo real com visitas a checkpoints, heatmaps de engagement e classificacoes do leaderboard esta disponivel em todos os planos durante a ativacao do jogo. O Enterprise adiciona um relatorio completo de analytics pos-evento para partilhar com sponsors e um dashboard multi-evento para acompanhar e comparar o desempenho nos eventos mais significativos, permitindo identificar pontos fortes, fracos e o que realmente gerou engagement." },
+      { "question": "Existe um tamanho minimo de evento?", "answer": "O Starter cobre eventos ate 100 participantes. O Pro escala ate 1.000, e o Enterprise trata de tudo acima disso." }
     ]
   },
   "contactForm": {
@@ -301,12 +298,12 @@
     "hourlyDescription": "Transacoes por hora do dia em todos os dias do evento",
     "mintingTimeline": "CRONOLOGIA DE MINTING",
     "treasurePopularity": "POPULARIDADE DOS TESOUROS",
-    "treasurePopularityDesc": "59 tesouros no total \u2014 992 encontrados, 33 escondidos por 29 jogadores",
+    "treasurePopularityDesc": "59 tesouros no total \u00b7 992 encontrados \u00b7 33 escondidos por 29 jogadores",
     "treasure": "Tesouro",
     "finds": "Encontros",
     "hiddenBy": "Escondido Por",
     "merchStore": "LOJA DE MERCH",
-    "merchStoreDesc": "137 compras por 73 compradores \u2014 213.820 BUFFI queimados",
+    "merchStoreDesc": "137 compras por 73 compradores \u00b7 213.820 BUFFI queimados",
     "item": "Item",
     "price": "Preco",
     "sold": "Vendidos",

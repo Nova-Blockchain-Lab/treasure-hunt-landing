@@ -108,7 +108,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                   className={`w-[180px] sm:w-[200px] md:w-[220px] bg-[#0a0a0a] rounded-[32px] p-2 border transition-all duration-400 ${
                     i === activeIndex
                       ? "border-[rgba(240,96,93,0.4)] shadow-[0_0_20px_rgba(240,96,93,0.15)] md:scale-105"
-                      : "border-[rgba(240,246,252,0.08)] hover:border-[rgba(240,96,93,0.25)] md:opacity-60"
+                      : "border-[rgba(240,246,252,0.08)] hover:border-[rgba(240,96,93,0.25)]"
                   }`}
                 >
                   <div className="rounded-3xl overflow-hidden">
@@ -204,7 +204,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
             </div>
           </div>
 
-          {/* The other 4 events — balanced responsive grid */}
+          {/* The other 4 events, balanced responsive grid */}
           <div className="grid gap-4 md:gap-6 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
             {secondaryEvents.map(({ card, href }) => (
               <div

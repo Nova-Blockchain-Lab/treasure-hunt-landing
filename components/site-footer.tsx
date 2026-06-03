@@ -17,7 +17,6 @@ interface NavDict {
   demo: string
   features: string
   howItWorks: string
-  useCases: string
   packages: string
 }
 
@@ -33,10 +32,9 @@ export function SiteFooter({
   const prefix = lang === "en" ? "" : `/${lang}`
 
   const navLinks = [
-    { href: "#demo", label: navDict.demo },
     { href: "#what", label: navDict.features },
+    { href: "#demo", label: navDict.demo },
     { href: "#how", label: navDict.howItWorks },
-    { href: "#where", label: navDict.useCases },
     { href: "#packages", label: navDict.packages },
     { href: "#cta", label: dict.contactLabel },
   ]

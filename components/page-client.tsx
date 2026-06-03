@@ -13,7 +13,6 @@ import { DemoSection } from "@/components/demo-section"
 import { MediaSection } from "@/components/media-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import { UseCasesSection } from "@/components/use-cases-section"
 import { PackagesSection } from "@/components/packages-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
@@ -130,8 +129,6 @@ export function PageClient({ dict, lang, variant = "control" }: { dict: any; lan
       <HowItWorksSection dict={dict.howItWorks} />
       <SectionDividerReverse />
       <TestimonialsSection dict={dict.testimonials} />
-      <SectionDivider />
-      <UseCasesSection dict={dict.useCases} />
       <SectionDivider />
       <PackagesSection dict={dict.packages} onOpenContact={openContactFrom} />
       <SectionDividerReverse />
