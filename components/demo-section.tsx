@@ -190,13 +190,13 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                   href="https://hunt.ethdenver.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131921]"
                 >
                   {dict.seeItLive}
                 </a>
                 <Link
                   href={reportHref("ethdenver-report")}
-                  className="inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
+                  className="inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
                 >
                   {dict.seeReport}
                 </Link>
@@ -217,7 +217,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                 <p className="text-sm text-[#E6EDF3] mb-5">{card.stat2}</p>
                 <Link
                   href={href}
-                  className="mt-auto inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97]"
+                  className="mt-auto inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
                 >
                   {dict.seeReport}
                 </Link>

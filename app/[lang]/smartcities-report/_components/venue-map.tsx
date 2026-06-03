@@ -220,7 +220,7 @@ export function VenueMap({
       aria-label="FIL Pavilhão 3 floor plan with a weather-map style kernel-density heatmap of treasure-hunt finds. Sector 3B is the hottest zone."
     >
       <image
-        href="/fil_map.jpeg"
+        href="/pscs-venue-map.jpeg"
         x={0}
         y={0}
         width={VW}

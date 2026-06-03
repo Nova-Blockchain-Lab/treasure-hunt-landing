@@ -26,6 +26,24 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
               className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
             />
           </a>
+          <a href="https://portugalsmartcities.fil.pt/" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/pscs-logo.png"
+              alt="Portugal Smart Cities Summit"
+              width={220}
+              height={51}
+              className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+            />
+          </a>
+          <a href="https://www.cm-cadaval.pt/2303/cadavalapresentaediopicadofestivaldajuventude2026" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/cadaval-festival-logo.png"
+              alt="Festival da Juventude · Cadaval"
+              width={96}
+              height={96}
+              className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+            />
+          </a>
           <a href="https://blockchainconfluence.pt/" target="_blank" rel="noopener noreferrer">
             <Image
               src="/blockchain-confluence-logo.png"

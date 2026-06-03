@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useEffect, useState } from "react"
 import { RevealOnScroll } from "./reveal-on-scroll"
 import { TextShimmer } from "./text-shimmer"
 
@@ -23,6 +24,16 @@ interface MediaDict {
 }
 
 export function MediaSection({ dict }: { dict: MediaDict }) {
+  // Respect prefers-reduced-motion: don't autoplay the gameplay clips, show their posters instead.
+  const [allowAutoplay, setAllowAutoplay] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+    const update = () => setAllowAutoplay(!mq.matches)
+    update()
+    mq.addEventListener("change", update)
+    return () => mq.removeEventListener("change", update)
+  }, [])
+
   const photos = [
     { src: "/media/event-posters.jpg", alt: dict.photo1Alt },
     { src: "/media/booth-demo.jpg", alt: dict.photo2Alt },
@@ -111,10 +122,11 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
               {clips.map((c) => (
                 <div key={c.src} className="relative aspect-[9/16] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] bg-black">
                   <video
-                    autoPlay
+                    autoPlay={allowAutoplay}
                     muted
                     loop
                     playsInline
+                    controls={!allowAutoplay}
                     preload="metadata"
                     poster={c.poster}
                     aria-label={c.label}
