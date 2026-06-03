@@ -14,7 +14,7 @@
     "headlineHighlight": "Into a Game",
     "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
     "taglineSuffix": " \u2014 straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed across 5 events \u2014 14,000+ treasure finds \u00b7 375+ checkpoints \u00b7 1.7M+ rewards minted",
+    "trustBadge": "Deployed across 7 events \u2014 14,000+ treasure finds \u00b7 375+ checkpoints \u00b7 1.7M+ rewards minted",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -30,10 +30,10 @@
     "Live Analytics Dashboard"
   ],
   "demo": {
-    "eyebrow": "Proven at 5 Events",
+    "eyebrow": "Proven at 7 Events",
     "heading": "See What",
     "headingHighlight": "Participants",
-    "headingSuffix": "Experienced Across 5 Events",
+    "headingSuffix": "Experienced Across 7 Events",
     "seeItLive": "See It Live \u2192",
     "seeReport": "See Report \u2192",
     "seeFmReport": "See Report \u2192",
@@ -47,7 +47,7 @@
       { "value": "14,000+", "label": "Treasure Finds" },
       { "value": "375+", "label": "Venue Checkpoints" },
       { "value": "1.7M+", "label": "Rewards Minted" },
-      { "value": "5", "label": "Events Deployed" }
+      { "value": "7", "label": "Events Deployed" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -233,7 +233,7 @@
     "heading": "Ready to Turn Foot Traffic",
     "headingHighlight": "Into Measurable Results?",
     "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
-    "trustSignal": "Proven at ETHDenver, Future Maker & Confluence \u2014 3,500+ treasure finds, 174 checkpoints, 3 events",
+    "trustSignal": "Proven across 7 events \u2014 14,000+ treasure finds, 375+ checkpoints, 1.7M+ rewards minted",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },

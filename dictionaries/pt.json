@@ -14,7 +14,7 @@
     "headlineHighlight": "Num Jogo",
     "tagline": "Os participantes exploram, scaneiam checkpoints, ganham recompensas reais e direcionam trafego para onde precisa",
     "taglineSuffix": " \u2014 direto no browser do telemovel, sem download de app.",
-    "trustBadge": "Implementado em 5 eventos \u2014 14.000+ tesouros encontrados \u00b7 375+ checkpoints \u00b7 1.7M+ recompensas",
+    "trustBadge": "Implementado em 7 eventos \u2014 14.000+ tesouros encontrados \u00b7 375+ checkpoints \u00b7 1.7M+ recompensas",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
@@ -30,10 +30,10 @@
     "Dashboard de Analytics ao Vivo"
   ],
   "demo": {
-    "eyebrow": "Provado em 5 Eventos",
+    "eyebrow": "Provado em 7 Eventos",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
-    "headingSuffix": "Experienciaram em 5 Eventos",
+    "headingSuffix": "Experienciaram em 7 Eventos",
     "seeItLive": "Ver ao Vivo \u2192",
     "seeReport": "Ver Relatorio \u2192",
     "seeFmReport": "Ver Relatorio \u2192",
@@ -47,7 +47,7 @@
       { "value": "14.000+", "label": "Tesouros Encontrados" },
       { "value": "375+", "label": "Checkpoints" },
       { "value": "1.7M+", "label": "Recompensas" },
-      { "value": "5", "label": "Eventos" }
+      { "value": "7", "label": "Eventos" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -233,7 +233,7 @@
     "heading": "Pronto para Transformar Trafego",
     "headingHighlight": "em Resultados Mensuraveis?",
     "description": "O Treasure Hunt e implementado em dias. Conte-nos sobre o seu evento e mostramos o que e possivel.",
-    "trustSignal": "Comprovado no ETHDenver, Future Maker & Confluence \u2014 3.500+ tesouros encontrados, 174 checkpoints, 3 eventos",
+    "trustSignal": "Comprovado em 7 eventos \u2014 14.000+ tesouros encontrados, 375+ checkpoints, 1.7M+ recompensas",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados \u2192"
   },
