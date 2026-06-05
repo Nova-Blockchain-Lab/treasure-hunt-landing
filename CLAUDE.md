@@ -96,9 +96,10 @@ next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 - **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. Variant is read server-side from cookies and threaded into `PageClient`.
 - **Analytics:** PostHog (provider in `components/posthog-provider.tsx`) and GA4 (`components/ga4-script.tsx`) are gated behind cookie consent (`lib/consent-context.tsx`, `components/cookie-consent-banner.tsx`). Event tracking via `hooks/use-analytics-tracking.ts`.
 - **Internal links must use `next/link`** (not `<a>` for non-anchor navigation) so the locale prefix logic can stay simple.
+- **PT copy uses proper PT-PT diacritics** (`dictionaries/pt.json` and the PT metadata in `app/[lang]/layout.tsx`). Don't add new PT strings without accents.
 - **Locale prefix:** `en` is at `/`, `pt` is at `/pt/...`. The footer & demo section build hrefs with `prefix = lang === "en" ? "" : "/" + lang`.
 - **Sections on the home page link to each other via `#anchor`** (`#hero`, `#demo`, `#what`, `#how`, `#where`, `#packages`, `#cta`).
-- **JSON-LD:** site-wide graph lives in `components/json-ld.tsx` (rendered via `[lang]/layout.tsx` and the root `app/page.tsx`). Blog posts add their own `BlogPosting` + `BreadcrumbList` `@graph` script inline.
+- **JSON-LD:** site-wide graph lives in `components/json-ld.tsx` (rendered via `[lang]/layout.tsx` and the root `app/page.tsx`). Blog posts add their own `BlogPosting` + `BreadcrumbList` `@graph` script inline. Every `Event` node must include an `offers` object (Search Console flags missing `offers` as a non-critical Events issue) — copy the "Free Entry" offer pattern when adding new events.
 - **Static SSG** for all routes except `/feed.xml`, `/opengraph-image` (edge runtime), and `/api/contact` (dynamic). The home routes are server-rendered on demand (cookie reads for A/B + consent).
 
 ## SEO notes

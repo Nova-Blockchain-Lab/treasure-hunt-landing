@@ -200,6 +200,15 @@ const smartCitiesEvent = {
     name: 'NOVA Blockchain Lab',
     url: 'https://novablockchainlab.novaims.unl.pt/',
   },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: `${BASE_URL}/smartcities-report`,
+    validFrom: '2026-04-01',
+  },
 }
 
 const cadavalEvent = {
@@ -227,6 +236,15 @@ const cadavalEvent = {
     name: 'NOVA Blockchain Lab',
     url: 'https://novablockchainlab.novaims.unl.pt/',
   },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: `${BASE_URL}/cadaval-report`,
+    validFrom: '2026-04-15',
+  },
 }
 
 const springBootcampEvent = {
@@ -253,6 +271,15 @@ const springBootcampEvent = {
     '@type': 'Organization',
     name: 'NOVA Blockchain Lab',
     url: 'https://novablockchainlab.novaims.unl.pt/',
+  },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: `${BASE_URL}/springbootcamp-report`,
+    validFrom: '2026-03-01',
   },
 }
 

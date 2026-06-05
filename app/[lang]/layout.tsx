@@ -20,18 +20,18 @@ export async function generateMetadata({
     ? 'Treasure Hunt | Jogo de Engagement para Eventos'
     : 'Treasure Hunt | Event Engagement Game for Conferences'
   const description = isPortuguese
-    ? 'Transforme o seu evento numa aventura. Scavenger hunt gamificado com QR e NFC que direciona trafego para sponsors, aumenta o engagement e oferece analytics em tempo real.'
+    ? 'Transforme o seu evento numa aventura. Scavenger hunt gamificado com QR e NFC que direciona tráfego para sponsors, aumenta o engagement e oferece analytics em tempo real.'
     : 'Turn your event into an adventure. Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.'
   const keywords = isPortuguese
     ? [
         'jogo de engagement para eventos',
         'plataforma interativa de eventos',
-        'gamificacao de eventos',
-        'ferramenta de engagement para conferencias',
+        'gamificação de eventos',
+        'ferramenta de engagement para conferências',
         'jogo NFC para eventos',
         'scavenger hunt com QR code',
-        'gamificacao de conferencias',
-        'trafego para sponsors',
+        'gamificação de conferências',
+        'tráfego para sponsors',
         'leaderboard ao vivo',
         'plataforma de analytics para eventos',
       ]
