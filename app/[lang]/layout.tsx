@@ -90,8 +90,8 @@ export async function generateMetadata({
       images: ['https://www.treasurehunt.pt/opengraph-image'],
     },
     icons: {
-      icon: '/treasure-hunt-logo.png',
-      apple: '/treasure-hunt-logo.png',
+      icon: '/favicon.png',
+      apple: '/treasure-hunt-only-logo.png',
     },
     other: {
       'link:alternate': '/feed.xml',

@@ -12,14 +12,15 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#06080F',
     icons: [
       {
-        src: '/treasure-hunt-logo.png',
-        sizes: '512x512',
+        src: '/favicon.png',
+        sizes: '96x96',
         type: 'image/png',
       },
       {
-        src: '/apple-icon.png',
-        sizes: '180x180',
+        src: '/treasure-hunt-only-logo.png',
+        sizes: '512x488',
         type: 'image/png',
+        purpose: 'any',
       },
     ],
   }
