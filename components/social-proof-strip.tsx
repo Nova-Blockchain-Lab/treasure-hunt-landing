@@ -44,6 +44,21 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
               className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
             />
           </a>
+          <a
+            href="https://www.datawithpurpose.pt/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+          >
+            {/* DwP mark is a black/white checkerboard — on a white chip so it reads on the dark strip */}
+            <span className="inline-flex items-center bg-white rounded-md px-3 py-2.5">
+              <img
+                src="/datasummit-logo.svg"
+                alt="Data with Purpose Summit 2026 · NOVA IMS"
+                className="h-11 sm:h-14 md:h-[64px] w-auto"
+              />
+            </span>
+          </a>
           <a href="https://blockchainconfluence.pt/" target="_blank" rel="noopener noreferrer">
             <Image
               src="/blockchain-confluence-logo.png"
