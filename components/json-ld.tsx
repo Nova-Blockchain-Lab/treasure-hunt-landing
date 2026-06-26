@@ -283,6 +283,42 @@ const springBootcampEvent = {
   },
 }
 
+const dataSummitEvent = {
+  '@type': 'Event',
+  name: 'Treasure Hunt at Data with Purpose Summit 2026',
+  description:
+    'Interactive NFC scavenger hunt at the Data with Purpose Summit, organised by NOVA IMS, with 58 players, 786 tag finds, and 25 tags across the Centro de Congressos do Taguspark.',
+  startDate: '2026-06-25',
+  endDate: '2026-06-25',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'Centro de Congressos do Taguspark',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Oeiras',
+      addressCountry: 'PT',
+    },
+  },
+  organizer: organization,
+  url: `${BASE_URL}/datasummit-report`,
+  performer: {
+    '@type': 'Organization',
+    name: 'NOVA Blockchain Lab',
+    url: 'https://novablockchainlab.novaims.unl.pt/',
+  },
+  offers: {
+    '@type': 'Offer',
+    name: 'Free Entry',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: `${BASE_URL}/datasummit-report`,
+    validFrom: '2026-06-01',
+  },
+}
+
 const reviews = [
   {
     '@type': 'Review',
@@ -334,7 +370,7 @@ const reviews = [
 
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, smartCitiesEvent, cadavalEvent, springBootcampEvent, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, smartCitiesEvent, cadavalEvent, springBootcampEvent, dataSummitEvent, ...reviews],
 }
 
 export function JsonLd() {

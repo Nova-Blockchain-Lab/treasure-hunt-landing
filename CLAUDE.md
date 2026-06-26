@@ -50,15 +50,16 @@ app/
     ├── futuremaker-report/ # Static report page with charts
     ├── springbootcamp-report/ # Static team-based report (Spring Bootcamp 2026); self-contained, no dict keys
     ├── smartcities-report/  # Ported PSCS 2026 report (force-static); reads data/pscs2026/report-snapshot.json via lib/smartcities-report.ts; self-contained _components/ + _report.css
-    └── cadaval-report/      # Ported Festival da Juventude 2026 report; reads data/cadaval2026/report-snapshot.json via lib/cadaval-report.ts; self-contained _components/ + _report.css
-    # All 5 report routes use locale-aware generateMetadata (self-canonical per locale + en/pt/x-default hreflang) and are linked from the demo section cards. Each Event is in the json-ld graph.
+    ├── cadaval-report/      # Ported Festival da Juventude 2026 report; reads data/cadaval2026/report-snapshot.json via lib/cadaval-report.ts; self-contained _components/ + _report.css
+    └── datasummit-report/  # Ported Data with Purpose Summit 2026 report (NOVA IMS, Taguspark, 25 Jun 2026, one day); reads data/datasummit2026/report-snapshot.json via lib/datasummit-report.ts; self-contained _components/ + _report.css. Venue map asset is public/datasummit-venue-map.png (1517×1600 portrait).
+    # All 6 report routes use locale-aware generateMetadata (self-canonical per locale + en/pt/x-default hreflang) and are linked from the demo section cards. Each Event is in the json-ld graph.
 
 components/                 # Section components, composed by components/page-client.tsx
 ├── page-client.tsx         # Client wrapper: composes all home sections + analytics tracking
 ├── navbar.tsx              # Sticky navbar with section-active highlight
 ├── hero-section.tsx        # Logo image + sr-only H1 + tagline + CTAs
 ├── marquee-strip.tsx
-├── demo-section.tsx        # Phone screenshots + 5 per-event stat cards (ETHDenver featured + 4 auto-fit grid), each linking to its report
+├── demo-section.tsx        # Phone screenshots + 6 per-event stat cards (ETHDenver featured + 5 auto-fit grid), each linking to its report
 ├── media-section.tsx       # Interview video + pull-quote + photo/clip gallery (assets in public/media/); id="media"
 ├── social-proof-strip.tsx  # ETHDenver / Future Maker / Confluence logos
 ├── features-section.tsx

@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/smartcities-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-16' },
     { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-25' },
     { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-04-07' },
+    { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-06-25' },
     { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-03-06' },
   ]
 

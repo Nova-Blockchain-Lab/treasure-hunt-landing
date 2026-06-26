@@ -13,6 +13,7 @@ interface FooterDict {
   smartCitiesReport: string
   cadavalReport: string
   springBootcampReport: string
+  dataSummitReport: string
   copyright: string
 }
 
@@ -49,6 +50,7 @@ export function SiteFooter({
     { href: `${prefix}/smartcities-report`, label: dict.smartCitiesReport },
     { href: `${prefix}/cadaval-report`, label: dict.cadavalReport },
     { href: `${prefix}/springbootcamp-report`, label: dict.springBootcampReport },
+    { href: `${prefix}/datasummit-report`, label: dict.dataSummitReport },
   ]
 
   return (

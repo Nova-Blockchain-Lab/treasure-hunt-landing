@@ -78,6 +78,12 @@
       "location": "NOVA IMS, Lisboa · 7 Abr",
       "stat1": "7 equipas · 220 tesouros",
       "stat2": "45.650 SB · 42 checkpoints"
+    },
+    "dataSummitCard": {
+      "title": "Data with Purpose Summit 2026",
+      "location": "Taguspark, Oeiras · 25 Jun",
+      "stat1": "786 tesouros · 25 checkpoints",
+      "stat2": "25.900 DATA · 1 dia"
     }
   },
   "socialProof": {
@@ -250,6 +256,7 @@
     "smartCitiesReport": "Relatório Smart Cities Summit 2026",
     "cadavalReport": "Relatório Cadaval Festival 2026",
     "springBootcampReport": "Relatório Spring Bootcamp 2026",
+    "dataSummitReport": "Relatório Data with Purpose Summit 2026",
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados."
   },
   "faq": {

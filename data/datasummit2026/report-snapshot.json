@@ -1,0 +1,1899 @@
+{
+  "kpis": {
+    "totalPlayers": 58,
+    "pctClaimedReward": 94.8,
+    "totalFinds": 786,
+    "tokensDistributed": 25900,
+    "merchPurchases": 39,
+    "totalSocialClaims": 0,
+    "tokenHolders": 42,
+    "tokenSymbol": "DATA",
+    "tokenName": "Data Coin",
+    "daysActive": 1,
+    "returnerCounts": {
+      "1": 58
+    },
+    "paymasterSponsoredTxs": 825,
+    "paymasterTotalTxs": 825,
+    "paymasterSponsoredPct": 100.0
+  },
+  "tags": [
+    {
+      "rank": 1,
+      "id": 9,
+      "name": "Nova blockchain lab",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 41,
+      "uniqueFinders": 41,
+      "pct": 70.7,
+      "ttf": 150272,
+      "reward": 100,
+      "x": 54.26,
+      "y": 55.14
+    },
+    {
+      "rank": 2,
+      "id": 11,
+      "name": "Sas",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 37,
+      "uniqueFinders": 37,
+      "pct": 63.8,
+      "ttf": 208393,
+      "reward": 100,
+      "x": 63.03,
+      "y": 39.51
+    },
+    {
+      "rank": 3,
+      "id": 22,
+      "name": "Accenture",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 36,
+      "uniqueFinders": 36,
+      "pct": 62.1,
+      "ttf": 152855,
+      "reward": 100,
+      "x": 65.96,
+      "y": 31.18
+    },
+    {
+      "rank": 4,
+      "id": 5,
+      "name": "Jerónimo Martins",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 34,
+      "uniqueFinders": 34,
+      "pct": 58.6,
+      "ttf": 143424,
+      "reward": 100,
+      "x": 75.0,
+      "y": 21.6
+    },
+    {
+      "rank": 5,
+      "id": 23,
+      "name": "Mestrados regulares",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 34,
+      "uniqueFinders": 34,
+      "pct": 58.6,
+      "ttf": 208652,
+      "reward": 100,
+      "x": 65.96,
+      "y": 14.78
+    },
+    {
+      "rank": 6,
+      "id": 28,
+      "name": "ESRI",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 33,
+      "uniqueFinders": 33,
+      "pct": 56.9,
+      "ttf": 208601,
+      "reward": 100,
+      "x": 75.18,
+      "y": 20.03
+    },
+    {
+      "rank": 7,
+      "id": 10,
+      "name": "Mestrados executivos",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 33,
+      "uniqueFinders": 33,
+      "pct": 56.9,
+      "ttf": 208673,
+      "reward": 100,
+      "x": 57.45,
+      "y": 20.34
+    },
+    {
+      "rank": 8,
+      "id": 19,
+      "name": "Entrada logo",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 33,
+      "uniqueFinders": 33,
+      "pct": 56.9,
+      "ttf": 209260,
+      "reward": 100,
+      "x": 66.26,
+      "y": 77.15
+    },
+    {
+      "rank": 9,
+      "id": 25,
+      "name": "Center for global health lab",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 32,
+      "uniqueFinders": 32,
+      "pct": 55.2,
+      "ttf": 208696,
+      "reward": 100,
+      "x": 43.83,
+      "y": 41.88
+    },
+    {
+      "rank": 10,
+      "id": 20,
+      "name": "INE",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 32,
+      "uniqueFinders": 32,
+      "pct": 55.2,
+      "ttf": 208340,
+      "reward": 100,
+      "x": 57.04,
+      "y": 48.0
+    },
+    {
+      "rank": 11,
+      "id": 8,
+      "name": "Innovation lab",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 32,
+      "uniqueFinders": 32,
+      "pct": 55.2,
+      "ttf": 152756,
+      "reward": 100,
+      "x": 35.53,
+      "y": 55.55
+    },
+    {
+      "rank": 12,
+      "id": 16,
+      "name": "Entrada",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 32,
+      "uniqueFinders": 32,
+      "pct": 55.2,
+      "ttf": 209245,
+      "reward": 100,
+      "x": 80.1,
+      "y": 77.73
+    },
+    {
+      "rank": 13,
+      "id": 24,
+      "name": "Pedra 3",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 53.4,
+      "ttf": 157577,
+      "reward": 100,
+      "x": 91.16,
+      "y": 35.2
+    },
+    {
+      "rank": 14,
+      "id": 18,
+      "name": "Lixo",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 53.4,
+      "ttf": 209314,
+      "reward": 100,
+      "x": 95.46,
+      "y": 83.27
+    },
+    {
+      "rank": 15,
+      "id": 12,
+      "name": "Nova cidade",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 53.4,
+      "ttf": 209558,
+      "reward": 100,
+      "x": 30.61,
+      "y": 71.61
+    },
+    {
+      "rank": 16,
+      "id": 21,
+      "name": "Fidelidade",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 30,
+      "uniqueFinders": 30,
+      "pct": 51.7,
+      "ttf": 210585,
+      "reward": 100,
+      "x": 80.1,
+      "y": 19.83
+    },
+    {
+      "rank": 17,
+      "id": 13,
+      "name": "Pedra",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 30,
+      "uniqueFinders": 30,
+      "pct": 51.7,
+      "ttf": 210109,
+      "reward": 100,
+      "x": 34.6,
+      "y": 80.64
+    },
+    {
+      "rank": 18,
+      "id": 26,
+      "name": "Wc m",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 29,
+      "uniqueFinders": 29,
+      "pct": 50.0,
+      "ttf": 150596,
+      "reward": 100,
+      "x": 99.15,
+      "y": 80.39
+    },
+    {
+      "rank": 19,
+      "id": 15,
+      "name": "Porta",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 29,
+      "uniqueFinders": 29,
+      "pct": 50.0,
+      "ttf": 209765,
+      "reward": 100,
+      "x": 17.7,
+      "y": 87.64
+    },
+    {
+      "rank": 20,
+      "id": 7,
+      "name": "Nova cidade",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 48.3,
+      "ttf": 209550,
+      "reward": 100,
+      "x": 34.91,
+      "y": 64.59
+    },
+    {
+      "rank": 21,
+      "id": 2,
+      "name": "João Crisostomo",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 48.3,
+      "ttf": 31896,
+      "reward": 100,
+      "x": 50.27,
+      "y": 57.66
+    },
+    {
+      "rank": 22,
+      "id": 14,
+      "name": "Pedra 2",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 48.3,
+      "ttf": 209315,
+      "reward": 100,
+      "x": 38.29,
+      "y": 89.66
+    },
+    {
+      "rank": 23,
+      "id": 17,
+      "name": "WC",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 48.3,
+      "ttf": 209803,
+      "reward": 100,
+      "x": 99.77,
+      "y": 76.85
+    },
+    {
+      "rank": 24,
+      "id": 6,
+      "name": "Nova cidade",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 48.3,
+      "ttf": 209537,
+      "reward": 100,
+      "x": 30.92,
+      "y": 68.67
+    },
+    {
+      "rank": 25,
+      "id": 27,
+      "name": "Wc w",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 26,
+      "uniqueFinders": 26,
+      "pct": 44.8,
+      "ttf": 209886,
+      "reward": 100,
+      "x": 97.0,
+      "y": 78.31
+    }
+  ],
+  "findsHistogram": [
+    {
+      "label": "0–5",
+      "count": 0
+    },
+    {
+      "label": "5–10",
+      "count": 0
+    },
+    {
+      "label": "10–20",
+      "count": 0
+    },
+    {
+      "label": "20–40",
+      "count": 24
+    },
+    {
+      "label": "40–70",
+      "count": 1
+    },
+    {
+      "label": "70–100",
+      "count": 0
+    },
+    {
+      "label": "100–200",
+      "count": 0
+    }
+  ],
+  "hourBuckets": [
+    {
+      "h": 0,
+      "day": 0,
+      "localHour": 0,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 1,
+      "day": 0,
+      "localHour": 1,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 2,
+      "day": 0,
+      "localHour": 2,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 3,
+      "day": 0,
+      "localHour": 3,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 4,
+      "day": 0,
+      "localHour": 4,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 5,
+      "day": 0,
+      "localHour": 5,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 6,
+      "day": 0,
+      "localHour": 6,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 7,
+      "day": 0,
+      "localHour": 7,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 8,
+      "day": 0,
+      "localHour": 8,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 9,
+      "day": 0,
+      "localHour": 9,
+      "finds": 21,
+      "merch": 0,
+      "social": 0,
+      "total": 21
+    },
+    {
+      "h": 10,
+      "day": 0,
+      "localHour": 10,
+      "finds": 141,
+      "merch": 3,
+      "social": 0,
+      "total": 144
+    },
+    {
+      "h": 11,
+      "day": 0,
+      "localHour": 11,
+      "finds": 170,
+      "merch": 3,
+      "social": 0,
+      "total": 173
+    },
+    {
+      "h": 12,
+      "day": 0,
+      "localHour": 12,
+      "finds": 124,
+      "merch": 7,
+      "social": 0,
+      "total": 131
+    },
+    {
+      "h": 13,
+      "day": 0,
+      "localHour": 13,
+      "finds": 146,
+      "merch": 6,
+      "social": 0,
+      "total": 152
+    },
+    {
+      "h": 14,
+      "day": 0,
+      "localHour": 14,
+      "finds": 76,
+      "merch": 2,
+      "social": 0,
+      "total": 78
+    },
+    {
+      "h": 15,
+      "day": 0,
+      "localHour": 15,
+      "finds": 73,
+      "merch": 10,
+      "social": 0,
+      "total": 83
+    },
+    {
+      "h": 16,
+      "day": 0,
+      "localHour": 16,
+      "finds": 15,
+      "merch": 5,
+      "social": 0,
+      "total": 20
+    },
+    {
+      "h": 17,
+      "day": 0,
+      "localHour": 17,
+      "finds": 9,
+      "merch": 2,
+      "social": 0,
+      "total": 11
+    },
+    {
+      "h": 18,
+      "day": 0,
+      "localHour": 18,
+      "finds": 2,
+      "merch": 0,
+      "social": 0,
+      "total": 2
+    },
+    {
+      "h": 19,
+      "day": 0,
+      "localHour": 19,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 20,
+      "day": 0,
+      "localHour": 20,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 21,
+      "day": 0,
+      "localHour": 21,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 22,
+      "day": 0,
+      "localHour": 22,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 23,
+      "day": 0,
+      "localHour": 23,
+      "finds": 0,
+      "merch": 1,
+      "social": 0,
+      "total": 1
+    }
+  ],
+  "skus": [
+    {
+      "sku": "M-004",
+      "name": "Notebook blockchain",
+      "category": "Other",
+      "minutesToSellout": 742,
+      "units": 19,
+      "stock": 50,
+      "stockEfficiency": 0.38,
+      "unitsPerHour": 1.54,
+      "price": 400,
+      "tokensExchanged": 7600,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1782377335,
+          "n": 1
+        },
+        {
+          "t": 1782378820,
+          "n": 2
+        },
+        {
+          "t": 1782380305,
+          "n": 2
+        },
+        {
+          "t": 1782381790,
+          "n": 2
+        },
+        {
+          "t": 1782383275,
+          "n": 2
+        },
+        {
+          "t": 1782384760,
+          "n": 3
+        },
+        {
+          "t": 1782386245,
+          "n": 4
+        },
+        {
+          "t": 1782387730,
+          "n": 4
+        },
+        {
+          "t": 1782389215,
+          "n": 4
+        },
+        {
+          "t": 1782390700,
+          "n": 4
+        },
+        {
+          "t": 1782392185,
+          "n": 5
+        },
+        {
+          "t": 1782393670,
+          "n": 13
+        },
+        {
+          "t": 1782395155,
+          "n": 13
+        },
+        {
+          "t": 1782396640,
+          "n": 13
+        },
+        {
+          "t": 1782398125,
+          "n": 17
+        },
+        {
+          "t": 1782399610,
+          "n": 17
+        },
+        {
+          "t": 1782401095,
+          "n": 18
+        },
+        {
+          "t": 1782402580,
+          "n": 18
+        },
+        {
+          "t": 1782404065,
+          "n": 18
+        },
+        {
+          "t": 1782405550,
+          "n": 18
+        },
+        {
+          "t": 1782407035,
+          "n": 18
+        },
+        {
+          "t": 1782408520,
+          "n": 18
+        },
+        {
+          "t": 1782410005,
+          "n": 18
+        },
+        {
+          "t": 1782411490,
+          "n": 18
+        },
+        {
+          "t": 1782412975,
+          "n": 18
+        },
+        {
+          "t": 1782414460,
+          "n": 18
+        },
+        {
+          "t": 1782415945,
+          "n": 18
+        },
+        {
+          "t": 1782417430,
+          "n": 18
+        },
+        {
+          "t": 1782418915,
+          "n": 18
+        },
+        {
+          "t": 1782420400,
+          "n": 18
+        },
+        {
+          "t": 1782421885,
+          "n": 18
+        },
+        {
+          "t": 1782423370,
+          "n": 19
+        }
+      ]
+    },
+    {
+      "sku": "M-001",
+      "name": "Hoodie",
+      "category": "Other",
+      "minutesToSellout": 259,
+      "units": 15,
+      "stock": 19,
+      "stockEfficiency": 0.789,
+      "unitsPerHour": 3.47,
+      "price": 2400,
+      "tokensExchanged": 34800,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1782377374,
+          "n": 1
+        },
+        {
+          "t": 1782377893,
+          "n": 1
+        },
+        {
+          "t": 1782378412,
+          "n": 1
+        },
+        {
+          "t": 1782378931,
+          "n": 1
+        },
+        {
+          "t": 1782379450,
+          "n": 1
+        },
+        {
+          "t": 1782379969,
+          "n": 2
+        },
+        {
+          "t": 1782380488,
+          "n": 3
+        },
+        {
+          "t": 1782381007,
+          "n": 3
+        },
+        {
+          "t": 1782381526,
+          "n": 4
+        },
+        {
+          "t": 1782382045,
+          "n": 5
+        },
+        {
+          "t": 1782382564,
+          "n": 5
+        },
+        {
+          "t": 1782383083,
+          "n": 7
+        },
+        {
+          "t": 1782383602,
+          "n": 7
+        },
+        {
+          "t": 1782384121,
+          "n": 7
+        },
+        {
+          "t": 1782384640,
+          "n": 7
+        },
+        {
+          "t": 1782385159,
+          "n": 9
+        },
+        {
+          "t": 1782385678,
+          "n": 10
+        },
+        {
+          "t": 1782386197,
+          "n": 10
+        },
+        {
+          "t": 1782386716,
+          "n": 10
+        },
+        {
+          "t": 1782387235,
+          "n": 11
+        },
+        {
+          "t": 1782387754,
+          "n": 12
+        },
+        {
+          "t": 1782388273,
+          "n": 12
+        },
+        {
+          "t": 1782388792,
+          "n": 13
+        },
+        {
+          "t": 1782389311,
+          "n": 13
+        },
+        {
+          "t": 1782389830,
+          "n": 13
+        },
+        {
+          "t": 1782390349,
+          "n": 13
+        },
+        {
+          "t": 1782390868,
+          "n": 13
+        },
+        {
+          "t": 1782391387,
+          "n": 13
+        },
+        {
+          "t": 1782391906,
+          "n": 13
+        },
+        {
+          "t": 1782392425,
+          "n": 13
+        },
+        {
+          "t": 1782392944,
+          "n": 14
+        },
+        {
+          "t": 1782393463,
+          "n": 15
+        }
+      ]
+    },
+    {
+      "sku": "M-002",
+      "name": "Hat",
+      "category": "Other",
+      "minutesToSellout": 291,
+      "units": 3,
+      "stock": 50,
+      "stockEfficiency": 0.06,
+      "unitsPerHour": 0.62,
+      "price": 1900,
+      "tokensExchanged": 5700,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1782382811,
+          "n": 1
+        },
+        {
+          "t": 1782383394,
+          "n": 1
+        },
+        {
+          "t": 1782383977,
+          "n": 1
+        },
+        {
+          "t": 1782384560,
+          "n": 1
+        },
+        {
+          "t": 1782385143,
+          "n": 1
+        },
+        {
+          "t": 1782385726,
+          "n": 1
+        },
+        {
+          "t": 1782386309,
+          "n": 2
+        },
+        {
+          "t": 1782386892,
+          "n": 2
+        },
+        {
+          "t": 1782387475,
+          "n": 2
+        },
+        {
+          "t": 1782388058,
+          "n": 2
+        },
+        {
+          "t": 1782388641,
+          "n": 2
+        },
+        {
+          "t": 1782389224,
+          "n": 2
+        },
+        {
+          "t": 1782389807,
+          "n": 2
+        },
+        {
+          "t": 1782390390,
+          "n": 2
+        },
+        {
+          "t": 1782390973,
+          "n": 2
+        },
+        {
+          "t": 1782391556,
+          "n": 2
+        },
+        {
+          "t": 1782392139,
+          "n": 2
+        },
+        {
+          "t": 1782392722,
+          "n": 2
+        },
+        {
+          "t": 1782393305,
+          "n": 2
+        },
+        {
+          "t": 1782393888,
+          "n": 2
+        },
+        {
+          "t": 1782394471,
+          "n": 2
+        },
+        {
+          "t": 1782395054,
+          "n": 2
+        },
+        {
+          "t": 1782395637,
+          "n": 2
+        },
+        {
+          "t": 1782396220,
+          "n": 2
+        },
+        {
+          "t": 1782396803,
+          "n": 2
+        },
+        {
+          "t": 1782397386,
+          "n": 2
+        },
+        {
+          "t": 1782397969,
+          "n": 2
+        },
+        {
+          "t": 1782398552,
+          "n": 2
+        },
+        {
+          "t": 1782399135,
+          "n": 2
+        },
+        {
+          "t": 1782399718,
+          "n": 2
+        },
+        {
+          "t": 1782400301,
+          "n": 2
+        },
+        {
+          "t": 1782400884,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "sku": "M-005",
+      "name": "Hoodie",
+      "category": "Other",
+      "minutesToSellout": 49,
+      "units": 2,
+      "stock": 2,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 2.45,
+      "price": 2300,
+      "tokensExchanged": 4600,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1782393266,
+          "n": 1
+        },
+        {
+          "t": 1782393365,
+          "n": 1
+        },
+        {
+          "t": 1782393464,
+          "n": 1
+        },
+        {
+          "t": 1782393563,
+          "n": 1
+        },
+        {
+          "t": 1782393662,
+          "n": 1
+        },
+        {
+          "t": 1782393761,
+          "n": 1
+        },
+        {
+          "t": 1782393860,
+          "n": 1
+        },
+        {
+          "t": 1782393959,
+          "n": 1
+        },
+        {
+          "t": 1782394058,
+          "n": 1
+        },
+        {
+          "t": 1782394157,
+          "n": 1
+        },
+        {
+          "t": 1782394256,
+          "n": 1
+        },
+        {
+          "t": 1782394355,
+          "n": 1
+        },
+        {
+          "t": 1782394454,
+          "n": 1
+        },
+        {
+          "t": 1782394553,
+          "n": 1
+        },
+        {
+          "t": 1782394652,
+          "n": 1
+        },
+        {
+          "t": 1782394751,
+          "n": 1
+        },
+        {
+          "t": 1782394850,
+          "n": 1
+        },
+        {
+          "t": 1782394949,
+          "n": 1
+        },
+        {
+          "t": 1782395048,
+          "n": 1
+        },
+        {
+          "t": 1782395147,
+          "n": 1
+        },
+        {
+          "t": 1782395246,
+          "n": 1
+        },
+        {
+          "t": 1782395345,
+          "n": 1
+        },
+        {
+          "t": 1782395444,
+          "n": 1
+        },
+        {
+          "t": 1782395543,
+          "n": 1
+        },
+        {
+          "t": 1782395642,
+          "n": 1
+        },
+        {
+          "t": 1782395741,
+          "n": 1
+        },
+        {
+          "t": 1782395840,
+          "n": 1
+        },
+        {
+          "t": 1782395939,
+          "n": 1
+        },
+        {
+          "t": 1782396038,
+          "n": 1
+        },
+        {
+          "t": 1782396137,
+          "n": 1
+        },
+        {
+          "t": 1782396236,
+          "n": 1
+        },
+        {
+          "t": 1782396335,
+          "n": 2
+        }
+      ]
+    }
+  ],
+  "rankScatter": [
+    {
+      "rank": 37,
+      "purchases": 1
+    },
+    {
+      "rank": 21,
+      "purchases": 2
+    },
+    {
+      "rank": 31,
+      "purchases": 1
+    },
+    {
+      "rank": 28,
+      "purchases": 5
+    },
+    {
+      "rank": 13,
+      "purchases": 1
+    },
+    {
+      "rank": 14,
+      "purchases": 1
+    },
+    {
+      "rank": 38,
+      "purchases": 1
+    },
+    {
+      "rank": 15,
+      "purchases": 6
+    },
+    {
+      "rank": 16,
+      "purchases": 1
+    },
+    {
+      "rank": 1,
+      "purchases": 1
+    },
+    {
+      "rank": 32,
+      "purchases": 2
+    },
+    {
+      "rank": 18,
+      "purchases": 1
+    },
+    {
+      "rank": 19,
+      "purchases": 1
+    },
+    {
+      "rank": 12,
+      "purchases": 1
+    },
+    {
+      "rank": 22,
+      "purchases": 2
+    },
+    {
+      "rank": 23,
+      "purchases": 1
+    },
+    {
+      "rank": 20,
+      "purchases": 1
+    },
+    {
+      "rank": 5,
+      "purchases": 1
+    },
+    {
+      "rank": 39,
+      "purchases": 1
+    },
+    {
+      "rank": 9,
+      "purchases": 1
+    },
+    {
+      "rank": 8,
+      "purchases": 1
+    },
+    {
+      "rank": 29,
+      "purchases": 1
+    },
+    {
+      "rank": 7,
+      "purchases": 1
+    },
+    {
+      "rank": 6,
+      "purchases": 1
+    },
+    {
+      "rank": 10,
+      "purchases": 1
+    },
+    {
+      "rank": 24,
+      "purchases": 1
+    },
+    {
+      "rank": 25,
+      "purchases": 1
+    }
+  ],
+  "topMerchBuyers": [
+    {
+      "user": "Joao",
+      "buys": 6
+    },
+    {
+      "user": "Maltezinha",
+      "buys": 5
+    },
+    {
+      "user": "Tonic",
+      "buys": 2
+    },
+    {
+      "user": "Carolina simao",
+      "buys": 2
+    },
+    {
+      "user": "martino",
+      "buys": 2
+    },
+    {
+      "user": "paco",
+      "buys": 1
+    },
+    {
+      "user": "PSM",
+      "buys": 1
+    },
+    {
+      "user": "Jesus cortes",
+      "buys": 1
+    },
+    {
+      "user": "Mzhd",
+      "buys": 1
+    },
+    {
+      "user": "MarianaCastro",
+      "buys": 1
+    }
+  ],
+  "topHiders": [],
+  "topFinders": [
+    {
+      "rank": 1,
+      "user": "Tere",
+      "userAddress": "0xe7bd1e7677c6f6d11333e4571aa59dba42cd58d7",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 2,
+      "user": "Catarina",
+      "userAddress": "0x56f355f6c43840e8d2046823a9b8bbbd06311baf",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 3,
+      "user": "Shay",
+      "userAddress": "0xda01d5d53b58ae5b2e1fe60128d4d4057a0941bd",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 4,
+      "user": "Nilofar",
+      "userAddress": "0xb9634f0393a6a19b0b41f68bfd5b563fe2442954",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 5,
+      "user": "VRC",
+      "userAddress": "0x184b4d514f83523a6e68d4393e4352eb77ea4f15",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 6,
+      "user": "Marco",
+      "userAddress": "0xae4de05025e1720afc8e1b81d16ec2065bd3482a",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 7,
+      "user": "Lfneto",
+      "userAddress": "0xd55bb138a95be5940c5435917c57b7c38740141a",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 8,
+      "user": "Bosemeke",
+      "userAddress": "0x56413dd932649f81a7116dbee21bc5e350183d69",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 9,
+      "user": "Bea",
+      "userAddress": "0xf31860630ff4b7e4e0c18f91bfdc1fcb7793a4d6",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 10,
+      "user": "TAZI",
+      "userAddress": "0x75611993335f5b5d61df6aa7b76d44f401ca6595",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 11,
+      "user": "SmithIyke",
+      "userAddress": "0xc3f2ca5c511e99130854601526eb4c34ccbb6525",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 12,
+      "user": "XANAX99",
+      "userAddress": "0xdb767a5494e5f9f8529d418c190b855fd083cd4f",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 13,
+      "user": "Janice",
+      "userAddress": "0x0b9f628c5252a02d6f2fee0cf2e92a592d35efda",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 14,
+      "user": "Jesus cortes",
+      "userAddress": "0x807e20cd073f74bd4e787c792468c85a90904a12",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 15,
+      "user": "Daniela",
+      "userAddress": "0xbd49ea8f8aef76233aac68221121fb208ac2c842",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 16,
+      "user": "Sofia",
+      "userAddress": "0x334af871f22c995b71bb8bf2e6b217e1cdcb0197",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 17,
+      "user": "Marta Teodoro",
+      "userAddress": "0x1c84dfa4b93c880de3b249037ebb07a62c6a708e",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 18,
+      "user": "martim77",
+      "userAddress": "0x9a378e92c3d00fd8f62b6cb319030afd73ee7edf",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 19,
+      "user": "Mzhd",
+      "userAddress": "0xa374dd36a9b7ba725c19a69809ddb1fa79e0f7c4",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 20,
+      "user": "Joao",
+      "userAddress": "0xd7eb4a58bcd77469996029f1482e1d8fb874f874",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 21,
+      "user": "Monica",
+      "userAddress": "0x08750dae6310128b9e2e50fea8db57edc111fdba",
+      "finds": 23,
+      "tokens": 2300
+    },
+    {
+      "rank": 22,
+      "user": "martino",
+      "userAddress": "0x1792bc3eecf214bc8d314b148b75c5f16a58450d",
+      "finds": 23,
+      "tokens": 2300
+    },
+    {
+      "rank": 23,
+      "user": "Joana Cardoso",
+      "userAddress": "0xb597576871343376aef3177e4bd46c105fbbcb8b",
+      "finds": 23,
+      "tokens": 2300
+    },
+    {
+      "rank": 24,
+      "user": "Tonic",
+      "userAddress": "0x062e8c5b8987a26132798e6296a5ebec5661e5fe",
+      "finds": 23,
+      "tokens": 2300
+    },
+    {
+      "rank": 25,
+      "user": "Dingove",
+      "userAddress": "0x953c0e97a9380067d115c230c1e9f2dc93350602",
+      "finds": 23,
+      "tokens": 2300
+    },
+    {
+      "rank": 26,
+      "user": "Dmontalvao",
+      "userAddress": "0x406be23ebe5bcfda8a07c4d99ba0af4357284f54",
+      "finds": 22,
+      "tokens": 2200
+    },
+    {
+      "rank": 27,
+      "user": "Neda",
+      "userAddress": "0x07462ac2b0ead0baf1082ebe47fe4031fac85947",
+      "finds": 22,
+      "tokens": 2200
+    },
+    {
+      "rank": 28,
+      "user": "Maltezinha",
+      "userAddress": "0x6deee46cb60b5b6bde4a7f68c76e472781cb07e8",
+      "finds": 20,
+      "tokens": 2000
+    },
+    {
+      "rank": 29,
+      "user": "LostInTagus",
+      "userAddress": "0x979a9b43cebc178052b5f0863c1e0c18f80d45fa",
+      "finds": 19,
+      "tokens": 1900
+    },
+    {
+      "rank": 30,
+      "user": "Antonio Moraes",
+      "userAddress": "0x06ee2e7336bd08f23df7bd012802fb7f3a855afa",
+      "finds": 17,
+      "tokens": 1700
+    },
+    {
+      "rank": 31,
+      "user": "Carolina simao",
+      "userAddress": "0x5de87b6cdbce37d6e571a695de9f42c5fb3666a3",
+      "finds": 9,
+      "tokens": 900
+    },
+    {
+      "rank": 32,
+      "user": "PSM",
+      "userAddress": "0xd30bf98bdc090469cdc4b5b91e97722590818bb4",
+      "finds": 9,
+      "tokens": 900
+    },
+    {
+      "rank": 33,
+      "user": "Syeda",
+      "userAddress": "0x7e47f1f4dace26207429c404dde99a5c698103b2",
+      "finds": 6,
+      "tokens": 600
+    },
+    {
+      "rank": 34,
+      "user": "Miguel Marto",
+      "userAddress": "0x382612e86edd29ab739ac5a7f9469e8f6af251ee",
+      "finds": 6,
+      "tokens": 600
+    },
+    {
+      "rank": 35,
+      "user": "Bibs",
+      "userAddress": "0xf5ff2f72f90ad00f5f365ffc8651bb5c4e055576",
+      "finds": 5,
+      "tokens": 500
+    },
+    {
+      "rank": 36,
+      "user": "Avataris12",
+      "userAddress": "0x90af37c474af52f07eb8889efe40ef8bbb50e27c",
+      "finds": 5,
+      "tokens": 500
+    },
+    {
+      "rank": 37,
+      "user": "paco",
+      "userAddress": "0x7e090c225a781f717d4470d009aa856e47bbe45c",
+      "finds": 4,
+      "tokens": 400
+    },
+    {
+      "rank": 38,
+      "user": "MarianaCastro",
+      "userAddress": "0xbe64e5e2e2f03df19789d42b77810fde2231d0fc",
+      "finds": 4,
+      "tokens": 400
+    },
+    {
+      "rank": 39,
+      "user": "Msc",
+      "userAddress": "0x9c438a381dca53473f46c4e406825746bd34e99a",
+      "finds": 4,
+      "tokens": 400
+    },
+    {
+      "rank": 40,
+      "user": "brunoamaral",
+      "userAddress": "0xed984d642258d6e2e27459659841247d94929f57",
+      "finds": 3,
+      "tokens": 300
+    },
+    {
+      "rank": 41,
+      "user": "Joana",
+      "userAddress": "0x691c3ee54cf7b730d49019225dd786631f2f94d9",
+      "finds": 3,
+      "tokens": 300
+    },
+    {
+      "rank": 42,
+      "user": "Jdc",
+      "userAddress": "0xe59ac63d0f347189a730b42b3631921ccb6d3946",
+      "finds": 3,
+      "tokens": 300
+    },
+    {
+      "rank": 43,
+      "user": "Rute",
+      "userAddress": "0x4cd32ba6eed4e1b71849b06a716af2b61703e789",
+      "finds": 2,
+      "tokens": 200
+    },
+    {
+      "rank": 44,
+      "user": "LukaMorais",
+      "userAddress": "0xf447ff199a5a91e37b836f163acb627ee87d1c48",
+      "finds": 2,
+      "tokens": 200
+    },
+    {
+      "rank": 45,
+      "user": "sguerreiro74",
+      "userAddress": "0xf89f3fd3849ed92a9a3bfbfae5197e4c46c5d2e3",
+      "finds": 2,
+      "tokens": 200
+    },
+    {
+      "rank": 46,
+      "user": "Chefmike",
+      "userAddress": "0x511fefb83e08ad15b18680ec2454be175f87e6f1",
+      "finds": 2,
+      "tokens": 200
+    },
+    {
+      "rank": 47,
+      "user": "Claudia Sousa",
+      "userAddress": "0x94a05dd0b3ee2089ae07beeca44cc7aa1bc43351",
+      "finds": 2,
+      "tokens": 200
+    },
+    {
+      "rank": 48,
+      "user": "Miguel Marques",
+      "userAddress": "0x67ba98c7cc791b5ba081ef389895a3fd67468fa0",
+      "finds": 1,
+      "tokens": 100
+    },
+    {
+      "rank": 49,
+      "user": "Patricia",
+      "userAddress": "0x921de6aa418ab74dca1a935dc6ef73a41b496ee6",
+      "finds": 1,
+      "tokens": 100
+    },
+    {
+      "rank": 50,
+      "user": "Cricketmaster",
+      "userAddress": "0x0d0fc4f3c9881f81bde9071c516cb009effae359",
+      "finds": 1,
+      "tokens": 100
+    }
+  ],
+  "socials": [],
+  "hotspots": {
+    "points": [
+      {
+        "x": 0.5426,
+        "y": 0.5514,
+        "w": 41
+      },
+      {
+        "x": 0.6303,
+        "y": 0.3951,
+        "w": 37
+      },
+      {
+        "x": 0.6596,
+        "y": 0.3118,
+        "w": 36
+      },
+      {
+        "x": 0.75,
+        "y": 0.21600000000000003,
+        "w": 34
+      },
+      {
+        "x": 0.6596,
+        "y": 0.1478,
+        "w": 34
+      },
+      {
+        "x": 0.7518,
+        "y": 0.2003,
+        "w": 33
+      },
+      {
+        "x": 0.5745,
+        "y": 0.2034,
+        "w": 33
+      },
+      {
+        "x": 0.6626000000000001,
+        "y": 0.7715000000000001,
+        "w": 33
+      },
+      {
+        "x": 0.43829999999999997,
+        "y": 0.4188,
+        "w": 32
+      },
+      {
+        "x": 0.5704,
+        "y": 0.48,
+        "w": 32
+      },
+      {
+        "x": 0.3553,
+        "y": 0.5555,
+        "w": 32
+      },
+      {
+        "x": 0.8009999999999999,
+        "y": 0.7773,
+        "w": 32
+      },
+      {
+        "x": 0.9116,
+        "y": 0.35200000000000004,
+        "w": 31
+      },
+      {
+        "x": 0.9545999999999999,
+        "y": 0.8327,
+        "w": 31
+      },
+      {
+        "x": 0.3061,
+        "y": 0.7161,
+        "w": 31
+      },
+      {
+        "x": 0.8009999999999999,
+        "y": 0.19829999999999998,
+        "w": 30
+      },
+      {
+        "x": 0.34600000000000003,
+        "y": 0.8064,
+        "w": 30
+      },
+      {
+        "x": 0.9915,
+        "y": 0.8039000000000001,
+        "w": 29
+      },
+      {
+        "x": 0.177,
+        "y": 0.8764,
+        "w": 29
+      },
+      {
+        "x": 0.34909999999999997,
+        "y": 0.6459,
+        "w": 28
+      },
+      {
+        "x": 0.5027,
+        "y": 0.5766,
+        "w": 28
+      },
+      {
+        "x": 0.3829,
+        "y": 0.8966,
+        "w": 28
+      },
+      {
+        "x": 0.9976999999999999,
+        "y": 0.7685,
+        "w": 28
+      },
+      {
+        "x": 0.30920000000000003,
+        "y": 0.6867,
+        "w": 28
+      },
+      {
+        "x": 0.97,
+        "y": 0.7831,
+        "w": 26
+      }
+    ]
+  },
+  "hourGrid": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.121,
+      0.832,
+      1.0,
+      0.757,
+      0.879,
+      0.451,
+      0.48,
+      0.116,
+      0.064,
+      0.012,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.006,
+      0.0
+    ]
+  ],
+  "hourGridAbs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      21,
+      144,
+      173,
+      131,
+      152,
+      78,
+      83,
+      20,
+      11,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "eventDays": [
+    "2026-06-25"
+  ],
+  "reportsFiled": 0,
+  "chain": {
+    "network": "Nova Cidade Testnet",
+    "contract": "0x569E33DB9AfEC9C5157855914134037Bf3692A84",
+    "tokenAddress": "0x569E33DB9AfEC9C5157855914134037Bf3692A84",
+    "explorer": "https://testnet.explorer.novaims.unl.pt",
+    "snapshotISO": "2026-06-26T12:05:20Z",
+    "blockHeight": 66048,
+    "entryPoint": "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+    "bundler": "https://testnet.novaims.unl.pt/bundler/"
+  }
+}

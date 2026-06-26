@@ -30,6 +30,7 @@ interface DemoDict {
   smartCitiesCard: EventCardDict
   cadavalCard: EventCardDict
   springBootcampCard: EventCardDict
+  dataSummitCard: EventCardDict
 }
 
 function parseStatValue(value: string) {
@@ -69,6 +70,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
     { card: dict.futureMakerCard, href: reportHref("futuremaker-report") },
     { card: dict.cadavalCard, href: reportHref("cadaval-report") },
     { card: dict.springBootcampCard, href: reportHref("springbootcamp-report") },
+    { card: dict.dataSummitCard, href: reportHref("datasummit-report") },
   ]
 
   return (

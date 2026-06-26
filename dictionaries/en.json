@@ -78,6 +78,12 @@
       "location": "NOVA IMS, Lisbon \u00b7 Apr 7",
       "stat1": "7 teams \u00b7 220 treasures",
       "stat2": "45,650 SB \u00b7 42 checkpoints"
+    },
+    "dataSummitCard": {
+      "title": "Data with Purpose Summit 2026",
+      "location": "Taguspark, Oeiras \u00b7 Jun 25",
+      "stat1": "786 treasures \u00b7 25 checkpoints",
+      "stat2": "25,900 DATA \u00b7 1 day"
     }
   },
   "socialProof": {
@@ -250,6 +256,7 @@
     "smartCitiesReport": "Smart Cities Summit 2026 Report",
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
+    "dataSummitReport": "Data with Purpose Summit 2026 Report",
     "copyright": "Nova Blockchain Lab. All rights reserved."
   },
   "faq": {
