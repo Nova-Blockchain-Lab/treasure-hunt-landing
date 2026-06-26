@@ -287,7 +287,7 @@ const dataSummitEvent = {
   '@type': 'Event',
   name: 'Treasure Hunt at Data with Purpose Summit 2026',
   description:
-    'Interactive NFC scavenger hunt at the Data with Purpose Summit, organised by NOVA IMS, with 58 players, 786 tag finds, and 25 tags across the Centro de Congressos do Taguspark.',
+    'Interactive NFC scavenger hunt at the Data with Purpose Summit, organised by NOVA IMS, with 58 players, 777 tag finds, and 25 tags across the Centro de Congressos do Taguspark.',
   startDate: '2026-06-25',
   endDate: '2026-06-25',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
