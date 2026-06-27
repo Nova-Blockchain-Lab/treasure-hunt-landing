@@ -54,6 +54,27 @@ export function SiteFooter({
     { href: `${prefix}/datasummit-report`, label: dict.dataSummitReport },
   ]
 
+  // SEO landing pages, locale-appropriate. EN pages are canonical at /<slug>;
+  // PT pages at /pt/<slug>. Site-wide footer links give every page an internal
+  // link (crawl + PageRank). Labels are hardcoded per locale (not dict keys).
+  const solutionsHeading = lang === "pt" ? "Soluções" : "Solutions"
+  const solutionLinks =
+    lang === "pt"
+      ? [
+          { href: "/pt/caca-ao-tesouro-digital-empresas", label: "Caça ao Tesouro Digital" },
+          { href: "/pt/peddy-paper-digital", label: "Peddy Paper Digital" },
+          { href: "/pt/team-building-eventos", label: "Team Building para Eventos" },
+        ]
+      : [
+          { href: "/nfc-treasure-hunt", label: "NFC Treasure Hunt" },
+          { href: "/event-gamification", label: "Event Gamification" },
+          { href: "/qr-scavenger-hunt-events", label: "QR Scavenger Hunt" },
+          { href: "/team-building-scavenger-hunt", label: "Team Building Game" },
+          { href: "/scavenger-hunt-universities", label: "For Universities" },
+          { href: "/trade-show-booth-traffic", label: "For Trade Shows" },
+          { href: "/goosechase-alternative", label: "Goosechase Alternative" },
+        ]
+
   return (
     <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6 py-12">
@@ -126,6 +147,23 @@ export function SiteFooter({
               nova.blockchain.lab@novaims.unl.pt
             </a>
           </div>
+        </div>
+
+        {/* Solutions (SEO landing pages) */}
+        <div className="border-t border-[rgba(240,246,252,0.04)] pt-8">
+          <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{solutionsHeading}</div>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2.5">
+            {solutionLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-[#484F58] transition-colors duration-300 hover:text-[#E6EDF3]"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

@@ -25,6 +25,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-03-06', bilingual: false },
   ]
 
+  // SEO landing pages (data/landing/*). Single-language: EN pages live at /<slug>
+  // (canonical EN), PT pages at /pt/<slug> (canonical PT). Each self-references
+  // its locale + x-default — no cross-language alternate, since there is only
+  // one language version of each.
+  const landingPages: { slug: string; locale: 'en' | 'pt' }[] = [
+    { slug: 'nfc-treasure-hunt', locale: 'en' },
+    { slug: 'event-gamification', locale: 'en' },
+    { slug: 'qr-scavenger-hunt-events', locale: 'en' },
+    { slug: 'goosechase-alternative', locale: 'en' },
+    { slug: 'scavify-alternative', locale: 'en' },
+    { slug: 'scavenger-hunt-universities', locale: 'en' },
+    { slug: 'trade-show-booth-traffic', locale: 'en' },
+    { slug: 'team-building-scavenger-hunt', locale: 'en' },
+    { slug: 'caca-ao-tesouro-digital-empresas', locale: 'pt' },
+    { slug: 'peddy-paper-digital', locale: 'pt' },
+    { slug: 'team-building-eventos', locale: 'pt' },
+  ]
+
   const langs = (path: string, bilingual: boolean) =>
     bilingual
       ? { en: `${BASE}${path}`, pt: `${BASE}/pt${path}`, 'x-default': `${BASE}${path}` }
@@ -38,6 +56,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages: langs(page.path, page.bilingual) },
   }))
 
+  const landingEntries = landingPages.map((p) => {
+    const url = p.locale === 'en' ? `${BASE}/${p.slug}` : `${BASE}/${p.locale}/${p.slug}`
+    return {
+      url,
+      lastModified: '2026-06-27',
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+      alternates: { languages: { [p.locale]: url, 'x-default': url } },
+    }
+  })
+
   // Blog posts are EN-only.
   const blogEntries = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
@@ -47,5 +76,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages: langs(`/blog/${post.slug}`, false) },
   }))
 
-  return [...staticEntries, ...blogEntries]
+  return [...staticEntries, ...landingEntries, ...blogEntries]
 }

@@ -90,6 +90,33 @@ next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 .env.example                # Required env vars (analytics keys, etc.)
 ```
 
+## SEO landing pages (content-driven)
+
+Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and are
+**content-driven** so they stay consistent by construction:
+
+- `lib/landing/types.ts` — the `LandingContent` model (hero, stats, benefits,
+  optional comparison table, optional steps, FAQ, CTA).
+- `data/landing/<slug>.ts` — each page is one `export const content: LandingContent`.
+  This is the ONLY thing that differs per page.
+- `components/landing/landing-page.tsx` — the single renderer (`<LandingPage>`);
+  reuses `SiteFooter` + `ContactModal`. `icon-map.ts` resolves `benefit.icon`
+  names. `landing-jsonld.tsx` emits FAQPage + BreadcrumbList + WebPage schema.
+- `lib/landing/metadata.ts#landingMetadata(content)` builds canonical + hreflang
+  from `content.locale`: EN pages live at `/<slug>` (canonical EN, en+x-default);
+  PT pages at `/pt/<slug>` (canonical PT). Every route file is identical except
+  the `data/landing/<slug>` import.
+- Route folder name MUST equal `content.slug` (else canonical ≠ actual URL).
+- Pages are registered in `app/sitemap.ts` (`landingPages[]`, per-locale) and
+  linked site-wide from the footer "Solutions" / "Soluções" section
+  (`components/site-footer.tsx`, locale-aware).
+- Current set: EN — nfc-treasure-hunt, event-gamification, qr-scavenger-hunt-events,
+  goosechase-alternative, scavify-alternative, scavenger-hunt-universities,
+  trade-show-booth-traffic, team-building-scavenger-hunt; PT —
+  caca-ao-tesouro-digital-empresas, peddy-paper-digital, team-building-eventos.
+- Copy is grounded in real product facts only (no invented stats). Authored +
+  critiqued via a multi-agent loop; keep that bar when adding pages.
+
 ## Key conventions
 
 - **Metadata is generated per-locale** in `app/[lang]/layout.tsx`. Each page-level `Metadata` adds its own `alternates` (canonical + en/pt/x-default hreflang) and OG/Twitter card images. Report pages use `generateMetadata` for locale-aware copy.
