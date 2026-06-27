@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server"
 
 // Lead delivery via Resend's HTTP API (no SDK dependency — plain fetch).
-// Requires the operator to set RESEND_API_KEY and verify the treasurehunt.pt
-// sending domain in Resend. If the key is absent we return an explicit error
-// instead of a fake success, so leads are never silently dropped.
+// Requires RESEND_API_KEY. The `from` address must be on a domain verified in
+// that Resend account; it defaults to urbancheckin.pt (a verified domain we
+// reuse) and is overridable via CONTACT_FROM — switch it to a treasurehunt.pt
+// address once that domain is verified in the same account. If the key is
+// absent we return an explicit error, never a fake success.
 const CONTACT_TO = process.env.CONTACT_EMAIL || "nova.blockchain.lab@novaims.unl.pt"
+const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <noreply@urbancheckin.pt>"
 
 export async function POST(request: Request) {
   try {
@@ -31,7 +34,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Treasure Hunt <noreply@treasurehunt.pt>",
+        from: CONTACT_FROM,
         to: [CONTACT_TO],
         reply_to: email,
         subject: `New event inquiry from ${name}`,
