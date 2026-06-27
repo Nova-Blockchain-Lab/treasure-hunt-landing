@@ -1,25 +1,13 @@
 import createIntlMiddleware from 'next-intl/middleware'
-import { NextRequest } from 'next/server'
 import { routing } from './i18n/routing'
-import { AB_TEST_COOKIE, assignVariant } from './lib/ab-test'
 
-const intlMiddleware = createIntlMiddleware(routing)
-
-export default function proxy(request: NextRequest) {
-  const response = intlMiddleware(request)
-
-  // Assign A/B variant cookie if not present
-  if (!request.cookies.get(AB_TEST_COOKIE)) {
-    const variant = assignVariant()
-    response.cookies.set(AB_TEST_COOKIE, variant, {
-      maxAge: 90 * 24 * 60 * 60, // 90 days
-      path: '/',
-      sameSite: 'lax',
-    })
-  }
-
-  return response
-}
+// Pure next-intl locale routing. The A/B variant cookie is intentionally NOT
+// set here: setting any cookie on the response adds a Set-Cookie header and
+// forces Vercel to serve the HTML as `private, no-store`, killing CDN caching
+// and TTFB on the home + locale pages (the most important URLs). The variant is
+// assigned client-side in components/page-client.tsx instead, so these routes
+// stay statically edge-cacheable.
+export default createIntlMiddleware(routing)
 
 export const config = {
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],

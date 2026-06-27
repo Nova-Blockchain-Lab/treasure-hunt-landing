@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback, useMemo } from "react"
 import Image from "next/image"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { useActiveSection } from "@/hooks/use-active-section"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 const NAV_HREFS = ["#what", "#demo", "#media", "#how", "#packages"] as const
 
@@ -123,6 +124,9 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
                 {dict.bookDemo}
               </button>
             </li>
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
 
           <button
@@ -175,6 +179,7 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
         >
           {dict.bookDemo}
         </button>
+        <LanguageSwitcher className="text-base" />
       </div>
     </>
   )

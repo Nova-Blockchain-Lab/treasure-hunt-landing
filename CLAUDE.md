@@ -94,7 +94,7 @@ next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 
 - **Metadata is generated per-locale** in `app/[lang]/layout.tsx`. Each page-level `Metadata` adds its own `alternates` (canonical + en/pt/x-default hreflang) and OG/Twitter card images. Report pages use `generateMetadata` for locale-aware copy.
 - **Home page composition lives in `components/page-client.tsx`.** Both `app/page.tsx` (en root) and `app/[lang]/page.tsx` resolve the dictionary, apply A/B variant overrides, and render `<PageClient dict lang variant>`. Pass `lang` through to `SiteFooter` so its locale prefix is correct.
-- **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. Variant is read server-side from cookies and threaded into `PageClient`.
+- **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. The variant is resolved **client-side** in `PageClient` (reads/sets the cookie via `document.cookie`, applies overrides with `useMemo`). It is deliberately NOT read server-side: `cookies()` would opt the home + locale routes into dynamic rendering and force `private, no-store`. Server + first client render show `control` (the canonical copy); the variant swaps in after hydration.
 - **Analytics:** PostHog (provider in `components/posthog-provider.tsx`) and GA4 (`components/ga4-script.tsx`) are gated behind cookie consent (`lib/consent-context.tsx`, `components/cookie-consent-banner.tsx`). Event tracking via `hooks/use-analytics-tracking.ts`.
 - **Internal links must use `next/link`** (not `<a>` for non-anchor navigation) so the locale prefix logic can stay simple.
 - **PT copy uses proper PT-PT diacritics** (`dictionaries/pt.json` and the PT metadata in `app/[lang]/layout.tsx`). Don't add new PT strings without accents.
@@ -107,8 +107,11 @@ next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 
 - H1 in the hero is **`sr-only`** (the brand is rendered as the `treasure-hunt-logo.png` image). The visible H2s are per section.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap includes hreflang alternates (en/pt/x-default) for every entry; static pages use hardcoded `lastModified` dates with per-page `changeFrequency`, blog posts use their `post.date`.
-- Caveat: the middleware + A/B/consent cookies set on responses make Vercel return `cache-control: private, no-cache, no-store`. This kills CDN caching and hurts TTFB. Fixing requires re-architecting the cookie strategy (e.g. only set on language switch / explicit opt-in).
+- Sitemap (`app/sitemap.ts`) emits hreflang alternates per entry, but only for **bilingual** pages (home + ethdenver-report + futuremaker-report, flagged `bilingual: true`). The other 4 reports + the blog are **EN-only**: they emit `en` + `x-default` only and their `/pt` variants canonical to the EN URL (they have no real PT translation — advertising a `pt` hreflang for English content is a quality-signal problem). Keep `sitemap.ts` `bilingual` flags in sync with each page's `generateMetadata`.
+- **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making `/pt` reachable (it was previously an orphan locale — no internal link pointed into it). `localeDetection` stays off.
+- **Caching is fixed (was a P0 SEO drag):** the home + locale routes are static/SSG again (verify with `next build` → `/` shows `○`). The old `private, no-store` came from the server-side A/B cookie read + the middleware cookie-set; both are gone (A/B is client-side now, `proxy.ts` only does locale routing). Do not reintroduce `cookies()` into the home/locale page render path.
+- **First-party `Review` JSON-LD was removed** from `components/json-ld.tsx` (self-serving reviews are against Google's review-snippet guidelines). Testimonials remain as on-page content only. Don't re-add Review/AggregateRating without independent, attributable reviews.
+- **Contact form** (`app/api/contact/route.ts`) sends via Resend's HTTP API. Requires the operator to set `RESEND_API_KEY` (and verify the `treasurehunt.pt` sending domain in Resend); optionally `CONTACT_EMAIL`. Without the key it returns an explicit 503 (no silent lead drop).
 
 ## Deployment
 

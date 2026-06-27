@@ -18,10 +18,10 @@ export async function generateMetadata({
     title: TITLE,
     description: DESCRIPTION,
     alternates: {
-      canonical: url,
+      // EN-only content: canonicalize the /pt variant to EN; no pt alternate.
+      canonical: `${base}/smartcities-report`,
       languages: {
         en: `${base}/smartcities-report`,
-        pt: `${base}/pt/smartcities-report`,
         "x-default": `${base}/smartcities-report`,
       },
     },

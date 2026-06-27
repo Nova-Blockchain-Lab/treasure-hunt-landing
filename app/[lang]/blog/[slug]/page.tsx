@@ -26,7 +26,6 @@ export async function generateMetadata({
       canonical: `https://www.treasurehunt.pt/blog/${slug}`,
       languages: {
         en: `https://www.treasurehunt.pt/blog/${slug}`,
-        pt: `https://www.treasurehunt.pt/pt/blog/${slug}`,
         'x-default': `https://www.treasurehunt.pt/blog/${slug}`,
       },
     },

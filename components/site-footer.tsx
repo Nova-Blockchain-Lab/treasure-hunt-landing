@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 interface FooterDict {
   description: string
@@ -130,10 +131,11 @@ export function SiteFooter({
 
       {/* Copyright */}
       <div className="border-t border-[rgba(240,246,252,0.04)] py-8">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-6 flex justify-center">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-6 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
           <span className="text-[0.75rem] text-[#484F58]">
             {"\u00A9"} {new Date().getFullYear()} {dict.copyright}
           </span>
+          <LanguageSwitcher />
         </div>
       </div>
     </footer>

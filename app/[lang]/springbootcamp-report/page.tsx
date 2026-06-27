@@ -17,10 +17,10 @@ export async function generateMetadata({
     description:
       '7 teams, 20 hunters, 45,650 SB minted, 220 treasures found. Full analytics from the Spring Bootcamp Teams Treasure Hunt at NOVA IMS, April 7, 2026.',
     alternates: {
-      canonical: url,
+      // EN-only content: canonicalize the /pt variant to EN; no pt alternate.
+      canonical: `${base}/springbootcamp-report`,
       languages: {
         en: `${base}/springbootcamp-report`,
-        pt: `${base}/pt/springbootcamp-report`,
         'x-default': `${base}/springbootcamp-report`,
       },
     },

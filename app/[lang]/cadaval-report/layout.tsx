@@ -18,10 +18,10 @@ export async function generateMetadata({
     title: TITLE,
     description: DESCRIPTION,
     alternates: {
-      canonical: url,
+      // EN-only content: canonicalize the /pt variant to EN; no pt alternate.
+      canonical: `${base}/cadaval-report`,
       languages: {
         en: `${base}/cadaval-report`,
-        pt: `${base}/pt/cadaval-report`,
         "x-default": `${base}/cadaval-report`,
       },
     },

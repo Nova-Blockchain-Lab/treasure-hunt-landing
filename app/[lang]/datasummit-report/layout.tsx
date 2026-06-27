@@ -18,10 +18,11 @@ export async function generateMetadata({
     title: TITLE,
     description: DESCRIPTION,
     alternates: {
-      canonical: url,
+      // EN-only content: canonicalize the /pt variant to EN and don't advertise
+      // a pt alternate (it would serve English under a PT hreflang).
+      canonical: `${base}/datasummit-report`,
       languages: {
         en: `${base}/datasummit-report`,
-        pt: `${base}/pt/datasummit-report`,
         "x-default": `${base}/datasummit-report`,
       },
     },

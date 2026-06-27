@@ -319,58 +319,15 @@ const dataSummitEvent = {
   },
 }
 
-const reviews = [
-  {
-    '@type': 'Review',
-    reviewBody:
-      'Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done!',
-    author: {
-      '@type': 'Person',
-      name: 'Nick',
-      jobTitle: 'Head of the Makerspace, ETHDenver',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    itemReviewed: softwareApplication,
-  },
-  {
-    '@type': 'Review',
-    reviewBody:
-      'My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They\'d scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.',
-    author: {
-      '@type': 'Person',
-      name: 'Custom Sneaker Vendor',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    itemReviewed: softwareApplication,
-  },
-  {
-    '@type': 'Review',
-    reviewBody:
-      'No app download, no complicated setup. Players were scanning checkpoints within 30 seconds of signing in. The merch store was a huge hit.',
-    author: {
-      '@type': 'Organization',
-      name: 'NOVA Blockchain Lab',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    itemReviewed: softwareApplication,
-  },
-]
-
+// NOTE: First-party Review nodes were intentionally removed. Google's
+// review-snippet guidelines disallow self-serving reviews the site writes about
+// its own product (no star snippets, possible spam signal). The testimonials
+// still render as on-page content via components/testimonials-section.tsx — they
+// just aren't emitted as structured data. Do NOT re-add Review/AggregateRating
+// here without genuinely independent, attributable reviews.
 const jsonLdData = {
   '@context': 'https://schema.org',
-  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, smartCitiesEvent, cadavalEvent, springBootcampEvent, dataSummitEvent, ...reviews],
+  '@graph': [organization, softwareApplication, webPage, breadcrumbList, event, futureMakerEvent, smartCitiesEvent, cadavalEvent, springBootcampEvent, dataSummitEvent],
 }
 
 export function JsonLd() {

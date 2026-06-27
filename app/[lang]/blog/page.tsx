@@ -9,7 +9,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.treasurehunt.pt/blog',
     languages: {
       en: 'https://www.treasurehunt.pt/blog',
-      pt: 'https://www.treasurehunt.pt/pt/blog',
       'x-default': 'https://www.treasurehunt.pt/blog',
     },
   },

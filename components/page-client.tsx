@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback, useEffect, useMemo } from "react"
 import { usePostHog } from "posthog-js/react"
 import { trackEvent } from "@/lib/analytics"
 import { useAnalyticsTracking } from "@/hooks/use-analytics-tracking"
@@ -19,8 +19,8 @@ import { CTASection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
 import { StickyCTABar } from "@/components/sticky-cta-bar"
 import { ContactModal } from "@/components/contact-modal"
-import type { Variant } from "@/lib/ab-test"
-import { AB_TEST_NAME } from "@/lib/ab-test"
+import { AB_TEST_NAME, AB_TEST_COOKIE, assignVariant, applyVariantOverrides, type Variant } from "@/lib/ab-test"
+import type { Locale } from "@/i18n/config"
 
 function SectionDivider() {
   return (
@@ -50,24 +50,46 @@ function scrollToDemo() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function PageClient({ dict, lang, variant = "control" }: { dict: any; lang: string; variant?: Variant }) {
+export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }) {
   const [contactOpen, setContactOpen] = useState(false)
   const [contactTrigger, setContactTrigger] = useState("unknown")
   const posthog = usePostHog()
 
+  // A/B variant is resolved CLIENT-SIDE so the server render stays static and
+  // edge-cacheable (no cookies() on the server). Server + first client render
+  // both show "control" (the canonical copy crawlers index); the variant copy
+  // swaps in after hydration. See proxy.ts / app/page.tsx for the caching rationale.
+  const [variant, setVariant] = useState<Variant>("control")
+  const [resolved, setResolved] = useState(false)
+
+  useEffect(() => {
+    const match = document.cookie.match(new RegExp("(?:^|; )" + AB_TEST_COOKIE + "=([^;]+)"))
+    let v = match?.[1] as Variant | undefined
+    if (v !== "control" && v !== "variant") {
+      v = assignVariant()
+      document.cookie = `${AB_TEST_COOKIE}=${v}; max-age=${90 * 24 * 60 * 60}; path=/; samesite=lax`
+    }
+    setVariant(v)
+    setResolved(true)
+  }, [])
+
+  const dict = useMemo(
+    () => applyVariantOverrides(baseDict, variant, lang as Locale),
+    [baseDict, variant, lang],
+  )
   const isVariant = variant === "variant"
 
   useAnalyticsTracking()
 
-  // Register experiment on mount
+  // Register experiment once the variant is resolved client-side
   useEffect(() => {
-    if (posthog) {
+    if (posthog && resolved) {
       posthog.capture("$experiment_started", {
         experiment: AB_TEST_NAME,
         variant,
       })
     }
-  }, [posthog, variant])
+  }, [posthog, resolved, variant])
 
   const closeContact = useCallback(() => setContactOpen(false), [])
 
