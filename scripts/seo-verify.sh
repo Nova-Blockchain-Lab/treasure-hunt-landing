@@ -24,11 +24,31 @@ BASE_IMPR=99
 END=$(date -v-3d +%Y-%m-%d 2>/dev/null || date -d '3 days ago' +%Y-%m-%d)
 START=$(date -v-31d +%Y-%m-%d 2>/dev/null || date -d '31 days ago' +%Y-%m-%d)
 
-TOKEN=$(gcloud auth application-default print-access-token 2>/dev/null) || {
-  echo "ERROR: could not get a GSC access token (gcloud ADC). Re-auth with:"
-  echo "  gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters,https://www.googleapis.com/auth/cloud-platform"
-  exit 1
+# Token resolution. Locally this uses gcloud ADC. In a headless/cloud context
+# (e.g. the Claude Code routine) there is no gcloud, so it falls back to OAuth
+# refresh-token creds supplied as ENVIRONMENT secrets — set these in the routine
+# environment, never in the prompt or the repo:
+#   GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_OAUTH_REFRESH_TOKEN
+# (the same values live in ~/.config/gcloud/application_default_credentials.json).
+get_token() {
+  if [ -n "${GOOGLE_OAUTH_CLIENT_ID:-}" ] && [ -n "${GOOGLE_OAUTH_CLIENT_SECRET:-}" ] && [ -n "${GOOGLE_OAUTH_REFRESH_TOKEN:-}" ]; then
+    curl -s -X POST https://oauth2.googleapis.com/token \
+      -d "client_id=${GOOGLE_OAUTH_CLIENT_ID}" \
+      -d "client_secret=${GOOGLE_OAUTH_CLIENT_SECRET}" \
+      -d "refresh_token=${GOOGLE_OAUTH_REFRESH_TOKEN}" \
+      -d "grant_type=refresh_token" \
+      | python3 -c "import json,sys; print(json.load(sys.stdin).get('access_token',''))" 2>/dev/null
+  else
+    gcloud auth application-default print-access-token 2>/dev/null
+  fi
 }
+TOKEN=$(get_token)
+if [ -z "$TOKEN" ]; then
+  echo "ERROR: could not get a GSC access token."
+  echo "  Local:  gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters,https://www.googleapis.com/auth/cloud-platform"
+  echo "  Cloud:  set GOOGLE_OAUTH_CLIENT_ID / _CLIENT_SECRET / _REFRESH_TOKEN as environment secrets"
+  exit 1
+fi
 
 q() {  # $1 = JSON body
   curl -s -H "Authorization: Bearer $TOKEN" -H "x-goog-user-project: ${QUOTA_PROJECT}" \
