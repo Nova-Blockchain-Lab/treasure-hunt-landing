@@ -6,7 +6,14 @@ import { NextResponse } from "next/server"
 // reuse) and is overridable via CONTACT_FROM — switch it to a treasurehunt.pt
 // address once that domain is verified in the same account. If the key is
 // absent we return an explicit error, never a fake success.
-const CONTACT_TO = process.env.CONTACT_EMAIL || "nova.blockchain.lab@novaims.unl.pt"
+// CONTACT_TO is where leads are delivered. Defaults to a personal Gmail that
+// reliably accepts Resend mail — NOVA's Microsoft 365 was quarantining external
+// sends from the reused sending domain. Override via CONTACT_EMAIL once a
+// properly authenticated treasurehunt.pt sender (or an IT allowlist) is in place.
+// PUBLIC_CONTACT is the address shown to users in error text — keep the private
+// lead inbox out of public-facing messages.
+const CONTACT_TO = process.env.CONTACT_EMAIL || "dinis.palha@gmail.com"
+const PUBLIC_CONTACT = process.env.PUBLIC_CONTACT || "nova.blockchain.lab@novaims.unl.pt"
 const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <noreply@urbancheckin.pt>"
 
 export async function POST(request: Request) {
@@ -22,7 +29,7 @@ export async function POST(request: Request) {
     if (!apiKey) {
       console.error("Contact form: RESEND_API_KEY not set — lead NOT delivered:", { name, email, eventSize })
       return NextResponse.json(
-        { error: "The contact form is not configured yet. Please email us directly at " + CONTACT_TO },
+        { error: "The contact form is not configured yet. Please email us directly at " + PUBLIC_CONTACT },
         { status: 503 },
       )
     }
@@ -45,7 +52,7 @@ export async function POST(request: Request) {
     if (!res.ok) {
       const detail = await res.text()
       console.error("Contact form: Resend send failed", res.status, detail)
-      return NextResponse.json({ error: "Failed to send. Please email us directly at " + CONTACT_TO }, { status: 502 })
+      return NextResponse.json({ error: "Failed to send. Please email us directly at " + PUBLIC_CONTACT }, { status: 502 })
     }
 
     return NextResponse.json({ success: true })
