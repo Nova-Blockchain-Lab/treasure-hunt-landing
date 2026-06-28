@@ -43,7 +43,7 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
   // instead of orphaning a short wide sliver at the bottom.
   const photos = [
     { src: "/media/flyer-claim.jpg", alt: dict.photo1Alt, w: 900, h: 1600 },
-    { src: "/media/nfc-tiles.jpg", alt: dict.photo4Alt, w: 900, h: 1600 },
+    { src: "/media/datasummit-tap.jpg", alt: dict.photo4Alt, w: 1080, h: 1040 },
     { src: "/media/booth-demo.jpg", alt: dict.photo2Alt, w: 3464, h: 4618 },
     { src: "/media/merch-hats.jpg", alt: dict.photo5Alt, w: 900, h: 1600 },
     { src: "/media/merch-hoodie.jpg", alt: dict.photo6Alt, w: 1350, h: 1600 },
@@ -63,7 +63,7 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
     { kind: "photo", item: photos[0] }, // flyer (tall)
     { kind: "photo", item: photos[2] }, // booth (short)
     { kind: "clip", item: clips[0] },   // winner (tall)
-    { kind: "photo", item: photos[1] }, // nfc (tall)
+    { kind: "photo", item: photos[1] }, // datasummit tap (square)
     { kind: "photo", item: photos[4] }, // hoodie (short)
     { kind: "clip", item: clips[1] },   // gameplay (tall)
     { kind: "photo", item: photos[3] }, // hats (tall)

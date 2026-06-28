@@ -22,8 +22,8 @@ const logos: {
   { href: "https://www.cm-cadaval.pt/2303/cadavalapresentaediopicadofestivaldajuventude2026", src: "/cadaval-festival-logo.png", alt: "Festival da Juventude · Cadaval", w: 500, h: 500, unoptimized: true },
   { href: "https://www.datawithpurpose.pt/", src: "/datasummit-logo.svg", alt: "Data with Purpose Summit 2026 · NOVA IMS", w: 180, h: 64, chip: true, svg: true },
   { href: "https://blockchainconfluence.pt/", src: "/blockchain-confluence-logo.png", alt: "Blockchain Confluence", w: 320, h: 96 },
-  { href: "/springbootcamp-report", src: "/spring-bootcamp-logo.png", alt: "Spring Bootcamp · NOVA IMS", w: 246, h: 68, chip: true, internal: true },
-  { href: "https://culturalweek.treasurehunt.pt", src: "/cultural-week-logo.png", alt: "Cultural Week · NOVA IMS", w: 227, h: 113 },
+  { href: "https://novaims.unl.pt/pt/here-now/eventos/spring-bootcamp/", src: "/spring-bootcamp-logo.png", alt: "Spring Bootcamp · NOVA IMS", w: 246, h: 68, chip: true },
+  { href: "https://novaims.unl.pt/en/here-now/events/cultural-week/", src: "/cultural-week-logo.png", alt: "Cultural Week · NOVA IMS", w: 227, h: 113 },
 ]
 
 export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {

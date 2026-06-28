@@ -61,7 +61,7 @@ components/                 # Section components, composed by components/page-cl
 ├── marquee-strip.tsx
 ├── demo-section.tsx        # Phone screenshots + 6 per-event stat cards (ETHDenver featured + 5 auto-fit grid), each linking to its report
 ├── media-section.tsx       # Interview video + pull-quote + CSS-columns masonry gallery (6 event photos + 2 vertical clips, natural aspect; one landscape shot gets a `box` aspect to cap a column); assets in public/media/; id="media"
-├── social-proof-strip.tsx  # "DEPLOYED AT" event logos — data-driven uniform 4-col grid (was a ragged flex-wrap). Mixed polarity: light/transparent marks render bare; dark-on-white wordmarks (Future Maker, Data w/ Purpose, Spring Bootcamp) get a white `chip`. Cadaval bg was flood-filled to transparent + served `unoptimized` (see AVIF gotcha below). Cultural Week bg stripped to transparent (all-blue, reads on dark).
+├── social-proof-strip.tsx  # "DEPLOYED AT" event logos — data-driven uniform 4-col grid (was a ragged flex-wrap). Mixed polarity: light/transparent marks render bare; dark-on-white wordmarks (Future Maker, Data w/ Purpose, Spring Bootcamp) get a white `chip`. Cadaval bg was flood-filled to transparent + served `unoptimized` (see AVIF gotcha below). Cultural Week bg stripped to transparent (all-blue, reads on dark). Every logo links to the external event/conference site (Spring Bootcamp + Cultural Week point to their NOVA IMS event pages, not our own report/game).
 ├── features-section.tsx
 ├── how-it-works-section.tsx
 ├── use-cases-section.tsx
@@ -84,7 +84,7 @@ docs/                       # cro-roadmap.md and other working docs
 i18n/                       # next-intl routing + locale config
 hooks/                      # use-scroll-position, use-active-section, use-analytics-tracking
 lib/                        # shared utilities — ab-test.ts, analytics.ts, consent-context.tsx; cadaval-report.ts + smartcities-report.ts (snapshot types + readSnapshot for the two ported reports)
-public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters; flyer-claim/nfc-tiles/merch-hats/merch-hoodie added from ../insta/assets, processed to ≤1600px)
+public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters; flyer-claim/merch-hats/merch-hoodie from ../insta/assets + datasummit-tap (cropped from the insta media repo story), all ≤1600px)
 proxy.ts                    # next-intl proxy (renamed from middleware.ts per Next 16 convention) + A/B variant cookie
 next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 .env.example                # Required env vars (analytics keys, etc.)

@@ -33,7 +33,7 @@
     "eyebrow": "01 / Demo",
     "heading": "See What",
     "headingHighlight": "Participants",
-    "headingSuffix": "Experienced Across 6 Events",
+    "headingSuffix": "Experienced Across 8 Events",
     "seeItLive": "See It Live \u2192",
     "seeReport": "See Report \u2192",
     "seeFmReport": "See Report \u2192",
@@ -47,7 +47,7 @@
       { "value": "10,000+", "label": "Treasure Finds" },
       { "value": "500+", "label": "Venue Checkpoints" },
       { "value": "1.7M+", "label": "Rewards Minted" },
-      { "value": "6", "label": "Events Deployed" }
+      { "value": "8", "label": "Events Deployed" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -103,7 +103,7 @@
     "photo1Alt": "Attendee holding the Official Treasure Hunt flyer with a tap-to-claim QR code",
     "photo2Alt": "Treasure Hunt staffer demoing the game to a crowd at the NOVA Cidade booth",
     "photo3Alt": "Event team celebrating together under the venue lights",
-    "photo4Alt": "Custom NFC checkpoint tiles freshly 3D-printed for the hunt",
+    "photo4Alt": "Attendee tapping their phone on a Treasure Hunt poster at the Data with Purpose Summit",
     "photo5Alt": "NOVA Blockchain Lab bucket hats handed out as event rewards",
     "photo6Alt": "Limited-edition Treasure Hunt hoodie with the maze mascot",
     "clip1Alt": "Player reacting after winning",

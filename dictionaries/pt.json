@@ -33,7 +33,7 @@
     "eyebrow": "01 / Demo",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
-    "headingSuffix": "Experienciaram em 6 Eventos",
+    "headingSuffix": "Experienciaram em 8 Eventos",
     "seeItLive": "Ver ao Vivo →",
     "seeReport": "Ver Relatório →",
     "seeFmReport": "Ver Relatório →",
@@ -47,7 +47,7 @@
       { "value": "10.000+", "label": "Tesouros Encontrados" },
       { "value": "500+", "label": "Checkpoints" },
       { "value": "1.7M+", "label": "Recompensas" },
-      { "value": "6", "label": "Eventos" }
+      { "value": "8", "label": "Eventos" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -103,7 +103,7 @@
     "photo1Alt": "Participante com o flyer oficial do Treasure Hunt e código QR para reclamar a recompensa",
     "photo2Alt": "Membro da equipa Treasure Hunt a demonstrar o jogo a uma plateia no stand da NOVA Cidade",
     "photo3Alt": "Equipa do evento a celebrar sob as luzes do recinto",
-    "photo4Alt": "Tiles NFC personalizados para os checkpoints, acabados de imprimir em 3D",
+    "photo4Alt": "Participante a tocar com o telemóvel num poster do Treasure Hunt no Data with Purpose Summit",
     "photo5Alt": "Chapéus NOVA Blockchain Lab distribuídos como recompensas do evento",
     "photo6Alt": "Hoodie de edição limitada do Treasure Hunt com a mascote do labirinto",
     "clip1Alt": "Jogador a reagir depois de ganhar",
