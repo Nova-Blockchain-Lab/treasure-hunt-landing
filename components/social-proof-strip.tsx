@@ -68,6 +68,37 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
               className="h-14 sm:h-20 md:h-24 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
             />
           </a>
+          {/* NOVA IMS campus events. Dark-on-white wordmarks, so they sit on a white chip like the DwP mark. Spring Bootcamp links to its on-site recap; Cultural Week to its live game site. */}
+          <a
+            href="/springbootcamp-report"
+            className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+          >
+            <span className="inline-flex items-center bg-white rounded-md px-3 py-2.5">
+              <Image
+                src="/spring-bootcamp-logo.png"
+                alt="Spring Bootcamp · NOVA IMS"
+                width={246}
+                height={68}
+                className="h-11 sm:h-14 md:h-[64px] w-auto"
+              />
+            </span>
+          </a>
+          <a
+            href="https://culturalweek.treasurehunt.pt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-400"
+          >
+            <span className="inline-flex items-center bg-white rounded-md px-3 py-2.5">
+              <Image
+                src="/cultural-week-logo.png"
+                alt="Cultural Week · NOVA IMS"
+                width={227}
+                height={113}
+                className="h-11 sm:h-14 md:h-[64px] w-auto"
+              />
+            </span>
+          </a>
         </div>
       </div>
     </div>
