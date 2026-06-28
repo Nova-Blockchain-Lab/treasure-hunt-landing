@@ -75,15 +75,15 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
 
   return (
     <section
-      className="py-24 md:py-32 relative bg-[#0A0E14]"
+      className="py-16 md:py-32 relative bg-[#0A0E14]"
       id="demo"
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-16">
             <div className="font-mono text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
-              <TextShimmer duration={3} spread={1.5} className="font-mono text-xs tracking-[0.2em] uppercase [--base-color:#58A6FF] [--base-gradient-color:#E6EDF3]">
+              <span className="w-8 h-px bg-[#F0605D]" />
+              <TextShimmer duration={3} spread={1.5} className="font-mono text-xs tracking-[0.2em] uppercase [--base-color:#F0605D] [--base-gradient-color:#E6EDF3]">
                 {dict.eyebrow}
               </TextShimmer>
             </div>
@@ -155,16 +155,16 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
 
         {/* Stats with NumberTicker */}
         <RevealOnScroll delay={500}>
-          <div className="grid grid-cols-2 md:flex md:justify-center md:items-center gap-4 md:gap-12 mx-auto max-w-md md:max-w-none my-14 md:my-10">
+          <div className="grid grid-cols-2 md:flex md:justify-center md:items-center gap-4 md:gap-12 mx-auto max-w-md md:max-w-none my-8 md:my-10">
             {dict.stats.map((stat, i) => {
               const { target, suffix, decimalPlaces } = parseStatValue(stat.value)
               return (
                 <div key={i} className="flex flex-col items-center text-center">
-                  <span className="font-display text-[1.6rem] md:text-[2.2rem] text-[#E3B341] tracking-wide">
-                    <NumberTicker value={target} decimalPlaces={decimalPlaces} className="text-[#E3B341] font-display text-[1.6rem] md:text-[2.2rem]" />
+                  <span className="font-display text-[1.6rem] md:text-[2.2rem] text-[#F0605D] tracking-wide">
+                    <NumberTicker value={target} decimalPlaces={decimalPlaces} className="text-[#F0605D] font-display text-[1.6rem] md:text-[2.2rem]" />
                     {suffix}
                   </span>
-                  <span className="font-mono text-[0.65rem] text-[#484F58] tracking-widest uppercase">
+                  <span className="font-mono text-[0.65rem] text-[#7D8590] tracking-widest uppercase">
                     {stat.label}
                   </span>
                 </div>
@@ -192,13 +192,13 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                   href="https://hunt.ethdenver.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131921]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131921]"
                 >
                   {dict.seeItLive}
                 </a>
                 <Link
                   href={reportHref("ethdenver-report")}
-                  className="inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
                 >
                   {dict.seeReport}
                 </Link>
@@ -206,8 +206,8 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
             </div>
           </div>
 
-          {/* The other 4 events, balanced responsive grid */}
-          <div className="grid gap-4 md:gap-6 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
+          {/* The other 5 events: 3+2 on desktop (avoids a lone card orphaned in a 4-up auto-fit row) */}
+          <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {secondaryEvents.map(({ card, href }) => (
               <div
                 key={card.title}
@@ -219,7 +219,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                 <p className="text-sm text-[#E6EDF3] mb-5">{card.stat2}</p>
                 <Link
                   href={href}
-                  className="mt-auto inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
+                  className="mt-auto w-full inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
                 >
                   {dict.seeReport}
                 </Link>

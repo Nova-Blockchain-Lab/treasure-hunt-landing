@@ -35,7 +35,7 @@ export function HeroSection({
   const handlePrimary = onPrimaryAction || onOpenContact
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-[56px] sm:pt-[72px]" id="hero">
+    <section className="relative min-h-[88svh] md:min-h-screen flex items-center overflow-hidden pt-[56px] sm:pt-[72px]" id="hero">
       {/* Animated gradient background */}
       <motion.div
         className="absolute inset-0"
@@ -77,7 +77,7 @@ export function HeroSection({
             alt="Treasure Hunt - Interactive Event Engagement Game"
             width={1000}
             height={385}
-            className="block w-full max-w-[300px] sm:max-w-[440px] md:max-w-[720px] mx-auto mb-14 md:mb-16 h-auto"
+            className="block w-full max-w-[300px] sm:max-w-[440px] md:max-w-[720px] mx-auto mb-8 sm:mb-12 md:mb-16 h-auto"
             style={{ height: "auto" }}
             sizes="(max-width: 640px) 300px, (max-width: 768px) 440px, 720px"
             priority
@@ -109,7 +109,7 @@ export function HeroSection({
 
         {/* Trust badge */}
         <motion.p
-          className={`font-mono text-sm tracking-wide mb-10 text-center sm:text-left ${trustBadgeClassName || "text-[#484F58]"}`}
+          className={`font-mono text-sm tracking-wide mb-10 text-center sm:text-left ${trustBadgeClassName || "text-[#7D8590]"}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -118,21 +118,21 @@ export function HeroSection({
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center sm:items-start gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <button
             onClick={handlePrimary}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97] text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97] text-center"
           >
             {dict.bookDemo}
           </button>
           {secondaryIsButton ? (
             <button
               onClick={onSecondaryAction}
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
             >
               {dict.seeItLive}
             </button>
@@ -142,7 +142,7 @@ export function HeroSection({
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent({ name: "external_link_clicked", params: { url: "https://hunt.ethdenver.com/", link_text: dict.seeItLive, location: "hero" } })}
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
             >
               {dict.seeItLive}
             </a>

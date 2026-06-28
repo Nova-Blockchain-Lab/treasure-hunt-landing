@@ -12,12 +12,12 @@ interface TestimonialsDict {
 
 export function TestimonialsSection({ dict }: { dict: TestimonialsDict }) {
   return (
-    <section className="py-24 md:py-32 relative bg-[#06080F]">
+    <section className="py-16 md:py-32 relative bg-[#06080F]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#F0605D] mb-4 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#F0605D]" />
               {dict.eyebrow}
             </div>
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-balance">
@@ -42,7 +42,7 @@ export function TestimonialsSection({ dict }: { dict: TestimonialsDict }) {
                   </p>
                   <div>
                     <div className="font-display text-base text-[#E6EDF3]">{t.author}</div>
-                    <div className="text-sm text-[#484F58]">{t.role}</div>
+                    <div className="text-sm text-[#7D8590]">{t.role}</div>
                   </div>
                 </div>
               </SpotlightCard>

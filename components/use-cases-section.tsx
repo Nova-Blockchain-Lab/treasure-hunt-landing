@@ -34,12 +34,12 @@ export function UseCasesSection({ dict }: { dict: UseCasesDict }) {
   }, [dict.items.length])
 
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-[#0A0E14]" id="where">
+    <section className="py-16 md:py-32 relative overflow-hidden bg-[#0A0E14]" id="where">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-12 md:mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#F0605D] mb-4 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#F0605D]" />
               {dict.eyebrow}
             </div>
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-4 text-balance">

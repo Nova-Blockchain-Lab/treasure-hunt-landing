@@ -75,8 +75,9 @@ export function SiteFooter({
           { href: "/goosechase-alternative", label: "Goosechase Alternative" },
         ]
 
+  // pb clears the fixed 60px StickyCTABar so the last footer row is never occluded
   return (
-    <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F]">
+    <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F] pb-[68px]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6 py-12">
         {/* Row 1: Nav + Contact */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -101,7 +102,7 @@ export function SiteFooter({
                 />
               </a>
             </div>
-            <p className="text-sm text-[#484F58] leading-relaxed max-w-[280px]">
+            <p className="text-sm text-[#7D8590] leading-relaxed max-w-[280px]">
               {dict.description}
             </p>
           </div>
@@ -113,7 +114,7 @@ export function SiteFooter({
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-[#484F58] transition-colors duration-300 hover:text-[#E6EDF3]"
+                    className="text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
                   >
                     {link.label}
                   </a>
@@ -129,7 +130,7 @@ export function SiteFooter({
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#484F58] transition-colors duration-300 hover:text-[#E6EDF3]"
+                    className="text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
                   >
                     {link.label}
                   </Link>
@@ -157,7 +158,7 @@ export function SiteFooter({
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-[#484F58] transition-colors duration-300 hover:text-[#E6EDF3]"
+                  className="text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
                 >
                   {link.label}
                 </Link>
@@ -170,7 +171,7 @@ export function SiteFooter({
       {/* Copyright */}
       <div className="border-t border-[rgba(240,246,252,0.04)] py-8">
         <div className="max-w-[1200px] mx-auto px-5 md:px-6 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
-          <span className="text-[0.75rem] text-[#484F58]">
+          <span className="text-[0.75rem] text-[#7D8590]">
             {"\u00A9"} {new Date().getFullYear()} {dict.copyright}
           </span>
           <LanguageSwitcher />

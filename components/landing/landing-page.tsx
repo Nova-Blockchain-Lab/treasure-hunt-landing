@@ -92,7 +92,7 @@ export function LandingPage({
           >
             {content.primaryCta}
           </button>
-          <p className="font-mono text-xs tracking-wide text-[#484F58] mt-6">{content.trust}</p>
+          <p className="font-mono text-xs tracking-wide text-[#7D8590] mt-6">{content.trust}</p>
         </div>
       </section>
 
@@ -235,7 +235,7 @@ export function LandingPage({
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32 px-5 md:px-6 relative overflow-hidden">
+      <section className="py-16 md:py-32 px-5 md:px-6 relative overflow-hidden">
         <div className="max-w-[760px] mx-auto text-center">
           <h2 className="font-display text-[clamp(2rem,5vw,3.6rem)] leading-[0.98] mb-5 text-balance">
             {content.ctaHeading}

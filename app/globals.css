@@ -15,7 +15,7 @@
 
   --text-primary:     #E6EDF3;
   --text-secondary:   #8B949E;
-  --text-muted:       #484F58;
+  --text-muted:       #7D8590;
 
   --border-subtle:    rgba(240, 246, 252, 0.06);
   --border-hover:     rgba(240, 96, 93, 0.25);
@@ -93,6 +93,12 @@
   }
   body {
     @apply bg-bg-primary text-text-primary;
+  }
+  /* Keyboard focus is otherwise near-invisible on the dark theme. One coral ring for every interactive element. */
+  :focus-visible {
+    outline: 2px solid #FF9A76;
+    outline-offset: 2px;
+    border-radius: 3px;
   }
   html {
     scroll-behavior: smooth;

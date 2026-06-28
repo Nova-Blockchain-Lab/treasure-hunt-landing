@@ -139,13 +139,13 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
       />
       <MarqueeStrip items={dict.marquee} />
 
-      {/* Optimized section order for conversion */}
+      {/* Section order: lead with proof (logos → live demo + per-event results) before the feature pitch.
+          Dividers track the bg bands: Demo (#0A0E14) → Features (#06080F); Features and Media share #06080F (no divider). */}
       <SocialProofStrip dict={dict.socialProof} />
-      <SectionDivider />
-      <FeaturesSection dict={dict.features} />
       <SectionDividerReverse />
       <DemoSection dict={dict.demo} lang={lang} />
       <SectionDivider />
+      <FeaturesSection dict={dict.features} />
       <MediaSection dict={dict.media} />
       <SectionDividerReverse />
       <HowItWorksSection dict={dict.howItWorks} />

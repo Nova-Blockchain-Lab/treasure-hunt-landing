@@ -128,7 +128,7 @@ export function ContactModal({
       <div className="relative w-full max-w-[480px] bg-[#0D1117] border border-[rgba(240,246,252,0.08)] rounded-2xl p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1.5 text-[#484F58] hover:text-[#8B949E] transition-colors"
+          className="absolute top-4 right-4 p-1.5 text-[#7D8590] hover:text-[#8B949E] transition-colors"
           aria-label="Close"
         >
           <X className="w-5 h-5" />
@@ -154,7 +154,7 @@ export function ContactModal({
               required
               placeholder={dict.name}
               onFocus={() => handleFormStart("name")}
-              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#484F58] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors"
+              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors"
             />
             <input
               name="email"
@@ -162,7 +162,7 @@ export function ContactModal({
               required
               placeholder={dict.email}
               onFocus={() => handleFormStart("email")}
-              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#484F58] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors"
+              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors"
             />
             <select
               name="eventSize"
@@ -171,7 +171,7 @@ export function ContactModal({
               onFocus={() => handleFormStart("eventSize")}
               className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors appearance-none cursor-pointer"
             >
-              <option value="" disabled className="text-[#484F58]">
+              <option value="" disabled className="text-[#7D8590]">
                 {dict.eventSize}
               </option>
               {dict.eventSizeOptions.map((opt) => (
@@ -185,7 +185,7 @@ export function ContactModal({
               rows={3}
               placeholder={dict.message}
               onFocus={() => handleFormStart("message")}
-              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#484F58] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:outline-none focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
             />
 
             {status === "error" && (

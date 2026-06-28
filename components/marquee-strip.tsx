@@ -1,6 +1,6 @@
 function MarqueeItem({ text }: { text: string }) {
   return (
-    <span className="inline-flex items-center gap-3 px-6 md:px-10 font-display text-xs md:text-sm tracking-[0.15em] uppercase text-[#484F58]">
+    <span className="inline-flex items-center gap-3 px-6 md:px-10 font-display text-xs md:text-sm tracking-[0.15em] uppercase text-[#7D8590]">
       <span className="w-1 h-1 bg-[#484F58] rounded-full shrink-0" />
       {text}
     </span>

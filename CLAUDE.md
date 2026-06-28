@@ -60,8 +60,8 @@ components/                 # Section components, composed by components/page-cl
 ├── hero-section.tsx        # Logo image + sr-only H1 + tagline + CTAs
 ├── marquee-strip.tsx
 ├── demo-section.tsx        # Phone screenshots + 6 per-event stat cards (ETHDenver featured + 5 auto-fit grid), each linking to its report
-├── media-section.tsx       # Interview video + pull-quote + photo/clip gallery (assets in public/media/); id="media"
-├── social-proof-strip.tsx  # ETHDenver / Future Maker / Confluence logos
+├── media-section.tsx       # Interview video + pull-quote + CSS-columns masonry gallery (6 event photos + 2 vertical clips, natural aspect; one landscape shot gets a `box` aspect to cap a column); assets in public/media/; id="media"
+├── social-proof-strip.tsx  # "DEPLOYED AT" event logos — data-driven uniform 4-col grid (was a ragged flex-wrap). Mixed polarity: light/transparent marks render bare; dark-on-white wordmarks (Future Maker, Data w/ Purpose, Spring Bootcamp) get a white `chip`. Cadaval bg was flood-filled to transparent + served `unoptimized` (see AVIF gotcha below). Cultural Week bg stripped to transparent (all-blue, reads on dark).
 ├── features-section.tsx
 ├── how-it-works-section.tsx
 ├── use-cases-section.tsx
@@ -84,7 +84,7 @@ docs/                       # cro-roadmap.md and other working docs
 i18n/                       # next-intl routing + locale config
 hooks/                      # use-scroll-position, use-active-section, use-analytics-tracking
 lib/                        # shared utilities — ab-test.ts, analytics.ts, consent-context.tsx; cadaval-report.ts + smartcities-report.ts (snapshot types + readSnapshot for the two ported reports)
-public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters)
+public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters; flyer-claim/nfc-tiles/merch-hats/merch-hoodie added from ../insta/assets, processed to ≤1600px)
 proxy.ts                    # next-intl proxy (renamed from middleware.ts per Next 16 convention) + A/B variant cookie
 next.config.mjs             # AVIF/WebP, security headers, immutable image cache
 .env.example                # Required env vars (analytics keys, etc.)
@@ -119,6 +119,8 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
 
 ## Key conventions
 
+- **Dark-theme text colors:** body `#E6EDF3`, secondary `#8B949E`, muted `#7D8590` (the `--text-muted` token — was `#484F58`, which failed WCAG AA at ~2.4:1 on the near-black bg). Don't reintroduce `#484F58` for readable text. Keyboard focus uses one global `:focus-visible` coral outline in `globals.css` — don't add bare `focus:outline-none` without a replacement.
+- **next/image + transparent PNG + AVIF gotcha:** Next's AVIF encoder can flatten a transparent PNG's alpha to opaque black at *some* widths (hit on `cadaval-festival-logo.png` at w=256, fine at 384/640). If a transparent logo renders with a black box, set `unoptimized` on that `<Image>` (it serves the PNG as-is). Clearing `.next/cache/images` alone is not enough — the dev server caches optimized variants in memory.
 - **Metadata is generated per-locale** in `app/[lang]/layout.tsx`. Each page-level `Metadata` adds its own `alternates` (canonical + en/pt/x-default hreflang) and OG/Twitter card images. Report pages use `generateMetadata` for locale-aware copy.
 - **Home page composition lives in `components/page-client.tsx`.** Both `app/page.tsx` (en root) and `app/[lang]/page.tsx` resolve the dictionary, apply A/B variant overrides, and render `<PageClient dict lang variant>`. Pass `lang` through to `SiteFooter` so its locale prefix is correct.
 - **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. The variant is resolved **client-side** in `PageClient` (reads/sets the cookie via `document.cookie`, applies overrides with `useMemo`). It is deliberately NOT read server-side: `cookies()` would opt the home + locale routes into dynamic rendering and force `private, no-store`. Server + first client render show `control` (the canonical copy); the variant swaps in after hydration.

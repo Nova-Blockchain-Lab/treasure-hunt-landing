@@ -81,13 +81,13 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
         />
 
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
-          <a href="#" className="flex items-center gap-3" onClick={(e) => scrollToSection(e, "#hero")}>
+          <a href="#" className="flex items-center gap-3 h-full -ml-1 pr-2" onClick={(e) => scrollToSection(e, "#hero")}>
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
               width={240}
               height={32}
-              className="h-8 sm:h-16 w-auto"
+              className="h-9 sm:h-16 w-auto"
               style={{ width: "auto" }}
               sizes="240px"
               priority
@@ -168,14 +168,14 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
             key={link.href}
             href={link.href}
             onClick={(e) => scrollToSection(e, link.href)}
-            className="font-display text-3xl tracking-widest text-[#8B949E] transition-colors duration-300 hover:text-[#E6EDF3]"
+            className="font-display text-3xl tracking-widest text-[#8B949E] py-2 px-4 transition-colors duration-300 hover:text-[#E6EDF3]"
           >
             {link.label}
           </a>
         ))}
         <button
           onClick={() => { closeMenu(); onOpenContact?.() }}
-          className="font-display text-3xl tracking-widest text-[#F0605D] transition-colors duration-300 cursor-pointer bg-transparent border-none"
+          className="font-display text-3xl tracking-widest text-[#F0605D] py-2 px-4 transition-colors duration-300 cursor-pointer bg-transparent border-none"
         >
           {dict.bookDemo}
         </button>

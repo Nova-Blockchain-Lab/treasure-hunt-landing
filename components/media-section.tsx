@@ -19,6 +19,9 @@ interface MediaDict {
   photo1Alt: string
   photo2Alt: string
   photo3Alt: string
+  photo4Alt: string
+  photo5Alt: string
+  photo6Alt: string
   clip1Alt: string
   clip2Alt: string
 }
@@ -34,24 +37,47 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
     return () => mq.removeEventListener("change", update)
   }, [])
 
+  // Real width/height keep each shot at its natural aspect ratio in the masonry
+  // (most are portrait phone photos) instead of getting cropped to a fixed box.
+  // `box` forces an aspect for the lone landscape shot so it caps a column cleanly
+  // instead of orphaning a short wide sliver at the bottom.
   const photos = [
-    { src: "/media/event-posters.jpg", alt: dict.photo1Alt },
-    { src: "/media/booth-demo.jpg", alt: dict.photo2Alt },
-    { src: "/media/team-celebration.jpg", alt: dict.photo3Alt },
+    { src: "/media/flyer-claim.jpg", alt: dict.photo1Alt, w: 900, h: 1600 },
+    { src: "/media/nfc-tiles.jpg", alt: dict.photo4Alt, w: 900, h: 1600 },
+    { src: "/media/booth-demo.jpg", alt: dict.photo2Alt, w: 3464, h: 4618 },
+    { src: "/media/merch-hats.jpg", alt: dict.photo5Alt, w: 900, h: 1600 },
+    { src: "/media/merch-hoodie.jpg", alt: dict.photo6Alt, w: 1350, h: 1600 },
+    { src: "/media/team-celebration.jpg", alt: dict.photo3Alt, w: 4032, h: 2268, box: "aspect-[3/2]" },
   ]
   const clips = [
     { src: "/media/winner-reaction.mp4", poster: "/media/winner-reaction-poster.jpg", label: dict.clip1Alt },
     { src: "/media/gameplay-tap.mp4", poster: "/media/gameplay-tap-poster.jpg", label: dict.clip2Alt },
   ]
 
+  // Interleave tall (portrait photos + clips) and short (booth, hoodie, boxed team)
+  // tiles so the CSS-columns masonry balances and the clips sit mid-gallery.
+  const gallery: Array<
+    | { kind: "photo"; item: (typeof photos)[number] }
+    | { kind: "clip"; item: (typeof clips)[number] }
+  > = [
+    { kind: "photo", item: photos[0] }, // flyer (tall)
+    { kind: "photo", item: photos[2] }, // booth (short)
+    { kind: "clip", item: clips[0] },   // winner (tall)
+    { kind: "photo", item: photos[1] }, // nfc (tall)
+    { kind: "photo", item: photos[4] }, // hoodie (short)
+    { kind: "clip", item: clips[1] },   // gameplay (tall)
+    { kind: "photo", item: photos[3] }, // hats (tall)
+    { kind: "photo", item: photos[5] }, // team (short, boxed) — caps the column
+  ]
+
   return (
-    <section id="media" className="py-24 md:py-32 relative bg-[#06080F]">
+    <section id="media" className="py-16 md:py-32 relative bg-[#06080F]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-12 md:mb-16">
             <div className="font-mono text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
-              <TextShimmer duration={3} spread={1.5} className="font-mono text-xs tracking-[0.2em] uppercase [--base-color:#58A6FF] [--base-gradient-color:#E6EDF3]">
+              <span className="w-8 h-px bg-[#F0605D]" />
+              <TextShimmer duration={3} spread={1.5} className="font-mono text-xs tracking-[0.2em] uppercase [--base-color:#F0605D] [--base-gradient-color:#E6EDF3]">
                 {dict.eyebrow}
               </TextShimmer>
             </div>
@@ -91,7 +117,7 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
               <figcaption className="mt-6 pt-5 border-t border-[rgba(240,246,252,0.06)]">
                 <div className="text-white font-semibold">{dict.quoteName}</div>
                 <div className="text-sm text-[#FF9A76]">{dict.quoteRole}</div>
-                <div className="text-xs text-[#484F58] mt-2">{dict.quoteContext}</div>
+                <div className="text-xs text-[#7D8590] mt-2">{dict.quoteContext}</div>
               </figcaption>
             </figure>
           </div>
@@ -99,28 +125,30 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
 
         {/* Gallery: event photos + vertical clips */}
         <RevealOnScroll delay={250}>
-          <div className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#484F58] mb-4">{dict.galleryHeading}</div>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5">
-            {/* Photos */}
-            <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-              {photos.map((p) => (
-                <div key={p.src} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] group">
+          <div className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#7D8590] mb-4">{dict.galleryHeading}</div>
+          {/* Masonry mosaic: each shot keeps its natural aspect ratio */}
+          <div className="columns-2 md:columns-3 gap-4 md:gap-5 [&>*]:mb-4 md:[&>*]:mb-5">
+            {gallery.map(({ kind, item }) =>
+              kind === "photo" ? (
+                <figure
+                  key={item.src}
+                  className={`relative break-inside-avoid rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] group ${(item as { box?: string }).box ?? ""}`}
+                >
                   <Image
-                    src={p.src}
-                    alt={p.alt}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    src={item.src}
+                    alt={(item as { alt: string }).alt}
+                    width={(item as { w: number }).w}
+                    height={(item as { h: number }).h}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className={`object-cover transition-transform duration-500 group-hover:scale-105 ${(item as { box?: string }).box ? "absolute inset-0 w-full h-full" : "w-full h-auto"}`}
                     loading="lazy"
                   />
-                </div>
-              ))}
-            </div>
-
-            {/* Vertical gameplay clips */}
-            <div className="lg:col-span-4 grid grid-cols-2 gap-4 md:gap-5">
-              {clips.map((c) => (
-                <div key={c.src} className="relative aspect-[9/16] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] bg-black">
+                </figure>
+              ) : (
+                <div
+                  key={item.src}
+                  className="relative break-inside-avoid aspect-[9/16] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] bg-black"
+                >
                   <video
                     autoPlay={allowAutoplay}
                     muted
@@ -128,15 +156,15 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
                     playsInline
                     controls={!allowAutoplay}
                     preload="metadata"
-                    poster={c.poster}
-                    aria-label={c.label}
+                    poster={(item as { poster: string }).poster}
+                    aria-label={(item as { label: string }).label}
                     className="w-full h-full object-cover"
                   >
-                    <source src={c.src} type="video/mp4" />
+                    <source src={item.src} type="video/mp4" />
                   </video>
                 </div>
-              ))}
-            </div>
+              )
+            )}
           </div>
         </RevealOnScroll>
       </div>

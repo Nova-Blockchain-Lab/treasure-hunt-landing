@@ -30,10 +30,10 @@
     "Dashboard de Analytics ao Vivo"
   ],
   "demo": {
-    "eyebrow": "02 / Demo",
+    "eyebrow": "01 / Demo",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
-    "headingSuffix": "Experienciaram em 7 Eventos",
+    "headingSuffix": "Experienciaram em 6 Eventos",
     "seeItLive": "Ver ao Vivo →",
     "seeReport": "Ver Relatório →",
     "seeFmReport": "Ver Relatório →",
@@ -47,7 +47,7 @@
       { "value": "10.000+", "label": "Tesouros Encontrados" },
       { "value": "500+", "label": "Checkpoints" },
       { "value": "1.7M+", "label": "Recompensas" },
-      { "value": "7", "label": "Eventos" }
+      { "value": "6", "label": "Eventos" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -100,14 +100,17 @@
     "quoteRole": "CTO, NOVA Blockchain Lab",
     "quoteContext": "Filmado no Portugal Smart Cities Summit, FIL Pavilhão 3",
     "galleryHeading": "Dos eventos",
-    "photo1Alt": "Participantes com flyers oficiais do Treasure Hunt e códigos QR para reclamar no stand do evento",
+    "photo1Alt": "Participante com o flyer oficial do Treasure Hunt e código QR para reclamar a recompensa",
     "photo2Alt": "Membro da equipa Treasure Hunt a demonstrar o jogo a uma plateia no stand da NOVA Cidade",
     "photo3Alt": "Equipa do evento a celebrar sob as luzes do recinto",
+    "photo4Alt": "Tiles NFC personalizados para os checkpoints, acabados de imprimir em 3D",
+    "photo5Alt": "Chapéus NOVA Blockchain Lab distribuídos como recompensas do evento",
+    "photo6Alt": "Hoodie de edição limitada do Treasure Hunt com a mascote do labirinto",
     "clip1Alt": "Jogador a reagir depois de ganhar",
     "clip2Alt": "Mão a tocar num tag do Treasure Hunt com o telemóvel"
   },
   "features": {
-    "eyebrow": "01 / Funcionalidades",
+    "eyebrow": "02 / Funcionalidades",
     "heading": "Feito para Organizadores.",
     "headingHighlight": "Adorado por Participantes.",
     "description": "O Treasure Hunt transforma qualquer evento numa aventura ao vivo. Os participantes ganham pontos ao explorar o espaço, completar desafios e descobrir checkpoints escondidos. Os pontos desbloqueiam recompensas reais na loja integrada.",
@@ -195,7 +198,7 @@
     "headingHighlight": "Para Qualquer Dimensão de Evento",
     "description": "Comece grátis para eventos pequenos. Escale para milhares de participantes com ferramentas completas de engagement, analytics de sponsors e suporte no local.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Branding Treasure Hunt (sem personalização).", "bestFor": "Até 100 participantes", "cta": "Começar", "badge": "", "priceHint": "" },
+      { "name": "Starter", "subtitle": "Branding Treasure Hunt (sem personalização).", "bestFor": "Até 100 participantes", "cta": "Planear o Seu Evento", "badge": "", "priceHint": "" },
       { "name": "Pro", "subtitle": "Tudo para impressionar o público e os sponsors.", "bestFor": "100 a 1.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular", "priceHint": "" },
       { "name": "Enterprise", "subtitle": "Funcionalidades personalizadas. Analytics. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "" }
     ],

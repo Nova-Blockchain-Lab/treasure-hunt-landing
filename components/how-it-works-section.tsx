@@ -22,12 +22,12 @@ export function HowItWorksSection({ dict }: { dict: HowItWorksDict }) {
   const stepNumbers = ["01", "02", "03", "04", "05"]
 
   return (
-    <section className="py-24 md:py-32 relative bg-[#0A0E14]" id="how">
+    <section className="py-16 md:py-32 relative bg-[#0A0E14]" id="how">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#F0605D] mb-4 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#F0605D]" />
               {dict.eyebrow}
             </div>
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-balance">
@@ -68,8 +68,8 @@ export function HowItWorksSection({ dict }: { dict: HowItWorksDict }) {
         </div>
 
         <RevealOnScroll delay={600}>
-          <div className="mt-12 py-6 px-5 sm:px-8 border-l-[3px] border-[#58A6FF] bg-[rgba(88,166,255,0.04)] rounded-r-xl">
-            <p className="font-mono text-[0.85rem] text-[#58A6FF] tracking-wide">
+          <div className="mt-12 py-6 px-5 sm:px-8 border-l-[3px] border-[#F0605D] bg-[rgba(240,96,93,0.04)] rounded-r-xl">
+            <p className="font-mono text-[0.85rem] text-[#FF9A76] tracking-wide">
               {dict.callout}
             </p>
           </div>
@@ -101,7 +101,7 @@ export function HowItWorksSection({ dict }: { dict: HowItWorksDict }) {
                     </div>
                     <div>
                       <h4 className="font-display text-base mb-1 tracking-wide">{item.title}</h4>
-                      <p className="text-[0.82rem] text-[#484F58] leading-normal">{item.description}</p>
+                      <p className="text-[0.82rem] text-[#7D8590] leading-normal">{item.description}</p>
                     </div>
                   </div>
                 )

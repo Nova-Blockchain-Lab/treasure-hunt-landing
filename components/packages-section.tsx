@@ -62,15 +62,15 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
       {/* Header */}
       <div className="p-5 sm:p-7 pb-0">
         <div className="flex items-center justify-between gap-3 mb-1">
-          <h3 className="font-display text-[1.8rem] tracking-[0.04em]">{t.name}</h3>
+          <h3 className="min-w-0 font-display text-[1.8rem] tracking-[0.04em]">{t.name}</h3>
           {t.badge && (
-            <span className="shrink-0 bg-[#F0605D] text-white font-mono text-[0.6rem] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full">
+            <span className="shrink-0 whitespace-nowrap bg-[#C9433F] text-white font-mono text-[0.6rem] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full">
               {t.badge}
             </span>
           )}
         </div>
         <p className="text-[0.85rem] text-[#8B949E] mb-1">{t.subtitle}</p>
-        <p className="text-[0.75rem] text-[#484F58] font-mono tracking-wide">{t.bestFor}</p>
+        <p className="text-[0.75rem] text-[#8B949E] font-mono tracking-wide">{t.bestFor}</p>
       </div>
 
       {/* Divider */}
@@ -91,23 +91,19 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
                   const val = values?.[fi]?.[tierIndex] ?? false
                   const included = val !== false
                   const note = typeof val === "string" ? val : null
+                  // excluded rows stay legible: distinguished by the X icon + muted text, not by low opacity
                   return (
-                    <div
-                      key={fi}
-                      className={`flex items-center gap-2.5 ${
-                        included ? "" : "opacity-35"
-                      }`}
-                    >
+                    <div key={fi} className="flex items-center gap-2.5">
                       {included ? (
                         <span className="inline-flex w-4 h-4 items-center justify-center rounded-full bg-[rgba(63,185,80,0.12)] text-[#3FB950] shrink-0">
                           <Check className="w-2.5 h-2.5" strokeWidth={3} />
                         </span>
                       ) : (
-                        <span className="inline-flex w-4 h-4 items-center justify-center rounded-full text-[#484F58] shrink-0">
+                        <span className="inline-flex w-4 h-4 items-center justify-center rounded-full text-[#8B949E] shrink-0">
                           <X className="w-2.5 h-2.5" strokeWidth={3} />
                         </span>
                       )}
-                      <span className={`text-[0.8rem] leading-tight ${included ? "text-[#8B949E]" : "text-[#484F58]"}`}>
+                      <span className="text-[0.8rem] leading-tight text-[#8B949E]">
                         {featureLabel}
                         {note && <span className="text-[#58A6FF]"> ({note})</span>}
                       </span>
@@ -149,12 +145,12 @@ export function PackagesSection({ dict, onOpenContact }: { dict: PackagesDict; o
   }, [isVisible, dict.tiers])
 
   return (
-    <section ref={ref} className="py-24 md:py-32 relative bg-[#06080F]" id="packages">
+    <section ref={ref} className="py-16 md:py-32 relative bg-[#06080F]" id="packages">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6">
         <RevealOnScroll>
           <div className="mb-12 md:mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#58A6FF]" />
+            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#F0605D] mb-4 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#F0605D]" />
               {dict.eyebrow}
             </div>
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-4 text-balance">

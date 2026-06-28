@@ -21,7 +21,7 @@ interface CTASectionProps {
 
 export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIsButton }: CTASectionProps) {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-[#06080F]" id="cta">
+    <section className="py-16 md:py-32 relative overflow-hidden bg-[#06080F]" id="cta">
       <div
         className="absolute inset-0"
         style={{
@@ -45,7 +45,7 @@ export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIs
           <p className="text-xl text-[#8B949E] mb-4">{dict.description}</p>
 
           {/* Trust signal */}
-          <p className="font-mono text-sm text-[#484F58] tracking-wide mb-12">
+          <p className="font-mono text-sm text-[#7D8590] tracking-wide mb-12">
             {dict.trustSignal}
           </p>
 
@@ -76,7 +76,7 @@ export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIs
             )}
           </div>
 
-          <p className="font-mono text-[0.85rem] text-[#484F58] tracking-wide mt-6">
+          <p className="font-mono text-[0.85rem] text-[#7D8590] tracking-wide mt-6">
             <a
               href="mailto:nova.blockchain.lab@novaims.unl.pt"
               className="text-[#58A6FF] border-b border-[rgba(88,166,255,0.3)] transition-colors duration-300 hover:border-[#58A6FF]"

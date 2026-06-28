@@ -16,6 +16,7 @@ interface StickyCTADict {
 export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onOpenContact?: () => void }) {
   const { scrollY } = useScrollPosition()
   const [dismissed, setDismissed] = useState(true) // start hidden to avoid flash
+  const [atClosingCta, setAtClosingCta] = useState(false)
   const hasTrackedShow = useRef(false)
 
   useEffect(() => {
@@ -27,8 +28,18 @@ export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onO
     }
   }, [])
 
+  // Hide the bar once the closing CTA section is in view — otherwise two identical
+  // "Plan Your Event" buttons (bar + section) compete, and the bar covers the footer.
+  useEffect(() => {
+    const el = document.querySelector("#cta")
+    if (!el) return
+    const io = new IntersectionObserver(([e]) => setAtClosingCta(e.isIntersecting), { rootMargin: "0px 0px -10% 0px" })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
   const heroOutOfView = scrollY > 600
-  const visible = heroOutOfView && !dismissed
+  const visible = heroOutOfView && !dismissed && !atClosingCta
 
   useEffect(() => {
     if (visible && !hasTrackedShow.current) {
@@ -64,10 +75,10 @@ export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onO
           </button>
           <button
             onClick={dismiss}
-            className="p-2 text-[#484F58] hover:text-[#8B949E] transition-colors duration-200"
+            className="inline-flex items-center justify-center min-w-11 min-h-11 -mr-2 text-[#7D8590] hover:text-[#8B949E] transition-colors duration-200"
             aria-label="Dismiss"
           >
-            <X className="w-4 h-4" />
+            <X className="w-5 h-5" />
           </button>
         </div>
       </div>

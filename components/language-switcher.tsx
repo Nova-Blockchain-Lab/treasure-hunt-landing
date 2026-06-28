@@ -25,7 +25,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
       <Link href={enHref} hrefLang="en" aria-current={!isPt ? "true" : undefined} className={linkCls(!isPt)}>
         EN
       </Link>
-      <span className="text-[#484F58]">/</span>
+      <span className="text-[#7D8590]">/</span>
       <Link href={ptHref} hrefLang="pt" aria-current={isPt ? "true" : undefined} className={linkCls(isPt)}>
         PT
       </Link>
