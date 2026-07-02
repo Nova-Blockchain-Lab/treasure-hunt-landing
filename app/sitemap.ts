@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-25', bilingual: false },
     { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-04-07', bilingual: false },
     { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-06-25', bilingual: false },
-    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-03-06', bilingual: false },
+    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-07-02', bilingual: false },
   ]
 
   // SEO landing pages (data/landing/*). Single-language: EN pages live at /<slug>

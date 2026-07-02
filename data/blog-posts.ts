@@ -272,4 +272,130 @@ If you're evaluating platforms for your next event, prioritize these capabilitie
 
 The event industry is moving past the "download our app" era. Attendees want experiences, not utilities. Interactive gamification platforms deliver measurable engagement that passive apps never could.`,
   },
+  {
+    slug: 'trade-show-booth-traffic-pscs-2026',
+    title: 'Trade Show Booth Traffic: Data from 103 Checkpoints at PSCS 2026',
+    description:
+      'Case study: 351 players and 8,123 checkpoint scans over three days at the Portugal Smart Cities Summit 2026. What the data shows about trade fair foot traffic.',
+    date: '2026-07-02',
+    content: `Exhibitors at a trade fair all buy the same thing: a stand, and the hope that people walk up to it. Foot traffic decides whether the fair was worth the money, and most of it concentrates along the main aisles.
+
+At the Portugal Smart Cities Summit 2026 (FIL Pavilhão 3, Lisbon, May 12 to 14) we ran Treasure Hunt across the whole floor. 103 checkpoints covered the floor: exhibitor stands, the stages, and the common zones. 351 visitors played over the three days. Here is what the data shows.
+
+## The Setup
+
+Each participating stand had an NFC tag or QR code registered as a checkpoint. Visitors scanned with their phone browser, earned FIL tokens per find, and could spend them at a merch store stocked with 47 different items. No app download, and every transaction fee was covered by the game, so playing cost visitors nothing.
+
+## The Numbers
+
+- **351 players** across three days
+- **8,123 treasures found**, an average of 23 per player
+- **103 checkpoints** across stands, stages, and common zones
+- **91.2% of players** claimed a reward
+- **717 merch purchases** from the 47-item store
+- **159,000 FIL tokens** distributed on-chain
+- **58 social shares** claimed in-game, 29 of them on LinkedIn
+
+## What Booth Traffic Looked Like
+
+The busiest checkpoint logged 245 unique visitors, which is 69.8% of everyone who played. That one was our own stand, where most players onboarded, so treat it as the ceiling rather than a typical result. The more useful signal is the middle of the table: the six tags in the stages zone alone pulled 275 finds from 178 unique players, and the single most-found stage tag was scanned 94 times.
+
+Engagement was also broad rather than concentrated. The distribution of finds across players had a Gini coefficient of 0.39, meaning finds were spread across the player base rather than dominated by a few completionists.
+
+## Most Visitors Come for One Day
+
+278 players played on a single day, 35 came for two days, and only 7 played all three. That matches how people actually attend trade fairs, and it has a design consequence: the hunt has to be completable, and worth completing, within one visit. Multi-day streak mechanics that work at a conference do little at a fair.
+
+Timing matters too. On day one, activity peaked at 11 AM with 408 scans in one hour, and again at 3 PM with 402. Mid-morning and mid-afternoon are when the floor is full, and when a sponsor activation gets the most out of a checkpoint.
+
+## The Merch Store as a Draw
+
+717 purchases over three days made the store one of the busiest spots in the game. Sponsored items work as their own checkpoint: the Lisboa Inteligente wireless charger sold out its 65 units by the final afternoon. A physical reward that people want gives the tokens a concrete value, and gives players a reason to keep scanning.
+
+## What This Means for Exhibitors
+
+A checkpoint at a stand does one simple thing: it gives visitors a reason to walk there that they did not have before. The exhibitor gets a number at the end, unique visitors and when they came, instead of an estimate. At PSCS 2026 that number was auditable, since every find was recorded on-chain.
+
+The full interactive report, with per-stand tables, zone breakdowns and hour-by-hour charts, is public: see the [PSCS 2026 report](/smartcities-report). If you are weighing this for your own fair, the [trade show booth traffic](/trade-show-booth-traffic) page covers how a deployment works from the organizer side.`,
+  },
+  {
+    slug: 'one-day-conference-gamification-data-summit-2026',
+    title: 'Gamification at a One-Day Conference: Data with Purpose Summit 2026',
+    description:
+      'One day, 25 checkpoints, 58 players, 777 treasures found. What the Data with Purpose Summit 2026 shows about running a scavenger hunt when the event has no day two.',
+    date: '2026-07-02',
+    content: `Most of the engagement data we had published before this event came from multi-day deployments. At ETHDenver 2026, activity grew day over day and peaked on day three, driven largely by word of mouth. A reasonable objection follows: if the game needs days to build, what happens at an event that only has one?
+
+The Data with Purpose Summit 2026 (NOVA IMS at Taguspark, Oeiras, June 25) gave us a clean answer. One day, 25 checkpoints, a professional audience of data practitioners. Here is how it went.
+
+## The Numbers
+
+- **58 players** in a single day
+- **777 treasures found** across 25 checkpoints
+- **13.4 finds per player** on average
+- **89.7% of players** claimed a reward
+- **25,900 DATA tokens** distributed
+- **39 merch purchases** from a four-item store
+- **816 on-chain transactions**, 100% of the fees sponsored
+
+## The Whole Game Lives in Eight Hours
+
+The hourly curve tells the story. 21 scans in the 8 AM hour as doors opened, 144 by 9 AM, and the peak at 10 AM with 173 scans. Activity held through lunch, 152 scans in the noon hour, then fell away through the afternoon and was effectively over by 5 PM.
+
+The practical lesson: at a one-day event the hunt is a morning game. It has to launch when registration opens, not after the opening keynote. Checkpoints near the entrance and the coffee stations do the recruiting that word of mouth would otherwise do on day two.
+
+## Depth Instead of Duration
+
+Players averaged 13.4 finds each, against 4.8 at ETHDenver. The comparison is not controlled, since the venue was smaller and the audience different, but the direction is consistent with what we saw on the floor: with a compact venue and one day, the players who join go deep. The most-found checkpoint, at the Nova Blockchain Lab stand, was scanned by 40 of the 58 players, and three players found all 25 checkpoints.
+
+A small merch catalogue was enough. Four items produced 39 purchases, and the blockchain-themed notebook alone moved 19 units. At this scale the store needs to be simple, not deep.
+
+## What Carried Over From Multi-Day Events
+
+Two things held regardless of event length. First, the claim rate: 89.7% of players who earned tokens claimed a reward, in line with our other deployments. When rewards are real, people collect them, one day or four. Second, zero friction: browser-based play with every transaction fee sponsored meant the onboarding cost stayed under a minute, which matters even more when there is no second day to recover a slow start.
+
+## What We Would Tell a One-Day Organizer
+
+Launch at the doors, weight the checkpoints toward the morning flow, keep the reward store small and physical, and put the leaderboard where the coffee is. The compressed timeline concentrates the game into the hours when the venue is full anyway.
+
+The full data, including the hourly grid and the per-checkpoint table, is in the public [Data with Purpose Summit 2026 report](/datasummit-report). For the general model, see [event gamification](/event-gamification) or [QR scavenger hunts for events](/qr-scavenger-hunt-events).`,
+  },
+  {
+    slug: 'team-scavenger-hunt-campus-spring-bootcamp-2026',
+    title: 'Team Scavenger Hunts on Campus: 7 Teams, 220 Finds in One Afternoon',
+    description:
+      'How a team-based scavenger hunt played out at the NOVA IMS Spring Bootcamp 2026: seven teams, 220 treasures found, and a three-find margin at the top.',
+    date: '2026-07-02',
+    content: `Everything we had run up to April 2026 scored players as individuals. For the NOVA IMS Spring Bootcamp we switched the model: players joined teams, every find rolled up into a shared team score, and the leaderboard ranked teams instead of people. One campus, one afternoon, 20 hunters across 7 teams.
+
+## The Numbers
+
+- **7 teams**, 20 hunters
+- **220 treasures found**, an average of 11 per hunter
+- **19 social claims** on top of the physical finds
+- **45,650 SB tokens** minted on-chain
+- **3 finds** separated first place from second
+
+## The Race Stayed Close
+
+Data Ninjas won with 42 finds. Byte Squad and Data Explorers tied behind them at 39, a final margin of three finds.
+
+Team size did not decide the outcome. The winning team had three members; Data Explorers had four and still finished behind them, and the last-placed team also had four.
+
+## What Team Mode Changes
+
+Scoring by team changes behavior in ways individual leaderboards do not.
+
+**Nobody idles.** On an individual leaderboard, a player who falls behind quietly drops out. On a team, three other people notice. Average finds per hunter came out at 11 in a single afternoon.
+
+**Strategy appears.** Individual play rewards walking fast. Team play rewards planning: who takes which building, who goes back for the missed tag, who handles the social claims.
+
+**The game gets social by default.** Team formation itself works as an icebreaker, useful at an event where participants have just met.
+
+## Where This Fits
+
+The team model is built for groups that arrive together and should leave more connected: student orientations, bootcamps, open days, and corporate offsites. A campus works especially well as a venue because it is large enough to make routing decisions matter, and familiar enough that nobody gets lost.
+
+The complete results, including the team race over the afternoon, are in the [Spring Bootcamp 2026 report](/springbootcamp-report). For the format itself, see [team building scavenger hunts](/team-building-scavenger-hunt) and [scavenger hunts for universities](/scavenger-hunt-universities).`,
+  },
 ]

@@ -198,6 +198,8 @@ function BlogContent({ content }: { content: string }) {
     return text
       .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#E6EDF3] font-semibold">$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      // internal links only (href must start with /) — content is our own static data
+      .replace(/\[([^\]]+)\]\((\/[^)\s]+)\)/g, '<a href="$2" class="text-[#F0605D] hover:underline">$1</a>')
   }
 
   for (const line of lines) {
