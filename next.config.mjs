@@ -3,6 +3,14 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  // next-intl's middleware strips the /en prefix with a temporary 307; these run
+  // before middleware and make it a permanent 308 instead.
+  async redirects() {
+    return [
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
+    ]
+  },
   async rewrites() {
     return [
       {

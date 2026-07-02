@@ -82,6 +82,7 @@ export async function generateMetadata({
       siteName: 'Treasure Hunt',
       title,
       description,
+      images: ['https://www.treasurehunt.pt/opengraph-image'],
     },
     twitter: {
       card: 'summary_large_image',

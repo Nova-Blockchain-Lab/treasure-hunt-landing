@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Event Gamification Blog | Treasure Hunt',
     description: 'Insights on event gamification, conference engagement, and interactive event technology.',
     url: 'https://www.treasurehunt.pt/blog',
+    images: ['https://www.treasurehunt.pt/opengraph-image'],
   },
 }
 

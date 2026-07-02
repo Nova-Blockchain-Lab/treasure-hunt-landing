@@ -10,5 +10,7 @@ import { routing } from './i18n/routing'
 export default createIntlMiddleware(routing)
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  // opengraph-image has no file extension, so it must be excluded explicitly or
+  // the locale rewrite sends it to /[lang]/opengraph-image → 404.
+  matcher: ['/((?!api|_next|_vercel|opengraph-image|.*\\..*).*)'],
 }

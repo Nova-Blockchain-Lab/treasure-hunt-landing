@@ -24,6 +24,7 @@ export function landingMetadata(content: LandingContent): Metadata {
       description: content.description,
       url,
       siteName: "Treasure Hunt",
+      images: [`${BASE}/opengraph-image`],
     },
     twitter: {
       card: "summary_large_image",

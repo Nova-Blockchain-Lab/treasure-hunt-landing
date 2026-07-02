@@ -24,7 +24,7 @@ export async function generateMetadata({
         'x-default': `${base}/springbootcamp-report`,
       },
     },
-    openGraph: { type: 'article', title: TITLE, description: SUMMARY, url },
+    openGraph: { type: 'article', title: TITLE, description: SUMMARY, url, images: [`${base}/opengraph-image`] },
     twitter: { card: 'summary_large_image', title: TITLE, description: SUMMARY },
   }
 }
