@@ -1,0 +1,151 @@
+1
+00:00:03,740 --> 00:00:09,000
+NOVA Blockchain Lab was glad to bring
+our game, Treasure Hunt, here to FIL.
+
+2
+00:00:09,160 --> 00:00:10,500
+What's the game about?
+
+3
+00:00:10,620 --> 00:00:15,320
+This game turns the FIL pavilion
+into a huge treasure hunt,
+
+4
+00:00:15,400 --> 00:00:21,360
+where participants look for our tags,
+tap their phone and earn points.
+
+5
+00:00:21,560 --> 00:00:23,220
+And points get you rewards.
+
+6
+00:00:23,320 --> 00:00:24,380
+How does it work?
+
+7
+00:00:24,460 --> 00:00:27,080
+We hide the tags
+across the exhibitor stands.
+
+8
+00:00:27,160 --> 00:00:29,660
+These treasures are NFC tags,
+
+9
+00:00:29,740 --> 00:00:35,720
+so anyone who finds one just taps it
+with their phone and gets the reward.
+
+10
+00:00:35,900 --> 00:00:40,200
+There's no need to install any app.
+It's very easy to use.
+
+11
+00:00:40,460 --> 00:00:45,240
+Just find any treasure
+and you're automatically in the game.
+
+12
+00:00:45,560 --> 00:00:50,740
+Over three days, 300+ participants
+and 100+ stands took part.
+
+13
+00:00:50,880 --> 00:00:55,900
+In our merch store, points buy rewards.
+We had 200+ transactions.
+
+14
+00:00:55,980 --> 00:00:58,800
+Exhibitors get more interactions.
+
+15
+00:00:58,920 --> 00:01:03,360
+And because it's gamified,
+people get really excited too.
+
+16
+00:01:03,500 --> 00:01:08,040
+We also let participants
+hide their own treasures on the map,
+
+17
+00:01:08,260 --> 00:01:13,140
+expanding the game naturally
+and keeping the gameplay lively.
+
+18
+00:01:13,420 --> 00:01:17,940
+Participants hid them in the bathrooms,
+under tables and chairs,
+
+19
+00:01:18,120 --> 00:01:20,680
+on doors, even at the bus stop.
+
+20
+00:01:20,760 --> 00:01:23,900
+The whole app is built on the blockchain.
+
+21
+00:01:24,240 --> 00:01:27,420
+It runs on smart contracts.
+
+22
+00:01:27,500 --> 00:01:31,520
+You don't need any technical knowledge
+to play the game.
+
+23
+00:01:31,700 --> 00:01:37,920
+But if you want to know more,
+you can do that in the app,
+
+24
+00:01:38,040 --> 00:01:40,600
+and even see the code
+behind the game.
+
+25
+00:01:40,720 --> 00:01:46,900
+On the map, a player sees the treasures
+they've found and the ones still hidden.
+
+26
+00:01:46,980 --> 00:01:51,820
+Players can also go straight to the store
+and see every product available,
+
+27
+00:01:51,900 --> 00:01:56,600
+and how many points
+each one costs to redeem.
+
+28
+00:01:56,860 --> 00:02:02,540
+This format works well not only at events
+like trade fairs and expos,
+
+29
+00:02:02,620 --> 00:02:08,060
+but also on campuses, in companies,
+or even across a whole city or town,
+
+30
+00:02:08,560 --> 00:02:14,780
+where we mark hidden treasures on the map,
+and people claim their points.
+
+31
+00:02:14,860 --> 00:02:18,560
+Overall, the game energizes the conference,
+
+32
+00:02:18,740 --> 00:02:22,810
+driving more interaction
+between attendees and the exhibition.
+
