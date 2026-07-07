@@ -11,6 +11,7 @@ interface MediaDict {
   headingHighlight: string
   subheading: string
   watchInterview: string
+  interviewTeaser: string
   quote: string
   quoteName: string
   quoteRole: string
@@ -91,36 +92,44 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
           </div>
         </RevealOnScroll>
 
-        {/* Featured interview + pull quote */}
+        {/* Two interviews: full cut + short highlights, side by side */}
         <RevealOnScroll delay={150}>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-6 mb-5 md:mb-6">
-            <div className="lg:col-span-7 relative rounded-xl overflow-hidden border border-[rgba(240,246,252,0.08)] bg-black">
-              <span className="absolute top-4 left-4 z-10 font-mono text-[0.65rem] tracking-[0.2em] uppercase text-[#E6EDF3] bg-[rgba(6,8,15,0.65)] backdrop-blur-sm px-3 py-1.5 rounded-full border border-[rgba(240,246,252,0.1)] pointer-events-none">
-                {dict.watchInterview}
-              </span>
-              <video
-                controls
-                preload="none"
-                playsInline
-                poster="/media/interview-poster.jpg"
-                className="w-full aspect-video object-cover bg-black"
-              >
-                <source src="/media/interview.mp4" type="video/mp4" />
-              </video>
-            </div>
-
-            <figure className="lg:col-span-5 flex flex-col justify-center rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-7 md:p-8">
-              <span className="text-[#F0605D] font-display text-4xl leading-none mb-2" aria-hidden="true">&ldquo;</span>
-              <blockquote className="text-[1.15rem] md:text-[1.3rem] leading-snug text-[#E6EDF3]">
-                {dict.quote}
-              </blockquote>
-              <figcaption className="mt-6 pt-5 border-t border-[rgba(240,246,252,0.06)]">
-                <div className="text-white font-semibold">{dict.quoteName}</div>
-                <div className="text-sm text-[#FF9A76]">{dict.quoteRole}</div>
-                <div className="text-xs text-[#7D8590] mt-2">{dict.quoteContext}</div>
-              </figcaption>
-            </figure>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-5 md:mb-6">
+            {[
+              { src: "/media/interview.mp4", poster: "/media/interview-poster.jpg", label: dict.watchInterview },
+              { src: "/media/interview-teaser.mp4", poster: "/media/interview-teaser-poster.jpg", label: dict.interviewTeaser },
+            ].map((v) => (
+              <div key={v.src} className="relative rounded-xl overflow-hidden border border-[rgba(240,246,252,0.08)] bg-black">
+                <span className="absolute top-4 left-4 z-10 font-mono text-[0.65rem] tracking-[0.2em] uppercase text-[#E6EDF3] bg-[rgba(6,8,15,0.65)] backdrop-blur-sm px-3 py-1.5 rounded-full border border-[rgba(240,246,252,0.1)] pointer-events-none">
+                  {v.label}
+                </span>
+                <video
+                  controls
+                  preload="none"
+                  playsInline
+                  poster={v.poster}
+                  className="w-full aspect-video object-cover bg-black"
+                >
+                  <source src={v.src} type="video/mp4" />
+                </video>
+              </div>
+            ))}
           </div>
+        </RevealOnScroll>
+
+        {/* Pull quote */}
+        <RevealOnScroll delay={200}>
+          <figure className="max-w-[75ch] mx-auto text-center rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-7 md:p-10 mb-5 md:mb-6">
+            <span className="text-[#F0605D] font-display text-4xl leading-none block mb-2" aria-hidden="true">&ldquo;</span>
+            <blockquote className="text-[1.15rem] md:text-[1.3rem] leading-snug text-[#E6EDF3]">
+              {dict.quote}
+            </blockquote>
+            <figcaption className="mt-6 pt-5 border-t border-[rgba(240,246,252,0.06)]">
+              <div className="text-white font-semibold">{dict.quoteName}</div>
+              <div className="text-sm text-[#FF9A76]">{dict.quoteRole}</div>
+              <div className="text-xs text-[#7D8590] mt-2">{dict.quoteContext}</div>
+            </figcaption>
+          </figure>
         </RevealOnScroll>
 
         {/* Gallery: event photos + vertical clips */}
