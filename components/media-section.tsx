@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { Play, Pause } from "lucide-react"
 import { RevealOnScroll } from "./reveal-on-scroll"
 import { TextShimmer } from "./text-shimmer"
 
@@ -12,6 +13,8 @@ interface MediaDict {
   subheading: string
   watchInterview: string
   interviewTeaser: string
+  fullCaption: string
+  teaserCaption: string
   quote: string
   quoteName: string
   quoteRole: string
@@ -22,13 +25,103 @@ interface MediaDict {
   photo3Alt: string
   photo4Alt: string
   photo5Alt: string
-  photo6Alt: string
+  teamFlyersAlt: string
   clip1Alt: string
   clip2Alt: string
 }
 
+// Interview: branded poster + coral play button at rest; native controls appear
+// only after first play, so the raw <video> chrome isn't the section's resting state.
+function InterviewVideo({ src, poster, badge, caption }: { src: string; poster: string; badge: string; caption: string }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  const [started, setStarted] = useState(false)
+  const start = () => {
+    setStarted(true)
+    ref.current?.play()
+  }
+  return (
+    <figure className="group rounded-xl overflow-hidden border border-[rgba(240,246,252,0.08)] bg-black">
+      <div className="relative">
+        <span className="absolute top-4 left-4 z-10 font-mono text-[0.65rem] tracking-[0.2em] uppercase text-[#E6EDF3] bg-[rgba(6,8,15,0.65)] backdrop-blur-sm px-3 py-1.5 rounded-full border border-[rgba(240,246,252,0.1)] pointer-events-none">
+          {badge}
+        </span>
+        <video
+          ref={ref}
+          preload="none"
+          playsInline
+          poster={poster}
+          controls={started}
+          onPlay={() => setStarted(true)}
+          className="block w-full aspect-video object-cover bg-black"
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+        {!started && (
+          <button
+            type="button"
+            onClick={start}
+            aria-label={`${badge} — play`}
+            className="absolute inset-0 grid place-items-center bg-black/25 transition-colors hover:bg-black/10 cursor-pointer"
+          >
+            <span className="grid place-items-center w-16 h-16 rounded-full bg-[#F0605D] text-white shadow-lg transition-transform group-hover:scale-105">
+              <Play className="w-7 h-7 translate-x-0.5" fill="currentColor" />
+            </span>
+          </button>
+        )}
+      </div>
+      <figcaption className="px-4 py-3 text-xs text-[#8B949E] bg-[#0B0F16] border-t border-[rgba(240,246,252,0.06)]">
+        {caption}
+      </figcaption>
+    </figure>
+  )
+}
+
+// Gallery clip: autoplay-muted-loop for ambient life (poster only under reduced-motion),
+// with an always-visible pause/play toggle (WCAG 2.2.2) that also signals "this is video".
+function ClipTile({ src, poster, label, allowAutoplay }: { src: string; poster: string; label: string; allowAutoplay: boolean }) {
+  const ref = useRef<HTMLVideoElement>(null)
+  const [paused, setPaused] = useState(!allowAutoplay)
+  const toggle = () => {
+    const v = ref.current
+    if (!v) return
+    if (v.paused) {
+      v.play()
+      setPaused(false)
+    } else {
+      v.pause()
+      setPaused(true)
+    }
+  }
+  return (
+    <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] bg-black">
+      <video
+        ref={ref}
+        autoPlay={allowAutoplay}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster={poster}
+        aria-label={label}
+        className="w-full h-full object-cover"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+      <button
+        type="button"
+        onClick={toggle}
+        aria-pressed={!paused}
+        aria-label={paused ? `${label} — play` : `${label} — pause`}
+        className="absolute bottom-2 right-2 z-10 grid place-items-center w-8 h-8 rounded-full bg-black/55 text-white backdrop-blur-sm border border-white/15"
+      >
+        {paused ? <Play className="w-3.5 h-3.5 translate-x-px" fill="currentColor" /> : <Pause className="w-3.5 h-3.5" fill="currentColor" />}
+      </button>
+    </div>
+  )
+}
+
 export function MediaSection({ dict }: { dict: MediaDict }) {
-  // Respect prefers-reduced-motion: don't autoplay the gameplay clips, show their posters instead.
+  // Respect prefers-reduced-motion: don't autoplay the gallery clips, show their posters instead.
   const [allowAutoplay, setAllowAutoplay] = useState(false)
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -38,37 +131,21 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
     return () => mq.removeEventListener("change", update)
   }, [])
 
-  // Real width/height keep each shot at its natural aspect ratio in the masonry
-  // (most are portrait phone photos) instead of getting cropped to a fixed box.
-  // `box` forces an aspect for the lone landscape shot so it caps a column cleanly
-  // instead of orphaning a short wide sliver at the bottom.
-  const photos = [
-    { src: "/media/flyer-claim.jpg", alt: dict.photo1Alt, w: 900, h: 1600 },
-    { src: "/media/datasummit-tap.jpg", alt: dict.photo4Alt, w: 1080, h: 1040 },
-    { src: "/media/booth-demo.jpg", alt: dict.photo2Alt, w: 3464, h: 4618 },
-    { src: "/media/merch-hats.jpg", alt: dict.photo5Alt, w: 900, h: 1600 },
-    { src: "/media/merch-hoodie.jpg", alt: dict.photo6Alt, w: 1350, h: 1600 },
-    { src: "/media/team-celebration.jpg", alt: dict.photo3Alt, w: 4032, h: 2268, box: "aspect-[3/2]" },
-  ]
-  const clips = [
-    { src: "/media/winner-reaction.mp4", poster: "/media/winner-reaction-poster.jpg", label: dict.clip1Alt },
-    { src: "/media/gameplay-tap.mp4", poster: "/media/gameplay-tap-poster.jpg", label: dict.clip2Alt },
-  ]
-
-  // Interleave tall (portrait photos + clips) and short (booth, hoodie, boxed team)
-  // tiles so the CSS-columns masonry balances and the clips sit mid-gallery.
+  // Curated event gallery. Uniform 4/5 cells (object-cover) so a single portrait shot
+  // can't run a whole phone screen tall — the fix for the section's mobile length.
+  // Strongest / most on-message tiles first.
   const gallery: Array<
-    | { kind: "photo"; item: (typeof photos)[number] }
-    | { kind: "clip"; item: (typeof clips)[number] }
+    | { kind: "photo"; src: string; alt: string }
+    | { kind: "clip"; src: string; poster: string; label: string }
   > = [
-    { kind: "photo", item: photos[0] }, // flyer (tall)
-    { kind: "photo", item: photos[2] }, // booth (short)
-    { kind: "clip", item: clips[0] },   // winner (tall)
-    { kind: "photo", item: photos[1] }, // datasummit tap (square)
-    { kind: "photo", item: photos[4] }, // hoodie (short)
-    { kind: "clip", item: clips[1] },   // gameplay (tall)
-    { kind: "photo", item: photos[3] }, // hats (tall)
-    { kind: "photo", item: photos[5] }, // team (short, boxed) — caps the column
+    { kind: "photo", src: "/media/team-flyers.jpg", alt: dict.teamFlyersAlt },
+    { kind: "photo", src: "/media/booth-demo.jpg", alt: dict.photo2Alt },
+    { kind: "clip", src: "/media/gameplay-tap.mp4", poster: "/media/gameplay-tap-poster.jpg", label: dict.clip2Alt },
+    { kind: "photo", src: "/media/datasummit-tap.jpg", alt: dict.photo4Alt },
+    { kind: "photo", src: "/media/flyer-claim.jpg", alt: dict.photo1Alt },
+    { kind: "clip", src: "/media/winner-reaction.mp4", poster: "/media/winner-reaction-poster.jpg", label: dict.clip1Alt },
+    { kind: "photo", src: "/media/merch-hats.jpg", alt: dict.photo5Alt },
+    { kind: "photo", src: "/media/team-celebration.jpg", alt: dict.photo3Alt },
   ]
 
   return (
@@ -95,31 +172,14 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
         {/* Two interviews: full cut + short highlights, side by side */}
         <RevealOnScroll delay={150}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-5 md:mb-6">
-            {[
-              { src: "/media/interview.mp4", poster: "/media/interview-poster.jpg", label: dict.watchInterview },
-              { src: "/media/interview-teaser.mp4", poster: "/media/interview-teaser-poster.jpg", label: dict.interviewTeaser },
-            ].map((v) => (
-              <div key={v.src} className="relative rounded-xl overflow-hidden border border-[rgba(240,246,252,0.08)] bg-black">
-                <span className="absolute top-4 left-4 z-10 font-mono text-[0.65rem] tracking-[0.2em] uppercase text-[#E6EDF3] bg-[rgba(6,8,15,0.65)] backdrop-blur-sm px-3 py-1.5 rounded-full border border-[rgba(240,246,252,0.1)] pointer-events-none">
-                  {v.label}
-                </span>
-                <video
-                  controls
-                  preload="none"
-                  playsInline
-                  poster={v.poster}
-                  className="w-full aspect-video object-cover bg-black"
-                >
-                  <source src={v.src} type="video/mp4" />
-                </video>
-              </div>
-            ))}
+            <InterviewVideo src="/media/interview.mp4" poster="/media/interview-poster.jpg" badge={dict.watchInterview} caption={dict.fullCaption} />
+            <InterviewVideo src="/media/interview-teaser.mp4" poster="/media/interview-teaser-poster.jpg" badge={dict.interviewTeaser} caption={dict.teaserCaption} />
           </div>
         </RevealOnScroll>
 
         {/* Pull quote */}
         <RevealOnScroll delay={200}>
-          <figure className="max-w-[75ch] mx-auto text-center rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-7 md:p-10 mb-5 md:mb-6">
+          <figure className="max-w-[75ch] mx-auto text-center rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-7 md:p-10 mb-12 md:mb-16">
             <span className="text-[#F0605D] font-display text-4xl leading-none block mb-2" aria-hidden="true">&ldquo;</span>
             <blockquote className="text-[1.15rem] md:text-[1.3rem] leading-snug text-[#E6EDF3]">
               {dict.quote}
@@ -132,46 +192,27 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
           </figure>
         </RevealOnScroll>
 
-        {/* Gallery: event photos + vertical clips */}
+        {/* Gallery: uniform-cell grid of event photos + vertical clips */}
         <RevealOnScroll delay={250}>
           <div className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#7D8590] mb-4">{dict.galleryHeading}</div>
-          {/* Masonry mosaic: each shot keeps its natural aspect ratio */}
-          <div className="columns-2 md:columns-3 gap-4 md:gap-5 [&>*]:mb-4 md:[&>*]:mb-5">
-            {gallery.map(({ kind, item }) =>
-              kind === "photo" ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {gallery.map((tile) =>
+              tile.kind === "photo" ? (
                 <figure
-                  key={item.src}
-                  className={`relative break-inside-avoid rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] group ${(item as { box?: string }).box ?? ""}`}
+                  key={tile.src}
+                  className="relative aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] group"
                 >
                   <Image
-                    src={item.src}
-                    alt={(item as { alt: string }).alt}
-                    width={(item as { w: number }).w}
-                    height={(item as { h: number }).h}
+                    src={tile.src}
+                    alt={tile.alt}
+                    fill
                     sizes="(max-width: 768px) 50vw, 33vw"
-                    className={`object-cover transition-transform duration-500 group-hover:scale-105 ${(item as { box?: string }).box ? "absolute inset-0 w-full h-full" : "w-full h-auto"}`}
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </figure>
               ) : (
-                <div
-                  key={item.src}
-                  className="relative break-inside-avoid aspect-[9/16] rounded-xl overflow-hidden border border-[rgba(240,246,252,0.06)] bg-black"
-                >
-                  <video
-                    autoPlay={allowAutoplay}
-                    muted
-                    loop
-                    playsInline
-                    controls={!allowAutoplay}
-                    preload="metadata"
-                    poster={(item as { poster: string }).poster}
-                    aria-label={(item as { label: string }).label}
-                    className="w-full h-full object-cover"
-                  >
-                    <source src={item.src} type="video/mp4" />
-                  </video>
-                </div>
+                <ClipTile key={tile.src} src={tile.src} poster={tile.poster} label={tile.label} allowAutoplay={allowAutoplay} />
               )
             )}
           </div>
