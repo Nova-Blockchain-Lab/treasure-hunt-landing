@@ -20,7 +20,9 @@ export async function generateMetadata({
   const prefix = lang === 'en' ? '' : `/${lang}`
 
   return {
-    title: `${post.title} | Treasure Hunt Blog`,
+    // No " | Treasure Hunt Blog" suffix: post titles are already 46-63 chars,
+    // and the suffix pushed every <title> to 85-98 chars (truncated in SERPs).
+    title: post.title,
     description: post.description,
     alternates: {
       canonical: `https://www.treasurehunt.pt/blog/${slug}`,

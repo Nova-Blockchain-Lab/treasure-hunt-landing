@@ -5,7 +5,7 @@ export const content: LandingContent = {
   locale: "en",
   title: "Scavify Alternative for Events | Treasure Hunt",
   description:
-    "Looking for a Scavify alternative? Treasure Hunt runs an NFC scavenger hunt in the browser, with no app download, live analytics, and a track record at real events.",
+    "Looking for a Scavify alternative? Treasure Hunt runs an NFC scavenger hunt in the browser, with no app download and live analytics.",
 
   eyebrow: "SCAVIFY ALTERNATIVE",
   headline: "A Scavify Alternative",

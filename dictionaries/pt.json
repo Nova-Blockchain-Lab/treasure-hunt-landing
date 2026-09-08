@@ -290,7 +290,9 @@
     "submit": "Enviar Pedido",
     "sending": "A enviar...",
     "success": "Obrigado! Entraremos em contacto em 24 horas.",
-    "error": "Algo correu mal. Por favor envie-nos email diretamente."
+    "error": "Algo correu mal. Por favor envie-nos email diretamente.",
+    "bookCallHint": "Prefere escolher uma hora?",
+    "bookCall": "Marcar uma chamada de 30 min"
   },
   "report": {
     "title": "TREASURE HUNT RECAP",

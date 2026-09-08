@@ -1,0 +1,405 @@
+{
+  "nav": {
+    "demo": "Démo",
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment Ça Marche",
+    "useCases": "Cas d'Usage",
+    "packages": "Formules",
+    "media": "Médias",
+    "bookDemo": "Planifiez votre Événement"
+  },
+  "hero": {
+    "srTitle": "Treasure Hunt | Jeu interactif d'animation pour événements et congrès",
+    "headline": "Transformez votre Événement en",
+    "headlineHighlight": "Expérience Gamifiée",
+    "tagline": "Les participants explorent, scannent des points de contrôle, gagnent de vraies récompenses et génèrent du passage là où vous en avez besoin",
+    "taglineSuffix": ". Directement depuis le navigateur du téléphone, sans télécharger d'application.",
+    "trustBadge": "Déployé à ETHDenver, Future Maker et plus · plus de 10 000 trésors trouvés · plus de 500 points de contrôle · plus de 500 joueurs",
+    "bookDemo": "Planifiez votre Événement",
+    "seeItLive": "Voir Nos Résultats →"
+  },
+  "marquee": [
+    "Aucune Application à Télécharger",
+    "Points de Contrôle NFC et QR",
+    "Classements en Temps Réel",
+    "Boutique Intégrée",
+    "Générez du Passage",
+    "Défis Créés par les Joueurs",
+    "Récompenses Sociales",
+    "Placement de Points pour Sponsors",
+    "Tableau de Bord en Direct"
+  ],
+  "demo": {
+    "eyebrow": "01 / Démo",
+    "heading": "Découvrez ce que les",
+    "headingHighlight": "Participants",
+    "headingSuffix": "ont Vécu sur 8 Événements",
+    "seeItLive": "Voir en Direct →",
+    "seeReport": "Voir le Rapport →",
+    "seeFmReport": "Voir le Rapport →",
+    "phones": [
+      "Base de départ : scannez, explorez, rivalisez",
+      "Carte interactive du site avec suivi des points en direct",
+      "Le classement en direct entretient la compétition toute la journée",
+      "Boutique intégrée où les récompenses deviennent de vrais objets"
+    ],
+    "stats": [
+      { "value": "10,000+", "label": "Trésors Trouvés" },
+      { "value": "500+", "label": "Points de Contrôle" },
+      { "value": "1.7M+", "label": "Récompenses Émises" },
+      { "value": "8", "label": "Événements Déployés" }
+    ],
+    "ethdenverCard": {
+      "title": "ETHDenver 2026",
+      "location": "Denver, CO · 18–21 févr.",
+      "stat1": "992 trésors · 59 points de contrôle",
+      "stat2": "462K BUFFI · 4 jours"
+    },
+    "futureMakerCard": {
+      "title": "Future Maker 2026",
+      "location": "NOVA IMS, Lisbonne · 16–19 mars",
+      "stat1": "2 591 trésors · 115 points de contrôle",
+      "stat2": "1M FM · 3 jours"
+    },
+    "smartCitiesCard": {
+      "title": "Smart Cities Summit 2026",
+      "location": "FIL Pavillon 3, Lisbonne · 12–14 mai",
+      "stat1": "8 123 trésors · 103 points de contrôle",
+      "stat2": "159K FIL · 3 jours"
+    },
+    "cadavalCard": {
+      "title": "Cadaval Festival 2026",
+      "location": "Cadaval, Portugal · 22–23 mai",
+      "stat1": "2 182 trésors · 57 points de contrôle",
+      "stat2": "76 775 FCT · 2 jours"
+    },
+    "springBootcampCard": {
+      "title": "Spring Bootcamp 2026",
+      "location": "NOVA IMS, Lisbonne · 7 avr.",
+      "stat1": "7 équipes · 220 trésors",
+      "stat2": "45 650 SB · 42 points de contrôle"
+    },
+    "dataSummitCard": {
+      "title": "Data with Purpose Summit 2026",
+      "location": "Taguspark, Oeiras · 25 juin",
+      "stat1": "777 trésors · 25 points de contrôle",
+      "stat2": "25 900 DATA · 1 jour"
+    }
+  },
+  "socialProof": {
+    "deployedAt": "Déployé Chez"
+  },
+  "media": {
+    "eyebrow": "03 / Médias",
+    "heading": "Comment Ça Se Passe,",
+    "headingHighlight": "dans Leurs Mots",
+    "subheading": "Entretiens depuis le hall du Portugal Smart Cities Summit, ainsi que des photos et des extraits de déploiements réels.",
+    "watchInterview": "Entretien complet",
+    "interviewTeaser": "Extraits",
+    "fullCaption": "Joana Pereira et Dinis Araújo · 2:26",
+    "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
+    "quote": "Treasure Hunt est une gamification du congrès lui-même. Nous cachons des trésors dans tout le site, et les joueurs trouvent les emplacements puis approchent leur téléphone pour réclamer une récompense. Plus de la moitié des stands ont participé, et cela crée une véritable interaction entre les participants et l'exposition.",
+    "quoteName": "Dinis Araújo",
+    "quoteRole": "CTO, NOVA Blockchain Lab",
+    "quoteContext": "FIL Pavillon 3, Lisbonne",
+    "galleryHeading": "Sur les événements",
+    "photo1Alt": "Participante tenant le dépliant officiel Treasure Hunt avec un code QR à scanner",
+    "photo2Alt": "Membre de l'équipe Treasure Hunt présentant le jeu au public sur le stand NOVA Cidade",
+    "photo3Alt": "L'équipe de l'événement célébrant ensemble sous les lumières du site",
+    "photo4Alt": "Participant approchant son téléphone d'une affiche Treasure Hunt au Data with Purpose Summit",
+    "photo5Alt": "Bobs NOVA Blockchain Lab distribués comme récompenses de l'événement",
+    "photo6Alt": "Sweat à capuche Treasure Hunt en édition limitée avec la mascotte du labyrinthe",
+    "teamFlyersAlt": "Participants tenant des dépliants Treasure Hunt à scanner sur le stand",
+    "clip1Alt": "Joueur réagissant après avoir gagné",
+    "clip2Alt": "Main approchant un téléphone d'une étiquette Treasure Hunt"
+  },
+  "features": {
+    "eyebrow": "02 / Fonctionnalités",
+    "heading": "Conçu pour les Organisateurs.",
+    "headingHighlight": "Adoré par les Participants.",
+    "description": "Treasure Hunt transforme n'importe quel événement en aventure en direct. Les participants gagnent des points en explorant votre espace, en relevant des défis et en découvrant des points de contrôle cachés. Les points débloquent de vraies récompenses dans la boutique intégrée.",
+    "items": [
+      {
+        "title": "Orientez le Passage",
+        "description": "C'est vous qui décidez où placer les points de contrôle. Chaque point est une raison de traverser le site, amenant du passage vers les sponsors, les stands et les zones peu fréquentées."
+      },
+      {
+        "title": "Récompensez la Vraie Participation",
+        "description": "Les participants gagnent des récompenses pour leur implication, pas seulement pour leur présence. Des points à dépenser dans la boutique intégrée sur des articles exclusifs et des récompenses de sponsors."
+      },
+      {
+        "title": "Installation sans Friction",
+        "description": "Placez des étiquettes NFC ou des codes QR où vous voulez. Les participants se connectent une fois et jouent en quelques secondes. Pas d'application. Pas de téléchargement. Pas de friction."
+      },
+      {
+        "title": "Mesurez Tout en Temps Réel",
+        "description": "Voyez quels points sont visités, quelles zones restent peu explorées et qui sont vos participants les plus impliqués. Analytique en direct pour les organisateurs."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "04 / Comment Ça Marche",
+    "heading": "Cinq Étapes.",
+    "headingHighlight": "Zéro Friction.",
+    "callout": "Vous placez les points de contrôle. Vous définissez les récompenses. Nous nous occupons du reste.",
+    "infraEyebrow": "Ce Qui Fait Tourner le Tout",
+    "infraHeading": "Pourquoi Cela Ressemble",
+    "infraHighlight": "à de la Magie",
+    "infraDescription": "Derrière chaque scan, chaque récompense et chaque mise à jour du classement se trouve une véritable infrastructure conçue pour la rapidité, la transparence et l'absence de friction. Vos participants ne voient jamais la complexité. Ils jouent, tout simplement.",
+    "steps": [
+      { "title": "Ouvrez et Jouez Aussitôt", "description": "Les participants ouvrent une URL sur leur téléphone et se connectent d'un seul geste. Pas d'application à télécharger, pas de compte à créer. Ils jouent en quelques secondes." },
+      { "title": "Explorez le Site", "description": "Les points de contrôle sont placés là où vous voulez du passage. Les participants suivent la carte, découvrent des recoins cachés et trouvent des récompenses dans tout votre espace." },
+      { "title": "Scannez pour Gagner", "description": "Une approche du téléphone sur une étiquette NFC ou le scan d'un code QR. Récompense immédiate, enregistrée automatiquement. Chaque interaction devient une donnée pour vous." },
+      { "title": "Rivalisez et Collaborez", "description": "Les classements en direct alimentent une compétition amicale. Les défis sociaux et les missions d'équipe maintiennent l'énergie pendant tout l'événement." },
+      { "title": "Dépensez de Vraies Récompenses", "description": "Les points débloquent des récompenses et des prix exclusifs. Les participants repartent avec quelque chose de concret en souvenir de votre événement." }
+    ],
+    "infraItems": [
+      { "title": "Fonctionne sur Nova Cidade L3", "description": "Un réseau blockchain de couche 3 dédié et conçu pour la rapidité. Pensé pour accueillir des milliers de joueurs simultanés sans latence ni panne, même aux pics d'activité." },
+      { "title": "Coût Nul pour les Participants", "description": "Un paymaster intégré prend en charge tous les frais de transaction. Les participants récoltent des récompenses, achètent en boutique et grimpent au classement sans payer un centime." },
+      { "title": "Connexion en un Geste", "description": "Pas de phrase de récupération, pas de portefeuille à configurer, aucune connaissance technique requise. Les participants se connectent comme sur n'importe quelle autre application. Nous gérons le déploiement du compte intelligent et la gestion des clés en coulisses." },
+      { "title": "Totalement Transparent et Vérifiable", "description": "Chaque récompense émise, chaque point de contrôle scanné, chaque achat en boutique : tout est enregistré et vérifiable. Donnez aux sponsors et aux parties prenantes des données d'engagement fiables." }
+    ]
+  },
+  "useCases": {
+    "eyebrow": "03 / Cas d'Usage",
+    "heading": "Conçu pour",
+    "headingHighlight": "Tout Lieu Accueillant du Public",
+    "description": "Des rencontres de 50 personnes aux arènes de 10 000 places. Treasure Hunt s'adapte à votre événement et à vos objectifs.",
+    "items": [
+      { "title": "Congrès et Sommets", "description": "Transformez des participants passifs en explorateurs actifs. Amenez du passage aux stands des sponsors, remplissez les temps morts entre les sessions et donnez aux organisateurs des données solides sur ce qui a fonctionné." },
+      { "title": "Événements d'Entreprise", "description": "Gamifiez les lancements de produits, les séminaires d'équipe et les conventions internes. Donnez à chaque participant une raison d'explorer l'espace et d'interagir avec chaque activation." },
+      { "title": "Universités et Campus", "description": "Semaines d'accueil, journées portes ouvertes et visites de campus que les étudiants apprécient vraiment. Ils explorent, rivalisent et découvrent des lieux qu'ils auraient sinon ignorés." },
+      { "title": "Festivals et Salons", "description": "Ajoutez une couche d'exploration sur de très grands sites. Récompensez les participants qui visitent les scènes, les espaces sponsors et les expériences cachées, et mesurez tout en temps réel." },
+      { "title": "Activations de Marque", "description": "Reliez le marketing physique à des résultats mesurables. Sachez exactement quels points de contact ont généré de l'interaction, combien de temps les gens sont restés et avec quoi ils ont interagi." },
+      { "title": "Hackathons", "description": "Gardez les participants en mouvement entre les sessions de code. Récompensez la présence aux ateliers, aux stands des sponsors et dans les espaces conviviaux avec des goodies qu'ils veulent vraiment." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "05 / Témoignages",
+    "heading": "Ne Nous Croyez Pas",
+    "headingHighlight": "sur Parole",
+    "items": [
+      {
+        "quote": "Sincèrement !! La chasse au trésor a été un ÉNORME SUCCÈS ! Vous avez joué un grand rôle dans la création de l'expérience ETH Denver ! Bravo !",
+        "author": "Nick",
+        "role": "Responsable du Makerspace, ETHDenver"
+      },
+      {
+        "quote": "Mon stand était coincé dans un coin au fond, presque personne ne s'arrêtait. Puis Treasure Hunt a caché un point de contrôle à mon emplacement et d'un coup les gens n'arrêtaient plus d'arriver. Ils scannaient l'étiquette, voyaient mes baskets personnalisées et se mettaient à acheter. Ce seul point de contrôle a complètement changé mon week-end.",
+        "author": "Vendeur de Baskets Personnalisées",
+        "role": "ETHDenver 2026"
+      },
+      {
+        "quote": "Aucune application à télécharger, aucune configuration compliquée. Les joueurs scannaient des points de contrôle 30 secondes après leur connexion. La boutique a eu un énorme succès.",
+        "author": "NOVA Blockchain Lab",
+        "role": "Développeur de la Plateforme"
+      }
+    ]
+  },
+  "packages": {
+    "eyebrow": "06 / Formules",
+    "heading": "Une Plateforme,",
+    "headingHighlight": "pour des Événements de Toute Taille",
+    "description": "Commencez gratuitement pour les petits événements. Passez à des milliers de participants avec tous les outils d'engagement, l'analytique pour les sponsors et un accompagnement sur place.",
+    "tiers": [
+      { "name": "Starter", "subtitle": "Identité Treasure Hunt (sans personnalisation).", "bestFor": "Jusqu'à 100 participants", "cta": "Planifiez votre Événement", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Tout pour convaincre le public et les sponsors.", "bestFor": "De 100 à 1 000 participants", "cta": "Planifiez votre Événement", "badge": "Le Plus Choisi", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Fonctionnalités sur mesure. Analytique. Échelle multi-événements.", "bestFor": "Plus de 1 000 participants", "cta": "Parlez à Notre Équipe", "badge": "", "priceHint": "" }
+    ],
+    "categories": [
+      {
+        "title": "Points de Contrôle",
+        "features": [
+          "Apparence et design personnalisés",
+          "Points de contrôle par code QR",
+          "Points de contrôle par étiquette NFC",
+          "Design des points de contrôle sur mesure"
+        ]
+      },
+      {
+        "title": "Engagement",
+        "features": [
+          "Boutique de goodies",
+          "Classement en temps réel",
+          "Carte interactive du site",
+          "Sondages et votes",
+          "Récompenses pour abonnement aux réseaux",
+          "Placement stratégique des sponsors",
+          "Les joueurs peuvent cacher des points de contrôle"
+        ]
+      },
+      {
+        "title": "Accompagnement et Échelle",
+        "features": [
+          "Personnel d'accompagnement sur place",
+          "Développement de fonctionnalités sur mesure",
+          "Tableau de bord multi-événements",
+          "Rapport d'analytique après l'événement"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Prêt à Rendre votre Prochain Événement",
+    "headingHighlight": "Inoubliable ?",
+    "description": "Treasure Hunt se déploie en quelques jours. Parlez-nous de votre événement et nous vous montrerons ce qui est possible.",
+    "trustSignal": "Éprouvé sur plusieurs événements, avec des milliers de joueurs et des centaines de prix récupérés.",
+    "bookDemo": "Planifiez votre Événement",
+    "seeItLive": "Voir Nos Résultats →"
+  },
+  "stickyCta": {
+    "text": "Faites de votre prochain événement un jeu dont les participants parleront.",
+    "bookDemo": "Planifiez votre Événement"
+  },
+  "footer": {
+    "description": "Plateforme interactive d'animation d'événements qui génère du passage, récompense la participation et donne aux organisateurs une analytique en temps réel.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "contactLabel": "Contact",
+    "resources": "Ressources",
+    "blog": "Blog",
+    "ethdenverReport": "Rapport ETHDenver 2026",
+    "futuremakerReport": "Rapport Future Maker 2026",
+    "smartCitiesReport": "Rapport Smart Cities Summit 2026",
+    "cadavalReport": "Rapport Cadaval Festival 2026",
+    "springBootcampReport": "Rapport Spring Bootcamp 2026",
+    "dataSummitReport": "Rapport Data with Purpose Summit 2026",
+    "copyright": "Nova Blockchain Lab. Tous droits réservés."
+  },
+  "faq": {
+    "eyebrow": "07 / FAQ",
+    "heading": "Questions",
+    "headingHighlight": "Fréquentes",
+    "items": [
+      { "question": "Combien de temps faut-il pour la mise en place ?", "answer": "En 48 heures seulement. Nous gérons la technique, vous nous dites où placer les points de contrôle et quelles récompenses proposer." },
+      { "question": "Les participants doivent-ils télécharger une application ?", "answer": "Non. Tout fonctionne dans le navigateur du téléphone. Une connexion d'un geste, et l'on joue en quelques secondes." },
+      { "question": "Pouvons-nous personnaliser l'identité visuelle ?", "answer": "Oui. Les formules Pro et Enterprise incluent un design des points de contrôle et des noms de récompenses sur mesure. La formule Enterprise inclut une personnalisation en marque blanche." },
+      { "question": "À quoi ressemble l'installation des points de contrôle ?", "answer": "La conception et l'installation des codes QR comme des étiquettes NFC sont incluses dans les formules correspondantes. Nous nous occupons de tout, votre équipe n'a rien à faire." },
+      { "question": "Quelles données reçoivent les organisateurs ?", "answer": "Toutes les formules incluent un tableau de bord en temps réel avec les visites des points de contrôle, des cartes de chaleur de l'engagement et les positions au classement pendant l'activation du jeu. Enterprise ajoute un rapport d'analytique complet après l'événement à partager avec les sponsors, ainsi qu'un tableau de bord multi-événements pour suivre et comparer les performances des événements les plus importants, ce qui permet d'identifier les points forts, les points faibles et ce qui a réellement généré de l'engagement." },
+      { "question": "Y a-t-il une taille minimale d'événement ?", "answer": "Starter couvre les événements jusqu'à 100 participants. Pro va jusqu'à 1 000, et Enterprise prend en charge tout ce qui dépasse." }
+    ]
+  },
+  "contactForm": {
+    "title": "Planifiez votre Événement",
+    "subtitle": "Parlez-nous de votre événement et nous vous répondrons sous 24 heures.",
+    "name": "Votre Nom",
+    "email": "Adresse E-mail",
+    "eventSize": "Participants Attendus",
+    "eventSizeOptions": ["50–200", "200–1 000", "1 000–5 000", "Plus de 5 000"],
+    "message": "Parlez-nous de votre événement",
+    "submit": "Envoyer la Demande",
+    "sending": "Envoi en cours...",
+    "success": "Merci ! Nous vous répondrons sous 24 heures.",
+    "error": "Une erreur est survenue. Écrivez-nous directement par e-mail.",
+    "bookCallHint": "Vous préférez choisir un créneau ?",
+    "bookCall": "Réserver un appel de 30 min"
+  },
+  "report": {
+    "title": "RÉCAPITULATIF TREASURE HUNT",
+    "subtitle": "MakerSpace de l'ETHDenver 2026",
+    "totalTreasures": "Trésors au Total",
+    "buffiMinted": "BUFFI Émis",
+    "uniqueHunters": "Chasseurs Uniques",
+    "treasuresFound": "Trésors Trouvés",
+    "treasuresHidden": "Trésors Cachés",
+    "merchPurchased": "Goodies Achetés",
+    "dailyActivity": "ACTIVITÉ QUOTIDIENNE",
+    "activityBreakdown": "RÉPARTITION DE L'ACTIVITÉ",
+    "totalActions": "Actions au Total",
+    "found": "Trouvés",
+    "hidden": "Cachés",
+    "social": "Social",
+    "qr": "QR",
+    "merch": "Goodies",
+    "tokenDistribution": "DISTRIBUTION DES JETONS",
+    "top10Holders": "10 Principaux Détenteurs de BUFFI",
+    "hourlyActivity": "ACTIVITÉ HORAIRE (MST)",
+    "hourlyDescription": "Transactions par heure de la journée sur tous les jours de l'événement",
+    "mintingTimeline": "CHRONOLOGIE DES ÉMISSIONS",
+    "treasurePopularity": "POPULARITÉ DES TRÉSORS",
+    "treasurePopularityDesc": "59 trésors au total · 992 découvertes · 33 cachés par 29 joueurs",
+    "treasure": "Trésor",
+    "finds": "Découvertes",
+    "hiddenBy": "Caché Par",
+    "merchStore": "BOUTIQUE",
+    "merchStoreDesc": "137 achats par 73 acheteurs · 213 820 BUFFI brûlés",
+    "item": "Article",
+    "price": "Prix",
+    "sold": "Vendus",
+    "buffiBurned": "BUFFI Brûlés",
+    "topHunters": "MEILLEURS CHASSEURS",
+    "hunter": "Chasseur",
+    "funFacts": "LE SAVIEZ-VOUS",
+    "firstClaim": "Première Réclamation",
+    "lastClaim": "Dernière Réclamation",
+    "mostActiveHunter": "Chasseur le Plus Actif",
+    "mintEvents": "émissions",
+    "biggestSingleReward": "Plus Grande Récompense Unique",
+    "avgBuffiPerHunter": "BUFFI Moyens par Chasseur",
+    "topHider": "Meilleur Cacheur",
+    "tagsHidden": "étiquettes cachées",
+    "mostPopularTreasure": "Trésor le Plus Populaire",
+    "hottestMerch": "Goodies les Plus Vendus",
+    "purchased": "achetés",
+    "uniqueHidersLabel": "Cacheurs Uniques",
+    "viewContract": "Voir le Contrat sur l'Explorateur",
+    "builtOn": "Construit sur Nova Cidade Chain",
+    "transactions": "Transactions",
+    "buffiLabel": "BUFFI",
+    "buffiMintedLabel": "BUFFI Émis",
+    "venue": "Lieu"
+  },
+  "fmReport": {
+    "title": "RÉCAPITULATIF FUTURE MAKER HUNT",
+    "subtitle": "16–19 mars 2026 · NOVA IMS, Lisbonne",
+    "totalTreasures": "Trésors au Total",
+    "fmMinted": "FM Émis",
+    "uniqueHunters": "Chasseurs Uniques",
+    "treasuresFound": "Trésors Trouvés",
+    "totalTransactions": "Transactions au Total",
+    "merchPurchased": "Goodies Achetés",
+    "dailyActivity": "ACTIVITÉ QUOTIDIENNE",
+    "activityBreakdown": "RÉPARTITION DE L'ACTIVITÉ",
+    "totalActions": "Actions au Total",
+    "found": "Trouvés",
+    "social": "Social",
+    "qr": "QR",
+    "merch": "Goodies",
+    "tokenDistribution": "DISTRIBUTION DES JETONS",
+    "top10Holders": "10 meilleurs chasseurs par total de FM gagnés (classement MVP)",
+    "hourlyActivity": "ACTIVITÉ HORAIRE (UTC/WET)",
+    "hourlyDescription": "Répartition des transactions par heure sur tous les jours de l'événement",
+    "mintingTimeline": "CHRONOLOGIE DES ÉMISSIONS",
+    "mintingDescription": "Jetons FM émis par jour",
+    "treasurePopularity": "POPULARITÉ DES TRÉSORS",
+    "treasurePopularityDesc": "Les 115 trésors classés par nombre de découvertes",
+    "treasure": "Trésor",
+    "finds": "Découvertes",
+    "hiddenBy": "Caché Par",
+    "recycledNote": "Ces entrées correspondent à des étiquettes NFC supprimées et réattribuées en cours d'événement. Face au grand nombre de demandes pour cacher des étiquettes, nous avons recyclé des étiquettes déjà réclamées afin d'assurer l'équité envers les participants qui n'en avaient pas encore caché. Leurs données de découverte on-chain sont conservées ci-dessus.",
+    "merchStore": "BOUTIQUE",
+    "merchStoreDesc": "Articles achetés avec des jetons FM (brûlés à l'achat)",
+    "item": "Article",
+    "price": "Prix",
+    "sold": "Vendus",
+    "fmBurned": "FM Brûlés",
+    "topHunters": "MEILLEURS CHASSEURS",
+    "hunter": "Chasseur",
+    "fmEarned": "FM Gagnés",
+    "funFacts": "LE SAVIEZ-VOUS",
+    "firstClaim": "Première Réclamation",
+    "lastClaim": "Dernière Réclamation",
+    "mostActiveHunter": "Chasseur le Plus Actif",
+    "biggestSingleReward": "Plus Grande Récompense Unique",
+    "avgFmPerHunter": "FM Moyens par Chasseur",
+    "mostPopularTreasure": "Trésor le Plus Populaire",
+    "mostPopularMerch": "Goodies les Plus Populaires",
+    "fmBurnedOnMerch": "FM Brûlés en Goodies",
+    "peakHour": "Heure de Pointe",
+    "viewContract": "Voir le Contrat sur l'Explorateur",
+    "builtOn": "Construit sur Nova Cidade Chain · NOVA Blockchain Lab",
+    "transactions": "Transactions",
+    "fmLabel": "FM",
+    "fmMintedLabel": "FM Émis"
+  }
+}

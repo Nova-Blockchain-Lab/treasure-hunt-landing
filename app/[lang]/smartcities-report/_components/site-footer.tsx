@@ -102,26 +102,6 @@ export function SiteFooter({ snapshot }: { snapshot: Snapshot }) {
               reporter identities, anomaly flags, and internal IDs are
               stripped from this public view.
             </p>
-            <div
-              style={{
-                marginTop: 14,
-                display: "flex",
-                gap: 16,
-                fontSize: 12,
-                fontFamily: "var(--font-display)",
-                letterSpacing: "0.14em",
-              }}
-            >
-              <a href="#" style={{ color: "var(--neon-cyan)", textDecoration: "none" }}>
-                METHODOLOGY →
-              </a>
-              <a
-                href="/api/report/snapshot"
-                style={{ color: "var(--neon-cyan)", textDecoration: "none" }}
-              >
-                DATA SNAPSHOT JSON →
-              </a>
-            </div>
           </div>
         </div>
 

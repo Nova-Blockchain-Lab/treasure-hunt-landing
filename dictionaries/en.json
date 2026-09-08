@@ -290,7 +290,9 @@
     "submit": "Send Request",
     "sending": "Sending...",
     "success": "Thanks! We\u2019ll be in touch within 24 hours.",
-    "error": "Something went wrong. Please email us directly."
+    "error": "Something went wrong. Please email us directly.",
+    "bookCallHint": "Prefer to pick a time?",
+    "bookCall": "Book a 30-min call"
   },
   "report": {
     "title": "TREASURE HUNT RECAP",

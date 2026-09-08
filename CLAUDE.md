@@ -8,16 +8,6 @@ When marketing-related tasks are requested (CRO, copywriting, SEO, A/B testing, 
 
 Available skills: ab-test-setup, ad-creative, ai-seo, analytics-tracking, churn-prevention, cold-email, competitor-alternatives, content-strategy, copy-editing, copywriting, email-sequence, form-cro, free-tool-strategy, launch-strategy, marketing-ideas, marketing-psychology, onboarding-cro, page-cro, paid-ads, paywall-upgrade-cro, popup-cro, pricing-strategy, product-marketing-context, programmatic-seo, referral-program, revops, sales-enablement, schema-markup, seo-audit, signup-flow-cro, site-architecture, social-content.
 
-## Tech stack
-
-- **Next.js 16** (App Router, Turbopack) on **Vercel**
-- **React 19**, **TypeScript 5.7**
-- **Tailwind v4** (`@tailwindcss/postcss`)
-- **next-intl** for i18n (`localePrefix: 'as-needed'`, `localeDetection: false`)
-- **framer-motion** for animations, **recharts** for the report charts
-- **@vercel/analytics**, **PostHog** (product analytics + A/B), **GA4** (gated on cookie consent)
-- Package manager: **pnpm 10**
-
 ## Commands
 
 ```bash
@@ -26,69 +16,66 @@ pnpm dev          # next dev
 pnpm build        # next build
 pnpm start        # next start (after build)
 pnpm lint         # eslint .
+pnpm check:dict   # assert every dictionaries/<locale>.json matches en.json's key shape
 ```
 
-## Project structure
+`pnpm lint` works now (ESLint 9 flat config in `eslint.config.mjs`; it used to
+fail outright, because the script existed but neither eslint nor a config was
+installed). It currently reports ~32 pre-existing `react-hooks/static-components`
+and `react-hooks/set-state-in-effect` errors in `page-client.tsx`,
+`sticky-cta-bar.tsx`, `text-shimmer.tsx`, `consent-context.tsx` and the report
+`_components`. Left alone deliberately: they touch the A/B variant and consent
+paths. `next build` does not run eslint, so they don't block a deploy. Pinned to
+eslint 9 because `eslint-plugin-react` 7.x breaks on eslint 10.
 
-```
-app/
-├── layout.tsx              # Root: metadataBase + fonts (Bebas Neue, Tomorrow, Roboto Mono)
-├── page.tsx                # Root home (en): metadata + JsonLd, renders <PageClient> (middleware routes / → /[lang])
-├── opengraph-image.tsx     # Edge-rendered OG image (1200×630)
-├── manifest.ts             # PWA manifest
-├── robots.ts               # robots.txt
-├── sitemap.ts              # sitemap.xml — static pages + blog posts, with hreflang alternates (en/pt/x-default)
-├── feed.xml/route.ts       # RSS feed for blog
-├── api/contact/route.ts    # Contact form submission endpoint
-└── [lang]/                 # i18n segment, locales = ['en', 'pt'], default = 'en'
-    ├── layout.tsx          # Generates per-locale Metadata (title, description, hreflang, OG, twitter); renders JsonLd
-    ├── page.tsx            # Reads AB cookie + dictionary, applies variant overrides, renders <PageClient>
-    ├── blog/
-    │   ├── page.tsx        # Blog listing
-    │   └── [slug]/page.tsx # Blog post (BlogPosting + BreadcrumbList JSON-LD @graph inline)
-    ├── ethdenver-report/   # Static report page with charts (generateMetadata, locale-aware)
-    ├── futuremaker-report/ # Static report page with charts
-    ├── springbootcamp-report/ # Static team-based report (Spring Bootcamp 2026); self-contained, no dict keys
-    ├── smartcities-report/  # Ported PSCS 2026 report (force-static); reads data/pscs2026/report-snapshot.json via lib/smartcities-report.ts; self-contained _components/ + _report.css
-    ├── cadaval-report/      # Ported Festival da Juventude 2026 report; reads data/cadaval2026/report-snapshot.json via lib/cadaval-report.ts; self-contained _components/ + _report.css
-    └── datasummit-report/  # Ported Data with Purpose Summit 2026 report (NOVA IMS, Taguspark, 25 Jun 2026, one day); reads data/datasummit2026/report-snapshot.json via lib/datasummit-report.ts; self-contained _components/ + _report.css. Venue map asset is public/datasummit-venue-map.png (1517×1600 portrait).
-    # All 6 report routes use locale-aware generateMetadata (self-canonical per locale + en/pt/x-default hreflang) and are linked from the demo section cards. Each Event is in the json-ld graph.
+## Locales / i18n
 
-components/                 # Section components, composed by components/page-client.tsx
-├── page-client.tsx         # Client wrapper: composes all home sections + analytics tracking
-├── navbar.tsx              # Sticky navbar with section-active highlight
-├── hero-section.tsx        # Logo image + sr-only H1 + tagline + CTAs
-├── marquee-strip.tsx
-├── demo-section.tsx        # Phone screenshots + 6 per-event stat cards (ETHDenver featured + 5 auto-fit grid), each linking to its report
-├── media-section.tsx       # Two interview videos side by side (stacked on mobile) + centered pull-quote band + a uniform-cell event gallery grid; assets in public/media/; id="media". Design was set by a debate+critique agent cycle (July 2026): **no carousel** — for an at-a-glance credibility gallery a grid beats a serial carousel, and the mobile-length problem is solved by fixed-aspect cells instead. `InterviewVideo` (local component) renders a branded poster + coral play button at rest and only enables native `<video controls>` after first play (raw video chrome was the biggest premium-brand break); each has a speaker caption (`fullCaption`/`teaserCaption`). Video 1 (`watchInterview` badge "Full interview") = interview.mp4, the full 2:26 Smart Cities Summit interview (PT audio, burned-in EN subtitles; Joana Pereira + Dinis Araújo), from ../insta/"Treasure Hunt 1.0.mov" via the scratchpad pipeline (whisper → hand PT→EN → PIL subtitle PNGs overlaid with ffmpeg since this ffmpeg has no libass; 4K→720p; SRT at public/media/interview.en.srt). Video 2 (`interviewTeaser` badge "Highlights") = interview-teaser.mp4, the 27s branded cut (Dinis lower-third + EN subs baked in; explicit poster interview-teaser-poster.jpg). Gallery = fixed `aspect-[4/5]` grid (2-col mobile / 3-col desktop, `object-cover`) — halved the mobile section (~4,600px→~2,260px). `ClipTile` (local) keeps the two 9:16 clips autoplay-muted-loop (poster under reduced-motion) with an always-visible pause/play toggle (WCAG 2.2.2) that also signals "video". team-flyers.jpg (4/5 crop of insta post1_hero_team) added; the off-tone ecommerce hoodie flat-lay dropped. Media audit finding: the insta archive is thin for gallery use — most unused shots are candids/duplicative; the ETHDenver venue-map "26 NFC tags" shot (post4) is strong scale-proof but landscape/infographic, better suited to Demo/HowItWorks than this candid grid.
-├── social-proof-strip.tsx  # "DEPLOYED AT" event logos — data-driven uniform 4-col grid (was a ragged flex-wrap). Mixed polarity: light/transparent marks render bare; dark-on-white wordmarks (Future Maker, Data w/ Purpose, Spring Bootcamp) get a white `chip`. Cadaval bg was flood-filled to transparent + served `unoptimized` (see AVIF gotcha below). Cultural Week bg stripped to transparent (all-blue, reads on dark). Every logo links to the external event/conference site (Spring Bootcamp + Cultural Week point to their NOVA IMS event pages, not our own report/game).
-├── features-section.tsx
-├── how-it-works-section.tsx
-├── use-cases-section.tsx
-├── testimonials-section.tsx
-├── faq-section.tsx
-├── packages-section.tsx
-├── cta-section.tsx
-├── contact-modal.tsx       # Contact form modal (posts to /api/contact)
-├── site-footer.tsx         # 4-column: logos + Navigation + Resources + Contact (takes lang prop)
-├── sticky-cta-bar.tsx
-├── cookie-consent-banner.tsx # Consent gate for analytics
-├── ga4-script.tsx          # GA4 loader (consent-gated)
-├── posthog-provider.tsx    # PostHog provider + pageview capture
-├── json-ld.tsx             # Site-wide JSON-LD graph (Org, SoftwareApplication, WebPage, Events, Reviews)
-└── (helpers: spotlight-card, glass-card, reveal-on-scroll, text-shimmer, number-ticker)
+Six locales: `en` (default, unprefixed) plus `pt`, `es`, `it`, `de`, `fr` under
+`/<locale>`. `localePrefix: 'as-needed'`, `localeDetection: false`.
 
-data/                       # Static content (TS) — features, packages, blog posts, report data, etc.
-dictionaries/               # en.json, pt.json + index.ts (getDictionary loader)
-docs/                       # cro-roadmap.md and other working docs
-i18n/                       # next-intl routing + locale config
-hooks/                      # use-scroll-position, use-active-section, use-analytics-tracking
-lib/                        # shared utilities — ab-test.ts, analytics.ts, consent-context.tsx; cadaval-report.ts + smartcities-report.ts (snapshot types + readSnapshot for the two ported reports)
-public/                     # logos, screenshots, favicon; public/media/ (interview.mp4 + clips + event photos + posters; flyer-claim/merch-hats/merch-hoodie from ../insta/assets + datasummit-tap (cropped from the insta media repo story), all ≤1600px)
-proxy.ts                    # next-intl proxy (renamed from middleware.ts per Next 16 convention) + A/B variant cookie
-next.config.mjs             # AVIF/WebP, security headers, immutable image cache
-.env.example                # Required env vars (analytics keys, etc.)
-```
+- `i18n/config.ts` is the single source of truth: `locales`, `defaultLocale`,
+  `localeTags` (BCP-47 for `<html lang>`/hreflang — note `pt` → **`pt-PT`**) and
+  `ogLocales`. Adding a locale means adding it here **and** adding
+  `dictionaries/<locale>.json`; `pnpm check:dict` fails if the key shapes drift
+  (350 leaves). Run it after touching any dictionary.
+- **Only the home page is fully localised.** Every locale's home is a complete
+  translation of `dictionaries/en.json`, so all six sit in one reciprocal
+  hreflang cluster (self-referencing + `x-default` → EN), built from
+  `homeLanguages` in `app/[lang]/layout.tsx` and mirrored in `app/sitemap.ts`.
+- Everything else is EN-only or EN+PT and **cross-locale canonicals to its EN
+  original**: the EN landing pages, the blog, and the four non-dictionary
+  reports all canonical to `/<path>` from `/<locale>/<path>`. Only
+  `ethdenver-report` and `futuremaker-report` are genuinely bilingual and
+  self-canonical under `/pt`. Do not add `es/it/de/fr` hreflang to those pages
+  without writing real translated copy first — chrome-only locale pages are the
+  scaled-content failure mode.
+- Per-locale home `title`/`description`/`keywords` live in the `homeMeta` map in
+  `app/[lang]/layout.tsx`, written per market (e.g. "digitale Schnitzeljagd",
+  "caccia al tesoro aziendale"), not machine-swapped.
+- Each non-EN locale also has **one hand-written landing page** (see below):
+  `pt` has three, and `es`/`it`/`de`/`fr` have one each. The footer's Solutions
+  list is per locale (`LOCALE_SOLUTIONS` in `site-footer.tsx`) so a German page
+  never links a list of English landing pages.
+- `components/language-switcher.tsx` renders crawlable `<Link>`s for all six and
+  always points at the **locale home**, not the current path, since only the
+  home is translated.
+- `getDictionary` **must not throw on an unknown locale.** `proxy.ts` excludes
+  any path with a dot from the locale middleware, so `/foo.txt` reaches
+  `app/[lang]/page.tsx` with `lang="foo.txt"`; layouts and pages render
+  concurrently, so an unguarded `dictionaries[lang]()` threw before the layout's
+  `notFound()` landed and Vercel served **HTTP 500 instead of 404 for every
+  dotted URL**. It falls back to the default locale — keep that guard.
+
+## Root layout
+
+`app/[lang]/layout.tsx` **is** the root layout: it owns `<html>`/`<body>`, the
+fonts and the providers. There is deliberately no `app/layout.tsx` and no
+`app/page.tsx` — that is what lets `<html lang>` be correct per locale (with a
+parent root layout there was no access to the `[lang]` segment and the site
+shipped no `lang` attribute at all). The old `app/page.tsx` was also dead code:
+the proxy rewrites `/` → `/en`, so `app/[lang]` serves the homepage, and the
+stale file declared a different title and description than what shipped. Don't
+reintroduce either file.
 
 ## SEO landing pages (content-driven)
 
@@ -113,12 +100,23 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
 - Current set: EN — nfc-treasure-hunt, event-gamification, qr-scavenger-hunt-events,
   goosechase-alternative, scavify-alternative, scavenger-hunt-universities,
   trade-show-booth-traffic, team-building-scavenger-hunt; PT —
-  caca-ao-tesouro-digital-empresas, peddy-paper-digital, team-building-eventos.
+  caca-ao-tesouro-digital-empresas, peddy-paper-digital, team-building-eventos;
+  ES — caza-del-tesoro-digital-empresas; IT — caccia-al-tesoro-aziendale;
+  DE — digitale-schnitzeljagd-firmenevent; FR — chasse-au-tresor-entreprise.
+- `content.locale` is a full `Locale`, and the page is **single-language**: the
+  canonical points at that locale's URL and the hreflang set is that locale plus
+  `x-default`. Never add a cross-language alternate to a landing page without
+  writing real copy in that language.
 - Copy is grounded in real product facts only (no invented stats). Authored +
   critiqued via a multi-agent loop; keep that bar when adding pages.
 
 ## Blog
 
+- The `/blog` hub carries its own intro copy (what the posts cover, where the
+  numbers come from, the recurring questions). It was 250 words of card links and
+  Search Console returned "Crawled, currently not indexed" for it. A listing page
+  needs its own reason to exist. Post cards are `h3` under an "All posts" `h2`,
+  and they link `/blog/<slug>` unprefixed because posts are EN-only.
 - Posts live in `data/blog-posts.ts` (slug/title/description/date/content). 6 posts as of July 2026; the three July posts are event case studies grounded in the report snapshot data (PSCS trade-fair, Data Summit one-day, Spring Bootcamp teams) — every number must trace to `data/*/report-snapshot.json` or the report TS files, no invented stats.
 - The renderer (`BlogContent` in `app/[lang]/blog/[slug]/page.tsx`) supports `##`, `**bold**`, `*em*`, `- lists`, and `[text](/internal-path)` links (internal only, href must start with `/`). Use those links to point posts at their report + landing pages.
 - New posts are picked up by the sitemap automatically, but bump the `/blog` listing `lastModified` in `app/sitemap.ts` when publishing.
@@ -130,27 +128,120 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
 - **Accent system:** coral (`#F0605D`→`#FF9A76`) is the brand accent — logo, headings, CTAs, section eyebrows + dashes, demo stat numbers, the how-it-works callout. Blue (`#58A6FF`) is reserved for *functional* tints only (feature/infra icons, packages category labels/notes). Don't use blue for navigational/brand emphasis.
 - **Dark-theme text colors:** body `#E6EDF3`, secondary `#8B949E`, muted `#7D8590` (the `--text-muted` token — was `#484F58`, which failed WCAG AA at ~2.4:1 on the near-black bg). Don't reintroduce `#484F58` for readable text. Keyboard focus uses one global `:focus-visible` coral outline in `globals.css` — don't add bare `focus:outline-none` without a replacement.
 - **next/image + transparent PNG + AVIF gotcha:** Next's AVIF encoder can flatten a transparent PNG's alpha to opaque black at *some* widths (hit on `cadaval-festival-logo.png` at w=256, fine at 384/640). If a transparent logo renders with a black box, set `unoptimized` on that `<Image>` (it serves the PNG as-is). Clearing `.next/cache/images` alone is not enough — the dev server caches optimized variants in memory.
-- **Metadata is generated per-locale** in `app/[lang]/layout.tsx`. Each page-level `Metadata` adds its own `alternates` (canonical + en/pt/x-default hreflang) and OG/Twitter card images. Report pages use `generateMetadata` for locale-aware copy.
+- **Metadata is generated per-locale** in `app/[lang]/layout.tsx` from the `homeMeta` map. Each page-level `Metadata` adds its own `alternates` (canonical + hreflang) and OG/Twitter card images. Report pages use `generateMetadata` for locale-aware copy. Keep meta descriptions ≤ ~158 chars and `<title>` ≤ ~60 — the June 2026 audit found blog titles at 85–98 chars because `generateMetadata` appended `" | Treasure Hunt Blog"`; that suffix is gone, don't re-add it.
 - **og:image gotchas (two, both hit in the June 2026 SEO audit):** (1) the `proxy.ts` matcher must exclude `opengraph-image` — the path has no file extension, so without the exclusion next-intl rewrites it to `/[lang]/opengraph-image` → 404. (2) A child segment's `openGraph` object replaces the parent's **wholesale**, so any `openGraph` block without `images` silently drops the OG image — always include `images` (default: `https://www.treasurehunt.pt/opengraph-image`) when defining `openGraph` in a new page's metadata.
-- **Home page composition lives in `components/page-client.tsx`.** Both `app/page.tsx` (en root) and `app/[lang]/page.tsx` resolve the dictionary, apply A/B variant overrides, and render `<PageClient dict lang variant>`. Pass `lang` through to `SiteFooter` so its locale prefix is correct.
+- **Home page composition lives in `components/page-client.tsx`.** `app/[lang]/page.tsx` is the only entry point (see **Root layout**): it resolves the dictionary, renders `<PageClient dict lang>` and `<HomeJsonLd lang>`. Pass `lang` through to `SiteFooter` so its link prefixes are correct.
 - **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. The variant is resolved **client-side** in `PageClient` (reads/sets the cookie via `document.cookie`, applies overrides with `useMemo`). It is deliberately NOT read server-side: `cookies()` would opt the home + locale routes into dynamic rendering and force `private, no-store`. Server + first client render show `control` (the canonical copy); the variant swaps in after hydration.
 - **Analytics:** PostHog (provider in `components/posthog-provider.tsx`) and GA4 (`components/ga4-script.tsx`) are gated behind cookie consent (`lib/consent-context.tsx`, `components/cookie-consent-banner.tsx`). Event tracking via `hooks/use-analytics-tracking.ts`.
 - **Internal links must use `next/link`** (not `<a>` for non-anchor navigation) so the locale prefix logic can stay simple.
 - **PT copy uses proper PT-PT diacritics** (`dictionaries/pt.json` and the PT metadata in `app/[lang]/layout.tsx`). Don't add new PT strings without accents.
-- **Locale prefix:** `en` is at `/`, `pt` is at `/pt/...`. The footer & demo section build hrefs with `prefix = lang === "en" ? "" : "/" + lang`. `/en/*` → `/*` is a permanent 308 via `redirects()` in `next.config.mjs` (config redirects run before middleware; next-intl's own strip is only a 307).
+- **Locale prefix:** `en` is at `/`; `pt`, `es`, `it`, `de`, `fr` are at `/<locale>/...`. `/en/*` → `/*` is a permanent 308 via `redirects()` in `next.config.mjs` (config redirects run before middleware; next-intl's own strip is only a 307). **Footer links point at each resource's canonical URL, not at a `/<locale>/` variant** — only the two bilingual reports take a `/pt` prefix (`ptPrefix` in `site-footer.tsx`); the blog, the other four reports and the EN landing pages are always linked unprefixed, so no internal link targets a URL that canonicalises elsewhere.
 - **Sections on the home page link to each other via `#anchor`** (`#hero`, `#demo`, `#what`, `#how`, `#where`, `#packages`, `#cta`).
-- **JSON-LD:** site-wide graph lives in `components/json-ld.tsx` (rendered via `[lang]/layout.tsx` and the root `app/page.tsx`). Blog posts add their own `BlogPosting` + `BreadcrumbList` `@graph` script inline. Every `Event` node must include an `offers` object (Search Console flags missing `offers` as a non-critical Events issue) — copy the "Free Entry" offer pattern when adding new events.
+- **JSON-LD:** `components/json-ld.tsx` exports two components. `<JsonLd>` (in `[lang]/layout.tsx`, so every page) carries **only** site-wide nodes: `Organization` + `WebSite`, wired by `@id`. `<HomeJsonLd lang>` (only `[lang]/page.tsx`) adds the home `WebPage` + `SoftwareApplication`. Page-specific nodes belong to the page: `landing-jsonld.tsx` emits `WebPage` + `BreadcrumbList` + `FAQPage`, blog posts emit `BlogPosting` + `BreadcrumbList` inline.
+  Three things the Sept 2026 audit removed — do not put them back: (1) **`WebPage`/`BreadcrumbList` in the site-wide graph** — it described the home page on all 11 landing pages and 6 blog posts, giving each two conflicting `WebPage` nodes and two `BreadcrumbList`s; (2) **six past `Event` nodes injected site-wide** (Feb–Jun 2026, still `EventScheduled` with bookable "Free Entry" offers) — they matched neither the page they sat on nor anything upcoming, and made the site surface for other organisers' event names (`/ethdenver-report`: 406 impressions, 0 clicks in 90 days); (3) **`price: "0"` on all three `SoftwareApplication` offers** — the packages in `data/packages.ts` are quote-only via mailto, so that was pricing the product doesn't have. `SoftwareApplication` now ships no `offers` at all.
 - **Static SSG** for all routes except `/feed.xml`, `/opengraph-image` (edge runtime), and `/api/contact` (dynamic). The home routes are server-rendered on demand (cookie reads for A/B + consent).
 
 ## SEO notes
 
 - H1 in the hero is **`sr-only`** (the brand is rendered as the `treasure-hunt-logo.png` image). The visible H2s are per section.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`) emits hreflang alternates per entry, but only for **bilingual** pages (home + ethdenver-report + futuremaker-report, flagged `bilingual: true`). The other 4 reports + the blog are **EN-only**: they emit `en` + `x-default` only and their `/pt` variants canonical to the EN URL (they have no real PT translation — advertising a `pt` hreflang for English content is a quality-signal problem). Keep `sitemap.ts` `bilingual` flags in sync with each page's `generateMetadata`.
-- **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making `/pt` reachable (it was previously an orphan locale — no internal link pointed into it). `localeDetection` stays off.
+- Sitemap (`app/sitemap.ts`, 32 URLs) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
+- **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
+- **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
 - **Caching is fixed (was a P0 SEO drag):** the home + locale routes are static/SSG again (verify with `next build` → `/` shows `○`). The old `private, no-store` came from the server-side A/B cookie read + the middleware cookie-set; both are gone (A/B is client-side now, `proxy.ts` only does locale routing). Do not reintroduce `cookies()` into the home/locale page render path.
 - **First-party `Review` JSON-LD was removed** from `components/json-ld.tsx` (self-serving reviews are against Google's review-snippet guidelines). Testimonials remain as on-page content only. Don't re-add Review/AggregateRating without independent, attributable reviews.
 - **Contact form** (`app/api/contact/route.ts`) sends via Resend's HTTP API. Requires the operator to set `RESEND_API_KEY` (and verify the `treasurehunt.pt` sending domain in Resend); optionally `CONTACT_EMAIL`. Without the key it returns an explicit 503 (no silent lead drop).
+- **Self-serve booking is first-party** (`app/[lang]/book`): our own
+  Calendly-style widget (`components/booking-widget.tsx`) on the site's own
+  dark theme, backed by two routes that talk to Microsoft Bookings anonymously.
+  No Entra app registration, no admin consent, no credentials anywhere.
+  - `app/api/slots/route.ts` — `POST <BOOKINGS_BASE>/getStaffAvailability`
+    returns live free/busy for the staff id. The public booking page serves
+    signed-out visitors, so its backing API is anonymous; verified with a bare
+    curl. Slots are Lisbon wall-clock strings and are never parsed as `Date`.
+    Query the *Lisbon* date (`lisbonNow()`), not the UTC one — they differ for
+    an hour either side of midnight — and filter past slots, since upstream
+    happily returns this morning's.
+  - `app/api/book/route.ts` — `POST <BOOKINGS_BASE>/appointments`. Microsoft
+    enforces email verification server-side, so booking is TWO calls:
+    `verificationCode: ""` → `SelfServiceBookingEmailVerificationRequired`
+    (which emails a 6-digit code) → same payload with the code → 200, real
+    event + Teams meeting. Wrong code → `InvalidCode`. Both failures come back
+    as **HTTP 500 with the reason in the body**, not a 4xx. There is no way to
+    skip the code step.
+  - The rest of the team rides along in the `customers` array
+    (`BOOKING_ATTENDEES`, defaulting to jrpereira/aandrade/fribeiro) — a
+    Bookings-with-me page is a 1:1 product, so that array is the only attendee
+    list the API exposes.
+  - Ids (`STAFF_ID`, `SERVICE_ID`) come from `GET <BOOKINGS_BASE>/services`.
+    Upstream is slow on a cold hit (~14 s), hence the 60 s `revalidate`.
+    Availability is the *service's* configured window intersected with the
+    calendar, so a narrow meeting-type window silently caps the whole picker.
+  - This is an internal Microsoft API, not a documented one. Treat a shape
+    change as expected maintenance: `/api/slots` returns 503 and the widget
+    falls back to a link.
+  Two verified constraints, don't waste time rediscovering them:
+  1. **Microsoft's own page cannot be embedded.** `outlook.office.com` and
+     `bookings.cloud.microsoft` both serve `frame-ancestors 'self'
+     *.office.com teams.microsoft.com …`; an iframe on our domain renders an
+     empty box. That is why the widget is first-party.
+  2. Creating a *shared* Bookings page (the "Multiple staff" option, which
+     would show slots where all three lab members are free) is blocked by NOVA
+     IMS IT: `BookingsMailboxCreationEnabled:$false` on the OWA mailbox policy.
+- **Contact form** (`app/api/contact/route.ts`) sends via Resend's HTTP API. Requires the operator to set `RESEND_API_KEY` (and verify the `treasurehunt.pt` sending domain in Resend); optionally `CONTACT_EMAIL`. Without the key it returns an explicit 503 (no silent lead drop).
+- **Self-serve booking** is a `/book` redirect defined in `next.config.mjs`
+  `redirects()` (not a route file: config redirects run before the locale
+  middleware, which would rewrite `/book` to `/en/book`). It points at Microsoft
+  **Personal Bookings** ("Bookings with me") for `daraujo@novaims.unl.pt`, which
+  reads live Outlook free/busy and creates the Teams meeting itself. The
+  redirect is deliberately `permanent: false` — the target changes if a shared
+  Bookings page replaces it, and a cached 308 would be unfixable. Keep the
+  `?anonymous` param (Next serialises it as `anonymous=`, which Microsoft treats
+  identically — verified). `components/contact-modal.tsx` links to `/book` under
+  the submit button and on the success panel (`contactForm.bookCallHint` /
+  `.bookCall`, all six locales).
+  Two verified constraints, don't waste time rediscovering them:
+  1. **The page cannot be embedded.** `outlook.office.com` and
+     `bookings.cloud.microsoft` both serve `frame-ancestors 'self'
+     *.office.com teams.microsoft.com …`; an iframe on our domain renders an
+     empty box. Open in a new tab, or replace the provider.
+  2. Signed-out visitors hit a "Sign in or continue as guest" interstitial
+     before any slots appear, and the page is Microsoft-branded light theme.
+  Personal Bookings is **1:1 only**. A *shared* Bookings page with the
+  "Multiple staff" option is what shows slots where all three lab members are
+  free, and creating one is blocked by NOVA IMS IT
+  (`BookingsMailboxCreationEnabled:$false` on the OWA mailbox policy).
+- **`app/api/slots/route.ts` reads that calendar with no credentials at all.**
+  The public Bookings page serves signed-out visitors, so its backing API is
+  anonymous: `POST <BOOKINGS_BASE>/getStaffAvailability` returns live free/busy
+  for the staff id, verified with a bare curl. That is what makes a first-party
+  slot picker possible without an Entra app registration or IT involvement. It
+  is an *internal* Microsoft API, so treat a shape change as expected
+  maintenance: the route returns 503 on anything unexpected and callers should
+  fall back to the `/book` link. Ids (`STAFF_ID`, `SERVICE_ID`) come from
+  `GET <BOOKINGS_BASE>/services`. Upstream is slow on a cold hit (~14 s), hence
+  the 60 s `revalidate`.
+  Availability returned is the *service's* configured window intersected with
+  the calendar, so a narrow meeting-type window silently caps the whole picker.
+
+## AI crawlers
+
+`app/llms.txt/route.ts` serves `/llms.txt` as plain text: what the product is,
+how it works, the measured per-event results with links to each report, the
+technical notes, quote-based packages (no invented prices) and the locale list.
+Every figure traces to a report snapshot. Update it when a new event report
+ships. It also has to be a route, not a static file: `proxy.ts` skips dotted
+paths, so a bare `/llms.txt` had no handler at all.
+
+## Dead internal links
+
+The three snapshot-driven report footers (`cadaval`, `datasummit`,
+`smartcities`) linked `/api/report/snapshot`, a route that does not exist and
+returns 404, plus an `href="#"` METHODOLOGY placeholder. Both rows are gone.
+`lib/*-report.ts` comments no longer claim an API route serves the snapshot.
+Check `pnpm lint` for `@next/next/no-html-link-for-pages` before adding an `<a>`
+to an internal path.
 
 ## Deployment
 

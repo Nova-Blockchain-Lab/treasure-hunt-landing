@@ -9,9 +9,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-treasure-hunt-drove-engagement-ethdenver-2026',
-    title: 'How Treasure Hunt Drove 992 Treasure Finds and 462K Rewards at ETHDenver 2026',
+    title: 'ETHDenver 2026 Case Study: 992 Treasure Finds, 207 Players',
     description:
-      'Case study: 207 players found 992 treasures and minted 462,255 BUFFI tokens across 59 checkpoints at ETHDenver 2026. Here\'s how gamification transformed conference engagement.',
+      'Case study: 207 players found 992 treasures and minted 462,255 BUFFI tokens across 59 checkpoints at ETHDenver 2026. What the numbers show.',
     date: '2026-03-06',
     content: `ETHDenver 2026 ran for four days across one of the largest crypto conference venues in the world. Thousands of attendees, dozens of sponsors, and a sprawling MakerSpace floor packed with booths competing for attention.
 
@@ -86,9 +86,9 @@ Every transaction from ETHDenver 2026 is recorded on-chain and publicly verifiab
   },
   {
     slug: 'gamifying-conferences-qr-nfc-scavenger-hunts',
-    title: 'Gamifying Conferences with QR and NFC Scavenger Hunts: A Practical Guide',
+    title: 'How to Run a QR & NFC Scavenger Hunt at a Conference',
     description:
-      'How to run a QR and NFC scavenger hunt at your conference. Learn the checkpoint model, leaderboard psychology, and merch store mechanics with real data from ETHDenver 2026.',
+      'How to run a QR and NFC scavenger hunt at your conference: the checkpoint model, leaderboard psychology, and merch mechanics, with real ETHDenver data.',
     date: '2026-03-06',
     content: `Conference attendees have a short attention span and a long list of sessions to skip. The booths in the back corner get ignored. The sponsor who paid for premium placement watches people walk past without stopping.
 
@@ -176,9 +176,9 @@ The infrastructure runs on Nova Cidade Chain, a Layer 3 network that records eve
   },
   {
     slug: 'event-gamification-platform-guide-2026',
-    title: 'Event Gamification Platforms in 2026: Why Interactive Beats Passive',
+    title: 'Event Gamification Platforms in 2026: Interactive vs Passive',
     description:
-      'Why event gamification platforms are replacing traditional event apps in 2026. Learn how interactive engagement tools drive sponsor ROI, attendee retention, and real-time analytics.',
+      'Why event gamification platforms are replacing traditional event apps in 2026, and how interactive tools drive sponsor ROI and attendee retention.',
     date: '2026-03-06',
     content: `The event industry spent a decade pushing attendees toward event apps. Download this app, create a profile, opt into notifications, check the schedule, maybe scan a badge.
 
@@ -274,7 +274,7 @@ The event industry is moving past the "download our app" era. Attendees want exp
   },
   {
     slug: 'trade-show-booth-traffic-pscs-2026',
-    title: 'Trade Show Booth Traffic: Data from 103 Checkpoints at PSCS 2026',
+    title: 'Trade Show Booth Traffic: Data from 103 Checkpoints',
     description:
       'Case study: 351 players and 8,123 checkpoint scans over three days at the Portugal Smart Cities Summit 2026. What the data shows about trade fair foot traffic.',
     date: '2026-07-02',
@@ -320,9 +320,9 @@ The full interactive report, with per-stand tables, zone breakdowns and hour-by-
   },
   {
     slug: 'one-day-conference-gamification-data-summit-2026',
-    title: 'Gamification at a One-Day Conference: Data with Purpose Summit 2026',
+    title: 'Gamification at a One-Day Conference: A 2026 Case Study',
     description:
-      'One day, 25 checkpoints, 58 players, 777 treasures found. What the Data with Purpose Summit 2026 shows about running a scavenger hunt when the event has no day two.',
+      'One day, 25 checkpoints, 58 players, 777 treasures found. What the Data with Purpose Summit 2026 shows about a hunt with no day two.',
     date: '2026-07-02',
     content: `Most of the engagement data we had published before this event came from multi-day deployments. At ETHDenver 2026, activity grew day over day and peaked on day three, driven largely by word of mouth. A reasonable objection follows: if the game needs days to build, what happens at an event that only has one?
 
@@ -362,7 +362,7 @@ The full data, including the hourly grid and the per-checkpoint table, is in the
   },
   {
     slug: 'team-scavenger-hunt-campus-spring-bootcamp-2026',
-    title: 'Team Scavenger Hunts on Campus: 7 Teams, 220 Finds in One Afternoon',
+    title: 'Campus Team Scavenger Hunt: 7 Teams, 220 Finds',
     description:
       'How a team-based scavenger hunt played out at the NOVA IMS Spring Bootcamp 2026: seven teams, 220 treasures found, and a three-find margin at the top.',
     date: '2026-07-02',

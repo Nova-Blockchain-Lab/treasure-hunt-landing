@@ -1,6 +1,6 @@
 // Types for the public post-event report snapshot.
 // The runtime payload is checked into `data/pscs2026/report-snapshot.json`
-// and served by `app/api/report/snapshot/route.ts`.
+// (there is no public API route for it).
 
 export type ReportKpis = {
   totalPlayers: number

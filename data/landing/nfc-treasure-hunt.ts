@@ -5,7 +5,7 @@ export const content: LandingContent = {
   locale: "en",
   title: "NFC Treasure Hunt for Events | Treasure Hunt",
   description:
-    "Run an NFC treasure hunt at your event: tap-to-play checkpoints, no app download, a live leaderboard and real-time analytics. Deployed at ETHDenver and NOVA IMS.",
+    "Run an NFC treasure hunt at your event: tap-to-play checkpoints, no app download, a live leaderboard and real-time analytics. Used at ETHDenver.",
 
   eyebrow: "NFC EVENT GAME",
   headline: "The NFC Treasure Hunt",

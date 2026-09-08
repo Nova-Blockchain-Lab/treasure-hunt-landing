@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/config"
+
 // Shared content model for SEO landing pages. Every landing page is a plain
 // data object of this shape, rendered through <LandingPage> so all pages stay
 // visually and structurally consistent. Authors only write content — never JSX.
@@ -34,7 +36,10 @@ export interface LandingFaqItem {
 export interface LandingContent {
   // ---- SEO + routing ----
   slug: string // folder name under app/[lang]/, e.g. "nfc-treasure-hunt"
-  locale: "en" | "pt" // language the copy is written in; canonical points here
+  // Language the copy is actually WRITTEN in; the canonical points at that
+  // locale's URL. A landing page is single-language by design — never add a
+  // cross-language hreflang to one without writing real translated copy.
+  locale: Locale
   title: string // <title> (≤ 60 chars ideal)
   description: string // meta description (≤ 155 chars ideal)
 

@@ -1,6 +1,6 @@
 // Types for the public post-event report snapshot for the Cadaval edition.
 // Runtime payload lives in `data/cadaval2026/report-snapshot.json` and is
-// served by `app/api/report/snapshot/route.ts`.
+// (there is no public API route for it).
 //
 // This is the trimmed Cadaval shape: no stages, no polls, no QR. The festival
 // (Festival da Juventude) had no exhibitor booths, so the "exhibitors" concept

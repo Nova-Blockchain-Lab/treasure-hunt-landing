@@ -34,7 +34,11 @@ export function SiteFooter({
   navDict: NavDict
   lang?: string
 }) {
-  const prefix = lang === "en" ? "" : `/${lang}`
+  // Footer links must point at each resource's CANONICAL url, never at a
+  // /<locale>/ variant that canonicalises elsewhere. Only the two dictionary-
+  // driven reports have a real PT translation; the blog, the other four reports
+  // and the EN landing pages are EN-only, so they are always linked unprefixed.
+  const ptPrefix = lang === "pt" ? "/pt" : ""
 
   const navLinks = [
     { href: "#what", label: navDict.features },
@@ -45,21 +49,41 @@ export function SiteFooter({
   ]
 
   const resourceLinks = [
-    { href: `${prefix}/blog`, label: dict.blog },
-    { href: `${prefix}/ethdenver-report`, label: dict.ethdenverReport },
-    { href: `${prefix}/futuremaker-report`, label: dict.futuremakerReport },
-    { href: `${prefix}/smartcities-report`, label: dict.smartCitiesReport },
-    { href: `${prefix}/cadaval-report`, label: dict.cadavalReport },
-    { href: `${prefix}/springbootcamp-report`, label: dict.springBootcampReport },
-    { href: `${prefix}/datasummit-report`, label: dict.dataSummitReport },
+    { href: "/blog", label: dict.blog },
+    { href: `${ptPrefix}/ethdenver-report`, label: dict.ethdenverReport },
+    { href: `${ptPrefix}/futuremaker-report`, label: dict.futuremakerReport },
+    { href: "/smartcities-report", label: dict.smartCitiesReport },
+    { href: "/cadaval-report", label: dict.cadavalReport },
+    { href: "/springbootcamp-report", label: dict.springBootcampReport },
+    { href: "/datasummit-report", label: dict.dataSummitReport },
   ]
 
   // SEO landing pages, locale-appropriate. EN pages are canonical at /<slug>;
   // PT pages at /pt/<slug>. Site-wide footer links give every page an internal
   // link (crawl + PageRank). Labels are hardcoded per locale (not dict keys).
-  const solutionsHeading = lang === "pt" ? "Soluções" : "Solutions"
+  const SOLUTIONS_HEADING: Record<string, string> = {
+    en: "Solutions",
+    pt: "Soluções",
+    es: "Soluciones",
+    it: "Soluzioni",
+    de: "Lösungen",
+    fr: "Solutions",
+  }
+  const solutionsHeading = SOLUTIONS_HEADING[lang] ?? "Solutions"
+
+  // Each locale links its OWN written landing pages. es/it/de/fr have one each
+  // so far, plus the EN set below them would be English copy under a non-English
+  // prefix — so they get their own page and nothing else.
+  const LOCALE_SOLUTIONS: Record<string, { href: string; label: string }[]> = {
+    es: [{ href: "/es/caza-del-tesoro-digital-empresas", label: "Caza del Tesoro Digital" }],
+    it: [{ href: "/it/caccia-al-tesoro-aziendale", label: "Caccia al Tesoro Aziendale" }],
+    de: [{ href: "/de/digitale-schnitzeljagd-firmenevent", label: "Digitale Schnitzeljagd" }],
+    fr: [{ href: "/fr/chasse-au-tresor-entreprise", label: "Chasse au Trésor d'Entreprise" }],
+  }
+
   const solutionLinks =
-    lang === "pt"
+    LOCALE_SOLUTIONS[lang] ??
+    (lang === "pt"
       ? [
           { href: "/pt/caca-ao-tesouro-digital-empresas", label: "Caça ao Tesouro Digital" },
           { href: "/pt/peddy-paper-digital", label: "Peddy Paper Digital" },
@@ -73,7 +97,11 @@ export function SiteFooter({
           { href: "/scavenger-hunt-universities", label: "For Universities" },
           { href: "/trade-show-booth-traffic", label: "For Trade Shows" },
           { href: "/goosechase-alternative", label: "Goosechase Alternative" },
-        ]
+          // Was missing here while every other landing page was listed, which
+          // left /scavify-alternative with no internal link anywhere on the
+          // site (Search Console reported no referring URLs for it).
+          { href: "/scavify-alternative", label: "Scavify Alternative" },
+        ])
 
   // pb clears the fixed 60px StickyCTABar so the last footer row is never occluded
   return (

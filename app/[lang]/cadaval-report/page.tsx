@@ -7,6 +7,7 @@ import { SectionTags } from "./_components/section-tags"
 import { SectionVenue } from "./_components/section-venue"
 import { SiteFooter } from "./_components/site-footer"
 import { SiteHeader } from "./_components/site-header"
+import { PageJsonLd } from '@/components/page-jsonld'
 
 // Static-rendered. Snapshot file is checked into the repo and only
 // changes when the operator runs a regen script.
@@ -17,6 +18,7 @@ export default async function ReportPage() {
   const snapshot = await readSnapshot()
   return (
     <>
+      <PageJsonLd name="Festival da Juventude 2026 Report" path="/cadaval-report" description="126 players, 2,182 treasure finds and 57 NFC tags across the Festival da Juventude grounds in Cadaval." />
       <SiteHeader />
       <main>
         <HeroBlock snapshot={snapshot} />

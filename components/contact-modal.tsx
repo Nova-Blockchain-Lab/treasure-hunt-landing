@@ -1,10 +1,15 @@
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
+import Link from "next/link"
 import { X } from "lucide-react"
 import { usePostHog } from "posthog-js/react"
 import { trackEvent } from "@/lib/analytics"
 import type { Variant } from "@/lib/ab-test"
+
+// /book is our own booking page (app/[lang]/book), not Microsoft's — theirs
+// cannot be embedded (frame-ancestors) and cannot be styled.
+const BOOKING_URL = "/book"
 
 interface ContactFormDict {
   title: string
@@ -18,6 +23,8 @@ interface ContactFormDict {
   sending: string
   success: string
   error: string
+  bookCallHint: string
+  bookCall: string
 }
 
 type FormStatus = "idle" | "sending" | "success" | "error"
@@ -111,6 +118,21 @@ export function ContactModal({
 
   if (!open) return null
 
+  const bookCallLine = (
+    <p className="text-center text-[0.8rem] text-[#8B949E]">
+      {dict.bookCallHint}{" "}
+      <Link
+        href={BOOKING_URL}
+        onClick={() =>
+          posthog?.capture("booking_page_click", { trigger_location: triggerLocation, variant })
+        }
+        className="text-[#F0605D] underline decoration-[rgba(240,96,93,0.4)] underline-offset-2 hover:decoration-[#F0605D]"
+      >
+        {dict.bookCall}
+      </Link>
+    </p>
+  )
+
   return (
     <div
       className="fixed inset-0 z-110 flex items-center justify-center p-4"
@@ -144,7 +166,8 @@ export function ContactModal({
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <p className="text-[#E6EDF3] font-medium">{dict.success}</p>
+            <p className="text-[#E6EDF3] font-medium mb-6">{dict.success}</p>
+            {bookCallLine}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -207,6 +230,8 @@ export function ContactModal({
             >
               {status === "sending" ? dict.sending : dict.submit}
             </button>
+
+            {bookCallLine}
           </form>
         )}
       </div>
