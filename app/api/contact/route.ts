@@ -10,12 +10,20 @@ import { NextResponse } from "next/server"
 // from-address travel together: CONTACT_RESEND_KEY is the treasurehunt.pt
 // account and takes precedence when set, falling back to RESEND_API_KEY.
 //
-// Why bother: measured from the live form against a novaims.unl.pt inbox,
-// a lead sent from noreply@urbancheckin.pt lands in JUNK (Outlook warns the
-// recipient they "don't often get email from" it), while the same lead from
-// leads@treasurehunt.pt lands in the INBOX. Sender/site alignment is the
-// whole difference. Do not point one account's key at the other's domain:
-// Resend rejects it and the form 502s.
+// Do NOT point one account's key at the other account's domain: Resend
+// rejects it and this route 502s (that mistake shipped once and was rolled
+// back).
+//
+// DELIVERABILITY, measured against a novaims.unl.pt mailbox: leads still land
+// in JUNK, from either sending domain, whenever the message goes to all four
+// recipients at once. The one send that reached the INBOX was a single
+// recipient. Recipient count looks like the deciding factor rather than the
+// sending domain, on one data point, so treat this as unfinished. Neither
+// treasurehunt.pt nor urbancheckin.pt publishes a _dmarc record, which is the
+// obvious next thing to fix; addressing one shared/list mailbox instead of
+// four individuals is the other. Leads fail SILENTLY here (Resend reports
+// success while Outlook files it in Junk), so check Junk first if leads seem
+// to stop.
 // CONTACT_TO is where leads are delivered: the same four people who are on
 // every booking (see app/api/book/route.ts). Comma-separated, overridable via
 // CONTACT_EMAIL.
