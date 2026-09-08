@@ -1,21 +1,24 @@
 import { NextResponse } from "next/server"
 
 // Lead delivery via Resend's HTTP API (no SDK dependency — plain fetch).
-// Requires RESEND_API_KEY. The `from` address must be on a domain verified in
-// that Resend account; it defaults to urbancheckin.pt (a verified domain we
-// reuse) and is overridable via CONTACT_FROM — switch it to a treasurehunt.pt
-// address once that domain is verified in the same account. If the key is
-// absent we return an explicit error, never a fake success.
+// Requires RESEND_API_KEY. If the key is absent we return an explicit error,
+// never a fake success.
+//
+// `from` MUST be on a domain verified in the Resend account. treasurehunt.pt
+// is verified (the Lisbon Games Week deployment sends vouchers from it), so we
+// send as treasurehunt.pt rather than the unrelated urbancheckin.pt we used to
+// reuse. That alignment is the point: a lead from treasurehunt.pt sent from
+// urbancheckin.pt was landing in Junk at novaims.unl.pt, with Outlook warning
+// recipients they "don't often get email from" the sender.
 // CONTACT_TO is where leads are delivered: the same four people who are on
 // every booking (see app/api/book/route.ts). Comma-separated, overridable via
 // CONTACT_EMAIL.
 //
-// WATCH THIS: leads used to go to a personal Gmail precisely because NOVA's
-// Microsoft 365 quarantined Resend mail sent from the reused urbancheckin.pt
-// domain, so @novaims.unl.pt delivery is the known-fragile part of this route.
-// A quarantined lead fails silently — Resend still returns 202. If leads stop
-// arriving, that is the first thing to check, and the real fix is verifying
-// treasurehunt.pt in Resend (then set CONTACT_FROM) or an IT allowlist.
+// WATCH THIS: delivery to @novaims.unl.pt is the fragile part of this route,
+// and it fails SILENTLY — Resend still reports success while Outlook files the
+// mail in Junk or quarantines it. Verified once from the live form: with the
+// treasurehunt.pt sender it reaches the Inbox. If leads stop arriving, check
+// Junk first.
 const CONTACT_TO = (
   process.env.CONTACT_EMAIL ||
   "daraujo@novaims.unl.pt,jrpereira@novaims.unl.pt,aandrade@novaims.unl.pt,fribeiro@novaims.unl.pt"
@@ -24,7 +27,7 @@ const CONTACT_TO = (
   .map((e) => e.trim())
   .filter(Boolean)
 const PUBLIC_CONTACT = process.env.PUBLIC_CONTACT || "nova.blockchain.lab@novaims.unl.pt"
-const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <noreply@urbancheckin.pt>"
+const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <leads@treasurehunt.pt>"
 
 export async function POST(request: Request) {
   try {
