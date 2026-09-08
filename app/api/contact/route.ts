@@ -6,13 +6,23 @@ import { NextResponse } from "next/server"
 // reuse) and is overridable via CONTACT_FROM — switch it to a treasurehunt.pt
 // address once that domain is verified in the same account. If the key is
 // absent we return an explicit error, never a fake success.
-// CONTACT_TO is where leads are delivered. Defaults to a personal Gmail that
-// reliably accepts Resend mail — NOVA's Microsoft 365 was quarantining external
-// sends from the reused sending domain. Override via CONTACT_EMAIL once a
-// properly authenticated treasurehunt.pt sender (or an IT allowlist) is in place.
-// PUBLIC_CONTACT is the address shown to users in error text — keep the private
-// lead inbox out of public-facing messages.
-const CONTACT_TO = process.env.CONTACT_EMAIL || "dinis.palha@gmail.com"
+// CONTACT_TO is where leads are delivered: the same four people who are on
+// every booking (see app/api/book/route.ts). Comma-separated, overridable via
+// CONTACT_EMAIL.
+//
+// WATCH THIS: leads used to go to a personal Gmail precisely because NOVA's
+// Microsoft 365 quarantined Resend mail sent from the reused urbancheckin.pt
+// domain, so @novaims.unl.pt delivery is the known-fragile part of this route.
+// A quarantined lead fails silently — Resend still returns 202. If leads stop
+// arriving, that is the first thing to check, and the real fix is verifying
+// treasurehunt.pt in Resend (then set CONTACT_FROM) or an IT allowlist.
+const CONTACT_TO = (
+  process.env.CONTACT_EMAIL ||
+  "daraujo@novaims.unl.pt,jrpereira@novaims.unl.pt,aandrade@novaims.unl.pt,fribeiro@novaims.unl.pt"
+)
+  .split(",")
+  .map((e) => e.trim())
+  .filter(Boolean)
 const PUBLIC_CONTACT = process.env.PUBLIC_CONTACT || "nova.blockchain.lab@novaims.unl.pt"
 const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <noreply@urbancheckin.pt>"
 
@@ -42,7 +52,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: CONTACT_FROM,
-        to: [CONTACT_TO],
+        to: CONTACT_TO,
         reply_to: email,
         subject: `New event inquiry from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nEvent size: ${eventSize}\nMessage: ${message || "N/A"}`,
