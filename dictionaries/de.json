@@ -6,7 +6,8 @@
     "useCases": "Anwendungsfälle",
     "packages": "Pakete",
     "media": "Medien",
-    "bookDemo": "Event Planen"
+    "bookDemo": "Event Planen",
+    "backToSite": "Zurück zur Website"
   },
   "hero": {
     "srTitle": "Treasure Hunt | Interaktives Event-Spiel für Konferenzen und Messen",
@@ -111,7 +112,9 @@
     "photo6Alt": "Treasure-Hunt-Hoodie in limitierter Auflage mit dem Labyrinth-Maskottchen",
     "teamFlyersAlt": "Teilnehmende mit Treasure-Hunt-Flyern zum Einlösen am Stand",
     "clip1Alt": "Spieler reagiert nach dem Gewinn",
-    "clip2Alt": "Hand hält ein Handy an einen Treasure-Hunt-Tag"
+    "clip2Alt": "Hand hält ein Handy an einen Treasure-Hunt-Tag",
+    "storyCaption": "Das Spiel in 60 Sekunden.",
+    "storyPlay": "Das Spiel ansehen"
   },
   "features": {
     "eyebrow": "02 / Funktionen",
@@ -251,6 +254,37 @@
     "text": "Machen Sie Ihr nächstes Event zu einem Spiel, über das Teilnehmende reden.",
     "bookDemo": "Event Planen"
   },
+  "booking": {
+    "heading": "Gespräch buchen",
+    "intro": "Dreißig Minuten mit dem Team hinter Treasure Hunt. Bringen Sie Datum, Veranstaltungsort und eine grobe Teilnehmerzahl mit, und wir sagen Ihnen, was realistisch ist.",
+    "duration": "{minutes} Minuten",
+    "timezone": "Lissabonner Zeit",
+    "prevMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat",
+    "pickDay": "Tag auswählen",
+    "availabilityHint": "Tage mit freien Terminen sind hervorgehoben.",
+    "loading": "Verfügbarkeit wird geladen…",
+    "selected": "Ausgewählt",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "detailsHeading": "Ihre Angaben",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "notes": "Um welche Veranstaltung geht es? Datum, Ort, ungefähre Teilnehmerzahl.",
+    "teamNote": "Drei Personen aus dem Treasure-Hunt-Team werden zu jeder Buchung hinzugefügt.",
+    "codeHeading": "E-Mail bestätigen",
+    "codeIntro": "Microsoft hat einen 6-stelligen Code an {email} geschickt. Geben Sie ihn ein, um die Buchung abzuschließen.",
+    "codeLabel": "Bestätigungscode",
+    "confirm": "Buchung bestätigen",
+    "working": "Wird verarbeitet…",
+    "bookedHeading": "Termin gebucht",
+    "bookedBody": "Eine Microsoft-Teams-Einladung ist an {email} unterwegs, und das Team wurde zur Besprechung hinzugefügt.",
+    "errorCode": "Der Code stimmt nicht. Prüfen Sie die E-Mail und versuchen Sie es erneut.",
+    "errorGeneric": "Etwas ist schiefgegangen. Bitte versuchen Sie es erneut.",
+    "errorNetwork": "Der Buchungsdienst war nicht erreichbar. Bitte versuchen Sie es erneut.",
+    "unavailable": "Die Live-Verfügbarkeit ist gerade nicht abrufbar.",
+    "unavailableLink": "Auf der Microsoft-Seite buchen"
+  },
   "footer": {
     "description": "Interaktive Event-Plattform, die Besucherströme lenkt, Teilnahme belohnt und Veranstaltern Analytics in Echtzeit liefert.",
     "navigation": "Navigation",
@@ -264,7 +298,8 @@
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
-    "copyright": "Nova Blockchain Lab. Alle Rechte vorbehalten."
+    "copyright": "Nova Blockchain Lab. Alle Rechte vorbehalten.",
+    "projectBy": "Ein Projekt von"
   },
   "faq": {
     "eyebrow": "07 / FAQ",

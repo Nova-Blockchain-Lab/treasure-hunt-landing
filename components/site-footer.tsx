@@ -16,6 +16,7 @@ interface FooterDict {
   springBootcampReport: string
   dataSummitReport: string
   copyright: string
+  projectBy: string
 }
 
 interface NavDict {
@@ -40,12 +41,19 @@ export function SiteFooter({
   // and the EN landing pages are EN-only, so they are always linked unprefixed.
   const ptPrefix = lang === "pt" ? "/pt" : ""
 
+  // The footer ships on every page, not just the home, so these must be
+  // home-ABSOLUTE. Bare "#what" resolves to nothing on /book, the landing
+  // pages, the blog and the reports, which silently made five footer links
+  // dead everywhere but the home page. next/link still scrolls without a
+  // reload when you are already on the home page.
+  const home = lang === "en" ? "/" : `/${lang}`
+
   const navLinks = [
-    { href: "#what", label: navDict.features },
-    { href: "#demo", label: navDict.demo },
-    { href: "#how", label: navDict.howItWorks },
-    { href: "#packages", label: navDict.packages },
-    { href: "#cta", label: dict.contactLabel },
+    { href: `${home}#what`, label: navDict.features },
+    { href: `${home}#demo`, label: navDict.demo },
+    { href: `${home}#how`, label: navDict.howItWorks },
+    { href: `${home}#packages`, label: navDict.packages },
+    { href: `${home}#cta`, label: dict.contactLabel },
   ]
 
   const resourceLinks = [
@@ -110,23 +118,36 @@ export function SiteFooter({
         {/* Row 1: Nav + Contact */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4 flex-wrap">
+            {/* Different aspect ratios (2.35:1 vs 2.81:1) and different
+                amounts of transparent padding, so equal CSS heights do NOT
+                make these look the same size. Size them optically, and keep
+                width/height matching the real files or the reserved box is
+                wrong (both used to claim 500x75). */}
+            <div className="flex flex-col items-start gap-3 mb-5">
               <Image
                 src="/treasure-hunt-logo.png"
                 alt="Treasure Hunt - Event Engagement Platform"
-                width={500}
-                height={75}
-                className="h-12 sm:h-20 w-auto -ml-2 sm:-ml-10"
-                sizes="500px"
+                width={6250}
+                height={2665}
+                className="h-20 w-auto"
+                sizes="220px"
               />
-              <a href="https://novablockchainlab.novaims.unl.pt/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://novablockchainlab.novaims.unl.pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-col gap-1.5"
+              >
+                <span className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-[#7D8590]">
+                  {dict.projectBy}
+                </span>
                 <Image
                   src="/NOVA_Blockchain_Lab-2.png"
                   alt="NOVA Blockchain Lab"
-                  width={500}
-                  height={75}
-                  className="h-12 sm:h-20 w-auto opacity-60 transition-opacity duration-300 hover:opacity-90"
-                  sizes="500px"
+                  width={1437}
+                  height={511}
+                  className="h-8 w-auto opacity-70 transition-opacity duration-300 hover:opacity-100"
+                  sizes="120px"
                 />
               </a>
             </div>
@@ -140,12 +161,12 @@ export function SiteFooter({
             <ul className="flex flex-col gap-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

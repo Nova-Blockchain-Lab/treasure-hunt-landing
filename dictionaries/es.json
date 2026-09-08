@@ -6,7 +6,8 @@
     "useCases": "Casos de Uso",
     "packages": "Planes",
     "media": "Media",
-    "bookDemo": "Planifica tu Evento"
+    "bookDemo": "Planifica tu Evento",
+    "backToSite": "Volver al sitio"
   },
   "hero": {
     "srTitle": "Treasure Hunt | Juego interactivo de dinamización de eventos y congresos",
@@ -111,7 +112,9 @@
     "photo6Alt": "Sudadera de edición limitada de Treasure Hunt con la mascota del laberinto",
     "teamFlyersAlt": "Asistentes con folletos de Treasure Hunt para reclamar en el stand",
     "clip1Alt": "Jugador reaccionando tras ganar",
-    "clip2Alt": "Mano acercando un móvil a una etiqueta de Treasure Hunt"
+    "clip2Alt": "Mano acercando un móvil a una etiqueta de Treasure Hunt",
+    "storyCaption": "El juego en 60 segundos.",
+    "storyPlay": "Ver el juego"
   },
   "features": {
     "eyebrow": "02 / Funcionalidades",
@@ -251,6 +254,37 @@
     "text": "Convierte tu próximo evento en un juego del que los asistentes hablen.",
     "bookDemo": "Planifica tu Evento"
   },
+  "booking": {
+    "heading": "Reservar una llamada",
+    "intro": "Treinta minutos con el equipo de Treasure Hunt. Trae la fecha del evento, el lugar y una estimación de asistentes y te diremos qué es realista.",
+    "duration": "{minutes} minutos",
+    "timezone": "Hora de Lisboa",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "pickDay": "Elige un día",
+    "availabilityHint": "Los días con disponibilidad están resaltados.",
+    "loading": "Cargando disponibilidad…",
+    "selected": "Seleccionado",
+    "continue": "Continuar",
+    "back": "Volver",
+    "detailsHeading": "Tus datos",
+    "name": "Tu nombre",
+    "email": "Correo electrónico",
+    "notes": "¿Qué evento es? Fecha, lugar, número aproximado de asistentes.",
+    "teamNote": "Tres personas del equipo de Treasure Hunt se añaden a cada reserva.",
+    "codeHeading": "Confirma tu correo",
+    "codeIntro": "Microsoft ha enviado un código de 6 dígitos a {email}. Introdúcelo para terminar la reserva.",
+    "codeLabel": "Código de verificación",
+    "confirm": "Confirmar reserva",
+    "working": "Procesando…",
+    "bookedHeading": "Reserva confirmada",
+    "bookedBody": "Una invitación de Microsoft Teams va camino de {email}, y el equipo ha sido añadido a la reunión.",
+    "errorCode": "El código no coincide. Revisa el correo e inténtalo de nuevo.",
+    "errorGeneric": "Algo ha ido mal. Inténtalo de nuevo.",
+    "errorNetwork": "No se ha podido contactar con el servicio de reservas. Inténtalo de nuevo.",
+    "unavailable": "La disponibilidad en directo no está disponible ahora mismo.",
+    "unavailableLink": "Reservar en la página de Microsoft"
+  },
   "footer": {
     "description": "Plataforma interactiva de dinamización de eventos que genera tráfico de visitantes, recompensa la participación y da a los organizadores analítica en tiempo real.",
     "navigation": "Navegación",
@@ -264,7 +298,8 @@
     "cadavalReport": "Informe Cadaval Festival 2026",
     "springBootcampReport": "Informe Spring Bootcamp 2026",
     "dataSummitReport": "Informe Data with Purpose Summit 2026",
-    "copyright": "Nova Blockchain Lab. Todos los derechos reservados."
+    "copyright": "Nova Blockchain Lab. Todos los derechos reservados.",
+    "projectBy": "Un proyecto de"
   },
   "faq": {
     "eyebrow": "07 / FAQ",

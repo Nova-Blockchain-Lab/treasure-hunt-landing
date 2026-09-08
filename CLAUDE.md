@@ -133,6 +133,18 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
 - **Home page composition lives in `components/page-client.tsx`.** `app/[lang]/page.tsx` is the only entry point (see **Root layout**): it resolves the dictionary, renders `<PageClient dict lang>` and `<HomeJsonLd lang>`. Pass `lang` through to `SiteFooter` so its link prefixes are correct.
 - **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. The variant is resolved **client-side** in `PageClient` (reads/sets the cookie via `document.cookie`, applies overrides with `useMemo`). It is deliberately NOT read server-side: `cookies()` would opt the home + locale routes into dynamic rendering and force `private, no-store`. Server + first client render show `control` (the canonical copy); the variant swaps in after hydration.
 - **Analytics:** PostHog (provider in `components/posthog-provider.tsx`) and GA4 (`components/ga4-script.tsx`) are gated behind cookie consent (`lib/consent-context.tsx`, `components/cookie-consent-banner.tsx`). Event tracking via `hooks/use-analytics-tracking.ts`.
+- **Footer nav links are home-ABSOLUTE** (`/#what`, `/pt#what`), never bare
+  `#what`. `SiteFooter` ships on every page, so bare anchors resolved to
+  nothing on `/book`, the landing pages, the blog and the reports. They are
+  `next/link`, which still soft-scrolls (no reload) when already on the home.
+- **Logos are sized optically, not by matching CSS height.** The footer marks
+  have different aspect ratios (2.35:1 vs 2.81:1) and different amounts of
+  transparent padding, so equal heights look wrong. `treasure-hunt-logo.png`
+  is the full stacked lockup (icon + wordmark + tagline) and needs ~120px+ to
+  be legible; compact placements (navbar, `/book` header) use
+  `treasure-hunt-name.png`, the wordmark-only asset. Keep `width`/`height`
+  equal to the real file dimensions (6250x2665 / 1437x511) or the reserved box
+  is wrong and the image shifts on load.
 - **Internal links must use `next/link`** (not `<a>` for non-anchor navigation) so the locale prefix logic can stay simple.
 - **PT copy uses proper PT-PT diacritics** (`dictionaries/pt.json` and the PT metadata in `app/[lang]/layout.tsx`). Don't add new PT strings without accents.
 - **Locale prefix:** `en` is at `/`; `pt`, `es`, `it`, `de`, `fr` are at `/<locale>/...`. `/en/*` → `/*` is a permanent 308 via `redirects()` in `next.config.mjs` (config redirects run before middleware; next-intl's own strip is only a 307). **Footer links point at each resource's canonical URL, not at a `/<locale>/` variant** — only the two bilingual reports take a `/pt` prefix (`ptPrefix` in `site-footer.tsx`); the blog, the other four reports and the EN landing pages are always linked unprefixed, so no internal link targets a URL that canonicalises elsewhere.
@@ -170,6 +182,10 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
     event + Teams meeting. Wrong code → `InvalidCode`. Both failures come back
     as **HTTP 500 with the reason in the body**, not a 4xx. There is no way to
     skip the code step.
+  - Copy is dictionary-driven (`booking` object, 29 keys x 6 locales); month
+    and weekday names come from `Intl.DateTimeFormat` with the `localeTags`
+    BCP-47 tag, not hardcoded arrays. Slot keys are plain calendar strings and
+    are never parsed as instants (always `Date.UTC` + `timeZone: "UTC"`).
   - The rest of the team rides along in the `customers` array
     (`BOOKING_ATTENDEES`, defaulting to jrpereira/aandrade/fribeiro) — a
     Bookings-with-me page is a 1:1 product, so that array is the only attendee

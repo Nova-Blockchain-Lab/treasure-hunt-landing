@@ -9,11 +9,7 @@ type SlotsResponse = { timeZone: string; durationMinutes: number; slots: string[
 /** details -> the emailed code -> done. Microsoft requires the code step. */
 type Stage = "picking" | "details" | "code" | "booked"
 
-const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
-]
+export type BookingDict = Record<string, string>
 
 /** "2026-09-15T14:30" -> "14:30". Slots are Lisbon wall-clock; never parsed as Date. */
 const timeOf = (slot: string) => slot.slice(11, 16)
@@ -25,9 +21,10 @@ function weekdayIndex(day: string) {
   return (new Date(Date.UTC(y, m - 1, d)).getUTCDay() + 6) % 7
 }
 
-function monthLabel(month: string) {
-  const [y, m] = month.split("-").map(Number)
-  return `${MONTHS[m - 1]} ${y}`
+/** UTC everywhere: slot keys are plain calendar dates, never instants. */
+function utcDate(day: string) {
+  const [y, m, d] = day.split("-").map(Number)
+  return new Date(Date.UTC(y, m - 1, d))
 }
 
 function shiftMonth(month: string, by: number) {
@@ -46,14 +43,20 @@ function monthCells(month: string) {
   return cells
 }
 
-function longDate(day: string) {
-  const [y, m, d] = day.split("-").map(Number)
-  const wd = new Date(Date.UTC(y, m - 1, d)).getUTCDay()
-  const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-  return `${names[wd]}, ${MONTHS[m - 1]} ${d}`
+/** Mon-first week of narrow weekday initials, in the visitor's locale. */
+function weekdayInitials(locale: string) {
+  const fmt = new Intl.DateTimeFormat(locale, { weekday: "narrow", timeZone: "UTC" })
+  // 2024-01-01 was a Monday.
+  return Array.from({ length: 7 }, (_, i) => fmt.format(new Date(Date.UTC(2024, 0, 1 + i))))
 }
 
-export function BookingWidget() {
+export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: string }) {
+  const monthLabel = (month: string) =>
+    new Intl.DateTimeFormat(locale, { month: "long", year: "numeric", timeZone: "UTC" })
+      .format(utcDate(`${month}-01`))
+  const longDate = (day: string) =>
+    new Intl.DateTimeFormat(locale, { weekday: "long", month: "long", day: "numeric", timeZone: "UTC" })
+      .format(utcDate(day))
   const [data, setData] = useState<SlotsResponse | null>(null)
   const [failed, setFailed] = useState(false)
   const [month, setMonth] = useState<string | null>(null)
@@ -80,15 +83,15 @@ export function BookingWidget() {
         setStage("code")
         posthog?.capture("booking_code_sent")
       } else if (data.status === "invalid_code") {
-        setError("That code doesn't match. Check the email and try again.")
+        setError(dict.errorCode)
       } else if (data.status === "booked") {
         setStage("booked")
         posthog?.capture("booking_confirmed", { slot })
       } else {
-        setError(data.error ?? "Something went wrong. Please try again.")
+        setError(data.error ?? dict.errorGeneric)
       }
     } catch {
-      setError("Could not reach the booking service. Please try again.")
+      setError(dict.errorNetwork)
     } finally {
       setBusy(false)
     }
@@ -120,14 +123,14 @@ export function BookingWidget() {
     return (
       <div className="rounded-2xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-8 text-center">
         <p className="text-[#8B949E] text-sm">
-          Live availability is unavailable right now.{" "}
+          {dict.unavailable}{" "}
           <a
             href="https://outlook.office.com/bookwithme/user/84c98cdef247426285ae07dfbe0a4b95@novaims.unl.pt?anonymous"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#F0605D] underline underline-offset-2"
           >
-            Book on Microsoft&apos;s page instead
+            {dict.unavailableLink}
           </a>
           .
         </p>
@@ -145,18 +148,17 @@ export function BookingWidget() {
           <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#8B949E]">
             NOVA Blockchain Lab
           </span>
-          <h2 className="font-display text-3xl tracking-wide text-[#E6EDF3]">Book a call</h2>
+          <h2 className="font-display text-3xl tracking-wide text-[#E6EDF3]">{dict.heading}</h2>
         </div>
 
         <p className="text-sm leading-relaxed text-[#8B949E]">
-          Thirty minutes with the team behind Treasure Hunt. Bring your event date, venue and
-          rough headcount and we&apos;ll tell you what is realistic.
+          {dict.intro}
         </p>
 
         <dl className="flex flex-col gap-3 text-sm text-[#E6EDF3]">
           <div className="flex items-center gap-3">
             <Clock className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
-            <dd>{data?.durationMinutes ?? 30} minutes</dd>
+            <dd>{dict.duration.replace("{minutes}", String(data?.durationMinutes ?? 30))}</dd>
           </div>
           <div className="flex items-center gap-3">
             <Video className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
@@ -164,14 +166,14 @@ export function BookingWidget() {
           </div>
           <div className="flex items-center gap-3">
             <Globe className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
-            <dd>Lisbon time (WEST)</dd>
+            <dd>{dict.timezone}</dd>
           </div>
         </dl>
 
         {slot && (
           <div className="mt-auto pt-5 border-t border-[rgba(240,246,252,0.06)]">
             <p className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#8B949E] mb-1">
-              Selected
+              {dict.selected}
             </p>
             <p className="text-[#E6EDF3] text-sm">
               {longDate(dayOf(slot))}
@@ -188,12 +190,12 @@ export function BookingWidget() {
         <section>
           <header className="flex items-center justify-between mb-5">
             <h3 className="font-display text-xl tracking-wide text-[#E6EDF3]">
-              {month ? monthLabel(month) : "Loading"}
+              {month ? monthLabel(month) : "\u00A0"}
             </h3>
             <div className="flex gap-1">
               <button
                 type="button"
-                aria-label="Previous month"
+                aria-label={dict.prevMonth}
                 disabled={!month || months.indexOf(month) <= 0}
                 onClick={() => setMonth((m) => (m ? shiftMonth(m, -1) : m))}
                 className="grid place-items-center w-11 h-11 rounded-lg text-[#8B949E] transition-colors hover:text-[#E6EDF3] hover:bg-[#1A2233] disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
@@ -202,7 +204,7 @@ export function BookingWidget() {
               </button>
               <button
                 type="button"
-                aria-label="Next month"
+                aria-label={dict.nextMonth}
                 disabled={!month || months.indexOf(month) >= months.length - 1}
                 onClick={() => setMonth((m) => (m ? shiftMonth(m, 1) : m))}
                 className="grid place-items-center w-11 h-11 rounded-lg text-[#8B949E] transition-colors hover:text-[#E6EDF3] hover:bg-[#1A2233] disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
@@ -213,12 +215,12 @@ export function BookingWidget() {
           </header>
 
           <div className="grid grid-cols-7 gap-1 mb-2">
-            {WEEKDAYS.map((w) => (
+            {weekdayInitials(locale).map((w, i) => (
               <span
-                key={w}
+                key={i}
                 className="grid place-items-center font-mono text-[0.65rem] tracking-widest uppercase text-[#7D8590] h-8"
               >
-                {w[0]}
+                {w}
               </span>
             ))}
           </div>
@@ -258,12 +260,12 @@ export function BookingWidget() {
 
         <section className="flex flex-col min-h-[320px]">
           <h3 className="font-display text-xl tracking-wide text-[#E6EDF3] mb-5">
-            {day ? longDate(day) : "Pick a day"}
+            {day ? longDate(day) : dict.pickDay}
           </h3>
 
           {!day ? (
             <p className="text-sm text-[#7D8590]">
-              {data ? "Days with availability are highlighted." : "Loading availability…"}
+              {data ? dict.availabilityHint : dict.loading}
             </p>
           ) : (
             <div className="flex flex-col gap-2 max-h-[360px] overflow-y-auto pr-1">
@@ -299,7 +301,7 @@ export function BookingWidget() {
               onClick={() => setStage("details")}
               className="mt-4 shrink-0 w-full h-12 rounded-lg bg-[#F0605D] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] cursor-pointer"
             >
-              Continue
+              {dict.continue}
             </button>
           )}
         </section>
@@ -311,11 +313,10 @@ export function BookingWidget() {
               <div className="grid place-items-center w-14 h-14 rounded-full bg-[rgba(63,185,80,0.12)]">
                 <Check className="w-7 h-7 text-[#3FB950]" aria-hidden />
               </div>
-              <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">You&apos;re booked</h3>
+              <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.bookedHeading}</h3>
               <p className="text-sm text-[#8B949E] max-w-[46ch]">
-                {slot && `${longDate(dayOf(slot))} at ${timeOf(slot)} Lisbon time.`} A Microsoft
-                Teams invitation is on its way to {form.email}, and the team has been added to the
-                meeting.
+                {slot && `${longDate(dayOf(slot))}, ${timeOf(slot)}. `}
+                {dict.bookedBody.replace("{email}", form.email)}
               </p>
             </div>
           ) : (
@@ -335,17 +336,17 @@ export function BookingWidget() {
                 className="flex items-center gap-2 self-start text-sm text-[#8B949E] hover:text-[#E6EDF3] transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" aria-hidden />
-                Back
+                {dict.back}
               </button>
 
               {stage === "details" ? (
                 <>
-                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">Your details</h3>
+                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.detailsHeading}</h3>
                   <input
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="Your name"
+                    placeholder={dict.name}
                     className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                   <input
@@ -353,27 +354,28 @@ export function BookingWidget() {
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="Email address"
+                    placeholder={dict.email}
                     className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                   <textarea
                     rows={3}
                     value={form.notes}
                     onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                    placeholder="What is the event? Date, venue, rough headcount."
+                    placeholder={dict.notes}
                     className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
                   />
                   <p className="flex items-start gap-2 text-[0.8rem] text-[#7D8590]">
                     <Users className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
-                    Three people from the Treasure Hunt team are added to every booking.
+                    {dict.teamNote}
                   </p>
                 </>
               ) : (
                 <>
-                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">Confirm your email</h3>
+                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.codeHeading}</h3>
                   <p className="text-sm text-[#8B949E]">
-                    Microsoft sent a 6-digit code to <span className="text-[#E6EDF3]">{form.email}</span>.
-                    Enter it to finish booking.
+                    {dict.codeIntro.split("{email}")[0]}
+                    <span className="text-[#E6EDF3]">{form.email}</span>
+                    {dict.codeIntro.split("{email}")[1]}
                   </p>
                   <input
                     required
@@ -382,7 +384,7 @@ export function BookingWidget() {
                     value={code}
                     onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
                     placeholder="000000"
-                    aria-label="Verification code"
+                    aria-label={dict.codeLabel}
                     className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] font-mono text-lg tracking-[0.4em] text-center focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                 </>
@@ -395,7 +397,7 @@ export function BookingWidget() {
                 disabled={busy}
                 className="w-full h-12 rounded-lg bg-[#F0605D] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
               >
-                {busy ? "Working…" : stage === "code" ? "Confirm booking" : "Continue"}
+                {busy ? dict.working : stage === "code" ? dict.confirm : dict.continue}
               </button>
             </form>
           )}

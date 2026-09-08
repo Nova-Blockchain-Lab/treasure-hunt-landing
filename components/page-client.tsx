@@ -6,7 +6,7 @@ import { trackEvent } from "@/lib/analytics"
 import { useAnalyticsTracking } from "@/hooks/use-analytics-tracking"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
-import { ComicScrollStage } from "@/components/comic-scroll-stage"
+import { ComicQuestVideo } from "@/components/comic-quest-video"
 import { MarqueeStrip } from "@/components/marquee-strip"
 import { SocialProofStrip } from "@/components/social-proof-strip"
 import { FeaturesSection } from "@/components/features-section"
@@ -138,7 +138,7 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
         secondaryIsButton={isVariant}
         trustBadgeClassName={isVariant ? "text-[#8B949E]" : undefined}
       />
-      <ComicScrollStage lang={lang} />
+      <ComicQuestVideo caption={dict.media.storyCaption} playLabel={dict.media.storyPlay} />
       <MarqueeStrip items={dict.marquee} />
 
       {/* Section order: lead with proof (logos → live demo + per-event results) before the feature pitch.

@@ -75,8 +75,8 @@ export function HeroSection({
           <Image
             src="/treasure-hunt-logo.png"
             alt="Treasure Hunt - Interactive Event Engagement Game"
-            width={1000}
-            height={385}
+            width={6250}
+            height={2665}
             className="block w-full max-w-[300px] sm:max-w-[440px] md:max-w-[720px] mx-auto mb-8 sm:mb-12 md:mb-16 h-auto"
             style={{ height: "auto" }}
             sizes="(max-width: 640px) 300px, (max-width: 768px) 440px, 720px"

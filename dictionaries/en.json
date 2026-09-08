@@ -6,7 +6,8 @@
     "useCases": "Use Cases",
     "packages": "Packages",
     "media": "Media",
-    "bookDemo": "Plan Your Event"
+    "bookDemo": "Plan Your Event",
+    "backToSite": "Back to site"
   },
   "hero": {
     "srTitle": "Treasure Hunt | Interactive Event Engagement Game for Conferences",
@@ -111,7 +112,9 @@
     "photo6Alt": "Limited-edition Treasure Hunt hoodie with the maze mascot",
     "teamFlyersAlt": "Attendees holding Treasure Hunt tap-to-claim flyers at the booth",
     "clip1Alt": "Player reacting after winning",
-    "clip2Alt": "Hand tapping a phone on a Treasure Hunt tag"
+    "clip2Alt": "Hand tapping a phone on a Treasure Hunt tag",
+    "storyCaption": "The game in 60 seconds.",
+    "storyPlay": "Watch the game"
   },
   "features": {
     "eyebrow": "02 / Features",
@@ -251,6 +254,37 @@
     "text": "Turn your next event into a game attendees talk about.",
     "bookDemo": "Plan Your Event"
   },
+  "booking": {
+    "heading": "Book a call",
+    "intro": "Thirty minutes with the team behind Treasure Hunt. Bring your event date, venue and rough headcount and we'll tell you what is realistic.",
+    "duration": "{minutes} minutes",
+    "timezone": "Lisbon time",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "pickDay": "Pick a day",
+    "availabilityHint": "Days with availability are highlighted.",
+    "loading": "Loading availability…",
+    "selected": "Selected",
+    "continue": "Continue",
+    "back": "Back",
+    "detailsHeading": "Your details",
+    "name": "Your name",
+    "email": "Email address",
+    "notes": "What is the event? Date, venue, rough headcount.",
+    "teamNote": "Three people from the Treasure Hunt team are added to every booking.",
+    "codeHeading": "Confirm your email",
+    "codeIntro": "Microsoft sent a 6-digit code to {email}. Enter it to finish booking.",
+    "codeLabel": "Verification code",
+    "confirm": "Confirm booking",
+    "working": "Working…",
+    "bookedHeading": "You're booked",
+    "bookedBody": "A Microsoft Teams invitation is on its way to {email}, and the team has been added to the meeting.",
+    "errorCode": "That code doesn't match. Check the email and try again.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorNetwork": "Could not reach the booking service. Please try again.",
+    "unavailable": "Live availability is unavailable right now.",
+    "unavailableLink": "Book on Microsoft's page instead"
+  },
   "footer": {
     "description": "Interactive event engagement platform that drives foot traffic, rewards participation, and gives organizers real-time analytics.",
     "navigation": "Navigation",
@@ -264,7 +298,8 @@
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
-    "copyright": "Nova Blockchain Lab. All rights reserved."
+    "copyright": "Nova Blockchain Lab. All rights reserved.",
+    "projectBy": "A project by"
   },
   "faq": {
     "eyebrow": "07 / FAQ",
