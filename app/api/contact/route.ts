@@ -14,16 +14,13 @@ import { NextResponse } from "next/server"
 // rejects it and this route 502s (that mistake shipped once and was rolled
 // back).
 //
-// DELIVERABILITY, measured against a novaims.unl.pt mailbox: leads still land
-// in JUNK, from either sending domain, whenever the message goes to all four
-// recipients at once. The one send that reached the INBOX was a single
-// recipient. Recipient count looks like the deciding factor rather than the
-// sending domain, on one data point, so treat this as unfinished. Neither
-// treasurehunt.pt nor urbancheckin.pt publishes a _dmarc record, which is the
-// obvious next thing to fix; addressing one shared/list mailbox instead of
-// four individuals is the other. Leads fail SILENTLY here (Resend reports
-// success while Outlook files it in Junk), so check Junk first if leads seem
-// to stop.
+// DELIVERABILITY: leads fail SILENTLY here. Resend reports success while
+// Outlook can still file the mail in Junk, so check Junk first if leads seem
+// to stop. leads@treasurehunt.pt was a cold sender to novaims.unl.pt and its
+// first messages were junked; marking it "not junk" fixes it PER MAILBOX
+// (Outlook Safe Senders), so each recipient has to do it, or an admin adds a
+// tenant-level allow. Neither treasurehunt.pt nor urbancheckin.pt publishes a
+// _dmarc record, which is the durable fix and a single DNS TXT away.
 // CONTACT_TO is where leads are delivered: the same four people who are on
 // every booking (see app/api/book/route.ts). Comma-separated, overridable via
 // CONTACT_EMAIL.
