@@ -1,11 +1,21 @@
 import { NextResponse } from "next/server"
 
 // Lead delivery via Resend's HTTP API (no SDK dependency — plain fetch).
-// Requires RESEND_API_KEY. The `from` address must be on a domain verified in
-// that Resend account; it defaults to urbancheckin.pt (a verified domain we
-// reuse) and is overridable via CONTACT_FROM — switch it to a treasurehunt.pt
-// address once that domain is verified in the same account. If the key is
-// absent we return an explicit error, never a fake success.
+// If no key is set we return an explicit error, never a fake success.
+//
+// TWO Resend accounts exist. The account behind RESEND_API_KEY has
+// urbancheckin.pt verified; a second account (the one the Lisbon Games Week
+// deployment uses) has treasurehunt.pt verified. `from` must be on a domain
+// verified in whichever account the key belongs to, so the key and the
+// from-address travel together: CONTACT_RESEND_KEY is the treasurehunt.pt
+// account and takes precedence when set, falling back to RESEND_API_KEY.
+//
+// Why bother: measured from the live form against a novaims.unl.pt inbox,
+// a lead sent from noreply@urbancheckin.pt lands in JUNK (Outlook warns the
+// recipient they "don't often get email from" it), while the same lead from
+// leads@treasurehunt.pt lands in the INBOX. Sender/site alignment is the
+// whole difference. Do not point one account's key at the other's domain:
+// Resend rejects it and the form 502s.
 // CONTACT_TO is where leads are delivered: the same four people who are on
 // every booking (see app/api/book/route.ts). Comma-separated, overridable via
 // CONTACT_EMAIL.
@@ -24,7 +34,7 @@ const CONTACT_TO = (
   .map((e) => e.trim())
   .filter(Boolean)
 const PUBLIC_CONTACT = process.env.PUBLIC_CONTACT || "nova.blockchain.lab@novaims.unl.pt"
-const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <noreply@urbancheckin.pt>"
+const CONTACT_FROM = process.env.CONTACT_FROM || "Treasure Hunt <leads@treasurehunt.pt>"
 
 export async function POST(request: Request) {
   try {
@@ -35,9 +45,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
-    const apiKey = process.env.RESEND_API_KEY
+    const apiKey = process.env.CONTACT_RESEND_KEY || process.env.RESEND_API_KEY
     if (!apiKey) {
-      console.error("Contact form: RESEND_API_KEY not set — lead NOT delivered:", { name, email, eventSize })
+      console.error("Contact form: no Resend key set — lead NOT delivered:", { name, email, eventSize })
       return NextResponse.json(
         { error: "The contact form is not configured yet. Please email us directly at " + PUBLIC_CONTACT },
         { status: 503 },
