@@ -257,6 +257,8 @@
   "booking": {
     "heading": "Reservar una llamada",
     "intro": "Treinta minutos con el equipo de Treasure Hunt. Trae la fecha del evento, el lugar y una estimación de asistentes y te diremos qué es realista.",
+    "howItWorks": "Elija un día y luego una hora. Sus datos se piden en el paso siguiente.",
+    "afterBooking": "Recibirá por correo una invitación de calendario con el enlace de vídeo. Tres personas del equipo participan en cada llamada.",
     "duration": "{minutes} minutos",
     "timezone": "Hora de Lisboa",
     "prevMonth": "Mes anterior",

@@ -750,3 +750,19 @@ dropdown only offers the primary/secondary emails from the Cal.com profile,
 which is why `hello@treasurehunt.pt` had to be added and verified there first).
 So a lead sees "Treasure Hunt" as the sender name and any reply goes to the
 company domain.
+
+## The booking modal must explain itself, on every screen size
+
+An earlier `compact` prop hid the summary rail below `lg`, which left phone
+visitors looking at a bare date grid with no heading and no explanation of what
+they were booking. The rail is now **always rendered**; on small screens it
+collapses to a header with the duration/location/timezone on one wrapping row.
+`compact` now only selects the heading level (`h1` on /book, `h2` in the modal,
+where the page already owns the h1).
+
+Two lines of copy answer the questions the picker was silently asking
+(`booking.howItWorks`, `booking.afterBooking`, all six locales): what to do now
+("pick a day, then a time; details come next") and what arrives afterwards
+("a calendar invite with the video link; three of us join every call"). If you
+restyle this rail, keep both — a date grid on its own asks for a commitment
+without saying what it leads to.

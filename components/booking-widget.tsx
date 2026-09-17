@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
-import { Clock, Video, Globe, ChevronLeft, ChevronRight, Check, ArrowLeft, Users } from "lucide-react"
+import { Clock, Video, Globe, ChevronLeft, ChevronRight, Check, ArrowLeft, Users, MousePointerClick, Mail } from "lucide-react"
 import { capture } from "@/lib/posthog"
 import { getSlots, lisbonNow, type SlotsResponse } from "@/lib/slots"
 
@@ -57,9 +57,9 @@ export function BookingWidget({
 }: {
   dict: BookingDict
   locale: string
-  /** Inside the modal the surrounding chrome already says what this is, so the
-      summary rail is dropped on small screens where it would push the calendar
-      a full viewport down. */
+  /** Set when rendered inside the modal, where the page already owns the h1.
+      It only affects heading level — the summary rail is always shown, because
+      hiding it left mobile visitors with a bare calendar and no explanation. */
   compact?: boolean
   /** Seeds the notes field, e.g. with the packages tier the visitor clicked. */
   initialNotes?: string
@@ -180,41 +180,52 @@ export function BookingWidget({
 
   return (
     <div className="grid lg:grid-cols-[300px_1fr] rounded-2xl border border-[rgba(240,246,252,0.06)] bg-[#131921] overflow-hidden">
-      {/* Meeting summary */}
-      <aside
-        className={[
-          "flex-col gap-5 p-7 border-b lg:border-b-0 lg:border-r border-[rgba(240,246,252,0.06)]",
-          compact ? "hidden lg:flex" : "flex",
-        ].join(" ")}
-      >
+      {/* Meeting summary. Never hidden: on a phone this is the only thing that
+          says what the calendar below is for, and hiding it left the modal as a
+          bare date grid with no context at all. On small screens it collapses to
+          a header with the facts on one wrapping row. */}
+      <aside className="flex flex-col gap-4 lg:gap-5 p-5 sm:p-7 border-b lg:border-b-0 lg:border-r border-[rgba(240,246,252,0.06)]">
         <div className="flex flex-col gap-1.5">
           <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#8B949E]">
             NOVA Blockchain Lab
           </span>
-          <Heading className="font-display text-3xl tracking-wide text-[#E6EDF3]">{dict.heading}</Heading>
+          <Heading className="font-display text-2xl sm:text-3xl tracking-wide text-[#E6EDF3]">{dict.heading}</Heading>
         </div>
 
         <p className="text-sm leading-relaxed text-[#8B949E]">
           {dict.intro}
         </p>
 
-        <dl className="flex flex-col gap-3 text-sm text-[#E6EDF3]">
-          <div className="flex items-center gap-3">
+        <dl className="flex flex-row flex-wrap lg:flex-col gap-x-5 gap-y-2 lg:gap-3 text-sm text-[#E6EDF3]">
+          <div className="flex items-center gap-2 lg:gap-3">
             <Clock className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
             <dd>{dict.duration.replace("{minutes}", String(data?.durationMinutes ?? 30))}</dd>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 lg:gap-3">
             <Video className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
             <dd>{data?.location ?? "\u00A0"}</dd>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 lg:gap-3">
             <Globe className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
             <dd>{dict.timezone}</dd>
           </div>
         </dl>
 
+        {/* What to do now, and what arrives afterwards. Without these the picker
+            asked for a commitment without saying what it led to. */}
+        <div className="flex flex-col gap-2.5 mt-1 pt-4 border-t border-[rgba(240,246,252,0.06)]">
+          <p className="flex items-start gap-2.5 text-[0.8rem] leading-relaxed text-[#8B949E]">
+            <MousePointerClick className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
+            {dict.howItWorks}
+          </p>
+          <p className="flex items-start gap-2.5 text-[0.8rem] leading-relaxed text-[#8B949E]">
+            <Mail className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
+            {dict.afterBooking}
+          </p>
+        </div>
+
         {slot && (
-          <div className="mt-auto pt-5 border-t border-[rgba(240,246,252,0.06)]">
+          <div className="lg:mt-auto pt-4 border-t border-[rgba(240,246,252,0.06)]">
             <p className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#8B949E] mb-1">
               {dict.selected}
             </p>

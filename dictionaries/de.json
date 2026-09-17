@@ -257,6 +257,8 @@
   "booking": {
     "heading": "Gespräch buchen",
     "intro": "Dreißig Minuten mit dem Team hinter Treasure Hunt. Bringen Sie Datum, Veranstaltungsort und eine grobe Teilnehmerzahl mit, und wir sagen Ihnen, was realistisch ist.",
+    "howItWorks": "Wählen Sie einen Tag und dann eine Uhrzeit. Ihre Daten folgen im nächsten Schritt.",
+    "afterBooking": "Sie erhalten per E-Mail eine Kalendereinladung mit dem Videolink. Drei Personen aus dem Team nehmen an jedem Gespräch teil.",
     "duration": "{minutes} Minuten",
     "timezone": "Lissabonner Zeit",
     "prevMonth": "Vorheriger Monat",

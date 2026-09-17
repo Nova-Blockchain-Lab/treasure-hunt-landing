@@ -257,6 +257,8 @@
   "booking": {
     "heading": "Marcar uma chamada",
     "intro": "Trinta minutos com a equipa do Treasure Hunt. Traga a data do evento, o local e uma estimativa de participantes e dizemos-lhe o que é realista.",
+    "howItWorks": "Escolha um dia e depois uma hora. Os seus dados são pedidos no passo seguinte.",
+    "afterBooking": "Recebe por e-mail um convite de calendário com a ligação de vídeo. Três pessoas da equipa participam em todas as chamadas.",
     "duration": "{minutes} minutos",
     "timezone": "Hora de Lisboa",
     "prevMonth": "Mês anterior",
