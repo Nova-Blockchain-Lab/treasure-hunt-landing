@@ -6,14 +6,10 @@ const TITLE = "Data with Purpose Summit 2026 · Treasure Hunt Report"
 const DESCRIPTION =
   "Post-event report for the Data with Purpose Summit 2026 Treasure Hunt at Taguspark, Oeiras. Aggregated from on-chain events on Nova Cidade testnet."
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}): Promise<Metadata> {
-  const { lang } = await params
+export async function generateMetadata(): Promise<Metadata> {
   const base = "https://www.treasurehunt.pt"
-  const url = `${base}${lang === "pt" ? "/pt" : ""}/datasummit-report`
+  // EN-only page: og:url must match the canonical, not the /pt variant.
+  const url = `${base}/datasummit-report`
   return {
     title: TITLE,
     description: DESCRIPTION,
@@ -31,13 +27,13 @@ export async function generateMetadata({
       title: TITLE,
       description: DESCRIPTION,
       url,
-      images: ["/datasummit-logo.svg"],
+      images: ["https://www.treasurehunt.pt/opengraph-image"],
     },
     twitter: {
       card: "summary_large_image",
       title: TITLE,
       description: DESCRIPTION,
-      images: ["/datasummit-logo.svg"],
+      images: ["https://www.treasurehunt.pt/opengraph-image"],
     },
   }
 }

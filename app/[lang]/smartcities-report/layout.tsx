@@ -6,14 +6,10 @@ const TITLE = "Portugal Smart Cities Summit 2026 Report | Treasure Hunt"
 const DESCRIPTION =
   "Post-event report for the PSCS 2026 Treasure Hunt at FIL Pavilhão 3, 12–14 May 2026. Aggregated from on-chain events on Nova Cidade testnet."
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}): Promise<Metadata> {
-  const { lang } = await params
+export async function generateMetadata(): Promise<Metadata> {
   const base = "https://www.treasurehunt.pt"
-  const url = `${base}${lang === "pt" ? "/pt" : ""}/smartcities-report`
+  // EN-only page: og:url must match the canonical, not the /pt variant.
+  const url = `${base}/smartcities-report`
   return {
     title: TITLE,
     description: DESCRIPTION,

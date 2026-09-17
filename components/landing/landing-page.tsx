@@ -1,14 +1,14 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { SpotlightCard } from "@/components/spotlight-card"
 import { RevealOnScroll } from "@/components/reveal-on-scroll"
 import { SiteFooter } from "@/components/site-footer"
-import { ContactModal } from "@/components/contact-modal"
+import { PlanEventModal } from "@/components/plan-event-modal"
+import { getSlots } from "@/lib/slots"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { resolveIcon } from "@/components/landing/icon-map"
 import type { LandingContent } from "@/lib/landing/types"
@@ -26,12 +26,16 @@ export function LandingPage({
   lang: string
 }) {
   const [contactOpen, setContactOpen] = useState(false)
+  // Same warm-up as the home page: the picker must open already filled.
+  useEffect(() => {
+    getSlots().catch(() => {})
+  }, [])
   const openContact = useCallback(() => setContactOpen(true), [])
   const closeContact = useCallback(() => setContactOpen(false), [])
   const homeHref = lang === "en" ? "/" : `/${lang}`
 
   return (
-    <main className="bg-[#06080F] min-h-screen">
+    <div className="bg-[#06080F] min-h-screen">
       {/* Header */}
       <header className="sticky top-0 z-50 px-5 md:px-6 bg-[rgba(6,8,15,0.85)] backdrop-blur-xl border-b border-[rgba(240,246,252,0.06)]">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
@@ -39,8 +43,8 @@ export function LandingPage({
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
-              width={240}
-              height={32}
+              width={1600}
+              height={682}
               className="h-8 sm:h-12 w-auto"
               style={{ width: "auto" }}
               sizes="240px"
@@ -59,19 +63,13 @@ export function LandingPage({
         </div>
       </header>
 
+      <main id="main">
       {/* Hero */}
       <section className="relative overflow-hidden px-5 md:px-6 pt-16 pb-20 md:pt-24 md:pb-28">
-        <motion.div
-          className="absolute inset-0 -z-10"
-          animate={{
-            background: [
-              "radial-gradient(ellipse at 50% 30%, rgba(240,96,93,0.08), transparent 55%), #06080F",
-              "radial-gradient(ellipse at 55% 40%, rgba(88,166,255,0.06), transparent 55%), #06080F",
-              "radial-gradient(ellipse at 50% 30%, rgba(240,96,93,0.08), transparent 55%), #06080F",
-            ],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute inset-0 -z-10 overflow-hidden bg-[#06080F]" aria-hidden>
+          <div className="absolute inset-0 animate-[ambient-a_10s_ease-in-out_infinite] motion-reduce:animate-none bg-[radial-gradient(ellipse_at_50%_30%,rgba(240,96,93,0.08),transparent_55%)]" />
+          <div className="absolute inset-0 animate-[ambient-b_10s_ease-in-out_infinite] motion-reduce:animate-none bg-[radial-gradient(ellipse_at_55%_40%,rgba(88,166,255,0.06),transparent_55%)]" />
+        </div>
         <div className="max-w-[900px] mx-auto text-center">
           <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#58A6FF] mb-5">
             {content.eyebrow}
@@ -88,7 +86,7 @@ export function LandingPage({
           </p>
           <button
             onClick={openContact}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#C9433F] text-white font-display text-base sm:text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
           >
             {content.primaryCta}
           </button>
@@ -245,21 +243,24 @@ export function LandingPage({
           </p>
           <button
             onClick={openContact}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#C9433F] text-white font-display text-base sm:text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
           >
             {content.ctaButton}
           </button>
         </div>
       </section>
 
+      </main>
       <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
-      <ContactModal
+      <PlanEventModal
         dict={dict.contactForm}
+        bookingDict={dict.booking}
+        lang={lang}
         open={contactOpen}
         onClose={closeContact}
         variant="control"
         triggerLocation={`landing:${content.slug}`}
       />
-    </main>
+    </div>
   )
 }

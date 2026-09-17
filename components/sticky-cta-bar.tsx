@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { X } from "lucide-react"
 import { trackEvent } from "@/lib/analytics"
 
@@ -14,10 +13,19 @@ interface StickyCTADict {
 }
 
 export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onOpenContact?: () => void }) {
-  const { scrollY } = useScrollPosition()
+  // A boolean, not a scroll position: React bails out when the value is
+  // unchanged, so this re-renders twice per page rather than once per event.
+  const [heroOutOfView, setHeroOutOfView] = useState(false)
   const [dismissed, setDismissed] = useState(true) // start hidden to avoid flash
   const [atClosingCta, setAtClosingCta] = useState(false)
   const hasTrackedShow = useRef(false)
+
+  useEffect(() => {
+    const onScroll = () => setHeroOutOfView(window.scrollY > 600)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   useEffect(() => {
     const stored = localStorage.getItem(DISMISS_KEY)
@@ -38,7 +46,6 @@ export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onO
     return () => io.disconnect()
   }, [])
 
-  const heroOutOfView = scrollY > 600
   const visible = heroOutOfView && !dismissed && !atClosingCta
 
   useEffect(() => {
@@ -56,6 +63,7 @@ export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onO
 
   return (
     <div
+      inert={!visible}
       className={`fixed bottom-0 left-0 right-0 z-90 h-[60px] bg-[rgba(6,8,15,0.95)] backdrop-blur-xl border-t border-[rgba(240,246,252,0.06)] transition-transform duration-400 ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
@@ -69,7 +77,7 @@ export function StickyCTABar({ dict, onOpenContact }: { dict: StickyCTADict; onO
         <div className="flex items-center gap-3 w-full md:w-auto">
           <button
             onClick={onOpenContact}
-            className="flex-1 md:flex-none inline-flex items-center justify-center bg-[#F0605D] text-white font-display text-sm tracking-widest uppercase px-6 py-2.5 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)]"
+            className="flex-1 md:flex-none inline-flex items-center justify-center bg-[#C9433F] text-white font-display text-sm tracking-widest uppercase px-6 py-2.5 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)]"
           >
             {dict.bookDemo}
           </button>

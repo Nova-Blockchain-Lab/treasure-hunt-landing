@@ -15,7 +15,7 @@
     "headlineHighlight": "Gamified Experience",
     "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
     "taglineSuffix": ". Straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed at ETHDenver, Future Maker & more \u00b7 10,000+ treasure finds \u00b7 500+ checkpoints \u00b7 500+ players",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & more \u00b7 14,000+ treasure finds \u00b7 400+ checkpoints \u00b7 1,000+ players",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -45,8 +45,8 @@
       "Built-in merch store where rewards become real items"
     ],
     "stats": [
-      { "value": "10,000+", "label": "Treasure Finds" },
-      { "value": "500+", "label": "Venue Checkpoints" },
+      { "value": "14,000+", "label": "Treasure Finds" },
+      { "value": "400+", "label": "Venue Checkpoints" },
       { "value": "1.7M+", "label": "Rewards Minted" },
       { "value": "8", "label": "Events Deployed" }
     ],
@@ -327,7 +327,9 @@
     "success": "Thanks! We\u2019ll be in touch within 24 hours.",
     "error": "Something went wrong. Please email us directly.",
     "bookCallHint": "Prefer to pick a time?",
-    "bookCall": "Book a 30-min call"
+    "bookCall": "Book a 30-min call",
+    "messageHint": "Prefer to send a message?",
+    "messageLink": "Send a message instead"
   },
   "report": {
     "title": "TREASURE HUNT RECAP",

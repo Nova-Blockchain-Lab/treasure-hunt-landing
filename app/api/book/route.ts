@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server"
+import { sendLeadEmail } from "@/lib/notify"
+import { calcomBook, calcomConfigured, lisbonToUtcIso } from "@/lib/calcom"
 
 // Creates a real appointment on daraujo@novaims.unl.pt's calendar through the
 // same anonymous Bookings API the public booking page uses (see
@@ -69,6 +71,31 @@ export async function POST(request: Request) {
     return NextResponse.json({ status: "invalid_code" }, { status: 200 })
   }
 
+  // Cal.com path: one call, no verification code, so the widget never reaches
+  // its "enter the emailed code" stage at all.
+  if (calcomConfigured()) {
+    const result = await calcomBook({
+      startIso: lisbonToUtcIso(slot),
+      name,
+      email,
+      notes,
+      guests: TEAM_ATTENDEES,
+    })
+    if (result.ok) return NextResponse.json({ status: "booked", id: result.id })
+
+    console.error("book: cal.com rejected the appointment", result.detail)
+    return NextResponse.json(
+      {
+        error: result.taken
+          ? "That slot could not be booked. It may have just been taken."
+          : "That booking could not be completed. Please try another time.",
+      },
+      { status: result.taken ? 409 : 502 },
+    )
+  }
+
+  // ponytail: Microsoft Bookings fallback — see app/api/slots/route.ts. Delete
+  // everything below once CALCOM_* is set in production.
   const payload = {
     appointment: {
       startTime: { dateTime: `${slot}:00`, timeZone: TIME_ZONE },
@@ -118,6 +145,21 @@ export async function POST(request: Request) {
 
   // Upstream reports both of these as HTTP 500 with the reason in the body.
   if (text.includes("SelfServiceBookingEmailVerificationRequired")) {
+    // The visitor now has to leave for their inbox and come back with a code,
+    // which is where most of them stop. We already hold their name, email and
+    // notes, so mail them through as a lead here rather than discovering later
+    // that the most-qualified traffic vanished at the last step. Fire and
+    // forget: a notification failure must never break the booking flow.
+    sendLeadEmail({
+      subject: `Booking started (unconfirmed) — ${name}`,
+      text:
+        `${name} picked a slot but has not entered the emailed verification code yet.\n\n` +
+        `Name: ${name}\nEmail: ${email}\nRequested slot: ${slot} (Europe/Lisbon)\n` +
+        `Notes: ${notes || "N/A"}\n\nIf no confirmation follows, this is still a live lead.`,
+      replyTo: email,
+    }).then((r) => {
+      if (!r.ok) console.error("book: pending-lead notification failed", r.reason, r.detail)
+    })
     return NextResponse.json({ status: "code_sent" })
   }
   if (text.includes("InvalidCode")) {

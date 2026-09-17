@@ -63,7 +63,7 @@ function InterviewVideo({ src, poster, badge, caption }: { src: string; poster: 
             aria-label={`${badge} — play`}
             className="absolute inset-0 grid place-items-center bg-black/25 transition-colors hover:bg-black/10 cursor-pointer"
           >
-            <span className="grid place-items-center w-16 h-16 rounded-full bg-[#F0605D] text-white shadow-lg transition-transform group-hover:scale-105">
+            <span className="grid place-items-center w-16 h-16 rounded-full bg-[#C9433F] text-white shadow-lg transition-transform group-hover:scale-105">
               <Play className="w-7 h-7 translate-x-0.5" fill="currentColor" />
             </span>
           </button>
@@ -194,7 +194,7 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
 
         {/* Gallery: uniform-cell grid of event photos + vertical clips */}
         <RevealOnScroll delay={250}>
-          <div className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#7D8590] mb-4">{dict.galleryHeading}</div>
+          <h3 className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#7D8590] mb-4">{dict.galleryHeading}</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {gallery.map((tile) =>
               tile.kind === "photo" ? (

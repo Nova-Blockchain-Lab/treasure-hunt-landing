@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const NAV = [
   { href: "#headline", label: "01 · Headline" },
@@ -12,7 +13,7 @@ export function SiteHeader() {
   return (
     <header className="report-header">
       <div className="report-container report-header__inner">
-        <a href="#headline" className="report-brand">
+        <Link href="/" className="report-brand">
           <div className="report-brand__mark">
             <Image
               src="/treasure-hunt-only-logo.webp"
@@ -26,7 +27,7 @@ export function SiteHeader() {
             <div className="report-brand__name">TREASURE HUNT · REPORT</div>
             <div className="report-brand__sub">DATA WITH PURPOSE SUMMIT 2026 · v1.0</div>
           </div>
-        </a>
+        </Link>
         <nav className="report-nav" aria-label="Section navigation">
           {NAV.map((n) => (
             <a key={n.href} href={n.href}>

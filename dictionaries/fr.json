@@ -15,7 +15,7 @@
     "headlineHighlight": "Expérience Gamifiée",
     "tagline": "Les participants explorent, scannent des points de contrôle, gagnent de vraies récompenses et génèrent du passage là où vous en avez besoin",
     "taglineSuffix": ". Directement depuis le navigateur du téléphone, sans télécharger d'application.",
-    "trustBadge": "Déployé à ETHDenver, Future Maker et plus · plus de 10 000 trésors trouvés · plus de 500 points de contrôle · plus de 500 joueurs",
+    "trustBadge": "Déployé à ETHDenver, Future Maker et plus · plus de 14 000 trésors trouvés · plus de 400 points de contrôle · plus de 1 000 joueurs",
     "bookDemo": "Planifiez votre Événement",
     "seeItLive": "Voir Nos Résultats →"
   },
@@ -45,9 +45,9 @@
       "Boutique intégrée où les récompenses deviennent de vrais objets"
     ],
     "stats": [
-      { "value": "10,000+", "label": "Trésors Trouvés" },
-      { "value": "500+", "label": "Points de Contrôle" },
-      { "value": "1.7M+", "label": "Récompenses Émises" },
+      { "value": "14 000+", "label": "Trésors Trouvés" },
+      { "value": "400+", "label": "Points de Contrôle" },
+      { "value": "1,7M+", "label": "Récompenses Émises" },
       { "value": "8", "label": "Événements Déployés" }
     ],
     "ethdenverCard": {
@@ -327,7 +327,9 @@
     "success": "Merci ! Nous vous répondrons sous 24 heures.",
     "error": "Une erreur est survenue. Écrivez-nous directement par e-mail.",
     "bookCallHint": "Vous préférez choisir un créneau ?",
-    "bookCall": "Réserver un appel de 30 min"
+    "bookCall": "Réserver un appel de 30 min",
+    "messageHint": "Vous préférez envoyer un message ?",
+    "messageLink": "Envoyer un message"
   },
   "report": {
     "title": "RÉCAPITULATIF TREASURE HUNT",

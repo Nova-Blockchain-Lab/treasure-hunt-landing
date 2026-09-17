@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   const home = lang === "en" ? "/" : `/${lang}`
 
   return (
-    <main className="min-h-[100dvh] bg-[#06080F]">
+    <div className="min-h-[100dvh] bg-[#06080F]">
       {/* Deliberately not the site Navbar: its links are home-page anchors and
           it carries a second CTA, which competes with the booking flow. A
           booking page gets one way out and nothing else. */}
@@ -58,8 +58,8 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
-              width={6250}
-              height={2665}
+              width={1600}
+              height={682}
               priority
               className="h-9 sm:h-16 w-auto"
               sizes="240px"
@@ -75,10 +75,10 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         </div>
       </header>
 
-      <div className="mx-auto w-full max-w-[1080px] px-5 sm:px-8 py-16 sm:py-24">
+      <main id="main" className="mx-auto w-full max-w-[1080px] px-5 sm:px-8 py-16 sm:py-24">
         <BookingWidget dict={dict.booking} locale={localeTags[lang as Locale] ?? "en"} />
-      </div>
+      </main>
       <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
-    </main>
+    </div>
   )
 }

@@ -52,7 +52,7 @@ export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIs
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <button
               onClick={onOpenContact}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#F0605D] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2.5 bg-[#C9433F] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
             >
               {dict.bookDemo}
             </button>

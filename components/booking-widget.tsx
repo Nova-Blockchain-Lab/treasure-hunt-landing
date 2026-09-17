@@ -1,10 +1,9 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { Clock, Video, Globe, ChevronLeft, ChevronRight, Check, ArrowLeft, Users } from "lucide-react"
-import { usePostHog } from "posthog-js/react"
-
-type SlotsResponse = { timeZone: string; durationMinutes: number; slots: string[] }
+import { capture } from "@/lib/posthog"
+import { getSlots, lisbonNow, type SlotsResponse } from "@/lib/slots"
 
 /** details -> the emailed code -> done. Microsoft requires the code step. */
 type Stage = "picking" | "details" | "code" | "booked"
@@ -50,7 +49,24 @@ function weekdayInitials(locale: string) {
   return Array.from({ length: 7 }, (_, i) => fmt.format(new Date(Date.UTC(2024, 0, 1 + i))))
 }
 
-export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: string }) {
+export function BookingWidget({
+  dict,
+  locale,
+  compact = false,
+  initialNotes = "",
+}: {
+  dict: BookingDict
+  locale: string
+  /** Inside the modal the surrounding chrome already says what this is, so the
+      summary rail is dropped on small screens where it would push the calendar
+      a full viewport down. */
+  compact?: boolean
+  /** Seeds the notes field, e.g. with the packages tier the visitor clicked. */
+  initialNotes?: string
+}) {
+  // On /book this widget IS the page, so its title is the h1. Inside the modal
+  // it sits under the page's own h1 and must not compete with it.
+  const Heading = compact ? "h2" : "h1"
   const monthLabel = (month: string) =>
     new Intl.DateTimeFormat(locale, { month: "long", year: "numeric", timeZone: "UTC" })
       .format(utcDate(`${month}-01`))
@@ -63,11 +79,17 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
   const [day, setDay] = useState<string | null>(null)
   const [slot, setSlot] = useState<string | null>(null)
   const [stage, setStage] = useState<Stage>("picking")
-  const [form, setForm] = useState({ name: "", email: "", notes: "" })
+  const [form, setForm] = useState({ name: "", email: "", notes: initialNotes })
   const [code, setCode] = useState("")
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const posthog = usePostHog()
+  const stageHeading = useRef<HTMLHeadingElement>(null)
+
+  // Every stage swap unmounts the control that had focus, so without this a
+  // keyboard user is dropped back to the top of the document mid-booking.
+  useEffect(() => {
+    if (stage !== "picking") stageHeading.current?.focus()
+  }, [stage])
 
   async function submit(withCode: string) {
     setBusy(true)
@@ -81,12 +103,12 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
       const data = await res.json()
       if (data.status === "code_sent") {
         setStage("code")
-        posthog?.capture("booking_code_sent")
+        capture("booking_code_sent")
       } else if (data.status === "invalid_code") {
         setError(dict.errorCode)
       } else if (data.status === "booked") {
         setStage("booked")
-        posthog?.capture("booking_confirmed", { slot })
+        capture("booking_confirmed", { slot })
       } else {
         setError(data.error ?? dict.errorGeneric)
       }
@@ -98,18 +120,30 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
   }
 
   useEffect(() => {
-    fetch("/api/slots?days=60")
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((d: SlotsResponse) => {
+    let live = true
+    getSlots()
+      .then((d) => {
+        if (!live) return
         setData(d)
-        setMonth(d.slots.length ? dayOf(d.slots[0]).slice(0, 7) : null)
+        // Land on the first day that still has time on it and preselect it, so
+        // the picker opens showing real times rather than an empty "pick a day".
+        const first = d.slots.find((s) => s > lisbonNow())
+        setMonth(first ? dayOf(first).slice(0, 7) : null)
+        setDay(first ? dayOf(first) : null)
       })
-      .catch(() => setFailed(true))
+      .catch(() => live && setFailed(true))
+    return () => {
+      live = false
+    }
   }, [])
 
   const byDay = useMemo(() => {
     const map = new Map<string, string[]>()
+    // /api/slots is cached, so its payload cannot know the time it is served at
+    // and still includes slots that have since passed. Drop them here.
+    const now = lisbonNow()
     for (const s of data?.slots ?? []) {
+      if (s <= now) continue
       const key = dayOf(s)
       map.set(key, [...(map.get(key) ?? []), s])
     }
@@ -125,7 +159,11 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
         <p className="text-[#8B949E] text-sm">
           {dict.unavailable}{" "}
           <a
-            href="https://outlook.office.com/bookwithme/user/84c98cdef247426285ae07dfbe0a4b95@novaims.unl.pt?anonymous"
+            // Shown only when /api/slots is down. Must track CALCOM_USERNAME /
+            // CALCOM_EVENT_SLUG; it pointed at the retired Microsoft Bookings
+            // page until Sept 2026. The cal.com profile renders as "Treasure
+            // Hunt", so this exposes no personal name.
+            href="https://cal.com/treasurehunt/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#F0605D] underline underline-offset-2"
@@ -143,12 +181,17 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
   return (
     <div className="grid lg:grid-cols-[300px_1fr] rounded-2xl border border-[rgba(240,246,252,0.06)] bg-[#131921] overflow-hidden">
       {/* Meeting summary */}
-      <aside className="flex flex-col gap-5 p-7 border-b lg:border-b-0 lg:border-r border-[rgba(240,246,252,0.06)]">
+      <aside
+        className={[
+          "flex-col gap-5 p-7 border-b lg:border-b-0 lg:border-r border-[rgba(240,246,252,0.06)]",
+          compact ? "hidden lg:flex" : "flex",
+        ].join(" ")}
+      >
         <div className="flex flex-col gap-1.5">
           <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-[#8B949E]">
             NOVA Blockchain Lab
           </span>
-          <h2 className="font-display text-3xl tracking-wide text-[#E6EDF3]">{dict.heading}</h2>
+          <Heading className="font-display text-3xl tracking-wide text-[#E6EDF3]">{dict.heading}</Heading>
         </div>
 
         <p className="text-sm leading-relaxed text-[#8B949E]">
@@ -162,7 +205,7 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
           </div>
           <div className="flex items-center gap-3">
             <Video className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
-            <dd>Microsoft Teams</dd>
+            <dd>{data?.location ?? "\u00A0"}</dd>
           </div>
           <div className="flex items-center gap-3">
             <Globe className="w-4 h-4 shrink-0 text-[#58A6FF]" aria-hidden />
@@ -235,17 +278,17 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
                   key={cell}
                   type="button"
                   disabled={!free}
-                  aria-pressed={selected}
+                  aria-current={selected ? "date" : undefined}
                   aria-label={longDate(cell)}
                   onClick={() => {
                     setDay(cell)
                     setSlot(null)
-                    posthog?.capture("booking_date_select", { day: cell })
+                    capture("booking_date_select", { day: cell })
                   }}
                   className={[
                     "grid place-items-center h-11 rounded-lg text-sm transition-colors cursor-pointer",
                     selected
-                      ? "bg-[#F0605D] text-white font-medium"
+                      ? "bg-[#C9433F] text-white font-medium"
                       : free
                         ? "bg-[#1A2233] text-[#E6EDF3] hover:bg-[#243049]"
                         : "text-[#7D8590] cursor-default",
@@ -275,15 +318,15 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
                   <button
                     key={s}
                     type="button"
-                    aria-pressed={selected}
+                    aria-current={selected || undefined}
                     onClick={() => {
                       setSlot(s)
-                      posthog?.capture("booking_slot_select", { slot: s })
+                      capture("booking_slot_select", { slot: s })
                     }}
                     className={[
                       "flex items-center justify-center gap-2 h-11 shrink-0 rounded-lg border font-mono text-sm transition-all cursor-pointer",
                       selected
-                        ? "border-[#F0605D] bg-[#F0605D] text-white"
+                        ? "border-[#F0605D] bg-[#C9433F] text-white"
                         : "border-[rgba(240,246,252,0.10)] text-[#E6EDF3] hover:border-[#F0605D] hover:text-[#F0605D]",
                     ].join(" ")}
                   >
@@ -299,7 +342,7 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
             <button
               type="button"
               onClick={() => setStage("details")}
-              className="mt-4 shrink-0 w-full h-12 rounded-lg bg-[#F0605D] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] cursor-pointer"
+              className="mt-4 shrink-0 w-full h-12 rounded-lg bg-[#C9433F] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] cursor-pointer"
             >
               {dict.continue}
             </button>
@@ -309,11 +352,11 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
       ) : (
         <div className="p-7">
           {stage === "booked" ? (
-            <div className="flex flex-col items-center text-center gap-4 py-10">
+            <div role="status" className="flex flex-col items-center text-center gap-4 py-10">
               <div className="grid place-items-center w-14 h-14 rounded-full bg-[rgba(63,185,80,0.12)]">
                 <Check className="w-7 h-7 text-[#3FB950]" aria-hidden />
               </div>
-              <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.bookedHeading}</h3>
+              <h3 ref={stageHeading} tabIndex={-1} className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.bookedHeading}</h3>
               <p className="text-sm text-[#8B949E] max-w-[46ch]">
                 {slot && `${longDate(dayOf(slot))}, ${timeOf(slot)}. `}
                 {dict.bookedBody.replace("{email}", form.email)}
@@ -341,13 +384,15 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
 
               {stage === "details" ? (
                 <>
-                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.detailsHeading}</h3>
+                  <h3 ref={stageHeading} tabIndex={-1} className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.detailsHeading}</h3>
                   <input
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder={dict.name}
-                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
+                    aria-label={dict.name}
+                    autoComplete="name"
+                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                   <input
                     required
@@ -355,14 +400,17 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder={dict.email}
-                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
+                    aria-label={dict.email}
+                    autoComplete="email"
+                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                   <textarea
                     rows={3}
                     value={form.notes}
                     onChange={(e) => setForm({ ...form, notes: e.target.value })}
                     placeholder={dict.notes}
-                    className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
+                    aria-label={dict.notes}
+                    className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
                   />
                   <p className="flex items-start gap-2 text-[0.8rem] text-[#7D8590]">
                     <Users className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
@@ -371,7 +419,7 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
                 </>
               ) : (
                 <>
-                  <h3 className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.codeHeading}</h3>
+                  <h3 ref={stageHeading} tabIndex={-1} className="font-display text-2xl tracking-wide text-[#E6EDF3]">{dict.codeHeading}</h3>
                   <p className="text-sm text-[#8B949E]">
                     {dict.codeIntro.split("{email}")[0]}
                     <span className="text-[#E6EDF3]">{form.email}</span>
@@ -385,17 +433,17 @@ export function BookingWidget({ dict, locale }: { dict: BookingDict; locale: str
                     onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
                     placeholder="000000"
                     aria-label={dict.codeLabel}
-                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.08)] text-[#E6EDF3] placeholder:text-[#7D8590] font-mono text-lg tracking-[0.4em] text-center focus:border-[rgba(240,96,93,0.4)] transition-colors"
+                    className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] font-mono text-lg tracking-[0.4em] text-center focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                 </>
               )}
 
-              {error && <p className="text-sm text-[#F0605D]">{error}</p>}
+              {error && <p role="alert" className="text-sm text-[#F0605D]">{error}</p>}
 
               <button
                 type="submit"
                 disabled={busy}
-                className="w-full h-12 rounded-lg bg-[#F0605D] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
+                className="w-full h-12 rounded-lg bg-[#C9433F] text-white font-display text-base tracking-widest uppercase transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
               >
                 {busy ? dict.working : stage === "code" ? dict.confirm : dict.continue}
               </button>

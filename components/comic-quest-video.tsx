@@ -40,7 +40,7 @@ export function ComicQuestVideo({ caption, playLabel }: { caption: string; playL
                 aria-label={playLabel}
                 className="absolute inset-0 grid place-items-center bg-black/25 transition-colors hover:bg-black/10 cursor-pointer"
               >
-                <span className="grid place-items-center w-16 h-16 rounded-full bg-[#F0605D] text-white shadow-lg transition-transform group-hover:scale-105">
+                <span className="grid place-items-center w-16 h-16 rounded-full bg-[#C9433F] text-white shadow-lg transition-transform group-hover:scale-105">
                   <Play className="w-7 h-7 translate-x-0.5" fill="currentColor" />
                 </span>
               </button>

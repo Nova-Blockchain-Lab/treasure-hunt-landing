@@ -6,14 +6,10 @@ const TITLE = "Festival da Juventude 2026 · Treasure Hunt Report"
 const DESCRIPTION =
   "Post-event report for the Festival da Juventude 2026 Treasure Hunt in Cadaval. Aggregated from on-chain events on Nova Cidade testnet."
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}): Promise<Metadata> {
-  const { lang } = await params
+export async function generateMetadata(): Promise<Metadata> {
   const base = "https://www.treasurehunt.pt"
-  const url = `${base}${lang === "pt" ? "/pt" : ""}/cadaval-report`
+  // EN-only page: og:url must match the canonical, not the /pt variant.
+  const url = `${base}/cadaval-report`
   return {
     title: TITLE,
     description: DESCRIPTION,

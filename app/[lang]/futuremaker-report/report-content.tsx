@@ -2,10 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
-import {
-  LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Cell,
-} from 'recharts'
+import { BarRow, Histogram } from '../cadaval-report/_components/charts'
 import {
   ACTIVITY, MINTING, BREAKDOWN, TOTAL_CLAIMS, TOP10, HOURLY,
   TREASURE_POPULARITY, MERCH_ITEMS, FUN_FACTS, HERO_STATS,
@@ -18,15 +15,8 @@ const DONUT_DATA = [
   { name: 'QR', value: BREAKDOWN.qr },
   { name: 'Merch', value: BREAKDOWN.merch },
 ]
-
-const tooltipStyle: React.CSSProperties = {
-  backgroundColor: 'rgba(19,25,33,0.95)',
-  border: '1px solid rgba(88,166,255,0.25)',
-  borderRadius: '10px',
-  color: '#E6EDF3',
-  fontSize: '13px',
-  boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
-}
+const DONUT_MAX = Math.max(...DONUT_DATA.map((d) => d.value))
+const MINTING_BINS = MINTING.map((m) => ({ label: m.label, count: m.amount }))
 
 interface ReportDict {
   [key: string]: string
@@ -87,120 +77,65 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         {/* Charts row: Daily Activity + Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
           <ChartCard title={dict.dailyActivity}>
-            <ResponsiveContainer width="100%" height={250}>
-              <LineChart data={ACTIVITY}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
-                <XAxis dataKey="label" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={{ stroke: 'rgba(255,255,255,0.06)' }} tickLine={false} />
-                <YAxis tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-                <Tooltip contentStyle={tooltipStyle} cursor={{ stroke: 'rgba(88,166,255,0.2)' }} />
-                <Line
-                  type="monotone"
-                  dataKey="count"
-                  stroke="#58A6FF"
-                  strokeWidth={2.5}
-                  dot={{ fill: '#58A6FF', r: 4, strokeWidth: 2, stroke: '#06080F' }}
-                  activeDot={{ r: 6, fill: '#58A6FF', stroke: '#58A6FF', strokeWidth: 3, strokeOpacity: 0.3 }}
-                  name={dict.transactions}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+            <Histogram
+              data={ACTIVITY}
+              height={190}
+              color="#58A6FF"
+              ariaLabel={`${dict.dailyActivity} — ${dict.transactions}`}
+            />
           </ChartCard>
 
           <ChartCard title={dict.activityBreakdown}>
-            <div className="flex flex-col items-center">
-              <ResponsiveContainer width="100%" height={220}>
-                <PieChart>
-                  <Pie
-                    data={DONUT_DATA}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={88}
-                    paddingAngle={3}
-                    dataKey="value"
-                    stroke="rgba(6,8,15,0.5)"
-                    strokeWidth={2}
-                  >
-                    {DONUT_DATA.map((_, i) => (
-                      <Cell key={i} fill={DONUT_COLORS[i]} />
-                    ))}
-                  </Pie>
-                  <Tooltip contentStyle={tooltipStyle} />
-                </PieChart>
-              </ResponsiveContainer>
-              <div className="text-center -mt-4 mb-3">
-                <div className="font-display text-2xl" style={{ textShadow: '0 0 15px rgba(88,166,255,0.2)' }}>
-                  {TOTAL_CLAIMS.toLocaleString()}
-                </div>
-                <div className="text-[0.7rem] text-[#8B949E] uppercase tracking-wider">{dict.totalActions}</div>
+            <div className="text-center mb-4">
+              <div className="font-display text-2xl" style={{ textShadow: '0 0 15px rgba(88,166,255,0.2)' }}>
+                {TOTAL_CLAIMS.toLocaleString()}
               </div>
-              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-[#E6EDF3]">
-                {[dict.found, dict.social, dict.qr, dict.merch].map((label, i) => (
-                  <span key={i} className="inline-flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-[3px] inline-block" style={{ background: DONUT_COLORS[i] }} />
-                    {label} <span className="text-[#8B949E]">({DONUT_DATA[i].value})</span>
-                  </span>
-                ))}
-              </div>
+              <div className="text-[0.7rem] text-[#8B949E] uppercase tracking-wider">{dict.totalActions}</div>
             </div>
+            {[dict.found, dict.social, dict.qr, dict.merch].map((label, i) => (
+              <BarRow
+                key={i}
+                label={label}
+                value={DONUT_DATA[i].value}
+                max={DONUT_MAX}
+                color={DONUT_COLORS[i]}
+              />
+            ))}
           </ChartCard>
         </div>
 
         {/* Token Distribution */}
         <ChartCard title={dict.tokenDistribution} subtitle={dict.top10Holders} className="mb-8">
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={TOP10} layout="vertical" margin={{ left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" horizontal={false} />
-              <XAxis type="number" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <YAxis dataKey="label" type="category" tick={{ fill: '#E6EDF3', fontSize: 11 }} width={115} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(88,166,255,0.06)' }} />
-              <Bar dataKey="balance" name={dict.fmEarned} fill="url(#fmPinkOrange)" radius={[0, 6, 6, 0]} barSize={24} />
-              <defs>
-                <linearGradient id="fmPinkOrange" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#F0605D" stopOpacity={0.85} />
-                  <stop offset="100%" stopColor="#FF9A76" stopOpacity={0.95} />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          {TOP10.map((h) => (
+            <BarRow
+              key={h.label}
+              label={h.label}
+              value={h.balance}
+              max={TOP10[0].balance}
+              width={700}
+              color="linear-gradient(90deg, rgba(240,96,93,0.85), rgba(255,154,118,0.95))"
+            />
+          ))}
         </ChartCard>
 
         {/* Hourly Activity */}
         <ChartCard title={dict.hourlyActivity} subtitle={dict.hourlyDescription} className="mb-8">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={HOURLY}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
-              <XAxis dataKey="label" tick={{ fill: '#8B949E', fontSize: 9 }} angle={-45} textAnchor="end" height={50} axisLine={{ stroke: 'rgba(255,255,255,0.06)' }} tickLine={false} />
-              <YAxis tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(255,154,118,0.06)' }} />
-              <Bar dataKey="count" name={dict.transactions} fill="url(#fmOrangeCyan)" radius={[3, 3, 0, 0]} />
-              <defs>
-                <linearGradient id="fmOrangeCyan" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#FF9A76" stopOpacity={0.9} />
-                  <stop offset="100%" stopColor="#58A6FF" stopOpacity={0.35} />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          <Histogram
+            data={HOURLY}
+            height={220}
+            color="#FF9A76"
+            ariaLabel={`${dict.hourlyActivity} — ${dict.transactions}`}
+          />
         </ChartCard>
 
         {/* Minting Timeline */}
         <ChartCard title={dict.mintingTimeline} subtitle={dict.mintingDescription} className="mb-8">
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={MINTING}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
-              <XAxis dataKey="label" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={{ stroke: 'rgba(255,255,255,0.06)' }} tickLine={false} />
-              <YAxis tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(86,211,100,0.06)' }} />
-              <Bar dataKey="amount" name={dict.fmMintedLabel} fill="url(#fmGreenGlow)" radius={[4, 4, 0, 0]} />
-              <defs>
-                <linearGradient id="fmGreenGlow" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#56D364" stopOpacity={0.9} />
-                  <stop offset="100%" stopColor="#56D364" stopOpacity={0.4} />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          <Histogram
+            data={MINTING_BINS}
+            height={190}
+            color="#56D364"
+            ariaLabel={`${dict.mintingTimeline} — ${dict.fmMintedLabel}`}
+          />
         </ChartCard>
 
         {/* Treasure Popularity Table */}
@@ -217,7 +152,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
             <tbody>
               {TREASURE_POPULARITY.map((t) => (
                 <tr key={t.rank} className={`border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150 ${t.deleted ? 'opacity-50' : ''}`}>
-                  <td className="p-3 font-bold text-[#484F58] tabular-nums">{t.rank}</td>
+                  <td className="p-3 font-bold text-[#8B949E] tabular-nums">{t.rank}</td>
                   <td className="p-3 text-[#E6EDF3]">
                     {t.deleted ? <span className="italic text-[#8B949E]">{t.name}</span> : t.name}
                   </td>
@@ -228,7 +163,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
             </tbody>
           </table>
         </TableCard>
-        <p className="text-[0.7rem] text-[#484F58] mt-3 mb-8 px-1 leading-relaxed">
+        <p className="text-[0.7rem] text-[#8B949E] mt-3 mb-8 px-1 leading-relaxed">
           <span className="italic text-[#8B949E]">Recycled Tag</span> &mdash; {dict.recycledNote}
         </p>
 
@@ -247,7 +182,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
             <tbody>
               {MERCH_ITEMS.map((m) => (
                 <tr key={m.rank} className={`border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150 ${m.deleted ? 'opacity-50' : ''}`}>
-                  <td className="p-3 font-bold text-[#484F58] tabular-nums">{m.rank}</td>
+                  <td className="p-3 font-bold text-[#8B949E] tabular-nums">{m.rank}</td>
                   <td className="p-3 text-[#E6EDF3]">
                     {m.deleted ? <span className="italic text-[#8B949E]">{m.name}</span> : m.name}
                   </td>
@@ -282,7 +217,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
               <tbody>
                 {TOP10.slice(3).map((h, i) => (
                   <tr key={i} className="border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150">
-                    <td className="p-3 font-bold text-[#484F58] tabular-nums">{i + 4}</td>
+                    <td className="p-3 font-bold text-[#8B949E] tabular-nums">{i + 4}</td>
                     <td className="p-3 font-mono text-[#E6EDF3] text-[13px]">{h.label}</td>
                     <td className="p-3 text-right font-bold text-[#56D364] tabular-nums">{h.balance.toLocaleString()}</td>
                   </tr>
@@ -307,7 +242,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
                   <span className="text-[0.65rem] text-[#8B949E] uppercase tracking-wider leading-tight">{dict[fact.label]}</span>
                 </div>
                 <div className="text-sm font-bold text-white truncate">{fact.value}</div>
-                {fact.sub && <div className="text-[0.7rem] text-[#484F58] mt-1">{fact.sub}</div>}
+                {fact.sub && <div className="text-[0.7rem] text-[#8B949E] mt-1">{fact.sub}</div>}
               </div>
             ))}
           </div>
@@ -324,7 +259,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
             {dict.viewContract}
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
-          <p className="text-xs text-[#484F58]">{dict.builtOn}</p>
+          <p className="text-xs text-[#8B949E]">{dict.builtOn}</p>
         </footer>
 
         {/* JSON-LD */}

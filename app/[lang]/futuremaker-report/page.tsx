@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   return {
     title: isPortuguese
-      ? 'Relatório Future Maker 2026 | Resultados e Analytics do Treasure Hunt'
+      ? 'Relatório Future Maker 2026 | Resultados do Treasure Hunt'
       : 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
     description: isPortuguese
       ? '265 caçadores, 2.591 tesouros encontrados, 1.024.700 FM cunhados. Analytics completo do Treasure Hunt no Future Maker, NOVA IMS.'
@@ -23,7 +23,7 @@ export async function generateMetadata({
       canonical: url,
       languages: {
         en: 'https://www.treasurehunt.pt/futuremaker-report',
-        pt: 'https://www.treasurehunt.pt/pt/futuremaker-report',
+        'pt-PT': 'https://www.treasurehunt.pt/pt/futuremaker-report',
         'x-default': 'https://www.treasurehunt.pt/futuremaker-report',
       },
     },

@@ -24,6 +24,7 @@ interface NavDict {
   features: string
   howItWorks: string
   packages: string
+  bookDemo: string
 }
 
 export function SiteFooter({
@@ -127,8 +128,8 @@ export function SiteFooter({
               <Image
                 src="/treasure-hunt-logo.png"
                 alt="Treasure Hunt - Event Engagement Platform"
-                width={6250}
-                height={2665}
+                width={1600}
+                height={682}
                 className="h-20 w-auto"
                 sizes="220px"
               />
@@ -157,7 +158,7 @@ export function SiteFooter({
           </div>
 
           <div>
-            <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.navigation}</div>
+            <h2 className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.navigation}</h2>
             <ul className="flex flex-col gap-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -173,7 +174,7 @@ export function SiteFooter({
           </div>
 
           <div>
-            <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.resources}</div>
+            <h2 className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.resources}</h2>
             <ul className="flex flex-col gap-2.5">
               {resourceLinks.map((link) => (
                 <li key={link.href}>
@@ -189,19 +190,25 @@ export function SiteFooter({
           </div>
 
           <div>
-            <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.contact}</div>
+            <h2 className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{dict.contact}</h2>
             <a
               href="mailto:nova.blockchain.lab@novaims.unl.pt"
               className="text-sm text-[#58A6FF] border-b border-[rgba(88,166,255,0.2)] hover:border-[#58A6FF] transition-colors duration-300"
             >
               nova.blockchain.lab@novaims.unl.pt
             </a>
+            <Link
+              href="/book"
+              className="mt-3 block text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
+            >
+              {navDict.bookDemo}
+            </Link>
           </div>
         </div>
 
         {/* Solutions (SEO landing pages) */}
         <div className="border-t border-[rgba(240,246,252,0.04)] pt-8">
-          <div className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{solutionsHeading}</div>
+          <h2 className="font-mono text-xs tracking-[0.15em] uppercase text-[#8B949E] mb-4">{solutionsHeading}</h2>
           <ul className="flex flex-wrap gap-x-6 gap-y-2.5">
             {solutionLinks.map((link) => (
               <li key={link.href}>

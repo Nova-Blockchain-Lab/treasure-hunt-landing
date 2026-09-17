@@ -1,23 +1,30 @@
 import type { Metadata } from "next"
 import type { LandingContent } from "./types"
+import { localeTags } from "@/i18n/config"
 
 const BASE = "https://www.treasurehunt.pt"
 
 // Builds the Next Metadata for a landing page from its content. EN pages live at
 // /<slug> (canonical EN, en + x-default); PT pages live at /pt/<slug> (canonical
 // PT, pt + x-default → the PT URL since there is no other-language version).
-export function landingMetadata(content: LandingContent): Metadata {
+export function landingMetadata(content: LandingContent, lang?: string): Metadata {
+  // The route prerenders under every locale, so /es/nfc-treasure-hunt serves
+  // English copy inside <html lang="es">. Those variants already canonicalise
+  // here, but a wrong-language page is a quality signal we should not publish:
+  // keep them followable and out of the index.
+  const offLocale = lang !== undefined && lang !== content.locale
   const path = content.locale === "en" ? `/${content.slug}` : `/${content.locale}/${content.slug}`
   const url = `${BASE}${path}`
   const languages =
     content.locale === "en"
       ? { en: url, "x-default": url }
-      : { [content.locale]: url, "x-default": url }
+      : { [localeTags[content.locale]]: url, "x-default": url }
 
   return {
     title: content.title,
     description: content.description,
     alternates: { canonical: url, languages },
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type: "website",
       title: content.title,

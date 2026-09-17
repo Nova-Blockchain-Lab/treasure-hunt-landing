@@ -73,7 +73,7 @@ export default async function BlogPostPage({
         </Link>
 
         <header className="mb-10">
-          <time className="text-xs font-mono text-[#484F58] tracking-wide">{post.date}</time>
+          <time className="text-xs font-mono text-[#7D8590] tracking-wide">{post.date}</time>
           <h1 className="font-display text-[clamp(1.8rem,4vw,3rem)] leading-tight mt-3 mb-4">
             {post.title}
           </h1>
@@ -95,7 +95,7 @@ export default async function BlogPostPage({
                   href={`${prefix}/blog/${related.slug}`}
                   className="block group"
                 >
-                  <time className="text-xs font-mono text-[#484F58] tracking-wide">
+                  <time className="text-xs font-mono text-[#7D8590] tracking-wide">
                     {related.date}
                   </time>
                   <h3 className="font-display text-lg text-[#E6EDF3] group-hover:text-[#F0605D] transition-colors mt-1">

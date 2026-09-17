@@ -15,7 +15,7 @@
     "headlineHighlight": "Spielerischen Erlebnis",
     "tagline": "Teilnehmende erkunden, scannen Checkpoints, verdienen echte Belohnungen und erzeugen Besucherströme genau dort, wo Sie sie brauchen",
     "taglineSuffix": ". Direkt im Handy-Browser, ohne App-Download.",
-    "trustBadge": "Eingesetzt bei ETHDenver, Future Maker und mehr · über 10.000 gefundene Schätze · über 500 Checkpoints · über 500 Spielende",
+    "trustBadge": "Eingesetzt bei ETHDenver, Future Maker und mehr · über 14.000 gefundene Schätze · über 400 Checkpoints · über 1.000 Spielende",
     "bookDemo": "Event Planen",
     "seeItLive": "Unsere Ergebnisse Ansehen →"
   },
@@ -45,9 +45,9 @@
       "Integrierter Merch-Shop, in dem Belohnungen zu echten Artikeln werden"
     ],
     "stats": [
-      { "value": "10,000+", "label": "Gefundene Schätze" },
-      { "value": "500+", "label": "Checkpoints vor Ort" },
-      { "value": "1.7M+", "label": "Ausgegebene Belohnungen" },
+      { "value": "14.000+", "label": "Gefundene Schätze" },
+      { "value": "400+", "label": "Checkpoints vor Ort" },
+      { "value": "1,7M+", "label": "Ausgegebene Belohnungen" },
       { "value": "8", "label": "Durchgeführte Events" }
     ],
     "ethdenverCard": {
@@ -327,7 +327,9 @@
     "success": "Danke! Wir melden uns innerhalb von 24 Stunden.",
     "error": "Etwas ist schiefgegangen. Bitte schreiben Sie uns direkt eine E-Mail.",
     "bookCallHint": "Lieber direkt einen Termin wählen?",
-    "bookCall": "30-Minuten-Gespräch buchen"
+    "bookCall": "30-Minuten-Gespräch buchen",
+    "messageHint": "Lieber eine Nachricht schicken?",
+    "messageLink": "Nachricht senden"
   },
   "report": {
     "title": "TREASURE HUNT RÜCKBLICK",

@@ -31,7 +31,7 @@ const body = `# Treasure Hunt
 ## Deployments and measured results
 - ETHDenver 2026 (Denver, CO, Feb 18-21): 207 players, 992 treasures found,
   462,255 BUFFI minted, 59 checkpoints. Report: ${BASE}/ethdenver-report
-- Future Maker 2026 (NOVA IMS, Lisbon, Mar 16-19): 2,591 treasures, 115
+- Future Maker 2026 (NOVA IMS, Lisbon, Mar 16-19): 265 players, 2,591 treasures, 115
   checkpoints. Report: ${BASE}/futuremaker-report
 - Portugal Smart Cities Summit 2026 (FIL Pavilion 3, Lisbon, May 12-14): 351
   players, 8,123 treasures, 103 checkpoints. Report: ${BASE}/smartcities-report
@@ -42,7 +42,9 @@ const body = `# Treasure Hunt
 - Data with Purpose Summit 2026 (Taguspark, Oeiras, Jun 25): 58 players, 777 tag
   finds, 25 tags. Report: ${BASE}/datasummit-report
 
-Totals across deployments: 10,000+ treasure finds, 500+ checkpoints, 500+ players, 8 events.
+Totals across the six published reports: 14,885 treasure finds, 401 checkpoints,
+1,027 players, 1,794,280 reward tokens minted. Eight events deployed in total;
+the six above have public reports.
 
 ## Technical notes
 - Runs entirely in the mobile browser. No app download, no wallet setup, no seed
@@ -79,6 +81,8 @@ translated in all six; the landing pages and blog are written per language.
 ## Contact
 NOVA Blockchain Lab, NOVA IMS, Lisbon, Portugal. nova.blockchain.lab@novaims.unl.pt
 `
+
+export const dynamic = 'force-static'
 
 export function GET() {
   return new Response(body, {

@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useState, useCallback, useMemo } from "react"
+import { useEffect, useState, useCallback, useMemo, useRef } from "react"
 import Image from "next/image"
-import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { useActiveSection } from "@/hooks/use-active-section"
 import { LanguageSwitcher } from "@/components/language-switcher"
 
@@ -18,8 +17,31 @@ interface NavDict {
 }
 
 export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?: () => void }) {
-  const { scrollY, scrollProgress } = useScrollPosition()
-  const scrolled = scrollY > 60
+  // The progress bar is written straight to the DOM inside the listener: routing
+  // it through React state re-rendered the navbar on every scroll event and
+  // animated a layout-triggering `width` each frame.
+  const [scrolled, setScrolled] = useState(false)
+  const progressRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    let frame = 0
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60)
+      if (frame) return
+      frame = requestAnimationFrame(() => {
+        frame = 0
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight
+        const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0
+        if (progressRef.current) progressRef.current.style.width = `${pct}%`
+      })
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
   const [menuOpen, setMenuOpen] = useState(false)
 
   const links = useMemo(
@@ -76,8 +98,8 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
       >
         {/* Scroll progress bar */}
         <div
-          className="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-[#F0605D] to-[#FF9A76] transition-[width] duration-150"
-          style={{ width: `${scrollProgress * 100}%` }}
+          ref={progressRef}
+          className="absolute top-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#F0605D] to-[#FF9A76]"
         />
 
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
@@ -85,12 +107,11 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
-              width={240}
-              height={32}
+              width={1600}
+              height={682}
               className="h-9 sm:h-16 w-auto"
               style={{ width: "auto" }}
               sizes="240px"
-              priority
             />
           </a>
 

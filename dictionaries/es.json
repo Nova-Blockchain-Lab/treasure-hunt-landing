@@ -15,7 +15,7 @@
     "headlineHighlight": "Experiencia Gamificada",
     "tagline": "Los asistentes exploran, escanean puntos de control, ganan recompensas reales y generan tráfico allí donde lo necesitas",
     "taglineSuffix": ". Directamente desde el navegador del móvil, sin descargar ninguna app.",
-    "trustBadge": "Desplegado en ETHDenver, Future Maker y más · más de 10.000 tesoros encontrados · más de 500 puntos de control · más de 500 jugadores",
+    "trustBadge": "Desplegado en ETHDenver, Future Maker y más · más de 14.000 tesoros encontrados · más de 400 puntos de control · más de 1.000 jugadores",
     "bookDemo": "Planifica tu Evento",
     "seeItLive": "Ver Nuestros Resultados →"
   },
@@ -45,9 +45,9 @@
       "Tienda de merchandising integrada donde las recompensas se vuelven reales"
     ],
     "stats": [
-      { "value": "10,000+", "label": "Tesoros Encontrados" },
-      { "value": "500+", "label": "Puntos de Control" },
-      { "value": "1.7M+", "label": "Recompensas Emitidas" },
+      { "value": "14.000+", "label": "Tesoros Encontrados" },
+      { "value": "400+", "label": "Puntos de Control" },
+      { "value": "1,7M+", "label": "Recompensas Emitidas" },
       { "value": "8", "label": "Eventos Desplegados" }
     ],
     "ethdenverCard": {
@@ -327,7 +327,9 @@
     "success": "¡Gracias! Te responderemos en 24 horas.",
     "error": "Algo ha ido mal. Escríbenos directamente por correo.",
     "bookCallHint": "¿Prefieres elegir una hora?",
-    "bookCall": "Reservar una llamada de 30 min"
+    "bookCall": "Reservar una llamada de 30 min",
+    "messageHint": "¿Prefieres enviar un mensaje?",
+    "messageLink": "Enviar un mensaje"
   },
   "report": {
     "title": "RESUMEN DE TREASURE HUNT",

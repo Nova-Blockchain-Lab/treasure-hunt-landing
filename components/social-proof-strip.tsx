@@ -41,7 +41,7 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
               <span className="inline-flex items-center bg-white rounded-md px-2.5 py-1.5">
                 {logo.svg ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={logo.src} alt={logo.alt} className="h-9 md:h-11 w-auto object-contain" />
+                  <img src={logo.src} alt={logo.alt} width={logo.w} height={logo.h} loading="lazy" decoding="async" className="h-9 md:h-11 w-auto object-contain" />
                 ) : (
                   <Image src={logo.src} alt={logo.alt} width={logo.w} height={logo.h} className="max-h-9 md:max-h-11 w-auto h-auto object-contain" />
                 )}

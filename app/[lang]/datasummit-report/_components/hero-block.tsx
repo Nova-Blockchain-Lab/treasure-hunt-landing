@@ -101,7 +101,7 @@ export function HeroBlock({ snapshot }: { snapshot: Snapshot }) {
         <span className="report-hero__line report-hero__line--accent">
           {fmtInt(kpis.totalFinds)} finds.
         </span>
-        <span className="report-hero__line">One summit.</span>
+        <span className="report-hero__line">Data with Purpose Summit.</span>
       </h1>
 
       {/* hairline + dateline */}

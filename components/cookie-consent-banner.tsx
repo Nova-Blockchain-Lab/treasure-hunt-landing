@@ -42,7 +42,7 @@ export function CookieConsentBanner() {
             </button>
             <button
               onClick={grantConsent}
-              className="px-4 py-2 text-sm text-white bg-[#F0605D] rounded-lg hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] transition-all cursor-pointer"
+              className="px-4 py-2 text-sm text-white bg-[#C9433F] rounded-lg hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] transition-all cursor-pointer"
             >
               {t.accept}
             </button>

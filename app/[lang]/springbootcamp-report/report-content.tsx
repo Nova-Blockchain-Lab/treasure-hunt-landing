@@ -2,10 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink, Trophy } from 'lucide-react'
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Cell,
-} from 'recharts'
+import { BarRow, Histogram } from '../cadaval-report/_components/charts'
 import {
   ACTIVITY, MINTING, BREAKDOWN, TOTAL_CLAIMS, TOP10, HOURLY,
   TREASURE_POPULARITY, FUN_FACTS, HERO_STATS,
@@ -18,15 +15,8 @@ const DONUT_DATA = [
   { name: 'Found', value: BREAKDOWN.found },
   { name: 'Social', value: BREAKDOWN.social },
 ]
-
-const tooltipStyle: React.CSSProperties = {
-  backgroundColor: 'rgba(19,25,33,0.95)',
-  border: '1px solid rgba(88,166,255,0.25)',
-  borderRadius: '10px',
-  color: '#E6EDF3',
-  fontSize: '13px',
-  boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
-}
+const DONUT_MAX = Math.max(...DONUT_DATA.map((d) => d.value))
+const MINTING_BINS = MINTING.map((m) => ({ label: m.label, count: m.amount }))
 
 export function ReportContent() {
   const eventLabel = new Date(EVENT_DATE + 'T12:00:00Z').toLocaleDateString('en-US', {
@@ -60,7 +50,7 @@ export function ReportContent() {
             SPRING BOOTCAMP RECAP
           </h1>
           <p className="text-[#8B949E] text-lg tracking-wide">{eventLabel} · NOVA IMS, Lisbon</p>
-          <p className="text-[#484F58] text-sm mt-2">Teams Treasure Hunt · {TOKEN_NAME} ({TOKEN_SYMBOL})</p>
+          <p className="text-[#8B949E] text-sm mt-2">Teams Treasure Hunt · {TOKEN_NAME} ({TOKEN_SYMBOL})</p>
         </section>
 
         {/* Stats grid */}
@@ -103,23 +93,17 @@ export function ReportContent() {
             </div>
           )}
 
-          <ResponsiveContainer width="100%" height={280}>
-            <BarChart data={TEAM_LEADERBOARD} layout="vertical" margin={{ left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" horizontal={false} />
-              <XAxis type="number" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <YAxis dataKey="name" type="category" tick={{ fill: '#E6EDF3', fontSize: 11 }} width={110} axisLine={false} tickLine={false} />
-              <Tooltip
-                contentStyle={tooltipStyle}
-                cursor={{ fill: 'rgba(88,166,255,0.06)' }}
-                formatter={(value, name) => [`${Number(value).toLocaleString()} ${TOKEN_SYMBOL}`, name === 'mvp' ? 'Tokens Earned' : String(name)]}
-              />
-              <Bar dataKey="mvp" name="Tokens Earned" radius={[0, 6, 6, 0]} barSize={24}>
-                {TEAM_LEADERBOARD.map((t, i) => (
-                  <Cell key={i} fill={t.color} fillOpacity={0.85} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+          {TEAM_LEADERBOARD.map((t) => (
+            <BarRow
+              key={t.rank}
+              label={t.name}
+              value={t.mvp}
+              max={TEAM_LEADERBOARD[0].mvp}
+              width={700}
+              color={t.color}
+              formatter={(n) => `${n.toLocaleString()} ${TOKEN_SYMBOL}`}
+            />
+          ))}
 
           {/* Team details table */}
           <div className="mt-4 rounded-lg border border-white/[0.06] overflow-x-auto">
@@ -136,7 +120,7 @@ export function ReportContent() {
               <tbody>
                 {TEAM_LEADERBOARD.map((t) => (
                   <tr key={t.rank} className="border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150">
-                    <td className="p-3 font-bold text-[#484F58] tabular-nums">{t.rank}</td>
+                    <td className="p-3 font-bold text-[#8B949E] tabular-nums">{t.rank}</td>
                     <td className="p-3">
                       <span className="inline-flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full shrink-0" style={{ background: t.color }} />
@@ -188,99 +172,55 @@ export function ReportContent() {
         {/* Charts row: Activity Breakdown + Minting */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
           <ChartCard title="Activity Breakdown">
-            <div className="flex flex-col items-center">
-              <ResponsiveContainer width="100%" height={220}>
-                <PieChart>
-                  <Pie
-                    data={DONUT_DATA}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={88}
-                    paddingAngle={3}
-                    dataKey="value"
-                    stroke="rgba(6,8,15,0.5)"
-                    strokeWidth={2}
-                  >
-                    {DONUT_DATA.map((_, i) => (
-                      <Cell key={i} fill={DONUT_COLORS[i]} />
-                    ))}
-                  </Pie>
-                  <Tooltip contentStyle={tooltipStyle} />
-                </PieChart>
-              </ResponsiveContainer>
-              <div className="text-center -mt-4 mb-3">
-                <div className="font-display text-2xl" style={{ textShadow: '0 0 15px rgba(88,166,255,0.2)' }}>
-                  {TOTAL_CLAIMS.toLocaleString()}
-                </div>
-                <div className="text-[0.7rem] text-[#8B949E] uppercase tracking-wider">Total Actions</div>
+            <div className="text-center mb-4">
+              <div className="font-display text-2xl" style={{ textShadow: '0 0 15px rgba(88,166,255,0.2)' }}>
+                {TOTAL_CLAIMS.toLocaleString()}
               </div>
-              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-[#E6EDF3]">
-                {['Found', 'Social'].map((label, i) => (
-                  <span key={i} className="inline-flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-[3px] inline-block" style={{ background: DONUT_COLORS[i] }} />
-                    {label} <span className="text-[#8B949E]">({DONUT_DATA[i].value})</span>
-                  </span>
-                ))}
-              </div>
+              <div className="text-[0.7rem] text-[#8B949E] uppercase tracking-wider">Total Actions</div>
             </div>
+            {['Found', 'Social'].map((label, i) => (
+              <BarRow
+                key={i}
+                label={label}
+                value={DONUT_DATA[i].value}
+                max={DONUT_MAX}
+                color={DONUT_COLORS[i]}
+              />
+            ))}
           </ChartCard>
 
           <ChartCard title="Minting Timeline" subtitle={`${TOKEN_SYMBOL} tokens minted per day`}>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={MINTING}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
-                <XAxis dataKey="label" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={{ stroke: 'rgba(255,255,255,0.06)' }} tickLine={false} />
-                <YAxis tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-                <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(86,211,100,0.06)' }} />
-                <Bar dataKey="amount" name={`${TOKEN_SYMBOL} Minted`} fill="url(#greenGlow)" radius={[4, 4, 0, 0]} />
-                <defs>
-                  <linearGradient id="greenGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#56D364" stopOpacity={0.9} />
-                    <stop offset="100%" stopColor="#56D364" stopOpacity={0.4} />
-                  </linearGradient>
-                </defs>
-              </BarChart>
-            </ResponsiveContainer>
+            <Histogram
+              data={MINTING_BINS}
+              height={190}
+              color="#56D364"
+              ariaLabel={`Minting timeline — ${TOKEN_SYMBOL} minted per day`}
+            />
           </ChartCard>
         </div>
 
         {/* Token Distribution — Top 10 */}
         <ChartCard title="Token Distribution" subtitle={`Top 10 hunters by total ${TOKEN_SYMBOL} earned`} className="mb-8">
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={TOP10} layout="vertical" margin={{ left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" horizontal={false} />
-              <XAxis type="number" tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <YAxis dataKey="label" type="category" tick={{ fill: '#E6EDF3', fontSize: 11 }} width={115} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(88,166,255,0.06)' }} />
-              <Bar dataKey="balance" name={`${TOKEN_SYMBOL} Earned`} fill="url(#pinkOrange)" radius={[0, 6, 6, 0]} barSize={24} />
-              <defs>
-                <linearGradient id="pinkOrange" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#F0605D" stopOpacity={0.85} />
-                  <stop offset="100%" stopColor="#FF9A76" stopOpacity={0.95} />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          {TOP10.map((h) => (
+            <BarRow
+              key={h.label}
+              label={h.label}
+              value={h.balance}
+              max={TOP10[0].balance}
+              width={700}
+              color="linear-gradient(90deg, rgba(240,96,93,0.85), rgba(255,154,118,0.95))"
+            />
+          ))}
         </ChartCard>
 
         {/* Hourly Activity */}
         <ChartCard title="Hourly Activity" subtitle="Transaction distribution by hour (UTC)" className="mb-8">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={HOURLY}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
-              <XAxis dataKey="label" tick={{ fill: '#8B949E', fontSize: 9 }} angle={-45} textAnchor="end" height={50} axisLine={{ stroke: 'rgba(255,255,255,0.06)' }} tickLine={false} />
-              <YAxis tick={{ fill: '#8B949E', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'rgba(255,154,118,0.06)' }} />
-              <Bar dataKey="count" name="Transactions" fill="url(#orangeCyan)" radius={[3, 3, 0, 0]} />
-              <defs>
-                <linearGradient id="orangeCyan" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#FF9A76" stopOpacity={0.9} />
-                  <stop offset="100%" stopColor="#58A6FF" stopOpacity={0.35} />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          <Histogram
+            data={HOURLY}
+            height={220}
+            color="#FF9A76"
+            ariaLabel="Hourly activity — transactions by hour (UTC)"
+          />
         </ChartCard>
 
         {/* Treasure Popularity Table */}
@@ -297,7 +237,7 @@ export function ReportContent() {
             <tbody>
               {TREASURE_POPULARITY.map((t) => (
                 <tr key={t.rank} className="border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150">
-                  <td className="p-3 font-bold text-[#484F58] tabular-nums">{t.rank}</td>
+                  <td className="p-3 font-bold text-[#8B949E] tabular-nums">{t.rank}</td>
                   <td className="p-3 text-[#E6EDF3]">{t.name}</td>
                   <td className="p-3 text-center font-bold text-[#56D364] tabular-nums">{t.finds}</td>
                   <td className="p-3 text-right text-xs text-[#FF9A76]">{t.hiddenBy}</td>
@@ -376,7 +316,7 @@ export function ReportContent() {
                 <tbody>
                   {TOP10.slice(3).map((h, i) => (
                     <tr key={i} className="border-t border-white/[0.04] hover:bg-white/[0.02] transition-colors duration-150">
-                      <td className="p-3 font-bold text-[#484F58] tabular-nums">{i + 4}</td>
+                      <td className="p-3 font-bold text-[#8B949E] tabular-nums">{i + 4}</td>
                       <td className="p-3 font-mono text-[#E6EDF3] text-[13px]">{h.label}</td>
                       <td className="p-3 text-right font-bold text-[#56D364] tabular-nums">{h.balance.toLocaleString()}</td>
                     </tr>
@@ -402,7 +342,7 @@ export function ReportContent() {
                   <span className="text-[0.65rem] text-[#8B949E] uppercase tracking-wider leading-tight">{fact.label}</span>
                 </div>
                 <div className="text-sm font-bold text-white truncate">{fact.value}</div>
-                {fact.sub && <div className="text-[0.7rem] text-[#484F58] mt-1">{fact.sub}</div>}
+                {fact.sub && <div className="text-[0.7rem] text-[#8B949E] mt-1">{fact.sub}</div>}
               </div>
             ))}
           </div>
@@ -419,7 +359,7 @@ export function ReportContent() {
             View Contract on Explorer
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
-          <p className="text-xs text-[#484F58]">Built on Nova Cidade Chain · NOVA Blockchain Lab</p>
+          <p className="text-xs text-[#8B949E]">Built on Nova Cidade Chain · NOVA Blockchain Lab</p>
         </footer>
 
         {/* JSON-LD */}

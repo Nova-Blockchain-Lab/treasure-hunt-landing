@@ -38,7 +38,7 @@ function FAQItem({ index, question, answer, open, onToggle }: { index: number; q
           open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden" hidden={!open}>
           <p className="text-[0.925rem] text-[#8B949E] leading-relaxed pb-5 max-w-[680px]">
             {answer}
           </p>

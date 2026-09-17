@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback, useEffect, useMemo } from "react"
-import { usePostHog } from "posthog-js/react"
+import { capture } from "@/lib/posthog"
 import { trackEvent } from "@/lib/analytics"
 import { useAnalyticsTracking } from "@/hooks/use-analytics-tracking"
 import { Navbar } from "@/components/navbar"
@@ -19,7 +19,8 @@ import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
 import { StickyCTABar } from "@/components/sticky-cta-bar"
-import { ContactModal } from "@/components/contact-modal"
+import { PlanEventModal } from "@/components/plan-event-modal"
+import { getSlots } from "@/lib/slots"
 import { AB_TEST_NAME, AB_TEST_COOKIE, assignVariant, applyVariantOverrides, type Variant } from "@/lib/ab-test"
 import type { Locale } from "@/i18n/config"
 
@@ -54,7 +55,7 @@ function scrollToDemo() {
 export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }) {
   const [contactOpen, setContactOpen] = useState(false)
   const [contactTrigger, setContactTrigger] = useState("unknown")
-  const posthog = usePostHog()
+  const [selectedTier, setSelectedTier] = useState<string | undefined>()
 
   // A/B variant is resolved CLIENT-SIDE so the server render stays static and
   // edge-cacheable (no cookies() on the server). Server + first client render
@@ -82,15 +83,19 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
 
   useAnalyticsTracking()
 
+  // Warm the slot feed as soon as the page is up. /api/slots is CDN-cached, so
+  // this costs a few KB and means the picker is already populated by the time
+  // anyone clicks a CTA — no spinner between the click and the times.
+  useEffect(() => {
+    getSlots().catch(() => {})
+  }, [])
+
   // Register experiment once the variant is resolved client-side
   useEffect(() => {
-    if (posthog && resolved) {
-      posthog.capture("$experiment_started", {
-        experiment: AB_TEST_NAME,
-        variant,
-      })
+    if (resolved) {
+      capture("$experiment_started", { experiment: AB_TEST_NAME, variant })
     }
-  }, [posthog, resolved, variant])
+  }, [resolved, variant])
 
   const closeContact = useCallback(() => setContactOpen(false), [])
 
@@ -99,21 +104,22 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
     trackEvent({ name: "cta_clicked", params: { button_text: buttonText, location, package_tier: packageTier } })
     trackEvent({ name: "form_opened", params: { source: location } })
     // PostHog tracking
-    posthog?.capture("cta_click", { location, cta_text: buttonText, variant, package_tier: packageTier })
+    capture("cta_click", { location, cta_text: buttonText, variant, package_tier: packageTier })
     setContactTrigger(location)
+    setSelectedTier(packageTier) // the callback arg, not the state
     setContactOpen(true)
-  }, [posthog, variant])
+  }, [variant])
 
   // Hero primary action: variant scrolls to demo, control opens modal
   const heroPrimaryAction = useCallback(() => {
     if (isVariant) {
       trackEvent({ name: "cta_clicked", params: { button_text: dict.hero.bookDemo, location: "hero" } })
-      posthog?.capture("cta_click", { location: "hero", cta_text: dict.hero.bookDemo, variant, action: "scroll_to_demo" })
+      capture("cta_click", { location: "hero", cta_text: dict.hero.bookDemo, variant, action: "scroll_to_demo" })
       scrollToDemo()
     } else {
       openContactFrom("hero", dict.hero.bookDemo)
     }
-  }, [isVariant, dict.hero.bookDemo, posthog, variant, openContactFrom])
+  }, [isVariant, dict.hero.bookDemo, variant, openContactFrom])
 
   // Hero secondary action: variant opens modal
   const heroSecondaryAction = useCallback(() => {
@@ -123,13 +129,16 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
   // CTA section secondary: variant scrolls to demo
   const ctaSecondaryAction = useCallback(() => {
     trackEvent({ name: "cta_clicked", params: { button_text: dict.cta.seeItLive, location: "cta_section_secondary" } })
-    posthog?.capture("cta_click", { location: "cta_section_secondary", cta_text: dict.cta.seeItLive, variant, action: "scroll_to_demo" })
+    capture("cta_click", { location: "cta_section_secondary", cta_text: dict.cta.seeItLive, variant, action: "scroll_to_demo" })
     scrollToDemo()
-  }, [dict.cta.seeItLive, posthog, variant])
+  }, [dict.cta.seeItLive, variant])
 
   return (
-    <main>
+    <>
       <Navbar dict={dict.nav} onOpenContact={() => openContactFrom("navbar", dict.nav.bookDemo)} />
+      {/* Navbar and SiteFooter are siblings of <main>, not children: a <header>
+          or <footer> descended from <main> is not exposed as banner/contentinfo. */}
+      <main id="main">
       <HeroSection
         dict={dict.hero}
         onOpenContact={() => openContactFrom("hero", dict.hero.bookDemo)}
@@ -145,7 +154,12 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
           Dividers track the bg bands: Demo (#0A0E14) → Features (#06080F); Features and Media share #06080F (no divider). */}
       <SocialProofStrip dict={dict.socialProof} />
       <SectionDividerReverse />
-      <DemoSection dict={dict.demo} lang={lang} />
+      <DemoSection
+        dict={dict.demo}
+        lang={lang}
+        onOpenContact={() => openContactFrom("demo_section", dict.nav.bookDemo)}
+        ctaLabel={dict.nav.bookDemo}
+      />
       <SectionDivider />
       <FeaturesSection dict={dict.features} />
       <MediaSection dict={dict.media} />
@@ -164,15 +178,19 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
         onSecondaryAction={isVariant ? ctaSecondaryAction : undefined}
         secondaryIsButton={isVariant}
       />
+      </main>
       <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
       <StickyCTABar dict={dict.stickyCta} onOpenContact={() => openContactFrom("sticky_bar", dict.stickyCta.bookDemo)} />
-      <ContactModal
+      <PlanEventModal
         dict={dict.contactForm}
+        bookingDict={dict.booking}
+        lang={lang}
+        packageTier={selectedTier}
         open={contactOpen}
         onClose={closeContact}
         variant={variant}
         triggerLocation={contactTrigger}
       />
-    </main>
+    </>
   )
 }

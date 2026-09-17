@@ -18,7 +18,7 @@ const bebasNeue = Bebas_Neue({
 })
 
 const tomorrow = Tomorrow({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -60,7 +60,7 @@ const homeMeta: Record<Locale, { title: string; description: string; keywords: s
   pt: {
     title: 'Treasure Hunt | Caça ao Tesouro Digital e Gamificação de Eventos',
     description:
-      'Caça ao tesouro digital (peddy paper com NFC e QR) para conferências, empresas e team building. Mais engagement, tráfego dirigido aos patrocinadores e analytics em tempo real.',
+      'Caça ao tesouro digital (peddy paper com NFC e QR) para conferências, empresas e team building. Mais engagement, tráfego para patrocinadores e analytics.',
     keywords: [
       'caça ao tesouro digital',
       'peddy paper digital',
@@ -163,8 +163,18 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>
 }): Promise<Metadata> {
   const { lang } = await params
-  const locale = (locales.includes(lang as Locale) ? lang : defaultLocale) as Locale
+  const known = locales.includes(lang as Locale)
+  const locale = (known ? lang : defaultLocale) as Locale
   const { title, description, keywords } = homeMeta[locale]
+
+  // An unknown segment is a 404 (proxy.ts lets any dotted path through to this
+  // route, so /foo.txt lands here). generateMetadata still runs before the
+  // layout's notFound() lands, and without this guard every garbage URL
+  // advertised itself as the home page's canonical and shipped the whole
+  // six-locale hreflang cluster.
+  if (!known) {
+    return { metadataBase: new URL(BASE), title, description, robots: { index: false, follow: false } }
+  }
 
   return {
     metadataBase: new URL(BASE),
@@ -246,14 +256,22 @@ export default async function LangLayout({
       className={`${bebasNeue.variable} ${tomorrow.variable} ${robotoMono.variable}`}
     >
       <body className="font-sans antialiased overflow-x-hidden">
-        <PostHogProvider>
-          <ConsentProvider>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-200 focus:rounded-lg focus:bg-[#0D1117] focus:px-4 focus:py-3 focus:text-[#E6EDF3] focus:outline focus:outline-2 focus:outline-[#FF9A76]"
+        >
+          Skip to content
+        </a>
+        {/* ConsentProvider is OUTSIDE PostHogProvider: PostHog now reads consent
+            before it loads posthog-js at all. */}
+        <ConsentProvider>
+          <PostHogProvider>
             {children}
             <GA4Script />
             <CookieConsentBanner />
-          </ConsentProvider>
+          </PostHogProvider>
           <Analytics />
-        </PostHogProvider>
+        </ConsentProvider>
         <JsonLd />
       </body>
     </html>

@@ -44,7 +44,17 @@ function parseStatValue(value: string) {
   return { target, suffix, decimalPlaces }
 }
 
-export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
+export function DemoSection({
+  dict,
+  lang,
+  onOpenContact,
+  ctaLabel,
+}: {
+  dict: DemoDict
+  lang: string
+  onOpenContact?: () => void
+  ctaLabel?: string
+}) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -52,10 +62,11 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
     const el = scrollRef.current
     if (!el) return
 
+    // Read the layout once: inside onScroll this forced a synchronous layout
+    // on every frame of a touch drag.
+    const itemWidth = el.scrollWidth / phones.length
     const onScroll = () => {
-      const scrollLeft = el.scrollLeft
-      const itemWidth = el.scrollWidth / phones.length
-      const index = Math.round(scrollLeft / itemWidth)
+      const index = Math.round(el.scrollLeft / itemWidth)
       setActiveIndex(Math.min(index, phones.length - 1))
     }
 
@@ -138,9 +149,8 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
           {phones.map((_, i) => (
             <button
               key={i}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === activeIndex ? "bg-[#F0605D] w-6" : "bg-[#484F58]/40"
-              }`}
+              aria-current={i === activeIndex || undefined}
+              className="grid place-items-center w-11 h-11 -mx-1.5 cursor-pointer"
               onClick={() => {
                 scrollRef.current?.children[i]?.scrollIntoView({
                   behavior: "smooth",
@@ -149,7 +159,13 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                 })
               }}
               aria-label={`Go to phone ${i + 1}`}
-            />
+            >
+              <span
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === activeIndex ? "bg-[#F0605D] w-6" : "bg-[#7D8590] w-2"
+                }`}
+              />
+            </button>
           ))}
         </div>
 
@@ -192,7 +208,7 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
                   href="https://hunt.ethdenver.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F0605D] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131921]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#C9433F] text-white font-display text-sm tracking-wider uppercase px-5 py-2.5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(240,96,93,0.3)] active:scale-[0.97] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131921]"
                 >
                   {dict.seeItLive}
                 </a>
@@ -226,6 +242,20 @@ export function DemoSection({ dict, lang }: { dict: DemoDict; lang: string }) {
               </div>
             ))}
           </div>
+
+          {/* The A/B variant's hero button scrolls to this section, so it needs
+              a way to convert. Without it every exit here was outbound or lateral. */}
+          {onOpenContact && ctaLabel && (
+            <div className="flex justify-center mt-8 md:mt-10">
+              <button
+                type="button"
+                onClick={onOpenContact}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C9433F] text-white font-display text-base sm:text-lg tracking-widest uppercase px-8 sm:px-10 py-3.5 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_0_24px_rgba(240,96,93,0.35)] active:scale-[0.97]"
+              >
+                {ctaLabel}
+              </button>
+            </div>
+          )}
         </RevealOnScroll>
       </div>
     </section>

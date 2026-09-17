@@ -11,6 +11,8 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;')
 }
 
+export const dynamic = 'force-static'
+
 export function GET() {
   const items = [
     // ETHDenver report

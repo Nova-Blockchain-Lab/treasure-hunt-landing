@@ -36,7 +36,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     `transition-colors duration-300 ${active ? "text-[#E6EDF3]" : "text-[#8B949E] hover:text-[#E6EDF3]"}`
 
   return (
-    <div
+    <nav
       className={`flex items-center gap-1.5 font-mono text-xs tracking-wide ${className}`}
       aria-label="Language"
     >
@@ -47,12 +47,12 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
             href={l === defaultLocale ? "/" : `/${l}`}
             hrefLang={localeTags[l]}
             aria-current={current === l ? "true" : undefined}
-            className={linkCls(current === l)}
+            className={`inline-grid place-items-center min-w-6 min-h-6 ${linkCls(current === l)}`}
           >
             {LABELS[l]}
           </Link>
         </span>
       ))}
-    </div>
+    </nav>
   )
 }

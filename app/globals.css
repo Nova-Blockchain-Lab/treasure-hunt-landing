@@ -78,7 +78,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #484F58;
+  background: #6E7681;
   border-radius: 4px;
 }
 
@@ -107,6 +107,45 @@
       & { scroll-padding-top: 80px; }
     }
   }
+}
+
+/* Hero entrance, in CSS rather than framer-motion. A JS `initial={{opacity:0}}`
+   is inline opacity:0 in the prerendered HTML, so the hero stayed invisible
+   until React had hydrated. CSS runs at first paint, and the reduced-motion
+   block below already neutralises it. The LCP image and the h1 are deliberately
+   not animated at all. */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-rise { animation: hero-rise 0.6s ease-out both; }
+
+/* Fixed bottom bars (sticky CTA, cookie banner) must not cover whatever the
+   keyboard just moved focus to — WCAG 2.4.11. */
+html { scroll-padding-bottom: 140px; }
+
+/* Ambient background drift, and the text shimmer sweep.
+   Both were framer-motion loops: the backgrounds interpolated a full
+   radial-gradient STRING on the main thread forever (one of the most expensive
+   things framer does, and invisible decoration), and the shimmer remounted its
+   subtree on every render. As CSS they are GPU-composited, throttled when
+   offscreen, and the reduced-motion block below switches them off. */
+@keyframes ambient-a {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.8; }
+  33%      { transform: translate3d(-5%, -5%, 0); opacity: 1; }
+  66%      { transform: translate3d(5%, 5%, 0); opacity: 0.8; }
+}
+@keyframes ambient-b {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.8; }
+  33%      { transform: translate3d(5%, 5%, 0); opacity: 1; }
+  66%      { transform: translate3d(-5%, -5%, 0); opacity: 0.8; }
+}
+@keyframes text-shimmer {
+  from { background-position: 100% center; }
+  to   { background-position: 0% center; }
+}
+.text-shimmer {
+  animation: text-shimmer var(--shimmer-duration, 2s) linear infinite;
 }
 
 /* Reduced motion */

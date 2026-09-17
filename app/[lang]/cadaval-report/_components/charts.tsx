@@ -29,6 +29,9 @@ const HEX = {
   c3: "#FF9A76",
   c4: "#56D364",
   c5: "#BC8CFF",
+  // axis is for LINES only. Never use it as a text fill: #484F58 is 2.42:1 on
+  // the report background and CLAUDE.md bans it for anything readable — use
+  // `text` for tick and category labels.
   axis: "#484F58",
   text: "#8B949E",
 }
@@ -251,7 +254,7 @@ export function FindRankCurve({
         fontSize="10"
         fontFamily="Roboto Mono"
         textAnchor="middle"
-        fill={HEX.axis}
+        fill={HEX.text}
       >
         every tag, sorted by find count →
       </text>
@@ -264,55 +267,75 @@ export function Histogram({
   data,
   height = 170,
   color = HEX.c1,
+  ariaLabel,
 }: {
   data: ReportHistogramBin[]
   height?: number
   color?: string
+  /** Prepended to the auto-generated value list in the SVG's aria-label. */
+  ariaLabel?: string
 }) {
   const w = 600
   const pad = 24
   const max = Math.max(1, ...data.map((d) => d.count))
-  const bw = (w - pad * 2) / data.length
+  const slot = (w - pad * 2) / data.length
+  // Cap the bar width so a 1- or 2-bin chart doesn't render as a slab, and
+  // keep 14px of headroom so the value label never overlaps the tallest bar.
+  const bw = Math.min(slot - 8, 110)
+  const barMax = height - 14
+  // Past ~8 bins the per-bar text collides, so only every stride-th bar is
+  // labelled. The aria-label always carries every label/value pair.
+  const stride = Math.ceil(data.length / 8)
   return (
     <svg
       viewBox={`0 0 ${w} ${height + 36}`}
       style={{ width: "100%", height: "auto", display: "block" }}
+      role="img"
+      aria-label={[ariaLabel, data.map((d) => `${d.label}: ${d.count}`).join(", ")]
+        .filter(Boolean)
+        .join(". ")}
     >
       {data.map((d, i) => {
-        const h = (d.count / max) * height
-        const x = pad + i * bw + 4
+        const h = (d.count / max) * barMax
+        const cx = pad + i * slot + slot / 2
+        const x = cx - bw / 2
         const y = height - h + 8
+        const labelled = i % stride === 0
         return (
           <g key={i}>
             <rect
               x={x}
               y={y}
-              width={bw - 8}
+              width={bw}
               height={h}
               fill={color}
               opacity={0.85}
               rx={2}
             />
-            <text
-              x={x + (bw - 8) / 2}
-              y={height + 24}
-              textAnchor="middle"
-              fontSize="10"
-              fill={HEX.axis}
-              fontFamily="Roboto Mono"
-            >
-              {d.label}
-            </text>
-            <text
-              x={x + (bw - 8) / 2}
-              y={y - 4}
-              textAnchor="middle"
-              fontSize="10"
-              fill={HEX.text}
-              fontFamily="Roboto Mono"
-            >
-              {d.count}
-            </text>
+            {labelled && (
+              <text
+                x={cx}
+                y={height + 24}
+                textAnchor="middle"
+                fontSize="10"
+                fill={HEX.text}
+                fontFamily="Roboto Mono"
+              >
+                {d.label}
+              </text>
+            )}
+            {(labelled || d.count === max) && (
+              <text
+                x={cx}
+                y={y - 4}
+                textAnchor="middle"
+                fontSize="10"
+                fill={HEX.text}
+                fontFamily="Roboto Mono"
+              >
+                {d.count}
+              </text>
+            )}
           </g>
         )
       })}
@@ -1052,7 +1075,7 @@ export function SkuCurve({ sku }: { sku: ReportSku | null }) {
           stroke={HEX.axis}
           strokeOpacity="0.4"
         />
-        <text x={pad} y={h - 4} fontSize="9" fontFamily="Roboto Mono" fill={HEX.axis}>
+        <text x={pad} y={h - 4} fontSize="9" fontFamily="Roboto Mono" fill={HEX.text}>
           launch
         </text>
         <text
@@ -1061,7 +1084,7 @@ export function SkuCurve({ sku }: { sku: ReportSku | null }) {
           textAnchor="end"
           fontSize="9"
           fontFamily="Roboto Mono"
-          fill={HEX.axis}
+          fill={HEX.text}
         >
           {sku.minutesToSellout != null
             ? `sellout · ${fmtMinutes(sku.minutesToSellout)}`

@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   return {
     title: isPortuguese
-      ? 'Relatório ETHDenver 2026 | Resultados e Analytics do Treasure Hunt'
+      ? 'Relatório ETHDenver 2026 | Resultados do Treasure Hunt'
       : 'ETHDenver 2026 Report | Treasure Hunt Results & Analytics',
     description: isPortuguese
       ? '207 jogadores, 992 tesouros encontrados, 462.255 BUFFI mintados. Analytics completo do Treasure Hunt no ETHDenver 2026.'
@@ -23,7 +23,7 @@ export async function generateMetadata({
       canonical: url,
       languages: {
         en: 'https://www.treasurehunt.pt/ethdenver-report',
-        pt: 'https://www.treasurehunt.pt/pt/ethdenver-report',
+        'pt-PT': 'https://www.treasurehunt.pt/pt/ethdenver-report',
         'x-default': 'https://www.treasurehunt.pt/ethdenver-report',
       },
     },

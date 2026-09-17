@@ -2,10 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import {
-  LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Cell,
-} from 'recharts'
+import { BarRow, Histogram } from '../cadaval-report/_components/charts'
 import {
   ACTIVITY, MINTING, BREAKDOWN, TOTAL_CLAIMS, TOP10, HOURLY,
   TREASURE_POPULARITY, MERCH_ITEMS, FUN_FACTS, HERO_STATS,
@@ -19,6 +16,8 @@ const DONUT_DATA = [
   { name: 'QR', value: BREAKDOWN.qr },
   { name: 'Merch', value: BREAKDOWN.merch },
 ]
+const DONUT_MAX = Math.max(...DONUT_DATA.map((d) => d.value))
+const MINTING_BINS = MINTING.map((m) => ({ label: m.label, count: m.amount }))
 
 interface ReportDict {
   [key: string]: string
@@ -69,94 +68,63 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         {/* Charts row: Daily Activity + Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <ChartCard title={dict.dailyActivity}>
-            <ResponsiveContainer width="100%" height={250}>
-              <LineChart data={ACTIVITY}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                <XAxis dataKey="label" tick={{ fill: '#7a75a0', fontSize: 12 }} />
-                <YAxis tick={{ fill: '#7a75a0', fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
-                <Line type="monotone" dataKey="count" stroke="#22D1EE" strokeWidth={2} dot={{ fill: '#22D1EE', r: 3 }} name={dict.transactions} />
-              </LineChart>
-            </ResponsiveContainer>
+            <Histogram
+              data={ACTIVITY}
+              height={190}
+              color="#22D1EE"
+              ariaLabel={`${dict.dailyActivity} — ${dict.transactions}`}
+            />
           </ChartCard>
 
           <ChartCard title={dict.activityBreakdown}>
-            <div className="flex flex-col items-center">
-              <ResponsiveContainer width="100%" height={220}>
-                <PieChart>
-                  <Pie data={DONUT_DATA} cx="50%" cy="50%" innerRadius={60} outerRadius={90} paddingAngle={3} dataKey="value">
-                    {DONUT_DATA.map((_, i) => (
-                      <Cell key={i} fill={DONUT_COLORS[i]} />
-                    ))}
-                  </Pie>
-                  <Tooltip contentStyle={tooltipStyle} />
-                </PieChart>
-              </ResponsiveContainer>
-              <div className="text-center -mt-4 mb-2">
-                <div className="font-display text-2xl">{TOTAL_CLAIMS.toLocaleString()}</div>
-                <div className="text-xs text-[#7a75a0]">{dict.totalActions}</div>
-              </div>
-              <div className="flex flex-wrap justify-center gap-3 text-xs text-[#b8b4d4]">
-                {[dict.found, dict.hidden, dict.social, dict.qr, dict.merch].map((label, i) => (
-                  <span key={i} className="inline-flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-sm inline-block" style={{ background: DONUT_COLORS[i] }} />
-                    {label} ({DONUT_DATA[i].value})
-                  </span>
-                ))}
-              </div>
+            <div className="text-center mb-4">
+              <div className="font-display text-2xl">{TOTAL_CLAIMS.toLocaleString()}</div>
+              <div className="text-xs text-[#7a75a0]">{dict.totalActions}</div>
             </div>
+            {[dict.found, dict.hidden, dict.social, dict.qr, dict.merch].map((label, i) => (
+              <BarRow
+                key={i}
+                label={label}
+                value={DONUT_DATA[i].value}
+                max={DONUT_MAX}
+                color={DONUT_COLORS[i]}
+              />
+            ))}
           </ChartCard>
         </div>
 
         {/* Token Distribution */}
         <ChartCard title={dict.tokenDistribution} subtitle={dict.top10Holders} className="mb-6">
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={TOP10} layout="vertical">
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis type="number" tick={{ fill: '#7a75a0', fontSize: 12 }} />
-              <YAxis dataKey="label" type="category" tick={{ fill: '#b8b4d4', fontSize: 11 }} width={120} />
-              <Tooltip contentStyle={tooltipStyle} />
-              <Bar dataKey="balance" name={dict.buffiLabel} fill="url(#pinkPurple)" radius={[0, 6, 6, 0]} />
-              <defs>
-                <linearGradient id="pinkPurple" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="rgba(255,87,177,0.8)" />
-                  <stop offset="100%" stopColor="rgba(98,69,235,0.9)" />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          {TOP10.map((h) => (
+            <BarRow
+              key={h.label}
+              label={h.label}
+              value={h.balance}
+              max={TOP10[0].balance}
+              width={700}
+              color="linear-gradient(90deg, rgba(255,87,177,0.8), rgba(98,69,235,0.9))"
+            />
+          ))}
         </ChartCard>
 
         {/* Hourly Activity */}
         <ChartCard title={dict.hourlyActivity} subtitle={dict.hourlyDescription} className="mb-6">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={HOURLY}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="label" tick={{ fill: '#7a75a0', fontSize: 10 }} angle={-45} textAnchor="end" height={50} />
-              <YAxis tick={{ fill: '#7a75a0', fontSize: 12 }} />
-              <Tooltip contentStyle={tooltipStyle} />
-              <Bar dataKey="count" name={dict.transactions} fill="url(#purpleCyan)" radius={[4, 4, 0, 0]} />
-              <defs>
-                <linearGradient id="purpleCyan" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="rgba(98,69,235,0.8)" />
-                  <stop offset="100%" stopColor="rgba(34,209,238,0.4)" />
-                </linearGradient>
-              </defs>
-            </BarChart>
-          </ResponsiveContainer>
+          <Histogram
+            data={HOURLY}
+            height={220}
+            color="#6245EB"
+            ariaLabel={`${dict.hourlyActivity} — ${dict.transactions}`}
+          />
         </ChartCard>
 
         {/* Minting Timeline */}
         <ChartCard title={dict.mintingTimeline} className="mb-6">
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={MINTING}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="label" tick={{ fill: '#7a75a0', fontSize: 12 }} />
-              <YAxis tick={{ fill: '#7a75a0', fontSize: 12 }} />
-              <Tooltip contentStyle={tooltipStyle} />
-              <Bar dataKey="amount" name={dict.buffiMintedLabel} fill="#FFE739" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          <Histogram
+            data={MINTING_BINS}
+            height={190}
+            color="#FFE739"
+            ariaLabel={`${dict.mintingTimeline} — ${dict.buffiMintedLabel}`}
+          />
         </ChartCard>
 
         {/* Treasure Popularity Table */}
@@ -323,13 +291,6 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
 }
 
 // Shared components
-const tooltipStyle = {
-  backgroundColor: 'rgba(21,14,65,0.95)',
-  border: '1px solid rgba(255,87,177,0.3)',
-  borderRadius: '8px',
-  color: '#fff',
-}
-
 function ChartCard({ title, subtitle, children, className = '' }: {
   title: string
   subtitle?: string

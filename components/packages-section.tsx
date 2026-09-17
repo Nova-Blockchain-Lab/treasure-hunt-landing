@@ -122,7 +122,7 @@ function PackageCard({ tierIndex, dict, onOpenContact }: { tierIndex: number; di
           onClick={() => onOpenContact?.("packages", t.cta, t.name)}
           className={`w-full flex items-center justify-center gap-2 font-display text-[0.9rem] tracking-widest uppercase py-3.5 rounded-lg transition-all duration-300 cursor-pointer ${
             featured
-              ? "bg-[#F0605D] text-white hover:shadow-[0_0_24px_rgba(240,96,93,0.35)]"
+              ? "bg-[#C9433F] text-white hover:shadow-[0_0_24px_rgba(240,96,93,0.35)]"
               : "border border-[rgba(240,246,252,0.1)] text-[#E6EDF3] hover:border-[rgba(240,96,93,0.3)] hover:text-[#F0605D]"
           }`}
         >

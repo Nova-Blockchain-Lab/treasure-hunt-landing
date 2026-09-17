@@ -1,4 +1,5 @@
 import type { LandingContent } from "@/lib/landing/types"
+import { localeTags } from "@/i18n/config"
 
 const BASE = "https://www.treasurehunt.pt"
 
@@ -7,7 +8,7 @@ const BASE = "https://www.treasurehunt.pt"
 // to content.faq (it is — both render from the same object).
 export function LandingJsonLd({ content }: { content: LandingContent }) {
   const url = `${BASE}${content.locale === "en" ? "" : "/" + content.locale}/${content.slug}`
-  const inLanguage = content.locale === "pt" ? "pt-PT" : "en"
+  const inLanguage = localeTags[content.locale]
 
   const graph: Record<string, unknown>[] = [
     {

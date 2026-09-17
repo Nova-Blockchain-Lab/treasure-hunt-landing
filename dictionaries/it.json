@@ -15,7 +15,7 @@
     "headlineHighlight": "Esperienza Gamificata",
     "tagline": "I partecipanti esplorano, scansionano i checkpoint, guadagnano premi reali e generano flusso di visitatori dove serve",
     "taglineSuffix": ". Direttamente dal browser dello smartphone, senza scaricare alcuna app.",
-    "trustBadge": "Utilizzato a ETHDenver, Future Maker e altri · oltre 10.000 tesori trovati · oltre 500 checkpoint · oltre 500 giocatori",
+    "trustBadge": "Utilizzato a ETHDenver, Future Maker e altri · oltre 14.000 tesori trovati · oltre 400 checkpoint · oltre 1.000 giocatori",
     "bookDemo": "Pianifica il tuo Evento",
     "seeItLive": "Guarda i Nostri Risultati →"
   },
@@ -45,9 +45,9 @@
       "Merch store integrato dove i premi diventano oggetti reali"
     ],
     "stats": [
-      { "value": "10,000+", "label": "Tesori Trovati" },
-      { "value": "500+", "label": "Checkpoint nelle Sedi" },
-      { "value": "1.7M+", "label": "Premi Emessi" },
+      { "value": "14.000+", "label": "Tesori Trovati" },
+      { "value": "400+", "label": "Checkpoint nelle Sedi" },
+      { "value": "1,7M+", "label": "Premi Emessi" },
       { "value": "8", "label": "Eventi Realizzati" }
     ],
     "ethdenverCard": {
@@ -327,7 +327,9 @@
     "success": "Grazie! Ti risponderemo entro 24 ore.",
     "error": "Qualcosa è andato storto. Scrivici direttamente via email.",
     "bookCallHint": "Preferisci scegliere un orario?",
-    "bookCall": "Prenota una call di 30 min"
+    "bookCall": "Prenota una call di 30 min",
+    "messageHint": "Preferisci inviare un messaggio?",
+    "messageLink": "Invia un messaggio"
   },
   "report": {
     "title": "RIEPILOGO TREASURE HUNT",

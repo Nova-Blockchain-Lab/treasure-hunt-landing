@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
 export const alt = 'Treasure Hunt — Interactive Event Engagement Game'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
@@ -75,7 +74,7 @@ export default function OgImage() {
             display: 'flex',
             position: 'absolute',
             bottom: 40,
-            color: '#484F58',
+            color: '#7D8590',
             fontSize: 16,
             letterSpacing: '0.1em',
           }}

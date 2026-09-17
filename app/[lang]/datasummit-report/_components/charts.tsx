@@ -29,6 +29,9 @@ const HEX = {
   c3: "#FF9A76",
   c4: "#56D364",
   c5: "#BC8CFF",
+  // axis is for LINES only. Never use it as a text fill: #484F58 is 2.42:1 on
+  // the report background and CLAUDE.md bans it for anything readable — use
+  // `text` for tick and category labels.
   axis: "#484F58",
   text: "#8B949E",
 }
@@ -251,7 +254,7 @@ export function FindRankCurve({
         fontSize="10"
         fontFamily="Roboto Mono"
         textAnchor="middle"
-        fill={HEX.axis}
+        fill={HEX.text}
       >
         every tag, sorted by find count →
       </text>
@@ -298,7 +301,7 @@ export function Histogram({
               y={height + 24}
               textAnchor="middle"
               fontSize="10"
-              fill={HEX.axis}
+              fill={HEX.text}
               fontFamily="Roboto Mono"
             >
               {d.label}
@@ -1052,7 +1055,7 @@ export function SkuCurve({ sku }: { sku: ReportSku | null }) {
           stroke={HEX.axis}
           strokeOpacity="0.4"
         />
-        <text x={pad} y={h - 4} fontSize="9" fontFamily="Roboto Mono" fill={HEX.axis}>
+        <text x={pad} y={h - 4} fontSize="9" fontFamily="Roboto Mono" fill={HEX.text}>
           launch
         </text>
         <text
@@ -1061,7 +1064,7 @@ export function SkuCurve({ sku }: { sku: ReportSku | null }) {
           textAnchor="end"
           fontSize="9"
           fontFamily="Roboto Mono"
-          fill={HEX.axis}
+          fill={HEX.text}
         >
           {sku.minutesToSellout != null
             ? `sellout · ${fmtMinutes(sku.minutesToSellout)}`

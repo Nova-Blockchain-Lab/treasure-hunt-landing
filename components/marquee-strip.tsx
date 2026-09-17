@@ -13,7 +13,7 @@ export function MarqueeStrip({ items }: { items: string[] }) {
       className="group overflow-hidden whitespace-nowrap border-y border-[rgba(240,246,252,0.04)] py-3.5 bg-[rgba(13,17,23,0.3)]"
       aria-hidden="true"
     >
-      <div className="inline-flex animate-[marquee_30s_linear_infinite] motion-reduce:animate-none group-hover:[animation-play-state:paused]">
+      <div className="inline-flex animate-[marquee_30s_linear_infinite] motion-reduce:animate-none group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] motion-reduce:[animation-play-state:paused]">
         {items.map((item, i) => (
           <MarqueeItem key={`a-${i}`} text={item} />
         ))}
