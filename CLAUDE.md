@@ -657,3 +657,26 @@ A message sent from `daraujo@novaims.unl.pt` to `leads@treasurehunt.pt` arrived
 in the Zoho inbox in about 8 seconds. Inbound delivery works end to end; that
 address used to bounce. (Port 25 is blocked from the dev machine, so an SMTP
 RCPT probe is not a usable check — send a real message instead.)
+
+## Accounts created 17 Sep 2026 — state and blockers
+
+**PostHog (`admin@treasurehunt.pt`, org "Treasure Hunt", EU region).** The
+account exists and the password works, but it is **stuck on email
+verification**: PostHog's 6-digit code never arrived at the new Zoho mailbox
+after three sends over ~20 minutes, and it is in no folder (inbox, spam,
+newsletter, notification, archive, trash). A brand-new domain with no sending
+reputation is the likely cause. Until it is verified there is no project API
+key, so `NEXT_PUBLIC_POSTHOG_KEY` is still unset and PostHog does not run.
+GA4 (`G-L1L0PXVCVX`) IS live in Production and verified: zero Google requests
+before consent, gtag loads after Accept.
+
+**Zoho app-specific password — blocked.** Generating one at
+`accounts.zoho.eu/home#security/device` needs an account-password re-auth that
+Brave does not autofill, and resetting the password was refused by the agent's
+own credential guardrail. That is the ONLY thing standing between here and the
+Cal.com CalDav connection, i.e. the invite-name fix. Everything else for it is
+verified and waiting (URL, username — see the CalDav section above).
+
+**Do not "fix" the stats or SPF again.** Both were corrected against primary
+sources this session; see the tables above for the arithmetic and the
+subdomain-SPF explanation.
