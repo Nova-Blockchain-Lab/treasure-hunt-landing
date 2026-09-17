@@ -689,3 +689,37 @@ verified and waiting (URL, username — see the CalDav section above).
 **Do not "fix" the stats or SPF again.** Both were corrected against primary
 sources this session; see the tables above for the arithmetic and the
 subdomain-SPF explanation.
+
+## The invite-name fix is confirmed working (17 Sep 2026)
+
+Cal.com writes bookings to the **Zoho** calendar over CalDav, so Exchange no
+longer generates an invite from the NOVA mailbox. Proof, from the attendee's
+inbox before and after the switch:
+
+```
+14:14  Treasure Hunt <hello@cal.com>
+14:14  Dinis Antunes Palha de Araujo <daraujo@novaims.unl.pt>   <- the Exchange invite
+22:31  Treasure Hunt <hello@cal.com>                            <- after; nothing else
+```
+
+The attendee now receives ONE email instead of two, and no personal name appears.
+Cal.com's primary account email is `hello@treasurehunt.pt` (verified);
+`daraujo@novaims.unl.pt` remains as an unverified secondary, which is harmless.
+
+`daraujo@novaims.unl.pt` is in `BOOKING_ATTENDEES` so bookings still reach the
+NOVA calendar as a guest invite — without that, moving the destination to Zoho
+would have silently stopped bookings appearing on the work calendar.
+
+**Zoho free has NO email forwarding**, per-mailbox or org-level: both say
+"available only for paid plans". Mail to `admin@`/`hello@`/`leads@` lands in
+Zoho webmail only. Options if that is not acceptable: Zoho Mail Lite
+(~EUR2.70/user/month, adds forwarding AND IMAP so it appears in Apple Mail), or
+move MX to Cloudflare Email Routing (free forwarding, keeps Zoho for the
+calendar since CalDav does not depend on MX) — but that needs the domain moved
+to Cloudflare nameservers and every record re-created, which risks the live site.
+
+Availability is genuinely checked against the real Outlook calendar: 2026-11-16
+offers 13 slots (12:00-13:00 and 16:30 blocked by real meetings) while 2026-11-17
+offers the full 16. A booking attempt on a busy slot returns Cal.com
+`ConflictException` and the route answers 409/502 — that is correct behaviour,
+not a bug. Note `/api/slots` is cached 5 min, so its list can be briefly stale.
