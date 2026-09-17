@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useEffect, useMemo } from "react"
+import { useState, useCallback, useEffect } from "react"
 import { capture } from "@/lib/posthog"
 import { trackEvent } from "@/lib/analytics"
 import { useAnalyticsTracking } from "@/hooks/use-analytics-tracking"
@@ -21,8 +21,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { StickyCTABar } from "@/components/sticky-cta-bar"
 import { PlanEventModal } from "@/components/plan-event-modal"
 import { getSlots } from "@/lib/slots"
-import { AB_TEST_NAME, AB_TEST_COOKIE, assignVariant, applyVariantOverrides, type Variant } from "@/lib/ab-test"
-import type { Locale } from "@/i18n/config"
 
 function SectionDivider() {
   return (
@@ -46,40 +44,13 @@ function SectionDividerReverse() {
   )
 }
 
-function scrollToDemo() {
-  const el = document.querySelector("#demo")
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
-}
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }) {
   const [contactOpen, setContactOpen] = useState(false)
   const [contactTrigger, setContactTrigger] = useState("unknown")
   const [selectedTier, setSelectedTier] = useState<string | undefined>()
 
-  // A/B variant is resolved CLIENT-SIDE so the server render stays static and
-  // edge-cacheable (no cookies() on the server). Server + first client render
-  // both show "control" (the canonical copy crawlers index); the variant copy
-  // swaps in after hydration. See proxy.ts / app/page.tsx for the caching rationale.
-  const [variant, setVariant] = useState<Variant>("control")
-  const [resolved, setResolved] = useState(false)
-
-  useEffect(() => {
-    const match = document.cookie.match(new RegExp("(?:^|; )" + AB_TEST_COOKIE + "=([^;]+)"))
-    let v = match?.[1] as Variant | undefined
-    if (v !== "control" && v !== "variant") {
-      v = assignVariant()
-      document.cookie = `${AB_TEST_COOKIE}=${v}; max-age=${90 * 24 * 60 * 60}; path=/; samesite=lax`
-    }
-    setVariant(v)
-    setResolved(true)
-  }, [])
-
-  const dict = useMemo(
-    () => applyVariantOverrides(baseDict, variant, lang as Locale),
-    [baseDict, variant, lang],
-  )
-  const isVariant = variant === "variant"
+  const dict = baseDict
 
   useAnalyticsTracking()
 
@@ -90,13 +61,6 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
     getSlots().catch(() => {})
   }, [])
 
-  // Register experiment once the variant is resolved client-side
-  useEffect(() => {
-    if (resolved) {
-      capture("$experiment_started", { experiment: AB_TEST_NAME, variant })
-    }
-  }, [resolved, variant])
-
   const closeContact = useCallback(() => setContactOpen(false), [])
 
   const openContactFrom = useCallback((location: string, buttonText: string, packageTier?: string) => {
@@ -104,34 +68,11 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
     trackEvent({ name: "cta_clicked", params: { button_text: buttonText, location, package_tier: packageTier } })
     trackEvent({ name: "form_opened", params: { source: location } })
     // PostHog tracking
-    capture("cta_click", { location, cta_text: buttonText, variant, package_tier: packageTier })
+    capture("cta_click", { location, cta_text: buttonText, package_tier: packageTier })
     setContactTrigger(location)
     setSelectedTier(packageTier) // the callback arg, not the state
     setContactOpen(true)
-  }, [variant])
-
-  // Hero primary action: variant scrolls to demo, control opens modal
-  const heroPrimaryAction = useCallback(() => {
-    if (isVariant) {
-      trackEvent({ name: "cta_clicked", params: { button_text: dict.hero.bookDemo, location: "hero" } })
-      capture("cta_click", { location: "hero", cta_text: dict.hero.bookDemo, variant, action: "scroll_to_demo" })
-      scrollToDemo()
-    } else {
-      openContactFrom("hero", dict.hero.bookDemo)
-    }
-  }, [isVariant, dict.hero.bookDemo, variant, openContactFrom])
-
-  // Hero secondary action: variant opens modal
-  const heroSecondaryAction = useCallback(() => {
-    openContactFrom("hero_secondary", dict.hero.seeItLive)
-  }, [openContactFrom, dict.hero.seeItLive])
-
-  // CTA section secondary: variant scrolls to demo
-  const ctaSecondaryAction = useCallback(() => {
-    trackEvent({ name: "cta_clicked", params: { button_text: dict.cta.seeItLive, location: "cta_section_secondary" } })
-    capture("cta_click", { location: "cta_section_secondary", cta_text: dict.cta.seeItLive, variant, action: "scroll_to_demo" })
-    scrollToDemo()
-  }, [dict.cta.seeItLive, variant])
+  }, [])
 
   return (
     <>
@@ -142,10 +83,6 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
       <HeroSection
         dict={dict.hero}
         onOpenContact={() => openContactFrom("hero", dict.hero.bookDemo)}
-        onPrimaryAction={heroPrimaryAction}
-        onSecondaryAction={isVariant ? heroSecondaryAction : undefined}
-        secondaryIsButton={isVariant}
-        trustBadgeClassName={isVariant ? "text-[#8B949E]" : undefined}
       />
       <ComicQuestVideo caption={dict.media.storyCaption} playLabel={dict.media.storyPlay} />
       <MarqueeStrip items={dict.marquee} />
@@ -175,8 +112,6 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
       <CTASection
         dict={dict.cta}
         onOpenContact={() => openContactFrom("cta_section", dict.cta.bookDemo)}
-        onSecondaryAction={isVariant ? ctaSecondaryAction : undefined}
-        secondaryIsButton={isVariant}
       />
       </main>
       <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
@@ -188,7 +123,6 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
         packageTier={selectedTier}
         open={contactOpen}
         onClose={closeContact}
-        variant={variant}
         triggerLocation={contactTrigger}
       />
     </>

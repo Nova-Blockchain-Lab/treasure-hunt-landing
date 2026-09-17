@@ -258,7 +258,6 @@ export function LandingPage({
         lang={lang}
         open={contactOpen}
         onClose={closeContact}
-        variant="control"
         triggerLocation={`landing:${content.slug}`}
       />
     </div>

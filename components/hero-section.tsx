@@ -18,18 +18,12 @@ interface HeroProps {
   dict: HeroDict
   onOpenContact?: () => void
   onPrimaryAction?: () => void
-  onSecondaryAction?: () => void
-  secondaryIsButton?: boolean
-  trustBadgeClassName?: string
 }
 
 export function HeroSection({
   dict,
   onOpenContact,
   onPrimaryAction,
-  onSecondaryAction,
-  secondaryIsButton,
-  trustBadgeClassName,
 }: HeroProps) {
   const handlePrimary = onPrimaryAction || onOpenContact
 
@@ -91,7 +85,7 @@ export function HeroSection({
 
         {/* Trust badge */}
         <p
-          className={`hero-rise [animation-delay:0.2s] font-mono text-sm tracking-wide mb-10 text-center sm:text-left ${trustBadgeClassName || "text-[#7D8590]"}`}
+          className={`hero-rise [animation-delay:0.2s] font-mono text-sm tracking-wide mb-10 text-center sm:text-left text-[#7D8590]`}
         >
           {dict.trustBadge}
         </p>
@@ -105,15 +99,7 @@ export function HeroSection({
           >
             {dict.bookDemo}
           </button>
-          {secondaryIsButton ? (
-            <button
-              onClick={onSecondaryAction}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97] text-center whitespace-nowrap"
-            >
-              {dict.seeItLive}
-            </button>
-          ) : (
-            <a
+          <a
               href="https://hunt.ethdenver.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +108,6 @@ export function HeroSection({
             >
               {dict.seeItLive}
             </a>
-          )}
         </div>
       </div>
 

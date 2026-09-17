@@ -243,8 +243,8 @@ export function DemoSection({
             ))}
           </div>
 
-          {/* The A/B variant's hero button scrolls to this section, so it needs
-              a way to convert. Without it every exit here was outbound or lateral. */}
+          {/* Every other exit from this section is outbound or lateral, so it
+              needs a way to convert. */}
           {onOpenContact && ctaLabel && (
             <div className="flex justify-center mt-8 md:mt-10">
               <button

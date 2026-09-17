@@ -15,11 +15,9 @@ interface CTADict {
 interface CTASectionProps {
   dict: CTADict
   onOpenContact?: () => void
-  onSecondaryAction?: () => void
-  secondaryIsButton?: boolean
 }
 
-export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIsButton }: CTASectionProps) {
+export function CTASection({ dict, onOpenContact }: CTASectionProps) {
   return (
     <section className="py-16 md:py-32 relative overflow-hidden bg-[#06080F]" id="cta">
       <div
@@ -56,15 +54,7 @@ export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIs
             >
               {dict.bookDemo}
             </button>
-            {secondaryIsButton ? (
-              <button
-                onClick={onSecondaryAction}
-                className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg cursor-pointer transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97]"
-              >
-                {dict.seeItLive}
-              </button>
-            ) : (
-              <a
+            <a
                 href="https://hunt.ethdenver.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -73,7 +63,6 @@ export function CTASection({ dict, onOpenContact, onSecondaryAction, secondaryIs
               >
                 {dict.seeItLive}
               </a>
-            )}
           </div>
 
           <p className="font-mono text-[0.85rem] text-[#7D8590] tracking-wide mt-6">

@@ -221,7 +221,16 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   emailed verification code and there is no way to skip it, so `app/api/book`
   mails the name/email/slot through `lib/notify.ts` at the `code_sent` branch.
   Before that, anyone who stopped at the code step was lost silently.
-- **A/B testing:** `lib/ab-test.ts` defines the variant cookie (`AB_TEST_COOKIE`) and `applyVariantOverrides(dict, variant, lang)`. The variant is resolved **client-side** in `PageClient` (reads/sets the cookie via `document.cookie`, applies overrides with `useMemo`). It is deliberately NOT read server-side: `cookies()` would opt the home + locale routes into dynamic rendering and force `private, no-store`. Server + first client render show `control` (the canonical copy); the variant swaps in after hydration.
+- **There is no A/B test.** `lib/ab-test.ts` was deleted (Sept 2026): the
+  hero-CTA experiment could not reach significance at this traffic level, so it
+  was pure complexity in `page-client.tsx`. The surviving behaviour is the old
+  `control` arm — the hero primary CTA opens the booking modal directly, which
+  is the right call now that it paints in ~40 ms. The dead `secondaryIsButton` /
+  `onSecondaryAction` / `trustBadgeClassName` props went with it, and the
+  secondary CTA is now unconditionally the link. If an experiment is ever
+  reinstated, keep the variant resolution **client-side**: `cookies()` on the
+  server would opt the home + locale routes into dynamic rendering and force
+  `private, no-store`, which is the P0 caching regression this file records.
 - **Analytics:** GA4 (`components/ga4-script.tsx`) and PostHog
   (`components/posthog-provider.tsx`) are both gated behind cookie consent
   (`lib/consent-context.tsx`). **Components must import `capture` from

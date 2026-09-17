@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback, useRef } from "react"
 import { X } from "lucide-react"
 import { capture } from "@/lib/posthog"
 import { trackEvent } from "@/lib/analytics"
-import type { Variant } from "@/lib/ab-test"
 import { BookingWidget, type BookingDict } from "@/components/booking-widget"
 import { localeTags, type Locale } from "@/i18n/config"
 
@@ -38,7 +37,6 @@ export function PlanEventModal({
   lang,
   open,
   onClose,
-  variant = "control",
   triggerLocation = "unknown",
   packageTier,
 }: {
@@ -50,7 +48,6 @@ export function PlanEventModal({
   packageTier?: string
   open: boolean
   onClose: () => void
-  variant?: Variant
   triggerLocation?: string
 }) {
   const [status, setStatus] = useState<FormStatus>("idle")
@@ -80,8 +77,8 @@ export function PlanEventModal({
 
   useEffect(() => {
     if (!open) return
-    capture("contact_modal_open", { trigger_location: triggerLocation, variant, mode: "book" })
-  }, [open, triggerLocation, variant])
+    capture("contact_modal_open", { trigger_location: triggerLocation, mode: "book" })
+  }, [open, triggerLocation])
 
   useEffect(() => {
     if (open) return
@@ -97,18 +94,18 @@ export function PlanEventModal({
   const switchMode = useCallback(
     (next: Mode) => {
       setMode(next)
-      capture("plan_modal_mode_switch", { mode: next, trigger_location: triggerLocation, variant })
+      capture("plan_modal_mode_switch", { mode: next, trigger_location: triggerLocation })
     },
-    [triggerLocation, variant],
+    [triggerLocation],
   )
 
   const handleFormStart = useCallback(
     (fieldName: string) => {
       if (formStartFired.current) return
       formStartFired.current = true
-      capture("contact_form_start", { field_name: fieldName, variant })
+      capture("contact_form_start", { field_name: fieldName })
     },
-    [variant]
+    []
   )
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -123,7 +120,7 @@ export function PlanEventModal({
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     }
 
-    capture("contact_form_submit", { event_size: data.eventSize, variant })
+    capture("contact_form_submit", { event_size: data.eventSize })
 
     try {
       const res = await fetch("/api/contact", {
@@ -134,11 +131,11 @@ export function PlanEventModal({
       if (!res.ok) throw new Error("Failed")
       setStatus("success")
       trackEvent({ name: "form_submitted", params: { event_size: data.eventSize } })
-      capture("contact_form_success", { event_size: data.eventSize, variant })
+      capture("contact_form_success", { event_size: data.eventSize })
     } catch {
       setStatus("error")
       trackEvent({ name: "form_error", params: { error_type: "submission_failed" } })
-      capture("contact_form_error", { error_type: "submission_failed", variant })
+      capture("contact_form_error", { error_type: "submission_failed" })
     }
   }
 
