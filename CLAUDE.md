@@ -723,3 +723,30 @@ offers 13 slots (12:00-13:00 and 16:30 blocked by real meetings) while 2026-11-1
 offers the full 16. A booking attempt on a busy slot returns Cal.com
 `ConflictException` and the route answers 409/502 — that is correct behaviour,
 not a bug. Note `/api/slots` is cached 5 min, so its list can be briefly stale.
+
+## Why booking emails come from hello@cal.com, and what can change it
+
+`hello@cal.com` is **not** a side effect of moving the destination calendar — it
+was always Cal.com's sender. Before the switch the attendee got TWO emails:
+
+```
+Treasure Hunt <hello@cal.com>                           <- Cal.com, unchanged throughout
+Dinis Antunes Palha de Araujo <daraujo@novaims.unl.pt>  <- Exchange, the one with the name
+```
+
+Moving the destination to Zoho removed the second. Zoho over CalDAV does not
+generate its own invitation email, so only Cal.com's remains.
+**Reverting the destination to Outlook would bring the personal name back** — do
+not do it to "fix" the sender address.
+
+On the free plan the From address cannot be changed. Cal.com's custom SMTP is an
+**organization-level** feature, so sending as `@treasurehunt.pt` needs a paid
+Organizations plan; the SMTP credentials could then point at Resend, which
+already has `treasurehunt.pt` verified for the contact form.
+
+What IS set, and is free: **custom Reply-To = `hello@treasurehunt.pt`**
+(event type -> Confirmation -> "Email personalizado para 'Responder a'"; the
+dropdown only offers the primary/secondary emails from the Cal.com profile,
+which is why `hello@treasurehunt.pt` had to be added and verified there first).
+So a lead sees "Treasure Hunt" as the sender name and any reply goes to the
+company domain.
