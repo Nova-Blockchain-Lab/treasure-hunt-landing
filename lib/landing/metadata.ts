@@ -18,7 +18,9 @@ export function landingMetadata(content: LandingContent, lang?: string): Metadat
   const languages =
     content.locale === "en"
       ? { en: url, "x-default": url }
-      : { [localeTags[content.locale]]: url, "x-default": url }
+      // No x-default on a single-language page: it means "use this when no
+      // language matches", which a DE/ES/IT/FR-only page is not.
+      : { [localeTags[content.locale]]: url }
 
   return {
     title: content.title,

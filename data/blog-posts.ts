@@ -76,7 +76,7 @@ This pattern suggests that gamification works best when it has time to build. Pl
 
 **Physical placement matters.** The top 10 treasures were all placed at high-visibility venue locations. Strategic checkpoint placement directly correlates with engagement volume.
 
-**Rewards need to feel real.** 137 merch purchases prove that a well-designed reward economy drives deeper participation than points alone.
+**Rewards need to feel real.** 137 merch purchases prove that a well-designed reward economy drives deeper participation than points alone.\n\nThe full breakdown, including the minting timeline and the merch store figures, is in the public [ETHDenver 2026 report](/ethdenver-report). For how the tap-to-play mechanic works, see [NFC treasure hunt for events](/nfc-treasure-hunt).
 
 **Competition sustains engagement across days.** The leaderboard kept the top 10 players active across all four days, not just the first.
 
@@ -166,7 +166,7 @@ For sponsors, this is measurable ROI. You can show exactly how many people visit
 
 **Step 3: Stock the merch store.** Physical items that attendees want to take home. T-shirts, hats, stickers, and experience-based rewards like claw machine plays all work.
 
-**Step 4: Launch with zero friction.** Browser-based, one-tap sign-in, no app download. The lower the barrier, the higher the participation.
+**Step 4: Launch with zero friction.** Browser-based, one-tap sign-in, no app download. The lower the barrier, the higher the participation.\n\nFor the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt).
 
 **Step 5: Let the leaderboard do the work.** Display it on screens around the venue. Announce top players during sessions. The competition markets itself.
 
@@ -264,7 +264,7 @@ If you're evaluating platforms for your next event, prioritize these capabilitie
 
 **Real reward economy.** Points that can be spent on real items. A merch store, raffle entries, or exclusive access. Rewards without redemption value lose their motivational power.
 
-**Live leaderboard.** Visible competition drives sustained engagement. Display it on screens. Announce leaders during sessions.
+**Live leaderboard.** Visible competition drives sustained engagement. Display it on screens. Announce leaders during sessions.\n\nIf you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments.
 
 **Real-time analytics.** Dashboard access during the event, not just a post-event PDF. The ability to adjust checkpoint values and activations in real-time.
 

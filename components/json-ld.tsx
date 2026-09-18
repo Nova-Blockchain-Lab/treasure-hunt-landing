@@ -1,3 +1,5 @@
+import { locales, defaultLocale, localeTags, type Locale } from '@/i18n/config'
+import { homeMeta } from '@/i18n/home-meta'
 const BASE_URL = 'https://www.treasurehunt.pt'
 
 const organization = {
@@ -61,8 +63,13 @@ export function JsonLd() {
 // declared price "0" USD for Starter, Pro AND Enterprise, which is pricing the
 // product does not have.
 export function HomeJsonLd({ lang = 'en' }: { lang?: string }) {
-  const isPt = lang === 'pt'
-  const url = isPt ? `${BASE_URL}/pt` : BASE_URL
+  // Key off the FULL locale. This used to be `const isPt = lang === 'pt'`, a
+  // two-way switch on a six-locale site, so /de /es /it /fr each shipped a
+  // WebPage node claiming the English homepage URL and inLanguage "en" while
+  // their own canonical, <html lang> and title said otherwise.
+  const locale = (locales.includes(lang as Locale) ? lang : defaultLocale) as Locale
+  const url = locale === defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`
+  const meta = homeMeta[locale]
 
   const softwareApplication = {
     '@type': 'SoftwareApplication',
@@ -89,13 +96,9 @@ export function HomeJsonLd({ lang = 'en' }: { lang?: string }) {
   const webPage = {
     '@type': 'WebPage',
     url,
-    name: isPt
-      ? 'Treasure Hunt | Caça ao Tesouro Digital e Gamificação de Eventos'
-      : 'Treasure Hunt | Event Engagement Game for Conferences',
-    description: isPt
-      ? 'Caça ao tesouro digital com NFC e QR para conferências, empresas e team building, com leaderboard ao vivo e analytics em tempo real.'
-      : 'Gamified QR & NFC scavenger hunt that drives sponsor foot traffic, boosts engagement, and delivers real-time analytics.',
-    inLanguage: isPt ? 'pt-PT' : 'en',
+    name: meta.title,
+    description: meta.description,
+    inLanguage: localeTags[locale],
     isPartOf: { '@id': `${BASE_URL}/#website` },
     primaryImageOfPage: `${BASE_URL}/ethdenver-home.png`,
   }

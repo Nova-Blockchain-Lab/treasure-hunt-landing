@@ -766,3 +766,54 @@ Two lines of copy answer the questions the picker was silently asking
 ("a calendar invite with the video link; three of us join every call"). If you
 restyle this rail, keep both — a date grid on its own asks for a commitment
 without saying what it leads to.
+
+## Sept 18 2026 SEO pass — what was found and fixed
+
+Search Console (`sc-domain:treasurehunt.pt`, 90 days): 40 clicks, 2,465
+impressions, 1.62% CTR, avg position 17.2. The trend is **up** — 5 clicks/150
+impressions in March to 15 clicks/476 impressions in the first 18 days of
+September. Average position "worsening" is a composition effect from surfacing
+on far more queries, not a decline.
+
+Fixed this pass:
+- **`components/json-ld.tsx` keyed off `lang === 'pt'`**, a two-way switch on a
+  six-locale site, so `/de` `/es` `/it` `/fr` each shipped a `WebPage` node
+  claiming the English homepage URL with `inLanguage: "en"`, contradicting their
+  own canonical, `<html lang>` and title. Now keys off the full locale using
+  `homeMeta`, which moved to **`i18n/home-meta.ts`** — importing it from
+  `app/[lang]/layout.tsx` would be circular, since that layout renders `JsonLd`.
+- **`components/demo-section.tsx` prefixed every report link with the locale**,
+  pointing 28 internal links from the locale homes at URLs that canonicalise to
+  the EN version. It now mirrors the `ptPrefix` rule in `site-footer.tsx`: only
+  `ethdenver-report` and `futuremaker-report` take `/pt`. Keep these two files in
+  step — the footer was fixed for this exact reason and the demo section was missed.
+- Landing `isPartOf` was an **inline duplicate `WebSite` node**, forking the
+  entity the `@id` wiring exists to keep singular. Now `{"@id": BASE/#website}`.
+- Landing breadcrumb leaf used the raw `<title>`, so the SERP crumb read
+  "NFC Treasure Hunt for Events | Treasure Hunt". Now the brand suffix is stripped.
+- Single-language landing pages declared themselves `x-default`, which means
+  "serve this when no language matches" — a German-only page is not that.
+- The ETHDenver report h1 was "TREASURE HUNT RECAP", omitting the event name it
+  exists to rank for. Now names the event in all six locales.
+- The three March blog posts linked to no landing page or report; the three July
+  posts already did. All six now link out.
+
+### Not fixed, and why
+- **The eight live event subdomains are fully indexable** (`bootcamp`,
+  `culturalweek`, `datasummit`, `patos`, `fil`, `cadaval`, `summerbc`,
+  `futuremaker`): `Allow: /`, own sitemaps, no noindex, and every page shares the
+  title "Treasure Hunt | Scan NFC Tags & Earn Crypto Tokens".
+  `fil.treasurehunt.pt` already ranks for brand queries next to the marketing
+  site, and `sc-domain:treasurehunt.pt` treats it all as one property. These are
+  player-facing game screens nobody searches for. **The fix belongs in the game
+  app, not this repo**: `X-Robots-Tag: noindex` or `Disallow: /`.
+- `/trade-show-booth-traffic`: 482 impressions, 2 clicks, position 18 ("booth
+  traffic" alone is 236 impressions at 17.9). Title and description are fine —
+  this is a position problem, and 807 words is thin for that query.
+- `/es` `/it` `/de` `/fr` returned **zero impressions over 90 days**. The copy is
+  genuinely per-market, not scaled translation, so this is an authority problem
+  rather than a quality one — but it is worth deciding whether to keep investing.
+- Off-locale report and blog variants are still `index, follow` while off-locale
+  landing variants are `noindex, follow`; the 8 report pages still emit exactly
+  one outbound link (`/`); four landing FAQ questions are duplicated verbatim
+  across pages. All real, none urgent.

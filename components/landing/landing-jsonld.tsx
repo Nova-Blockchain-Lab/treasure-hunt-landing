@@ -17,7 +17,7 @@ export function LandingJsonLd({ content }: { content: LandingContent }) {
       url,
       description: content.description,
       inLanguage,
-      isPartOf: { "@type": "WebSite", name: "Treasure Hunt", url: BASE },
+      isPartOf: { "@id": `${BASE}/#website` },
       publisher: {
         "@type": "Organization",
         name: "NOVA Blockchain Lab",
@@ -28,7 +28,9 @@ export function LandingJsonLd({ content }: { content: LandingContent }) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: BASE },
-        { "@type": "ListItem", position: 2, name: content.title, item: url },
+        // The crumb is what renders in the SERP, so it is the page name — not the
+        // whole <title>, which carries the " | Treasure Hunt" brand suffix.
+        { "@type": "ListItem", position: 2, name: content.title.split(" | ")[0], item: url },
       ],
     },
   ]

@@ -74,7 +74,13 @@ export function DemoSection({
     return () => el.removeEventListener("scroll", onScroll)
   }, [])
 
-  const reportHref = (slug: string) => (lang === "en" ? `/${slug}` : `/${lang}/${slug}`)
+  // Only the two bilingual reports have a real /pt version; the other four are
+  // EN-only and their /<locale>/ variants canonicalise back here. Prefixing all
+  // six pointed every locale home at URLs that canonicalise elsewhere — the
+  // exact rule site-footer.tsx was fixed to honour. Same shape as that file.
+  const ptPrefix = lang === "pt" ? "/pt" : ""
+  const BILINGUAL = new Set(["ethdenver-report", "futuremaker-report"])
+  const reportHref = (slug: string) => `${BILINGUAL.has(slug) ? ptPrefix : ""}/${slug}`
 
   const secondaryEvents = [
     { card: dict.smartCitiesCard, href: reportHref("smartcities-report") },
