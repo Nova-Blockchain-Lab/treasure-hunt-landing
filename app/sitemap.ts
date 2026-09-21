@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-25', bilingual: false },
     { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-04-07', bilingual: false },
     { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-06-25', bilingual: false },
-    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-09-07', bilingual: false },
+    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-09-21', bilingual: false },
   ]
 
   const staticEntries = staticPages.flatMap((page) => {

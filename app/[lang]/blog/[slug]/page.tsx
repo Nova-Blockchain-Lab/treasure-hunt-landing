@@ -18,8 +18,13 @@ export async function generateMetadata({
   if (!post) return {}
 
   const prefix = lang === 'en' ? '' : `/${lang}`
+  // Off-locale variants serve this EN content under a wrong <html lang> and
+  // already canonicalise here. Keep them followable but out of the index —
+  // the same rule lib/landing/metadata.ts applies to the landing pages.
+  const offLocale = lang !== 'en'
 
   return {
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     // No " | Treasure Hunt Blog" suffix: post titles are already 46-63 chars,
     // and the suffix pushed every <title> to 85-98 chars (truncated in SERPs).
     title: post.title,

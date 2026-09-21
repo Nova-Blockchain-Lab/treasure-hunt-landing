@@ -11,8 +11,13 @@ export async function generateMetadata({
   const { lang } = await params
   const isPortuguese = lang === 'pt'
   const url = `https://www.treasurehunt.pt${isPortuguese ? '/pt' : ''}/futuremaker-report`
+  // Off-locale variants serve this EN content under a wrong <html lang> and
+  // already canonicalise here. Keep them followable but out of the index —
+  // the same rule lib/landing/metadata.ts applies to the landing pages.
+  const offLocale = lang !== 'en' && lang !== 'pt'
 
   return {
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: isPortuguese
       ? 'Relatório Future Maker 2026 | Resultados do Treasure Hunt'
       : 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',

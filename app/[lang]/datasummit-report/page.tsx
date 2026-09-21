@@ -6,6 +6,7 @@ import { SectionMerch } from "./_components/section-merch"
 import { SectionTags } from "./_components/section-tags"
 import { SectionVenue } from "./_components/section-venue"
 import { SiteFooter } from "./_components/site-footer"
+import { ReportRelated } from "@/components/report-related"
 import { SiteHeader } from "./_components/site-header"
 import { PageJsonLd } from '@/components/page-jsonld'
 
@@ -28,6 +29,7 @@ export default async function ReportPage() {
         <SectionMerch snapshot={snapshot} />
         <SectionEngagement snapshot={snapshot} />
       </main>
+      <ReportRelated heading={"Related"} links={[{ href: "/blog/one-day-conference-gamification-data-summit-2026", label: "One-day conference gamification" }, { href: "/event-gamification", label: "Event gamification" }]} />
       <SiteFooter snapshot={snapshot} />
     </>
   )

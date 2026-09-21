@@ -140,10 +140,10 @@ Points that can't be spent are points that don't motivate.
 
 Treasure Hunt includes a built-in merch store where players spend their earned tokens on physical items. At ETHDenver, the store offered:
 
-- Night Market Claw Play (1,000 BUFFI) — 78 purchases
-- Nova Blockchain Lab T-shirts (1,500 BUFFI) — 15 purchases
-- Socks (700 BUFFI) — 10 purchases
-- Limited 2026 ETHDenver T-Shirts (5,000 BUFFI) — 8 purchases
+- Night Market Claw Play (1,000 BUFFI): 78 purchases
+- Nova Blockchain Lab T-shirts (1,500 BUFFI): 15 purchases
+- Socks (700 BUFFI): 10 purchases
+- Limited 2026 ETHDenver T-Shirts (5,000 BUFFI): 8 purchases
 - Hats in pink and black (1,500 BUFFI each)
 
 137 total purchases across 73 unique shoppers. That's 35% of all players converting to merch buyers.
@@ -397,5 +397,157 @@ Scoring by team changes behavior in ways individual leaderboards do not.
 The team model is built for groups that arrive together and should leave more connected: student orientations, bootcamps, open days, and corporate offsites. A campus works especially well as a venue because it is large enough to make routing decisions matter, and familiar enough that nobody gets lost.
 
 The complete results, including the team race over the afternoon, are in the [Spring Bootcamp 2026 report](/springbootcamp-report). For the format itself, see [team building scavenger hunts](/team-building-scavenger-hunt) and [scavenger hunts for universities](/scavenger-hunt-universities).`,
+  },
+  {
+    slug: 'how-many-checkpoints-event-scavenger-hunt',
+    title: 'How Many Checkpoints Does an Event Need?',
+    description:
+      'Six deployments, from 20 players to 351. What the ratio of checkpoints to players did to engagement, and the rule of thumb that came out of it.',
+    date: '2026-09-21',
+    content: `"How many should we put out?" is the first question every organizer asks, and for a long time our answer was a shrug and a guess based on venue size. We now have six finished deployments with full on-chain records, ranging from an afternoon with 20 players to a three-day fair with 351. Enough to stop guessing.
+
+Here is every event we have run, with the two numbers that matter: how many checkpoints went out, and how hard each one worked.
+
+## The six deployments
+
+- **NOVA IMS Spring Bootcamp**, April 7, one afternoon: 42 checkpoints, 20 players, 220 finds. 5.2 finds per checkpoint.
+- **ETHDenver**, February 18 to 21, four days: 59 checkpoints, 207 players, 992 finds. 16.8 finds per checkpoint.
+- **Future Maker at NOVA IMS**, March 17 to 19, three days: 115 checkpoints, 265 players, 2,591 finds. 22.5 finds per checkpoint.
+- **Data with Purpose Summit**, June 25, one day: 25 checkpoints, 58 players, 777 finds. 31.1 finds per checkpoint.
+- **Festival do Cadaval**, May 22 to 23, two evenings: 57 checkpoints, 126 players, 2,182 finds. 38.3 finds per checkpoint.
+- **Portugal Smart Cities Summit**, May 12 to 14, three days: 103 checkpoints, 351 players, 8,123 finds. 78.9 finds per checkpoint.
+
+## The ratio, not the count
+
+Sort those by checkpoints per player and something falls out. Five of the six land between 0.29 and 0.45 checkpoints per player. ETHDenver and Smart Cities both sit at 0.29, Data Summit and Future Maker at 0.43, Cadaval at 0.45. Different venues, different audiences, different event lengths, same band.
+
+The sixth is Spring Bootcamp at 2.1 checkpoints per player, and it is also the event where each checkpoint worked least: 5.2 finds. 42 tags for 20 people meant most tags were found by a handful of players, and 620 of the 840 possible finds never happened. The tags were not wrong. There were just too many of them for the crowd.
+
+So the useful planning number is not a checkpoint count. It is roughly **one checkpoint for every two to three people you expect to play**, and then a sanity check on whether the venue can physically hold them that far apart.
+
+## Two things that move the number
+
+**Venue density.** ETHDenver had 59 checkpoints and got 4.8 finds per player across four days. Smart Cities had 103 and got 23.1 per player across three. The difference is not the game, it is the walk. ETHDenver sprawled across a large campus with attendees who had panels to get to. Smart Cities was one exhibition hall where every checkpoint was within a few minutes of the last one. A dense floor lets people collect; a spread-out one turns each find into a trip.
+
+**How long people stay.** At Smart Cities, 278 of the 351 players came for one day only, 35 came for two, and 7 for all three. If most of your audience is there for one day, the hunt has to be completable in one day, which caps how many checkpoints are worth deploying no matter how big the venue is.
+
+## What to do with a small crowd
+
+Spring Bootcamp is the case worth learning from, because small events are the ones most likely to over-provision. With 20 players, fewer checkpoints placed closer together would have produced more finds, more collisions between players, and a tighter race. The final margin was three finds, which was good; but it happened despite the layout, not because of it.
+
+If you are running something under 50 people, start nearer 15 to 20 checkpoints and make them dense. You can always hide more mid-event. Recovering from a floor that feels empty is much harder.
+
+## The one number we would check first
+
+If you want a single diagnostic after an event, use finds per checkpoint. Under about 10 and you over-provisioned. Between 20 and 40 is a healthy floor. Above 70, as at Smart Cities, and you probably had room for more checkpoints than you used.
+
+Every figure above comes from published reports: [ETHDenver](/ethdenver-report), [Future Maker](/futuremaker-report), [Portugal Smart Cities Summit](/smartcities-report), [Festival do Cadaval](/cadaval-report), [Data with Purpose Summit](/datasummit-report) and [Spring Bootcamp](/springbootcamp-report). For how a deployment is planned from the organizer side, see [event gamification](/event-gamification).`,
+  },
+  {
+    slug: 'festival-gamification-cadaval-2026',
+    title: 'Gamifying a Town Festival: 2,182 Finds Over Two Nights',
+    description:
+      'Festival do Cadaval 2026: 126 players, 57 checkpoints, 2,182 finds, and an activity curve that peaks at 9 PM. What a public festival changes.',
+    date: '2026-09-21',
+    content: `Everything else we had published came from conferences, trade fairs and campuses. Those share a shape: a registered audience, a defined venue, daytime hours, and a reason to be there that has nothing to do with the game.
+
+A town festival is none of that. People arrive when they feel like it, wander with family, and the good part of the night starts after dinner. We ran Treasure Hunt at Festival do Cadaval on 22 and 23 May 2026 to find out what that changes.
+
+## The numbers
+
+- **126 players** across two evenings
+- **2,182 treasures found** from 57 checkpoints, 38.3 per checkpoint
+- **98.4% of players** claimed a reward, our highest rate to date
+- **421 merch purchases** from an 18-item store
+- **76,775 FCT tokens** distributed on-chain
+- **2,618 transactions**, every fee sponsored, so playing cost nothing
+- **20 of 126 players** came back on the second night
+
+## The festival runs at night
+
+The hour-by-hour data is the clearest difference. The first scan of the first night landed at 5 PM and then almost nothing moved for three hours. At 8 PM the hour recorded 120 scans, at 9 PM it hit 227, and the game kept running past 11. The second day started slowly in the early afternoon, built through the evening, and peaked at 7 PM with 336 scans, the busiest hour of the whole festival.
+
+Compare that with the Data with Purpose Summit, where the peak was 10 AM and the game was effectively over by 5 PM. Same product, opposite curve. A festival hunt that launches at noon is launching into an empty field.
+
+The practical consequence: staff the game for the evening, put the leaderboard somewhere visible after dark, and do not judge the deployment by what the dashboard looks like at 4 PM.
+
+## Engagement went deeper than at conferences
+
+Players averaged 17.3 finds each, against 4.8 at ETHDenver and 9.8 at Future Maker. The distribution was unusually healthy too: 25 players landed in the 20 to 40 finds band, 22 in the 40 to 70 band, and only 5 players finished under 10 finds.
+
+The reason is probably time rather than motivation. A conference attendee plays between sessions. A festival visitor is there for the evening with nothing scheduled, and the hunt becomes the thing they are doing rather than the thing they are doing between other things.
+
+The reward claim rate says the same. 98.4% of players claimed at least one reward, the highest we have recorded. Eight of the 18 items in the store sold out, including all 57 festival badges and all 46 festival wristbands.
+
+## Players hid their own treasures
+
+Cadaval is the event where the player-hiding mechanic actually took off. Players hid checkpoints of their own for other people to find. The single most-found player-hidden tag was found 56 times, more than half the player base, and the top three player hiders accounted for 143 finds between them.
+
+The hider leaderboard runs to 18 names. This does not happen at a conference. It needs an audience that is relaxed, in a place they know, with people they came with. Where it does happen it solves a real problem for free: the organizer stops being the only source of new content on night two.
+
+## Sponsors and the municipality
+
+Sponsored items were among the best sellers. The Crédito Agrícola cup moved 60 units and the branded lanyard 53, and municipal pens and pencils moved 72 between them. For a sponsor, this is a cheaper way to place branded objects in people's hands than a giveaway table, because the visitor has to earn the item and therefore wants it.
+
+## What we would tell a festival organizer
+
+Weight the checkpoints toward the food stalls, the stages and the routes between them, because that is where the crowd already is. Start the game in the late afternoon and expect the real numbers after 7 PM. Let visitors hide their own treasures from the first night. Keep the reward store stocked with things people would actually carry home, and accept that the good items will sell out on night two.
+
+The full report, with the per-tag table, the hourly grid and the merch sell-through curves, is public: see the [Festival do Cadaval 2026 report](/cadaval-report). For the general format, see [NFC treasure hunts](/nfc-treasure-hunt), and the Portuguese-language page on [caça ao tesouro digital](/pt/caca-ao-tesouro-digital-empresas).`,
+  },
+  {
+    slug: 'university-career-fair-gamification-future-maker-2026',
+    title: 'A Career Fair Where Students Had to Visit Every Stand',
+    description:
+      'Future Maker 2026 at NOVA IMS: 115 checkpoints, 265 students, 2,591 finds. How employer stands turned into checkpoints and what the traffic looked like.',
+    date: '2026-09-21',
+    content: `The complaint employers make about university career fairs is always the same. They pay for a stand, they send two people for three days, and they talk to the same self-selecting students who would have found them anyway. The rest of the room walks past.
+
+Future Maker 2026 at NOVA IMS ran from 17 to 19 March with employer stands, talks and workshops across the campus. We turned 115 locations into checkpoints, including the employer stands, and let students collect them.
+
+## The numbers
+
+- **265 unique players** across three days
+- **2,591 treasures found** from 115 checkpoints
+- **1,024,700 FM tokens** minted, 3,867 per student on average
+- **424 merch purchases**, burning 813,300 FM back out of circulation
+- **7,495 on-chain transactions** in total
+- **Peak hour 1 PM**, with 1,619 transactions
+
+## Employer stands got measured traffic
+
+The interesting part of the checkpoint table is the employer section. Philip Morris recorded 40 finds, Accenture 37, DareData 36, CTT 35, and JTA 33. Those are not impressions or estimates. Each one is a student who physically walked to that stand and tapped their phone on it.
+
+For a recruiting team, that number answers the question the fair never usually answers. You stop arguing about whether the stand was in a good position and start looking at a count, next to the counts everyone else got.
+
+The spread between the top employer stand and the fifth is narrow, 40 down to 33. Whatever the usual advantage of a stand near the door is worth, it did not show up as a gap here.
+
+## Day two is the real day
+
+Activity ran 1,936 transactions on day one, 3,736 on day two, and 1,823 on day three. Day two nearly doubled day one.
+
+That pattern has shown up in every multi-day deployment we have run, and it comes from word of mouth. Students who played on day one bring the people they had lunch with on day two. It also means the day one numbers are not the deployment's numbers, which is worth saying out loud to any employer who checks the dashboard on the first afternoon and worries.
+
+The daily peak sat at 1 PM, around the lunch break, when the hall fills with students who have nowhere particular to be.
+
+## Most of the checkpoints were not ours
+
+This is the number that surprised us. Of the 116 tags on the final checkpoint table, 70 were hidden by players rather than placed by us, by 68 different people. Those player-hidden tags accounted for 1,116 finds, about 43% of the total.
+
+They were also competitive with the official ones. "Banana" pulled 31 finds, "Hidden_Behind" 30 and "Secret Point" 28, which puts all three ahead of most employer stands.
+
+A player-hidden tag is content the organizer did not have to produce, placed where students actually go, and named in a way that makes other students want to find it. By day two it was doing a meaningful share of the work of keeping the game alive.
+
+## The reward store did the recruiting the flyers do not
+
+424 items were claimed from a 21-item store. The plain notebook was the runaway winner at 84 units, ahead of mousepads at 50 and the laptop case at 40. The expensive sweatshirts barely moved, in single digits each.
+
+The lesson for anyone stocking one of these: cheap, useful and carryable beats impressive. Students earned their tokens by walking the fair, and they spent them on things they would use the following week.
+
+## Why this works better on a campus than it looks
+
+115 checkpoints is a lot, and it worked because a campus has the density for it. Buildings are close, students already move between them between sessions, and the ratio of 0.43 checkpoints per player landed in the same band as every other event we have measured.
+
+The full report, with the per-checkpoint table, the leaderboard and the hourly curve, is public: see the [Future Maker 2026 report](/futuremaker-report). For the format applied to campuses generally, see [scavenger hunts for universities](/scavenger-hunt-universities), and for the employer side, [trade show booth traffic](/trade-show-booth-traffic).`,
   },
 ]

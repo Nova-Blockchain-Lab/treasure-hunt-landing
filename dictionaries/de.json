@@ -334,6 +334,7 @@
     "messageLink": "Nachricht senden"
   },
   "report": {
+    "related": "Verwandt",
     "title": "ETHDENVER 2026 TREASURE HUNT REPORT",
     "subtitle": "MakerSpace der ETHDenver 2026",
     "totalTreasures": "Schätze Insgesamt",
@@ -439,6 +440,7 @@
     "builtOn": "Gebaut auf Nova Cidade Chain · NOVA Blockchain Lab",
     "transactions": "Transaktionen",
     "fmLabel": "FM",
-    "fmMintedLabel": "FM Ausgegeben"
+    "fmMintedLabel": "FM Ausgegeben",
+    "related": "Verwandt"
   }
 }

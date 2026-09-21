@@ -11,8 +11,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params
   const base = 'https://www.treasurehunt.pt'
-  const url = `${base}${lang === 'pt' ? '/pt' : ''}/springbootcamp-report`
+  // EN-only page: og:url must match the canonical, not the /pt variant.
+  const url = `${base}/springbootcamp-report`
+  // Off-locale variants serve this EN content under a wrong <html lang> and
+  // already canonicalise here. Keep them followable but out of the index —
+  // the same rule lib/landing/metadata.ts applies to the landing pages.
+  const offLocale = lang !== 'en'
   return {
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: TITLE,
     description:
       '7 teams, 20 hunters, 45,650 SB minted, 220 treasures found. Full analytics from the Spring Bootcamp Teams Treasure Hunt at NOVA IMS, April 7, 2026.',

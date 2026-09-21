@@ -109,8 +109,8 @@ export const content: LandingContent = {
       a: "Sim. Colocar checkpoints em zonas de patrocinadores é um dos usos mais frequentes e leva fluxo de pessoas a pontos específicos de forma fiável.",
     },
     {
-      q: "O que recebemos no fim do evento?",
-      a: "Um relatório completo: total de descobertas, jogadores únicos, os checkpoints mais visitados e os padrões ao longo do dia.",
+      q: "Como medimos se a atividade correu bem?",
+      a: "Durante o jogo há um painel ao vivo com a classificação e as descobertas a entrar. No fim recebe um relatório com o total de descobertas, quantas pessoas jogaram, que checkpoints puxaram mais gente e a que horas. No Spring Bootcamp da NOVA IMS foram 7 equipas e 220 descobertas em 42 checkpoints.",
     },
   ],
 

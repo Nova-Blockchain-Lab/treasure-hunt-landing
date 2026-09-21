@@ -7,6 +7,7 @@ import {
   ACTIVITY, MINTING, BREAKDOWN, TOTAL_CLAIMS, TOP10, HOURLY,
   TREASURE_POPULARITY, MERCH_ITEMS, FUN_FACTS, HERO_STATS,
 } from '@/data/ethdenver-report'
+import { ReportRelated } from "@/components/report-related"
 
 const DONUT_COLORS = ['#22D1EE', '#6245EB', '#FF57B1', '#FFE739', '#ff6b35']
 const DONUT_DATA = [
@@ -258,6 +259,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         </section>
 
         {/* Footer */}
+      <ReportRelated heading={dict.related} links={[{ href: "/blog/how-treasure-hunt-drove-engagement-ethdenver-2026", label: "The ETHDenver 2026 case study" }, { href: "/nfc-treasure-hunt", label: "NFC treasure hunt for events" }]} />
         <footer className="text-center py-8 border-t border-[rgba(255,87,177,0.1)]">
           <a
             href="https://testnet.explorer.novaims.unl.pt/address/0x9732D2360085A6A36E51B9904A7000BFA461B85c"

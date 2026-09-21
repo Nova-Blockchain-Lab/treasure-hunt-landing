@@ -7,6 +7,7 @@ import {
   ACTIVITY, MINTING, BREAKDOWN, TOTAL_CLAIMS, TOP10, HOURLY,
   TREASURE_POPULARITY, MERCH_ITEMS, FUN_FACTS, HERO_STATS,
 } from '@/data/futuremaker-report'
+import { ReportRelated } from "@/components/report-related"
 
 const DONUT_COLORS = ['#F0605D', '#FF9A76', '#56D364', '#58A6FF']
 const DONUT_DATA = [
@@ -249,6 +250,7 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         </section>
 
         {/* Footer */}
+      <ReportRelated heading={dict.related} links={[{ href: "/blog/university-career-fair-gamification-future-maker-2026", label: "The Future Maker 2026 case study" }, { href: "/scavenger-hunt-universities", label: "Scavenger hunt for universities" }]} />
         <footer className="text-center py-10 border-t border-white/[0.04]">
           <a
             href="https://testnet.explorer.novaims.unl.pt/address/0xE653B7F933cc4194526e23Db6828C6FBd31215f4"

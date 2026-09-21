@@ -135,8 +135,8 @@ export const content: LandingContent = {
       a: "Conferences, corporate team building, universities and open days, festivals, trade shows and expo booths, brand activations and hackathons. It has run at all of these.",
     },
     {
-      q: "What do we get after the event?",
-      a: "A full post-event report: total finds, unique players, the busiest checkpoints and time-of-day patterns, on top of the live dashboard you watch during the event.",
+      q: "What reporting does Treasure Hunt include?",
+      a: "A live dashboard during the event and a written report afterwards, covering total finds, unique players, the busiest checkpoints and time-of-day patterns. Ours are published rather than kept as sales material, so you can read a real one before deciding.",
     },
   ],
 

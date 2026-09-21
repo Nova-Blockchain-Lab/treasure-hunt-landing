@@ -9,6 +9,7 @@ import {
   TEAM_LEADERBOARD, TEAM_RACE,
   TOKEN_NAME, TOKEN_SYMBOL, CONTRACT_ADDRESS, EXPLORER_URL, EVENT_DATE,
 } from '@/data/springbootcamp-report'
+import { ReportRelated } from "@/components/report-related"
 
 const DONUT_COLORS = ['#F0605D', '#FF9A76']
 const DONUT_DATA = [
@@ -349,6 +350,7 @@ export function ReportContent() {
         </section>
 
         {/* Footer */}
+      <ReportRelated heading={"Related"} links={[{ href: "/blog/team-scavenger-hunt-campus-spring-bootcamp-2026", label: "Team scavenger hunt on campus" }, { href: "/team-building-scavenger-hunt", label: "Team building scavenger hunt" }]} />
         <footer className="text-center py-10 border-t border-white/[0.04]">
           <a
             href={`${EXPLORER_URL}/address/${CONTRACT_ADDRESS}`}

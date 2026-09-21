@@ -98,7 +98,7 @@ export const content: LandingContent = {
     },
     {
       q: "How many checkpoints can we run?",
-      a: "From a handful to hundreds. We have run events with more than 100 checkpoints across a single venue.",
+      a: "From a handful to hundreds. The Future Maker hunt at NOVA IMS ran 115 checkpoints across the campus, and the Portugal Smart Cities Summit ran 103 across the exhibition floor. A single room works too.",
     },
     {
       q: "Can we send people to sponsor booths?",
@@ -109,8 +109,8 @@ export const content: LandingContent = {
       a: "Conferences, corporate team building, university open days, festivals, trade shows and expo booths, brand activations and hackathons. The format adapts to the venue and the audience.",
     },
     {
-      q: "What do we get after the event?",
-      a: "A full post-event report: total finds, unique players, the busiest checkpoints and time-of-day patterns.",
+      q: "What reporting do we get afterwards?",
+      a: "A live dashboard while the hunt is running, then a written report once it ends. The report covers total finds, unique players, which checkpoints drew the crowds and how activity moved through the day. Published examples are linked from the site, so you can see the format before you commit.",
     },
   ],
 

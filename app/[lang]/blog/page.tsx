@@ -3,23 +3,37 @@ import Link from 'next/link'
 import { blogPosts } from '@/data/blog-posts'
 import { PageJsonLd } from '@/components/page-jsonld'
 
-export const metadata: Metadata = {
-  title: 'Event Gamification Blog | Treasure Hunt',
-  description: 'Insights on event gamification, conference engagement, and interactive event technology from the Treasure Hunt team.',
-  alternates: {
-    canonical: 'https://www.treasurehunt.pt/blog',
-    languages: {
-      en: 'https://www.treasurehunt.pt/blog',
-      'x-default': 'https://www.treasurehunt.pt/blog',
-    },
-  },
-  openGraph: {
-    type: 'website',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  // Off-locale variants serve this EN listing under a wrong <html lang> and
+  // already canonicalise here. Followable, but out of the index.
+  const offLocale = lang !== 'en'
+
+  return {
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: 'Event Gamification Blog | Treasure Hunt',
-    description: 'Insights on event gamification, conference engagement, and interactive event technology.',
-    url: 'https://www.treasurehunt.pt/blog',
-    images: ['https://www.treasurehunt.pt/opengraph-image'],
-  },
+    description:
+      'Insights on event gamification, conference engagement, and interactive event technology from the Treasure Hunt team.',
+    alternates: {
+      canonical: 'https://www.treasurehunt.pt/blog',
+      languages: {
+        en: 'https://www.treasurehunt.pt/blog',
+        'x-default': 'https://www.treasurehunt.pt/blog',
+      },
+    },
+    openGraph: {
+      type: 'website',
+      title: 'Event Gamification Blog | Treasure Hunt',
+      description:
+        'Insights on event gamification, conference engagement, and interactive event technology.',
+      url: 'https://www.treasurehunt.pt/blog',
+      images: ['https://www.treasurehunt.pt/opengraph-image'],
+    },
+  }
 }
 
 export default async function BlogListingPage({
@@ -81,7 +95,9 @@ export default async function BlogListingPage({
         <h2 className="font-display text-2xl mb-8 text-[#E6EDF3]">All posts</h2>
 
         <div className="flex flex-col gap-8">
-          {blogPosts.map((post) => (
+          {[...blogPosts]
+            .sort((a, b) => b.date.localeCompare(a.date))
+            .map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}

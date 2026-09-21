@@ -121,7 +121,9 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
   Search Console returned "Crawled, currently not indexed" for it. A listing page
   needs its own reason to exist. Post cards are `h3` under an "All posts" `h2`,
   and they link `/blog/<slug>` unprefixed because posts are EN-only.
-- Posts live in `data/blog-posts.ts` (slug/title/description/date/content). 6 posts as of July 2026; the three July posts are event case studies grounded in the report snapshot data (PSCS trade-fair, Data Summit one-day, Spring Bootcamp teams) — every number must trace to `data/*/report-snapshot.json` or the report TS files, no invented stats.
+- Posts live in `data/blog-posts.ts` (slug/title/description/date/content). 9 posts as of September 2026. The three July posts are event case studies (PSCS trade-fair, Data Summit one-day, Spring Bootcamp teams); the three September posts are the checkpoint-ratio analysis across all six deployments, the Cadaval festival case study and the Future Maker career-fair case study. **Every number must trace to `data/*/report-snapshot.json` or the report TS files, no invented stats** — and check the attribution too, not just the value (the most-found "player-hidden" tag at Future Maker was hidden by `0xchefmike`, i.e. us, not by a student).
+- The array is stored oldest-first; the `/blog` hub sorts a copy newest-first at render time. Don't rely on array order for recency anywhere else.
+- Posts and the hub carry `robots: { index: false, follow: true }` on off-locale variants (`generateMetadata` reads `lang`), because those serve EN content under a wrong `<html lang>` and already canonical to the EN URL.
 - The renderer (`BlogContent` in `app/[lang]/blog/[slug]/page.tsx`) supports `##`, `**bold**`, `*em*`, `- lists`, and `[text](/internal-path)` links (internal only, href must start with `/`). Use those links to point posts at their report + landing pages.
 - New posts are picked up by the sitemap automatically, but bump the `/blog` listing `lastModified` in `app/sitemap.ts` when publishing.
 - If a stale `.next` incremental cache makes new post routes 404 locally under `next start`, `rm -rf .next && pnpm build` (hit July 2026).
@@ -285,7 +287,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 36 URLs) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 39 URLs) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -817,3 +819,34 @@ Fixed this pass:
   landing variants are `noindex, follow`; the 8 report pages still emit exactly
   one outbound link (`/`); four landing FAQ questions are duplicated verbatim
   across pages. All real, none urgent.
+
+## Report "Related" block
+
+`components/report-related.tsx` renders a small `<nav>` at the foot of each of
+the six reports. The reports collect more inbound internal links than anything
+but the home page and used to emit one outbound link ("back"), so all of that
+link equity stopped there. Each report links to the blog post that cites it and
+to the landing page for the intent it demonstrates.
+
+Gotcha: the reports do **not** all read the same dictionary slice.
+`ethdenver-report` gets `dict.report`, `futuremaker-report` gets
+`dict.fmReport`, and the other four are non-dictionary reports that pass the
+heading as a literal `"Related"`. A `related` key added to `report` alone
+renders nothing on Future Maker and fails silently, because `ReportRelated`
+still draws an empty heading. Both `report.related` and `fmReport.related` exist
+in all six dictionaries; `pnpm check:dict` (391 keys) enforces the shape.
+
+## Landing page FAQ sets must be disjoint
+
+Every landing page emits its FAQ as `FAQPage` JSON-LD, so a question and answer
+repeated verbatim across pages ships duplicate structured data and reads as
+scaled content. "What do we get after the event?" was on four EN pages with a
+byte-identical answer on two of them. The rule when adding or editing a landing
+page: no question **and** answer pair may be verbatim-identical to another page
+in the same language. Differentiate with that page's own numbers rather than by
+reshuffling adjectives. The PT set (three pages) needs the same check.
+
+`/trade-show-booth-traffic` is the worked example: it carries the PSCS 2026
+distribution (103 booths, median 77 finds, 79 booths past 50) in the stats
+strip, the benefits intro, a `comparison` table and one FAQ answer, which is
+what took it from 807 to ~1,350 words of copy nothing else on the site repeats.

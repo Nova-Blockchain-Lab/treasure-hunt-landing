@@ -110,7 +110,7 @@ export const content: LandingContent = {
     },
     {
       q: "What do we get after the event?",
-      a: "A full post-event report: total finds, unique players, the busiest checkpoints and time-of-day patterns.",
+      a: "A post-event report showing total finds, unique players and which tags people actually found. That last part matters for NFC: it tells you which placements worked and which ones everyone walked past, so the next run puts the tags somewhere better.",
     },
   ],
 

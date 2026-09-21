@@ -6,6 +6,7 @@ import { SectionMerch } from "./_components/section-merch"
 import { SectionTags } from "./_components/section-tags"
 import { SectionVenue } from "./_components/section-venue"
 import { SiteFooter } from "./_components/site-footer"
+import { ReportRelated } from "@/components/report-related"
 import { SiteHeader } from "./_components/site-header"
 import { PageJsonLd } from '@/components/page-jsonld'
 
@@ -28,6 +29,7 @@ export default async function ReportPage() {
         <SectionMerch snapshot={snapshot} />
         <SectionEngagement snapshot={snapshot} />
       </main>
+      <ReportRelated heading={"Related"} links={[{ href: "/blog/festival-gamification-cadaval-2026", label: "The Festival do Cadaval 2026 case study" }, { href: "/qr-scavenger-hunt-events", label: "QR scavenger hunt for events" }]} />
       <SiteFooter snapshot={snapshot} />
     </>
   )

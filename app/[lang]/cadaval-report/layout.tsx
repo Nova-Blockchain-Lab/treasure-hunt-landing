@@ -6,11 +6,22 @@ const TITLE = "Festival da Juventude 2026 · Treasure Hunt Report"
 const DESCRIPTION =
   "Post-event report for the Festival da Juventude 2026 Treasure Hunt in Cadaval. Aggregated from on-chain events on Nova Cidade testnet."
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
   const base = "https://www.treasurehunt.pt"
   // EN-only page: og:url must match the canonical, not the /pt variant.
   const url = `${base}/cadaval-report`
+  // Off-locale variants serve this EN content under a wrong <html lang> and
+  // already canonicalise here. Keep them followable but out of the index —
+  // the same rule lib/landing/metadata.ts applies to the landing pages.
+  const offLocale = lang !== "en"
+
   return {
+    ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: TITLE,
     description: DESCRIPTION,
     alternates: {

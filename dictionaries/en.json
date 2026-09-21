@@ -334,6 +334,7 @@
     "messageLink": "Send a message instead"
   },
   "report": {
+    "related": "Related",
     "title": "ETHDENVER 2026 TREASURE HUNT RECAP",
     "subtitle": "ETHDenver 2026 MakerSpace",
     "totalTreasures": "Total Treasures",
@@ -439,6 +440,7 @@
     "builtOn": "Built on Nova Cidade Chain \u00b7 NOVA Blockchain Lab",
     "transactions": "Transactions",
     "fmLabel": "FM",
-    "fmMintedLabel": "FM Minted"
+    "fmMintedLabel": "FM Minted",
+    "related": "Related"
   }
 }
