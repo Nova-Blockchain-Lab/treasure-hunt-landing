@@ -163,20 +163,6 @@
       { "title": "Totalmente Transparente e Auditável", "description": "Cada recompensa mintada, cada checkpoint scaneado, cada compra de merch, tudo registado e verificável. Forneça aos sponsors e stakeholders dados de engagement em que podem confiar." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Casos de Uso",
-    "heading": "Feito para",
-    "headingHighlight": "Qualquer Espaço com Público",
-    "description": "De meetups de 50 pessoas a arenas de 10.000 lugares. O Treasure Hunt escala para o seu evento e os seus objetivos.",
-    "items": [
-      { "title": "Conferências e Cimeiras", "description": "Transforme participantes passivos em exploradores ativos. Direcione tráfego para stands de sponsors, preencha zonas mortas entre sessões e forneça dados concretos sobre o que funcionou." },
-      { "title": "Eventos Corporativos", "description": "Gamifique lançamentos de produtos, team offsites e cimeiras internas. Dê a cada participante uma razão para explorar o espaço e interagir com cada ativação." },
-      { "title": "Universidades e Campus", "description": "Semanas de orientação, dias abertos e tours de campus que os alunos realmente gostam. Exploram, competem e descobrem espaços que de outra forma ignorariam." },
-      { "title": "Festivais e Exposições", "description": "Crie uma camada de exploração em espaços massivos. Recompense participantes por visitar palcos, áreas de sponsors e experiências escondidas, e monitorize tudo em tempo real." },
-      { "title": "Ativações de Marca", "description": "Conecte marketing físico a resultados mensuráveis. Saiba exatamente quais pontos de contacto geraram interação, quanto tempo as pessoas ficaram e com o que se envolveram." },
-      { "title": "Hackathons", "description": "Mantenha os builders em movimento entre sessões de programação. Recompense participação em workshops, stands de sponsors e áreas sociais com merch que realmente querem." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Prova Social",
     "heading": "Não Acredite Apenas",

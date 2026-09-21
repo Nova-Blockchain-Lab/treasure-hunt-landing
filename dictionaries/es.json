@@ -163,20 +163,6 @@
       { "title": "Totalmente Transparente y Auditable", "description": "Cada recompensa emitida, cada punto escaneado, cada compra en la tienda: todo registrado y verificable. Ofrece a patrocinadores y responsables datos de participación en los que puedan confiar." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Casos de Uso",
-    "heading": "Creado para",
-    "headingHighlight": "Cualquier Recinto con Público",
-    "description": "Desde encuentros de 50 personas hasta pabellones de 10.000 asientos. Treasure Hunt se adapta a tu evento y a tus objetivos.",
-    "items": [
-      { "title": "Congresos y Cumbres", "description": "Convierte asistentes pasivos en exploradores activos. Lleva tráfico a los stands de patrocinadores, llena los tiempos muertos entre sesiones y da a los organizadores datos sólidos sobre lo que funcionó." },
-      { "title": "Eventos Corporativos", "description": "Gamifica lanzamientos de producto, jornadas de equipo y cumbres internas. Da a cada asistente un motivo para explorar el espacio e interactuar con cada activación." },
-      { "title": "Universidades y Campus", "description": "Semanas de acogida, jornadas de puertas abiertas y visitas al campus que los estudiantes disfrutan de verdad. Exploran, compiten y descubren espacios que de otro modo se saltarían." },
-      { "title": "Festivales y Ferias", "description": "Añade una capa de exploración a recintos enormes. Recompensa a los asistentes por visitar escenarios, zonas de patrocinadores y experiencias escondidas, y mídelo todo en tiempo real." },
-      { "title": "Activaciones de Marca", "description": "Conecta el marketing físico con resultados medibles. Sabe exactamente qué puntos de contacto generaron interacción, cuánto tiempo se quedó la gente y con qué interactuó." },
-      { "title": "Hackathons", "description": "Mantén a los participantes en movimiento entre sesiones de código. Recompensa la asistencia a talleres, stands de patrocinadores y zonas sociales con merchandising que de verdad quieren." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Testimonios",
     "heading": "No Te Fíes Solo de",

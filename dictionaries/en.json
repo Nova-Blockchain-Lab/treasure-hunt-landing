@@ -163,20 +163,6 @@
       { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase, all recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Use Cases",
-    "heading": "Built for",
-    "headingHighlight": "Any Venue With a Crowd",
-    "description": "From 50-person meetups to 10,000-seat arenas. Treasure Hunt scales to your event and your goals.",
-    "items": [
-      { "title": "Conferences & Summits", "description": "Turn passive attendees into active explorers. Drive traffic to sponsor booths, fill dead zones between sessions, and give organizers hard data on what worked." },
-      { "title": "Corporate Events", "description": "Gamify product launches, team offsites, and internal summits. Give every attendee a reason to explore the space and interact with every activation." },
-      { "title": "Universities & Campuses", "description": "Orientation weeks, open days, and campus tours that students actually enjoy. They explore, compete, and discover spaces they\u2019d skip otherwise." },
-      { "title": "Festivals & Expos", "description": "Layer exploration across massive venues. Reward attendees for visiting stages, sponsor areas, and hidden experiences \u2014 and track it all in real time." },
-      { "title": "Brand Activations", "description": "Connect physical marketing to measurable results. Know exactly which touchpoints drove interaction, how long people stayed, and what they engaged with." },
-      { "title": "Hackathons", "description": "Keep builders moving between coding sessions. Reward participation at workshops, sponsor booths, and social areas with merch they actually want." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Social Proof",
     "heading": "Don\u2019t Take Our Word",

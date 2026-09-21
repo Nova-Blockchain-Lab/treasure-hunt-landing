@@ -163,20 +163,6 @@
       { "title": "Del Tutto Trasparente e Verificabile", "description": "Ogni premio emesso, ogni checkpoint scansionato, ogni acquisto al merch store: tutto registrato e verificabile. Offri a sponsor e stakeholder dati di coinvolgimento affidabili." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Casi d'Uso",
-    "heading": "Creato per",
-    "headingHighlight": "Ogni Sede con un Pubblico",
-    "description": "Da incontri di 50 persone ad arene da 10.000 posti. Treasure Hunt si adatta al tuo evento e ai tuoi obiettivi.",
-    "items": [
-      { "title": "Congressi e Summit", "description": "Trasforma partecipanti passivi in esploratori attivi. Porta visitatori agli stand degli sponsor, riempi i tempi morti tra le sessioni e dai agli organizzatori dati concreti su cosa ha funzionato." },
-      { "title": "Eventi Aziendali", "description": "Gamifica lanci di prodotto, ritiri di squadra e convention interne. Dai a ogni partecipante un motivo per esplorare lo spazio e interagire con ogni attivazione." },
-      { "title": "Università e Campus", "description": "Settimane di accoglienza, open day e visite al campus che gli studenti apprezzano davvero. Esplorano, competono e scoprono spazi che altrimenti salterebbero." },
-      { "title": "Festival e Fiere", "description": "Aggiungi un livello di esplorazione a sedi enormi. Premia i partecipanti che visitano palchi, aree sponsor ed esperienze nascoste, e misura tutto in tempo reale." },
-      { "title": "Attivazioni di Brand", "description": "Collega il marketing fisico a risultati misurabili. Sai esattamente quali touchpoint hanno generato interazione, quanto si sono fermate le persone e con cosa hanno interagito." },
-      { "title": "Hackathon", "description": "Tieni i partecipanti in movimento tra le sessioni di coding. Premia la presenza a workshop, stand degli sponsor e aree social con merchandising che desiderano davvero." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Testimonianze",
     "heading": "Non Fidarti Solo",

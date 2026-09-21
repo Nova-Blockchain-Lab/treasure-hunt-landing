@@ -879,11 +879,19 @@ places that drift independently: `hero.trustBadge` + `demo.stats` + `cta.trustSi
 in the dictionaries, the `stats` array in every `data/landing/*.ts`, and
 `llms.txt`. Update all three when a report ships.
 
-**Orphaned copy, still checked in.** `data/features.ts`, `data/how-it-works.ts`
-and `data/marquee-items.ts` are imported by nothing (the home reads the
-dictionaries), and the `useCases` object survives in all six dictionaries though
-`use-cases-section.tsx` was deleted. They are dead, so their copy never renders;
-don't waste time editing them, and don't treat a grep hit in them as live copy.
+**Orphaned copy is gone.** `data/features.ts`, `data/how-it-works.ts` and
+`data/marquee-items.ts` were imported by nothing (the home reads the
+dictionaries) and are deleted, along with the `useCases` object that survived in
+all six dictionaries after `use-cases-section.tsx` was removed. `useCases` was
+serialised into the RSC payload of every home route despite rendering nowhere,
+so deleting it cut ~12.4 KB off each locale's HTML; the rendered visible text is
+byte-identical to what shipped before. Dictionaries are now 373 keys.
+
+When checking whether a dictionary section is live, grep for `dict.<key>` in
+`app/` and `components/`. `useCases` was the only section with zero hits, and it
+had also drifted to a duplicate `"03 / Use Cases"` eyebrow that would have
+collided with Media's `03` if it ever rendered. A duplicate ordinal is a good
+signal a section is dead.
 
 ## The booking rail says the minimum
 

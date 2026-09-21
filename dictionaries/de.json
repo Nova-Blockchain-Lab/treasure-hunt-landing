@@ -163,20 +163,6 @@
       { "title": "Vollständig Transparent und Prüfbar", "description": "Jede ausgegebene Belohnung, jeder gescannte Checkpoint, jeder Kauf im Merch-Shop: alles erfasst und überprüfbar. Geben Sie Sponsoren und Stakeholdern Engagement-Daten, auf die sie sich verlassen können." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Anwendungsfälle",
-    "heading": "Gebaut für",
-    "headingHighlight": "Jeden Ort mit Publikum",
-    "description": "Von Treffen mit 50 Personen bis zu Arenen mit 10.000 Plätzen. Treasure Hunt passt sich Ihrem Event und Ihren Zielen an.",
-    "items": [
-      { "title": "Konferenzen und Gipfel", "description": "Machen Sie aus passiven Teilnehmenden aktive Entdecker. Bringen Sie Besucher zu Sponsorenständen, füllen Sie die Leerlaufzeiten zwischen Sessions und geben Sie Veranstaltern belastbare Daten darüber, was funktioniert hat." },
-      { "title": "Firmenevents", "description": "Gamifizieren Sie Produktlaunches, Team-Offsites und interne Konferenzen. Geben Sie jedem Teilnehmenden einen Grund, das Gelände zu erkunden und mit jeder Aktivierung zu interagieren." },
-      { "title": "Hochschulen und Campus", "description": "Einführungswochen, Tage der offenen Tür und Campus-Touren, die Studierenden wirklich Spaß machen. Sie erkunden, wetteifern und entdecken Orte, die sie sonst auslassen würden." },
-      { "title": "Festivals und Messen", "description": "Legen Sie eine Erkundungsebene über große Gelände. Belohnen Sie Teilnehmende für den Besuch von Bühnen, Sponsorenbereichen und versteckten Erlebnissen, und messen Sie alles in Echtzeit." },
-      { "title": "Markenaktivierungen", "description": "Verbinden Sie physisches Marketing mit messbaren Ergebnissen. Sie wissen genau, welche Touchpoints Interaktion erzeugt haben, wie lange Menschen geblieben sind und womit sie sich beschäftigt haben." },
-      { "title": "Hackathons", "description": "Halten Sie die Teilnehmenden zwischen den Coding-Sessions in Bewegung. Belohnen Sie die Teilnahme an Workshops, Sponsorenständen und Social-Bereichen mit Merch, den sie wirklich wollen." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Referenzen",
     "heading": "Verlassen Sie Sich Nicht",

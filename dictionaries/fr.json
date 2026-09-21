@@ -163,20 +163,6 @@
       { "title": "Totalement Transparent et Vérifiable", "description": "Chaque récompense émise, chaque point de contrôle scanné, chaque achat en boutique : tout est enregistré et vérifiable. Donnez aux sponsors et aux parties prenantes des données d'engagement fiables." }
     ]
   },
-  "useCases": {
-    "eyebrow": "03 / Cas d'Usage",
-    "heading": "Conçu pour",
-    "headingHighlight": "Tout Lieu Accueillant du Public",
-    "description": "Des rencontres de 50 personnes aux arènes de 10 000 places. Treasure Hunt s'adapte à votre événement et à vos objectifs.",
-    "items": [
-      { "title": "Congrès et Sommets", "description": "Transformez des participants passifs en explorateurs actifs. Amenez du passage aux stands des sponsors, remplissez les temps morts entre les sessions et donnez aux organisateurs des données solides sur ce qui a fonctionné." },
-      { "title": "Événements d'Entreprise", "description": "Gamifiez les lancements de produits, les séminaires d'équipe et les conventions internes. Donnez à chaque participant une raison d'explorer l'espace et d'interagir avec chaque activation." },
-      { "title": "Universités et Campus", "description": "Semaines d'accueil, journées portes ouvertes et visites de campus que les étudiants apprécient vraiment. Ils explorent, rivalisent et découvrent des lieux qu'ils auraient sinon ignorés." },
-      { "title": "Festivals et Salons", "description": "Ajoutez une couche d'exploration sur de très grands sites. Récompensez les participants qui visitent les scènes, les espaces sponsors et les expériences cachées, et mesurez tout en temps réel." },
-      { "title": "Activations de Marque", "description": "Reliez le marketing physique à des résultats mesurables. Sachez exactement quels points de contact ont généré de l'interaction, combien de temps les gens sont restés et avec quoi ils ont interagi." },
-      { "title": "Hackathons", "description": "Gardez les participants en mouvement entre les sessions de code. Récompensez la présence aux ateliers, aux stands des sponsors et dans les espaces conviviaux avec des goodies qu'ils veulent vraiment." }
-    ]
-  },
   "testimonials": {
     "eyebrow": "05 / Témoignages",
     "heading": "Ne Nous Croyez Pas",
