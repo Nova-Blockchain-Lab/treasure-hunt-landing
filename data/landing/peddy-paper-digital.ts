@@ -16,10 +16,10 @@ export const content: LandingContent = {
   primaryCta: "Planear o meu evento",
 
   stats: [
-    { value: "10.000+", label: "tesouros encontrados" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "jogadores" },
-    { value: "7", label: "eventos" },
+    { value: "14.000+", label: "tesouros encontrados" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1.000+", label: "jogadores" },
+    { value: "8", label: "eventos" },
   ],
 
   benefitsHeading: "Porque é que este peddy paper digital",

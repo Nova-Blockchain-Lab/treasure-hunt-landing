@@ -243,10 +243,10 @@
     ]
   },
   "cta": {
-    "heading": "Ready to Make Your Next Event",
-    "headingHighlight": "Unforgettable?",
-    "description": "Treasure Hunt deploys in days. Tell us about your event and we\u2019ll show you what\u2019s possible.",
-    "trustSignal": "Battle-tested across multiple events, thousands of players, and hundreds of prizes collected.",
+    "heading": "Ready to Run One at Your",
+    "headingHighlight": "Next Event?",
+    "description": "Treasure Hunt deploys in days. Tell us your dates, venue and rough headcount and we'll tell you what is realistic.",
+    "trustSignal": "14,885 finds across 401 checkpoints and 1,027 players, at eight events so far.",
     "bookDemo": "Plan Your Event",
     "seeItLive": "See Our Results \u2192"
   },
@@ -256,9 +256,8 @@
   },
   "booking": {
     "heading": "Book a call",
-    "intro": "Thirty minutes with the team behind Treasure Hunt. Bring your event date, venue and rough headcount and we'll tell you what is realistic.",
-    "howItWorks": "Pick a day, then a time. You'll add your details on the next step.",
-    "afterBooking": "A calendar invite with the video link arrives by email. Three of us from the team join every call.",
+    "intro": "A call with the team behind Treasure Hunt. Bring your event date, venue and rough headcount.",
+    "afterBooking": "You'll get a calendar invite with the video link. Three of us join the call.",
     "duration": "{minutes} minutes",
     "timezone": "Lisbon time",
     "prevMonth": "Previous month",
@@ -273,19 +272,18 @@
     "name": "Your name",
     "email": "Email address",
     "notes": "What is the event? Date, venue, rough headcount.",
-    "teamNote": "Three people from the Treasure Hunt team are added to every booking.",
     "codeHeading": "Confirm your email",
     "codeIntro": "Microsoft sent a 6-digit code to {email}. Enter it to finish booking.",
     "codeLabel": "Verification code",
     "confirm": "Confirm booking",
     "working": "Working…",
     "bookedHeading": "You're booked",
-    "bookedBody": "A Microsoft Teams invitation is on its way to {email}, and the team has been added to the meeting.",
+    "bookedBody": "A calendar invite is on its way to {email}, with the video link and the rest of the team.",
     "errorCode": "That code doesn't match. Check the email and try again.",
     "errorGeneric": "Something went wrong. Please try again.",
     "errorNetwork": "Could not reach the booking service. Please try again.",
     "unavailable": "Live availability is unavailable right now.",
-    "unavailableLink": "Book on Microsoft's page instead"
+    "unavailableLink": "Book on our Cal.com page instead"
   },
   "footer": {
     "description": "Interactive event engagement platform that drives foot traffic, rewards participation, and gives organizers real-time analytics.",

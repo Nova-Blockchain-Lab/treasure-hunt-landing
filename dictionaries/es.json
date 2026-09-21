@@ -243,10 +243,10 @@
     ]
   },
   "cta": {
-    "heading": "¿Listo para Hacer tu Próximo Evento",
-    "headingHighlight": "Inolvidable?",
-    "description": "Treasure Hunt se despliega en días. Cuéntanos cómo es tu evento y te mostraremos lo que es posible.",
-    "trustSignal": "Probado en múltiples eventos, con miles de jugadores y cientos de premios entregados.",
+    "heading": "¿Quieres Hacerlo en tu",
+    "headingHighlight": "Próximo Evento?",
+    "description": "Treasure Hunt se despliega en días. Cuéntanos las fechas, el lugar y una estimación de asistentes y te diremos qué es realista.",
+    "trustSignal": "14.885 hallazgos en 401 puntos de control y 1.027 jugadores, en ocho eventos hasta ahora.",
     "bookDemo": "Planifica tu Evento",
     "seeItLive": "Ver Nuestros Resultados →"
   },
@@ -256,9 +256,8 @@
   },
   "booking": {
     "heading": "Reservar una llamada",
-    "intro": "Treinta minutos con el equipo de Treasure Hunt. Trae la fecha del evento, el lugar y una estimación de asistentes y te diremos qué es realista.",
-    "howItWorks": "Elija un día y luego una hora. Sus datos se piden en el paso siguiente.",
-    "afterBooking": "Recibirá por correo una invitación de calendario con el enlace de vídeo. Tres personas del equipo participan en cada llamada.",
+    "intro": "Una llamada con el equipo de Treasure Hunt. Trae la fecha del evento, el lugar y una estimación de asistentes.",
+    "afterBooking": "Recibirás una invitación de calendario con el enlace de vídeo. Tres de nosotros participamos en la llamada.",
     "duration": "{minutes} minutos",
     "timezone": "Hora de Lisboa",
     "prevMonth": "Mes anterior",
@@ -273,19 +272,18 @@
     "name": "Tu nombre",
     "email": "Correo electrónico",
     "notes": "¿Qué evento es? Fecha, lugar, número aproximado de asistentes.",
-    "teamNote": "Tres personas del equipo de Treasure Hunt se añaden a cada reserva.",
     "codeHeading": "Confirma tu correo",
     "codeIntro": "Microsoft ha enviado un código de 6 dígitos a {email}. Introdúcelo para terminar la reserva.",
     "codeLabel": "Código de verificación",
     "confirm": "Confirmar reserva",
     "working": "Procesando…",
     "bookedHeading": "Reserva confirmada",
-    "bookedBody": "Una invitación de Microsoft Teams va camino de {email}, y el equipo ha sido añadido a la reunión.",
+    "bookedBody": "Una invitación de calendario va camino de {email}, con el enlace de vídeo y el resto del equipo.",
     "errorCode": "El código no coincide. Revisa el correo e inténtalo de nuevo.",
     "errorGeneric": "Algo ha ido mal. Inténtalo de nuevo.",
     "errorNetwork": "No se ha podido contactar con el servicio de reservas. Inténtalo de nuevo.",
     "unavailable": "La disponibilidad en directo no está disponible ahora mismo.",
-    "unavailableLink": "Reservar en la página de Microsoft"
+    "unavailableLink": "Reservar en nuestra página de Cal.com"
   },
   "footer": {
     "description": "Plataforma interactiva de dinamización de eventos que genera tráfico de visitantes, recompensa la participación y da a los organizadores analítica en tiempo real.",

@@ -16,9 +16,9 @@ export const content: LandingContent = {
   primaryCta: "Pianifica il mio evento",
 
   stats: [
-    { value: "10.000+", label: "tesori trovati" },
-    { value: "500+", label: "checkpoint" },
-    { value: "500+", label: "giocatori" },
+    { value: "14.000+", label: "tesori trovati" },
+    { value: "400+", label: "checkpoint" },
+    { value: "1.000+", label: "giocatori" },
     { value: "8", label: "eventi" },
   ],
 

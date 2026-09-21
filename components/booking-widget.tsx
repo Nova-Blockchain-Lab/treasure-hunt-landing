@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
-import { Clock, Video, Globe, ChevronLeft, ChevronRight, Check, ArrowLeft, Users, MousePointerClick, Mail } from "lucide-react"
+import { Clock, Video, Globe, ChevronLeft, ChevronRight, Check, ArrowLeft, Mail } from "lucide-react"
 import { capture } from "@/lib/posthog"
 import { getSlots, lisbonNow, type SlotsResponse } from "@/lib/slots"
 
@@ -211,18 +211,14 @@ export function BookingWidget({
           </div>
         </dl>
 
-        {/* What to do now, and what arrives afterwards. Without these the picker
-            asked for a commitment without saying what it led to. */}
-        <div className="flex flex-col gap-2.5 mt-1 pt-4 border-t border-[rgba(240,246,252,0.06)]">
-          <p className="flex items-start gap-2.5 text-[0.8rem] leading-relaxed text-[#8B949E]">
-            <MousePointerClick className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
-            {dict.howItWorks}
-          </p>
-          <p className="flex items-start gap-2.5 text-[0.8rem] leading-relaxed text-[#8B949E]">
-            <Mail className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
-            {dict.afterBooking}
-          </p>
-        </div>
+        {/* What arrives afterwards. The picker asked for a commitment without
+            saying what it led to. The step-by-step instructions that used to sit
+            here were cut: "Pick a day" and "Days with availability are
+            highlighted" already say it, one screen to the right. */}
+        <p className="flex items-start gap-2.5 mt-1 pt-4 border-t border-[rgba(240,246,252,0.06)] text-[0.8rem] leading-relaxed text-[#8B949E]">
+          <Mail className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
+          {dict.afterBooking}
+        </p>
 
         {slot && (
           <div className="lg:mt-auto pt-4 border-t border-[rgba(240,246,252,0.06)]">
@@ -423,10 +419,6 @@ export function BookingWidget({
                     aria-label={dict.notes}
                     className="w-full px-4 py-3 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors resize-none"
                   />
-                  <p className="flex items-start gap-2 text-[0.8rem] text-[#7D8590]">
-                    <Users className="w-4 h-4 shrink-0 mt-0.5 text-[#58A6FF]" aria-hidden />
-                    {dict.teamNote}
-                  </p>
                 </>
               ) : (
                 <>

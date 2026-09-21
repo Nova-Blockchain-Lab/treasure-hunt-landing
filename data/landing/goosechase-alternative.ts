@@ -16,10 +16,10 @@ export const content: LandingContent = {
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why teams pick",
@@ -31,7 +31,7 @@ export const content: LandingContent = {
       icon: "Smartphone",
       title: "No app to download",
       description:
-        "The game runs in the mobile browser. Players sign in and start scanning within about 30 seconds — no install, no app-store detour at the door.",
+        "The game runs in the mobile browser. Players sign in and start scanning within about 30 seconds, with no detour through an app store at the door.",
     },
     {
       icon: "Nfc",
@@ -61,7 +61,7 @@ export const content: LandingContent = {
       icon: "Award",
       title: "Proven at conferences",
       description:
-        "Run at ETHDenver, the Portugal Smart Cities Summit, NOVA IMS events and a city festival — real venues with hundreds of players, not just demos.",
+        "Run at ETHDenver, the Portugal Smart Cities Summit, NOVA IMS events and a city festival. Real venues with hundreds of players, not demos.",
     },
   ],
 
@@ -72,7 +72,7 @@ export const content: LandingContent = {
     rows: [
       {
         label: "How players join",
-        us: "Mobile browser — no app, playing in ~30 seconds",
+        us: "Mobile browser, playing in ~30 seconds",
         them: "Dedicated Goosechase app, downloaded from the app store",
       },
       {
@@ -115,7 +115,7 @@ export const content: LandingContent = {
     },
     {
       q: "Is it really free for players?",
-      a: "Yes. Players never pay and never install anything. As with most platforms, the organizer covers the cost — for Treasure Hunt that is a Starter, Pro or Enterprise package, quoted per event.",
+      a: "Yes. Players never pay and never install anything. As with most platforms, the organizer covers the cost. For Treasure Hunt that is a Starter, Pro or Enterprise package, quoted per event.",
     },
     {
       q: "Can we send attendees to sponsor booths?",
@@ -127,7 +127,7 @@ export const content: LandingContent = {
     },
     {
       q: "Has Treasure Hunt run at real conferences?",
-      a: "Yes. It has run end to end at ETHDenver, the Portugal Smart Cities Summit, several NOVA IMS events and a city festival — together totalling 10,000+ finds across 500+ checkpoints.",
+      a: "Yes. It has run end to end at ETHDenver, the Portugal Smart Cities Summit, several NOVA IMS events and a city festival, together totalling 14,885 finds across 401 checkpoints.",
     },
   ],
 

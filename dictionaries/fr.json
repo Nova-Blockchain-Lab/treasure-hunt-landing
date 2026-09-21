@@ -243,10 +243,10 @@
     ]
   },
   "cta": {
-    "heading": "Prêt à Rendre votre Prochain Événement",
-    "headingHighlight": "Inoubliable ?",
-    "description": "Treasure Hunt se déploie en quelques jours. Parlez-nous de votre événement et nous vous montrerons ce qui est possible.",
-    "trustSignal": "Éprouvé sur plusieurs événements, avec des milliers de joueurs et des centaines de prix récupérés.",
+    "heading": "Envie de l'Organiser à votre",
+    "headingHighlight": "Prochain Événement ?",
+    "description": "Treasure Hunt se déploie en quelques jours. Donnez-nous vos dates, le lieu et une estimation du nombre de participants, et nous vous dirons ce qui est réaliste.",
+    "trustSignal": "14 885 trouvailles sur 401 checkpoints et 1 027 joueurs, sur huit événements à ce jour.",
     "bookDemo": "Planifiez votre Événement",
     "seeItLive": "Voir Nos Résultats →"
   },
@@ -256,9 +256,8 @@
   },
   "booking": {
     "heading": "Réserver un appel",
-    "intro": "Trente minutes avec l'équipe derrière Treasure Hunt. Apportez la date de votre événement, le lieu et une estimation du nombre de participants, et nous vous dirons ce qui est réaliste.",
-    "howItWorks": "Choisissez un jour, puis un horaire. Vos coordonnées sont demandées à l'étape suivante.",
-    "afterBooking": "Vous recevez par e-mail une invitation avec le lien vidéo. Trois personnes de l'équipe participent à chaque appel.",
+    "intro": "Un échange avec l'équipe derrière Treasure Hunt. Apportez la date de votre événement, le lieu et une estimation du nombre de participants.",
+    "afterBooking": "Vous recevez une invitation de calendrier avec le lien vidéo. Trois d'entre nous participent à l'appel.",
     "duration": "{minutes} minutes",
     "timezone": "Heure de Lisbonne",
     "prevMonth": "Mois précédent",
@@ -273,19 +272,18 @@
     "name": "Votre nom",
     "email": "Adresse e-mail",
     "notes": "De quel événement s'agit-il ? Date, lieu, nombre approximatif de participants.",
-    "teamNote": "Trois personnes de l'équipe Treasure Hunt sont ajoutées à chaque réservation.",
     "codeHeading": "Confirmez votre e-mail",
     "codeIntro": "Microsoft a envoyé un code à 6 chiffres à {email}. Saisissez-le pour finaliser la réservation.",
     "codeLabel": "Code de vérification",
     "confirm": "Confirmer la réservation",
     "working": "Traitement…",
     "bookedHeading": "Réservation confirmée",
-    "bookedBody": "Une invitation Microsoft Teams est en route vers {email}, et l'équipe a été ajoutée à la réunion.",
+    "bookedBody": "Une invitation de calendrier est en route vers {email}, avec le lien vidéo et le reste de l'équipe.",
     "errorCode": "Le code ne correspond pas. Vérifiez l'e-mail et réessayez.",
     "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
     "errorNetwork": "Impossible de joindre le service de réservation. Veuillez réessayer.",
     "unavailable": "Les disponibilités en direct sont momentanément inaccessibles.",
-    "unavailableLink": "Réserver sur la page Microsoft"
+    "unavailableLink": "Réserver sur notre page Cal.com"
   },
   "footer": {
     "description": "Plateforme interactive d'animation d'événements qui génère du passage, récompense la participation et donne aux organisateurs une analytique en temps réel.",

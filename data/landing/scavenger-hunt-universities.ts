@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "The University Scavenger Hunt",
   headlineHighlight: "That Maps Your Campus",
   subhead:
-    "Turn orientation week, open days and campus events into a game. New students tap hidden NFC checkpoints in their phone browser — no app to download — and learn where everything is while chasing a live leaderboard.",
+    "Turn orientation week, open days and campus events into a game. New students tap hidden NFC checkpoints in their phone browser, with nothing to install, and learn where everything is while chasing a live leaderboard.",
   trust: "Deployed at NOVA IMS: Future Maker, Spring Bootcamp and the Data with Purpose Summit",
   primaryCta: "Plan Your Campus Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why it works for",
@@ -47,7 +47,7 @@ export const content: LandingContent = {
     },
     {
       icon: "Building2",
-      title: "Showcase the campus on open days",
+      title: "Reach every department on open days",
       description:
         "On open days a scavenger hunt pulls prospective students and families to every department and facility you want them to see, not just the main entrance.",
     },
@@ -71,7 +71,7 @@ export const content: LandingContent = {
       {
         title: "Map the campus",
         description:
-          "We place NFC checkpoints at the buildings, departments and services you want students to find — library, labs, union, faculties, registry.",
+          "We place NFC checkpoints at the buildings, departments and services you want students to find: library, labs, union, faculties, registry.",
       },
       {
         title: "Students tap to play",
@@ -90,7 +90,7 @@ export const content: LandingContent = {
   faq: [
     {
       q: "Is a university scavenger hunt good for orientation week?",
-      a: "Yes — it is the most common use. New students learn the campus by visiting the buildings and services they will use, and they break the ice with each other while doing it. We run it across NOVA IMS for exactly this.",
+      a: "Yes, it is the most common use. New students learn the campus by visiting the buildings and services they will use, and they break the ice with each other while doing it. We run it across NOVA IMS for exactly this.",
     },
     {
       q: "Do students need to download an app?",
@@ -120,6 +120,6 @@ export const content: LandingContent = {
 
   ctaHeading: "Bring a scavenger hunt to your campus",
   ctaSubhead:
-    "Tell us about your campus and dates — orientation, open day or any event. We'll put together a plan and a quote.",
+    "Tell us about your campus and dates, whether that is orientation, an open day or something else. We'll put together a plan and a quote.",
   ctaButton: "Plan Your Campus Event",
 }

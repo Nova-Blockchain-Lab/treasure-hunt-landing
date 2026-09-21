@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "Team Building para Eventos",
   headlineHighlight: "Que Toda a Gente Joga",
   subhead:
-    "Transforme a sua conferência, offsite ou ação de empresa numa caça ao tesouro. Os participantes tocam em etiquetas NFC com o telemóvel e jogam no browser — sem app para instalar — a competir por uma classificação ao vivo.",
+    "Transforme a sua conferência, offsite ou ação de empresa numa caça ao tesouro. Os participantes tocam em etiquetas NFC com o telemóvel e jogam no browser, sem nada para instalar, a competir por uma classificação ao vivo.",
   trust: "Usado na NOVA IMS, no Portugal Smart Cities Summit e no ETHDenver",
   primaryCta: "Planear o meu evento",
 
   stats: [
-    { value: "10.000+", label: "tesouros encontrados" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "jogadores" },
-    { value: "7", label: "eventos" },
+    { value: "14.000+", label: "tesouros encontrados" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1.000+", label: "jogadores" },
+    { value: "8", label: "eventos" },
   ],
 
   benefitsHeading: "Porque o NFC ganha às",
@@ -76,7 +76,7 @@ export const content: LandingContent = {
       {
         title: "As equipas tocam para jogar",
         description:
-          "Os participantes tocam numa etiqueta, entram no telemóvel e começam a procurar checkpoints — sem app, sem fricção, sem fila numa mesa de inscrições.",
+          "Os participantes tocam numa etiqueta, entram no telemóvel e começam a procurar checkpoints. Não há nada para instalar nem fila numa mesa de inscrições.",
       },
       {
         title: "Acompanha tudo ao vivo",

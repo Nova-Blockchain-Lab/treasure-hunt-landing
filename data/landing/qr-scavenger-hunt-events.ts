@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "A QR Code Scavenger Hunt",
   headlineHighlight: "Built for Events",
   subhead:
-    "Hide QR checkpoints around your venue and turn your event into a game. QR works on every phone with a camera, and on phones that support it attendees can tap an NFC tag instead — all in the mobile browser, no app to download.",
+    "Hide QR checkpoints around your venue and turn your event into a game. QR works on every phone with a camera, and on phones that support it attendees can tap an NFC tag instead. It all runs in the mobile browser, with nothing to download.",
   trust: "Deployed at ETHDenver, Future Maker and the Portugal Smart Cities Summit",
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why run a",

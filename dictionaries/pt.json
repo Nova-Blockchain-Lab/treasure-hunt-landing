@@ -172,7 +172,7 @@
       { "title": "Conferências e Cimeiras", "description": "Transforme participantes passivos em exploradores ativos. Direcione tráfego para stands de sponsors, preencha zonas mortas entre sessões e forneça dados concretos sobre o que funcionou." },
       { "title": "Eventos Corporativos", "description": "Gamifique lançamentos de produtos, team offsites e cimeiras internas. Dê a cada participante uma razão para explorar o espaço e interagir com cada ativação." },
       { "title": "Universidades e Campus", "description": "Semanas de orientação, dias abertos e tours de campus que os alunos realmente gostam. Exploram, competem e descobrem espaços que de outra forma ignorariam." },
-      { "title": "Festivais e Exposições", "description": "Crie uma camada de exploração em espaços massivos. Recompense participantes por visitar palcos, áreas de sponsors e experiências escondidas — e monitorize tudo em tempo real." },
+      { "title": "Festivais e Exposições", "description": "Crie uma camada de exploração em espaços massivos. Recompense participantes por visitar palcos, áreas de sponsors e experiências escondidas, e monitorize tudo em tempo real." },
       { "title": "Ativações de Marca", "description": "Conecte marketing físico a resultados mensuráveis. Saiba exatamente quais pontos de contacto geraram interação, quanto tempo as pessoas ficaram e com o que se envolveram." },
       { "title": "Hackathons", "description": "Mantenha os builders em movimento entre sessões de programação. Recompense participação em workshops, stands de sponsors e áreas sociais com merch que realmente querem." }
     ]
@@ -243,10 +243,10 @@
     ]
   },
   "cta": {
-    "heading": "Pronto para Tornar o Seu Próximo Evento",
-    "headingHighlight": "Inesquecível?",
-    "description": "O Treasure Hunt é implementado em dias. Conte-nos sobre o seu evento e mostramos o que é possível.",
-    "trustSignal": "Testado em múltiplos eventos, milhares de jogadores e centenas de prémios conquistados.",
+    "heading": "Quer Fazer Isto no Seu",
+    "headingHighlight": "Próximo Evento?",
+    "description": "O Treasure Hunt é implementado em dias. Diga-nos as datas, o local e uma estimativa de participantes e dizemos-lhe o que é realista.",
+    "trustSignal": "14.885 descobertas em 401 checkpoints e 1.027 jogadores, em oito eventos até agora.",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados →"
   },
@@ -256,9 +256,8 @@
   },
   "booking": {
     "heading": "Marcar uma chamada",
-    "intro": "Trinta minutos com a equipa do Treasure Hunt. Traga a data do evento, o local e uma estimativa de participantes e dizemos-lhe o que é realista.",
-    "howItWorks": "Escolha um dia e depois uma hora. Os seus dados são pedidos no passo seguinte.",
-    "afterBooking": "Recebe por e-mail um convite de calendário com a ligação de vídeo. Três pessoas da equipa participam em todas as chamadas.",
+    "intro": "Uma chamada com a equipa do Treasure Hunt. Traga a data do evento, o local e uma estimativa de participantes.",
+    "afterBooking": "Recebe um convite de calendário com a ligação de vídeo. Três de nós participam na chamada.",
     "duration": "{minutes} minutos",
     "timezone": "Hora de Lisboa",
     "prevMonth": "Mês anterior",
@@ -273,19 +272,18 @@
     "name": "O seu nome",
     "email": "Endereço de email",
     "notes": "Que evento é? Data, local, número aproximado de participantes.",
-    "teamNote": "Três pessoas da equipa Treasure Hunt são adicionadas a cada marcação.",
     "codeHeading": "Confirme o seu email",
     "codeIntro": "A Microsoft enviou um código de 6 dígitos para {email}. Introduza-o para concluir a marcação.",
     "codeLabel": "Código de verificação",
     "confirm": "Confirmar marcação",
     "working": "A processar…",
     "bookedHeading": "Marcação confirmada",
-    "bookedBody": "Um convite do Microsoft Teams está a caminho de {email} e a equipa foi adicionada à reunião.",
+    "bookedBody": "Um convite de calendário está a caminho de {email}, com a ligação de vídeo e o resto da equipa.",
     "errorCode": "O código não corresponde. Verifique o email e tente novamente.",
     "errorGeneric": "Algo correu mal. Por favor tente novamente.",
     "errorNetwork": "Não foi possível contactar o serviço de marcações. Tente novamente.",
     "unavailable": "A disponibilidade em direto está indisponível neste momento.",
-    "unavailableLink": "Marcar na página da Microsoft"
+    "unavailableLink": "Marcar na nossa página Cal.com"
   },
   "footer": {
     "description": "Plataforma interativa de engagement para eventos que direciona tráfego, recompensa a participação e oferece analytics em tempo real aos organizadores.",

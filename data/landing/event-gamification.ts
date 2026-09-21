@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "The Event Gamification Platform",
   headlineHighlight: "Built for Conferences",
   subhead:
-    "Turn a conference, expo or corporate offsite into a game. Attendees scan NFC tags and QR checkpoints across the venue in their phone browser — no app to download — chasing a live leaderboard and real rewards while you watch the data come in.",
+    "Turn a conference, expo or corporate offsite into a game. Attendees scan NFC tags and QR checkpoints across the venue in their phone browser, with nothing to install, chasing a live leaderboard and real rewards while you watch the data come in.",
   trust: "Deployed at ETHDenver, Future Maker and the Portugal Smart Cities Summit",
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "What an event gamification",
@@ -37,7 +37,7 @@ export const content: LandingContent = {
       icon: "Target",
       title: "Drive sponsor foot traffic",
       description:
-        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one expo a back-corner vendor put a checkpoint at their stand — attendees kept arriving to scan it, saw the products and bought. It turned their weekend around.",
+        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one expo a back-corner vendor put a checkpoint at their stand. Attendees kept arriving to scan it, saw the products and bought. It turned their weekend around.",
     },
     {
       icon: "BarChart3",
@@ -55,7 +55,7 @@ export const content: LandingContent = {
       icon: "Smartphone",
       title: "No app download",
       description:
-        "The whole platform runs in the mobile browser. Players sign in and start scanning within about 30 seconds — nothing to install, no friction at the registration desk.",
+        "The whole platform runs in the mobile browser. Players sign in and start scanning within about 30 seconds, so nothing backs up at the registration desk.",
     },
     {
       icon: "Nfc",
@@ -76,7 +76,7 @@ export const content: LandingContent = {
       {
         title: "Attendees scan to play",
         description:
-          "Players tap a tag or scan a QR code, sign in on their phone and start collecting points — no app, no queue, no friction.",
+          "Players tap a tag or scan a QR code, sign in on their phone and start collecting points. There is nothing to install and nowhere to queue.",
       },
       {
         title: "Watch the data, reward the leaders",

@@ -834,7 +834,7 @@ Gotcha: the reports do **not** all read the same dictionary slice.
 heading as a literal `"Related"`. A `related` key added to `report` alone
 renders nothing on Future Maker and fails silently, because `ReportRelated`
 still draws an empty heading. Both `report.related` and `fmReport.related` exist
-in all six dictionaries; `pnpm check:dict` (391 keys) enforces the shape.
+in all six dictionaries; `pnpm check:dict` (389 keys) enforces the shape.
 
 ## Landing page FAQ sets must be disjoint
 
@@ -850,3 +850,58 @@ reshuffling adjectives. The PT set (three pages) needs the same check.
 distribution (103 booths, median 77 finds, 79 booths past 50) in the stats
 strip, the benefits intro, a `comparison` table and one FAQ answer, which is
 what took it from 807 to ~1,350 words of copy nothing else on the site repeats.
+
+## Copy rules learned in the Sept 21 2026 pass
+
+**No em dashes in visitor-facing copy.** The global style rule was being broken
+in 31 places across the landing pages, including five hero subheads built on the
+identical `browser — no app to download — chasing` shape. All gone; a literal
+`—` in `data/landing/*.ts`, `data/blog-posts.ts` or `dictionaries/*.json` is now
+a regression. En dashes (`–`) in numeric and date ranges (`50–200`,
+`18.–21. Feb.`) are correct typography and deliberately kept.
+
+**Every number must be traceable, including in the guide posts.** The two March
+2026 guide posts carried invented benchmark statistics: "download rates hover
+between 30-50%", "active usage drops to 15-25%", "expect to lose 70-80% of
+potential players". No source, and the `/blog` hub intro explicitly promises the
+opposite ("we don't publish benchmark numbers we haven't measured ourselves").
+Both posts are rewritten around measured ETHDenver figures, and where an
+industry figure would have been useful they now say plainly that we don't have a
+trustworthy one. If a post needs an outside statistic to make its argument, the
+argument is wrong.
+
+**The landing page stats strips were never updated by the Sept 18 audit.** All
+14 carried "10,000+ finds / 500+ checkpoints / 500+ players" long after the
+dictionaries were corrected, and **500+ checkpoints was an overstatement** (the
+real figure is 401). Now 14,000+ / 400+ / 1,000+ / 8 events, with per-locale
+separators (`14.000+` pt/es/it/de, `14 000+` fr). The aggregate lives in three
+places that drift independently: `hero.trustBadge` + `demo.stats` + `cta.trustSignal`
+in the dictionaries, the `stats` array in every `data/landing/*.ts`, and
+`llms.txt`. Update all three when a report ships.
+
+**Orphaned copy, still checked in.** `data/features.ts`, `data/how-it-works.ts`
+and `data/marquee-items.ts` are imported by nothing (the home reads the
+dictionaries), and the `useCases` object survives in all six dictionaries though
+`use-cases-section.tsx` was deleted. They are dead, so their copy never renders;
+don't waste time editing them, and don't treat a grep hit in them as live copy.
+
+## The booking rail says the minimum
+
+The summary rail was cut back on 21 Sept 2026: the `howItWorks` and `teamNote`
+keys are **deleted** from all six dictionaries, not just unrendered. They
+repeated what the UI already said ("Pick a day" is a heading two inches to the
+right) and what `afterBooking` already said (the team joining every call). What
+remains is the heading, one sentence on what the call is and what to bring, the
+duration/location/timezone row, and one sentence on what arrives afterwards.
+Don't re-add instructions for a control that is visible on the same screen.
+
+Two strings were also still describing the retired Microsoft flow and were
+actively wrong: `bookedBody` promised "A Microsoft Teams invitation" when
+Cal.com sends a Cal Video link, and `unavailableLink` offered "Book on
+Microsoft's page instead" while the button's href was already cal.com. Both now
+say what actually happens. `codeIntro` / `codeHeading` still mention Microsoft
+and are left alone: that stage is unreachable on Cal.com and belongs to the
+fallback path.
+
+**`/book` is the link to send someone.** A modal has no URL; `/book` is a real
+page running the same widget, and it is what goes in an email or a DM.

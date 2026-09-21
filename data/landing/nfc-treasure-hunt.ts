@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "The NFC Treasure Hunt",
   headlineHighlight: "Built for Live Events",
   subhead:
-    "Hide NFC tags around your venue and turn your event into a game. Attendees tap to play in their phone browser — no app to download — chasing a live leaderboard and real rewards.",
+    "Hide NFC tags around your venue and turn your event into a game. Attendees tap to play in their phone browser, with nothing to install, chasing a live leaderboard and real rewards.",
   trust: "Deployed at ETHDenver, Future Maker and the Portugal Smart Cities Summit",
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why NFC beats",
@@ -49,7 +49,7 @@ export const content: LandingContent = {
       icon: "Target",
       title: "Drive sponsor foot traffic",
       description:
-        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one expo a back-corner vendor put a checkpoint at their stand — attendees kept arriving to scan it, saw the products and bought, and it turned their weekend around.",
+        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one expo a back-corner vendor put a checkpoint at their stand. Attendees kept arriving to scan it, saw the products and bought, and it turned their weekend around.",
     },
     {
       icon: "BarChart3",
@@ -61,7 +61,7 @@ export const content: LandingContent = {
       icon: "Gift",
       title: "Rewards attendees keep",
       description:
-        "Points and token rewards convert to real merch in an in-app store, so the game pays off in something tangible. The whole thing is free for players to join — they only need their phone.",
+        "Points and token rewards convert to real merch in an in-app store, so the game pays off in something tangible. The whole thing is free for players to join; they only need their phone.",
     },
   ],
 
@@ -76,7 +76,7 @@ export const content: LandingContent = {
       {
         title: "Attendees tap to play",
         description:
-          "Players tap a tag, sign in on their phone and start finding checkpoints — no app, no friction, no queue at a registration desk.",
+          "Players tap a tag, sign in on their phone and start finding checkpoints. There is nothing to install and no queue at a registration desk.",
       },
       {
         title: "You watch it live",
@@ -102,7 +102,7 @@ export const content: LandingContent = {
     },
     {
       q: "Can we send people to sponsor booths?",
-      a: "Yes. Placing checkpoints at sponsor and partner locations is one of the most popular uses — it reliably pulls foot traffic to specific spots.",
+      a: "Yes. Placing checkpoints at sponsor and partner locations is one of the most popular uses, because it reliably pulls foot traffic to specific spots.",
     },
     {
       q: "What kinds of events does an NFC hunt suit?",

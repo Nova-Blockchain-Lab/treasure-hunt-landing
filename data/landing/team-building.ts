@@ -11,15 +11,15 @@ export const content: LandingContent = {
   headline: "A Team Building Scavenger Hunt",
   headlineHighlight: "Your Whole Company Plays",
   subhead:
-    "Turn an offsite, an onboarding week or a company day into a game. People tap NFC checkpoints around the venue in their phone browser — no app to download — chasing a live leaderboard and real rewards.",
+    "Turn an offsite, an onboarding week or a company day into a game. People tap NFC checkpoints around the venue in their phone browser, with nothing to install, chasing a live leaderboard and real rewards.",
   trust: "Deployed at ETHDenver, Future Maker and the Portugal Smart Cities Summit",
   primaryCta: "Plan Your Offsite",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why it works for",
@@ -76,7 +76,7 @@ export const content: LandingContent = {
       {
         title: "Everyone taps to play",
         description:
-          "Your team taps a tag, signs in on their phone and starts finding checkpoints — no app, no briefing slides, no queue at a registration desk.",
+          "Your team taps a tag, signs in on their phone and starts finding checkpoints. There is nothing to install and no briefing to sit through first.",
       },
       {
         title: "You watch it live",
@@ -98,7 +98,7 @@ export const content: LandingContent = {
     },
     {
       q: "Can we run it as teams instead of individuals?",
-      a: "Yes. We've run team-based editions — the NOVA IMS Spring Bootcamp ran with seven teams of hunters. Tell us how you want people grouped and we set the leaderboard up to match.",
+      a: "Yes. We've run team-based editions; the NOVA IMS Spring Bootcamp ran with seven teams of hunters. Tell us how you want people grouped and we set the leaderboard up to match.",
     },
     {
       q: "Will it actually get people talking?",

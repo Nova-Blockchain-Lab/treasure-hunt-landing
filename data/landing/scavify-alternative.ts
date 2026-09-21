@@ -16,10 +16,10 @@ export const content: LandingContent = {
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "10,000+", label: "treasures found" },
-    { value: "500+", label: "checkpoints" },
-    { value: "500+", label: "players" },
-    { value: "7", label: "events" },
+    { value: "14,000+", label: "treasures found" },
+    { value: "400+", label: "checkpoints" },
+    { value: "1,000+", label: "players" },
+    { value: "8", label: "events" },
   ],
 
   benefitsHeading: "Why teams choose",
@@ -37,7 +37,7 @@ export const content: LandingContent = {
       icon: "Nfc",
       title: "NFC tap, not just QR",
       description:
-        "Hidden NFC tags open a challenge with a single tap — no camera, no lining up a tiny code in a crowded hall. The same checkpoint also works as a QR code where a phone can't tap.",
+        "Hidden NFC tags open a challenge with a single tap. There is no camera to launch and no tiny code to line up in a crowded hall. The same checkpoint also works as a QR code where a phone can't tap.",
     },
     {
       icon: "BarChart3",
@@ -49,7 +49,7 @@ export const content: LandingContent = {
       icon: "Target",
       title: "Drive sponsor foot traffic",
       description:
-        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one trade show a back-corner booth got a hidden checkpoint, attendees kept arriving to scan it, saw the products and bought — it turned the weekend around.",
+        "Place checkpoints at sponsor booths and quiet corners to pull crowds exactly where you want them. At one trade show a back-corner booth got a hidden checkpoint, attendees kept arriving to scan it, saw the products and bought. It turned the weekend around.",
     },
     {
       icon: "Gift",

@@ -92,87 +92,63 @@ Every transaction from ETHDenver 2026 is recorded on-chain and publicly verifiab
     date: '2026-03-06',
     content: `Conference attendees have a short attention span and a long list of sessions to skip. The booths in the back corner get ignored. The sponsor who paid for premium placement watches people walk past without stopping.
 
-Gamification fixes this. Not the shallow kind where you hand out points for checking in. The kind where attendees actively explore your venue because the game makes it worth their time.
+A scavenger hunt is one of the few things we have found that reliably moves people around a venue, and the reason is not that it is fun. It is that walking to a specific spot becomes worth points, and points become a t-shirt.
 
-Here's how QR and NFC scavenger hunts work at conferences, what makes them effective, and what we learned deploying one at ETHDenver 2026 with 207 active players.
+We ran one across the ETHDenver 2026 MakerSpace from 18 to 21 February with 59 checkpoints and 207 players. This is how the format works and what the data from that deployment showed.
 
-## The Checkpoint Model
+## The checkpoint model
 
-The core mechanic is simple. You place NFC tags or QR codes at specific locations throughout your venue. Each tag is a "checkpoint" worth a reward.
+You place NFC tags or QR codes at specific locations. Each one is a checkpoint worth a reward. An attendee taps their phone on the tag or scans the code, and the reward lands immediately, with no verification step in between.
 
-Attendees tap their phone on an NFC tag or scan a QR code. The reward is credited instantly. No delay, no verification step, no friction.
+The two checkpoint types are not interchangeable. An NFC tag takes a physical tap, which suits tables, walls and hidden spots, and it is the one that feels like picking something up. A QR code works at a distance, which suits signage and booth banners, and it is easier to produce at scale. We used a mix of both at ETHDenver, across everything from the Main Stage entrance to the Zen Zone to sponsor booths.
 
-**NFC tags** work with a physical tap. Place them on tables, walls, lanyards, or hidden spots. The tap feels deliberate and satisfying, like collecting a physical object.
+## The app download is the expensive part
 
-**QR codes** work at range. Print them on signage, booth banners, or event badges. They're easier to deploy at scale and work in situations where physical contact isn't practical.
+Every step between hearing about the game and playing it costs you players, and installing an app is the largest single step: finding the store, searching, downloading, opening, creating an account, granting permissions.
 
-At ETHDenver 2026, we used a mix of both across 59 checkpoints. The venue covered everything from the Main Stage entrance to the Zen Zone to sponsor booths like InfraredTrading.com and matcha.xyz's Matcha Garden.
+Treasure Hunt runs in the phone browser. Attendees open a URL, sign in through unicorn.eth with one tap, and are playing in under 30 seconds. We do not have a credible industry figure for how many players an app download costs you, and we are not going to invent one, but our own onboarding is the thing we chose to optimise first and it is the thing we would change last.
 
-## No App Download. No Excuses.
+At ETHDenver nobody was required to play, and 207 people did. The game spread by word of mouth and by people seeing tags on walls.
 
-The single biggest predictor of participation is friction at the entry point.
+## What the leaderboard actually does
 
-Treasure Hunt runs entirely in the phone browser. Attendees visit a URL and sign in through unicorn.eth with one tap. No app store, no account creation form, no wallet setup. The entire onboarding takes under 30 seconds.
+The top 10 players at ETHDenver finished within 3,350 tokens of each other, on an average of 7,830 each. A gap that narrow is what keeps a leaderboard working: players check it, see they are one or two finds off the next rank, and go back out.
 
-At ETHDenver 2026, this zero-friction approach contributed to 207 players participating organically. No one was required to play. The game spread through word of mouth and visible NFC tags across the venue.
+It does different work at different levels of engagement. A casual player looks at the board and discovers they found 5 checkpoints out of 59, which is an invitation rather than a score. A serious one plans a route; the most active hunter, zkprof, logged 67 separate mint events across four days. Groups race each other, which is where most of the noise on a show floor comes from.
 
-If your gamification requires an app download, expect to lose 70-80% of potential players before they start.
+The board also recruits. When people see others tapping tags and comparing numbers, they ask what it is.
 
-## Leaderboard Psychology
+## The merch store is what makes the points mean anything
 
-A live leaderboard turns casual participation into sustained competition.
-
-At ETHDenver, the top 10 players were separated by just 3,350 points. That narrow gap kept the competition alive across all four days. Players checked the leaderboard, saw they were within striking distance of the next rank, and went hunting for more checkpoints.
-
-The psychology works at every level of engagement:
-
-**Casual players** see the leaderboard and discover checkpoints they missed. "I only found 5 out of 59? Let me go find more."
-
-**Competitive players** check rankings obsessively and plan routes to maximize their score. The top player, zkprof, logged 67 separate mint events across four days.
-
-**Social players** compete with friends. Small groups formed around the venue, racing each other to find hidden treasures.
-
-The leaderboard also creates a visible social proof loop. When other attendees see players actively scanning and competing, they ask "what's that?" and join in.
-
-## The Merch Store: Where Rewards Become Real
-
-Points that can't be spent are points that don't motivate.
-
-Treasure Hunt includes a built-in merch store where players spend their earned tokens on physical items. At ETHDenver, the store offered:
+Points you cannot spend do not motivate anyone for long. Treasure Hunt includes a store where players spend earned tokens on physical items. At ETHDenver:
 
 - Night Market Claw Play (1,000 BUFFI): 78 purchases
-- Nova Blockchain Lab T-shirts (1,500 BUFFI): 15 purchases
-- Socks (700 BUFFI): 10 purchases
-- Limited 2026 ETHDenver T-Shirts (5,000 BUFFI): 8 purchases
-- Hats in pink and black (1,500 BUFFI each)
+- Nova Blockchain Lab T-shirt (1,500 BUFFI): 15 purchases
+- Nova Blockchain Lab Socks (700 BUFFI): 10 purchases
+- 2026 ETHDenver T-Shirt (5,000 BUFFI): 8 purchases
+- Pink and black hats (1,500 BUFFI each): 6 purchases between them
 
-137 total purchases across 73 unique shoppers. That's 35% of all players converting to merch buyers.
+137 purchases from 73 shoppers, which is 35% of everyone who played, and 213,820 BUFFI burned on the way through. The burn matters more than it sounds: it keeps the token supply from inflating past the point where a reward feels like it cost something.
 
-The merch store creates a burn mechanism. Players earn tokens, then spend them, which keeps the economy active and gives the rewards tangible value. 213,820 BUFFI were burned through purchases.
+## Placement is the organiser's real lever
 
-## Strategic Placement Drives Sponsor Value
+You decide where the checkpoints go, which means you decide where people walk. That is the whole product.
 
-Checkpoint placement is the organizer's most powerful tool. You decide where the checkpoints go, which means you decide where attendees walk.
+At ETHDenver the most-found checkpoint was the Merch Night Market at 62 finds, in an area that was busy anyway. The more useful result was further down: a custom sneaker vendor in a back corner got steady traffic once a checkpoint went in at his booth, traffic he was not getting before.
 
-At ETHDenver, the data showed clear patterns. The most-found treasure (Merch Night Market, 62 finds) was in a high-traffic area. But checkpoints also pulled traffic to less obvious spots. A custom sneaker vendor in a back corner saw consistent foot traffic after a checkpoint was placed at his booth.
+For a sponsor this is a number instead of an estimate. You can say how many people came to a specific spot and when, and at ETHDenver every one of those interactions was recorded on-chain, so the sponsor does not have to take your word for it.
 
-For sponsors, this is measurable ROI. You can show exactly how many people visited a specific location, when they visited, and how that compares to other areas of the venue. Every interaction is logged on-chain and verifiable.
+## Running one yourself
 
-## How to Run Your Own Conference Scavenger Hunt
+Map the venue first and pick the locations that matter: sponsor booths, the areas nobody walks to, food stations, stage entrances. Each becomes a checkpoint. Reward tiers do not have to be flat, and making the hard-to-find ones worth more is the cheapest way to push people into the corners of a floor plan.
 
-**Step 1: Map your venue.** Identify high-priority locations: sponsor booths, underexplored areas, food stations, main stages. Each becomes a checkpoint.
+Stock the store with things people will carry home. Launch browser-based with a one-tap sign-in, because a barrier at the door costs you players you never hear about. Then put the leaderboard on screens and read the top names out during sessions, and it largely runs itself.
 
-**Step 2: Set reward tiers.** Not every checkpoint needs to be worth the same amount. Hidden or hard-to-find checkpoints can offer higher rewards to incentivize exploration.
+At ETHDenver the busiest hour across the four days was 5 PM, with 500 transactions, and the game held up through all four days without any further push from us after launch.
 
-**Step 3: Stock the merch store.** Physical items that attendees want to take home. T-shirts, hats, stickers, and experience-based rewards like claw machine plays all work.
+The infrastructure runs on Nova Cidade Chain, a Layer 3 network that records every action, with a paymaster covering the fees so players never pay anything. None of that is visible from the phone. You tap a tag and get a reward.
 
-**Step 4: Launch with zero friction.** Browser-based, one-tap sign-in, no app download. The lower the barrier, the higher the participation.\n\nFor the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt).
-
-**Step 5: Let the leaderboard do the work.** Display it on screens around the venue. Announce top players during sessions. The competition markets itself.
-
-At ETHDenver, activity peaked at 5 PM daily with up to 500 transactions in a single hour. The game sustained engagement across all four days without any additional push from organizers after launch.
-
-The infrastructure runs on Nova Cidade Chain, a Layer 3 network that records every action transparently. A built-in paymaster covers all transaction fees, so participants never pay anything. The technology stays invisible. Players just play.`,
+For the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt). The full dataset is in the [ETHDenver 2026 report](/ethdenver-report).`,
   },
   {
     slug: 'event-gamification-platform-guide-2026',
@@ -180,97 +156,57 @@ The infrastructure runs on Nova Cidade Chain, a Layer 3 network that records eve
     description:
       'Why event gamification platforms are replacing traditional event apps in 2026, and how interactive tools drive sponsor ROI and attendee retention.',
     date: '2026-03-06',
-    content: `The event industry spent a decade pushing attendees toward event apps. Download this app, create a profile, opt into notifications, check the schedule, maybe scan a badge.
+    content: `The event industry spent a decade pushing attendees toward event apps. Download this, make a profile, allow notifications, check the schedule, maybe scan a badge.
 
-Most attendees never downloaded the app. The ones who did used it once and forgot about it.
+We do not have trustworthy public numbers for how badly that worked, and the ones that circulate are vendor-published and unsourced, so we are not going to repeat them here. What we can say is what we see at the events we run: attendees arrive with the schedule already in their email and a map already in their pocket, and an app that only holds information competes with both and loses.
 
-In 2026, the shift is clear. Event organizers are moving away from passive information apps and toward interactive engagement tools that give attendees a reason to participate, not just attend.
+The alternative is not a better information app. It is asking attendees to do something rather than read something.
 
-## Why Traditional Event Apps Fail
+## What changes when the tool is interactive
 
-Traditional event apps solve an organizer problem, not an attendee problem.
+**Engagement gets measured instead of estimated.** A checkpoint scan is an event with a person, a place and a timestamp attached. At ETHDenver 2026 that came to 992 finds and 462,255 token mints across 59 checkpoints in four days, all of it on-chain.
 
-Organizers want a central hub for schedules, maps, speaker bios, and sponsor listings. Reasonable. But attendees already have a schedule in their email, a map in their pocket, and no interest in scrolling through sponsor profiles.
+**Sponsor value stops being a survey answer.** Traditional sponsorship reporting rests on estimated footfall. A checkpoint gives you a count: 62 people found the Merch Night Market checkpoint, 47 found the BUIDLHub Mentor Desk. That is a number a sponsor can check.
 
-The result: download rates hover between 30-50% for well-promoted event apps. Active usage (more than opening once) drops to 15-25%. That means 75% or more of your attendees never meaningfully engage with your digital event layer.
+**The event keeps its audience past day one.** Daily transactions at ETHDenver went 800, 1,050, 1,423 across the first three days before the short final morning. Engagement grew instead of decaying, because the leaderboard was still running and people had told their friends.
 
-The core problem: passive tools require attendees to find value on their own. Interactive tools create value that pulls attendees in.
+## Why browser-based is the decision that matters most
 
-## The Gamification Approach
+Every step between hearing about a game and playing it loses you people, and an app install is the biggest step there is.
 
-Event gamification platforms flip the model. Instead of asking attendees to consume information, they ask attendees to do something.
+Browser-based play removes it. At ETHDenver the onboarding ran under 30 seconds through unicorn.eth, and 207 people played without any requirement to sign up. The game spread by people seeing tags on walls and asking about them.
 
-Scan a checkpoint. Earn a reward. Climb the leaderboard. Spend points on merch. Explore areas of the venue you'd otherwise skip.
+This works because the phone already has the hardware. NFC reading is built in, QR scanning is native to the camera app, and nothing needs installing on either side.
 
-The shift from passive to interactive changes three things:
+## The data you get out of it
 
-**Engagement becomes measurable.** When someone scans a checkpoint, you know exactly who engaged, where, and when. At ETHDenver 2026, Treasure Hunt logged 992 treasure finds and 462,255 token mints across 59 checkpoints in four days. Every interaction was on-chain and verifiable.
+Hourly activity tells you when people are actually on the floor. At ETHDenver the curve climbed from 8 AM, held through the middle of the day, and peaked at 5 PM with 500 transactions in that hour. That is when a sponsor activation is worth scheduling.
 
-**Sponsor value becomes provable.** Traditional sponsorship metrics rely on estimated foot traffic and self-reported surveys. Gamification gives you exact numbers. 62 people found the Merch Night Market checkpoint. 47 visited BUIDLHub Mentor Desk. You can hand sponsors a report showing precisely how many attendees interacted with their activation.
+Checkpoint popularity tells you which parts of the venue work. The top checkpoints at ETHDenver logged between 35 and 62 finds each, while the ones in dead corners finished under 10. That is a floor plan critique you can act on next year.
 
-**Retention extends across the full event.** At ETHDenver, daily transaction volume grew from 800 on day one to 1,423 on day three. Players returned each day because the leaderboard competition was ongoing and new checkpoints kept the experience fresh. Traditional event apps see usage drop after day one.
+Player data tells you whether the reward economy is calibrated. The top 10 players averaged 7,830 BUFFI, the average across all hunters was 2,233, and 73 players spent tokens in the store. If the averages drift too far apart, the rewards are concentrating on a handful of completionists.
 
-## The Web-Based Advantage
+For a sponsor, this replaces "we estimate 500 people walked past your booth" with "47 people scanned the checkpoint at your booth, and here is when".
 
-The most important technical decision in event gamification is eliminating the app download.
+## Real-time matters more than the post-event PDF
 
-Every step between "hearing about it" and "playing" costs you participants. An app download is the biggest step. It requires finding the app store, searching, downloading, waiting, opening, creating an account, and granting permissions.
+A report after the fact is useful and late. A live dashboard lets you move while the event is still running: raise the value of a checkpoint in a quiet sponsor area, pull traffic away from a section that is jammed, or push a bonus round when the afternoon sags.
 
-Browser-based gamification removes all of that. Attendees visit a URL, sign in with one tap, and start playing. At ETHDenver, the entire onboarding flow took under 30 seconds using unicorn.eth integration.
+At ETHDenver the dashboard carried live transaction volume, the leaderboard, store inventory and checkpoint heat maps, so we could see what the floor was doing at any point.
 
-The result: 207 players participated organically at ETHDenver without any mandatory sign-up requirement. The game spread through word of mouth and visible NFC tags. Players saw others tapping tags, asked what they were doing, and joined in.
+## The infrastructure should be invisible
 
-This web-based approach works because smartphones already have everything needed. NFC readers are built into modern phones. Camera-based QR scanning is native. No special hardware, no proprietary technology, no ecosystem lock-in.
+Treasure Hunt runs on Nova Cidade Chain, a dedicated Layer 3 network. Every scan, mint and purchase is recorded and publicly verifiable, and a paymaster covers the fees so participants never pay anything.
 
-## Data-Driven Sponsor Placement
+That serves two purposes. Sponsors and stakeholders get a record they can audit without asking us for it, and the token economy works without anyone having to know what a token is. From the attendee's side, they tap a tag and get a reward.
 
-Event gamification generates a dataset that traditional events simply can't produce.
+## What to check when you are comparing platforms
 
-Hourly activity data shows when attendees are most engaged. At ETHDenver, activity ramped up from 8 AM, peaked between noon and 6 PM, with the absolute peak at 5 PM (500 transactions in one hour). This tells organizers when to schedule sponsor activations for maximum impact.
+Start with entry: browser-based, no install, minimal sign-up. Then check whether the game exists in the venue at all, because NFC tags and QR codes are what make it a reason to walk somewhere rather than another screen to look at.
 
-Checkpoint popularity data shows which areas of the venue attract the most traffic. The top 10 checkpoints at ETHDenver each logged 35-62 finds. Bottom-tier checkpoints in less trafficked areas logged under 10. This data informs future venue layout decisions.
+After that, look at whether points can be spent on something real, whether the leaderboard is visible enough to create competition, whether you get a dashboard during the event rather than a PDF after it, and whether the engagement data is verifiable enough to hand to a sponsor.
 
-Player behavior data shows engagement patterns. The top 10 players at ETHDenver averaged 7,840 BUFFI each. 73 players (35%) spent tokens in the merch store. The average BUFFI per hunter was 2,233. These metrics help organizers calibrate reward economies for future events.
-
-For sponsors, this data package replaces guesswork with evidence. Instead of "we estimate 500 people walked past your booth," you can say "47 people scanned the checkpoint at your booth on day two, with peak traffic at 2 PM."
-
-## Real-Time Analytics for Organizers
-
-Static post-event reports are useful but late. Event gamification platforms provide real-time dashboards that let organizers make decisions during the event.
-
-If a sponsor area is underperforming, add a higher-value checkpoint. If a particular section of the venue is overcrowded, redirect traffic by activating checkpoints elsewhere. If engagement drops after lunch, trigger a limited-time bonus round.
-
-At ETHDenver, the Treasure Hunt dashboard showed live transaction volumes, leaderboard standings, merch store inventory, and checkpoint heat maps. Organizers could see exactly what was happening across the venue at any moment.
-
-This real-time visibility transforms events from static productions into dynamic experiences that adapt to attendee behavior.
-
-## The Infrastructure Question
-
-Event gamification platforms need infrastructure that's fast, transparent, and invisible to participants.
-
-Treasure Hunt runs on Nova Cidade Chain, a dedicated Layer 3 network. Every checkpoint scan, every reward mint, every merch purchase is recorded on-chain and publicly verifiable. A built-in paymaster covers all transaction fees, so participants never pay a cent.
-
-The blockchain layer serves two purposes. First, it provides an immutable record that sponsors and stakeholders can audit independently. Second, it enables the token economy (earning, spending, burning) without requiring participants to understand or interact with any blockchain technology.
-
-From the attendee's perspective, they tap a tag and get a reward. The infrastructure is invisible.
-
-## What to Look for in an Event Gamification Platform
-
-If you're evaluating platforms for your next event, prioritize these capabilities:
-
-**Zero-friction entry.** Browser-based, no app download, minimal sign-up. Every barrier reduces participation.
-
-**Physical-digital integration.** NFC tags and QR codes that connect physical spaces to digital experiences. The game should exist in the venue, not just on a screen.
-
-**Real reward economy.** Points that can be spent on real items. A merch store, raffle entries, or exclusive access. Rewards without redemption value lose their motivational power.
-
-**Live leaderboard.** Visible competition drives sustained engagement. Display it on screens. Announce leaders during sessions.\n\nIf you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments.
-
-**Real-time analytics.** Dashboard access during the event, not just a post-event PDF. The ability to adjust checkpoint values and activations in real-time.
-
-**Transparent data.** Verifiable engagement metrics that you can share with sponsors as proof of ROI.
-
-The event industry is moving past the "download our app" era. Attendees want experiences, not utilities. Interactive gamification platforms deliver measurable engagement that passive apps never could.`,
+If you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments, and the [ETHDenver 2026 report](/ethdenver-report) has the raw data behind every figure above.`,
   },
   {
     slug: 'trade-show-booth-traffic-pscs-2026',

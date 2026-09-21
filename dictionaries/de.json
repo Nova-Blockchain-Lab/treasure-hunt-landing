@@ -243,10 +243,10 @@
     ]
   },
   "cta": {
-    "heading": "Bereit, Ihr Nächstes Event",
-    "headingHighlight": "Unvergesslich zu Machen?",
-    "description": "Treasure Hunt ist in wenigen Tagen einsatzbereit. Erzählen Sie uns von Ihrem Event und wir zeigen Ihnen, was möglich ist.",
-    "trustSignal": "Erprobt auf mehreren Events, mit tausenden Spielenden und hunderten abgeholten Preisen.",
+    "heading": "Lust auf eine Jagd bei Ihrem",
+    "headingHighlight": "Nächsten Event?",
+    "description": "Treasure Hunt ist in wenigen Tagen einsatzbereit. Nennen Sie uns Datum, Veranstaltungsort und eine grobe Teilnehmerzahl, und wir sagen Ihnen, was realistisch ist.",
+    "trustSignal": "14.885 Funde an 401 Checkpoints und 1.027 Spielende, bei bisher acht Events.",
     "bookDemo": "Event Planen",
     "seeItLive": "Unsere Ergebnisse Ansehen →"
   },
@@ -256,9 +256,8 @@
   },
   "booking": {
     "heading": "Gespräch buchen",
-    "intro": "Dreißig Minuten mit dem Team hinter Treasure Hunt. Bringen Sie Datum, Veranstaltungsort und eine grobe Teilnehmerzahl mit, und wir sagen Ihnen, was realistisch ist.",
-    "howItWorks": "Wählen Sie einen Tag und dann eine Uhrzeit. Ihre Daten folgen im nächsten Schritt.",
-    "afterBooking": "Sie erhalten per E-Mail eine Kalendereinladung mit dem Videolink. Drei Personen aus dem Team nehmen an jedem Gespräch teil.",
+    "intro": "Ein Gespräch mit dem Team hinter Treasure Hunt. Bringen Sie Datum, Veranstaltungsort und eine grobe Teilnehmerzahl mit.",
+    "afterBooking": "Sie erhalten eine Kalendereinladung mit dem Videolink. Drei von uns nehmen am Gespräch teil.",
     "duration": "{minutes} Minuten",
     "timezone": "Lissabonner Zeit",
     "prevMonth": "Vorheriger Monat",
@@ -273,19 +272,18 @@
     "name": "Ihr Name",
     "email": "E-Mail-Adresse",
     "notes": "Um welche Veranstaltung geht es? Datum, Ort, ungefähre Teilnehmerzahl.",
-    "teamNote": "Drei Personen aus dem Treasure-Hunt-Team werden zu jeder Buchung hinzugefügt.",
     "codeHeading": "E-Mail bestätigen",
     "codeIntro": "Microsoft hat einen 6-stelligen Code an {email} geschickt. Geben Sie ihn ein, um die Buchung abzuschließen.",
     "codeLabel": "Bestätigungscode",
     "confirm": "Buchung bestätigen",
     "working": "Wird verarbeitet…",
     "bookedHeading": "Termin gebucht",
-    "bookedBody": "Eine Microsoft-Teams-Einladung ist an {email} unterwegs, und das Team wurde zur Besprechung hinzugefügt.",
+    "bookedBody": "Eine Kalendereinladung ist an {email} unterwegs, mit dem Videolink und dem restlichen Team.",
     "errorCode": "Der Code stimmt nicht. Prüfen Sie die E-Mail und versuchen Sie es erneut.",
     "errorGeneric": "Etwas ist schiefgegangen. Bitte versuchen Sie es erneut.",
     "errorNetwork": "Der Buchungsdienst war nicht erreichbar. Bitte versuchen Sie es erneut.",
     "unavailable": "Die Live-Verfügbarkeit ist gerade nicht abrufbar.",
-    "unavailableLink": "Auf der Microsoft-Seite buchen"
+    "unavailableLink": "Auf unserer Cal.com-Seite buchen"
   },
   "footer": {
     "description": "Interaktive Event-Plattform, die Besucherströme lenkt, Teilnahme belohnt und Veranstaltern Analytics in Echtzeit liefert.",
