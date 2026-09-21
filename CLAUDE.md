@@ -884,8 +884,16 @@ in the dictionaries, the `stats` array in every `data/landing/*.ts`, and
 dictionaries) and are deleted, along with the `useCases` object that survived in
 all six dictionaries after `use-cases-section.tsx` was removed. `useCases` was
 serialised into the RSC payload of every home route despite rendering nowhere,
-so deleting it cut ~12.4 KB off each locale's HTML; the rendered visible text is
-byte-identical to what shipped before. Dictionaries are now 373 keys.
+so deleting it cut 1.5-1.8 KB off each locale's HTML (`/` 194,827 -> 193,336,
+`/fr` 201,568 -> 199,728), which matches the 1,424-byte JSON block plus
+escaping. The rendered visible text is byte-identical to what shipped before.
+Dictionaries are now 373 keys.
+
+The commit message for that change claims ~12.4 KB. That number is wrong: it
+compared production HTML against a local `next start` build, and roughly 11 KB
+of the gap is Vercel's own injected markup, present in production and absent
+locally. **Measure a payload change production-against-production**, never
+production-against-local.
 
 When checking whether a dictionary section is live, grep for `dict.<key>` in
 `app/` and `components/`. `useCases` was the only section with zero hits, and it
