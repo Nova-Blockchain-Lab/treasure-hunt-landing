@@ -500,7 +500,7 @@ Also note `vercel env add` is non-interactive by default for an agent, so a
 piped stdin value is ignored silently while the command still reports success.
 Use `--value`.
 
-The Cal.com account is the `daraujo@novaims.unl.pt` one; its public profile is
+The Cal.com account is the `novablockchainlab@novaims.unl.pt` one; its public profile is
 already named "Treasure Hunt". Outlook Calendar is connected and **conflict
 checking is enabled on the main `Calendário`**, so real busy time blocks slots.
 Availability is the default "Horário de trabalho" schedule, Mon-Fri 09:00-17:00
@@ -664,7 +664,7 @@ on-screen label order: index 0 Calendário, 1 Feriados de Portugal,
 2 Aniversários, 3 United States holidays.
 
 ## Inbound mail verified
-A message sent from `daraujo@novaims.unl.pt` to `leads@treasurehunt.pt` arrived
+A message sent from `novablockchainlab@novaims.unl.pt` to `leads@treasurehunt.pt` arrived
 in the Zoho inbox in about 8 seconds. Inbound delivery works end to end; that
 address used to bounce. (Port 25 is blocked from the dev machine, so an SMTP
 RCPT probe is not a usable check — send a real message instead.)
@@ -700,15 +700,15 @@ inbox before and after the switch:
 
 ```
 14:14  Treasure Hunt <hello@cal.com>
-14:14  Dinis Antunes Palha de Araujo <daraujo@novaims.unl.pt>   <- the Exchange invite
+14:14  Dinis Antunes Palha de Araujo <novablockchainlab@novaims.unl.pt>   <- the Exchange invite
 22:31  Treasure Hunt <hello@cal.com>                            <- after; nothing else
 ```
 
 The attendee now receives ONE email instead of two, and no personal name appears.
 Cal.com's primary account email is `hello@treasurehunt.pt` (verified);
-`daraujo@novaims.unl.pt` remains as an unverified secondary, which is harmless.
+`novablockchainlab@novaims.unl.pt` remains as an unverified secondary, which is harmless.
 
-`daraujo@novaims.unl.pt` is in `BOOKING_ATTENDEES` so bookings still reach the
+`novablockchainlab@novaims.unl.pt` is in `BOOKING_ATTENDEES` so bookings still reach the
 NOVA calendar as a guest invite — without that, moving the destination to Zoho
 would have silently stopped bookings appearing on the work calendar.
 
@@ -733,7 +733,7 @@ was always Cal.com's sender. Before the switch the attendee got TWO emails:
 
 ```
 Treasure Hunt <hello@cal.com>                           <- Cal.com, unchanged throughout
-Dinis Antunes Palha de Araujo <daraujo@novaims.unl.pt>  <- Exchange, the one with the name
+Dinis Antunes Palha de Araujo <novablockchainlab@novaims.unl.pt>  <- Exchange, the one with the name
 ```
 
 Moving the destination to Zoho removed the second. Zoho over CalDAV does not
@@ -921,3 +921,30 @@ fallback path.
 
 **`/book` is the link to send someone.** A modal has no URL; `/book` is a real
 page running the same widget, and it is what goes in an email or a DM.
+
+## The WhatsApp webhook relay (`app/api/webhooks/whatsapp`)
+
+This site owns the **only** Meta callback URL for every edition of the game, and
+forwards each delivery to all of them. It is here rather than on a game
+deployment because Meta allows one callback per app and one app serves every
+edition: whichever game held the URL received everyone's verification messages
+and silently dropped the ones minted elsewhere, with a 200, so nothing looked
+broken. This site is not an edition, outlives all of them, owns the apex, and has
+no Neon compute to wake, so a stray inbound "hi" costs nothing here.
+
+- **Flow:** verify Meta's `x-hub-signature-256` against `WHATSAPP_APP_SECRET` →
+  re-POST the **raw body** to each origin in `WHATSAPP_RELAY_TARGETS` with an
+  `x-th-relay-signature` HMAC under `WEBHOOK_RELAY_SECRET` → always answer 200.
+- **It is deliberately dumb.** No marker parsing, no routing. Each edition
+  ignores a code it did not mint, and a plain "hi" with no code still has to
+  reach every edition because it opens Meta's 24h free-form window for whichever
+  one holds that number. Routing would drop exactly those.
+- ⚠️ **The body is forwarded byte for byte.** The HMAC covers raw bytes, so
+  nothing here may parse and re-serialise it.
+- ⚠️ **Always 200 once the signature is good.** Meta retries a non-2xx for days,
+  and a retry replays the delivery to *every* target, including ones that already
+  took it. A target being down is logged, never signalled back.
+- **Env:** `WHATSAPP_APP_SECRET` and `WHATSAPP_VERIFY_TOKEN` (copied from the game
+  projects, same Meta app), `WEBHOOK_RELAY_SECRET` (shared with every target,
+  byte-identical), `WHATSAPP_RELAY_TARGETS` (comma-separated origins). Adding an
+  edition is an env edit plus a redeploy, not a code change.

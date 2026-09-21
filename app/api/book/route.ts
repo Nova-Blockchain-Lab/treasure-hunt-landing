@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { sendLeadEmail } from "@/lib/notify"
 import { calcomBook, calcomConfigured, lisbonToUtcIso } from "@/lib/calcom"
 
-// Creates a real appointment on daraujo@novaims.unl.pt's calendar through the
+// Creates a real appointment on novablockchainlab@novaims.unl.pt's calendar through the
 // same anonymous Bookings API the public booking page uses (see
 // app/api/slots/route.ts for why no credentials are involved).
 //

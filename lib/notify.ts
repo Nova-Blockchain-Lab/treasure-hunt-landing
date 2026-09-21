@@ -12,7 +12,7 @@
 
 const CONTACT_TO = (
   process.env.CONTACT_EMAIL ||
-  "daraujo@novaims.unl.pt,jrpereira@novaims.unl.pt,aandrade@novaims.unl.pt,fribeiro@novaims.unl.pt"
+  "novablockchainlab@novaims.unl.pt,jrpereira@novaims.unl.pt,aandrade@novaims.unl.pt,fribeiro@novaims.unl.pt"
 )
   .split(",")
   .map((e) => e.trim())

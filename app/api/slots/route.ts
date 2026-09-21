@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { lisbonNow, type SlotsResponse } from "@/lib/slots"
 import { CALCOM_LOCATION, CALCOM_MINUTES, calcomConfigured, calcomSlots } from "@/lib/calcom"
 
-// Live free/busy for the "Bookings with me" page of daraujo@novaims.unl.pt.
+// Live free/busy for the "Bookings with me" page of novablockchainlab@novaims.unl.pt.
 //
 // This is the same endpoint the public Microsoft booking page calls for a
 // signed-out visitor, so it needs no token, no app registration and no tenant
