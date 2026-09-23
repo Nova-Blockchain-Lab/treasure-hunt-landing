@@ -944,7 +944,13 @@ no Neon compute to wake, so a stray inbound "hi" costs nothing here.
 - ⚠️ **Always 200 once the signature is good.** Meta retries a non-2xx for days,
   and a retry replays the delivery to *every* target, including ones that already
   took it. A target being down is logged, never signalled back.
+- **Instagram rides the same route** (2026-09-23). The Instagram product on the
+  same Meta app sends its webhooks here too, for the NEI edition's follow check,
+  and **signs them with the Instagram app secret**, not the Meta one. So a POST
+  is genuine if either `WHATSAPP_APP_SECRET` or `INSTAGRAM_APP_SECRET` verifies
+  it. The Instagram callback is registered as `…/api/webhooks/whatsapp?src=ig`,
+  the query being only a marker to tell the two apart in the logs.
 - **Env:** `WHATSAPP_APP_SECRET` and `WHATSAPP_VERIFY_TOKEN` (copied from the game
-  projects, same Meta app), `WEBHOOK_RELAY_SECRET` (shared with every target,
+  projects, same Meta app), `INSTAGRAM_APP_SECRET` (Instagram > API setup), `WEBHOOK_RELAY_SECRET` (shared with every target,
   byte-identical), `WHATSAPP_RELAY_TARGETS` (comma-separated origins). Adding an
   edition is an env edit plus a redeploy, not a code change.

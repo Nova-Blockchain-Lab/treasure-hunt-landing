@@ -25,6 +25,13 @@
 // that has been through JSON.parse/stringify verifies nowhere. Nothing in this
 // file parses it, and nothing should start.
 //
+// INSTAGRAM TOO. The Instagram product on the same Meta app points its webhook
+// here as well (for the follow check, lib/instagram-verify.ts in each edition),
+// and Instagram signs with ITS OWN app secret, not the Meta app secret WhatsApp
+// uses. So a delivery is genuine if either secret verifies it. That widens
+// nothing: both are secrets only we and Meta hold, and each edition still only
+// trusts the relay's own signature on the way out.
+//
 // ⚠️ ALWAYS 200 ONCE THE SIGNATURE IS GOOD. Meta retries a non-2xx with backoff
 // for days, and a retry replays the delivery to EVERY target, including the ones
 // that already accepted it. A target being down is logged, never signalled back.
@@ -73,6 +80,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
 export async function POST(request: NextRequest): Promise<Response> {
   const appSecret = process.env.WHATSAPP_APP_SECRET
+  const igAppSecret = process.env.INSTAGRAM_APP_SECRET
   const relaySecret = process.env.WEBHOOK_RELAY_SECRET
   if (!appSecret || !relaySecret) {
     // Both are required here, unlike on a game deployment: without the first
@@ -83,7 +91,8 @@ export async function POST(request: NextRequest): Promise<Response> {
   }
 
   const raw = await request.text()
-  if (!signatureMatches(raw, request.headers.get("x-hub-signature-256"), appSecret)) {
+  const header = request.headers.get("x-hub-signature-256")
+  if (!signatureMatches(raw, header, appSecret) && !signatureMatches(raw, header, igAppSecret)) {
     console.warn("[wa-relay] rejected a delivery with a bad Meta signature.")
     return new Response("Unauthorized", { status: 401 })
   }
