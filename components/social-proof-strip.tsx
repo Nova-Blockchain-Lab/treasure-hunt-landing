@@ -3,7 +3,8 @@ import Image from "next/image"
 // Mixed-polarity logo wall: light/transparent marks render bare on the dark strip;
 // dark-on-white wordmarks (DwP, Spring Bootcamp) keep a white chip so they don't
 // vanish. Every logo lives in a fixed-height cell + object-contain so optical
-// weight is even and the two rows align on a 4-up grid (was a ragged flex-wrap).
+// weight is even and the rows align on a 3-up grid: nine logos fill it with no
+// orphan (was a ragged flex-wrap, then 4-up for eight).
 const logos: {
   href: string
   src: string
@@ -24,6 +25,7 @@ const logos: {
   { href: "https://blockchainconfluence.pt/", src: "/blockchain-confluence-logo.png", alt: "Blockchain Confluence", w: 320, h: 96 },
   { href: "https://novaims.unl.pt/pt/here-now/eventos/spring-bootcamp/", src: "/spring-bootcamp-logo.png", alt: "Spring Bootcamp · NOVA IMS", w: 246, h: 68, chip: true },
   { href: "https://novaims.unl.pt/en/here-now/events/cultural-week/", src: "/cultural-week-logo.png", alt: "Cultural Week · NOVA IMS", w: 227, h: 113 },
+  { href: "https://www.itqb.unl.pt/events/nei2026", src: "/nei-logo.png", alt: "Noite Europeia dos Investigadores 2026 · ITQB NOVA, Oeiras", w: 1403, h: 480 },
 ]
 
 export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
@@ -35,7 +37,7 @@ export function SocialProofStrip({ dict }: { dict: { deployedAt: string } }) {
           {dict.deployedAt}
           <span className="w-8 h-px bg-[#F0605D]" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-y-12 items-center justify-items-center">
+        <div className="grid grid-cols-3 gap-x-4 md:gap-x-6 gap-y-10 md:gap-y-12 items-center justify-items-center">
           {logos.map((logo) => {
             const img = logo.chip ? (
               <span className="inline-flex items-center bg-white rounded-md px-2.5 py-1.5">

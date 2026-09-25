@@ -34,7 +34,7 @@
     "eyebrow": "01 / Demo",
     "heading": "See What",
     "headingHighlight": "Participants",
-    "headingSuffix": "Experienced Across 8 Events",
+    "headingSuffix": "Experienced Across 9 Events",
     "seeItLive": "See It Live \u2192",
     "seeReport": "See Report \u2192",
     "seeFmReport": "See Report \u2192",
@@ -48,7 +48,7 @@
       { "value": "14,000+", "label": "Treasure Finds" },
       { "value": "400+", "label": "Venue Checkpoints" },
       { "value": "1.7M+", "label": "Rewards Minted" },
-      { "value": "8", "label": "Events Deployed" }
+      { "value": "9", "label": "Events Deployed" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -85,6 +85,13 @@
       "location": "Taguspark, Oeiras \u00b7 Jun 25",
       "stat1": "777 treasures \u00b7 25 checkpoints",
       "stat2": "25,900 DATA \u00b7 1 day"
+    },
+    "neiCard": {
+      "title": "European Researchers' Night 2026",
+      "location": "Pal\u00e1cio do Marqu\u00eas de Pombal, Oeiras \u00b7 Sep 25",
+      "stat1": "240 phones \u00b7 3,746 stand visits",
+      "stat2": "659 giveaways \u00b7 49 stands",
+      "reportLabel": "See Report (PT) \u2192"
     }
   },
   "socialProof": {
@@ -284,6 +291,7 @@
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
+    "neiReport": "European Researchers' Night 2026 Report (PT)",
     "copyright": "Nova Blockchain Lab. All rights reserved.",
     "projectBy": "A project by"
   },

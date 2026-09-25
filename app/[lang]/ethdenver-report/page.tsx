@@ -20,7 +20,7 @@ export async function generateMetadata({
     ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: isPortuguese
       ? 'Relatório ETHDenver 2026 | Resultados do Treasure Hunt'
-      : 'ETHDenver 2026 Report | Treasure Hunt Results & Analytics',
+      : 'ETHDenver 2026 Report | Treasure Hunt Results',
     description: isPortuguese
       ? '207 jogadores, 992 tesouros encontrados, 462.255 BUFFI mintados. Analytics completo do Treasure Hunt no ETHDenver 2026.'
       : '207 players, 992 treasures found, 462,255 BUFFI minted. Full analytics from Treasure Hunt at ETHDenver 2026.',
@@ -36,7 +36,7 @@ export async function generateMetadata({
       type: 'article',
       title: isPortuguese
         ? 'Relatório ETHDenver 2026 | Resultados do Treasure Hunt'
-        : 'ETHDenver 2026 Report | Treasure Hunt Results & Analytics',
+        : 'ETHDenver 2026 Report | Treasure Hunt Results',
       description: isPortuguese
         ? '207 jogadores, 992 tesouros encontrados, 462.255 BUFFI mintados em 4 dias no ETHDenver 2026.'
         : '207 players, 992 treasures found, 462,255 BUFFI minted across 4 days at ETHDenver 2026.',
@@ -47,7 +47,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: isPortuguese
         ? 'Relatório ETHDenver 2026 | Resultados do Treasure Hunt'
-        : 'ETHDenver 2026 Report | Treasure Hunt Results & Analytics',
+        : 'ETHDenver 2026 Report | Treasure Hunt Results',
       description: isPortuguese
         ? '207 jogadores, 992 tesouros encontrados, 462.255 BUFFI mintados no ETHDenver 2026.'
         : '207 players, 992 treasures found, 462,255 BUFFI minted at ETHDenver 2026.',

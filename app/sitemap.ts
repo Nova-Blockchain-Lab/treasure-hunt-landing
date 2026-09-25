@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   const homeEntries = locales.map((locale) => ({
     url: at(locale),
-    lastModified: '2026-09-07',
+    lastModified: '2026-09-26',
     changeFrequency: 'weekly' as const,
     priority: 1,
     alternates: { languages: homeLanguages },

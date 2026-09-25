@@ -25,7 +25,7 @@ const website = {
   name: 'Treasure Hunt',
   url: BASE_URL,
   publisher: { '@id': `${BASE_URL}/#organization` },
-  inLanguage: ['en', 'pt-PT'],
+  inLanguage: locales.map((l) => localeTags[l]),
 }
 
 // Site-wide nodes only. Anything page-specific (WebPage, BreadcrumbList,

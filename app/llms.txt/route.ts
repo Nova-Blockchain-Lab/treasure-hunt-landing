@@ -41,10 +41,21 @@ const body = `# Treasure Hunt
   42 tags. Report: ${BASE}/springbootcamp-report
 - Data with Purpose Summit 2026 (Taguspark, Oeiras, Jun 25): 58 players, 777 tag
   finds, 25 tags. Report: ${BASE}/datasummit-report
+- Noite Europeia dos Investigadores 2026 (European Researchers' Night; Jardins do
+  Palácio do Marquês de Pombal, Oeiras, Sep 25, 16h-22h; organised by ITQB NOVA
+  with the Município de Oeiras; free, all ages, about 4,000 visitors, most of them
+  children): an NFC tag on each of 49 stands and points; players earned NEI Coin
+  and traded it for giveaways from the participating entities. Families often
+  shared one phone, so these counts are phones, not people: 240 phones played,
+  3,746 stand visits, a typical phone visited 13 stands in about 70 minutes, 62
+  phones visited half or more of the stands, 659 giveaways handed out from 11
+  sources, 37% of all visits in the busiest hour (18:50-19:50). Report (in
+  Portuguese): https://nei.treasurehunt.pt/report
 
-Totals across the six published reports: 14,885 treasure finds, 401 checkpoints,
-1,027 players, 1,794,280 reward tokens minted. Eight events deployed in total;
-the six above have public reports.
+Totals across the first six published reports: 14,885 treasure finds, 401
+checkpoints, 1,027 players, 1,794,280 reward tokens minted. The NEI figures above
+are counted per phone and are not included in those totals. Nine events deployed
+in total; the seven above have public reports.
 
 ## Technical notes
 - Runs entirely in the mobile browser. No app download, no wallet setup, no seed

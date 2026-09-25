@@ -20,7 +20,7 @@ export async function generateMetadata({
     ...(offLocale ? { robots: { index: false, follow: true } } : {}),
     title: isPortuguese
       ? 'Relatório Future Maker 2026 | Resultados do Treasure Hunt'
-      : 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+      : 'Future Maker 2026 Report | Treasure Hunt Results',
     description: isPortuguese
       ? '265 caçadores, 2.591 tesouros encontrados, 1.024.700 FM cunhados. Analytics completo do Treasure Hunt no Future Maker, NOVA IMS.'
       : '265 hunters, 2,591 treasures found, 1,024,700 FM minted. Full analytics from the Treasure Hunt at Future Maker, NOVA IMS.',
@@ -36,7 +36,7 @@ export async function generateMetadata({
       type: 'article',
       title: isPortuguese
         ? 'Relatório Future Maker 2026 | Resultados do Treasure Hunt'
-        : 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+        : 'Future Maker 2026 Report | Treasure Hunt Results',
       description: isPortuguese
         ? '265 caçadores, 2.591 tesouros encontrados, 1.024.700 FM cunhados no Future Maker, NOVA IMS.'
         : '265 hunters, 2,591 treasures found, 1,024,700 FM minted.',
@@ -47,7 +47,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: isPortuguese
         ? 'Relatório Future Maker 2026 | Resultados do Treasure Hunt'
-        : 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+        : 'Future Maker 2026 Report | Treasure Hunt Results',
       description: isPortuguese
         ? '265 caçadores, 2.591 tesouros encontrados, 1.024.700 FM cunhados no Future Maker.'
         : '265 hunters, 2,591 treasures found, 1,024,700 FM minted.',

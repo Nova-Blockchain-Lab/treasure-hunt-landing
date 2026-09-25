@@ -287,7 +287,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 39 URLs) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 39 URLs; home `lastModified` bumped to 2026-09-26 for the NEI card) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -454,6 +454,23 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   primary one at the top AND bottom of the funnel. Pointing it at `#demo` was
   suggested; left alone because a live hunt is genuine proof and that is an
   editorial call.
+
+## Noite Europeia dos Investigadores 2026 (added 26 Sep 2026)
+
+The seventh edition with a public report, and the first whose report is **not
+hosted here**: it lives at `https://nei.treasurehunt.pt/report` (Portuguese
+only, built in the `treasure-hunt-nei` repo). So there is no `/nei-report`
+route and no sitemap entry. The edition appears in four places: the `neiCard`
+in `demo-section.tsx` (first of the six secondary cards, 3+3 on desktop; it
+carries its own `reportLabel` so non-PT locales say "(PT)"), `footer.neiReport`
+in `site-footer.tsx`, the logo strip (`public/nei-logo.png`, the official
+lockup; the strip is now a 3-up grid for nine logos), and `llms.txt`.
+Its figures are **per phone, not per player** (families shared one phone), so
+they are deliberately kept OUT of the 14,885 / 401 / 1,027 totals. The
+"Events Deployed" stat and the demo heading went 8 -> 9; `cta.trustSignal`
+still says "eight events" because it quotes the six-report totals.
+If a landing-hosted NEI report is ever built, it needs a sitemap entry, a
+footer link change and a bilingual/EN-only decision like the others.
 
 ## Two gotchas that bit during the Sept 2026 work
 

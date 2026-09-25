@@ -17,7 +17,7 @@ export function GET() {
   const items = [
     // ETHDenver report
     {
-      title: 'ETHDenver 2026 Report | Treasure Hunt Results & Analytics',
+      title: 'ETHDenver 2026 Report | Treasure Hunt Results',
       description:
         '207 players, 992 treasures found, 462,255 BUFFI minted. Full analytics from Treasure Hunt at ETHDenver 2026.',
       link: `${BASE_URL}/ethdenver-report`,
@@ -25,7 +25,7 @@ export function GET() {
     },
     // Future Maker report
     {
-      title: 'Future Maker 2026 Report | Treasure Hunt Results & Analytics',
+      title: 'Future Maker 2026 Report | Treasure Hunt Results',
       description:
         '265 hunters, 2,591 treasures found, 1,024,700 FM minted. Full analytics from the Treasure Hunt at Future Maker, NOVA IMS.',
       link: `${BASE_URL}/futuremaker-report`,

@@ -34,7 +34,7 @@
     "eyebrow": "01 / Demo",
     "heading": "Veja o Que os",
     "headingHighlight": "Participantes",
-    "headingSuffix": "Experienciaram em 8 Eventos",
+    "headingSuffix": "Experienciaram em 9 Eventos",
     "seeItLive": "Ver ao Vivo →",
     "seeReport": "Ver Relatório →",
     "seeFmReport": "Ver Relatório →",
@@ -48,7 +48,7 @@
       { "value": "14.000+", "label": "Tesouros Encontrados" },
       { "value": "400+", "label": "Checkpoints" },
       { "value": "1,7M+", "label": "Recompensas" },
-      { "value": "8", "label": "Eventos" }
+      { "value": "9", "label": "Eventos" }
     ],
     "ethdenverCard": {
       "title": "ETHDenver 2026",
@@ -85,6 +85,13 @@
       "location": "Taguspark, Oeiras · 25 Jun",
       "stat1": "777 tesouros · 25 checkpoints",
       "stat2": "25.900 DATA · 1 dia"
+    },
+    "neiCard": {
+      "title": "Noite Europeia dos Investigadores 2026",
+      "location": "Palácio do Marquês de Pombal, Oeiras · 25 Set",
+      "stat1": "240 telemóveis · 3.746 visitas a stands",
+      "stat2": "659 brindes · 49 stands",
+      "reportLabel": "Ver Relatório →"
     }
   },
   "socialProof": {
@@ -284,6 +291,7 @@
     "cadavalReport": "Relatório Cadaval Festival 2026",
     "springBootcampReport": "Relatório Spring Bootcamp 2026",
     "dataSummitReport": "Relatório Data with Purpose Summit 2026",
+    "neiReport": "Relatório Noite Europeia dos Investigadores 2026",
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados.",
     "projectBy": "Um projeto do"
   },
