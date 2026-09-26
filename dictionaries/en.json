@@ -3,7 +3,6 @@
     "demo": "Demo",
     "features": "Features",
     "howItWorks": "How It Works",
-    "useCases": "Use Cases",
     "packages": "Packages",
     "media": "Media",
     "bookDemo": "Plan Your Event",
@@ -13,23 +12,12 @@
     "srTitle": "Treasure Hunt | Interactive Event Engagement Game for Conferences",
     "headline": "Turn Your Event Into a",
     "headlineHighlight": "Gamified Experience",
-    "tagline": "Attendees explore, scan checkpoints, earn real rewards, and drive foot traffic where you need it",
-    "taglineSuffix": ". Straight from the phone browser, no app download required.",
-    "trustBadge": "Deployed at ETHDenver, Future Maker & more \u00b7 14,000+ treasure finds \u00b7 400+ checkpoints \u00b7 1,000+ players",
+    "tagline": "Attendees find checkpoints around your venue, earn points and spend them on rewards",
+    "taglineSuffix": ". You choose where the checkpoints go, and it all runs in the phone browser with no app to install.",
+    "trustBadge": "Deployed at ETHDenver, Future Maker & more · 14,000+ treasure finds · 400+ checkpoints · 1,000+ players",
     "bookDemo": "Plan Your Event",
-    "seeItLive": "See Our Results \u2192"
+    "seeItLive": "See Our Results →"
   },
-  "marquee": [
-    "No App Download",
-    "NFC + QR Checkpoints",
-    "Real-Time Leaderboards",
-    "Built-In Merch Store",
-    "Drive Foot Traffic",
-    "Player-Created Challenges",
-    "Social Rewards",
-    "Sponsor Checkpoint Placement",
-    "Live Analytics Dashboard"
-  ],
   "demo": {
     "eyebrow": "01 / Demo",
     "heading": "See What",
@@ -90,8 +78,7 @@
       "title": "European Researchers' Night 2026",
       "location": "Pal\u00e1cio do Marqu\u00eas de Pombal, Oeiras \u00b7 Sep 25",
       "stat1": "240 phones \u00b7 3,746 stand visits",
-      "stat2": "659 giveaways \u00b7 49 stands",
-      "reportLabel": "See Report (PT) \u2192"
+      "stat2": "659 giveaways \u00b7 49 stands"
     }
   },
   "socialProof": {
@@ -106,10 +93,6 @@
     "interviewTeaser": "Highlights",
     "fullCaption": "Joana Pereira & Dinis Araújo · 2:26",
     "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
-    "quote": "Treasure Hunt is a gamification of the conference itself. We hide treasures around the venue, and players find the spots and tap their phone to claim a reward. More than half the booths joined in, and it drives real interaction between attendees and the exhibition.",
-    "quoteName": "Dinis Araújo",
-    "quoteRole": "CTO, NOVA Blockchain Lab",
-    "quoteContext": "FIL Pavilhão 3, Lisbon",
     "galleryHeading": "From the events",
     "photo1Alt": "Attendee holding the Official Treasure Hunt flyer with a tap-to-claim QR code",
     "photo2Alt": "Treasure Hunt staffer demoing the game to a crowd at the NOVA Cidade booth",
@@ -125,82 +108,44 @@
   },
   "features": {
     "eyebrow": "02 / Features",
-    "heading": "Built for Organizers.",
-    "headingHighlight": "Loved by Attendees.",
-    "description": "Treasure Hunt turns any event into a live adventure. Attendees earn points by exploring your space, completing challenges, and discovering hidden checkpoints. Points unlock real rewards at the built-in store.",
+    "heading": "What You Get",
+    "headingHighlight": "as the Organizer",
+    "description": "You decide where people go and what they can win, and you can see the results while the event is still on.",
     "items": [
-      {
-        "title": "Guide Foot Traffic",
-        "description": "You decide where checkpoints go. Every checkpoint is a reason to walk across the venue, driving traffic to sponsors, booths, and underexplored areas."
-      },
-      {
-        "title": "Reward Real Participation",
-        "description": "Attendees earn rewards for engaging, not just showing up. Points they can spend in the built-in merch store on exclusive items and sponsor rewards."
-      },
-      {
-        "title": "Zero Friction Setup",
-        "description": "Place NFC tags or QR codes anywhere. Attendees sign in once and are playing in seconds. No app. No downloads. No friction."
-      },
-      {
-        "title": "Track Everything in Real Time",
-        "description": "See which checkpoints are visited, which areas are underexplored, and who your most engaged attendees are. Live analytics for organizers."
-      }
+      { "title": "Guide Foot Traffic", "description": "You choose where the checkpoints go. Put them at sponsor booths or in the parts of the venue people usually skip, and players will walk there." },
+      { "title": "Reward Participation", "description": "Points come from playing, not from turning up. Players spend them in the event store on merch and sponsor giveaways." },
+      { "title": "Simple Setup", "description": "We place the NFC tags or QR codes wherever you want them. Players sign in once and are playing a few seconds later, without installing an app." },
+      { "title": "Live Data", "description": "A live dashboard shows which checkpoints get visits, which areas stay quiet and who your most active players are." }
     ]
   },
   "howItWorks": {
     "eyebrow": "04 / How It Works",
-    "heading": "Five Steps.",
-    "headingHighlight": "Zero Friction.",
-    "callout": "You place the checkpoints. You set the rewards. We handle everything else.",
-    "infraEyebrow": "What Powers It All",
-    "infraHeading": "Why It Feels",
-    "infraHighlight": "Like Magic",
-    "infraDescription": "Behind every scan, every reward, and every leaderboard update is real infrastructure built for speed, transparency, and zero friction. Your attendees never see the complexity. They just play.",
+    "heading": "Three Steps:",
+    "headingHighlight": "Tap, Find, Redeem",
     "steps": [
-      { "title": "Open and Play Instantly", "description": "Attendees visit a URL on their phone and sign in with one tap. No app download, no account setup. They\u2019re playing in a few seconds." },
-      { "title": "Explore the Venue", "description": "Checkpoints are placed where you want traffic. Attendees follow the map, discover hidden spots, and uncover rewards across your space." },
-      { "title": "Scan to Earn", "description": "One tap on an NFC tag or scan of a QR code. Instant reward, automatically tracked. Every interaction becomes a data point for you." },
-      { "title": "Compete and Collaborate", "description": "Live leaderboards fuel friendly competition. Social challenges and team missions keep energy high throughout the event." },
-      { "title": "Spend Real Rewards", "description": "Points unlock exclusive rewards and prizes. Attendees leave with something real to remember your event." }
-    ],
-    "infraItems": [
-      { "title": "Runs on Nova Cidade L3", "description": "A dedicated Layer 3 blockchain network built for speed. Designed to support thousands of simultaneous players with no delays or failures, even at peak activity." },
-      { "title": "Zero Cost to Participants", "description": "A built-in paymaster covers all transaction fees. Attendees collect rewards, spend at the merch store, and climb leaderboards without ever paying a cent." },
-      { "title": "One-Tap Sign-In", "description": "No seed phrases, no wallet setup, no tech knowledge needed. Attendees sign in like any other app. We handle the smart account deployment and key management behind the scenes." },
-      { "title": "Fully Transparent & Auditable", "description": "Every reward minted, every checkpoint scanned, every merch purchase, all recorded and verifiable. Give sponsors and stakeholders engagement data they can trust." }
+      { "title": "Tap a Treasure", "description": "Each treasure is an NFC tag hidden somewhere in the venue. Players tap it with their phone and get points straight away." },
+      { "title": "Find the Rest on the Map", "description": "The map shows the treasures a player has not found yet, so they know where to go next." },
+      { "title": "Redeem at the Store", "description": "Players spend their points at the event store on rewards, such as merch and sponsor giveaways." }
     ]
   },
   "testimonials": {
-    "eyebrow": "05 / Social Proof",
-    "heading": "Don\u2019t Take Our Word",
-    "headingHighlight": "for It",
+    "eyebrow": "05 / Testimonials",
+    "heading": "What Organizers",
+    "headingHighlight": "and Exhibitors Said",
     "items": [
-      {
-        "quote": "Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done!",
-        "author": "Nick",
-        "role": "Head of the Makerspace, ETHDenver"
-      },
-      {
-        "quote": "My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They\u2019d scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.",
-        "author": "Custom Sneaker Vendor",
-        "role": "ETHDenver 2026"
-      },
-      {
-        "quote": "No app download, no complicated setup. Players were scanning checkpoints within 30 seconds of signing in. The merch store was a huge hit.",
-        "author": "NOVA Blockchain Lab",
-        "role": "Platform Developer"
-      }
+      { "quote": "Seriously!! The treasure hunt was a HUGE SUCCESS! You guys played a big role in creating the ETH Denver experience! Well done!", "author": "Nick", "role": "Head of the Makerspace, ETHDenver" },
+      { "quote": "My booth was tucked in a back corner, I barely had anyone stopping by. Then Treasure Hunt hid a checkpoint at my spot and suddenly people kept showing up. They’d scan the tag, see my custom kicks, and start buying. That one checkpoint completely turned my weekend around.", "author": "Custom Sneaker Vendor", "role": "ETHDenver 2026" }
     ]
   },
   "packages": {
     "eyebrow": "06 / Packages",
-    "heading": "One Platform,",
-    "headingHighlight": "Built for Any Event Size",
-    "description": "Start free for small events. Scale to thousands with full engagement tools, sponsor analytics, and on-site support.",
+    "heading": "Three Packages,",
+    "headingHighlight": "by Event Size",
+    "description": "Pick a package by the size of your event. Every event is quoted on its own, so tell us about yours.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Treasure Hunt branding (no customisation).", "bestFor": "Up to 100 attendees", "cta": "Plan Your Event", "badge": "", "priceHint": "" },
-      { "name": "Pro", "subtitle": "Everything to impress the public and sponsors.", "bestFor": "100 to 1,000 attendees", "cta": "Plan Your Event", "badge": "Most Popular", "priceHint": "" },
-      { "name": "Enterprise", "subtitle": "Custom features. Analytics. Multi-event scale.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "", "priceHint": "" }
+      { "name": "Starter", "subtitle": "Treasure Hunt branding, no customisation.", "bestFor": "Up to 100 attendees", "cta": "Plan Your Event", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Your branding, NFC tags, sponsor placement and on-site support.", "bestFor": "100 to 1,000 attendees", "cta": "Plan Your Event", "badge": "", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Everything in Pro, plus features built for your event and a post-event report.", "bestFor": "1,000+ attendees", "cta": "Talk to Our Team", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
@@ -239,12 +184,12 @@
     "heading": "Ready to Run One at Your",
     "headingHighlight": "Next Event?",
     "description": "Treasure Hunt deploys in days. Tell us your dates, venue and rough headcount and we'll tell you what is realistic.",
-    "trustSignal": "14,885 finds across 401 checkpoints and 1,027 players, at eight events so far.",
+    "trustSignal": "Nine events so far, from four days at ETHDenver to a single evening at European Researchers' Night in Oeiras.",
     "bookDemo": "Plan Your Event",
-    "seeItLive": "See Our Results \u2192"
+    "seeItLive": "See Our Results →"
   },
   "stickyCta": {
-    "text": "Turn your next event into a game attendees talk about.",
+    "text": "Planning an event? Book a 30-minute call with the team.",
     "bookDemo": "Plan Your Event"
   },
   "booking": {
@@ -279,7 +224,7 @@
     "unavailableLink": "Book on our Cal.com page instead"
   },
   "footer": {
-    "description": "Interactive event engagement platform that drives foot traffic, rewards participation, and gives organizers real-time analytics.",
+    "description": "A phone game for events. Attendees find checkpoints around the venue, earn points and spend them at the event store.",
     "navigation": "Navigation",
     "contact": "Contact",
     "contactLabel": "Contact",
@@ -291,7 +236,7 @@
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
-    "neiReport": "European Researchers' Night 2026 Report (PT)",
+    "neiReport": "European Researchers' Night 2026 Report",
     "copyright": "Nova Blockchain Lab. All rights reserved.",
     "projectBy": "A project by"
   },
@@ -300,12 +245,10 @@
     "heading": "Common",
     "headingHighlight": "Questions",
     "items": [
-      { "question": "How long does it take to set up?", "answer": "As fast as 48 hours. We handle the tech, you tell us where the checkpoints go and what rewards to offer." },
-      { "question": "Do attendees need to download an app?", "answer": "No. It runs entirely in the phone browser. One tap to sign in, playing in a few seconds." },
-      { "question": "Can we customize the branding?", "answer": "Yes. Pro and Enterprise packages include custom checkpoint design and reward names. The Enterprise package includes white-label branding." },
-      { "question": "What does the checkpoint setup look like?", "answer": "The design and setup of both QR codes and NFC tags is included in the respective packages. We handle everything so your team doesn't have to." },
-      { "question": "What data do organizers get?", "answer": "A real-time dashboard with checkpoint visits, engagement heatmaps, and leaderboard standings is available on all plans during the game activation. Enterprise adds a full post-event analytics report to share with sponsors and a multi-event dashboard to track and compare performance across the most significant events, enabling the identification of strengths, weaknesses, and what truly drove engagement." },
-      { "question": "Is there a minimum event size?", "answer": "Starter covers events up to 100 attendees. Pro scales up to 1,000, and Enterprise handles everything above that." }
+      { "question": "How long does setup take?", "answer": "It can be ready in 48 hours. You tell us where the checkpoints go and what the rewards are, and we design and install the QR codes and NFC tags." },
+      { "question": "Do attendees need to download an app?", "answer": "No. The game runs in the phone browser. Players sign in with one tap and can start straight away." },
+      { "question": "Can we use our own branding?", "answer": "Yes. Pro and Enterprise include custom checkpoint designs and reward names of your choice. Enterprise can also be fully white-label." },
+      { "question": "What data do organizers get?", "answer": "Every package includes a live dashboard during the event, with checkpoint visits, engagement heatmaps and the leaderboard. Enterprise adds a post-event analytics report you can share with sponsors, and a dashboard that compares results across several events." }
     ]
   },
   "contactForm": {

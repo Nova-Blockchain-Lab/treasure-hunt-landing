@@ -3,7 +3,6 @@
     "demo": "Demo",
     "features": "Funktionen",
     "howItWorks": "So Funktioniert Es",
-    "useCases": "Anwendungsfälle",
     "packages": "Pakete",
     "media": "Medien",
     "bookDemo": "Event Planen",
@@ -13,23 +12,12 @@
     "srTitle": "Treasure Hunt | Interaktives Event-Spiel für Konferenzen und Messen",
     "headline": "Machen Sie Ihr Event zu einem",
     "headlineHighlight": "Spielerischen Erlebnis",
-    "tagline": "Teilnehmende erkunden, scannen Checkpoints, verdienen echte Belohnungen und erzeugen Besucherströme genau dort, wo Sie sie brauchen",
-    "taglineSuffix": ". Direkt im Handy-Browser, ohne App-Download.",
+    "tagline": "Teilnehmende finden Checkpoints auf dem Gelände, sammeln Punkte und lösen sie gegen Prämien ein",
+    "taglineSuffix": ". Sie bestimmen, wo die Checkpoints liegen, und alles läuft im Handy-Browser, ohne dass jemand eine App installieren muss.",
     "trustBadge": "Eingesetzt bei ETHDenver, Future Maker und mehr · über 14.000 gefundene Schätze · über 400 Checkpoints · über 1.000 Spielende",
     "bookDemo": "Event Planen",
     "seeItLive": "Unsere Ergebnisse Ansehen →"
   },
-  "marquee": [
-    "Kein App-Download",
-    "NFC- und QR-Checkpoints",
-    "Ranglisten in Echtzeit",
-    "Integrierter Merch-Shop",
-    "Besucherströme Lenken",
-    "Von Spielenden Erstellte Aufgaben",
-    "Social-Belohnungen",
-    "Checkpoint-Platzierung für Sponsoren",
-    "Live-Analytics-Dashboard"
-  ],
   "demo": {
     "eyebrow": "01 / Demo",
     "heading": "So haben es",
@@ -90,8 +78,7 @@
       "title": "Noite Europeia dos Investigadores 2026",
       "location": "Palácio do Marquês de Pombal, Oeiras · 25. Sept.",
       "stat1": "240 Handys · 3.746 Standbesuche",
-      "stat2": "659 Giveaways · 49 Stände",
-      "reportLabel": "Report Ansehen (PT) →"
+      "stat2": "659 Giveaways · 49 Stände"
     }
   },
   "socialProof": {
@@ -106,10 +93,6 @@
     "interviewTeaser": "Highlights",
     "fullCaption": "Joana Pereira und Dinis Araújo · 2:26",
     "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
-    "quote": "Treasure Hunt ist eine Gamifizierung der Konferenz selbst. Wir verstecken Schätze auf dem gesamten Gelände, und die Spielenden finden die Stellen und halten ihr Handy dran, um eine Belohnung einzulösen. Mehr als die Hälfte der Stände hat mitgemacht, und es entsteht echte Interaktion zwischen Teilnehmenden und Ausstellung.",
-    "quoteName": "Dinis Araújo",
-    "quoteRole": "CTO, NOVA Blockchain Lab",
-    "quoteContext": "FIL Halle 3, Lissabon",
     "galleryHeading": "Von den Events",
     "photo1Alt": "Teilnehmerin mit dem offiziellen Treasure-Hunt-Flyer und einem QR-Code zum Einlösen",
     "photo2Alt": "Treasure-Hunt-Mitarbeiter zeigt das Spiel dem Publikum am NOVA-Cidade-Stand",
@@ -125,82 +108,44 @@
   },
   "features": {
     "eyebrow": "02 / Funktionen",
-    "heading": "Für Veranstalter Gebaut.",
-    "headingHighlight": "Von Teilnehmenden Geliebt.",
-    "description": "Treasure Hunt macht aus jedem Event ein Abenteuer in Echtzeit. Teilnehmende sammeln Punkte, indem sie Ihr Gelände erkunden, Aufgaben lösen und versteckte Checkpoints entdecken. Punkte schalten echte Belohnungen im integrierten Shop frei.",
+    "heading": "Was Veranstalter",
+    "headingHighlight": "Davon Haben",
+    "description": "Sie legen fest, wohin die Leute gehen und was sie gewinnen können, und sehen die Ergebnisse, während das Event noch läuft.",
     "items": [
-      {
-        "title": "Besucherströme Lenken",
-        "description": "Sie entscheiden, wo die Checkpoints liegen. Jeder Checkpoint ist ein Grund, das Gelände zu durchqueren, und bringt Besucher zu Sponsoren, Ständen und wenig besuchten Bereichen."
-      },
-      {
-        "title": "Echte Teilnahme Belohnen",
-        "description": "Teilnehmende erhalten Belohnungen für ihr Engagement, nicht bloß für ihre Anwesenheit. Punkte, die sie im integrierten Merch-Shop für exklusive Artikel und Sponsoren-Belohnungen einsetzen können."
-      },
-      {
-        "title": "Aufbau Ohne Hürden",
-        "description": "Platzieren Sie NFC-Tags oder QR-Codes, wo Sie möchten. Teilnehmende melden sich einmal an und spielen innerhalb von Sekunden. Keine App. Kein Download. Keine Hürden."
-      },
-      {
-        "title": "Alles in Echtzeit Messen",
-        "description": "Sehen Sie, welche Checkpoints besucht werden, welche Bereiche wenig erkundet bleiben und wer Ihre aktivsten Teilnehmenden sind. Live-Analytics für Veranstalter."
-      }
+      { "title": "Besucher Gezielt Lenken", "description": "Sie bestimmen, wo die Checkpoints liegen. Platzieren Sie sie an Sponsorenständen oder in Bereichen, in die sonst kaum jemand kommt, und die Spielenden gehen dorthin." },
+      { "title": "Mitspielen Belohnen", "description": "Punkte gibt es fürs Mitspielen, nicht fürs bloße Dasein. Die Spielenden lösen sie im Event-Shop gegen Merch und Geschenke von Sponsoren ein." },
+      { "title": "Einfacher Aufbau", "description": "Wir bringen die NFC-Tags oder QR-Codes dort an, wo Sie sie haben wollen. Die Spielenden melden sich einmal an und spielen nach wenigen Sekunden, ohne eine App zu installieren." },
+      { "title": "Daten in Echtzeit", "description": "Ein Live-Dashboard zeigt, welche Checkpoints besucht werden, welche Bereiche leer bleiben und wer am aktivsten spielt." }
     ]
   },
   "howItWorks": {
     "eyebrow": "04 / So Funktioniert Es",
-    "heading": "Fünf Schritte.",
-    "headingHighlight": "Keine Hürden.",
-    "callout": "Sie platzieren die Checkpoints. Sie legen die Belohnungen fest. Um alles andere kümmern wir uns.",
-    "infraEyebrow": "Was Dahintersteckt",
-    "infraHeading": "Warum Es Sich",
-    "infraHighlight": "Wie Magie Anfühlt",
-    "infraDescription": "Hinter jedem Scan, jeder Belohnung und jeder Aktualisierung der Rangliste steht eine echte Infrastruktur, gebaut für Geschwindigkeit, Transparenz und einen reibungslosen Ablauf. Ihre Teilnehmenden sehen die Komplexität nie. Sie spielen einfach.",
+    "heading": "Drei Schritte:",
+    "headingHighlight": "Tippen, Suchen, Einlösen",
     "steps": [
-      { "title": "Öffnen und Sofort Spielen", "description": "Teilnehmende rufen eine URL auf dem Handy auf und melden sich mit einem Tipp an. Kein App-Download, keine Kontoeinrichtung. Sie spielen innerhalb weniger Sekunden." },
-      { "title": "Das Gelände Erkunden", "description": "Die Checkpoints liegen dort, wo Sie Besucher haben wollen. Teilnehmende folgen der Karte, entdecken versteckte Ecken und finden Belohnungen auf Ihrem gesamten Gelände." },
-      { "title": "Scannen und Verdienen", "description": "Ein Tipp auf einen NFC-Tag oder das Scannen eines QR-Codes. Sofortige Belohnung, automatisch erfasst. Jede Interaktion wird für Sie zu einem Datenpunkt." },
-      { "title": "Wetteifern und Zusammenarbeiten", "description": "Live-Ranglisten befeuern den freundschaftlichen Wettbewerb. Social-Aufgaben und Team-Missionen halten die Energie über das gesamte Event hoch." },
-      { "title": "Echte Belohnungen Einlösen", "description": "Punkte schalten exklusive Belohnungen und Preise frei. Teilnehmende gehen mit etwas Echtem nach Hause, das an Ihr Event erinnert." }
-    ],
-    "infraItems": [
-      { "title": "Läuft auf Nova Cidade L3", "description": "Ein eigenes Layer-3-Blockchain-Netzwerk, gebaut für Geschwindigkeit. Ausgelegt auf tausende gleichzeitige Spielende ohne Verzögerungen oder Ausfälle, auch bei Spitzenlast." },
-      { "title": "Keine Kosten für Teilnehmende", "description": "Ein integrierter Paymaster übernimmt alle Transaktionsgebühren. Teilnehmende sammeln Belohnungen, kaufen im Merch-Shop und klettern in der Rangliste, ohne einen Cent zu zahlen." },
-      { "title": "Anmeldung mit Einem Tipp", "description": "Keine Seed-Phrasen, keine Wallet-Einrichtung, kein technisches Vorwissen nötig. Teilnehmende melden sich an wie in jeder anderen App. Um das Deployment des Smart Accounts und die Schlüsselverwaltung kümmern wir uns im Hintergrund." },
-      { "title": "Vollständig Transparent und Prüfbar", "description": "Jede ausgegebene Belohnung, jeder gescannte Checkpoint, jeder Kauf im Merch-Shop: alles erfasst und überprüfbar. Geben Sie Sponsoren und Stakeholdern Engagement-Daten, auf die sie sich verlassen können." }
+      { "title": "Einen Schatz Antippen", "description": "Jeder Schatz ist ein NFC-Tag, irgendwo auf dem Gelände versteckt. Wer das Handy daran hält, bekommt sofort Punkte." },
+      { "title": "Auf der Karte Suchen", "description": "Die Karte zeigt, welche Schätze noch fehlen, damit man weiß, wohin es als Nächstes geht." },
+      { "title": "Im Shop Einlösen", "description": "Die Punkte werden im Event-Shop gegen Prämien eingelöst, etwa Merch und Geschenke von Sponsoren." }
     ]
   },
   "testimonials": {
     "eyebrow": "05 / Referenzen",
-    "heading": "Verlassen Sie Sich Nicht",
-    "headingHighlight": "nur auf Uns",
+    "heading": "Was Veranstalter und",
+    "headingHighlight": "Aussteller Sagen",
     "items": [
-      {
-        "quote": "Wirklich!! Die Schnitzeljagd war ein RIESIGER ERFOLG! Ihr hattet einen großen Anteil daran, das ETH-Denver-Erlebnis zu schaffen! Gut gemacht!",
-        "author": "Nick",
-        "role": "Leitung des Makerspace, ETHDenver"
-      },
-      {
-        "quote": "Mein Stand lag in einer hinteren Ecke, es kam kaum jemand vorbei. Dann hat Treasure Hunt einen Checkpoint an meinem Platz versteckt und plötzlich kamen ständig Leute. Sie scannten den Tag, sahen meine individuellen Sneaker und fingen an zu kaufen. Dieser eine Checkpoint hat mein Wochenende komplett gedreht.",
-        "author": "Händler für individuelle Sneaker",
-        "role": "ETHDenver 2026"
-      },
-      {
-        "quote": "Kein App-Download, keine komplizierte Einrichtung. Die Spielenden haben 30 Sekunden nach der Anmeldung Checkpoints gescannt. Der Merch-Shop war ein voller Erfolg.",
-        "author": "NOVA Blockchain Lab",
-        "role": "Entwickler der Plattform"
-      }
+      { "quote": "Wirklich!! Die Schnitzeljagd war ein RIESIGER ERFOLG! Ihr hattet einen großen Anteil daran, das ETH-Denver-Erlebnis zu schaffen! Gut gemacht!", "author": "Nick", "role": "Leitung des Makerspace, ETHDenver" },
+      { "quote": "Mein Stand lag in einer hinteren Ecke, es kam kaum jemand vorbei. Dann hat Treasure Hunt einen Checkpoint an meinem Platz versteckt und plötzlich kamen ständig Leute. Sie scannten den Tag, sahen meine individuellen Sneaker und fingen an zu kaufen. Dieser eine Checkpoint hat mein Wochenende komplett gedreht.", "author": "Händler für individuelle Sneaker", "role": "ETHDenver 2026" }
     ]
   },
   "packages": {
     "eyebrow": "06 / Pakete",
-    "heading": "Eine Plattform,",
-    "headingHighlight": "für Events Jeder Größe",
-    "description": "Starten Sie kostenlos mit kleinen Events. Skalieren Sie auf tausende Teilnehmende mit vollem Funktionsumfang, Sponsoren-Analytics und Unterstützung vor Ort.",
+    "heading": "Drei Pakete,",
+    "headingHighlight": "Nach Eventgröße",
+    "description": "Wählen Sie das Paket nach der Größe Ihres Events. Jedes Angebot erstellen wir für ein bestimmtes Event: Erzählen Sie uns von Ihrem.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Treasure-Hunt-Branding (keine Anpassung).", "bestFor": "Bis zu 100 Teilnehmende", "cta": "Event Planen", "badge": "", "priceHint": "" },
-      { "name": "Pro", "subtitle": "Alles, um Publikum und Sponsoren zu überzeugen.", "bestFor": "100 bis 1.000 Teilnehmende", "cta": "Event Planen", "badge": "Am Beliebtesten", "priceHint": "" },
-      { "name": "Enterprise", "subtitle": "Individuelle Funktionen. Analytics. Skalierung über mehrere Events.", "bestFor": "Über 1.000 Teilnehmende", "cta": "Team Kontaktieren", "badge": "", "priceHint": "" }
+      { "name": "Starter", "subtitle": "Treasure-Hunt-Branding, keine Anpassung.", "bestFor": "Bis zu 100 Teilnehmende", "cta": "Event Planen", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Ihr Branding, NFC-Tags, Sponsorenplatzierung und Betreuung vor Ort.", "bestFor": "100 bis 1.000 Teilnehmende", "cta": "Event Planen", "badge": "", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Alles aus Pro, dazu Funktionen, die wir für Ihr Event entwickeln, und ein Report danach.", "bestFor": "Über 1.000 Teilnehmende", "cta": "Team Kontaktieren", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
@@ -239,12 +184,12 @@
     "heading": "Lust auf eine Jagd bei Ihrem",
     "headingHighlight": "Nächsten Event?",
     "description": "Treasure Hunt ist in wenigen Tagen einsatzbereit. Nennen Sie uns Datum, Veranstaltungsort und eine grobe Teilnehmerzahl, und wir sagen Ihnen, was realistisch ist.",
-    "trustSignal": "14.885 Funde an 401 Checkpoints und 1.027 Spielende, bei bisher acht Events.",
+    "trustSignal": "Bisher neun Events, von vier Tagen ETHDenver bis zu einem einzigen Abend bei der Noite Europeia dos Investigadores in Oeiras.",
     "bookDemo": "Event Planen",
     "seeItLive": "Unsere Ergebnisse Ansehen →"
   },
   "stickyCta": {
-    "text": "Machen Sie Ihr nächstes Event zu einem Spiel, über das Teilnehmende reden.",
+    "text": "Sie planen ein Event? Buchen Sie ein 30-minütiges Gespräch.",
     "bookDemo": "Event Planen"
   },
   "booking": {
@@ -279,7 +224,7 @@
     "unavailableLink": "Auf unserer Cal.com-Seite buchen"
   },
   "footer": {
-    "description": "Interaktive Event-Plattform, die Besucherströme lenkt, Teilnahme belohnt und Veranstaltern Analytics in Echtzeit liefert.",
+    "description": "Ein Spiel für Events, gespielt auf dem Handy. Teilnehmende finden Checkpoints auf dem Gelände, sammeln Punkte und lösen sie im Event-Shop ein.",
     "navigation": "Navigation",
     "contact": "Kontakt",
     "contactLabel": "Kontakt",
@@ -291,7 +236,7 @@
     "cadavalReport": "Cadaval Festival 2026 Report",
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
-    "neiReport": "Noite Europeia dos Investigadores 2026 Report (PT)",
+    "neiReport": "Noite Europeia dos Investigadores 2026 Report",
     "copyright": "Nova Blockchain Lab. Alle Rechte vorbehalten.",
     "projectBy": "Ein Projekt von"
   },
@@ -300,12 +245,10 @@
     "heading": "Häufige",
     "headingHighlight": "Fragen",
     "items": [
-      { "question": "Wie lange dauert die Einrichtung?", "answer": "In bis zu 48 Stunden. Wir kümmern uns um die Technik, Sie sagen uns, wo die Checkpoints hinkommen und welche Belohnungen es geben soll." },
-      { "question": "Müssen Teilnehmende eine App herunterladen?", "answer": "Nein. Es läuft vollständig im Handy-Browser. Ein Tipp zur Anmeldung, und nach wenigen Sekunden geht es los." },
-      { "question": "Können wir das Branding anpassen?", "answer": "Ja. Die Pakete Pro und Enterprise umfassen individuelles Checkpoint-Design und eigene Belohnungsnamen. Das Enterprise-Paket beinhaltet White-Label-Branding." },
-      { "question": "Wie sieht die Einrichtung der Checkpoints aus?", "answer": "Design und Einrichtung der QR-Codes und NFC-Tags sind in den jeweiligen Paketen enthalten. Wir übernehmen alles, damit Ihr Team es nicht tun muss." },
-      { "question": "Welche Daten erhalten Veranstalter?", "answer": "In allen Paketen ist während der Spielaktivierung ein Echtzeit-Dashboard mit Checkpoint-Besuchen, Engagement-Heatmaps und Ranglistenständen enthalten. Enterprise ergänzt einen vollständigen Analytics-Report nach dem Event zum Teilen mit Sponsoren sowie ein Dashboard über mehrere Events, um die Leistung der wichtigsten Events zu verfolgen und zu vergleichen. So lassen sich Stärken, Schwächen und die tatsächlichen Treiber des Engagements erkennen." },
-      { "question": "Gibt es eine Mindestgröße für das Event?", "answer": "Starter deckt Events mit bis zu 100 Teilnehmenden ab. Pro skaliert bis 1.000, und Enterprise übernimmt alles darüber." }
+      { "question": "Wie lange dauert die Einrichtung?", "answer": "Es kann in 48 Stunden stehen. Sie sagen uns, wo die Checkpoints hinkommen und welche Prämien es gibt, und wir gestalten und installieren die QR-Codes und NFC-Tags." },
+      { "question": "Müssen Teilnehmende eine App herunterladen?", "answer": "Nein. Das Spiel läuft im Handy-Browser. Die Anmeldung braucht einen Tipp, danach geht es sofort los." },
+      { "question": "Können wir unser eigenes Branding nutzen?", "answer": "Ja. Pro und Enterprise enthalten Checkpoints im eigenen Design und Prämien mit selbst gewählten Namen. Enterprise gibt es auch komplett als White-Label." },
+      { "question": "Welche Daten erhalten Veranstalter?", "answer": "Alle Pakete enthalten während des Events ein Live-Dashboard mit Checkpoint-Besuchen, Heatmaps und der Rangliste. Enterprise ergänzt einen Analytics-Report nach dem Event, den Sie an Sponsoren weitergeben können, und ein Dashboard, das mehrere Events vergleicht." }
     ]
   },
   "contactForm": {

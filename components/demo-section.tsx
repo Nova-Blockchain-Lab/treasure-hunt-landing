@@ -31,7 +31,7 @@ interface DemoDict {
   cadavalCard: EventCardDict
   springBootcampCard: EventCardDict
   dataSummitCard: EventCardDict
-  neiCard: EventCardDict & { reportLabel: string }
+  neiCard: EventCardDict
 }
 
 function parseStatValue(value: string) {
@@ -83,10 +83,9 @@ export function DemoSection({
   const BILINGUAL = new Set(["ethdenver-report", "futuremaker-report"])
   const reportHref = (slug: string) => `${BILINGUAL.has(slug) ? ptPrefix : ""}/${slug}`
 
-  // NEI's report lives on the edition's own site, in Portuguese, so the card
-  // links out and says so in its label.
-  const secondaryEvents: { card: EventCardDict; href: string; label?: string }[] = [
-    { card: dict.neiCard, href: "https://nei.treasurehunt.pt/report", label: dict.neiCard.reportLabel },
+  // NEI's report lives on the edition's own site (PT and EN), so the card links out.
+  const secondaryEvents: { card: EventCardDict; href: string }[] = [
+    { card: dict.neiCard, href: "https://nei.treasurehunt.pt/report" },
     { card: dict.smartCitiesCard, href: reportHref("smartcities-report") },
     { card: dict.futureMakerCard, href: reportHref("futuremaker-report") },
     { card: dict.cadavalCard, href: reportHref("cadaval-report") },
@@ -234,7 +233,7 @@ export function DemoSection({
 
           {/* The other 6 events: 3+3 on desktop, 2+2+2 on tablet (no lone card orphaned in a row) */}
           <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {secondaryEvents.map(({ card, href, label }) => (
+            {secondaryEvents.map(({ card, href }) => (
               <div
                 key={card.title}
                 className="flex flex-col rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-6 transition-all duration-300 hover:border-[rgba(255,154,118,0.3)] hover:bg-[#1A2233]"
@@ -247,7 +246,7 @@ export function DemoSection({
                   href={href}
                   className="mt-auto w-full inline-flex items-center justify-center gap-2 text-[#FF9A76] font-display text-sm tracking-wider uppercase px-5 py-2.5 border border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9A76]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0E14]"
                 >
-                  {label ?? dict.seeReport}
+                  {dict.seeReport}
                 </Link>
               </div>
             ))}

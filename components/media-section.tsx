@@ -15,10 +15,6 @@ interface MediaDict {
   interviewTeaser: string
   fullCaption: string
   teaserCaption: string
-  quote: string
-  quoteName: string
-  quoteRole: string
-  quoteContext: string
   galleryHeading: string
   photo1Alt: string
   photo2Alt: string
@@ -171,25 +167,10 @@ export function MediaSection({ dict }: { dict: MediaDict }) {
 
         {/* Two interviews: full cut + short highlights, side by side */}
         <RevealOnScroll delay={150}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-5 md:mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-12 md:mb-16">
             <InterviewVideo src="/media/interview.mp4" poster="/media/interview-poster.jpg" badge={dict.watchInterview} caption={dict.fullCaption} />
             <InterviewVideo src="/media/interview-teaser.mp4" poster="/media/interview-teaser-poster.jpg" badge={dict.interviewTeaser} caption={dict.teaserCaption} />
           </div>
-        </RevealOnScroll>
-
-        {/* Pull quote */}
-        <RevealOnScroll delay={200}>
-          <figure className="max-w-[75ch] mx-auto text-center rounded-xl border border-[rgba(240,246,252,0.06)] bg-[#131921] p-7 md:p-10 mb-12 md:mb-16">
-            <span className="text-[#F0605D] font-display text-4xl leading-none block mb-2" aria-hidden="true">&ldquo;</span>
-            <blockquote className="text-[1.15rem] md:text-[1.3rem] leading-snug text-[#E6EDF3]">
-              {dict.quote}
-            </blockquote>
-            <figcaption className="mt-6 pt-5 border-t border-[rgba(240,246,252,0.06)]">
-              <div className="text-white font-semibold">{dict.quoteName}</div>
-              <div className="text-sm text-[#FF9A76]">{dict.quoteRole}</div>
-              <div className="text-xs text-[#7D8590] mt-2">{dict.quoteContext}</div>
-            </figcaption>
-          </figure>
         </RevealOnScroll>
 
         {/* Gallery: uniform-cell grid of event photos + vertical clips */}

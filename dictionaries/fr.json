@@ -3,7 +3,6 @@
     "demo": "Démo",
     "features": "Fonctionnalités",
     "howItWorks": "Comment Ça Marche",
-    "useCases": "Cas d'Usage",
     "packages": "Formules",
     "media": "Médias",
     "bookDemo": "Planifiez votre Événement",
@@ -13,23 +12,12 @@
     "srTitle": "Treasure Hunt | Jeu interactif d'animation pour événements et congrès",
     "headline": "Transformez votre Événement en",
     "headlineHighlight": "Expérience Gamifiée",
-    "tagline": "Les participants explorent, scannent des points de contrôle, gagnent de vraies récompenses et génèrent du passage là où vous en avez besoin",
-    "taglineSuffix": ". Directement depuis le navigateur du téléphone, sans télécharger d'application.",
+    "tagline": "Les participants trouvent des points de contrôle sur le site, gagnent des points et les échangent contre des récompenses",
+    "taglineSuffix": ". Vous choisissez où placer les points de contrôle, et tout se passe dans le navigateur du téléphone, sans rien installer.",
     "trustBadge": "Déployé à ETHDenver, Future Maker et plus · plus de 14 000 trésors trouvés · plus de 400 points de contrôle · plus de 1 000 joueurs",
     "bookDemo": "Planifiez votre Événement",
     "seeItLive": "Voir Nos Résultats →"
   },
-  "marquee": [
-    "Aucune Application à Télécharger",
-    "Points de Contrôle NFC et QR",
-    "Classements en Temps Réel",
-    "Boutique Intégrée",
-    "Générez du Passage",
-    "Défis Créés par les Joueurs",
-    "Récompenses Sociales",
-    "Placement de Points pour Sponsors",
-    "Tableau de Bord en Direct"
-  ],
   "demo": {
     "eyebrow": "01 / Démo",
     "heading": "Découvrez ce que les",
@@ -90,8 +78,7 @@
       "title": "Noite Europeia dos Investigadores 2026",
       "location": "Palácio do Marquês de Pombal, Oeiras · 25 sept.",
       "stat1": "240 téléphones · 3 746 visites de stands",
-      "stat2": "659 cadeaux · 49 stands",
-      "reportLabel": "Voir le Rapport (PT) →"
+      "stat2": "659 cadeaux · 49 stands"
     }
   },
   "socialProof": {
@@ -106,10 +93,6 @@
     "interviewTeaser": "Extraits",
     "fullCaption": "Joana Pereira et Dinis Araújo · 2:26",
     "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
-    "quote": "Treasure Hunt est une gamification du congrès lui-même. Nous cachons des trésors dans tout le site, et les joueurs trouvent les emplacements puis approchent leur téléphone pour réclamer une récompense. Plus de la moitié des stands ont participé, et cela crée une véritable interaction entre les participants et l'exposition.",
-    "quoteName": "Dinis Araújo",
-    "quoteRole": "CTO, NOVA Blockchain Lab",
-    "quoteContext": "FIL Pavillon 3, Lisbonne",
     "galleryHeading": "Sur les événements",
     "photo1Alt": "Participante tenant le dépliant officiel Treasure Hunt avec un code QR à scanner",
     "photo2Alt": "Membre de l'équipe Treasure Hunt présentant le jeu au public sur le stand NOVA Cidade",
@@ -125,82 +108,44 @@
   },
   "features": {
     "eyebrow": "02 / Fonctionnalités",
-    "heading": "Conçu pour les Organisateurs.",
-    "headingHighlight": "Adoré par les Participants.",
-    "description": "Treasure Hunt transforme n'importe quel événement en aventure en direct. Les participants gagnent des points en explorant votre espace, en relevant des défis et en découvrant des points de contrôle cachés. Les points débloquent de vraies récompenses dans la boutique intégrée.",
+    "heading": "Ce que l'Organisateur",
+    "headingHighlight": "y Gagne",
+    "description": "Vous décidez où vont les gens et ce qu'ils peuvent gagner, et vous voyez les résultats pendant que l'événement se déroule.",
     "items": [
-      {
-        "title": "Orientez le Passage",
-        "description": "C'est vous qui décidez où placer les points de contrôle. Chaque point est une raison de traverser le site, amenant du passage vers les sponsors, les stands et les zones peu fréquentées."
-      },
-      {
-        "title": "Récompensez la Vraie Participation",
-        "description": "Les participants gagnent des récompenses pour leur implication, pas seulement pour leur présence. Des points à dépenser dans la boutique intégrée sur des articles exclusifs et des récompenses de sponsors."
-      },
-      {
-        "title": "Installation sans Friction",
-        "description": "Placez des étiquettes NFC ou des codes QR où vous voulez. Les participants se connectent une fois et jouent en quelques secondes. Pas d'application. Pas de téléchargement. Pas de friction."
-      },
-      {
-        "title": "Mesurez Tout en Temps Réel",
-        "description": "Voyez quels points sont visités, quelles zones restent peu explorées et qui sont vos participants les plus impliqués. Analytique en direct pour les organisateurs."
-      }
+      { "title": "Amenez les Gens où Vous Voulez", "description": "Vous choisissez l'emplacement des points de contrôle. Placez-les sur les stands des sponsors ou dans les zones où personne ne passe, et les joueurs iront." },
+      { "title": "Récompensez Ceux qui Jouent", "description": "Les points se gagnent en jouant, pas en étant simplement là. Les joueurs les dépensent dans la boutique de l'événement, en goodies et en cadeaux des sponsors." },
+      { "title": "Installation Simple", "description": "Nous posons les étiquettes NFC ou les codes QR où vous le souhaitez. Les joueurs se connectent une fois et jouent en quelques secondes, sans installer d'application." },
+      { "title": "Données en Temps Réel", "description": "Un tableau de bord en direct montre quels points de contrôle sont visités, quelles zones restent vides et qui sont les joueurs les plus actifs." }
     ]
   },
   "howItWorks": {
     "eyebrow": "04 / Comment Ça Marche",
-    "heading": "Cinq Étapes.",
-    "headingHighlight": "Zéro Friction.",
-    "callout": "Vous placez les points de contrôle. Vous définissez les récompenses. Nous nous occupons du reste.",
-    "infraEyebrow": "Ce Qui Fait Tourner le Tout",
-    "infraHeading": "Pourquoi Cela Ressemble",
-    "infraHighlight": "à de la Magie",
-    "infraDescription": "Derrière chaque scan, chaque récompense et chaque mise à jour du classement se trouve une véritable infrastructure conçue pour la rapidité, la transparence et l'absence de friction. Vos participants ne voient jamais la complexité. Ils jouent, tout simplement.",
+    "heading": "Trois Étapes :",
+    "headingHighlight": "Toucher, Chercher, Échanger",
     "steps": [
-      { "title": "Ouvrez et Jouez Aussitôt", "description": "Les participants ouvrent une URL sur leur téléphone et se connectent d'un seul geste. Pas d'application à télécharger, pas de compte à créer. Ils jouent en quelques secondes." },
-      { "title": "Explorez le Site", "description": "Les points de contrôle sont placés là où vous voulez du passage. Les participants suivent la carte, découvrent des recoins cachés et trouvent des récompenses dans tout votre espace." },
-      { "title": "Scannez pour Gagner", "description": "Une approche du téléphone sur une étiquette NFC ou le scan d'un code QR. Récompense immédiate, enregistrée automatiquement. Chaque interaction devient une donnée pour vous." },
-      { "title": "Rivalisez et Collaborez", "description": "Les classements en direct alimentent une compétition amicale. Les défis sociaux et les missions d'équipe maintiennent l'énergie pendant tout l'événement." },
-      { "title": "Dépensez de Vraies Récompenses", "description": "Les points débloquent des récompenses et des prix exclusifs. Les participants repartent avec quelque chose de concret en souvenir de votre événement." }
-    ],
-    "infraItems": [
-      { "title": "Fonctionne sur Nova Cidade L3", "description": "Un réseau blockchain de couche 3 dédié et conçu pour la rapidité. Pensé pour accueillir des milliers de joueurs simultanés sans latence ni panne, même aux pics d'activité." },
-      { "title": "Coût Nul pour les Participants", "description": "Un paymaster intégré prend en charge tous les frais de transaction. Les participants récoltent des récompenses, achètent en boutique et grimpent au classement sans payer un centime." },
-      { "title": "Connexion en un Geste", "description": "Pas de phrase de récupération, pas de portefeuille à configurer, aucune connaissance technique requise. Les participants se connectent comme sur n'importe quelle autre application. Nous gérons le déploiement du compte intelligent et la gestion des clés en coulisses." },
-      { "title": "Totalement Transparent et Vérifiable", "description": "Chaque récompense émise, chaque point de contrôle scanné, chaque achat en boutique : tout est enregistré et vérifiable. Donnez aux sponsors et aux parties prenantes des données d'engagement fiables." }
+      { "title": "Toucher un Trésor", "description": "Chaque trésor est une étiquette NFC cachée sur le site. Le joueur approche son téléphone et reçoit ses points tout de suite." },
+      { "title": "Chercher sur la Carte", "description": "La carte montre les trésors qui manquent encore, pour savoir où aller ensuite." },
+      { "title": "Échanger à la Boutique", "description": "Les points s'échangent à la boutique de l'événement contre des récompenses, comme des goodies et des cadeaux des sponsors." }
     ]
   },
   "testimonials": {
     "eyebrow": "05 / Témoignages",
-    "heading": "Ne Nous Croyez Pas",
-    "headingHighlight": "sur Parole",
+    "heading": "Ce qu'en Disent",
+    "headingHighlight": "Organisateurs et Exposants",
     "items": [
-      {
-        "quote": "Sincèrement !! La chasse au trésor a été un ÉNORME SUCCÈS ! Vous avez joué un grand rôle dans la création de l'expérience ETH Denver ! Bravo !",
-        "author": "Nick",
-        "role": "Responsable du Makerspace, ETHDenver"
-      },
-      {
-        "quote": "Mon stand était coincé dans un coin au fond, presque personne ne s'arrêtait. Puis Treasure Hunt a caché un point de contrôle à mon emplacement et d'un coup les gens n'arrêtaient plus d'arriver. Ils scannaient l'étiquette, voyaient mes baskets personnalisées et se mettaient à acheter. Ce seul point de contrôle a complètement changé mon week-end.",
-        "author": "Vendeur de Baskets Personnalisées",
-        "role": "ETHDenver 2026"
-      },
-      {
-        "quote": "Aucune application à télécharger, aucune configuration compliquée. Les joueurs scannaient des points de contrôle 30 secondes après leur connexion. La boutique a eu un énorme succès.",
-        "author": "NOVA Blockchain Lab",
-        "role": "Développeur de la Plateforme"
-      }
+      { "quote": "Sincèrement !! La chasse au trésor a été un ÉNORME SUCCÈS ! Vous avez joué un grand rôle dans la création de l'expérience ETH Denver ! Bravo !", "author": "Nick", "role": "Responsable du Makerspace, ETHDenver" },
+      { "quote": "Mon stand était coincé dans un coin au fond, presque personne ne s'arrêtait. Puis Treasure Hunt a caché un point de contrôle à mon emplacement et d'un coup les gens n'arrêtaient plus d'arriver. Ils scannaient l'étiquette, voyaient mes baskets personnalisées et se mettaient à acheter. Ce seul point de contrôle a complètement changé mon week-end.", "author": "Vendeur de Baskets Personnalisées", "role": "ETHDenver 2026" }
     ]
   },
   "packages": {
     "eyebrow": "06 / Formules",
-    "heading": "Une Plateforme,",
-    "headingHighlight": "pour des Événements de Toute Taille",
-    "description": "Commencez gratuitement pour les petits événements. Passez à des milliers de participants avec tous les outils d'engagement, l'analytique pour les sponsors et un accompagnement sur place.",
+    "heading": "Trois Formules,",
+    "headingHighlight": "Selon la Taille de l'Événement",
+    "description": "Choisissez la formule selon la taille de votre événement. Chaque devis est établi pour un événement précis : parlez-nous du vôtre.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Identité Treasure Hunt (sans personnalisation).", "bestFor": "Jusqu'à 100 participants", "cta": "Planifiez votre Événement", "badge": "", "priceHint": "" },
-      { "name": "Pro", "subtitle": "Tout pour convaincre le public et les sponsors.", "bestFor": "De 100 à 1 000 participants", "cta": "Planifiez votre Événement", "badge": "Le Plus Choisi", "priceHint": "" },
-      { "name": "Enterprise", "subtitle": "Fonctionnalités sur mesure. Analytique. Échelle multi-événements.", "bestFor": "Plus de 1 000 participants", "cta": "Parlez à Notre Équipe", "badge": "", "priceHint": "" }
+      { "name": "Starter", "subtitle": "Identité Treasure Hunt, sans personnalisation.", "bestFor": "Jusqu'à 100 participants", "cta": "Planifiez votre Événement", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "Votre identité visuelle, étiquettes NFC, visibilité pour les sponsors et accompagnement sur place.", "bestFor": "De 100 à 1 000 participants", "cta": "Planifiez votre Événement", "badge": "", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Tout ce que contient Pro, plus des fonctionnalités développées pour votre événement et un rapport final.", "bestFor": "Plus de 1 000 participants", "cta": "Parlez à Notre Équipe", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
@@ -239,12 +184,12 @@
     "heading": "Envie de l'Organiser à votre",
     "headingHighlight": "Prochain Événement ?",
     "description": "Treasure Hunt se déploie en quelques jours. Donnez-nous vos dates, le lieu et une estimation du nombre de participants, et nous vous dirons ce qui est réaliste.",
-    "trustSignal": "14 885 trouvailles sur 401 checkpoints et 1 027 joueurs, sur huit événements à ce jour.",
+    "trustSignal": "Neuf événements à ce jour, des quatre jours d'ETHDenver à une seule soirée pour la Noite Europeia dos Investigadores, à Oeiras.",
     "bookDemo": "Planifiez votre Événement",
     "seeItLive": "Voir Nos Résultats →"
   },
   "stickyCta": {
-    "text": "Faites de votre prochain événement un jeu dont les participants parleront.",
+    "text": "Vous préparez un événement ? Réservez un appel de 30 minutes.",
     "bookDemo": "Planifiez votre Événement"
   },
   "booking": {
@@ -279,7 +224,7 @@
     "unavailableLink": "Réserver sur notre page Cal.com"
   },
   "footer": {
-    "description": "Plateforme interactive d'animation d'événements qui génère du passage, récompense la participation et donne aux organisateurs une analytique en temps réel.",
+    "description": "Un jeu pour les événements, sur téléphone. Les participants trouvent des points de contrôle sur le site, gagnent des points et les dépensent dans la boutique de l'événement.",
     "navigation": "Navigation",
     "contact": "Contact",
     "contactLabel": "Contact",
@@ -291,7 +236,7 @@
     "cadavalReport": "Rapport Cadaval Festival 2026",
     "springBootcampReport": "Rapport Spring Bootcamp 2026",
     "dataSummitReport": "Rapport Data with Purpose Summit 2026",
-    "neiReport": "Rapport Noite Europeia dos Investigadores 2026 (PT)",
+    "neiReport": "Rapport Noite Europeia dos Investigadores 2026",
     "copyright": "Nova Blockchain Lab. Tous droits réservés.",
     "projectBy": "Un projet de"
   },
@@ -300,12 +245,10 @@
     "heading": "Questions",
     "headingHighlight": "Fréquentes",
     "items": [
-      { "question": "Combien de temps faut-il pour la mise en place ?", "answer": "En 48 heures seulement. Nous gérons la technique, vous nous dites où placer les points de contrôle et quelles récompenses proposer." },
-      { "question": "Les participants doivent-ils télécharger une application ?", "answer": "Non. Tout fonctionne dans le navigateur du téléphone. Une connexion d'un geste, et l'on joue en quelques secondes." },
-      { "question": "Pouvons-nous personnaliser l'identité visuelle ?", "answer": "Oui. Les formules Pro et Enterprise incluent un design des points de contrôle et des noms de récompenses sur mesure. La formule Enterprise inclut une personnalisation en marque blanche." },
-      { "question": "À quoi ressemble l'installation des points de contrôle ?", "answer": "La conception et l'installation des codes QR comme des étiquettes NFC sont incluses dans les formules correspondantes. Nous nous occupons de tout, votre équipe n'a rien à faire." },
-      { "question": "Quelles données reçoivent les organisateurs ?", "answer": "Toutes les formules incluent un tableau de bord en temps réel avec les visites des points de contrôle, des cartes de chaleur de l'engagement et les positions au classement pendant l'activation du jeu. Enterprise ajoute un rapport d'analytique complet après l'événement à partager avec les sponsors, ainsi qu'un tableau de bord multi-événements pour suivre et comparer les performances des événements les plus importants, ce qui permet d'identifier les points forts, les points faibles et ce qui a réellement généré de l'engagement." },
-      { "question": "Y a-t-il une taille minimale d'événement ?", "answer": "Starter couvre les événements jusqu'à 100 participants. Pro va jusqu'à 1 000, et Enterprise prend en charge tout ce qui dépasse." }
+      { "question": "Combien de temps faut-il pour la mise en place ?", "answer": "Cela peut être prêt en 48 heures. Vous nous dites où placer les points de contrôle et quelles récompenses proposer, et nous concevons et installons les codes QR et les étiquettes NFC." },
+      { "question": "Les participants doivent-ils télécharger une application ?", "answer": "Non. Le jeu fonctionne dans le navigateur du téléphone. On se connecte d'un geste et on commence tout de suite." },
+      { "question": "Pouvons-nous utiliser notre identité visuelle ?", "answer": "Oui. Pro et Enterprise incluent des points de contrôle à votre design et des récompenses aux noms de votre choix. Enterprise peut être entièrement en marque blanche." },
+      { "question": "Quelles données reçoivent les organisateurs ?", "answer": "Toutes les formules incluent un tableau de bord en direct pendant l'événement, avec les visites des points de contrôle, des cartes de chaleur et le classement. Enterprise ajoute un rapport d'analytique après l'événement, à partager avec les sponsors, et un tableau de bord qui compare plusieurs événements." }
     ]
   },
   "contactForm": {

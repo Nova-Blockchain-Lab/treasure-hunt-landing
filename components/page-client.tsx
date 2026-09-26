@@ -7,7 +7,6 @@ import { useAnalyticsTracking } from "@/hooks/use-analytics-tracking"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { ComicQuestVideo } from "@/components/comic-quest-video"
-import { MarqueeStrip } from "@/components/marquee-strip"
 import { SocialProofStrip } from "@/components/social-proof-strip"
 import { FeaturesSection } from "@/components/features-section"
 import { DemoSection } from "@/components/demo-section"
@@ -85,7 +84,6 @@ export function PageClient({ dict: baseDict, lang }: { dict: any; lang: string }
         onOpenContact={() => openContactFrom("hero", dict.hero.bookDemo)}
       />
       <ComicQuestVideo caption={dict.media.storyCaption} playLabel={dict.media.storyPlay} />
-      <MarqueeStrip items={dict.marquee} />
 
       {/* Section order: lead with proof (logos → live demo + per-event results) before the feature pitch.
           Dividers track the bg bands: Demo (#0A0E14) → Features (#06080F); Features and Media share #06080F (no divider). */}

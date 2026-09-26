@@ -29,7 +29,7 @@ export function TestimonialsSection({ dict }: { dict: TestimonialsDict }) {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {dict.items.map((t, i) => (
             <RevealOnScroll key={i} delay={120 * (i + 1)} variant="fade-scale">
               <SpotlightCard className="p-5 sm:p-8 h-full" color="rgba(240, 96, 93, 0.04)">

@@ -41,7 +41,7 @@ Six locales: `en` (default, unprefixed) plus `pt`, `es`, `it`, `de`, `fr` under
   `localeTags` (BCP-47 for `<html lang>`/hreflang — note `pt` → **`pt-PT`**) and
   `ogLocales`. Adding a locale means adding it here **and** adding
   `dictionaries/<locale>.json`; `pnpm check:dict` fails if the key shapes drift
-  (350 leaves). Run it after touching any dictionary.
+  (340 leaves). Run it after touching any dictionary.
 - **Only the home page is fully localised.** Every locale's home is a complete
   translation of `dictionaries/en.json`, so all six sit in one reciprocal
   hreflang cluster (self-referencing + `x-default` → EN), built from
@@ -163,7 +163,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
 
 ## Key conventions
 
-- **Home section order** (`page-client.tsx`): Hero → Marquee → SocialProof → **Demo → Features** → Media → HowItWorks → Testimonials → Packages → FAQ → CTA → Footer (proof-first: Demo precedes Features). Section eyebrow ordinals ("01 / Demo", "02 / Features", …) are hand-numbered in the dictionaries to match this DOM order — renumber them if you reorder sections. `SectionDivider`/`Reverse` gradients track the bg bands; Features and Media are both `#06080F` so they sit adjacent with no divider.
+- **Home section order** (`page-client.tsx`): Hero → ComicQuest video → SocialProof → **Demo → Features** → Media → HowItWorks → Testimonials → Packages → FAQ → CTA → Footer (proof-first: Demo precedes Features). Section eyebrow ordinals ("01 / Demo", "02 / Features", …) are hand-numbered in the dictionaries to match this DOM order — renumber them if you reorder sections. `SectionDivider`/`Reverse` gradients track the bg bands; Features and Media are both `#06080F` so they sit adjacent with no divider.
 - **Two corals, and the split is a contrast rule, not taste.** `#C9433F` is the
   **button** coral: white on it is 4.82:1 (AA); white on `#F0605D` is only
   3.21:1, which failed AA on every primary CTA. So any surface carrying white
@@ -462,13 +462,14 @@ hosted here**: it lives at `https://nei.treasurehunt.pt/report` (Portuguese
 only, built in the `treasure-hunt-nei` repo). So there is no `/nei-report`
 route and no sitemap entry. The edition appears in four places: the `neiCard`
 in `demo-section.tsx` (first of the six secondary cards, 3+3 on desktop; it
-carries its own `reportLabel` so non-PT locales say "(PT)"), `footer.neiReport`
+uses the shared `seeReport` label, since that report is PT + EN), `footer.neiReport`
 in `site-footer.tsx`, the logo strip (`public/nei-logo.png`, the official
 lockup; the strip is now a 3-up grid for nine logos), and `llms.txt`.
 Its figures are **per phone, not per player** (families shared one phone), so
 they are deliberately kept OUT of the 14,885 / 401 / 1,027 totals. The
-"Events Deployed" stat and the demo heading went 8 -> 9; `cta.trustSignal`
-still says "eight events" because it quotes the six-report totals.
+"Events Deployed" stat and the demo heading went 8 -> 9. `cta.trustSignal` no
+longer quotes the six-report totals (it said "eight events" next to a 9); it now
+names the range of events instead, with no numbers beyond the count.
 If a landing-hosted NEI report is ever built, it needs a sitemap entry, a
 footer link change and a bilingual/EN-only decision like the others.
 
@@ -851,7 +852,7 @@ Gotcha: the reports do **not** all read the same dictionary slice.
 heading as a literal `"Related"`. A `related` key added to `report` alone
 renders nothing on Future Maker and fails silently, because `ReportRelated`
 still draws an empty heading. Both `report.related` and `fmReport.related` exist
-in all six dictionaries; `pnpm check:dict` (389 keys) enforces the shape.
+in all six dictionaries; `pnpm check:dict` enforces the shape.
 
 ## Landing page FAQ sets must be disjoint
 
@@ -971,3 +972,23 @@ no Neon compute to wake, so a stray inbound "hi" costs nothing here.
   projects, same Meta app), `INSTAGRAM_APP_SECRET` (Instagram > API setup), `WEBHOOK_RELAY_SECRET` (shared with every target,
   byte-identical), `WHATSAPP_RELAY_TARGETS` (comma-separated origins). Adding an
   edition is an env edit plus a redeploy, not a code change.
+
+## Home copy pass (26 Sep 2026)
+
+The home was cut from ~1,455 to ~1,055 visible words (EN). Removed outright, in
+all six locales, keys and components together: the marquee strip
+(`marquee-strip.tsx`, a decorative repeat of Features), the how-it-works callout
+and "What powers it all" infra card (`glass-card.tsx` went with it), the CTO pull
+quote in Media (the interview video above it says the same), the self-authored
+"NOVA Blockchain Lab" testimonial, the "Is there a minimum event size?" and
+"What does the checkpoint setup look like?" FAQs (the first repeats the tier
+cards, the second is merged into the setup answer), the "Most Popular" badge
+(no data behind it), "Start free" in the packages intro (packages are
+quote-only), and the dead `nav.useCases` key.
+
+**How it works is exactly three player steps, by operator decision:** tap a
+treasure (an NFC tag) and get points; use the map to find the ones still
+missing; redeem points at the store. Do not grow it back into a longer list or
+re-add infrastructure copy to that section. The SEO landing pages'
+`steps` blocks are organiser-side (we hide / they play / you watch) and were
+deliberately left alone; they must stay distinct per page anyway.

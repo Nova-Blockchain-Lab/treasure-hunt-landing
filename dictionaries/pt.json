@@ -3,7 +3,6 @@
     "demo": "Demo",
     "features": "Funcionalidades",
     "howItWorks": "Como Funciona",
-    "useCases": "Casos de Uso",
     "packages": "Pacotes",
     "media": "Media",
     "bookDemo": "Planear o Seu Evento",
@@ -13,23 +12,12 @@
     "srTitle": "Treasure Hunt | Jogo Interativo de Engagement para Eventos e Conferências",
     "headline": "Transforme o Seu Evento Numa",
     "headlineHighlight": "Caça ao Tesouro Digital",
-    "tagline": "Peddy paper gamificado com NFC e QR: os participantes exploram, scaneiam checkpoints, ganham recompensas reais e direcionam tráfego para onde precisa",
-    "taglineSuffix": ". Direto no browser do telemóvel, sem download de app.",
+    "tagline": "Um peddy paper digital com NFC e QR: os participantes encontram checkpoints pelo recinto, ganham pontos e trocam-nos por prémios",
+    "taglineSuffix": ". É você que escolhe onde ficam os checkpoints, e o jogo corre no browser do telemóvel, sem nada para instalar.",
     "trustBadge": "Implementado no ETHDenver, Future Maker e mais · 14.000+ tesouros encontrados · 400+ checkpoints · 1.000+ jogadores",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados →"
   },
-  "marquee": [
-    "Sem Download de App",
-    "Checkpoints NFC + QR",
-    "Leaderboards em Tempo Real",
-    "Loja de Merch Integrada",
-    "Direcionar Tráfego",
-    "Desafios Criados por Jogadores",
-    "Recompensas Sociais",
-    "Checkpoints de Sponsors",
-    "Dashboard de Analytics ao Vivo"
-  ],
   "demo": {
     "eyebrow": "01 / Demo",
     "heading": "Veja o Que os",
@@ -90,8 +78,7 @@
       "title": "Noite Europeia dos Investigadores 2026",
       "location": "Palácio do Marquês de Pombal, Oeiras · 25 Set",
       "stat1": "240 telemóveis · 3.746 visitas a stands",
-      "stat2": "659 brindes · 49 stands",
-      "reportLabel": "Ver Relatório →"
+      "stat2": "659 brindes · 49 stands"
     }
   },
   "socialProof": {
@@ -106,10 +93,6 @@
     "interviewTeaser": "Destaques",
     "fullCaption": "Joana Pereira & Dinis Araújo · 2:26",
     "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
-    "quote": "O Treasure Hunt é uma gamificação da própria conferência. Escondemos tesouros pelo espaço, e os jogadores encontram os pontos e tocam com o telemóvel para receber uma recompensa. Mais de metade dos stands aderiram, e gera interação real entre os participantes e a exposição.",
-    "quoteName": "Dinis Araújo",
-    "quoteRole": "CTO, NOVA Blockchain Lab",
-    "quoteContext": "FIL Pavilhão 3, Lisboa",
     "galleryHeading": "Dos eventos",
     "photo1Alt": "Participante com o flyer oficial do Treasure Hunt e código QR para reclamar a recompensa",
     "photo2Alt": "Membro da equipa Treasure Hunt a demonstrar o jogo a uma plateia no stand da NOVA Cidade",
@@ -125,82 +108,44 @@
   },
   "features": {
     "eyebrow": "02 / Funcionalidades",
-    "heading": "Feito para Organizadores.",
-    "headingHighlight": "Adorado por Participantes.",
-    "description": "O Treasure Hunt transforma qualquer evento numa aventura ao vivo. Os participantes ganham pontos ao explorar o espaço, completar desafios e descobrir checkpoints escondidos. Os pontos desbloqueiam recompensas reais na loja integrada.",
+    "heading": "O Que Ganha",
+    "headingHighlight": "Quem Organiza",
+    "description": "Decide para onde vão as pessoas e o que podem ganhar, e vê os resultados enquanto o evento ainda está a decorrer.",
     "items": [
-      {
-        "title": "Direcionar Tráfego",
-        "description": "Você decide onde ficam os checkpoints. Cada checkpoint é uma razão para atravessar o local, direcionando tráfego para sponsors, stands e áreas menos exploradas."
-      },
-      {
-        "title": "Recompensar Participação Real",
-        "description": "Os participantes ganham recompensas por se envolverem, não apenas por aparecer. Pontos que podem gastar na loja de merch integrada em itens exclusivos e recompensas de sponsors."
-      },
-      {
-        "title": "Setup Sem Fricção",
-        "description": "Coloque tags NFC ou códigos QR em qualquer lugar. Os participantes fazem login uma vez e estão a jogar em segundos. Sem app. Sem downloads. Sem fricção."
-      },
-      {
-        "title": "Monitorizar Tudo em Tempo Real",
-        "description": "Veja quais checkpoints são visitados, quais áreas estão subexploradas e quem são os seus participantes mais envolvidos. Analytics ao vivo para organizadores."
-      }
+      { "title": "Levar Pessoas Onde Quer", "description": "É você que escolhe onde ficam os checkpoints. Ponha-os nos stands dos patrocinadores ou nas zonas por onde pouca gente passa, e os jogadores vão lá." },
+      { "title": "Premiar Quem Joga", "description": "Os pontos ganham-se a jogar, não basta aparecer. Os jogadores gastam-nos na loja do evento, em merch e em ofertas dos patrocinadores." },
+      { "title": "Montagem Simples", "description": "Colocamos as tags NFC ou os códigos QR onde quiser. Os jogadores entram uma vez e começam a jogar em segundos, sem instalar nenhuma app." },
+      { "title": "Dados em Tempo Real", "description": "Um dashboard ao vivo mostra que checkpoints têm visitas, que zonas ficam vazias e quem são os jogadores mais ativos." }
     ]
   },
   "howItWorks": {
     "eyebrow": "04 / Como Funciona",
-    "heading": "Cinco Passos.",
-    "headingHighlight": "Zero Fricção.",
-    "callout": "Você coloca os checkpoints. Você define as recompensas. Nós tratamos de tudo o resto.",
-    "infraEyebrow": "O Que Alimenta Tudo",
-    "infraHeading": "Porque Parece",
-    "infraHighlight": "Magia",
-    "infraDescription": "Por trás de cada scan, cada recompensa e cada atualização do leaderboard está infraestrutura real construída para velocidade, transparência e zero fricção. Os seus participantes nunca veem a complexidade. Simplesmente jogam.",
+    "heading": "Três Passos:",
+    "headingHighlight": "Tocar, Procurar, Trocar",
     "steps": [
-      { "title": "Abrir e Jogar Instantaneamente", "description": "Os participantes visitam um URL no telemóvel e fazem login com um toque. Sem download de app, sem criar conta. Estão a jogar em poucos segundos." },
-      { "title": "Explorar o Local", "description": "Os checkpoints são colocados onde você quer tráfego. Os participantes seguem o mapa, descobrem locais escondidos e desbloqueiam recompensas pelo espaço." },
-      { "title": "Scanear para Ganhar", "description": "Um toque numa tag NFC ou scan de um código QR. Recompensa instantânea, registada automaticamente. Cada interação torna-se um dado para si." },
-      { "title": "Competir e Colaborar", "description": "Leaderboards ao vivo alimentam competição amigável. Desafios sociais e missões de equipa mantêm a energia alta durante todo o evento." },
-      { "title": "Gastar Recompensas Reais", "description": "Os pontos desbloqueiam recompensas e prémios exclusivos. Os participantes levam algo real para recordar o seu evento." }
-    ],
-    "infraItems": [
-      { "title": "Funciona na Nova Cidade L3", "description": "Uma rede blockchain Layer 3 dedicada construída para velocidade. Concebida para suportar milhares de jogadores em simultâneo sem atrasos ou falhas, mesmo no pico de atividade." },
-      { "title": "Custo Zero para Participantes", "description": "Um paymaster integrado cobre todas as taxas de transação. Os participantes colecionam recompensas, compram na loja de merch e sobem no leaderboard sem pagar nada." },
-      { "title": "Login com Um Toque", "description": "Sem seed phrases, sem configuração de wallet, sem conhecimento técnico necessário. Os participantes fazem login como em qualquer outra app. Nós tratamos do deployment da smart account e da gestão de chaves nos bastidores." },
-      { "title": "Totalmente Transparente e Auditável", "description": "Cada recompensa mintada, cada checkpoint scaneado, cada compra de merch, tudo registado e verificável. Forneça aos sponsors e stakeholders dados de engagement em que podem confiar." }
+      { "title": "Tocar num Tesouro", "description": "Cada tesouro é uma tag NFC escondida no recinto. O jogador encosta o telemóvel e recebe logo os pontos." },
+      { "title": "Procurar no Mapa", "description": "O mapa mostra os tesouros que ainda faltam encontrar, para o jogador saber para onde ir a seguir." },
+      { "title": "Trocar na Loja", "description": "Os pontos trocam-se na loja do evento por prémios, como merch e ofertas dos patrocinadores." }
     ]
   },
   "testimonials": {
-    "eyebrow": "05 / Prova Social",
-    "heading": "Não Acredite Apenas",
-    "headingHighlight": "na Nossa Palavra",
+    "eyebrow": "05 / Testemunhos",
+    "heading": "O Que Disseram",
+    "headingHighlight": "Organizadores e Expositores",
     "items": [
-      {
-        "quote": "A sério!! O treasure hunt foi um ENORME SUCESSO! Vocês desempenharam um papel fundamental na criação da experiência ETH Denver! Muito bem!",
-        "author": "Nick",
-        "role": "Responsável do Makerspace, ETHDenver"
-      },
-      {
-        "quote": "O meu stand estava escondido num canto. Quase ninguém parava. Então o Treasure Hunt escondeu um checkpoint no meu local e, de repente, as pessoas começaram a aparecer. Scaneavam a tag, viam os meus ténis personalizados e começavam a comprar. Aquele checkpoint mudou completamente o meu fim de semana.",
-        "author": "Vendedor de Ténis Personalizados",
-        "role": "ETHDenver 2026"
-      },
-      {
-        "quote": "Sem download de app, sem configuração complicada. Os jogadores estavam a scanear checkpoints em 30 segundos após o login. A loja de merch foi um enorme sucesso.",
-        "author": "NOVA Blockchain Lab",
-        "role": "Desenvolvedor da Plataforma"
-      }
+      { "quote": "A sério!! O treasure hunt foi um ENORME SUCESSO! Vocês desempenharam um papel fundamental na criação da experiência ETH Denver! Muito bem!", "author": "Nick", "role": "Responsável do Makerspace, ETHDenver" },
+      { "quote": "O meu stand estava escondido num canto. Quase ninguém parava. Então o Treasure Hunt escondeu um checkpoint no meu local e, de repente, as pessoas começaram a aparecer. Scaneavam a tag, viam os meus ténis personalizados e começavam a comprar. Aquele checkpoint mudou completamente o meu fim de semana.", "author": "Vendedor de Ténis Personalizados", "role": "ETHDenver 2026" }
     ]
   },
   "packages": {
     "eyebrow": "06 / Pacotes",
-    "heading": "Uma Plataforma,",
-    "headingHighlight": "Para Qualquer Dimensão de Evento",
-    "description": "Comece grátis para eventos pequenos. Escale para milhares de participantes com ferramentas completas de engagement, analytics de sponsors e suporte no local.",
+    "heading": "Três Pacotes,",
+    "headingHighlight": "Consoante a Dimensão do Evento",
+    "description": "Escolha o pacote pela dimensão do evento. Cada evento tem o seu orçamento: conte-nos como é o seu.",
     "tiers": [
-      { "name": "Starter", "subtitle": "Branding Treasure Hunt (sem personalização).", "bestFor": "Até 100 participantes", "cta": "Planear o Seu Evento", "badge": "", "priceHint": "" },
-      { "name": "Pro", "subtitle": "Tudo para impressionar o público e os sponsors.", "bestFor": "100 a 1.000 participantes", "cta": "Planear o Seu Evento", "badge": "Mais Popular", "priceHint": "" },
-      { "name": "Enterprise", "subtitle": "Funcionalidades personalizadas. Analytics. Escala multi-evento.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "" }
+      { "name": "Starter", "subtitle": "Marca Treasure Hunt, sem personalização.", "bestFor": "Até 100 participantes", "cta": "Planear o Seu Evento", "badge": "", "priceHint": "" },
+      { "name": "Pro", "subtitle": "A sua marca, tags NFC, destaque para patrocinadores e apoio no local.", "bestFor": "100 a 1.000 participantes", "cta": "Planear o Seu Evento", "badge": "", "priceHint": "" },
+      { "name": "Enterprise", "subtitle": "Tudo o que o Pro tem, mais funcionalidades desenvolvidas para o seu evento e um relatório no fim.", "bestFor": "1.000+ participantes", "cta": "Falar com a Equipa", "badge": "", "priceHint": "" }
     ],
     "categories": [
       {
@@ -238,13 +183,13 @@
   "cta": {
     "heading": "Quer Fazer Isto no Seu",
     "headingHighlight": "Próximo Evento?",
-    "description": "O Treasure Hunt é implementado em dias. Diga-nos as datas, o local e uma estimativa de participantes e dizemos-lhe o que é realista.",
-    "trustSignal": "14.885 descobertas em 401 checkpoints e 1.027 jogadores, em oito eventos até agora.",
+    "description": "O Treasure Hunt fica pronto em poucos dias. Diga-nos as datas, o local e quantas pessoas espera, e dizemos-lhe o que é possível.",
+    "trustSignal": "Nove eventos até agora, desde os quatro dias do ETHDenver até às seis horas da Noite Europeia dos Investigadores, em Oeiras.",
     "bookDemo": "Planear o Seu Evento",
     "seeItLive": "Ver Resultados →"
   },
   "stickyCta": {
-    "text": "Transforme o seu próximo evento num jogo de que todos falam.",
+    "text": "Tem um evento em preparação? Marque uma chamada de 30 minutos.",
     "bookDemo": "Planear o Seu Evento"
   },
   "booking": {
@@ -279,7 +224,7 @@
     "unavailableLink": "Marcar na nossa página Cal.com"
   },
   "footer": {
-    "description": "Plataforma interativa de engagement para eventos que direciona tráfego, recompensa a participação e oferece analytics em tempo real aos organizadores.",
+    "description": "Um jogo para eventos, jogado no telemóvel. Os participantes encontram checkpoints pelo recinto, ganham pontos e gastam-nos na loja do evento.",
     "navigation": "Navegação",
     "contact": "Contacto",
     "contactLabel": "Contacto",
@@ -300,12 +245,10 @@
     "heading": "Perguntas",
     "headingHighlight": "Frequentes",
     "items": [
-      { "question": "Quanto tempo leva a configurar?", "answer": "A partir de 48 horas. Nós tratamos da tecnologia, você diz-nos onde ficam os checkpoints e que recompensas oferecer." },
-      { "question": "Os participantes precisam de fazer download de uma app?", "answer": "Não. Funciona inteiramente no browser do telemóvel. Um toque para fazer login, a jogar em poucos segundos." },
-      { "question": "Podemos personalizar a marca?", "answer": "Sim. Os pacotes Pro e Enterprise incluem design de checkpoint personalizado e nomes de recompensa. O pacote Enterprise inclui branding white-label." },
-      { "question": "Como é o setup dos checkpoints?", "answer": "O design e setup tanto dos códigos QR como das tags NFC está incluído nos respetivos pacotes. Tratamos de tudo para que a sua equipa não tenha de o fazer." },
-      { "question": "Que dados recebem os organizadores?", "answer": "Um dashboard em tempo real com visitas a checkpoints, heatmaps de engagement e classificações do leaderboard está disponível em todos os planos durante a ativação do jogo. O Enterprise adiciona um relatório completo de analytics pós-evento para partilhar com sponsors e um dashboard multi-evento para acompanhar e comparar o desempenho nos eventos mais significativos, permitindo identificar pontos fortes, fracos e o que realmente gerou engagement." },
-      { "question": "Existe um tamanho mínimo de evento?", "answer": "O Starter cobre eventos até 100 participantes. O Pro escala até 1.000, e o Enterprise trata de tudo acima disso." }
+      { "question": "Quanto tempo demora a preparar?", "answer": "Pode ficar pronto em 48 horas. Diga-nos onde quer os checkpoints e que prémios quer oferecer, e nós desenhamos e instalamos os códigos QR e as tags NFC." },
+      { "question": "Os participantes têm de instalar uma app?", "answer": "Não. O jogo corre no browser do telemóvel. Entra-se com um toque e começa-se logo a jogar." },
+      { "question": "Podemos usar a nossa marca?", "answer": "Sim. O Pro e o Enterprise incluem checkpoints com design próprio e prémios com os nomes que escolher. O Enterprise pode ser totalmente white-label." },
+      { "question": "Que dados recebe a organização?", "answer": "Todos os pacotes incluem um dashboard ao vivo durante o evento, com as visitas a cada checkpoint, mapas de calor e a classificação. O Enterprise junta um relatório de analytics pós-evento, para partilhar com os patrocinadores, e um dashboard que compara vários eventos." }
     ]
   },
   "contactForm": {

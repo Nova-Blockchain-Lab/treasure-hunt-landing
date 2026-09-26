@@ -50,7 +50,7 @@ const body = `# Treasure Hunt
   3,746 stand visits, a typical phone visited 13 stands in about 70 minutes, 62
   phones visited half or more of the stands, 659 giveaways handed out from 11
   sources, 37% of all visits in the busiest hour (18:50-19:50). Report (in
-  Portuguese): https://nei.treasurehunt.pt/report
+  Portuguese and English): https://nei.treasurehunt.pt/report
 
 Totals across the first six published reports: 14,885 treasure finds, 401
 checkpoints, 1,027 players, 1,794,280 reward tokens minted. The NEI figures above
