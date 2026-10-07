@@ -126,6 +126,7 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
 - Posts and the hub carry `robots: { index: false, follow: true }` on off-locale variants (`generateMetadata` reads `lang`), because those serve EN content under a wrong `<html lang>` and already canonical to the EN URL.
 - The renderer (`BlogContent` in `app/[lang]/blog/[slug]/page.tsx`) supports `##`, `**bold**`, `*em*`, `- lists`, and `[text](/internal-path)` links (internal only, href must start with `/`). Use those links to point posts at their report + landing pages.
 - New posts are picked up by the sitemap automatically, but bump the `/blog` listing `lastModified` in `app/sitemap.ts` when publishing.
+- **Set `updated` on a post when you edit its body or title.** It feeds the sitemap `lastmod` and `BlogPosting.dateModified`. The three March posts were rewritten on 18-21 Sept but kept advertising 6 March, and sat in "Crawled - currently not indexed" from their last crawl in April/May.
 - If a stale `.next` incremental cache makes new post routes 404 locally under `next start`, `rm -rf .next && pnpm build` (hit July 2026).
 
 ## Report charts
@@ -287,7 +288,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 39 URLs; home `lastModified` bumped to 2026-09-26 for the NEI card) emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 39 URLs). **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -819,14 +820,13 @@ Fixed this pass:
   posts already did. All six now link out.
 
 ### Not fixed, and why
-- **The eight live event subdomains are fully indexable** (`bootcamp`,
-  `culturalweek`, `datasummit`, `patos`, `fil`, `cadaval`, `summerbc`,
-  `futuremaker`): `Allow: /`, own sitemaps, no noindex, and every page shares the
-  title "Treasure Hunt | Scan NFC Tags & Earn Crypto Tokens".
-  `fil.treasurehunt.pt` already ranks for brand queries next to the marketing
-  site, and `sc-domain:treasurehunt.pt` treats it all as one property. These are
-  player-facing game screens nobody searches for. **The fix belongs in the game
-  app, not this repo**: `X-Robots-Tag: noindex` or `Disallow: /`.
+- **The event subdomains are now noindexed in the game apps** (verified
+  7 Oct 2026: every game screen and every subdomain `/report` serves
+  `noindex, nofollow`). The one exception is
+  `futuremaker.treasurehunt.pt/futuremaker-report`, still `index, follow` and a
+  duplicate of `/futuremaker-report` here. Their sitemaps still list those
+  noindexed screens, which is a mixed signal; NEI's sitemap (only `/report`) is
+  the pattern to copy. Both fixes belong in the game repos, not this one.
 - `/trade-show-booth-traffic`: 482 impressions, 2 clicks, position 18 ("booth
   traffic" alone is 236 impressions at 17.9). Title and description are fine —
   this is a position problem, and 807 words is thin for that query.
@@ -992,3 +992,33 @@ missing; redeem points at the store. Do not grow it back into a longer list or
 re-add infrastructure copy to that section. The SEO landing pages'
 `steps` blocks are organiser-side (we hide / they play / you watch) and were
 deliberately left alone; they must stay distinct per page anyway.
+
+## Page indexing report, 7 Oct 2026
+
+Search Console mailed "Excluded by 'noindex' tag" as a new reason. The domain
+property showed 107 not indexed / 39 indexed across five reasons, and most of it
+is expected:
+
+- **Page with redirect (3):** `http://treasurehunt.pt`, `https://treasurehunt.pt`,
+  `http://www.` -> `https://www.` by 308. Correct; leave it.
+- **Excluded by noindex (1):** `nei.treasurehunt.pt/`, the game screen.
+  Intentional. This bucket will grow as Google recrawls the other noindexed
+  game subdomains. That is the desired end state, not a regression.
+- **Soft 404 (1):** `datasummit.treasurehunt.pt/leaderboard`, already noindex.
+- **Crawled, not indexed (74):** ~55 are `_next/static` JS/CSS/woff2 on the game
+  subdomains (render resources; never indexable, ignore), plus game screens,
+  `www/favicon.ico`, `www/feed.xml`, and the three March blog posts (the real
+  problem; see the `updated` note under **Blog**).
+- **Discovered, not indexed (28):** game screens plus 14 www URLs: the four
+  es/it/de/fr homes and their landing pages, `/blog`, `/goosechase-alternative`,
+  `/springbootcamp-report`, `/datasummit-report`, and both `/pt` reports.
+  Not technical: all return 200, `index, follow`, self-canonical, and have 2-23
+  internal inlinks. Google had fetched the www sitemap exactly once (25 Sept).
+
+**Request indexing has no API** (the Indexing API is JobPosting/BroadcastEvent
+only). It is done in the UI, and the `/search-console/inspect?id=` deep link
+404s: open `search-console?resource_id=sc-domain%3Atreasurehunt.pt`, type the
+URL in the top search box, press Enter, click "Request indexing". The quota is
+about 10 per day per property. A URL Inspection API pass over the sitemap
+(`POST searchconsole.googleapis.com/v1/urlInspection/index:inspect`) gives
+per-URL coverage state and is the quickest way to see what is still missing.

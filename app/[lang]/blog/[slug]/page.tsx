@@ -127,7 +127,7 @@ export default async function BlogPostPage({
                   headline: post.title,
                   description: post.description,
                   datePublished: post.date,
-                  dateModified: post.date,
+                  dateModified: post.updated ?? post.date,
                   image: ['https://www.treasurehunt.pt/opengraph-image'],
                   mainEntityOfPage: {
                     '@type': 'WebPage',

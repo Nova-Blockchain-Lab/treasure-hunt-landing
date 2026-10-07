@@ -3,6 +3,8 @@ export interface BlogPost {
   title: string
   description: string
   date: string
+  /** Last substantive edit, if after `date`. Feeds sitemap lastmod and BlogPosting.dateModified. */
+  updated?: string
   content: string
 }
 
@@ -13,6 +15,7 @@ export const blogPosts: BlogPost[] = [
     description:
       'Case study: 207 players found 992 treasures and minted 462,255 BUFFI tokens across 59 checkpoints at ETHDenver 2026. What the numbers show.',
     date: '2026-03-06',
+    updated: '2026-09-18',
     content: `ETHDenver 2026 ran for four days across one of the largest crypto conference venues in the world. Thousands of attendees, dozens of sponsors, and a sprawling MakerSpace floor packed with booths competing for attention.
 
 The challenge every conference organizer faces: how do you get people to actually explore the venue? How do you drive foot traffic to sponsors tucked in back corners? How do you keep energy high across multiple days?
@@ -90,6 +93,7 @@ Every transaction from ETHDenver 2026 is recorded on-chain and publicly verifiab
     description:
       'How to run a QR and NFC scavenger hunt at your conference: the checkpoint model, leaderboard psychology, and merch mechanics, with real ETHDenver data.',
     date: '2026-03-06',
+    updated: '2026-09-21',
     content: `Conference attendees have a short attention span and a long list of sessions to skip. The booths in the back corner get ignored. The sponsor who paid for premium placement watches people walk past without stopping.
 
 A scavenger hunt is one of the few things we have found that reliably moves people around a venue, and the reason is not that it is fun. It is that walking to a specific spot becomes worth points, and points become a t-shirt.
@@ -156,6 +160,7 @@ For the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-s
     description:
       'Why event gamification platforms are replacing traditional event apps in 2026, and how interactive tools drive sponsor ROI and attendee retention.',
     date: '2026-03-06',
+    updated: '2026-09-21',
     content: `The event industry spent a decade pushing attendees toward event apps. Download this, make a profile, allow notifications, check the schedule, maybe scan a badge.
 
 We do not have trustworthy public numbers for how badly that worked, and the ones that circulate are vendor-published and unsourced, so we are not going to repeat them here. What we can say is what we see at the events we run: attendees arrive with the schedule already in their email and a map already in their pocket, and an app that only holds information competes with both and loses.
@@ -214,6 +219,7 @@ If you are comparing options, [event gamification](/event-gamification) sets out
     description:
       'Case study: 351 players and 8,123 checkpoint scans over three days at the Portugal Smart Cities Summit 2026. What the data shows about trade fair foot traffic.',
     date: '2026-07-02',
+    updated: '2026-09-08',
     content: `Exhibitors at a trade fair all buy the same thing: a stand, and the hope that people walk up to it. Foot traffic decides whether the fair was worth the money, and most of it concentrates along the main aisles.
 
 At the Portugal Smart Cities Summit 2026 (FIL Pavilhão 3, Lisbon, May 12 to 14) we ran Treasure Hunt across the whole floor. 103 checkpoints covered the floor: exhibitor stands, the stages, and the common zones. 351 visitors played over the three days. Here is what the data shows.
@@ -260,6 +266,7 @@ The full interactive report, with per-stand tables, zone breakdowns and hour-by-
     description:
       'One day, 25 checkpoints, 58 players, 777 treasures found. What the Data with Purpose Summit 2026 shows about a hunt with no day two.',
     date: '2026-07-02',
+    updated: '2026-09-08',
     content: `Most of the engagement data we had published before this event came from multi-day deployments. At ETHDenver 2026, activity grew day over day and peaked on day three, driven largely by word of mouth. A reasonable objection follows: if the game needs days to build, what happens at an event that only has one?
 
 The Data with Purpose Summit 2026 (NOVA IMS at Taguspark, Oeiras, June 25) gave us a clean answer. One day, 25 checkpoints, a professional audience of data practitioners. Here is how it went.
@@ -302,6 +309,7 @@ The full data, including the hourly grid and the per-checkpoint table, is in the
     description:
       'How a team-based scavenger hunt played out at the NOVA IMS Spring Bootcamp 2026: seven teams, 220 treasures found, and a three-find margin at the top.',
     date: '2026-07-02',
+    updated: '2026-09-08',
     content: `Everything we had run up to April 2026 scored players as individuals. For the NOVA IMS Spring Bootcamp we switched the model: players joined teams, every find rolled up into a shared team score, and the leaderboard ranked teams instead of people. One campus, one afternoon, 20 hunters across 7 teams.
 
 ## The Numbers

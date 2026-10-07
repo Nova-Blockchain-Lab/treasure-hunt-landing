@@ -38,12 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: string
     bilingual: boolean
   }[] = [
-    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-03-06', bilingual: true },
-    { path: '/futuremaker-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-03-19', bilingual: true },
-    { path: '/smartcities-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-16', bilingual: false },
-    { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-05-25', bilingual: false },
-    { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-04-07', bilingual: false },
-    { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-06-25', bilingual: false },
+    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: true },
+    { path: '/futuremaker-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: true },
+    { path: '/smartcities-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
+    { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
+    { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: false },
+    { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
     { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-09-21', bilingual: false },
   ]
 
@@ -87,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const url = at(p.locale, `/${p.slug}`)
     return {
       url,
-      lastModified: '2026-06-27',
+      lastModified: '2026-09-21',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
       alternates: { languages: { [localeTags[p.locale]]: url, 'x-default': url } },
@@ -97,7 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts are EN-only.
   const blogEntries = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
-    lastModified: new Date(post.date).toISOString(),
+    lastModified: new Date(post.updated ?? post.date).toISOString(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
     alternates: {
