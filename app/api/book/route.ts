@@ -67,6 +67,7 @@ export async function POST(request: Request) {
   if (!SLOT_RE.test(slot)) return NextResponse.json({ error: "Invalid slot" }, { status: 400 })
   if (!name) return NextResponse.json({ error: "Name is required" }, { status: 400 })
   if (!EMAIL_RE.test(email)) return NextResponse.json({ error: "A valid email is required" }, { status: 400 })
+  if (!notes) return NextResponse.json({ error: "Tell us what the call is about" }, { status: 400 })
   if (code && !/^\d{4,10}$/.test(code)) {
     return NextResponse.json({ status: "invalid_code" }, { status: 200 })
   }

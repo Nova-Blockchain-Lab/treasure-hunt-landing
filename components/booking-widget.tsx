@@ -412,6 +412,7 @@ export function BookingWidget({
                     className="w-full h-12 px-4 rounded-lg bg-[#161B22] border border-[rgba(240,246,252,0.24)] text-[#E6EDF3] placeholder:text-[#7D8590] text-sm focus:border-[rgba(240,96,93,0.4)] transition-colors"
                   />
                   <textarea
+                    required
                     rows={3}
                     value={form.notes}
                     onChange={(e) => setForm({ ...form, notes: e.target.value })}

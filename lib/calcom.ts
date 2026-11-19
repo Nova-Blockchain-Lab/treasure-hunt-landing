@@ -120,7 +120,10 @@ export async function calcomBook(opts: {
         language: "en",
       },
       ...(opts.guests.length ? { guests: opts.guests } : {}),
-      ...(opts.notes ? { metadata: { notes: opts.notes.slice(0, 500) } } : {}),
+      // `notes` is the slug of Cal.com's built-in "Additional notes" field, which
+      // is what the confirmation emails print. It used to go in `metadata`,
+      // which Cal.com stores but never shows anyone.
+      bookingFieldsResponses: { notes: opts.notes },
     }),
     cache: "no-store",
   })
