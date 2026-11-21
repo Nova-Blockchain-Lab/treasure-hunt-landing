@@ -115,9 +115,8 @@ export function SiteFooter({
           { href: "/scavify-alternative", label: "Scavify Alternative" },
         ])
 
-  // pb clears the fixed 60px StickyCTABar so the last footer row is never occluded
   return (
-    <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F] pb-[68px]">
+    <footer className="border-t border-[rgba(240,246,252,0.04)] bg-[#06080F]">
       <div className="max-w-[1200px] mx-auto px-5 md:px-6 py-12">
         {/* Row 1: Nav + Contact */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
