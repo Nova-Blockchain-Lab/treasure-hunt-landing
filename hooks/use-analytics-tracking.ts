@@ -4,8 +4,7 @@ import { useEffect, useRef } from "react"
 import { trackEvent, captureUtmParams } from "@/lib/analytics"
 
 const SCROLL_MILESTONES = [25, 50, 75, 100]
-// "where" is gone: it was the id of use-cases-section, which nothing rendered.
-const SECTION_IDS = ["hero", "demo", "what", "how", "packages", "faq", "cta"]
+const SECTION_IDS = ["hero", "results", "organizer", "packages", "faq", "cta"]
 
 export function useAnalyticsTracking() {
   const firedMilestones = useRef(new Set<number>())

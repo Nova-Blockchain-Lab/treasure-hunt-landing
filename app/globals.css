@@ -124,7 +124,7 @@
    keyboard just moved focus to — WCAG 2.4.11. */
 html { scroll-padding-bottom: 140px; }
 
-/* Ambient background drift, and the text shimmer sweep.
+/* Ambient background drift (landing pages).
    Both were framer-motion loops: the backgrounds interpolated a full
    radial-gradient STRING on the main thread forever (one of the most expensive
    things framer does, and invisible decoration), and the shimmer remounted its
@@ -140,12 +140,29 @@ html { scroll-padding-bottom: 140px; }
   33%      { transform: translate3d(5%, 5%, 0); opacity: 1; }
   66%      { transform: translate3d(-5%, -5%, 0); opacity: 0.8; }
 }
-@keyframes text-shimmer {
-  from { background-position: 100% center; }
-  to   { background-position: 0% center; }
+
+/* Home scroll animations, driven by scroll position in CSS: no JS, no
+   listeners. .sd-rise lifts a block in as it enters the viewport, .sd-grow
+   draws a results bar from the left. Browsers without animation-timeline
+   simply show everything static, and reduced motion opts out entirely. */
+@keyframes sd-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
-.text-shimmer {
-  animation: text-shimmer var(--shimmer-duration, 2s) linear infinite;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sd-rise {
+      animation: hero-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .sd-grow {
+      transform-origin: left;
+      animation: sd-grow linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 40%;
+    }
+  }
 }
 
 /* Reduced motion */

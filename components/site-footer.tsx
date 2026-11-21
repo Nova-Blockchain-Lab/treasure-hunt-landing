@@ -21,10 +21,10 @@ interface FooterDict {
 }
 
 interface NavDict {
-  demo: string
-  features: string
-  howItWorks: string
+  results: string
+  organizer: string
   packages: string
+  faq: string
   bookDemo: string
 }
 
@@ -51,10 +51,10 @@ export function SiteFooter({
   const home = lang === "en" ? "/" : `/${lang}`
 
   const navLinks = [
-    { href: `${home}#what`, label: navDict.features },
-    { href: `${home}#demo`, label: navDict.demo },
-    { href: `${home}#how`, label: navDict.howItWorks },
+    { href: `${home}#results`, label: navDict.results },
+    { href: `${home}#organizer`, label: navDict.organizer },
     { href: `${home}#packages`, label: navDict.packages },
+    { href: `${home}#faq`, label: navDict.faq },
     { href: `${home}#cta`, label: dict.contactLabel },
   ]
 

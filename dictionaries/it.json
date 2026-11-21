@@ -1,196 +1,184 @@
 {
   "nav": {
-    "demo": "Demo",
-    "features": "Funzionalità",
-    "howItWorks": "Come Funziona",
+    "results": "Risultati",
+    "organizer": "Cosa controlli",
     "packages": "Pacchetti",
-    "media": "Media",
+    "faq": "Domande",
     "bookDemo": "Pianifica il tuo Evento",
     "backToSite": "Torna al sito"
   },
   "hero": {
-    "srTitle": "Treasure Hunt | Gioco interattivo di coinvolgimento per eventi e congressi",
-    "headline": "Trasforma il tuo Evento in un'",
-    "headlineHighlight": "Esperienza Gamificata",
-    "tagline": "I partecipanti trovano i checkpoint sparsi nella sede, guadagnano punti e li spendono in premi",
-    "taglineSuffix": ". Scegli tu dove mettere i checkpoint, e tutto funziona nel browser dello smartphone, senza installare nulla.",
-    "trustBadge": "Utilizzato a ETHDenver, Future Maker e altri · oltre 14.000 tesori trovati · oltre 400 checkpoint · oltre 1.000 giocatori",
+    "eyebrow": "Caccia al tesoro per eventi · NFC e QR",
+    "headline": "Porta i partecipanti in ogni angolo della tua sede.",
+    "tagline": "Metti i checkpoint agli stand degli sponsor e nelle zone dove passa poca gente. I partecipanti li toccano con il telefono, guadagnano punti e li spendono in premi. Funziona nel browser, senza installare nessuna app.",
     "bookDemo": "Pianifica il tuo Evento",
-    "seeItLive": "Guarda i Nostri Risultati →"
-  },
-  "demo": {
-    "eyebrow": "01 / Demo",
-    "heading": "Guarda cosa hanno",
-    "headingHighlight": "Vissuto i Partecipanti",
-    "headingSuffix": "in 9 Eventi",
-    "seeItLive": "Guardalo in Diretta →",
-    "seeReport": "Vedi il Report →",
-    "seeFmReport": "Vedi il Report →",
-    "phones": [
-      "Base operativa: scansiona, esplora, competi",
-      "Mappa interattiva della sede con tracciamento dei checkpoint in diretta",
-      "La classifica in diretta tiene alta la competizione tutto il giorno",
-      "Merch store integrato dove i premi diventano oggetti reali"
-    ],
-    "stats": [
-      { "value": "14.000+", "label": "Tesori Trovati" },
-      { "value": "400+", "label": "Checkpoint nelle Sedi" },
-      { "value": "1,7M+", "label": "Premi Emessi" },
-      { "value": "9", "label": "Eventi Realizzati" }
-    ],
-    "ethdenverCard": {
-      "title": "ETHDenver 2026",
-      "location": "Denver, CO · 18–21 feb",
-      "stat1": "992 tesori · 59 checkpoint",
-      "stat2": "462K BUFFI · 4 giorni"
-    },
-    "futureMakerCard": {
-      "title": "Future Maker 2026",
-      "location": "NOVA IMS, Lisbona · 16–19 mar",
-      "stat1": "2.591 tesori · 115 checkpoint",
-      "stat2": "1M FM · 3 giorni"
-    },
-    "smartCitiesCard": {
-      "title": "Smart Cities Summit 2026",
-      "location": "FIL Padiglione 3, Lisbona · 12–14 mag",
-      "stat1": "8.123 tesori · 103 checkpoint",
-      "stat2": "159K FIL · 3 giorni"
-    },
-    "cadavalCard": {
-      "title": "Cadaval Festival 2026",
-      "location": "Cadaval, Portogallo · 22–23 mag",
-      "stat1": "2.182 tesori · 57 checkpoint",
-      "stat2": "76.775 FCT · 2 giorni"
-    },
-    "springBootcampCard": {
-      "title": "Spring Bootcamp 2026",
-      "location": "NOVA IMS, Lisbona · 7 apr",
-      "stat1": "7 squadre · 220 tesori",
-      "stat2": "45.650 SB · 42 checkpoint"
-    },
-    "dataSummitCard": {
-      "title": "Data with Purpose Summit 2026",
-      "location": "Taguspark, Oeiras · 25 giu",
-      "stat1": "777 tesori · 25 checkpoint",
-      "stat2": "25.900 DATA · 1 giorno"
-    },
-    "neiCard": {
-      "title": "Noite Europeia dos Investigadores 2026",
-      "location": "Palácio do Marquês de Pombal, Oeiras · 25 set",
-      "stat1": "240 telefoni · 3.746 visite agli stand",
-      "stat2": "659 gadget · 49 stand"
+    "seeResults": "Guarda i risultati",
+    "trustBadge": "14.885 tesori trovati · 401 checkpoint · 1.027 giocatori, misurati in sei report pubblici",
+    "demo": {
+      "label": "Prova: tocca i checkpoint",
+      "rooms": [
+        "Palco principale",
+        "Area sponsor",
+        "Workshop",
+        "Caffè",
+        "Angolo in fondo",
+        "Ingresso"
+      ],
+      "spots": [
+        "Palco principale",
+        "Stand A",
+        "Stand B",
+        "Workshop",
+        "Caffè",
+        "Angolo in fondo"
+      ],
+      "tapLabel": "Checkpoint: {spot}",
+      "playerSees": "Il giocatore vede",
+      "points": "punti",
+      "found": "{n} su {total} trovati",
+      "redeem": "Riscatta il cappello · {cost}",
+      "reset": "Ricomincia",
+      "youSee": "Tu vedi, in tempo reale",
+      "visited": "Visitati",
+      "quiet": "Ancora deserti",
+      "none": "ancora nessuno",
+      "allVisited": "nessuno, ogni checkpoint ha avuto visite",
+      "start": "Ogni labirinto è un tag che hai messo nella sede. Toccane uno.",
+      "progress": "Mancano {n} punti al cappello. La mappa mostra al giocatore cosa resta.",
+      "enough": "Basta per il cappello. Riscattalo allo store, o continua.",
+      "redeemed": "Cappello riscattato. Il gioco è tutto qui: tocca, cerca il resto sulla mappa, riscatta."
     }
   },
-  "socialProof": {
-    "deployedAt": "Utilizzato Presso"
-  },
-  "media": {
-    "eyebrow": "03 / Media",
-    "heading": "Come Funziona,",
-    "headingHighlight": "nelle Loro Parole",
-    "subheading": "Interviste dal padiglione del Portugal Smart Cities Summit, oltre a foto e clip da eventi reali.",
-    "watchInterview": "Intervista completa",
-    "interviewTeaser": "Highlights",
-    "fullCaption": "Joana Pereira e Dinis Araújo · 2:26",
-    "teaserCaption": "Dinis Araújo · CTO, NOVA Blockchain Lab · 0:27",
-    "galleryHeading": "Dagli eventi",
-    "photo1Alt": "Partecipante con il volantino ufficiale di Treasure Hunt e un codice QR per il riscatto",
-    "photo2Alt": "Membro dello staff di Treasure Hunt che mostra il gioco al pubblico allo stand NOVA Cidade",
-    "photo3Alt": "Il team dell'evento che festeggia sotto le luci della sede",
-    "photo4Alt": "Partecipante che avvicina il telefono a un poster di Treasure Hunt al Data with Purpose Summit",
-    "photo5Alt": "Cappellini NOVA Blockchain Lab distribuiti come premi dell'evento",
-    "photo6Alt": "Felpa Treasure Hunt in edizione limitata con la mascotte del labirinto",
-    "teamFlyersAlt": "Partecipanti con i volantini Treasure Hunt per il riscatto allo stand",
-    "clip1Alt": "Giocatore che reagisce dopo la vittoria",
-    "clip2Alt": "Mano che avvicina un telefono a un tag Treasure Hunt",
-    "storyCaption": "Il gioco in 60 secondi.",
-    "storyPlay": "Guarda il gioco"
-  },
-  "features": {
-    "eyebrow": "02 / Funzionalità",
-    "heading": "Cosa Ottiene",
-    "headingHighlight": "Chi Organizza",
-    "description": "Decidi tu dove far andare le persone e cosa possono vincere, e vedi i risultati mentre l'evento è ancora in corso.",
-    "items": [
-      { "title": "Porta le Persone Dove Vuoi", "description": "Scegli tu dove vanno i checkpoint. Mettili agli stand degli sponsor o nelle zone dove passa poca gente, e i giocatori ci andranno." },
-      { "title": "Premia Chi Gioca", "description": "I punti si guadagnano giocando: esserci non basta. I giocatori li spendono nello store dell'evento, in merchandising e omaggi degli sponsor." },
-      { "title": "Allestimento Semplice", "description": "Posizioniamo i tag NFC o i codici QR dove vuoi. I giocatori accedono una volta e iniziano a giocare in pochi secondi, senza installare app." },
-      { "title": "Dati in Tempo Reale", "description": "Una dashboard dal vivo mostra quali checkpoint ricevono visite, quali zone restano vuote e chi sono i giocatori più attivi." }
-    ]
-  },
-  "howItWorks": {
-    "eyebrow": "04 / Come Funziona",
-    "heading": "Tre Passi:",
-    "headingHighlight": "Tocca, Cerca, Riscatta",
-    "steps": [
-      { "title": "Tocca un Tesoro", "description": "Ogni tesoro è un tag NFC nascosto nella sede. Il giocatore avvicina il telefono e riceve subito i punti." },
-      { "title": "Cerca sulla Mappa", "description": "La mappa mostra i tesori che mancano ancora, così il giocatore sa dove andare dopo." },
-      { "title": "Riscatta allo Store", "description": "I punti si riscattano nello store dell'evento in premi, come merchandising e omaggi degli sponsor." }
-    ]
+  "results": {
+    "eyebrow": "Risultati",
+    "heading": "Cosa è successo a ogni evento",
+    "intro": "Le barre mostrano i tesori trovati. Scegli un evento per vedere i numeri e aprire il report completo.",
+    "finds": "tesori trovati",
+    "checkpoints": "checkpoint",
+    "players": "giocatori",
+    "minted": "{token} emessi",
+    "standVisits": "visite agli stand",
+    "stands": "stand",
+    "phones": "telefoni",
+    "giveaways": "omaggi",
+    "readReport": "Leggi il report completo",
+    "events": {
+      "ethdenver": {
+        "title": "ETHDenver 2026",
+        "location": "Denver, CO · 18–21 feb"
+      },
+      "futureMaker": {
+        "title": "Future Maker 2026",
+        "location": "NOVA IMS, Lisbona · 16–19 mar"
+      },
+      "springBootcamp": {
+        "title": "Spring Bootcamp 2026",
+        "location": "NOVA IMS, Lisbona · 7 apr"
+      },
+      "smartCities": {
+        "title": "Smart Cities Summit 2026",
+        "location": "FIL Padiglione 3, Lisbona · 12–14 mag"
+      },
+      "cadaval": {
+        "title": "Cadaval Festival 2026",
+        "location": "Cadaval, Portogallo · 22–23 mag"
+      },
+      "dataSummit": {
+        "title": "Data with Purpose Summit 2026",
+        "location": "Taguspark, Oeiras · 25 giu"
+      },
+      "nei": {
+        "title": "Noite Europeia dos Investigadores 2026",
+        "location": "Palácio do Marquês de Pombal, Oeiras · 25 set"
+      }
+    }
   },
   "testimonials": {
-    "eyebrow": "05 / Testimonianze",
-    "heading": "Cosa Hanno Detto",
-    "headingHighlight": "Organizzatori ed Espositori",
     "items": [
-      { "quote": "Davvero!! La caccia al tesoro è stata un SUCCESSO ENORME! Avete avuto un ruolo importante nel creare l'esperienza di ETH Denver! Ottimo lavoro!", "author": "Nick", "role": "Responsabile del Makerspace, ETHDenver" },
-      { "quote": "Il mio stand era infilato in un angolo in fondo, quasi nessuno si fermava. Poi Treasure Hunt ha nascosto un checkpoint nel mio spazio e all'improvviso la gente continuava ad arrivare. Scansionavano il tag, vedevano le mie sneaker personalizzate e iniziavano a comprare. Quel singolo checkpoint mi ha ribaltato completamente il weekend.", "author": "Venditore di Sneaker Personalizzate", "role": "ETHDenver 2026" }
-    ]
-  },
-  "packages": {
-    "eyebrow": "06 / Pacchetti",
-    "heading": "Tre Pacchetti,",
-    "headingHighlight": "in Base alle Dimensioni dell'Evento",
-    "description": "Scegli il pacchetto in base alle dimensioni dell'evento. Ogni preventivo riguarda un singolo evento: raccontaci il tuo.",
-    "tiers": [
-      { "name": "Starter", "subtitle": "Brand Treasure Hunt, senza personalizzazione.", "bestFor": "Fino a 100 partecipanti", "cta": "Pianifica il tuo Evento", "badge": "", "priceHint": "" },
-      { "name": "Pro", "subtitle": "Il tuo brand, tag NFC, visibilità per gli sponsor e supporto in loco.", "bestFor": "Da 100 a 1.000 partecipanti", "cta": "Pianifica il tuo Evento", "badge": "", "priceHint": "" },
-      { "name": "Enterprise", "subtitle": "Tutto ciò che c'è nel Pro, più funzionalità sviluppate per il tuo evento e un report finale.", "bestFor": "Oltre 1.000 partecipanti", "cta": "Parla con il Team", "badge": "", "priceHint": "" }
-    ],
-    "categories": [
       {
-        "title": "Checkpoint",
-        "features": [
-          "Aspetto e grafica personalizzati",
-          "Checkpoint con codice QR",
-          "Checkpoint con tag NFC",
-          "Design dei checkpoint su misura"
-        ]
+        "quote": "Davvero!! La caccia al tesoro è stata un SUCCESSO ENORME! Avete avuto un ruolo importante nel creare l'esperienza di ETH Denver! Ottimo lavoro!",
+        "author": "Nick",
+        "role": "Responsabile del Makerspace, ETHDenver"
       },
       {
-        "title": "Coinvolgimento",
-        "features": [
-          "Merch store",
-          "Classifica in tempo reale",
-          "Mappa interattiva della sede",
-          "Sondaggi e votazioni",
-          "Premi per il follow sui social",
-          "Posizionamento strategico degli sponsor",
-          "I giocatori possono nascondere checkpoint"
-        ]
-      },
-      {
-        "title": "Supporto e Scala",
-        "features": [
-          "Staff di supporto in loco",
-          "Sviluppo di funzionalità su misura",
-          "Dashboard multi-evento",
-          "Report analitico post-evento"
-        ]
+        "quote": "Il mio stand era infilato in un angolo in fondo, quasi nessuno si fermava. Poi Treasure Hunt ha nascosto un checkpoint nel mio spazio e all'improvviso la gente continuava ad arrivare. Scansionavano il tag, vedevano le mie sneaker personalizzate e iniziavano a comprare. Quel singolo checkpoint mi ha ribaltato completamente il weekend.",
+        "author": "Venditore di Sneaker Personalizzate",
+        "role": "ETHDenver 2026"
       }
     ]
   },
-  "cta": {
-    "heading": "Vuoi Farlo al tuo",
-    "headingHighlight": "Prossimo Evento?",
-    "description": "Treasure Hunt si attiva in pochi giorni. Dicci le date, la sede e una stima dei partecipanti e ti diremo cosa è realistico.",
-    "trustSignal": "Nove eventi finora, dai quattro giorni di ETHDenver a una sola serata alla Noite Europeia dos Investigadores, a Oeiras.",
-    "bookDemo": "Pianifica il tuo Evento",
-    "seeItLive": "Guarda i Nostri Risultati →"
+  "features": {
+    "eyebrow": "Cosa controlli",
+    "heading": "Dove va la gente, e cosa vince",
+    "items": [
+      {
+        "title": "Porta le Persone Dove Vuoi",
+        "description": "Scegli tu dove vanno i checkpoint. Mettili agli stand degli sponsor o nelle zone dove passa poca gente, e i giocatori ci andranno."
+      },
+      {
+        "title": "Premia Chi Gioca",
+        "description": "I punti si guadagnano giocando: esserci non basta. I giocatori li spendono nello store dell'evento, in merchandising e omaggi degli sponsor."
+      },
+      {
+        "title": "Allestimento Semplice",
+        "description": "Posizioniamo i tag NFC o i codici QR dove vuoi. I giocatori accedono una volta e iniziano a giocare in pochi secondi, senza installare app."
+      },
+      {
+        "title": "Dati in Tempo Reale",
+        "description": "Una dashboard dal vivo mostra quali checkpoint ricevono visite, quali zone restano vuote e chi sono i giocatori più attivi."
+      }
+    ]
   },
-  "stickyCta": {
-    "text": "Stai organizzando un evento? Prenota una chiamata di 30 minuti.",
-    "bookDemo": "Pianifica il tuo Evento"
+  "media": {
+    "storyCaption": "Il gioco in 60 secondi.",
+    "storyPlay": "Guarda il gioco",
+    "tapAlt": "Partecipante che avvicina il telefono a un poster di Treasure Hunt al Data with Purpose Summit",
+    "boothAlt": "Membro dello staff di Treasure Hunt che mostra il gioco al pubblico allo stand NOVA Cidade"
+  },
+  "packages": {
+    "eyebrow": "Pacchetti",
+    "heading": "Quante persone verranno?",
+    "attendees": "Partecipanti",
+    "fits": "Per un evento di queste dimensioni: {tier}.",
+    "tiers": [
+      {
+        "name": "Starter",
+        "subtitle": "Brand Treasure Hunt, senza personalizzazione.",
+        "bestFor": "Fino a 100 partecipanti"
+      },
+      {
+        "name": "Pro",
+        "subtitle": "Il tuo brand, tag NFC, visibilità per gli sponsor e supporto in loco.",
+        "bestFor": "Da 100 a 1.000 partecipanti"
+      },
+      {
+        "name": "Enterprise",
+        "subtitle": "Tutto ciò che c'è nel Pro, più funzionalità sviluppate per il tuo evento e un report finale.",
+        "bestFor": "Oltre 1.000 partecipanti"
+      }
+    ],
+    "note": "Non c'è un listino. Ogni evento ha il suo preventivo, quindi raccontaci il tuo.",
+    "cta": "Pianifica il tuo Evento"
+  },
+  "cta": {
+    "heading": "Dicci le date. Ti diremo cosa è realistico.",
+    "bookDemo": "Scegli un orario",
+    "meta": "30 min · videochiamata",
+    "bringHeading": "Porta tre cose",
+    "bring": [
+      {
+        "label": "Date",
+        "note": "l'allestimento richiede circa 48 ore"
+      },
+      {
+        "label": "Sede",
+        "note": "una planimetria aiuta"
+      },
+      {
+        "label": "Partecipanti",
+        "note": "basta una stima"
+      }
+    ]
   },
   "booking": {
     "heading": "Prenota una call",
@@ -241,14 +229,24 @@
     "projectBy": "Un progetto di"
   },
   "faq": {
-    "eyebrow": "07 / FAQ",
-    "heading": "Domande",
-    "headingHighlight": "Frequenti",
+    "heading": "Le domande degli organizzatori",
     "items": [
-      { "question": "Quanto tempo serve per l'attivazione?", "answer": "Può essere pronto in 48 ore. Tu ci dici dove vanno i checkpoint e quali premi offrire, noi progettiamo e installiamo codici QR e tag NFC." },
-      { "question": "I partecipanti devono scaricare un'app?", "answer": "No. Il gioco funziona nel browser dello smartphone. Si accede con un tocco e si comincia subito." },
-      { "question": "Possiamo usare il nostro brand?", "answer": "Sì. Pro ed Enterprise includono checkpoint con il tuo design e premi con i nomi che scegli. Enterprise può essere completamente white-label." },
-      { "question": "Quali dati ricevono gli organizzatori?", "answer": "Tutti i pacchetti includono una dashboard dal vivo durante l'evento, con le visite ai checkpoint, mappe di calore e classifica. Enterprise aggiunge un report analitico post-evento da condividere con gli sponsor e una dashboard che confronta più eventi." }
+      {
+        "question": "Quanto tempo serve per l'attivazione?",
+        "answer": "Può essere pronto in 48 ore. Tu ci dici dove vanno i checkpoint e quali premi offrire, noi progettiamo e installiamo codici QR e tag NFC."
+      },
+      {
+        "question": "I partecipanti devono scaricare un'app?",
+        "answer": "No. Il gioco funziona nel browser dello smartphone. Si accede con un tocco e si comincia subito."
+      },
+      {
+        "question": "Possiamo usare il nostro brand?",
+        "answer": "Sì. Pro ed Enterprise includono checkpoint con il tuo design e premi con i nomi che scegli. Enterprise può essere completamente white-label."
+      },
+      {
+        "question": "Quali dati ricevono gli organizzatori?",
+        "answer": "Tutti i pacchetti includono una dashboard dal vivo durante l'evento, con le visite ai checkpoint, mappe di calore e classifica. Enterprise aggiunge un report analitico post-evento da condividere con gli sponsor e una dashboard che confronta più eventi."
+      }
     ]
   },
   "contactForm": {

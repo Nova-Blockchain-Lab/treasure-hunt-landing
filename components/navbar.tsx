@@ -5,14 +5,13 @@ import Image from "next/image"
 import { useActiveSection } from "@/hooks/use-active-section"
 import { LanguageSwitcher } from "@/components/language-switcher"
 
-const NAV_HREFS = ["#what", "#demo", "#media", "#how", "#packages"] as const
+const NAV_HREFS = ["#results", "#organizer", "#packages", "#faq"] as const
 
 interface NavDict {
-  demo: string
-  features: string
-  howItWorks: string
+  results: string
+  organizer: string
   packages: string
-  media: string
+  faq: string
   bookDemo: string
 }
 
@@ -46,11 +45,10 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
 
   const links = useMemo(
     () => [
-      { href: "#what", label: dict.features },
-      { href: "#demo", label: dict.demo },
-      { href: "#media", label: dict.media },
-      { href: "#how", label: dict.howItWorks },
+      { href: "#results", label: dict.results },
+      { href: "#organizer", label: dict.organizer },
       { href: "#packages", label: dict.packages },
+      { href: "#faq", label: dict.faq },
     ],
     [dict]
   )
@@ -103,16 +101,19 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
         />
 
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
-          <a href="#" className="flex items-center gap-3 h-full -ml-1 pr-2" onClick={(e) => scrollToSection(e, "#hero")}>
+          <a href="#" className="flex items-center gap-2.5 h-full pr-2" onClick={(e) => scrollToSection(e, "#hero")}>
             <Image
-              src="/treasure-hunt-name.png"
-              alt="Treasure Hunt"
-              width={1600}
-              height={682}
-              className="h-9 sm:h-16 w-auto"
-              style={{ width: "auto" }}
-              sizes="240px"
+              src="/treasure-hunt-mark.png"
+              alt=""
+              width={128}
+              height={122}
+              unoptimized
+              priority
+              className="w-8 sm:w-10 h-auto"
             />
+            <span className="font-display text-[24px] sm:text-[28px] leading-none tracking-[0.02em] text-[#F0605D]">
+              Treasure Hunt
+            </span>
           </a>
 
           <ul className="hidden md:flex items-center gap-6 list-none">
@@ -140,7 +141,7 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
             <li>
               <button
                 onClick={onOpenContact}
-                className="font-display text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-5 py-2 rounded-md cursor-pointer transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
+                className="inline-flex min-h-11 items-center rounded bg-[#C9433F] px-4 text-sm font-semibold text-white cursor-pointer transition hover:bg-[#B03935]"
               >
                 {dict.bookDemo}
               </button>
@@ -150,8 +151,18 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
             </li>
           </ul>
 
+          {/* Mobile: the booking CTA stays in the bar (there is no sticky bottom
+              bar any more), the section links go in the menu. */}
+          <div className="flex md:hidden items-center gap-1">
           <button
-            className="flex md:hidden flex-col gap-[5px] p-2 z-110 cursor-pointer bg-transparent border-none"
+            type="button"
+            onClick={onOpenContact}
+            className="inline-flex min-h-11 items-center rounded bg-[#C9433F] px-3 text-[13px] font-semibold text-white cursor-pointer"
+          >
+            {dict.bookDemo}
+          </button>
+          <button
+            className="flex flex-col gap-[5px] p-2 z-110 cursor-pointer bg-transparent border-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -172,6 +183,7 @@ export function Navbar({ dict, onOpenContact }: { dict: NavDict; onOpenContact?:
               }`}
             />
           </button>
+          </div>
         </div>
       </nav>
 

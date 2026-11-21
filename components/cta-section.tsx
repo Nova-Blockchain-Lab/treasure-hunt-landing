@@ -1,80 +1,44 @@
-"use client"
-
-import { RevealOnScroll } from "./reveal-on-scroll"
-import { trackEvent } from "@/lib/analytics"
-
 interface CTADict {
   heading: string
-  headingHighlight: string
-  description: string
-  trustSignal: string
   bookDemo: string
-  seeItLive: string
+  meta: string
+  bringHeading: string
+  bring: { label: string; note: string }[]
 }
 
-interface CTASectionProps {
-  dict: CTADict
-  onOpenContact?: () => void
-}
+const RULE = "border-[rgba(230,237,243,0.1)]"
 
-export function CTASection({ dict, onOpenContact }: CTASectionProps) {
+export function CTASection({ dict, onOpenContact }: { dict: CTADict; onOpenContact?: () => void }) {
   return (
-    <section className="py-16 md:py-32 relative overflow-hidden bg-[#06080F]" id="cta">
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(ellipse at 50% 50%, rgba(240,96,93,0.06) 0%, transparent 60%),
-            #06080F
-          `,
-        }}
-      />
-
-      <RevealOnScroll>
-        <div className="relative z-2 max-w-[720px] mx-auto text-center px-5 md:px-6">
-          <h2 className="font-display text-[clamp(2.2rem,6vw,4.5rem)] leading-[0.92] mb-6 text-balance">
+    <section id="cta" className="bg-[#0A0E14]">
+      <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-16 gap-y-10 px-5 py-20">
+        <div className="sd-rise flex min-w-0 flex-[3_1_420px] flex-col gap-[18px]">
+          <h2 className="m-0 font-display text-[clamp(3rem,6.4vw,5.5rem)] font-normal leading-[0.94] text-balance">
             {dict.heading}
-            <br />
-            <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-              {dict.headingHighlight}
-            </span>
           </h2>
-
-          <p className="text-xl text-[#8B949E] mb-4">{dict.description}</p>
-
-          {/* Trust signal */}
-          <p className="font-mono text-sm text-[#7D8590] tracking-wide mb-12">
-            {dict.trustSignal}
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <button
+              type="button"
               onClick={onOpenContact}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#C9433F] text-white font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_0_30px_rgba(240,96,93,0.4)] active:scale-[0.97]"
+              className="inline-flex min-h-12 cursor-pointer items-center justify-center rounded bg-[#C9433F] px-6 font-semibold text-white transition hover:-translate-y-px hover:bg-[#B03935]"
             >
               {dict.bookDemo}
             </button>
-            <a
-                href="https://hunt.ethdenver.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent({ name: "external_link_clicked", params: { url: "https://hunt.ethdenver.com/", link_text: dict.seeItLive, location: "cta_section" } })}
-                className="inline-flex items-center justify-center gap-2.5 bg-transparent text-[#FF9A76] font-display text-base sm:text-lg tracking-wider sm:tracking-widest uppercase px-6 sm:px-10 py-3 sm:py-3.5 border-2 border-[rgba(255,154,118,0.3)] rounded-lg transition-all duration-300 hover:bg-[rgba(255,154,118,0.08)] hover:border-[#FF9A76] hover:shadow-[var(--glow-secondary)] hover:-translate-y-0.5 active:scale-[0.97]"
-              >
-                {dict.seeItLive}
-              </a>
+            <span className="font-mono text-[13px] text-[#8B949E]">{dict.meta}</span>
           </div>
-
-          <p className="font-mono text-[0.85rem] text-[#7D8590] tracking-wide mt-6">
-            <a
-              href="mailto:nova.blockchain.lab@novaims.unl.pt"
-              className="text-[#58A6FF] border-b border-[rgba(88,166,255,0.3)] transition-colors duration-300 hover:border-[#58A6FF]"
-            >
-              nova.blockchain.lab@novaims.unl.pt
-            </a>
-          </p>
         </div>
-      </RevealOnScroll>
+        <div className="sd-rise min-w-0 flex-[2_1_280px]">
+          <p className="m-0 mb-2 font-mono text-xs uppercase tracking-[0.08em] text-[#8B949E]">{dict.bringHeading}</p>
+          <dl className={`m-0 border-b ${RULE}`}>
+            {dict.bring.map((b) => (
+              <div key={b.label} className={`flex justify-between gap-4 border-t ${RULE} py-3.5`}>
+                <dt className="font-semibold">{b.label}</dt>
+                <dd className="m-0 text-right text-[#8B949E]">{b.note}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
     </section>
   )
 }

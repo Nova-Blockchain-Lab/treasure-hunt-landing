@@ -1,58 +1,76 @@
-"use client"
-
-import { MapPin, Sparkles, Smartphone, Users, Share2, TrendingUp } from "lucide-react"
-import type { LucideIcon } from "lucide-react"
-import { SpotlightCard } from "./spotlight-card"
-import { RevealOnScroll } from "./reveal-on-scroll"
-
-const icons: LucideIcon[] = [MapPin, Sparkles, Smartphone, Users, Share2, TrendingUp]
+import Image from "next/image"
+import { ComicQuestVideo } from "@/components/comic-quest-video"
 
 interface FeaturesDict {
   eyebrow: string
   heading: string
-  headingHighlight: string
-  description: string
   items: { title: string; description: string }[]
 }
 
-export function FeaturesSection({ dict }: { dict: FeaturesDict }) {
-  return (
-    <section className="py-16 md:py-32 relative bg-[#06080F]" id="what">
-      <div className="max-w-[1200px] mx-auto px-5 md:px-6">
-        <RevealOnScroll>
-          <div className="mb-16">
-            <div className="font-mono text-xs tracking-[0.2em] uppercase text-[#F0605D] mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#F0605D]" />
-              {dict.eyebrow}
-            </div>
-            <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.95] mb-6 text-balance">
-              {dict.heading}
-              <br />
-              <span className="bg-gradient-to-r from-[#F0605D] to-[#FF9A76] bg-clip-text text-transparent">
-                {dict.headingHighlight}
-              </span>
-            </h2>
-            <p className="text-lg text-[#8B949E] max-w-[680px] leading-relaxed">
-              {dict.description}
-            </p>
-          </div>
-        </RevealOnScroll>
+interface MediaDict {
+  storyCaption: string
+  storyPlay: string
+  tapAlt: string
+  boothAlt: string
+}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {dict.items.map((feature, i) => {
-            const Icon = icons[i]
-            return (
-              <RevealOnScroll key={i} delay={100 * (i + 1)} variant="fade-scale">
-                <SpotlightCard className="p-6 sm:p-9 h-full" color="rgba(88, 166, 255, 0.06)">
-                  <div className="w-12 h-12 flex items-center justify-center mb-5 rounded-xl bg-[rgba(88,166,255,0.08)] text-[#58A6FF]">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-display text-2xl mb-3">{feature.title}</h3>
-                  <p className="text-[#8B949E] text-[0.925rem] leading-relaxed">{feature.description}</p>
-                </SpotlightCard>
-              </RevealOnScroll>
-            )
-          })}
+const RULE = "border-[rgba(230,237,243,0.1)]"
+
+// "What you control": the organizer's four levers, beside the film, two photos
+// from real deployments and the ETHDenver organizer's quote.
+export function FeaturesSection({
+  dict,
+  media,
+  quote,
+}: {
+  dict: FeaturesDict
+  media: MediaDict
+  quote: { quote: string; author: string; role: string }
+}) {
+  return (
+    <section id="organizer" className="bg-[#06080F]">
+      <div className="mx-auto flex max-w-[1200px] flex-wrap items-start gap-12 px-5 py-16 sm:py-20">
+        <div className="min-w-0 flex-[3_1_440px]">
+          <div className="sd-rise mb-6 flex flex-col gap-2.5">
+            <p className="m-0 font-mono text-[13px] uppercase tracking-[0.08em] text-[#F0605D]">{dict.eyebrow}</p>
+            <h2 className="m-0 font-display text-[clamp(2.4rem,4.6vw,3.75rem)] font-normal leading-none">{dict.heading}</h2>
+          </div>
+          <div className={`border-b ${RULE}`}>
+            {dict.items.map((item) => (
+              <div key={item.title} className={`sd-rise grid gap-x-5 gap-y-1 border-t ${RULE} py-[18px] sm:grid-cols-[11rem_1fr]`}>
+                <h3 className="m-0 text-[17px] font-semibold">{item.title}</h3>
+                <p className="m-0 text-[#8B949E]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid min-w-0 flex-[2_1_320px] grid-cols-2 gap-3">
+          <div className="sd-rise col-span-2">
+            <ComicQuestVideo caption={media.storyCaption} playLabel={media.storyPlay} />
+          </div>
+          <Image
+            src="/media/datasummit-tap.jpg"
+            alt={media.tapAlt}
+            width={1080}
+            height={1040}
+            sizes="(min-width: 1024px) 230px, 45vw"
+            className="sd-rise aspect-square w-full rounded-md object-cover"
+          />
+          <Image
+            src="/media/booth-demo.jpg"
+            alt={media.boothAlt}
+            width={3464}
+            height={4618}
+            sizes="(min-width: 1024px) 230px, 45vw"
+            className="sd-rise aspect-square w-full rounded-md object-cover"
+          />
+          <blockquote className="sd-rise col-span-2 m-0 mt-2">
+            <p className="m-0 text-[17px]">{quote.quote}</p>
+            <footer className="mt-2 font-mono text-[13px] text-[#8B949E]">
+              {quote.author}, {quote.role}
+            </footer>
+          </blockquote>
         </div>
       </div>
     </section>
