@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/og-image"
 import type { Metadata } from "next"
 import type { LandingContent } from "./types"
 import { localeTags } from "@/i18n/config"
@@ -33,7 +34,7 @@ export function landingMetadata(content: LandingContent, lang?: string): Metadat
       description: content.description,
       url,
       siteName: "Treasure Hunt",
-      images: [`${BASE}/opengraph-image`],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",

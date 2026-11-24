@@ -1,5 +1,6 @@
 'use client'
 
+import { OG_IMAGE } from '@/lib/og-image'
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink, Trophy } from 'lucide-react'
 import { BarRow, Histogram } from '../cadaval-report/_components/charts'
@@ -376,7 +377,7 @@ export function ReportContent() {
               datePublished: EVENT_DATE,
               url: 'https://www.treasurehunt.pt/springbootcamp-report',
               mainEntityOfPage: 'https://www.treasurehunt.pt/springbootcamp-report',
-              image: ['https://www.treasurehunt.pt/opengraph-image'],
+              image: [OG_IMAGE],
               author: { '@type': 'Organization', name: 'NOVA Blockchain Lab' },
               publisher: { '@type': 'Organization', name: 'NOVA Blockchain Lab', url: 'https://www.treasurehunt.pt' },
             }),

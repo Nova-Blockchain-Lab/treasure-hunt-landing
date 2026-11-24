@@ -1,3 +1,4 @@
+import { OG_IMAGE } from '@/lib/og-image'
 import type { Metadata } from 'next'
 import { ReportContent } from './report-content'
 
@@ -30,7 +31,7 @@ export async function generateMetadata({
         'x-default': `${base}/springbootcamp-report`,
       },
     },
-    openGraph: { type: 'article', title: TITLE, description: SUMMARY, url, images: [`${base}/opengraph-image`] },
+    openGraph: { type: 'article', title: TITLE, description: SUMMARY, url, images: [OG_IMAGE] },
     twitter: { card: 'summary_large_image', title: TITLE, description: SUMMARY },
   }
 }

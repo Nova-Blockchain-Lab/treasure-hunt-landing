@@ -1,3 +1,4 @@
+import { OG_IMAGE } from '@/lib/og-image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -42,14 +43,14 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: post.date,
       url: `https://www.treasurehunt.pt${prefix}/blog/${slug}`,
-      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      images: [OG_IMAGE],
       authors: ['NOVA Blockchain Lab'],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      images: [OG_IMAGE],
     },
   }
 }
@@ -128,7 +129,7 @@ export default async function BlogPostPage({
                   description: post.description,
                   datePublished: post.date,
                   dateModified: post.updated ?? post.date,
-                  image: ['https://www.treasurehunt.pt/opengraph-image'],
+                  image: [OG_IMAGE],
                   mainEntityOfPage: {
                     '@type': 'WebPage',
                     '@id': `https://www.treasurehunt.pt/blog/${post.slug}`,

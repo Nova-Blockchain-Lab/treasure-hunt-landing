@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/og-image"
 import type { Metadata, Viewport } from 'next'
 import { notFound } from 'next/navigation'
 import { Bebas_Neue, Tomorrow, Roboto_Mono } from 'next/font/google'
@@ -101,13 +102,13 @@ export async function generateMetadata({
       siteName: 'Treasure Hunt',
       title,
       description,
-      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      images: [OG_IMAGE],
     },
     icons: {
       icon: [

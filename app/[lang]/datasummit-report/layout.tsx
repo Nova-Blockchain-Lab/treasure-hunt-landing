@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/og-image"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
 import "./_report.css"
@@ -38,13 +39,13 @@ export async function generateMetadata({
       title: TITLE,
       description: DESCRIPTION,
       url,
-      images: ["https://www.treasurehunt.pt/opengraph-image"],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: TITLE,
       description: DESCRIPTION,
-      images: ["https://www.treasurehunt.pt/opengraph-image"],
+      images: [OG_IMAGE],
     },
   }
 }

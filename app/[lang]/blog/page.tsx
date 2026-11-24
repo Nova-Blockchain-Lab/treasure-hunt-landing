@@ -1,3 +1,4 @@
+import { OG_IMAGE } from '@/lib/og-image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { blogPosts } from '@/data/blog-posts'
@@ -31,7 +32,7 @@ export async function generateMetadata({
       description:
         'Insights on event gamification, conference engagement, and interactive event technology.',
       url: 'https://www.treasurehunt.pt/blog',
-      images: ['https://www.treasurehunt.pt/opengraph-image'],
+      images: [OG_IMAGE],
     },
   }
 }

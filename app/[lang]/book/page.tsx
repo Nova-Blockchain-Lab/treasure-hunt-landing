@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/og-image"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -29,7 +30,7 @@ export async function generateMetadata({
     openGraph: {
       title: dict.booking.heading,
       description: dict.booking.intro,
-      images: ["https://www.treasurehunt.pt/opengraph-image"],
+      images: [OG_IMAGE],
     },
     robots: { index: false, follow: true },
   }
