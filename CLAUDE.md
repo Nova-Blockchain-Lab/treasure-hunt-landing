@@ -293,7 +293,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 41 URLs). Landing entries default to `2026-09-21`; a page added or edited since sets its own `lastModified` in `landingPages[]`. **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 41 URLs). Landing entries default to `2026-11-24`; a page edited since sets its own `lastModified` in `landingPages[]` (and one not edited since an older date keeps it, like trade-show). **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -1027,3 +1027,66 @@ URL in the top search box, press Enter, click "Request indexing". The quota is
 about 10 per day per property. A URL Inspection API pass over the sitemap
 (`POST searchconsole.googleapis.com/v1/urlInspection/index:inspect`) gives
 per-URL coverage state and is the quickest way to see what is still missing.
+
+## SEO audit, 24 Nov 2026
+
+Search Console, 90 days: the www pages had 82 clicks and 2,629 impressions.
+The biggest impression pages are `/trade-show-booth-traffic` (488, position 24,
+almost all "booth traffic"), the home (513, position 6.4),
+`/qr-scavenger-hunt-events` (321, position 10.9) and `/nfc-treasure-hunt` (320,
+position 6.0, the best performer). `/goosechase-alternative` sits on page two for
+"goosechase alternatives" (60 impressions, position 11).
+
+Fixed:
+- **next-intl was sending its own hreflang as an HTTP `Link` header** on every
+  response: all six locales for every path, with `pt` instead of `pt-PT`. On the
+  EN-only pages it advertised five noindex variants that canonicalise back, and
+  it contradicted the HTML tags and the sitemap. `alternateLinks: false` in
+  `i18n/routing.ts`. The same file now has `localeCookie: false`: the
+  `NEXT_LOCALE` cookie only feeds detection, which is off, yet it was a
+  `Set-Cookie` on every static page. Check with `curl -I` that neither header
+  comes back after a next-intl upgrade.
+- **The sitemap gave the seven non-EN landing pages an `x-default`** that their
+  HTML had dropped in September. It now follows `lib/landing/metadata.ts`.
+- **The four `*-alternative` pages had no in-body inbound link**, only the footer
+  on the home and EN landing pages. URL Inspection: scavify "Crawled, not
+  indexed" (last crawl 2 Jul), actionbound "Discovered", loquiz unknown.
+  `LandingContent.related` renders an optional link list (the reports'
+  `ReportRelated`) after the final CTA; the four pages link each other, and the
+  platform-guide post links all four.
+- **PT landing pages are barely indexed** (caca-ao-tesouro "Crawled, not
+  indexed" since 27 Jun, peddy-paper unknown, team-building-eventos
+  "Discovered"). The `/pt` ETHDenver and Future Maker reports linked EN landing
+  pages with EN labels; they now link `/pt/caca-ao-tesouro-digital-empresas`
+  and `/pt/peddy-paper-digital` (`ReportContent` takes `lang`).
+- Future Maker report h1 was "FUTURE MAKER HUNT RECAP" in English on the
+  self-canonical `/pt` page and named no year anywhere. It now mirrors the
+  ETHDenver title in all six dictionaries. Spring Bootcamp's h1 names 2026.
+- Actionbound FAQ said 351 players "found 8,123 checkpoints" (8,123 is finds;
+  there were 103 checkpoints). Now the median stand's 77 finds, from
+  `data/pscs2026/report-snapshot.json`.
+- Landing stats strips said "8 events", the count before NEI. Now 9, the
+  factsheet's "nine measured events" and llms.txt's "Nine events deployed".
+- The university FAQ answer about phones was byte-identical to the NFC page's.
+- Landing `WebPage.publisher` was an inline Organization; now `@id` to the
+  site-wide node. Comparison-table row labels are `<th scope="row">`.
+- Sitemap: landing default `lastModified` is 2026-11-24 (every page but
+  trade-show changed), plus the three edited reports.
+
+Left alone, on purpose:
+- Titles and descriptions. No page has a CTR problem at a position where a
+  snippet change would show; trade-show and qr-scavenger rank 20 to 25 on their
+  head terms, which is a position problem.
+- Five of nine blog posts are "Crawled, currently not indexed": the three July
+  case studies (last crawled 2-3 Jul, before their 8 Sept edit), the ETHDenver
+  case study and the platform guide (both crawled 7 Oct, after their edit). The
+  last two repeat the ETHDenver report's figures, so Google keeps the report.
+  That is an editorial call, not a markup bug.
+- Mixed-case paths (`/NFC-treasure-hunt`) return 200 with the lowercase
+  canonical. Harmless.
+- Lighthouse (mobile): home 93 performance, LCP 3.1 s with 75% render delay on a
+  text h1; landing pages 98-100. `comic-quest-poster.jpg` is 122 KB shown at
+  370 px, below the fold. The landing header logo is squeezed to 48x32 at 412 px
+  (flex shrink), a visual bug, not SEO.
+- GSC still shows `/#demo`, `/#what`, `/#how`, `/#media` as sitelinks; the home
+  was last crawled 20 Nov, a day before the redesign removed them.
