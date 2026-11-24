@@ -24,7 +24,7 @@ interface ReportDict {
   [key: string]: string
 }
 
-export function ReportContent({ dict }: { dict: ReportDict }) {
+export function ReportContent({ dict, lang }: { dict: ReportDict; lang: string }) {
   return (
     <div className="min-h-screen bg-[#06080F] text-white">
       {/* Back nav */}
@@ -259,7 +259,8 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         </section>
 
         {/* Footer */}
-      <ReportRelated heading={dict.related} links={[{ href: "/blog/how-treasure-hunt-drove-engagement-ethdenver-2026", label: "The ETHDenver 2026 case study" }, { href: "/nfc-treasure-hunt", label: "NFC treasure hunt for events" }]} />
+      {/* The /pt report is a real translation, so it links the PT landing page. */}
+      <ReportRelated heading={dict.related} links={[{ href: "/blog/how-treasure-hunt-drove-engagement-ethdenver-2026", label: "The ETHDenver 2026 case study" }, lang === "pt" ? { href: "/pt/caca-ao-tesouro-digital-empresas", label: "Caça ao tesouro digital para empresas" } : { href: "/nfc-treasure-hunt", label: "NFC treasure hunt for events" }]} />
         <footer className="text-center py-8 border-t border-[rgba(255,87,177,0.1)]">
           <a
             href="https://testnet.explorer.novaims.unl.pt/address/0x9732D2360085A6A36E51B9904A7000BFA461B85c"

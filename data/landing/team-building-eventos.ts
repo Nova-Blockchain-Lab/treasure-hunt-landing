@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14.000+", label: "tesouros encontrados" },
     { value: "400+", label: "checkpoints" },
     { value: "1.000+", label: "jogadores" },
-    { value: "8", label: "eventos" },
+    { value: "9", label: "eventos" },
   ],
 
   benefitsHeading: "Porque o NFC ganha às",

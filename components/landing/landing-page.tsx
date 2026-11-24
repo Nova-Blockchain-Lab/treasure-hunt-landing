@@ -11,6 +11,7 @@ import { PlanEventModal } from "@/components/plan-event-modal"
 import { getSlots } from "@/lib/slots"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { resolveIcon } from "@/components/landing/icon-map"
+import { ReportRelated } from "@/components/report-related"
 import type { LandingContent } from "@/lib/landing/types"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -169,7 +170,7 @@ export function LandingPage({
                   <tbody>
                     {content.comparison.rows.map((r, i) => (
                       <tr key={i} className="border-t border-[rgba(240,246,252,0.06)]">
-                        <td className="p-4 text-[0.9rem] text-[#E6EDF3] font-medium">{r.label}</td>
+                        <th scope="row" className="p-4 text-left text-[0.9rem] text-[#E6EDF3] font-medium">{r.label}</th>
                         <td className="p-4 text-[0.9rem] text-[#E6EDF3]">{r.us}</td>
                         <td className="p-4 text-[0.9rem] text-[#8B949E]">{r.them}</td>
                       </tr>
@@ -250,6 +251,7 @@ export function LandingPage({
         </div>
       </section>
 
+      {content.related && <ReportRelated heading={content.related.heading} links={content.related.links} />}
       </main>
       <SiteFooter dict={dict.footer} navDict={dict.nav} lang={lang} />
       <PlanEventModal

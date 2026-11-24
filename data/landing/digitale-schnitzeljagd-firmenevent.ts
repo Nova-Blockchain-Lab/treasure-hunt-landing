@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14.000+", label: "gefundene Schätze" },
     { value: "400+", label: "Checkpoints" },
     { value: "1.000+", label: "Spielende" },
-    { value: "8", label: "Events" },
+    { value: "9", label: "Events" },
   ],
 
   benefitsHeading: "Warum eine",

@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14,000+", label: "treasures found" },
     { value: "400+", label: "checkpoints" },
     { value: "1,000+", label: "players" },
-    { value: "8", label: "events" },
+    { value: "9", label: "events" },
   ],
 
   benefitsHeading: "Why it works for",
@@ -102,7 +102,7 @@ export const content: LandingContent = {
     },
     {
       q: "Which phones work?",
-      a: "Modern iPhones and Android phones read NFC tags out of the box. Where a phone can't tap, the same checkpoint also works as a QR code, so nobody is left out.",
+      a: "Any recent iPhone or Android phone a student already carries reads the NFC tags with nothing to set up. Each checkpoint also carries a QR code, so a phone that can't tap scans it with the camera instead.",
     },
     {
       q: "How many checkpoints can a campus have?",

@@ -22,7 +22,7 @@ export const content: LandingContent = {
     { value: "14,000+", label: "treasures found" },
     { value: "400+", label: "checkpoints" },
     { value: "1,000+", label: "players" },
-    { value: "8", label: "events" },
+    { value: "9", label: "events" },
   ],
 
   benefitsHeading: "How Treasure Hunt differs",
@@ -142,4 +142,13 @@ export const content: LandingContent = {
   ctaHeading: "See Treasure Hunt as your Loquiz alternative",
   ctaSubhead: "Tell us about the venue, the dates and how many people you expect. We'll reply with a plan and a quote.",
   ctaButton: "Plan Your Event",
+
+  related: {
+    heading: "Other comparisons",
+    links: [
+      { href: "/goosechase-alternative", label: "Goosechase alternative" },
+      { href: "/scavify-alternative", label: "Scavify alternative" },
+      { href: "/actionbound-alternative", label: "Actionbound alternative" },
+    ],
+  },
 }

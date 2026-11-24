@@ -21,7 +21,7 @@ export const content: LandingContent = {
     { value: "14,000+", label: "treasures found" },
     { value: "400+", label: "checkpoints" },
     { value: "1,000+", label: "players" },
-    { value: "8", label: "events" },
+    { value: "9", label: "events" },
   ],
 
   benefitsHeading: "How Treasure Hunt differs",
@@ -134,11 +134,20 @@ export const content: LandingContent = {
     },
     {
       q: "Can checkpoints go at exhibitor stands?",
-      a: "Yes, that is the main use. We place an NFC tag or QR code at each stand you pick, and the dashboard shows the visits each one gets. At the Smart Cities Summit the 351 players found 8,123 checkpoints across the hall in three days.",
+      a: "Yes, that is the main use. We place an NFC tag or QR code at each stand you pick, and the dashboard shows the visits each one gets. At the Smart Cities Summit the median stand logged 77 finds over the three days.",
     },
   ],
 
   ctaHeading: "See Treasure Hunt as your Actionbound alternative",
   ctaSubhead: "Tell us about the venue, the dates and the expected attendance. We'll send a plan and a quote.",
   ctaButton: "Plan Your Event",
+
+  related: {
+    heading: "Other comparisons",
+    links: [
+      { href: "/goosechase-alternative", label: "Goosechase alternative" },
+      { href: "/scavify-alternative", label: "Scavify alternative" },
+      { href: "/loquiz-alternative", label: "Loquiz alternative" },
+    ],
+  },
 }

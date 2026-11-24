@@ -49,7 +49,7 @@ export function ReportContent() {
         {/* Hero */}
         <section className="text-center mb-14">
           <h1 className="font-display text-[clamp(2.5rem,6vw,3.75rem)] leading-[1.1] tracking-wide bg-gradient-to-r from-[#F0605D] via-[#FF9A76] to-[#58A6FF] bg-clip-text text-transparent mb-3 drop-shadow-[0_0_40px_rgba(240,96,93,0.15)]">
-            SPRING BOOTCAMP RECAP
+            SPRING BOOTCAMP 2026 RECAP
           </h1>
           <p className="text-[#8B949E] text-lg tracking-wide">{eventLabel} · NOVA IMS, Lisbon</p>
           <p className="text-[#8B949E] text-sm mt-2">Teams Treasure Hunt · {TOKEN_NAME} ({TOKEN_SYMBOL})</p>

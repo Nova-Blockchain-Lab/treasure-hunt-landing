@@ -23,7 +23,7 @@ interface ReportDict {
   [key: string]: string
 }
 
-export function ReportContent({ dict }: { dict: ReportDict }) {
+export function ReportContent({ dict, lang }: { dict: ReportDict; lang: string }) {
   return (
     <div className="min-h-screen bg-[#06080F] text-white relative overflow-hidden">
       {/* Ambient background glows */}
@@ -250,7 +250,8 @@ export function ReportContent({ dict }: { dict: ReportDict }) {
         </section>
 
         {/* Footer */}
-      <ReportRelated heading={dict.related} links={[{ href: "/blog/university-career-fair-gamification-future-maker-2026", label: "The Future Maker 2026 case study" }, { href: "/scavenger-hunt-universities", label: "Scavenger hunt for universities" }]} />
+      {/* The /pt report is a real translation, so it links the PT landing page. */}
+      <ReportRelated heading={dict.related} links={[{ href: "/blog/university-career-fair-gamification-future-maker-2026", label: "The Future Maker 2026 case study" }, lang === "pt" ? { href: "/pt/peddy-paper-digital", label: "Peddy paper digital para escolas e universidades" } : { href: "/scavenger-hunt-universities", label: "Scavenger hunt for universities" }]} />
         <footer className="text-center py-10 border-t border-white/[0.04]">
           <a
             href="https://testnet.explorer.novaims.unl.pt/address/0xE653B7F933cc4194526e23Db6828C6FBd31215f4"

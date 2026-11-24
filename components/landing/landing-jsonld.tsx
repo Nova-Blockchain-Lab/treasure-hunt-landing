@@ -18,11 +18,8 @@ export function LandingJsonLd({ content }: { content: LandingContent }) {
       description: content.description,
       inLanguage,
       isPartOf: { "@id": `${BASE}/#website` },
-      publisher: {
-        "@type": "Organization",
-        name: "NOVA Blockchain Lab",
-        url: "https://novablockchainlab.novaims.unl.pt/",
-      },
+      // The site-wide graph in components/json-ld.tsx owns the Organization node.
+      publisher: { "@id": `${BASE}/#organization` },
     },
     {
       "@type": "BreadcrumbList",

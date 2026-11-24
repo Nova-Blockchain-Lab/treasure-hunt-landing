@@ -64,5 +64,5 @@ export default async function ETHDenverReportPage({
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
 
-  return <ReportContent dict={dict.report} />
+  return <ReportContent dict={dict.report} lang={lang} />
 }

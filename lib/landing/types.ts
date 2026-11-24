@@ -82,4 +82,12 @@ export interface LandingContent {
   ctaHeading: string
   ctaSubhead: string
   ctaButton: string
+
+  // ---- In-body links to sibling pages (optional) ----
+  // The footer is otherwise the only internal link a landing page gets. Link
+  // only to canonical URLs in the same language.
+  related?: {
+    heading: string
+    links: { href: string; label: string }[]
+  }
 }

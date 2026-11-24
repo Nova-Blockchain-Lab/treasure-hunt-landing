@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14,000+", label: "treasures found" },
     { value: "400+", label: "checkpoints" },
     { value: "1,000+", label: "players" },
-    { value: "8", label: "events" },
+    { value: "9", label: "events" },
   ],
 
   benefitsHeading: "Why teams choose",
@@ -143,4 +143,13 @@ export const content: LandingContent = {
   ctaHeading: "See Treasure Hunt as your Scavify alternative",
   ctaSubhead: "Tell us about your venue and dates. We'll put together a plan and a quote.",
   ctaButton: "Plan Your Event",
+
+  related: {
+    heading: "Other comparisons",
+    links: [
+      { href: "/goosechase-alternative", label: "Goosechase alternative" },
+      { href: "/actionbound-alternative", label: "Actionbound alternative" },
+      { href: "/loquiz-alternative", label: "Loquiz alternative" },
+    ],
+  },
 }

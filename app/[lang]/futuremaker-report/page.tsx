@@ -64,5 +64,5 @@ export default async function FutureMakerReportPage({
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
 
-  return <ReportContent dict={dict.fmReport} />
+  return <ReportContent dict={dict.fmReport} lang={lang} />
 }

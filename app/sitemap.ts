@@ -38,11 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: string
     bilingual: boolean
   }[] = [
-    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: true },
-    { path: '/futuremaker-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: true },
+    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: true },
+    { path: '/futuremaker-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: true },
     { path: '/smartcities-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
     { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
-    { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-26', bilingual: false },
+    { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: false },
     { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
     { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-09-21', bilingual: false },
   ]
@@ -63,18 +63,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ---- SEO landing pages (data/landing/*) -----------------------------------
   // Single-language by design: EN pages live at /<slug>, PT pages at /pt/<slug>.
-  // Each self-references its own locale + x-default — no cross-language
-  // alternate, because only one language version of each page exists.
+  // Each self-references its own locale, and only EN pages add x-default,
+  // matching lib/landing/metadata.ts (a sitemap/HTML mismatch drops the pair).
   const landingPages: { slug: string; locale: Locale; lastModified?: string }[] = [
     { slug: 'nfc-treasure-hunt', locale: 'en' },
     { slug: 'event-gamification', locale: 'en' },
     { slug: 'qr-scavenger-hunt-events', locale: 'en' },
     { slug: 'goosechase-alternative', locale: 'en' },
     { slug: 'scavify-alternative', locale: 'en' },
-    { slug: 'actionbound-alternative', locale: 'en', lastModified: '2026-11-24' },
-    { slug: 'loquiz-alternative', locale: 'en', lastModified: '2026-11-24' },
+    { slug: 'actionbound-alternative', locale: 'en' },
+    { slug: 'loquiz-alternative', locale: 'en' },
     { slug: 'scavenger-hunt-universities', locale: 'en' },
-    { slug: 'trade-show-booth-traffic', locale: 'en' },
+    { slug: 'trade-show-booth-traffic', locale: 'en', lastModified: '2026-09-21' },
     { slug: 'team-building-scavenger-hunt', locale: 'en' },
     { slug: 'caca-ao-tesouro-digital-empresas', locale: 'pt' },
     { slug: 'peddy-paper-digital', locale: 'pt' },
@@ -89,10 +89,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const url = at(p.locale, `/${p.slug}`)
     return {
       url,
-      lastModified: p.lastModified ?? '2026-09-21',
+      lastModified: p.lastModified ?? '2026-11-24',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-      alternates: { languages: { [localeTags[p.locale]]: url, 'x-default': url } },
+      alternates: {
+        languages: p.locale === 'en' ? { en: url, 'x-default': url } : { [localeTags[p.locale]]: url },
+      },
     }
   })
 

@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14.000+", label: "tesori trovati" },
     { value: "400+", label: "checkpoint" },
     { value: "1.000+", label: "giocatori" },
-    { value: "8", label: "eventi" },
+    { value: "9", label: "eventi" },
   ],
 
   benefitsHeading: "Perché scegliere la",

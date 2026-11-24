@@ -160,7 +160,7 @@ For the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-s
     description:
       'Why event gamification platforms are replacing traditional event apps in 2026, and how interactive tools drive sponsor ROI and attendee retention.',
     date: '2026-03-06',
-    updated: '2026-09-21',
+    updated: '2026-11-24',
     content: `The event industry spent a decade pushing attendees toward event apps. Download this, make a profile, allow notifications, check the schedule, maybe scan a badge.
 
 We do not have trustworthy public numbers for how badly that worked, and the ones that circulate are vendor-published and unsourced, so we are not going to repeat them here. What we can say is what we see at the events we run: attendees arrive with the schedule already in their email and a map already in their pocket, and an app that only holds information competes with both and loses.
@@ -211,7 +211,7 @@ Start with entry: browser-based, no install, minimal sign-up. Then check whether
 
 After that, look at whether points can be spent on something real, whether the leaderboard is visible enough to create competition, whether you get a dashboard during the event rather than a PDF after it, and whether the engagement data is verifiable enough to hand to a sponsor.
 
-If you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments, and the [ETHDenver 2026 report](/ethdenver-report) has the raw data behind every figure above.`,
+If you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments, and the [ETHDenver 2026 report](/ethdenver-report) has the raw data behind every figure above. If you already have a shortlist, there are side-by-side pages for [Goosechase](/goosechase-alternative), [Scavify](/scavify-alternative), [Actionbound](/actionbound-alternative) and [Loquiz](/loquiz-alternative).`,
   },
   {
     slug: 'trade-show-booth-traffic-pscs-2026',

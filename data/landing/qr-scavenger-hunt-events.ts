@@ -19,7 +19,7 @@ export const content: LandingContent = {
     { value: "14,000+", label: "treasures found" },
     { value: "400+", label: "checkpoints" },
     { value: "1,000+", label: "players" },
-    { value: "8", label: "events" },
+    { value: "9", label: "events" },
   ],
 
   benefitsHeading: "Why run a",
