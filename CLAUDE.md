@@ -102,7 +102,8 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
   linked site-wide from the footer "Solutions" / "Soluções" section
   (`components/site-footer.tsx`, locale-aware).
 - Current set: EN — nfc-treasure-hunt, event-gamification, qr-scavenger-hunt-events,
-  goosechase-alternative, scavify-alternative, scavenger-hunt-universities,
+  goosechase-alternative, scavify-alternative, actionbound-alternative,
+  loquiz-alternative, scavenger-hunt-universities,
   trade-show-booth-traffic, team-building-scavenger-hunt; PT —
   caca-ao-tesouro-digital-empresas, peddy-paper-digital, team-building-eventos;
   ES — caza-del-tesoro-digital-empresas; IT — caccia-al-tesoro-aziendale;
@@ -113,6 +114,10 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
   writing real copy in that language.
 - Copy is grounded in real product facts only (no invented stats). Authored +
   critiqued via a multi-agent loop; keep that bar when adding pages.
+- Competitor pages (`*-alternative`) state only what the competitor's own site
+  says, and say where the competitor fits better. `actionbound-alternative` and
+  `loquiz-alternative` (24 Nov 2026) name the pages their facts were checked
+  against in a header comment; re-check there before editing a claim.
 
 ## Blog
 
@@ -288,7 +293,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 39 URLs). **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 41 URLs). Landing entries default to `2026-09-21`; a page added or edited since sets its own `lastModified` in `landingPages[]`. **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -356,8 +361,8 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   than writing a locale code by hand.
 - **Landing-page JSON-LD hardcoded `inLanguage: "en"`** for the ES/IT/DE/FR
   pages, contradicting `<html lang>`. Now `localeTags[content.locale]`.
-- **Off-locale landing variants.** The 15 landing routes prerender under all six
-  locales (90 URLs), so `/es/nfc-treasure-hunt` serves English inside
+- **Off-locale landing variants.** The 17 landing routes prerender under all six
+  locales (102 URLs), so `/es/nfc-treasure-hunt` serves English inside
   `<html lang="es">`. `landingMetadata(content, lang)` now marks any
   `lang !== content.locale` variant `noindex, follow`. Each route passes `lang`
   via `generateMetadata` — keep that when adding a landing page.

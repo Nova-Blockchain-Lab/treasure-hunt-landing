@@ -82,6 +82,8 @@ Enterprise.
 - Scavenger hunts for universities: ${BASE}/scavenger-hunt-universities
 - Goosechase alternative: ${BASE}/goosechase-alternative
 - Scavify alternative: ${BASE}/scavify-alternative
+- Actionbound alternative: ${BASE}/actionbound-alternative
+- Loquiz alternative: ${BASE}/loquiz-alternative
 - Blog: ${BASE}/blog
 
 ## Languages

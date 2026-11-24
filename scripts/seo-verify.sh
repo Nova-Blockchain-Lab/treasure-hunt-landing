@@ -107,7 +107,7 @@ echo ""
 echo "=== new landing-page URLs (impressions = Google is ranking them) ==="
 q "{\"startDate\":\"$START\",\"endDate\":\"$END\",\"dimensions\":[\"page\"],\"rowLimit\":100}" | python3 -c "
 import json,sys
-slugs=['nfc-treasure-hunt','event-gamification','qr-scavenger-hunt-events','goosechase-alternative','scavify-alternative','scavenger-hunt-universities','trade-show-booth-traffic','team-building-scavenger-hunt','caca-ao-tesouro-digital-empresas','peddy-paper-digital','team-building-eventos']
+slugs=['nfc-treasure-hunt','event-gamification','qr-scavenger-hunt-events','goosechase-alternative','scavify-alternative','actionbound-alternative','loquiz-alternative','scavenger-hunt-universities','trade-show-booth-traffic','team-building-scavenger-hunt','caca-ao-tesouro-digital-empresas','peddy-paper-digital','team-building-eventos']
 rows=[r for r in json.load(sys.stdin).get('rows',[]) if any(s in r['keys'][0] for s in slugs)]
 if not rows: print('  (none yet — pages discovered but not yet earning impressions; check again later)')
 for r in rows: print(f\"  {r['clicks']:>3.0f}c {r['impressions']:>5.0f}i  pos {r['position']:>4.1f}  {r['keys'][0]}\")

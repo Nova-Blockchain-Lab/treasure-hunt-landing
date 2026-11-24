@@ -113,6 +113,8 @@ export function SiteFooter({
           // left /scavify-alternative with no internal link anywhere on the
           // site (Search Console reported no referring URLs for it).
           { href: "/scavify-alternative", label: "Scavify Alternative" },
+          { href: "/actionbound-alternative", label: "Actionbound Alternative" },
+          { href: "/loquiz-alternative", label: "Loquiz Alternative" },
         ])
 
   return (
