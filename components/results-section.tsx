@@ -18,6 +18,7 @@ interface ResultsDict {
   stands: string
   phones: string
   giveaways: string
+  prizes: string
   readReport: string
   events: Record<string, { title: string; location: string }>
 }
@@ -31,8 +32,8 @@ interface Quote {
 const RULE = "border-[rgba(230,237,243,0.1)]"
 
 export function ResultsSection({ dict, quote, lang }: { dict: ResultsDict; quote: Quote; lang: string }) {
-  // Smart Cities: the largest deployment, so the first card a visitor sees.
-  const [selected, setSelected] = useState(3)
+  // Lisboa Games Week: the largest deployment, so the first card a visitor sees.
+  const [selected, setSelected] = useState(() => homeEvents.findIndex((e) => e.key === "lgw"))
   const nf = new Intl.NumberFormat(localeTags[lang as Locale] ?? "en")
   const max = Math.max(...homeEvents.map((e) => e.stats[0]))
 
@@ -44,7 +45,9 @@ export function ResultsSection({ dict, quote, lang }: { dict: ResultsDict; quote
   const href = ev.report.startsWith("http") ? ev.report : `${ev.bilingual ? ptPrefix : ""}/${ev.report}`
   const labels = ev.token
     ? [dict.finds, dict.checkpoints, dict.players, fill(dict.minted, { token: ev.token })]
-    : [dict.standVisits, dict.stands, dict.phones, dict.giveaways]
+    : ev.prizes
+      ? [dict.finds, dict.checkpoints, dict.players, dict.prizes]
+      : [dict.standVisits, dict.stands, dict.phones, dict.giveaways]
   const card = dict.events[ev.key]
 
   return (

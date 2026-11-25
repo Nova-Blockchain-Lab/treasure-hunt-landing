@@ -61,6 +61,7 @@
     "stands": "Stände",
     "phones": "Handys",
     "giveaways": "Geschenke",
+    "prizes": "abgeholte Preise",
     "readReport": "Vollständigen Report lesen",
     "events": {
       "ethdenver": {
@@ -90,6 +91,10 @@
       "nei": {
         "title": "Noite Europeia dos Investigadores 2026",
         "location": "Palácio do Marquês de Pombal, Oeiras · 25. Sept."
+      },
+      "lgw": {
+        "title": "Lisboa Games Week 2026",
+        "location": "FIL Halle 4, Lissabon · 19.–22. Nov."
       }
     }
   },

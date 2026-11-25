@@ -1108,8 +1108,9 @@ Left alone, on purpose:
   checkpoint figure), the Goosechase FAQ, the Scavify benefit, `llms.txt` (lists
   all nine; keeps the six-hunt 1,794,280 token total, labelled as such) and the
   OG card strip (`app/opengraph-image.tsx`, OG_IMAGE at `?v=3`). Per-report
-  figures are unchanged. The home Results section still lists seven events (no
-  LGW card: it has no token figure for the fourth stat).
+  figures are unchanged. The home Results section (`data/home-events.ts`) lists
+  eight events; the LGW card has `prizes: true` (fourth stat is prizes collected,
+  since its report has no token figure) and is the card selected on load.
 - **The conference how-to post** (`gamifying-conferences-qr-nfc-scavenger-hunts`,
   now "...at a Conference or Expo") was rewritten on 25 Nov 2026 around LGW
   findings used as placement advice (entrance start, zone-by-zone moves, one-tag
