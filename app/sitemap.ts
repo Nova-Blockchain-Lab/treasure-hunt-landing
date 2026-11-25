@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   const homeEntries = locales.map((locale) => ({
     url: at(locale),
-    lastModified: '2026-11-21',
+    lastModified: '2026-11-25',
     changeFrequency: 'weekly' as const,
     priority: 1,
     alternates: { languages: homeLanguages },
@@ -38,13 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: string
     bilingual: boolean
   }[] = [
-    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: true },
+    { path: '/ethdenver-report', priority: 0.9, changeFrequency: 'monthly', lastModified: '2026-11-25', bilingual: true },
     { path: '/futuremaker-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: true },
     { path: '/smartcities-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
     { path: '/cadaval-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
     { path: '/springbootcamp-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-11-24', bilingual: false },
     { path: '/datasummit-report', priority: 0.8, changeFrequency: 'monthly', lastModified: '2026-09-21', bilingual: false },
-    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-09-21', bilingual: false },
+    { path: '/blog', priority: 0.6, changeFrequency: 'weekly', lastModified: '2026-11-25', bilingual: false },
   ]
 
   const staticEntries = staticPages.flatMap((page) => {
@@ -89,7 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const url = at(p.locale, `/${p.slug}`)
     return {
       url,
-      lastModified: p.lastModified ?? '2026-11-24',
+      lastModified: p.lastModified ?? '2026-11-25',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
       alternates: {

@@ -13,7 +13,7 @@
     "tagline": "Sie platzieren Checkpoints an Sponsorenständen und in Bereichen, in die sonst kaum jemand kommt. Die Teilnehmenden tippen sie mit dem Handy an, sammeln Punkte und lösen sie gegen Prämien ein. Alles läuft im Browser, ohne App.",
     "bookDemo": "Event Planen",
     "seeResults": "Ergebnisse ansehen",
-    "trustBadge": "14.885 gefundene Schätze · 401 Checkpoints · 1.027 Spielende, gemessen in sechs öffentlichen Reports",
+    "trustBadge": "27.108 gefundene Schätze · 1.785 Spielende · 2.573 eingelöste Preise, bei neun Events",
     "demo": {
       "label": "Ausprobieren: Checkpoints antippen",
       "rooms": [
@@ -268,6 +268,8 @@
   },
   "report": {
     "related": "Verwandt",
+    "howItRan": "SO LIEF ES",
+    "howItRanBody": "Die Schatzsuche lief vom 18. bis 21. Februar im MakerSpace der ETHDenver, mit NFC-Tags und QR-Codes als Checkpoints. Die Spielenden öffneten einen Link im Handy-Browser, meldeten sich mit einem Tippen über unicorn.eth an und bekamen für jeden Fund BUFFI, den Token des Events. Den gaben sie im Merch-Shop für T-Shirts, Hüte, Socken und Runden am Greifautomaten des Night Market aus. Sie konnten auch eigene Tags verstecken, und 29 Spielende versteckten 33.",
     "title": "ETHDENVER 2026 TREASURE HUNT REPORT",
     "subtitle": "MakerSpace der ETHDenver 2026",
     "totalTreasures": "Schätze Insgesamt",

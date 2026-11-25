@@ -70,7 +70,7 @@ export default async function BlogListingPage({
           </p>
           <p>
             The case studies use the same data as our public event reports. When a post says 8,123
-            checkpoint scans at the Portugal Smart Cities Summit or 992 treasures found at ETHDenver,
+            checkpoint scans at the Portugal Smart Cities Summit or 207 players at ETHDenver,
             that figure is on-chain and the matching report page shows the breakdown behind it. We
             don&apos;t publish benchmark numbers we haven&apos;t measured ourselves, which is also
             why you won&apos;t find industry-average engagement statistics here.

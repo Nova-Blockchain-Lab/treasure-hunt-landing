@@ -10,84 +10,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'how-treasure-hunt-drove-engagement-ethdenver-2026',
-    title: 'ETHDenver 2026 Case Study: 992 Treasure Finds, 207 Players',
-    description:
-      'Case study: 207 players found 992 treasures and minted 462,255 BUFFI tokens across 59 checkpoints at ETHDenver 2026. What the numbers show.',
-    date: '2026-03-06',
-    updated: '2026-09-18',
-    content: `ETHDenver 2026 ran for four days across one of the largest crypto conference venues in the world. Thousands of attendees, dozens of sponsors, and a sprawling MakerSpace floor packed with booths competing for attention.
-
-The challenge every conference organizer faces: how do you get people to actually explore the venue? How do you drive foot traffic to sponsors tucked in back corners? How do you keep energy high across multiple days?
-
-We deployed Treasure Hunt across the entire ETHDenver MakerSpace from February 18-21, 2026. Here's what happened.
-
-## The Setup
-
-59 NFC and QR checkpoints were placed strategically throughout the venue. Each checkpoint represented a "treasure" that attendees could find by tapping their phone against an NFC tag or scanning a QR code.
-
-No app download required. Players visited a URL, signed in with one tap through unicorn.eth, and started playing within 30 seconds.
-
-Every scan earned BUFFI tokens, the event's in-game currency. Players could spend BUFFI at a built-in merch store on items like t-shirts, hats, socks, and claw machine plays at the Night Market.
-
-## The Numbers
-
-Over four days, Treasure Hunt generated these results:
-
-- **207 unique players** actively participated
-- **992 treasures found** across 59 checkpoints
-- **462,255 BUFFI tokens minted** on-chain
-- **137 merch store purchases** by 73 unique shoppers
-- **213,820 BUFFI burned** through the merch store
-- **33 player-hidden treasures** placed by 29 unique hiders
-
-The peak hour hit at 5 PM with 500 transactions in a single hour. Activity consistently ramped up through the afternoon, with the heaviest engagement between noon and 6 PM each day.
-
-## What Drove Engagement
-
-Three mechanics kept players coming back across all four days.
-
-**Checkpoints created a reason to move.** Attendees didn't just walk past booths. They walked *to* them. The most popular checkpoint, Merch Night Market, was found 62 times. BUIDLHub Mentor Desk hit 47 finds. Even smaller areas like Zen Zone and Networking Lounge pulled 29-30 finds each.
-
-**The leaderboard created competition.** The top player, zkprof, accumulated 10,100 BUFFI across 67 individual mint events. The top 10 leaderboard stayed tight, with only 3,350 BUFFI separating first and tenth place. That closeness kept players hunting.
-
-**The merch store gave rewards tangible value.** 137 purchases proved that players didn't just collect points for the sake of it. They spent them. The Night Market Claw Play was the hottest item with 78 purchases. Nova Blockchain Lab T-shirts and the limited 2026 ETHDenver T-Shirt drove significant BUFFI burns at higher price points.
-
-## The Vendor Effect
-
-One result stood out. A custom sneaker vendor had a booth in a back corner of the venue with almost no natural foot traffic. After a Treasure Hunt checkpoint was hidden at his location, attendees started showing up consistently. They'd scan the NFC tag, notice the custom sneakers on display, and start buying.
-
-In his words: "That one checkpoint completely turned my weekend around."
-
-This is the sponsor value proposition in action. Checkpoints don't just drive engagement. They drive foot traffic to specific locations that event organizers and sponsors choose.
-
-## Player-Hidden Treasures
-
-An unexpected dynamic emerged. 29 players hid their own treasures across the venue, creating 33 additional checkpoints. This user-generated content extended the game beyond the official checkpoint map and created an organic discovery layer.
-
-One player hid a treasure called "Bathroom Time." It was found 11 times. The game's most creative moments came from the community itself.
-
-## What the Data Shows
-
-Daily activity followed a clear pattern. Day one (Feb 18) started strong with 800 transactions as players discovered the game. Day two climbed to 1,050. Day three peaked at 1,423 transactions as competition intensified. Day four dropped to 67 as the event wound down.
-
-The minting timeline tells a similar story: 116,505 BUFFI on day one, 144,550 on day two, 194,600 on the peak day three, and 6,600 on the final day.
-
-This pattern suggests that gamification works best when it has time to build. Players who discovered the game on day one brought friends on day two. Word of mouth drove adoption more than any single announcement.
-
-## Key Takeaways for Event Organizers
-
-**Physical placement matters.** The top 10 treasures were all placed at high-visibility venue locations. Strategic checkpoint placement directly correlates with engagement volume.
-
-**Rewards need to feel real.** 137 merch purchases prove that a well-designed reward economy drives deeper participation than points alone.\n\nThe full breakdown, including the minting timeline and the merch store figures, is in the public [ETHDenver 2026 report](/ethdenver-report). For how the tap-to-play mechanic works, see [NFC treasure hunt for events](/nfc-treasure-hunt).
-
-**Competition sustains engagement across days.** The leaderboard kept the top 10 players active across all four days, not just the first.
-
-**Zero friction is non-negotiable.** No app download, no wallet setup, no gas fees. Players were scanning within 30 seconds of their first interaction. Every barrier you remove multiplies your participation rate.
-
-Every transaction from ETHDenver 2026 is recorded on-chain and publicly verifiable on the Nova Cidade Chain explorer. The data doesn't lie, and organizers can share it with sponsors as proof of engagement.`,
-  },
-  {
     slug: 'gamifying-conferences-qr-nfc-scavenger-hunts',
     title: 'How to Run a QR & NFC Scavenger Hunt at a Conference',
     description:
@@ -156,62 +78,68 @@ For the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-s
   },
   {
     slug: 'event-gamification-platform-guide-2026',
-    title: 'Event Gamification Platforms in 2026: Interactive vs Passive',
+    title: 'Event Gamification Platform Guide: Setting Up a Hunt',
     description:
-      'Why event gamification platforms are replacing traditional event apps in 2026, and how interactive tools drive sponsor ROI and attendee retention.',
+      "How the Treasure Hunt platform works from the organiser's side: placing tags, setting rewards, stocking the store, the live leaderboard and the report.",
     date: '2026-03-06',
-    updated: '2026-11-24',
-    content: `The event industry spent a decade pushing attendees toward event apps. Download this, make a profile, allow notifications, check the schedule, maybe scan a badge.
+    updated: '2026-11-25',
+    content: `This post walks through Treasure Hunt from the organiser's side, in the order things happen. It has no event results in it. Those are in the public reports linked near the end, so any claim here can be checked against real data.
 
-We do not have trustworthy public numbers for how badly that worked, and the ones that circulate are vendor-published and unsourced, so we are not going to repeat them here. What we can say is what we see at the events we run: attendees arrive with the schedule already in their email and a map already in their pocket, and an app that only holds information competes with both and loses.
+## What players see
 
-The alternative is not a better information app. It is asking attendees to do something rather than read something.
+A player taps an NFC tag with their phone, or scans its QR code, and the game opens in the phone browser. They sign in once with an email address or a social login. After that, every tag they find adds points to their balance, a map shows the tags they haven't found yet, and the leaderboard shows where they stand. Once they have enough points, they buy a prize in the store and collect it at a stand.
 
-## What changes when the tool is interactive
+There is nothing to install. The points are the event's own token (BUFFI at ETHDenver, FIL at the Smart Cities Summit), and each find and each purchase is a transaction on Nova Cidade, the blockchain the game runs on. Players never deal with any of that. Their account is created from their login, and a paymaster covers every transaction fee, so nobody pays anything to play.
 
-**Engagement gets measured instead of estimated.** A checkpoint scan is an event with a person, a place and a timestamp attached. At ETHDenver 2026 that came to 992 finds and 462,255 token mints across 59 checkpoints in four days, all of it on-chain.
+## Deciding where the checkpoints go
 
-**Sponsor value stops being a survey answer.** Traditional sponsorship reporting rests on estimated footfall. A checkpoint gives you a count: 62 people found the Merch Night Market checkpoint, 47 found the BUIDLHub Mentor Desk. That is a number a sponsor can check.
+Players walk to wherever a tag is, so this is the decision that shapes everything else. Organisers usually put tags at sponsor booths, at stands that need visitors, and in the parts of the venue people skip: the back of a hall, an upper floor, a garden. If you have a floor plan, bring it to the first call.
 
-**The event keeps its audience past day one.** Daily transactions at ETHDenver went 800, 1,050, 1,423 across the first three days before the short final morning. Engagement grew instead of decaying, because the leaderboard was still running and people had told their friends.
+Each checkpoint is an NFC tag that also carries a QR code, so phones that can't read NFC still play. We design the tags and install them where you want them. Every tag gets a pin on the venue map and, if you want one, a hint that tells players roughly where to look. For how many to use, see [how many checkpoints an event needs](/blog/how-many-checkpoints-event-scavenger-hunt).
 
-## Why browser-based is the decision that matters most
+## Setting the reward on each tag
 
-Every step between hearing about a game and playing it loses you people, and an app install is the biggest step there is.
+Tags don't all have to be worth the same. The reward is set per tag in the admin panel, so a sponsor stand or a hard-to-reach corner can pay more than the tag by the entrance. Of all the settings, this is the easiest way to pull people deeper into the venue.
 
-Browser-based play removes it. At ETHDenver the onboarding ran under 30 seconds through unicorn.eth, and 207 people played without any requirement to sign up. The game spread by people seeing tags on walls and asking about them.
+Points can come from other places too. Players can earn them by following the event's accounts on Instagram, X or LinkedIn, and you can run polls inside the game.
 
-This works because the phone already has the hardware. NFC reading is built in, QR scanning is native to the camera app, and nothing needs installing on either side.
+## Letting players hide tags
 
-## The data you get out of it
+You can also hand out tags for players to hide. A player claims a tag, names it and puts it somewhere in the venue, and everyone else finds it like any other checkpoint. Whoever hid it can rename it or pause it later. This adds checkpoints you didn't plan, and it gives people who have already found the official tags a reason to keep playing. You give up some control over where tags end up, so tell players where hiding is allowed.
 
-Hourly activity tells you when people are actually on the floor. At ETHDenver the curve climbed from 8 AM, held through the middle of the day, and peaked at 5 PM with 500 transactions in that hour. That is when a sponsor activation is worth scheduling.
+## Stocking the store
 
-Checkpoint popularity tells you which parts of the venue work. The top checkpoints at ETHDenver logged between 35 and 62 finds each, while the ones in dead corners finished under 10. That is a floor plan critique you can act on next year.
+The store is where points become something people take home: T-shirts, hats, sponsor giveaways. Each item has a photo, a price in the event's token, a stock count and the stand where it is collected. Sponsors can stock their own prizes and hand them out at their own stand, which brings each buyer back to that stand one more time.
 
-Player data tells you whether the reward economy is calibrated. The top 10 players averaged 7,830 BUFFI, the average across all hunters was 2,233, and 73 players spent tokens in the store. If the averages drift too far apart, the rewards are concentrating on a handful of completionists.
+When someone buys an item, the app shows them a QR code. A person at the stand scans it with their own phone, without logging in, and hands the item over. Each code can be redeemed once. Stock can be changed item by item during the event, as boxes run out or more arrive.
 
-For a sponsor, this replaces "we estimate 500 people walked past your booth" with "47 people scanned the checkpoint at your booth, and here is when".
+Price items against what a player can earn by finding every tag, not against what they cost you. Also expect people to shop at the end of their own visit rather than at closing time. A scarce prize runs out when the last big wave of visitors finishes, and that can be well before the doors close.
 
-## Real-time matters more than the post-event PDF
+## The leaderboard
 
-A report after the fact is useful and late. A live dashboard lets you move while the event is still running: raise the value of a checkpoint in a quiet sponsor area, pull traffic away from a section that is jammed, or push a bonus round when the afternoon sags.
+The leaderboard ranks players by points and updates with every find. Put it on a screen people pass more than once, by the store or near the main stage. If the top players win something, announce it at the start and fix the cut-off time in advance. Handing out a prize while the board is still moving starts arguments.
 
-At ETHDenver the dashboard carried live transaction volume, the leaderboard, store inventory and checkpoint heat maps, so we could see what the floor was doing at any point.
+## During the event
 
-## The infrastructure should be invisible
+Every package includes a live dashboard. It shows which tags are being found and which are quiet, how many people are playing and what the store has sold. If an area stays empty, you can move a tag there or raise the reward on the tags already in it.
 
-Treasure Hunt runs on Nova Cidade Chain, a dedicated Layer 3 network. Every scan, mint and purchase is recorded and publicly verifiable, and a paymaster covers the fees so participants never pay anything.
+Players can flag a tag that is missing or in the wrong place, with a photo. The flag appears in the admin panel next to the tag's pin on the map, so whoever is on the floor can fix it.
 
-That serves two purposes. Sponsors and stakeholders get a record they can audit without asking us for it, and the token economy works without anyone having to know what a token is. From the attendee's side, they tap a tag and get a reward.
+## The report after the event
 
-## What to check when you are comparing platforms
+With the Enterprise package we write a report after the event from the game's own records: finds per tag, activity by day and by hour, what the store sold and the final leaderboard. A find counts once per player per tag, so one person tapping the same tag five times does not inflate a sponsor's number. Only activity on the event's own days is counted, which keeps our setup taps out. Every transaction is on a public chain, so a sponsor can check the figures without asking us.
 
-Start with entry: browser-based, no install, minimal sign-up. Then check whether the game exists in the venue at all, because NFC tags and QR codes are what make it a reason to walk somewhere rather than another screen to look at.
+The reports from past events are public and give the clearest picture of what you get. [Portugal Smart Cities Summit 2026](/smartcities-report) is a three-day trade fair, [Data with Purpose Summit 2026](/datasummit-report) a one-day conference, [Festival da Juventude 2026](/cadaval-report) a town festival in Cadaval, [Future Maker 2026](/futuremaker-report) a university career fair, [Spring Bootcamp 2026](/springbootcamp-report) a hunt played in teams, and [ETHDenver 2026](/ethdenver-report) a four-day conference in Denver.
 
-After that, look at whether points can be spent on something real, whether the leaderboard is visible enough to create competition, whether you get a dashboard during the event rather than a PDF after it, and whether the engagement data is verifiable enough to hand to a sponsor.
+## Limits worth knowing
 
-If you are comparing options, [event gamification](/event-gamification) sets out what this looks like in practice, with the measured results from six deployments, and the [ETHDenver 2026 report](/ethdenver-report) has the raw data behind every figure above. If you already have a shortlist, there are side-by-side pages for [Goosechase](/goosechase-alternative), [Scavify](/scavify-alternative), [Actionbound](/actionbound-alternative) and [Loquiz](/loquiz-alternative).`,
+The game needs mobile data or Wi-Fi where the tags are. Most recent phones read NFC, and the QR code covers the rest. At family events children often share a parent's phone, so the player count there is really a count of phones. Most people also play on a single day. At a multi-day event, expect each day's players to be mostly new rather than returning.
+
+## Packages and timing
+
+There is no price list. Each event is quoted on its own, in one of three packages. Starter, for up to 100 attendees, uses QR codes and Treasure Hunt branding. Pro, for 100 to 1,000, adds your branding, NFC tags, sponsor placement and our staff on site. Enterprise, for 1,000 and more, adds features built for your event and the post-event report. Setup can be ready in 48 hours once you have decided where the tags go and what the prizes are.
+
+If you are comparing tools, there are side-by-side pages for [Goosechase](/goosechase-alternative), [Scavify](/scavify-alternative), [Actionbound](/actionbound-alternative) and [Loquiz](/loquiz-alternative). The two checkpoint types are covered in more detail in [NFC treasure hunt for events](/nfc-treasure-hunt) and [QR scavenger hunt for events](/qr-scavenger-hunt-events).`,
   },
   {
     slug: 'trade-show-booth-traffic-pscs-2026',

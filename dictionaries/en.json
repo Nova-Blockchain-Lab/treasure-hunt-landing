@@ -13,7 +13,7 @@
     "tagline": "You place checkpoints at sponsor booths and in the areas people skip. Attendees tap them with their phone, earn points and spend them on rewards. It runs in the browser, with no app to install.",
     "bookDemo": "Plan Your Event",
     "seeResults": "See the results",
-    "trustBadge": "14,885 finds · 401 checkpoints · 1,027 players, measured across six public reports",
+    "trustBadge": "27,108 finds · 1,785 players · 2,573 prizes redeemed, across nine events",
     "demo": {
       "label": "Try it: tap the checkpoints",
       "rooms": [
@@ -268,6 +268,8 @@
   },
   "report": {
     "related": "Related",
+    "howItRan": "HOW IT RAN",
+    "howItRanBody": "The hunt ran across the ETHDenver MakerSpace from 18 to 21 February, with NFC tags and QR codes as checkpoints. Players opened a link in their phone browser, signed in with one tap through unicorn.eth and earned BUFFI, the event's token, for every find. They spent it in the merch store on T-shirts, hats, socks and plays on the Night Market claw machine. They could also hide tags of their own, and 29 players hid 33.",
     "title": "ETHDENVER 2026 TREASURE HUNT RECAP",
     "subtitle": "ETHDenver 2026 MakerSpace",
     "totalTreasures": "Total Treasures",

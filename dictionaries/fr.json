@@ -13,7 +13,7 @@
     "tagline": "Vous placez des points de contrôle sur les stands des sponsors et dans les zones où personne ne passe. Les participants les touchent avec leur téléphone, gagnent des points et les échangent contre des récompenses. Tout se passe dans le navigateur, sans application à installer.",
     "bookDemo": "Planifiez votre Événement",
     "seeResults": "Voir les résultats",
-    "trustBadge": "14 885 trésors trouvés · 401 points de contrôle · 1 027 joueurs, mesurés dans six rapports publics",
+    "trustBadge": "27 108 trésors trouvés · 1 785 joueurs · 2 573 lots échangés, sur neuf événements",
     "demo": {
       "label": "Essayez : touchez les points de contrôle",
       "rooms": [
@@ -268,6 +268,8 @@
   },
   "report": {
     "related": "Sur le même sujet",
+    "howItRan": "COMMENT ÇA S'EST PASSÉ",
+    "howItRanBody": "La chasse s'est déroulée dans le MakerSpace de l'ETHDenver du 18 au 21 février, avec des tags NFC et des QR codes comme points de contrôle. Les joueurs ouvraient un lien dans le navigateur de leur téléphone, se connectaient en un geste via unicorn.eth et gagnaient des BUFFI, le jeton de l'événement, à chaque trouvaille. Ils les dépensaient à la boutique en t-shirts, chapeaux, chaussettes et parties de pince à peluches au Night Market. Ils pouvaient aussi cacher leurs propres tags, et 29 joueurs en ont caché 33.",
     "title": "RAPPORT TREASURE HUNT ETHDENVER 2026",
     "subtitle": "MakerSpace de l'ETHDenver 2026",
     "totalTreasures": "Trésors au Total",

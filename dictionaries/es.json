@@ -13,7 +13,7 @@
     "tagline": "Colocas puntos de control en los stands de los patrocinadores y en las zonas por las que casi nadie pasa. Los asistentes los tocan con el móvil, ganan puntos y los cambian por premios. Funciona en el navegador, sin instalar ninguna app.",
     "bookDemo": "Planifica tu Evento",
     "seeResults": "Ver los resultados",
-    "trustBadge": "14.885 tesoros encontrados · 401 puntos de control · 1.027 jugadores, medidos en seis informes públicos",
+    "trustBadge": "27.108 tesoros encontrados · 1.785 jugadores · 2.573 premios canjeados, en nueve eventos",
     "demo": {
       "label": "Pruébalo: toca los puntos de control",
       "rooms": [
@@ -268,6 +268,8 @@
   },
   "report": {
     "related": "Relacionado",
+    "howItRan": "CÓMO FUE",
+    "howItRanBody": "La búsqueda se hizo en el MakerSpace de ETHDenver del 18 al 21 de febrero, con etiquetas NFC y códigos QR como puntos de control. Los jugadores abrían un enlace en el navegador del móvil, entraban con un toque a través de unicorn.eth y ganaban BUFFI, el token del evento, por cada hallazgo. Lo gastaban en la tienda de merchandising en camisetas, gorros, calcetines y partidas en la máquina de gancho del Night Market. También podían esconder sus propias etiquetas, y 29 jugadores escondieron 33.",
     "title": "INFORME TREASURE HUNT ETHDENVER 2026",
     "subtitle": "MakerSpace de ETHDenver 2026",
     "totalTreasures": "Tesoros Totales",

@@ -28,6 +28,12 @@ const nextConfig = {
     return [
       { source: '/en', destination: '/', permanent: true },
       { source: '/en/:path*', destination: '/:path*', permanent: true },
+      // The ETHDenver case-study post was merged into the report (25 Nov 2026):
+      // it repeated the report's figures and Google kept only the report. 301,
+      // not Next's default 308, as asked. Locale variants were noindex copies
+      // canonicalised to the EN post, so they follow it to the EN report.
+      { source: '/blog/how-treasure-hunt-drove-engagement-ethdenver-2026', destination: '/ethdenver-report', statusCode: 301 },
+      { source: '/:lang(pt|es|it|de|fr)/blog/how-treasure-hunt-drove-engagement-ethdenver-2026', destination: '/ethdenver-report', statusCode: 301 },
     ]
   },
   async rewrites() {

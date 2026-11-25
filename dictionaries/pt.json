@@ -13,7 +13,7 @@
     "tagline": "Coloque checkpoints nos stands dos patrocinadores e nas zonas por onde pouca gente passa. Os participantes encostam o telemóvel, ganham pontos e trocam-nos por prémios. Corre no browser, sem nada para instalar.",
     "bookDemo": "Planear o Seu Evento",
     "seeResults": "Ver os resultados",
-    "trustBadge": "14.885 tesouros encontrados · 401 checkpoints · 1.027 jogadores, medidos em seis relatórios públicos",
+    "trustBadge": "27.108 tesouros encontrados · 1.785 jogadores · 2.573 prémios trocados, em nove eventos",
     "demo": {
       "label": "Experimente: toque nos checkpoints",
       "rooms": [
@@ -268,6 +268,8 @@
   },
   "report": {
     "related": "Relacionado",
+    "howItRan": "COMO CORREU",
+    "howItRanBody": "O jogo decorreu no MakerSpace do ETHDenver de 18 a 21 de fevereiro, com tags NFC e códigos QR como checkpoints. Os jogadores abriam um link no browser do telemóvel, entravam com um toque através do unicorn.eth e ganhavam BUFFI, o token do evento, por cada tesouro encontrado. Gastavam-no na loja de merch em t-shirts, chapéus, meias e jogadas na máquina das garras do Night Market. Também podiam esconder as suas próprias tags, e 29 jogadores esconderam 33.",
     "title": "RELATÓRIO TREASURE HUNT ETHDENVER 2026",
     "subtitle": "ETHDenver 2026 MakerSpace",
     "totalTreasures": "Total de Tesouros",

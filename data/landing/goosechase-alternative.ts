@@ -16,9 +16,9 @@ export const content: LandingContent = {
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "14,000+", label: "treasures found" },
-    { value: "400+", label: "checkpoints" },
-    { value: "1,000+", label: "players" },
+    { value: "27,000+", label: "treasures found" },
+    { value: "1,700+", label: "players" },
+    { value: "2,500+", label: "prizes redeemed" },
     { value: "9", label: "events" },
   ],
 
@@ -127,7 +127,7 @@ export const content: LandingContent = {
     },
     {
       q: "Has Treasure Hunt run at real conferences?",
-      a: "Yes. It has run end to end at ETHDenver, the Portugal Smart Cities Summit, several NOVA IMS events and a city festival, together totalling 14,885 finds across 401 checkpoints.",
+      a: "Yes. It has run end to end at nine events, among them ETHDenver, the Portugal Smart Cities Summit, Lisboa Games Week, several NOVA IMS events and a city festival. Added up event by event, that is 1,785 players and 27,108 finds.",
     },
   ],
 

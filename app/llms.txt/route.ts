@@ -37,10 +37,12 @@ const body = `# Treasure Hunt
   players, 8,123 treasures, 103 checkpoints. Report: ${BASE}/smartcities-report
 - Festival da Juventude 2026 (Cadaval, May 22-23): 126 players, 2,182 treasures,
   57 tags. Report: ${BASE}/cadaval-report
-- Spring Bootcamp 2026 (NOVA IMS, Apr 7): 7 teams, 20 hunters, 220 treasures,
-  42 tags. Report: ${BASE}/springbootcamp-report
+- Spring Bootcamp 2026 (NOVA IMS, Apr 7): 7 teams of 23 players (20 unique
+  hunters), 220 treasures, 42 tags. Report: ${BASE}/springbootcamp-report
 - Data with Purpose Summit 2026 (Taguspark, Oeiras, Jun 25): 58 players, 777 tag
   finds, 25 tags. Report: ${BASE}/datasummit-report
+- NOVA IMS Summer Bootcamp 2026 (Campus de Campolide, Lisbon, Jun 30-Jul 2): 14
+  players, 172 finds. Report: https://summerbc.treasurehunt.pt/report
 - Noite Europeia dos Investigadores 2026 (European Researchers' Night; Jardins do
   Palácio do Marquês de Pombal, Oeiras, Sep 25, 16h-22h; organised by ITQB NOVA
   with the Município de Oeiras; free, all ages, about 4,000 visitors, most of them
@@ -51,11 +53,16 @@ const body = `# Treasure Hunt
   phones visited half or more of the stands, 659 giveaways handed out from 11
   sources, 37% of all visits in the busiest hour (18:50-19:50). Report (in
   Portuguese and English): https://nei.treasurehunt.pt/report
+- Lisboa Games Week 2026 (FIL Pavilion 4, Lisbon, Nov 19-22), first day only:
+  501 players, 8,305 finds, 56 tags, 176 prizes redeemed. The report for the
+  whole event is still being written.
 
-Totals across the first six published reports: 14,885 treasure finds, 401
-checkpoints, 1,027 players, 1,794,280 reward tokens minted. The NEI figures above
-are counted per phone and are not included in those totals. Nine events deployed
-in total; the seven above have public reports.
+Totals across these nine events: 1,785 players, 27,108 checkpoint finds and
+2,573 prizes redeemed. Each event is counted on its own and players are not
+de-duplicated across events; NEI contributes phones rather than people, and
+Lisboa Games Week contributes its first day. The six hunts with a full report on
+this site (all of the above except Summer Bootcamp, NEI and Lisboa Games Week)
+minted 1,794,280 reward tokens between them.
 
 ## Technical notes
 - Runs entirely in the mobile browser. No app download, no wallet setup, no seed

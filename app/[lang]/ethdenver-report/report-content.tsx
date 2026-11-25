@@ -24,7 +24,13 @@ interface ReportDict {
   [key: string]: string
 }
 
-export function ReportContent({ dict, lang }: { dict: ReportDict; lang: string }) {
+interface Quote {
+  quote: string
+  author: string
+  role: string
+}
+
+export function ReportContent({ dict, quote, lang }: { dict: ReportDict; quote: Quote; lang: string }) {
   return (
     <div className="min-h-screen bg-[#06080F] text-white">
       {/* Back nav */}
@@ -65,6 +71,19 @@ export function ReportContent({ dict, lang }: { dict: ReportDict; lang: string }
             </div>
           ))}
         </div>
+
+        {/* How it ran: the setup and the sneaker vendor's account. Merged in from
+            the ETHDenver case-study blog post (now a 301 to this page). */}
+        <section className="rounded-2xl border border-[rgba(240,246,252,0.06)] bg-[rgba(26,18,82,0.3)] p-5 md:p-6 mb-6">
+          <h2 className="font-display text-lg md:text-xl font-bold mb-3">{dict.howItRan}</h2>
+          <p className="text-[#b8b4d4] leading-relaxed m-0">{dict.howItRanBody}</p>
+          <blockquote className="mt-5 mb-0 mx-0 border-l-2 border-[#FF57B1] pl-4">
+            <p className="text-[#E6EDF3] leading-relaxed m-0">{quote.quote}</p>
+            <footer className="text-xs text-[#7a75a0] mt-2">
+              {quote.author}, {quote.role}
+            </footer>
+          </blockquote>
+        </section>
 
         {/* Charts row: Daily Activity + Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -260,7 +279,7 @@ export function ReportContent({ dict, lang }: { dict: ReportDict; lang: string }
 
         {/* Footer */}
       {/* The /pt report is a real translation, so it links the PT landing page. */}
-      <ReportRelated heading={dict.related} links={[{ href: "/blog/how-treasure-hunt-drove-engagement-ethdenver-2026", label: "The ETHDenver 2026 case study" }, lang === "pt" ? { href: "/pt/caca-ao-tesouro-digital-empresas", label: "Caça ao tesouro digital para empresas" } : { href: "/nfc-treasure-hunt", label: "NFC treasure hunt for events" }]} />
+      <ReportRelated heading={dict.related} links={[{ href: "/blog/gamifying-conferences-qr-nfc-scavenger-hunts", label: "How to run a QR and NFC scavenger hunt at a conference" }, lang === "pt" ? { href: "/pt/caca-ao-tesouro-digital-empresas", label: "Caça ao tesouro digital para empresas" } : { href: "/nfc-treasure-hunt", label: "NFC treasure hunt for events" }]} />
         <footer className="text-center py-8 border-t border-[rgba(255,87,177,0.1)]">
           <a
             href="https://testnet.explorer.novaims.unl.pt/address/0x9732D2360085A6A36E51B9904A7000BFA461B85c"
