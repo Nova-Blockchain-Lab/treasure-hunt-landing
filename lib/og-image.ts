@@ -2,4 +2,4 @@
 // hand rather than letting Next inject its hashed URL, because a child
 // segment's openGraph replaces the parent's wholesale. X, LinkedIn and Slack
 // cache card images by URL, so bump ?v= whenever the image changes.
-export const OG_IMAGE = 'https://www.treasurehunt.pt/opengraph-image?v=2'
+export const OG_IMAGE = 'https://www.treasurehunt.pt/opengraph-image?v=3'

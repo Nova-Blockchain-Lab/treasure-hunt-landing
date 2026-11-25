@@ -13,7 +13,7 @@
     "tagline": "Coloque checkpoints nos stands dos patrocinadores e nas zonas por onde pouca gente passa. Os participantes encostam o telemóvel, ganham pontos e trocam-nos por prémios. Corre no browser, sem nada para instalar.",
     "bookDemo": "Planear o Seu Evento",
     "seeResults": "Ver os resultados",
-    "trustBadge": "27.108 tesouros encontrados · 1.785 jogadores · 2.573 prémios trocados, em nove eventos",
+    "trustBadge": "71.346 tesouros encontrados · 3.505 jogadores · 3.787 prémios trocados, em nove eventos",
     "demo": {
       "label": "Experimente: toque nos checkpoints",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Relatório Spring Bootcamp 2026",
     "dataSummitReport": "Relatório Data with Purpose Summit 2026",
     "neiReport": "Relatório Noite Europeia dos Investigadores 2026",
+    "lgwReport": "Relatório Lisboa Games Week 2026",
     "copyright": "Nova Blockchain Lab. Todos os direitos reservados.",
     "projectBy": "Um projeto do"
   },

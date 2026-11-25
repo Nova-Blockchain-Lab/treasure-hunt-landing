@@ -13,7 +13,7 @@
     "tagline": "Vous placez des points de contrôle sur les stands des sponsors et dans les zones où personne ne passe. Les participants les touchent avec leur téléphone, gagnent des points et les échangent contre des récompenses. Tout se passe dans le navigateur, sans application à installer.",
     "bookDemo": "Planifiez votre Événement",
     "seeResults": "Voir les résultats",
-    "trustBadge": "27 108 trésors trouvés · 1 785 joueurs · 2 573 lots échangés, sur neuf événements",
+    "trustBadge": "71 346 trésors trouvés · 3 505 joueurs · 3 787 lots échangés, sur neuf événements",
     "demo": {
       "label": "Essayez : touchez les points de contrôle",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Rapport Spring Bootcamp 2026",
     "dataSummitReport": "Rapport Data with Purpose Summit 2026",
     "neiReport": "Rapport Noite Europeia dos Investigadores 2026",
+    "lgwReport": "Rapport Lisboa Games Week 2026",
     "copyright": "Nova Blockchain Lab. Tous droits réservés.",
     "projectBy": "Un projet de"
   },

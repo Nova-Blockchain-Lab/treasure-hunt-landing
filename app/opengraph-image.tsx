@@ -14,11 +14,11 @@ export const contentType = 'image/png'
 
 const file = (path: string) => readFile(join(process.cwd(), path))
 
-// Figures from TREASURE_HUNT_FACTSHEET.md (19 Nov 2026), nine measured events.
+// Figures from TREASURE_HUNT_FACTSHEET.md (25 Nov 2026, full LGW report), nine measured events.
 const STATS = [
   ['9', 'events'],
-  ['1,785', 'players'],
-  ['27,108', 'finds'],
+  ['3,505', 'players'],
+  ['71,346', 'finds'],
 ]
 
 export default async function OgImage() {

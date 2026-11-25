@@ -53,16 +53,17 @@ const body = `# Treasure Hunt
   phones visited half or more of the stands, 659 giveaways handed out from 11
   sources, 37% of all visits in the busiest hour (18:50-19:50). Report (in
   Portuguese and English): https://nei.treasurehunt.pt/report
-- Lisboa Games Week 2026 (FIL Pavilion 4, Lisbon, Nov 19-22), first day only:
-  501 players, 8,305 finds, 56 tags, 176 prizes redeemed. The report for the
-  whole event is still being written.
+- Lisboa Games Week 2026 (FIL Pavilion 4, Lisbon, Nov 19-22), a four-day games
+  fair: 2,221 players, 52,543 finds at 107 tags (61 of them hidden by players),
+  1,390 prizes collected by 728 players at nine stands, a median 2 h 09 min in
+  the game per day. Report (in Portuguese and English):
+  https://lgw.treasurehunt.pt/report
 
-Totals across these nine events: 1,785 players, 27,108 checkpoint finds and
-2,573 prizes redeemed. Each event is counted on its own and players are not
-de-duplicated across events; NEI contributes phones rather than people, and
-Lisboa Games Week contributes its first day. The six hunts with a full report on
-this site (all of the above except Summer Bootcamp, NEI and Lisboa Games Week)
-minted 1,794,280 reward tokens between them.
+Totals across these nine events: 3,505 players, 71,346 checkpoint finds and
+3,787 prizes redeemed. Each event is counted on its own and players are not
+de-duplicated across events, and NEI contributes phones rather than people.
+The six hunts with a full report on this site (all of the above except Summer
+Bootcamp, NEI and Lisboa Games Week) minted 1,794,280 reward tokens between them.
 
 ## Technical notes
 - Runs entirely in the mobile browser. No app download, no wallet setup, no seed

@@ -206,8 +206,8 @@ function BlogContent({ content }: { content: string }) {
     return text
       .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#E6EDF3] font-semibold">$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      // internal links only (href must start with /) — content is our own static data
-      .replace(/\[([^\]]+)\]\((\/[^)\s]+)\)/g, '<a href="$2" class="text-[#F0605D] hover:underline">$1</a>')
+      // our own links only: a path on this site, or an edition subdomain (lgw.treasurehunt.pt/report)
+      .replace(/\[([^\]]+)\]\((\/[^)\s]+|https:\/\/[a-z0-9-]+\.treasurehunt\.pt\/[^)\s]*)\)/g, '<a href="$2" class="text-[#F0605D] hover:underline">$1</a>')
   }
 
   for (const line of lines) {

@@ -13,7 +13,7 @@
     "tagline": "Metti i checkpoint agli stand degli sponsor e nelle zone dove passa poca gente. I partecipanti li toccano con il telefono, guadagnano punti e li spendono in premi. Funziona nel browser, senza installare nessuna app.",
     "bookDemo": "Pianifica il tuo Evento",
     "seeResults": "Guarda i risultati",
-    "trustBadge": "27.108 tesori trovati · 1.785 giocatori · 2.573 premi riscattati, in nove eventi",
+    "trustBadge": "71.346 tesori trovati · 3.505 giocatori · 3.787 premi riscattati, in nove eventi",
     "demo": {
       "label": "Prova: tocca i checkpoint",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Report Spring Bootcamp 2026",
     "dataSummitReport": "Report Data with Purpose Summit 2026",
     "neiReport": "Report Noite Europeia dos Investigadores 2026",
+    "lgwReport": "Report Lisboa Games Week 2026",
     "copyright": "Nova Blockchain Lab. Tutti i diritti riservati.",
     "projectBy": "Un progetto di"
   },

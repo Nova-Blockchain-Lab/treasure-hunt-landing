@@ -13,7 +13,7 @@
     "tagline": "Sie platzieren Checkpoints an Sponsorenständen und in Bereichen, in die sonst kaum jemand kommt. Die Teilnehmenden tippen sie mit dem Handy an, sammeln Punkte und lösen sie gegen Prämien ein. Alles läuft im Browser, ohne App.",
     "bookDemo": "Event Planen",
     "seeResults": "Ergebnisse ansehen",
-    "trustBadge": "27.108 gefundene Schätze · 1.785 Spielende · 2.573 eingelöste Preise, bei neun Events",
+    "trustBadge": "71.346 gefundene Schätze · 3.505 Spielende · 3.787 eingelöste Preise, bei neun Events",
     "demo": {
       "label": "Ausprobieren: Checkpoints antippen",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
     "neiReport": "Noite Europeia dos Investigadores 2026 Report",
+    "lgwReport": "Lisboa Games Week 2026 Report",
     "copyright": "Nova Blockchain Lab. Alle Rechte vorbehalten.",
     "projectBy": "Ein Projekt von"
   },

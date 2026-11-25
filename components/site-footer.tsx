@@ -16,6 +16,7 @@ interface FooterDict {
   springBootcampReport: string
   dataSummitReport: string
   neiReport: string
+  lgwReport: string
   copyright: string
   projectBy: string
 }
@@ -66,8 +67,9 @@ export function SiteFooter({
     { href: "/cadaval-report", label: dict.cadavalReport },
     { href: "/springbootcamp-report", label: dict.springBootcampReport },
     { href: "/datasummit-report", label: dict.dataSummitReport },
-    // Hosted on the edition's own site, in Portuguese.
+    // Hosted on the editions' own sites, in Portuguese and English.
     { href: "https://nei.treasurehunt.pt/report", label: dict.neiReport },
+    { href: "https://lgw.treasurehunt.pt/report", label: dict.lgwReport },
   ]
 
   // SEO landing pages, locale-appropriate. EN pages are canonical at /<slug>;

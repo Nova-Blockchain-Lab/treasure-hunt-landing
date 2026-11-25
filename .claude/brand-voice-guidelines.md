@@ -96,8 +96,5 @@ Rewritten because it broke the rules:
 
 ## Open questions
 
-- Whether LGW's figures (day 1 of 4 in the factsheet) should be replaced by the
-  full four days once that report ships. Recommendation: yes, and recompute every
-  aggregate the same day.
 - NEI counts phones, not people, yet it is inside the nine-event player total.
   Recommendation: keep the total, keep "counted per event" in the label.

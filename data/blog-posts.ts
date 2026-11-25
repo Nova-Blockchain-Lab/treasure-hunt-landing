@@ -11,70 +11,79 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'gamifying-conferences-qr-nfc-scavenger-hunts',
-    title: 'How to Run a QR & NFC Scavenger Hunt at a Conference',
+    title: 'How to Run a QR & NFC Scavenger Hunt at a Conference or Expo',
     description:
-      'How to run a QR and NFC scavenger hunt at your conference: the checkpoint model, leaderboard psychology, and merch mechanics, with real ETHDenver data.',
+      'Running a QR or NFC scavenger hunt at a conference or expo: where to put the tags, what one tag does for a stand and when prizes go out. Data from Lisboa Games Week 2026.',
     date: '2026-03-06',
-    updated: '2026-09-21',
-    content: `Conference attendees have a short attention span and a long list of sessions to skip. The booths in the back corner get ignored. The sponsor who paid for premium placement watches people walk past without stopping.
+    updated: '2026-11-25',
+    content: `At a conference or an expo, most people stay near the entrance, the main stage and the coffee. The stands at the back of the hall get passed by, and the sponsor who paid for one of them watches people walk past.
 
-A scavenger hunt is one of the few things we have found that reliably moves people around a venue, and the reason is not that it is fun. It is that walking to a specific spot becomes worth points, and points become a t-shirt.
+A scavenger hunt is one of the few things we have seen move people around a venue on purpose. Walking to a particular spot earns points, and the points buy something people want to take home.
 
-We ran one across the ETHDenver 2026 MakerSpace from 18 to 21 February with 59 checkpoints and 207 players. This is how the format works and what the data from that deployment showed.
+We ran one at Lisboa Games Week 2026, in Pavilion 4 at FIL in Lisbon, from 19 to 22 November. Over four days, 2,221 players found tags 52,543 times. Lisboa Games Week is a games fair rather than a conference, but the floor works the same way: stands, stages, a food court and visitors deciding where to walk. This post covers how the format works and what that hall showed us.
 
 ## The checkpoint model
 
-You place NFC tags or QR codes at specific locations. Each one is a checkpoint worth a reward. An attendee taps their phone on the tag or scans the code, and the reward lands immediately, with no verification step in between.
+You place NFC tags or QR codes at specific spots. Each one is a checkpoint worth points. A player taps the tag with their phone or scans the code, and the points arrive straight away.
 
-The two checkpoint types are not interchangeable. An NFC tag takes a physical tap, which suits tables, walls and hidden spots, and it is the one that feels like picking something up. A QR code works at a distance, which suits signage and booth banners, and it is easier to produce at scale. We used a mix of both at ETHDenver, across everything from the Main Stage entrance to the Zen Zone to sponsor booths.
+The two types suit different places. An NFC tag needs a physical tap, so it works on tables, walls and stand counters, and finding one feels like picking something up. A QR code can be scanned from a distance, which suits signs and banners, and it is cheaper to print in quantity. At Lisboa Games Week we used NFC tags, at 13 exhibitors' stands, at the stages and play areas, and around the hall. Players could also hide tags of their own, and 61 of them did.
 
-## The app download is the expensive part
+## No app to install
 
-Every step between hearing about the game and playing it costs you players, and installing an app is the largest single step: finding the store, searching, downloading, opening, creating an account, granting permissions.
+Every step between hearing about the game and playing it loses players, and installing an app is the biggest step. We do not have a credible industry figure for how many players an app download costs you, and we are not going to invent one.
 
-Treasure Hunt runs in the phone browser. Attendees open a URL, sign in through unicorn.eth with one tap, and are playing in under 30 seconds. We do not have a credible industry figure for how many players an app download costs you, and we are not going to invent one, but our own onboarding is the thing we chose to optimise first and it is the thing we would change last.
+Treasure Hunt runs in the phone browser, with no app and no wallet to set up. At Lisboa Games Week, 2,622 people accepted the terms and 2,221 of them went on to earn points.
 
-At ETHDenver nobody was required to play, and 207 people did. The game spread by word of mouth and by people seeing tags on walls.
+## How people move through a hall
 
-## What the leaderboard actually does
+The order in which each player found tags shows how they moved. In Pavilion 4 it followed a clear pattern.
 
-The top 10 players at ETHDenver finished within 3,350 tokens of each other, on an average of 7,830 each. A gap that narrow is what keeps a leaderboard working: players check it, see they are one or two finds off the next rank, and go back out.
+People started at the front. 30% of days of play began in the entrance zone, which had 14% of all finds. The first tag of the day was a median 25 m from the entrance. By the 20th tag it was 69 m, about where a random order would put it.
 
-It does different work at different levels of engagement. A casual player looks at the board and discovers they found 5 checkpoints out of 59, which is an invitation rather than a score. A serious one plans a route; the most active hunter, zkprof, logged 67 separate mint events across four days. Groups race each other, which is where most of the noise on a show floor comes from.
+They also worked through one area before moving to the next. 60% of moves between two tags stayed in the same zone, against 12% if players had picked tags at random, and the next tag was a median 15 m away. Most of them played in company: in 62% of the days of play with five or more tags, another player found the same tags within the same minute, tag after tag.
 
-The board also recruits. When people see others tapping tags and comparing numbers, they ask what it is.
+We read that as an argument for groups of tags in each zone rather than single tags spread thin, and for more tags at the back than at the front. Each of our tags at the front was found by 53% to 57% of the players in the game. At the main stage end it was 40%, and in the food court 42%.
 
-## The merch store is what makes the points mean anything
+## What one tag does for a stand
 
-Points you cannot spend do not motivate anyone for long. Treasure Hunt includes a store where players spend earned tokens on physical items. At ETHDenver:
+13 exhibitors had a tag at their stand. A stand with one tag was found by a median of 702 players, 37% of everyone who found tags after it went up. Across the seven stands with a single tag, the share ran from 33% to 46%.
 
-- Night Market Claw Play (1,000 BUFFI): 78 purchases
-- Nova Blockchain Lab T-shirt (1,500 BUFFI): 15 purchases
-- Nova Blockchain Lab Socks (700 BUFFI): 10 purchases
-- 2026 ETHDenver T-Shirt (5,000 BUFFI): 8 purchases
-- Pink and black hats (1,500 BUFFI each): 6 purchases between them
+A find is not a visit. It tells you how many players came to the tag, not how long they stayed or whether they spoke to anyone, and the report labels it that way.
 
-137 purchases from 73 shoppers, which is 35% of everyone who played, and 213,820 BUFFI burned on the way through. The burn matters more than it sounds: it keeps the token supply from inflating past the point where a reward feels like it cost something.
+Timing matters too. The Just Dance tag, tied to that part of the programme, went up on Saturday at 15:03 and was found 65 times in its first hour. The median tag had 24 finds in that hour. Tags added late still work: the Heimdall and Kriativu3d tags went up on Thursday evening and reached 42% and 36% of the players who played after that.
 
-## Placement is the organiser's real lever
+## Let players hide tags
 
-You decide where the checkpoints go, which means you decide where people walk. That is the whole product.
+Players could hide a tag of their own somewhere in the hall, and 61 did. Their tags were 5% of finds on Thursday, 27% on Friday, 47% on Saturday and 55% on Sunday. With more tags in the hall, the walk between them got shorter, from 18.6 m between consecutive tags on Thursday to 13.8 m on Sunday.
 
-At ETHDenver the most-found checkpoint was the Merch Night Market at 62 finds, in an area that was busy anyway. The more useful result was further down: a custom sneaker vendor in a back corner got steady traffic once a checkpoint went in at his booth, traffic he was not getting before.
+That is half the game on the last day, and the organiser did not have to plan or place any of it. The cost is control: some player tags changed position during the event, so you do not decide where every tag is.
 
-For a sponsor this is a number instead of an estimate. You can say how many people came to a specific spot and when, and at ETHDenver every one of those interactions was recorded on-chain, so the sponsor does not have to take your word for it.
+## The store, and when prizes go out
+
+Points need somewhere to go. Players traded them for prizes in the game and collected each prize at a stand by showing a QR code. At Lisboa Games Week, 728 players collected 1,390 prizes from more than 20 brands, at nine stands.
+
+Finds peaked at 11:00 and 14:00, but prizes went out in the afternoon: 74% were collected between 14:00 and 19:00. Put more staff on the prize desk after lunch.
+
+If a sponsor wants a visit it can count, hand its prizes out at its own stand. Collecting a prize was the only stand visit the game counted: 88 players collected theirs at Maggi's stand and 72 at Heimdall's. Most prizes, 1,120 of them, went out at the Treasure Hunt stand.
+
+## What you can report afterwards
+
+Each exhibitor gets a card with its own numbers and a link to share. No player data goes to exhibitors.
+
+What the data cannot tell you is how many visitors did not play, because we count players, not fair visitors. With the organiser's hourly gate counts, the next report can say what share of visitors played.
+
+Every find is recorded on a blockchain, and we pay the transaction fees, so players never pay anything. On the phone none of this shows. You tap a tag and get points.
 
 ## Running one yourself
 
-Map the venue first and pick the locations that matter: sponsor booths, the areas nobody walks to, food stations, stage entrances. Each becomes a checkpoint. Reward tiers do not have to be flat, and making the hard-to-find ones worth more is the cheapest way to push people into the corners of a floor plan.
+- Split the floor into zones and put several tags in each, with more at the back and in the food court than at the entrance.
+- Offer every exhibitor a tag. At Lisboa Games Week a stand with one tag was found by a median 37% of players.
+- Tie some tags to the programme and put them up when a session starts.
+- Let players hide their own tags. By the third day they were close to half of all finds.
+- Hand sponsors' prizes out at their own stands, and staff the prize desk for the afternoon.
+- Ask the organiser for hourly gate counts before the event, so the report can say what share of visitors played.
 
-Stock the store with things people will carry home. Launch browser-based with a one-tap sign-in, because a barrier at the door costs you players you never hear about. Then put the leaderboard on screens and read the top names out during sessions, and it largely runs itself.
-
-At ETHDenver the busiest hour across the four days was 5 PM, with 500 transactions, and the game held up through all four days without any further push from us after launch.
-
-The infrastructure runs on Nova Cidade Chain, a Layer 3 network that records every action, with a paymaster covering the fees so players never pay anything. None of that is visible from the phone. You tap a tag and get a reward.
-
-For the two checkpoint types in detail, see [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt). The full dataset is in the [ETHDenver 2026 report](/ethdenver-report).`,
+The full data, with the hall map hour by hour and a card for each stand, is in the [Lisboa Games Week 2026 report](https://lgw.treasurehunt.pt/report). For a conference with sponsor booths, see the [ETHDenver 2026 report](/ethdenver-report). The two checkpoint types are covered in [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt).`,
   },
   {
     slug: 'event-gamification-platform-guide-2026',

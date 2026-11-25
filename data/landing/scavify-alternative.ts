@@ -16,9 +16,9 @@ export const content: LandingContent = {
   primaryCta: "Plan Your Event",
 
   stats: [
-    { value: "27,000+", label: "treasures found" },
-    { value: "1,700+", label: "players" },
-    { value: "2,500+", label: "prizes redeemed" },
+    { value: "71,000+", label: "treasures found" },
+    { value: "3,500+", label: "players" },
+    { value: "3,700+", label: "prizes redeemed" },
     { value: "9", label: "events" },
   ],
 
@@ -61,7 +61,7 @@ export const content: LandingContent = {
       icon: "Award",
       title: "Proven at real conferences",
       description:
-        "Run end to end at ETHDenver 2026 in Denver, the Portugal Smart Cities Summit at FIL Lisbon, several NOVA IMS events and a city festival in Cadaval, and most recently Lisboa Games Week. Players logged 27,108 finds across the nine events.",
+        "Run end to end at ETHDenver 2026 in Denver, the Portugal Smart Cities Summit at FIL Lisbon, several NOVA IMS events and a city festival in Cadaval, and most recently Lisboa Games Week. Players logged 71,346 finds across the nine events.",
     },
   ],
 

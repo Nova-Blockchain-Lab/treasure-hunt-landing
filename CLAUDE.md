@@ -1094,18 +1094,28 @@ Left alone, on purpose:
 
 ## 25 Nov 2026: nine events, ETHDenver merge, brand voice
 
-- **The site counts nine events** (owner's decision), although six reports live
-  here, NEI and Summer Bootcamp are on their subdomains and the Lisboa Games Week
-  report is still being written (don't link or invent an LGW report page). Every
-  aggregate is the factsheet's nine-event total (`../TREASURE_HUNT_FACTSHEET.md`):
-  **1,785 players, 27,108 checkpoint finds, 2,573 prizes redeemed**, counted per
-  event and not de-duplicated (NEI counts phones; LGW is day 1 of 4). It lives in
-  `hero.trustBadge` (exact, six dictionaries), the `stats` strip of 16 landing
-  pages (27,000+ / 1,700+ / 2,500+ / 9; checkpoints dropped, since Summer Bootcamp
-  has no checkpoint figure and so there is no nine-event total), the Goosechase FAQ,
-  the Scavify benefit and `llms.txt` (lists all nine; keeps the six-hunt 1,794,280
-  token total, labelled as such). Per-report figures are unchanged. Recompute all
-  of these the day the full LGW report ships.
+- **The site counts nine events** (owner's decision): six reports live here, and
+  NEI, Summer Bootcamp and Lisboa Games Week are on their subdomains. The LGW
+  report (`https://lgw.treasurehunt.pt/report`, built in treasure-hunt-lisbongamesweek
+  from `data/lisbongamesweek/report.json`) shipped 25 Nov 2026 and is linked from
+  the footer. Every aggregate is the factsheet's nine-event total
+  (`../TREASURE_HUNT_FACTSHEET.md`): **3,505 players, 71,346 checkpoint finds,
+  3,787 prizes redeemed**, counted per event and not de-duplicated (NEI counts
+  phones; LGW's 2,221 players is its report's headline, accounts that earned
+  points). LGW alone is 74% of the finds. The totals live in `hero.trustBadge`
+  (exact, six dictionaries), the `stats` strip of 16 landing pages (71,000+ /
+  3,500+ / 3,700+ / 9; checkpoints dropped, since Summer Bootcamp has no
+  checkpoint figure), the Goosechase FAQ, the Scavify benefit, `llms.txt` (lists
+  all nine; keeps the six-hunt 1,794,280 token total, labelled as such) and the
+  OG card strip (`app/opengraph-image.tsx`, OG_IMAGE at `?v=3`). Per-report
+  figures are unchanged. The home Results section still lists seven events (no
+  LGW card: it has no token figure for the fourth stat).
+- **The conference how-to post** (`gamifying-conferences-qr-nfc-scavenger-hunts`,
+  now "...at a Conference or Expo") was rewritten on 25 Nov 2026 around LGW
+  findings used as placement advice (entrance start, zone-by-zone moves, one-tag
+  stands, player-hidden tags, afternoon prize hand-out), and links the LGW report.
+  Keep it a how-to; don't let it restate the report. Blog markdown links render
+  only for `/paths` and `https://<edition>.treasurehunt.pt/...`.
 - **The ETHDenver case-study post is merged into `/ethdenver-report`.** Google
   crawled it and the platform guide on 7 Oct and indexed neither, because both
   repeated the report's figures. The post is gone from `data/blog-posts.ts`, and

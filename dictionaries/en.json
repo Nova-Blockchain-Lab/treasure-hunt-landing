@@ -13,7 +13,7 @@
     "tagline": "You place checkpoints at sponsor booths and in the areas people skip. Attendees tap them with their phone, earn points and spend them on rewards. It runs in the browser, with no app to install.",
     "bookDemo": "Plan Your Event",
     "seeResults": "See the results",
-    "trustBadge": "27,108 finds · 1,785 players · 2,573 prizes redeemed, across nine events",
+    "trustBadge": "71,346 finds · 3,505 players · 3,787 prizes redeemed, across nine events",
     "demo": {
       "label": "Try it: tap the checkpoints",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Spring Bootcamp 2026 Report",
     "dataSummitReport": "Data with Purpose Summit 2026 Report",
     "neiReport": "European Researchers' Night 2026 Report",
+    "lgwReport": "Lisboa Games Week 2026 Report",
     "copyright": "Nova Blockchain Lab. All rights reserved.",
     "projectBy": "A project by"
   },

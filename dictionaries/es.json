@@ -13,7 +13,7 @@
     "tagline": "Colocas puntos de control en los stands de los patrocinadores y en las zonas por las que casi nadie pasa. Los asistentes los tocan con el móvil, ganan puntos y los cambian por premios. Funciona en el navegador, sin instalar ninguna app.",
     "bookDemo": "Planifica tu Evento",
     "seeResults": "Ver los resultados",
-    "trustBadge": "27.108 tesoros encontrados · 1.785 jugadores · 2.573 premios canjeados, en nueve eventos",
+    "trustBadge": "71.346 tesoros encontrados · 3.505 jugadores · 3.787 premios canjeados, en nueve eventos",
     "demo": {
       "label": "Pruébalo: toca los puntos de control",
       "rooms": [
@@ -225,6 +225,7 @@
     "springBootcampReport": "Informe Spring Bootcamp 2026",
     "dataSummitReport": "Informe Data with Purpose Summit 2026",
     "neiReport": "Informe Noite Europeia dos Investigadores 2026",
+    "lgwReport": "Informe Lisboa Games Week 2026",
     "copyright": "Nova Blockchain Lab. Todos los derechos reservados.",
     "projectBy": "Un proyecto de"
   },
