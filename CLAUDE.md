@@ -126,7 +126,7 @@ Standalone keyword-targeted landing pages live under `app/[lang]/<slug>/` and ar
   Search Console returned "Crawled, currently not indexed" for it. A listing page
   needs its own reason to exist. Post cards are `h3` under an "All posts" `h2`,
   and they link `/blog/<slug>` unprefixed because posts are EN-only.
-- Posts live in `data/blog-posts.ts` (slug/title/description/date/content). 9 posts as of September 2026. The three July posts are event case studies (PSCS trade-fair, Data Summit one-day, Spring Bootcamp teams); the three September posts are the checkpoint-ratio analysis across all six deployments, the Cadaval festival case study and the Future Maker career-fair case study. **Every number must trace to `data/*/report-snapshot.json` or the report TS files, no invented stats** — and check the attribution too, not just the value (the most-found "player-hidden" tag at Future Maker was hidden by `0xchefmike`, i.e. us, not by a student).
+- Posts live in `data/blog-posts.ts` (slug/title/description/date/content). 8 posts as of 25 Nov 2026 (the ETHDenver case study became a 301 to its report; see the 25 Nov note at the end). The three July posts are event case studies (PSCS trade-fair, Data Summit one-day, Spring Bootcamp teams); the three September posts are the checkpoint-ratio analysis across all six deployments, the Cadaval festival case study and the Future Maker career-fair case study. **Every number must trace to `data/*/report-snapshot.json` or the report TS files, no invented stats** — and check the attribution too, not just the value (the most-found "player-hidden" tag at Future Maker was hidden by `0xchefmike`, i.e. us, not by a student).
 - The array is stored oldest-first; the `/blog` hub sorts a copy newest-first at render time. Don't rely on array order for recency anywhere else.
 - Posts and the hub carry `robots: { index: false, follow: true }` on off-locale variants (`generateMetadata` reads `lang`), because those serve EN content under a wrong `<html lang>` and already canonical to the EN URL.
 - The renderer (`BlogContent` in `app/[lang]/blog/[slug]/page.tsx`) supports `##`, `**bold**`, `*em*`, `- lists`, and `[text](/internal-path)` links (internal only, href must start with `/`). Use those links to point posts at their report + landing pages.
@@ -293,7 +293,7 @@ Six reports, two rendering paths, **no chart dependency anywhere**.
   CSS keyframe in `globals.css` (which the existing `prefers-reduced-motion`
   block neutralises for free). Don't put `motion.*` back around the logo or h1.
 - Canonical for the home is `https://www.treasurehunt.pt` (English at root, no `/en` prefix).
-- Sitemap (`app/sitemap.ts`, 41 URLs). Landing entries default to `2026-11-24`; a page edited since sets its own `lastModified` in `landingPages[]` (and one not edited since an older date keeps it, like trade-show). **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
+- Sitemap (`app/sitemap.ts`, 40 URLs). Landing entries default to `2026-11-25`; a page edited since sets its own `lastModified` in `landingPages[]` (and one not edited since an older date keeps it, like trade-show). **Every `lastModified` is hand-maintained: bump it when the page changes.** On 7 Oct 2026 they were three to seven months stale (reports said March-June, landing pages 27 June, all edited 21-26 Sept), so Google had no reason to recrawl. Use `git log -1 --format=%as -- <path>` for the real date. emits one `<url>` per locale for the home page, each carrying the full six-locale hreflang set plus `x-default`. The two bilingual reports emit an EN and a PT entry (`bilingual: true`). The other 4 reports + the blog are **EN-only**: `en` + `x-default` only, and their `/<locale>/` variants canonical to the EN URL, so those variants are absent from the sitemap entirely. Advertising a non-EN hreflang for English content is a quality-signal problem — keep the `bilingual` flags in sync with each page's `generateMetadata`.
 - **Language switcher** (`components/language-switcher.tsx`) is in the navbar (desktop + mobile) and `SiteFooter`, making every locale reachable (`/pt` was once an orphan locale — no internal link pointed into it). It links locale **homes** only. `localeDetection` stays off.
 - **Every landing page needs a footer link.** `/scavify-alternative` was omitted from the footer's Solutions list and Search Console reported no referring URLs for it at all. The footer is the only site-wide internal link these pages get — when adding a landing page, add it to `site-footer.tsx` and `app/sitemap.ts` together.
 - **Unknown-locale URLs must 404, not 500.** See the `getDictionary` guard under **Locales / i18n**; every single-segment URL containing a dot used to return HTTP 500, and repeated 5xx makes Google throttle crawling site-wide.
@@ -896,8 +896,9 @@ argument is wrong.
 **The landing page stats strips were never updated by the Sept 18 audit.** All
 14 carried "10,000+ finds / 500+ checkpoints / 500+ players" long after the
 dictionaries were corrected, and **500+ checkpoints was an overstatement** (the
-real figure is 401). Now 14,000+ / 400+ / 1,000+ / 8 events, with per-locale
-separators (`14.000+` pt/es/it/de, `14 000+` fr). The aggregate lives in three
+real figure is 401). Since 25 Nov 2026 they are 27,000+ finds / 1,700+ players /
+2,500+ prizes redeemed / 9 events, with per-locale separators (`27.000+`
+pt/es/it/de, `27 000+` fr). The aggregate lives in three
 places that drift independently: `hero.trustBadge` + `demo.stats` + `cta.trustSignal`
 in the dictionaries, the `stats` array in every `data/landing/*.ts`, and
 `llms.txt`. Update all three when a report ships.
@@ -1090,3 +1091,45 @@ Left alone, on purpose:
   (flex shrink), a visual bug, not SEO.
 - GSC still shows `/#demo`, `/#what`, `/#how`, `/#media` as sitelinks; the home
   was last crawled 20 Nov, a day before the redesign removed them.
+
+## 25 Nov 2026: nine events, ETHDenver merge, brand voice
+
+- **The site counts nine events** (owner's decision), although six reports live
+  here, NEI and Summer Bootcamp are on their subdomains and the Lisboa Games Week
+  report is still being written (don't link or invent an LGW report page). Every
+  aggregate is the factsheet's nine-event total (`../TREASURE_HUNT_FACTSHEET.md`):
+  **1,785 players, 27,108 checkpoint finds, 2,573 prizes redeemed**, counted per
+  event and not de-duplicated (NEI counts phones; LGW is day 1 of 4). It lives in
+  `hero.trustBadge` (exact, six dictionaries), the `stats` strip of 16 landing
+  pages (27,000+ / 1,700+ / 2,500+ / 9; checkpoints dropped, since Summer Bootcamp
+  has no checkpoint figure and so there is no nine-event total), the Goosechase FAQ,
+  the Scavify benefit and `llms.txt` (lists all nine; keeps the six-hunt 1,794,280
+  token total, labelled as such). Per-report figures are unchanged. Recompute all
+  of these the day the full LGW report ships.
+- **The ETHDenver case-study post is merged into `/ethdenver-report`.** Google
+  crawled it and the platform guide on 7 Oct and indexed neither, because both
+  repeated the report's figures. The post is gone from `data/blog-posts.ts`, and
+  `next.config.mjs` sends its URL (and `/<locale>/blog/...`) to `/ethdenver-report`
+  with `statusCode: 301` (`permanent: true` would be a 308). Its unique material is
+  in the report now: a "How it ran" card (`report.howItRan` / `howItRanBody`, six
+  dictionaries) and the sneaker-vendor quote, read from `testimonials.items[1]`.
+  The report's Related link points at the conference how-to post instead.
+- **The platform guide (`event-gamification-platform-guide-2026`) is an
+  organiser's setup guide** (tags, per-tag rewards, player-hidden tags, store and
+  redemption, leaderboard, dashboard, report, limits, packages) with **no report
+  figures**; it links the six on-site reports. Keep it that way: a guide that
+  quotes a report competes with it in the index.
+- **Brand voice:** `.claude/brand-voice-guidelines.md` is the guidelines file the
+  `brand-voice-enforcement` skill reads (built from the site's copy and the
+  owner's style rules). `.claude/` is gitignored, so it was force-added; edit it in
+  place. New copy goes through the humanizer skill and those guidelines.
+- **Landing header at phone width:** the wordmark link is `shrink-0` (flex had
+  squeezed it to 48x32 at 412 px), the CTA is `whitespace-nowrap`, and that
+  header's language switcher is `hidden sm:block` (the footer still carries it).
+  `/book`, the navbar and the report headers were already fine.
+- **`comic-quest-poster.jpg` is a lazy `next/image` overlay** on the video
+  (`sizes="(min-width: 900px) 460px, calc(100vw - 40px)"`), not `poster=`, which
+  fetched the 122 KB JPEG eagerly; it is now ~48-53 KB AVIF at 2x-2.6x DPR. The
+  overlay stays until `playing`, so there is no black flash on click. To test it
+  locally in WebKit, strip the CSP header: `upgrade-insecure-requests` makes
+  WebKit rewrite `http://localhost` assets to https and the page never hydrates.

@@ -40,7 +40,11 @@ export function LandingPage({
       {/* Header */}
       <header className="sticky top-0 z-50 px-5 md:px-6 bg-[rgba(6,8,15,0.85)] backdrop-blur-xl border-b border-[rgba(240,246,252,0.06)]">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between h-[56px] sm:h-[72px]">
-          <Link href={homeHref} className="flex items-center" aria-label="Treasure Hunt home">
+          {/* shrink-0: as a flex item the wordmark was squeezed to 48x32 at
+              412 px (img max-width:100% lets it shrink). Below sm the language
+              switcher moves out of this row (the footer carries it) and the CTA
+              stays on one line; together they overflowed the 56 px bar. */}
+          <Link href={homeHref} className="flex items-center shrink-0" aria-label="Treasure Hunt home">
             <Image
               src="/treasure-hunt-name.png"
               alt="Treasure Hunt"
@@ -53,10 +57,12 @@ export function LandingPage({
             />
           </Link>
           <div className="flex items-center gap-4 sm:gap-5">
-            <LanguageSwitcher />
+            <div className="hidden sm:block">
+              <LanguageSwitcher />
+            </div>
             <button
               onClick={openContact}
-              className="font-display text-[0.85rem] sm:text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-4 sm:px-5 py-2 rounded-md cursor-pointer transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
+              className="whitespace-nowrap font-display text-[0.85rem] sm:text-[0.95rem] tracking-widest text-[#F0605D] border border-[rgba(240,96,93,0.3)] px-4 sm:px-5 py-2 rounded-md cursor-pointer transition-all duration-300 hover:bg-[rgba(240,96,93,0.08)]"
             >
               {content.primaryCta}
             </button>

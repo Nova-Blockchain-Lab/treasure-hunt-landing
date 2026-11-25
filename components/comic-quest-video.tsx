@@ -1,17 +1,23 @@
 "use client"
 
 import { useRef, useState } from "react"
+import Image from "next/image"
 import { Play } from "lucide-react"
 
 // The comic film, click to play. Was a 300vh scroll-scrubbed sticky stage
 // driving video.currentTime from a per-frame scroll listener. Now a plain
 // figure; the home places it inside the "What you control" section.
 const SRC = "/media/comic-quest.mp4"
-const POSTER = "/media/comic-quest-poster.jpg" // 1280x720, same 16:9 as the clip
+// 1280x720, same 16:9 as the clip. Rendered as a lazy next/image over the
+// video, not as `poster=`: a poster is fetched eagerly at full size (122 KB for
+// a 370 px slot far below the fold on a phone). The overlay stays until the
+// first frame plays, so there is no black flash between click and playback.
+const POSTER = "/media/comic-quest-poster.jpg"
 
 export function ComicQuestVideo({ caption, playLabel }: { caption: string; playLabel: string }) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [started, setStarted] = useState(false)
+  const [playing, setPlaying] = useState(false)
 
   return (
     <figure className="m-0 flex flex-col gap-3">
@@ -19,14 +25,23 @@ export function ComicQuestVideo({ caption, playLabel }: { caption: string; playL
         <video
           ref={videoRef}
           src={SRC}
-          poster={POSTER}
           controls={started}
           muted
           playsInline
           preload="none"
           onPlay={() => setStarted(true)}
+          onPlaying={() => setPlaying(true)}
           className="block w-full aspect-video"
         />
+        {!playing && (
+          <Image
+            src={POSTER}
+            alt=""
+            fill
+            sizes="(min-width: 900px) 460px, calc(100vw - 40px)"
+            className="object-cover pointer-events-none"
+          />
+        )}
         {!started && (
           <button
             type="button"
