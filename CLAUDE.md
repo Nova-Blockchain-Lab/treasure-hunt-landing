@@ -1098,7 +1098,10 @@ Left alone, on purpose:
   NEI, Summer Bootcamp and Lisboa Games Week are on their subdomains. The LGW
   report (`https://lgw.treasurehunt.pt/report`, built in treasure-hunt-lisbongamesweek
   from `data/lisbongamesweek/report.json`) shipped 25 Nov 2026 and is linked from
-  the footer. Every aggregate is the factsheet's nine-event total
+  the footer. Since 26 Nov it has one URL per language: `/report` is PT-PT,
+  `/report/en` English. The `pt` locale links `/report` and every other locale,
+  llms.txt and the (English-only) blog link `/report/en` (footer: `lang` check;
+  Results card: `ptReport` in `data/home-events.ts`). Every aggregate is the factsheet's nine-event total
   (`../TREASURE_HUNT_FACTSHEET.md`): **3,505 players, 71,346 checkpoint finds,
   3,787 prizes redeemed**, counted per event and not de-duplicated (NEI counts
   phones; LGW's 2,221 players is its report's headline, accounts that earned
