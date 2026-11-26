@@ -209,6 +209,15 @@ export function SiteFooter({
             >
               {navDict.bookDemo}
             </Link>
+            {/* Brand name, so no dictionary entry: it reads the same in all six locales. */}
+            <a
+              href="https://www.linkedin.com/company/treasurehunt-pt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2.5 block text-sm text-[#7D8590] transition-colors duration-300 hover:text-[#E6EDF3]"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 

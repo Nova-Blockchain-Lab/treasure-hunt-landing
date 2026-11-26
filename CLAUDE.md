@@ -1115,6 +1115,10 @@ Left alone, on purpose:
   now "...at a Conference or Expo") was rewritten on 25 Nov 2026 around LGW
   findings used as placement advice (entrance start, zone-by-zone moves, one-tag
   stands, player-hidden tags, afternoon prize hand-out), and links the LGW report.
+- **LinkedIn page** (created 26 Nov 2026): https://www.linkedin.com/company/treasurehunt-pt/
+  (admin id 145507632). The footer Contact column links it as plain "LinkedIn"
+  (a brand name, so there is no dictionary key). It is not in the JSON-LD `sameAs`,
+  because that Organization node is NOVA Blockchain Lab, a different entity.
   Keep it a how-to; don't let it restate the report. Blog markdown links render
   only for `/paths` and `https://<edition>.treasurehunt.pt/...`.
 - **The ETHDenver case-study post is merged into `/ethdenver-report`.** Google
