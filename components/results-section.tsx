@@ -42,7 +42,12 @@ export function ResultsSection({ dict, quote, lang }: { dict: ResultsDict; quote
   // Same rule as site-footer.tsx.
   const ptPrefix = lang === "pt" ? "/pt" : ""
   const ev = homeEvents[selected]
-  const href = ev.report.startsWith("http") ? ev.report : `${ev.bilingual ? ptPrefix : ""}/${ev.report}`
+  const href =
+    lang === "pt" && ev.ptReport
+      ? ev.ptReport
+      : ev.report.startsWith("http")
+        ? ev.report
+        : `${ev.bilingual ? ptPrefix : ""}/${ev.report}`
   const labels = ev.token
     ? [dict.finds, dict.checkpoints, dict.players, fill(dict.minted, { token: ev.token })]
     : ev.prizes

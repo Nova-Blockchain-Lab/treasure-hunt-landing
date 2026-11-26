@@ -69,7 +69,8 @@ export function SiteFooter({
     { href: "/datasummit-report", label: dict.dataSummitReport },
     // Hosted on the editions' own sites, in Portuguese and English.
     { href: "https://nei.treasurehunt.pt/report", label: dict.neiReport },
-    { href: "https://lgw.treasurehunt.pt/report", label: dict.lgwReport },
+    // LGW has one URL per language: /report is PT-PT, /report/en English.
+    { href: `https://lgw.treasurehunt.pt/report${lang === "pt" ? "" : "/en"}`, label: dict.lgwReport },
   ]
 
   // SEO landing pages, locale-appropriate. EN pages are canonical at /<slug>;

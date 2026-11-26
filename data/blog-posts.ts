@@ -83,7 +83,7 @@ Every find is recorded on a blockchain, and we pay the transaction fees, so play
 - Hand sponsors' prizes out at their own stands, and staff the prize desk for the afternoon.
 - Ask the organiser for hourly gate counts before the event, so the report can say what share of visitors played.
 
-The full data, with the hall map hour by hour and a card for each stand, is in the [Lisboa Games Week 2026 report](https://lgw.treasurehunt.pt/report). For a conference with sponsor booths, see the [ETHDenver 2026 report](/ethdenver-report). The two checkpoint types are covered in [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt).`,
+The full data, with the hall map hour by hour and a card for each stand, is in the [Lisboa Games Week 2026 report](https://lgw.treasurehunt.pt/report/en). For a conference with sponsor booths, see the [ETHDenver 2026 report](/ethdenver-report). The two checkpoint types are covered in [QR scavenger hunt for events](/qr-scavenger-hunt-events) and [NFC treasure hunt for events](/nfc-treasure-hunt).`,
   },
   {
     slug: 'event-gamification-platform-guide-2026',
