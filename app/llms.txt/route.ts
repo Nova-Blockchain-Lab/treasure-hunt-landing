@@ -55,8 +55,8 @@ const body = `# Treasure Hunt
   Portuguese and English): https://nei.treasurehunt.pt/report
 - Lisboa Games Week 2026 (FIL Pavilion 4, Lisbon, Nov 19-22), a four-day games
   fair: 2,221 players, 52,543 finds at 107 tags (61 of them hidden by players),
-  1,390 prizes collected by 728 players at nine stands, a median 2 h 09 min in
-  the game per day. Report in English: https://lgw.treasurehunt.pt/report/en
+  1,390 prizes collected by 728 players at nine stands. Report in English:
+  https://lgw.treasurehunt.pt/report/en
   (in Portuguese: https://lgw.treasurehunt.pt/report)
 
 Totals across these nine events: 3,505 players, 71,346 checkpoint finds and
